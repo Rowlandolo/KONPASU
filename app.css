@@ -22,3 +22,15 @@ button[disabled]{opacity:.38;cursor:not-allowed}
 .lang-label select{width:62px;min-height:42px;padding:7px 9px;border:1px solid #455f51;border-radius:12px;background:#172d26;color:#ebf1e8;font-weight:800;font-size:13px}
 .top .page-title{overflow-wrap:anywhere}
 @media(max-width:480px){.top{align-items:flex-start}.toptools{gap:5px}.lang-label select{width:55px;padding:7px 5px}.top .page-title{font-size:clamp(20px,7vw,32px)}.subtitle{max-width:230px}.bottomnav{z-index:5}}
+
+/* KONPASU 1.0 additions */
+.v1-quickdetail{display:flex;justify-content:flex-end;margin:-5px 0 10px 0;padding-right:7px}
+.v1-quickdetail .btn{min-height:30px;padding:5px 10px;font-size:12px}
+.v1-group{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.set-kind{min-width:105px;max-width:158px;border-radius:8px;border:1px solid var(--line, #516c65);padding:9px;background:#19302b;color:#eef7f2}
+.set-rpe{width:100%;max-width:150px;margin-top:7px}
+#detail-module .statline{gap:12px;align-items:flex-start}
+#detail-module .statline span:first-child{min-width:0;overflow-wrap:anywhere}
+#detail-module .statline .actions{flex-shrink:0;gap:4px}
+#v1-reminders{border-color:#507962}
+@media(max-width:440px){#detail-module .statline{flex-direction:column}#detail-module .statline .actions{align-self:flex-end}.v1-quickdetail{margin-top:0}.new-set .set-kind{font-size:12px}.v1-group .chip{font-size:12px}}

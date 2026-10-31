@@ -1,40 +1,59 @@
-# KONPASU 0.3 — Offline-App-Prototyp (Deutsch / English)
+# KONPASU 1.0 – Offline-Funktionsprototyp (Preview)
 
-**Kostenlos. Keine API-Schlüssel, keine externen Bibliotheken, keine Abos.**
+**Stand:** 31. Oktober 2026 · **Sprache:** Deutsch/Englisch · **Betrieb:** kostenlos, ohne API-Abos, nach Erstinstallation weitgehend offline.
 
-Dieses Repository enthält die installierbare KONPASU-Web-App für iPhone-Safari und andere moderne Browser. Eine Verbindung wird **einmal** benötigt, um die Dateien von GitHub Pages zu laden und lokal zu cachen. Danach funktionieren die eingebauten App-Funktionen offline. Es ist **noch keine native iOS-/Android-App**.
+Diese Ausgabe ist ein großer Funktionsprototyp – **keine fertig abgenommene native iOS-/Android-App und keine vollständig fehlerfrei garantierte Produktivversion**. Die aufwendige 3D-Samurai-Welt wurde auf Wunsch bewusst zurückgestellt.
 
-## Bestehende Installation aktualisieren (ohne absichtlichen Datenverlust)
+## UPDATE VON 0.4 – UNBEDINGT ZUERST BACKUP
 
-1. Die **bereits installierte KONPASU-App** auf dem iPhone öffnen. Unter **Einstellungen** zuerst **JSON-Backup** exportieren und außerhalb der App sichern.
-2. Dieses ZIP **entpacken**. Die folgenden Dateien in das **Hauptverzeichnis desselben GitHub-Repositories** hochladen und vorhandene Dateien ersetzen:
-   `index.html`, `app.js`, `app.css`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png` (README optional).
-3. GitHub Pages veröffentlicht die neuen Dateien. Die bekannte Adresse `https://rowlandolo.github.io/KONPASU/` in Safari mit Internetverbindung öffnen und aktualisieren. Falls noch 0.1 angezeigt wird, die Seite nach einem erneuten Öffnen noch einmal neu laden; der neue Service Worker muss aktiviert werden.
-4. Bestehende Homescreen-App wieder öffnen. Unter **Einstellungen** sollte **KONPASU 0.3** stehen. **Weder Website-Daten löschen noch die vorhandene App deinstallieren**, wenn du noch kein Backup hast.
-5. Unter **Language / Sprache** oder rechts oben zwischen **DE** und **EN** umschalten. Im Flugmodus die Funktionen testen. Die Einstellungen werden lokal gespeichert.
+1. Öffne die derzeit **auf deinem iPhone installierte** KONPASU-App. Einstellungen → **JSON-Backup**. Speichere die Datei in der iPhone-Dateien-App/iCloud Drive oder anderweitig außerhalb von KONPASU.
+2. Entpacke `KONPASU-1.0-Offline-Update.zip` am Windows-PC.
+3. Lade diese **acht App-Dateien** in das Hauptverzeichnis deines bestehenden öffentlichen GitHub-Repositories `Rowlandolo/KONPASU` hoch und ersetze gleichnamige Dateien:
+   - `index.html`
+   - `app.css`
+   - `app.js`
+   - **`features-v1.js` (NEU; unbedingt zusätzlich hochladen)**
+   - `sw.js`
+   - `manifest.webmanifest`
+   - `icon-192.png`
+   - `icon-512.png`
+4. GitHub Pages stellt die aktualisierten Dateien unter `https://rowlandolo.github.io/KONPASU/` bereit. Öffne diese Adresse mit Internetverbindung in **Safari**. Lade sie bei Bedarf neu. Danach die bereits bestehende Homescreen-App öffnen, gegebenenfalls schließen und erneut starten.
+5. **Lösche die Homescreen-App oder Website-Daten nicht.** Das kann deine gespeicherten Daten löschen. Deine alte lokale IndexedDB `KONPASU-LOCAL-2` wird weiterverwendet.
+6. Prüfe zunächst einen älteren Trainingseintrag und eine alte Übung inklusive Gerätenotiz. Wenn etwas fehlt, im Bereich Einstellungen das **vorher gespeicherte JSON-Backup** wiederherstellen.
+7. Teste danach den Flugmodus. Offline-Nutzung ist per Service Worker vorgesehen, wurde hier aber nicht auf einem echten iPhone oder auf lokaler HTTPS-Seite end-to-end geprüft.
 
-Die lokale Datenbank verwendet unverändert `KONPASU-LOCAL-2` und migriert vorhandene v0.1/v0.2-Daten. Dies wurde auf Code- und Browser-Testebene geprüft; dennoch vor jedem Update ein Backup erstellen.
+## Was funktioniert (im automatisierten Chromium-Test verifiziert)
 
-## Jetzt in v0.3 verfügbar
+- 19 Standardziele, Tages-/Wochenziele, persönliche Ziele, Schnellbestätigung *erreicht / teilweise / nicht erreicht*, Nachträge und Messwerte.
+- Neue **freiwillige Detailprotokolle für alle 19 Themen**: Cardio, Schritte, Mobility, Wasser und Getränke, Schlafenszeiten und Qualität, Ernährung/Mahlzeiten mit optionalen kcal/Protein, Zucker, Alkoholkonsum, Bücher, Sprachen/Lektionen, Weiterbildung, Fokus, Meditation, Tagebuch, soziale Aktivitäten, Natur, Bildschirmzeit, Gaming. Stärke/Krafttraining bleibt im separaten Trainingsmodul mit einzelnen Sätzen.
+- Krafttraining: selbst erstellte Übungen, Gerätevarianten und permanente Einstellungen, eigene Trainingspläne und Reihenfolge, einzelne Sätze mit kg/Wiederholungen, **Aufwärm-/Arbeits-/Dropsatz**, freiwilligem RPE und Notizen, einfache **Supersatzgruppe A/B/C**, Pausentimer, Vorwerte beim nächsten Training, Historie, Korrektur abgeschlossener Einheiten und CSV-Export. Supersatzgruppen werden planbezogen gespeichert, wenn das Training aus einem Plan gestartet wurde.
+- Erweiterte Datenerfassung und Basisauswertungen, Ziel-/Trainings-/Detail-CSV mit korrekt formatierten Zeilen, komplette JSON-Sicherung und Import.
+- Regelbasierter Offline-Coach mit kurzen Nachrichten, freiwilligen Wenn-dann-Plänen (WOOP-inspiriert), Reflexionen und einfachen Strategie-Experimenten. Termine lassen sich als **Hinweise innerhalb der geöffneten App** speichern – **keine** Hintergrund-/Push-Erinnerungen.
+- Echte bestätigte Tages- und Wochenserien mit dauerhaften Meilenstein-Auszeichnungen, abgestuftes temporäres Ausrüstungslimit in der **2D**-Samurai-Platzhalterdarstellung, Rang-/Meilensteinübersicht.
+- Deutsch/Englisch, Spracheinstellung lokal gespeichert. Die Übersetzung verwendet teilweise eine ältere Text-Ersetzung; nicht jede dynamische Textvariante ist schon professionell sprachgeprüft.
+- Kern-Logik und persönliche Daten vollständig lokal im Browser. Keine fremden Fonts, CDN-Abhängigkeiten, bezahlte KI-API oder Cloud-Konten erforderlich.
 
-- **19 Zielvorlagen** plus beliebige eigene Ziele; flexible Tages-/Wochenziele, Min-/Max-Werte, rückdatierbare Check-ins (Erreicht / Teilweise / Nicht erreicht), optionale konkrete Messwerte.
-- **Trainingstagebuch:** Übungen und Gerätevarianten selbst anlegen; Gerätenotizen, Trainingspläne, einzelne Sätze mit kg und Wiederholungen, frühere Werte anzeigen, Vorwerte nur nach expliziter Bestätigung übernehmen; Trainingsprotokolle und Sätze nachträglich bearbeiten; Pausentimer; CSV-Export.
-- **Sprache:** Deutsch / Englisch; Umschaltung auf jeder Hauptseite, gespeicherte Auswahl. Eigene Übungsnamen und Freitext bleiben im Original.
-- **Analysen:** Erfüllung und Datenvollständigkeit getrennt, Zeitfilter, dokumentierte Messwerte, Trainingsbestwerte und explorative paarweise Korrelationen, sofern genügend vergleichbare Wochen existieren. Keine kausalen Aussagen.
-- **Offline-Coach:** kurze regelbasierte Hinweise; einstellbarer Ton, freiwillige Reflexionen, A/B-Strategie-Experimente als persönliche Planungshilfe.
-- **Samurai-Avatar, Version 1:** stilisierte 2D-Darstellung mit Geschlechtsdarstellung, Farben, Begleiterwahl, Körpermaßen, sichtbaren ausgewählten Ausrüstungselementen; Belohnungspfade, historische Embleme und gespeicherte Avatar-Einstellungen nach Datum.
-- **Datenschutz:** IndexedDB lokal auf dem Gerät; keine Analyse-/Tracking-Skripte, Cloud oder KI-Server; JSON-Backup und Wiederherstellung sowie Trainings-CSV.
+## Was noch NICHT vollständig umgesetzt ist
 
-## Noch NICHT realisiert – kein Versprechen einer vollständigen Endversion
+- Hochwertige modulare **3D**-Samurai-Figur, 30 grafisch realisierte Slots, echte 3D-Begleiter, Animations- und Szenen-Engine sowie interaktive 3D-Zeitreise.
+- Native iOS- oder Android-App (diese Version ist eine Homescreen-PWA); Apple-Health-/Screen-Time-/Gerätesensor-Integrationen.
+- Benutzerkonto und Cloud-Sync (die jüngste Anforderung, kostenlos und ohne Server zu funktionieren, hat Vorrang).
+- Echte generative KI (der Coach ist bewusst lokal regelbasiert).
+- Professionelle Offline-Push-Erinnerungen (derzeit nur **in der geöffneten App**).
+- Externe Lebensmitteldatenbank, Foto-/Barcode-Lebensmittelerkennung, automatisch aufgezeichnete Cardio-Routen, Geräteschrittimporte.
+- Vollständige statistische Mehrfachtestkorrektur und wissenschaftlich abgesicherte multivariate Langzeitanalytik. Vorhandene Korrelationen sind **deskriptiv und explorativ** und liefern keine Kausalnachweise.
+- Garantierte Langzeit-Datensicherung im iOS-Browser. Sicherung durch JSON-Export bleibt zwingend empfohlen.
 
-Das ist ein **funktionsfähiger Kernprototyp**, aber nicht die vollständige App aus unserer Planung: noch keine hochwertige modulare **3D-Anime-Engine**, keine komplette 30-Slot-3D-Rüstung, keine grafischen evolvierenden 3D-Begleiter, keine native Screen-Time-/HealthKit-Anbindung, keine echte KI, keine echte mehrgerätige Cloud-Synchronisierung oder Benutzerkonten. Die A/B-Experimente sind erst als Erfassung vorhanden, nicht als vollständige randomisierte N-of-1-Auswertungsengine. Eine dauerhaft native iOS-/Android-App erfordert eine gesonderte Build- und Veröffentlichungsphase.
+## Testabdeckung
 
-**Browserdaten können gelöscht werden. Regelmäßig Backup exportieren.**
+- `test_konpasu_v1.py`: alle 18 neuen Detailprotokolltypen plus Krafttrainingsmodul, Bearbeitung, Satztypen, Wenn-dann-Plan, In-App-Erinnerung, CSV, Sprachwechsel.
+- `test_konpasu_v1_regression.py`: Migration einer v0.4-Datenstruktur (synthetischer Bestand), Beibehaltung vorhandener Trainingssätze/Gerätenotizen, echte 7/30/100-Tages-Serien, dokumentierter Bruch ohne Verlust der historischen Auszeichnung, Ausrüstungsanzeige, mobile Browser-Renders.
+- Kein JavaScript-Laufzeitfehler in diesen Tests.
+- Lokaler HTTP-/Service-Worker-E2E-Test war durch die Testumgebung gesperrt (`ERR_BLOCKED_BY_ADMINISTRATOR`), **nicht** als bestanden zu werten.
+- Kein Test auf deinem tatsächlichen iPhone, daher weiterhin Backup vor dem Update und manueller Geräte-Abnahmetest.
 
 ## Entwicklerhinweise
 
-Keine Build-Tools nötig. Für Browser-Tests lokal einen HTTP-Server starten, z. B. `python -m http.server`. Für Homescreen-Installation und Service-Worker-Speicherung ist HTTPS erforderlich (GitHub Pages erfüllt das). Kein CDN und keine Fremdskripte; statische Assets werden in `sw.js` offline gecacht.
+Technisch eine selbstenthaltene PWA mit Web-Standardtechnologien und IndexedDB. `app.js` ist der bestehende Offline-Kern; `features-v1.js` erweitert den Datenbestand ohne die bisherige Datenbankkennung zu ändern. `sw.js` speichert alle acht Kern-Assets im Cache `konpasu-offline-v100`.
 
-## Tests
-
-Im automatisierten Chromium-Browser-Interaktionstest geprüft: 19 Vorlagen; Zielanlage und Statusänderung; Messwert; Übung und Plan; Training mit Satz; Vorwerte mit expliziter Bestätigung; Satzbearbeitung; Pausentimer; Avatarformular; Analytics; Reflexionen und Strategie-Experiment; Download eines JSON-Backups; Sprachwechsel DE/EN. Bei diesem Ablauf wurden keine JavaScript-Laufzeitfehler beobachtet. Noch nicht auf einem echten iPhone getestet und keine Garantie für vollständige Fehlerfreiheit.
+**Datenschutz:** alle Daten bleiben bei dieser Version standardmäßig auf dem Gerät. GitHub Pages liefert die öffentlich sichtbaren **App-Dateien**, nicht deine persönlichen Datensätze. Ein Browser kann Website-Daten löschen; erstelle regelmäßig Backups. Exportiere private Tagebucheinträge nicht auf öffentlich erreichbare Websites.
