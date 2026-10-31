@@ -45,3 +45,23 @@ button[disabled]{opacity:.38;cursor:not-allowed}
 @media(max-width:380px){.xp-thumb{width:50px;height:50px}.xp-catalog-card{gap:6px}.xp-cal-day{min-height:44px}}
 
 .xp-art-open{background:none;border:0;padding:0;cursor:zoom-in}.xp-art-open .xp-thumb{pointer-events:none}.xp-exercise-preview{text-align:center;display:grid;justify-items:center;gap:10px}.xp-exercise-preview .xp-thumb.large{width:min(255px,80vw);height:245px;object-fit:contain}.xp-exercise-preview h3{font-size:18px}
+
+/* KONPASU 1.5 planning and goal refinements */
+.v15-plan-fields{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:8px 7px 13px;margin-top:-4px;background:var(--panel);border-radius:10px}
+.v15-plan-fields label,.v15-food-fields label{font-size:11px;display:flex;flex-direction:column;gap:4px;color:var(--muted)}
+.v15-plan-fields input,.v15-food input,.v15-food select,.v15-session-add select,.v15-duration input{padding:8px;min-height:39px;min-width:0;width:100%;background:#14251f;border:1px solid var(--line);color:var(--ink);border-radius:9px}
+.v15-plan-hint,.v15-info,.v15-confirm,.v15-mini-timeline{margin:12px 0;padding:10px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;font-size:12px}
+.v15-duration{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center;margin:8px 0 3px}
+.v15-duration input{width:120px}
+.v15-food{margin:12px 0;border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
+.v15-food-fields{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}
+.v15-session-add{display:grid;gap:8px;margin:14px 0;padding:12px;background:var(--panel2);border-radius:12px}
+.v15-mini-bars{display:flex;align-items:end;gap:5px;margin:12px 0}
+.v15-mini-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+.v15-mini-col div{border-radius:3px 3px 1px 1px;width:100%}
+.v15-mini-col small{font-size:8px;color:var(--muted)}
+@media(max-width:410px){.v15-plan-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.v15-session-add-settings{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin-top:8px}
+.v15-session-add-settings label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:var(--muted)}
+.v15-session-add-settings input,.v15-session-add-settings select{background:#14251f;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:7px;min-width:0}
+.v15-session-add-settings label:last-child{grid-column:1/-1}

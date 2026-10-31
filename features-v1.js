@@ -1,7 +1,7 @@
 'use strict';
 /* KONPASU 1.0 Preview: locally stored optional goal details and offline coaching.
    This code augments rather than resets the existing v0.4 IndexedDB schema. */
-const KONPASU_V1 = '1.2 QC';
+const KONPASU_V1 = '1.5 Goals + Training';
 const tr=(de,en)=>data.profile.lang==='en'?en:de;
 const _baseState=createState;
 createState=function(){return {..._baseState(),version:10,detailLogs:[],copingPlans:[],gentleReminders:[],streakAwards:[],settingsV1:{detailGoal:'water',remindersEnabled:false,quietStart:'21:00',quietEnd:'08:00'}}};

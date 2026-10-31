@@ -1,29 +1,42 @@
-# KONPASU 1.4 – Offline-Funktionsupdate
+# KONPASU 1.5 – Zielmodule und Training (Offline-PWA)
 
-Dieses Update baut auf KONPASU 1.2/1.3 auf und erweitert den spezialisierten Zielbereich sowie den Krafttrainingsplaner. Es handelt sich weiterhin um eine installierbare Web-App (PWA) und **nicht** um eine native iOS-/Android-App.
+**Dies ist ein kostenloser, offlinefähiger Web-App-Prototyp, keine native iOS/Android-App und keine garantierte fehlerfreie Endversion.**
 
-## Installation / Update
+## Update auf dem iPhone
 
-1. Auf dem iPhone in der bisherigen App **JSON-Backup exportieren und außerhalb der App speichern**.
-2. Alle **zehn Laufzeitdateien** aus diesem ZIP ins **Hauptverzeichnis** deines vorhandenen GitHub-Repositories `Rowlandolo/KONPASU` hochladen und bei gleichen Namen überschreiben:
-   - `index.html`, `app.css`, `app.js`, `features-v1.js`, **`goal-modules.js`**, **`training-library.js`**, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`.
-3. GitHub Pages nach dem Deployment online in Safari öffnen; bei Bedarf neu laden und die vorhandene Homescreen-App erneut starten. **Die Homescreen-App nicht löschen**, solange die Daten nicht extern gesichert sind.
-4. Training → **Übungskatalog** öffnen. Einmal auf `+` tippen, um eine Übung in den eigenen Bestand aufzunehmen. Daraus Trainingspläne zusammenstellen oder die Übung direkt zum laufenden Workout hinzufügen.
-5. Training → **Kalender** zeigt dokumentierte Einheiten pro Monat; einen Tag antippen, um die Übungen aufzurufen.
+1. In der **bisherigen KONPASU-App** unter Einstellungen ein **JSON-Backup exportieren** und die Datei in „Dateien“ oder einem anderen sicheren Ort aufbewahren. Nicht die App löschen.
+2. Das ZIP auf deinem PC entpacken.
+3. Die **elf Laufzeitdateien** in die **Wurzel** deines vorhandenen GitHub-Repositories `Rowlandolo/KONPASU` hochladen bzw. gleichnamige Dateien überschreiben:
+   `index.html`, `app.css`, `app.js`, `features-v1.js`, `goal-modules.js`, `training-library.js`, **`core-v15.js` (NEU)**, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`.
+4. Warten, bis GitHub Pages die Änderungen bereitstellt. In Safari auf `https://rowlandolo.github.io/KONPASU/` **online** neu laden, danach die bestehende Homescreen-App neu starten. Gegebenenfalls noch einmal neu laden, damit der neue Offline-Cache aktiviert wird.
+5. Im Flugmodus einen Testeintrag erfassen, App schließen und erneut öffnen. Danach normal online testen. Bei Problemen nichts löschen, sondern **Backup behalten**.
 
-## Neu in 1.4
+## Trainingsplaner
 
-- 97 eigenständig kuratierte Übungen; nach Brust, Rücken, Beinen, Schultern, Bizeps, Trizeps, Core, Ganzkörper und Cardio filterbar.
-- Suchen nach deutschen oder englischen Namen.
-- Schematische **selbst erstellte SVG-Illustrationen** für Übungstypen. Das sind keine detailgetreuen Fotos und keine Technik-Anleitung. Sie sind vollständig offline und werden nicht von Fitness Point Pro kopiert.
-- Eigene Übungen mit Muskelgruppe, Übungsvariante, dauerhaftem Gerätenotiz-Feld und optionalem persönlichen **Foto-Upload**. Fotos werden lokal verkleinert, in der Datenbank gespeichert und in JSON-Backups aufgenommen.
-- Bilder in der Übungsliste, während des Trainings und als vergrößerbare Vorschau im Katalog.
-- Monatskalender mit markierten Trainingstagen, gespeicherten Trainings und Monatswechsel.
-- Vorherige Satzwerte, einzelne Sätze, Planbearbeitung, Satzarten, Supersätze und History aus den bisherigen Versionen bleiben erhalten.
-- Die Zielmodule 1.3 mit 47 messbaren Zielmodi und 19 Vorlagen sind integriert.
+- 97 lokal enthaltene Übungsvorlagen mit deutscher/englischer Suche, Muskelgruppen und schematischen SVG-Illustrationen. Eigene Übungen samt Bild-Upload, Gerätenotizen und Gerätevarianten.
+- Eigene Trainingspläne; jetzt **Satzanzahl, Wiederholungsbereich, Pausenzeit und optionale Supersatz-Gruppenkennung je Übung** definieren.
+- Während des Trainings: die Vorgabe anzeigen, die gespeicherten Sätze vom letzten Mal anzeigen, Gewicht/Wiederholungen, Satztyp, RPE, Satznotiz und **Dauer in Sekunden** speichern. Für zeitbasierte Sätze sind Wiederholungen optional.
+- Pausentimer, vorhandene Historie, Monatskalender, persönliche Rekorde und Satz-Korrekturen bleiben erhalten.
+- In einem bereits abgeschlossenen Training können jetzt weitere Übungen und Sätze ergänzt und bearbeitet werden; gespeicherte Satzdauern werden angezeigt.
+- **Aufwärmsätze werden nicht als vollständiges Workout gezählt.**
+- Trainingspläne und einzelne Sätze funktionieren ohne Internet.
 
-## Datenschutz und Grenzen
+## 19 Zielmodule
 
-Die App lädt keinerlei Trainingsbilder, JavaScript-Bibliotheken oder Nutzerdaten von fremden Servern. GitHub Pages stellt nur einmalig die App-Dateien bereit. Trainings- und Fotodaten werden lokal gespeichert und sind nicht automatisch gegen Browserdatenverlust gesichert. **Regelmäßige JSON-Backups sind unerlässlich**. Die Offline-Installation und der Updateprozess müssen noch auf einem realen iPhone und Android-Gerät abgenommen werden; automatisierte Tests können keine Fehlerfreiheit garantieren.
+- Die bestehenden **19 Kategorien**, die Auswahl mehrerer Zielmodi, unterschiedliche Einheiten, Favoriten, 1-Tipp-Bestätigungen, Stoppuhr und detaillierte manuelle Einträge bleiben erhalten.
+- Neue Anzeige von Zeitraum und Datenabdeckung; Status „unbekannt“ bei fehlenden Daten.
+- **Schlaf**: Mehrfach erfasste Nächte werden nicht summiert; für eine Nacht zählt der zuletzt eingegebene gültige Hauptschlaf-Eintrag (Nickerchen ausgenommen).
+- **Zucker/Alkohol**: Tage ohne Konsum müssen ausdrücklich bestätigt sein; fehlende Eingaben beweisen keine Abstinenz.
+- **Gaming/Bildschirmzeit/Zucker/Alkohol mit Höchstwerten**: Der gesamte Zeitraum kann bewusst als vollständig protokolliert bestätigt werden. Ein kompletter Null-Zeitraum darf dann als 0 gewertet werden; unvollständige Angaben reichen nicht für einen Erfolg.
+- **Ernährung**: Zusätzlich eine kleine lokale Liste von 28 Lebensmitteln mit groben Nährwert-Schätzwerten pro 100 g. Auswahl + Portion füllt **optional** Kalorien, Protein, Kohlenhydrate und Fett in das Formular, ohne ungefragt Daten zu speichern. *Keine medizinisch exakte Ernährungsdatenbank, kein Barcodescanner.*
+- Verläufe zeigen die Zielerfüllung ohne fehlende Tage zu Nullen umzuwandeln.
 
-**Bewusst noch nicht vollständig:** echter 3D-Avatar, native Gesundheitsschnittstellen, vollständige Profi-Ernährungsdatenbank/Barcode-Erkennung, Cloud-Synchronisation, echte KI, statistisches Forschungs-Labor. Diese Fähigkeiten gehören zum weiterführenden Gesamtprojekt.
+## Datenschutz und Einschränkungen
+
+Keine externen APIs, Tracker, Cloud-Datenbank oder Abokosten. Der GitHub-Server ist nur für die Erstinstallation und Updates erforderlich. Daten liegen lokal auf dem Gerät; **regelmäßige JSON-Backups sind unerlässlich**, insbesondere vor Updates.
+
+Nicht enthalten: native Health- und Screen-Time-Schnittstellen, automatische Geräteerfassung, umfassende aktuelle Lebensmittel-/Barcode-Datenbank, vollständiges wissenschaftliches Analyse-Labor, Hochleistungs-3D-Avatar, echte KI oder Cloud-Synchronisierung. Vollständiger Offline-Homescreen-Neustart wurde in dieser Umgebung nicht auf einem realen iPhone getestet.
+
+## Technische Hinweise
+
+Die Datenbank bleibt `KONPASU-LOCAL-2` mit demselben State-Format; zusätzliche optionale Felder (Satzdauer, Planvorgaben) werden ohne Zurücksetzen ergänzt. Aus alten Plänen ohne Satzvorgaben entstehen keine fiktiven historischen Trainingsdaten. Die neuen Planvorgaben gelten nur für neue Trainingsstarts.
