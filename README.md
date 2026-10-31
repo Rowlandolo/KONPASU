@@ -1,42 +1,41 @@
-# KONPASU 1.5 – Zielmodule und Training (Offline-PWA)
+# KONPASU 1.6 – Modulares 2D-Avatar- und Belohnungssystem
 
-**Dies ist ein kostenloser, offlinefähiger Web-App-Prototyp, keine native iOS/Android-App und keine garantierte fehlerfreie Endversion.**
+## Was neu ist
 
-## Update auf dem iPhone
+- Ursprünglicher, offlinefähiger 2D-Samurai in **leichter Dreiviertelperspektive**. Kein 3D.
+- 16 übersichtliche Anpassungsgruppen, die die früher geplanten internen Ausrüstungskategorien bündeln.
+- Echte **separat gezeichnete, transparente SVG-Layer** mit identischem 480×600-Koordinatensystem. Alle Ebenen sind zusätzlich als eine gebündelte JS-Datei (`avatar-art-bundle.js`) enthalten, damit der GitHub-Upload mit wenigen Dateien funktioniert.
+- **19 Themenkollektionen × 5 Stufen = 95** wechselbare Belohnungs-Grafiklayer, plus je eine passende Inventar-Illustration.
+- Weitere **76 Serien-Effektlayer** (19 Kollektionen × 4 echte Tages- oder Wochenserien-Meilensteine).
+- Sieben Begleiterarten mit jeweils vier gezeichneten Evolutionsformen; vier Starterbegleiter, weitere Arten werden durch bestehende Zielregeln freigeschaltet.
+- Favoriten-Outfits speichern / anwenden / löschen, Einzelteile ausrüsten / ablegen, beste verfügbare Ausrüstung und Grundausstattung.
+- Hintergrund, Haarfarbe, Frisur, Mimik und Geschlechtsdarstellung verändern.
+- Historische Avatar-Einstellungen und Rangentwicklung über Datumsauswahl, Embleme für Serien und Zielmeilensteine.
+- Bestehende Datenbank und alle Trainings- und Zielmodule aus 1.5 bleiben erhalten.
+- Botanisch-ruhiges **Creme-Salbei-Design** für die App-Oberfläche.
 
-1. In der **bisherigen KONPASU-App** unter Einstellungen ein **JSON-Backup exportieren** und die Datei in „Dateien“ oder einem anderen sicheren Ort aufbewahren. Nicht die App löschen.
-2. Das ZIP auf deinem PC entpacken.
-3. Die **elf Laufzeitdateien** in die **Wurzel** deines vorhandenen GitHub-Repositories `Rowlandolo/KONPASU` hochladen bzw. gleichnamige Dateien überschreiben:
-   `index.html`, `app.css`, `app.js`, `features-v1.js`, `goal-modules.js`, `training-library.js`, **`core-v15.js` (NEU)**, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`.
-4. Warten, bis GitHub Pages die Änderungen bereitstellt. In Safari auf `https://rowlandolo.github.io/KONPASU/` **online** neu laden, danach die bestehende Homescreen-App neu starten. Gegebenenfalls noch einmal neu laden, damit der neue Offline-Cache aktiviert wird.
-5. Im Flugmodus einen Testeintrag erfassen, App schließen und erneut öffnen. Danach normal online testen. Bei Problemen nichts löschen, sondern **Backup behalten**.
+## Installieren / aktualisieren
 
-## Trainingsplaner
+**ZUERST**: In der bestehenden KONPASU-App unter *Einstellungen* ein vollständiges JSON-Backup exportieren und außerhalb der App sichern. Die bestehende Homescreen-App bitte **nicht löschen**.
 
-- 97 lokal enthaltene Übungsvorlagen mit deutscher/englischer Suche, Muskelgruppen und schematischen SVG-Illustrationen. Eigene Übungen samt Bild-Upload, Gerätenotizen und Gerätevarianten.
-- Eigene Trainingspläne; jetzt **Satzanzahl, Wiederholungsbereich, Pausenzeit und optionale Supersatz-Gruppenkennung je Übung** definieren.
-- Während des Trainings: die Vorgabe anzeigen, die gespeicherten Sätze vom letzten Mal anzeigen, Gewicht/Wiederholungen, Satztyp, RPE, Satznotiz und **Dauer in Sekunden** speichern. Für zeitbasierte Sätze sind Wiederholungen optional.
-- Pausentimer, vorhandene Historie, Monatskalender, persönliche Rekorde und Satz-Korrekturen bleiben erhalten.
-- In einem bereits abgeschlossenen Training können jetzt weitere Übungen und Sätze ergänzt und bearbeitet werden; gespeicherte Satzdauern werden angezeigt.
-- **Aufwärmsätze werden nicht als vollständiges Workout gezählt.**
-- Trainingspläne und einzelne Sätze funktionieren ohne Internet.
+1. Das Paket `KONPASU-1.6-2D-Avatar-Offline-Update.zip` auf deinem Windows-PC entpacken.
+2. Die **13 Dateien im ZIP-Hauptverzeichnis** (ohne Dokumentation) in das Hauptverzeichnis deines bestehenden GitHub-Repositories `Rowlandolo/KONPASU` hochladen bzw. ersetzen. Die **neuen Dateien** `avatar2d.js` und `avatar-art-bundle.js` müssen unbedingt mit dabei sein.
+3. Änderungen committen. Die bisherige GitHub-Pages-Einstellung `main` und `/(root)` bleibt bestehen.
+4. Nach Veröffentlichung `https://rowlandolo.github.io/KONPASU/` mit Internetverbindung in Safari öffnen, aktualisieren und KONPASU dann vom bisherigen iPhone-Homescreen starten.
+5. **Avatar** öffnen. Inventar, Gestaltung, Begleiter, Outfits, Serien, Ruhmeshalle und Zeitreise ausprobieren.
+6. App schließen, Flugmodus aktivieren, App erneut öffnen und prüfen, ob der Avatar und die restlichen Kernfunktionen verfügbar sind.
 
-## 19 Zielmodule
+> GitHub Pages liefert nur die statischen Dateien für die erste Installation und Updates. KONPASU speichert weiterhin lokal; der neue Avatar und alle Grafiken funktionieren anschließend ohne KI-API, Benutzerkonto oder Cloud-Datenbank. Das browserbasierte Speicherrisiko bleibt; regelmäßiges JSON-Backup ist wichtig.
 
-- Die bestehenden **19 Kategorien**, die Auswahl mehrerer Zielmodi, unterschiedliche Einheiten, Favoriten, 1-Tipp-Bestätigungen, Stoppuhr und detaillierte manuelle Einträge bleiben erhalten.
-- Neue Anzeige von Zeitraum und Datenabdeckung; Status „unbekannt“ bei fehlenden Daten.
-- **Schlaf**: Mehrfach erfasste Nächte werden nicht summiert; für eine Nacht zählt der zuletzt eingegebene gültige Hauptschlaf-Eintrag (Nickerchen ausgenommen).
-- **Zucker/Alkohol**: Tage ohne Konsum müssen ausdrücklich bestätigt sein; fehlende Eingaben beweisen keine Abstinenz.
-- **Gaming/Bildschirmzeit/Zucker/Alkohol mit Höchstwerten**: Der gesamte Zeitraum kann bewusst als vollständig protokolliert bestätigt werden. Ein kompletter Null-Zeitraum darf dann als 0 gewertet werden; unvollständige Angaben reichen nicht für einen Erfolg.
-- **Ernährung**: Zusätzlich eine kleine lokale Liste von 28 Lebensmitteln mit groben Nährwert-Schätzwerten pro 100 g. Auswahl + Portion füllt **optional** Kalorien, Protein, Kohlenhydrate und Fett in das Formular, ohne ungefragt Daten zu speichern. *Keine medizinisch exakte Ernährungsdatenbank, kein Barcodescanner.*
-- Verläufe zeigen die Zielerfüllung ohne fehlende Tage zu Nullen umzuwandeln.
+## Beschränkungen dieses Releases
 
-## Datenschutz und Einschränkungen
+- Die Grafiken sind funktionale, **stilisiert gezeichnete Vektor-Assets** und noch nicht das finale aufwendig handillustrierte Premium-Anime-Artwork.
+- Die Körpermaße steuern eine **dezente 2D-Proportions-Skalierung**, keine medizinisch oder anatomisch exakte Körperrekonstruktion.
+- Die Zeitreise kann frühere gespeicherte Look-Zustände und historischen Rang darstellen; eine vollständig animierte lückenlose Video-Zeitreise wurde nicht umgesetzt.
+- Für eine einzelne Zielserie wird eine spezielle zusätzliche Aura dargestellt; die üblichen Ausrüstungsslots bleiben gleichzeitig nutzbar.
+- Externe KI, native App-Store-Builds, Cloud-Sync und native iPhone-Systemintegrationen sind weiterhin nicht enthalten; die Kern-App bleibt lokal.
+- Eine vollständige Offline-Abnahme auf einem realen iPhone konnte hier nicht vorgenommen werden. Die durchgeführten Tests sind Browser- und Datenlogiktests.
 
-Keine externen APIs, Tracker, Cloud-Datenbank oder Abokosten. Der GitHub-Server ist nur für die Erstinstallation und Updates erforderlich. Daten liegen lokal auf dem Gerät; **regelmäßige JSON-Backups sind unerlässlich**, insbesondere vor Updates.
+## Originalgrafiken
 
-Nicht enthalten: native Health- und Screen-Time-Schnittstellen, automatische Geräteerfassung, umfassende aktuelle Lebensmittel-/Barcode-Datenbank, vollständiges wissenschaftliches Analyse-Labor, Hochleistungs-3D-Avatar, echte KI oder Cloud-Synchronisierung. Vollständiger Offline-Homescreen-Neustart wurde in dieser Umgebung nicht auf einem realen iPhone getestet.
-
-## Technische Hinweise
-
-Die Datenbank bleibt `KONPASU-LOCAL-2` mit demselben State-Format; zusätzliche optionale Felder (Satzdauer, Planvorgaben) werden ohne Zurücksetzen ergänzt. Aus alten Plänen ohne Satzvorgaben entstehen keine fiktiven historischen Trainingsdaten. Die neuen Planvorgaben gelten nur für neue Trainingsstarts.
+Die **346 ursprünglichen SVG-Dateien** sind als separates Quellenpaket `KONPASU-1.6-2D-SVG-Quellgrafiken.zip` enthalten. Dieses Paket ist **nicht** für die iPhone-Installation erforderlich; alle Grafiken sind in `avatar-art-bundle.js` eingebunden. Es kann für spätere Änderungen oder hochwertige Überzeichnungen verwendet werden.
