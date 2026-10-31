@@ -3,3 +3,22 @@
 @media(max-width:850px){.app{display:block}.side{display:none}.main{padding:23px 17px 110px}.hero{grid-template-columns:1fr 150px;min-height:235px;padding:17px}.hero h2{font-size:22px}.hero p{font-size:12px}.avatar-scene svg{width:175px;height:230px}.avatar-scene{height:225px}.bottomnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;bottom:0;left:0;right:0;background:#12231eea;border-top:1px solid #375247;backdrop-filter:blur(20px);padding:8px max(5px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left));z-index:5}.nav-bottom{background:none;border:0;color:#91a99b;display:grid;justify-items:center;gap:2px;font-size:10px;padding:5px 0}.nav-bottom .sym{font-size:22px;line-height:1.2}.nav-bottom.active{color:#d0e9b7}.grid2{gap:9px}.metric{padding:12px}.metric .number{font-size:25px}.panel{padding:15px}.goalrow{gap:8px}.goalicon{width:36px;height:36px;font-size:18px}.statusbtn{width:30px;height:31px}.top{margin-bottom:20px}.subtitle{max-width:240px}}
 @media(max-width:380px){.hero{grid-template-columns:1fr 120px}.hero h2{font-size:20px}.avatar-scene svg{width:160px}.goalrow{gap:6px}.statusbtn{width:28px;padding:0}.goalinfo .title{font-size:13px}.form-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* KONPASU 0.2 additions */
+.date-inline{background:#152723;border:1px solid #42594c;color:#eef3ec;border-radius:10px;padding:9px 8px;width:min(210px,61vw);min-height:39px;font-size:14px}
+button[disabled]{opacity:.38;cursor:not-allowed}
+.set-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:center;margin-top:9px}
+.set-form input{width:100%;min-width:0;border:1px solid var(--line);border-radius:9px;background:#14251f;color:var(--ink);min-height:41px;padding:9px}
+.new-set{margin-top:13px}.new-set label{font-size:12px;color:var(--muted);font-weight:700}
+.prevsets{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.spark-bars{display:flex;align-items:stretch;gap:3px;min-height:45px;margin:15px 0 9px}
+.bar-day{flex:1;min-width:2px;min-height:45px;border-radius:3px;background:#34463f}
+.bar-day.yes{background:#8dba7c}.bar-day.partial{background:#bd9b5a}.bar-day.no{background:#a16762}.bar-day.unknown{background:#32433d}
+.muted{color:var(--muted)}
+.set-form .btn{padding:8px 9px;white-space:nowrap}
+@media(max-width:410px){.status{gap:3px}.statusbtn{width:28px;height:32px}.goalrow{gap:5px}.goalinfo .desc{font-size:10px}.set-form{gap:5px}.set-form input{font-size:14px;padding:7px}.set-form .btn{font-size:12px}}
+
+/* v0.3 language and interaction refinements */
+.toptools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lang-label select{width:62px;min-height:42px;padding:7px 9px;border:1px solid #455f51;border-radius:12px;background:#172d26;color:#ebf1e8;font-weight:800;font-size:13px}
+.top .page-title{overflow-wrap:anywhere}
+@media(max-width:480px){.top{align-items:flex-start}.toptools{gap:5px}.lang-label select{width:55px;padding:7px 5px}.top .page-title{font-size:clamp(20px,7vw,32px)}.subtitle{max-width:230px}.bottomnav{z-index:5}}

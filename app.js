@@ -1,119 +1,698 @@
 'use strict';
-/* KONPASU – offline-first local prototype, no remote dependencies */
+/* KONPASU 0.3 – offline app: no trackers, APIs, CDNs or remote dependencies. */
 const PRESETS=[
- ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly'],
- ['cardio','Cardio','Sport','🚴','2 Einheiten / Woche','weekly'],
- ['steps','Schritte & Bewegung','Sport','🚶','Tägliche Aktivität','daily'],
- ['mobility','Beweglichkeit','Sport','🧘','3 Einheiten / Woche','weekly'],
- ['water','Wasser trinken','Gesundheit','💧','Individuelles Trinkziel','daily'],
- ['sleep','Schlaf','Gesundheit','🌙','Individuelles Schlafziel','daily'],
- ['nutrition','Ernährung','Gesundheit','🍱','Wochenbalance','weekly'],
- ['sugar','Zucker reduzieren','Gesundheit','🍵','Tage ohne zugesetzten Zucker','weekly'],
- ['alcohol','Alkohol reduzieren','Gesundheit','🌿','Persönliches Wochenziel','weekly'],
- ['reading','Lesen','Wissen','📚','Lesetage / Woche','weekly'],
- ['languages','Sprachen lernen','Wissen','🖌️','Lerntage / Woche','weekly'],
- ['learning','Weiterbildung','Wissen','🎓','Lerntage / Woche','weekly'],
- ['focus','Fokus & Deep Work','Wissen','🎯','Fokussitzungen / Woche','weekly'],
- ['meditation','Meditation','Achtsamkeit','🪷','Meditationstage / Woche','weekly'],
- ['journal','Tagebuch & Reflexion','Achtsamkeit','📜','Reflexionstage / Woche','weekly'],
- ['social','Gemeinsame Aktivitäten','Leben','🤝','Aktivitäten / Woche','weekly'],
- ['nature','Zeit in der Natur','Leben','🌲','Naturtage / Woche','weekly'],
- ['screen','Bildschirmzeit','Digital','📵','Persönliches Zeitlimit','daily'],
- ['gaming','Gaming reduzieren','Digital','🎮','Wöchentliches Zeitlimit','weekly']
+ ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
+ ['cardio','Cardio','Sport','🚴','2 Einheiten / Woche','weekly',2,'Einheiten','min'],
+ ['steps','Schritte & Bewegung','Sport','🚶','8.000 Schritte / Tag','daily',8000,'Schritte','min'],
+ ['mobility','Beweglichkeit','Sport','🧘','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
+ ['water','Wasser trinken','Gesundheit','💧','2.000 ml / Tag','daily',2000,'ml','min'],
+ ['sleep','Schlaf','Gesundheit','🌙','8 Stunden / Nacht','daily',8,'Stunden','min'],
+ ['nutrition','Ernährung','Gesundheit','🍱','Individuelle Wochenbalance','weekly',null,'','min'],
+ ['sugar','Zucker reduzieren','Gesundheit','🍵','5 Tage / Woche','weekly',5,'Tage','min'],
+ ['alcohol','Alkohol reduzieren','Gesundheit','🌿','Persönliches Wochenziel','weekly',null,'','min'],
+ ['reading','Lesen','Wissen','📚','4 Lesetage / Woche','weekly',4,'Tage','min'],
+ ['languages','Sprachen lernen','Wissen','🖌️','4 Lerntage / Woche','weekly',4,'Tage','min'],
+ ['learning','Weiterbildung','Wissen','🎓','3 Lerntage / Woche','weekly',3,'Tage','min'],
+ ['focus','Fokus & Deep Work','Wissen','🎯','5 Fokussitzungen / Woche','weekly',5,'Sitzungen','min'],
+ ['meditation','Meditation','Achtsamkeit','🪷','4 Tage / Woche','weekly',4,'Tage','min'],
+ ['journal','Tagebuch & Reflexion','Achtsamkeit','📜','3 Tage / Woche','weekly',3,'Tage','min'],
+ ['social','Gemeinsame Aktivitäten','Leben','🤝','2 Aktivitäten / Woche','weekly',2,'Aktivitäten','min'],
+ ['nature','Zeit in der Natur','Leben','🌲','3 Tage / Woche','weekly',3,'Tage','min'],
+ ['screen','Bildschirmzeit','Digital','📵','120 Minuten / Tag','daily',120,'Minuten','max'],
+ ['gaming','Gaming reduzieren','Digital','🎮','300 Minuten / Woche','weekly',300,'Minuten','max']
 ];
-const $=s=>document.querySelector(s);const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const id=()=>crypto?.randomUUID?.()||Math.random().toString(36).slice(2)+Date.now().toString(36);
-const localDate=d=>{const dt=d?new Date(d):new Date();return [dt.getFullYear(),String(dt.getMonth()+1).padStart(2,'0'),String(dt.getDate()).padStart(2,'0')].join('-')};
-const today=()=>localDate();const parseDay=s=>new Date(s+'T12:00:00');const plusDays=(s,n)=>{const d=parseDay(s);d.setDate(d.getDate()+n);return localDate(d)};
-const fmtDate=s=>new Intl.DateTimeFormat('de-DE',{day:'numeric',month:'short',year:'numeric'}).format(parseDay(s));
-const num=(v,def=0)=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?n:def};
-const asLabel=v=>String(v??'').replace(/\./g,',');
-function initial(){return {version:2,createdAt:new Date().toISOString(),profile:{name:'',gender:'neutral',accent:'navy',height:'',weight:'',chest:'',waist:'',hips:''},goals:PRESETS.map(([key,title,category,icon,target,period])=>({id:key,key,title,category,icon,target,period,active:['strength','water','reading'].includes(key)})),checks:[],exercises:[],plans:[],sessions:[],draft:null,reflections:[],avatarHistory:[]}}
-let state=initial(),page='home',selectedDay=today(),modal=null,toastTimer=null,analysisPeriod=28,workoutTab='plans',goalFilter='active',historyDate=today(),settingsOpen=false,persistenceOk=true;
-let dbRef=null,writeQueue=Promise.resolve();
-function openDB(){return new Promise((resolve,reject)=>{if(!('indexedDB'in window)){reject(Error('IndexedDB nicht vorhanden'));return}let req=indexedDB.open('KONPASU-LOCAL-2',1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('kv'))req.result.createObjectStore('kv')};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
-function dbRead(db){return new Promise((resolve,reject)=>{const tx=db.transaction('kv','readonly');const req=tx.objectStore('kv').get('state');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
-function dbWrite(db,obj){return new Promise((resolve,reject)=>{const tx=db.transaction('kv','readwrite');tx.objectStore('kv').put(obj,'state');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
-async function init(){try{dbRef=await openDB();const saved=await dbRead(dbRef);if(saved?.version===2)state=saved;else if(localStorage.getItem('konpasu-fallback-v2')){state=JSON.parse(localStorage.getItem('konpasu-fallback-v2'));await dbWrite(dbRef,state)}}catch(e){try{const saved=localStorage.getItem('konpasu-fallback-v2');if(saved)state=JSON.parse(saved)}catch(e2){}try{persistenceOk=!!window.localStorage}catch{persistenceOk=false}console.warn('IndexedDB fallback:',e)}
- if(!state?.goals||!state?.sessions||!state?.exercises)state=initial();render();if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('./sw.js').catch(console.warn);navigator.serviceWorker.ready.then(()=>{document.documentElement.dataset.offlineReady='true'}).catch(()=>{})}if(navigator.storage?.persist)navigator.storage.persist().catch(()=>{});
-}
-function save(){const snap=JSON.parse(JSON.stringify(state));writeQueue=writeQueue.catch(()=>{}).then(async()=>{try{if(dbRef)await dbWrite(dbRef,snap);else localStorage.setItem('konpasu-fallback-v2',JSON.stringify(snap));persistenceOk=true}catch(e){persistenceOk=false;notice('Speichern fehlgeschlagen. Bitte Backup exportieren.')}});return writeQueue}
-function notice(msg){clearTimeout(toastTimer);$('#toast')?.remove();const el=document.createElement('div');el.className='toast';el.id='toast';el.textContent=msg;document.body.appendChild(el);toastTimer=setTimeout(()=>el.remove(),2900)}
-const goalById=i=>state.goals.find(g=>g.id===i);const activeGoals=()=>state.goals.filter(g=>g.active);
-function getCheck(gid,d){return state.checks.find(x=>x.goalId===gid&&x.date===d)}
-function setCheck(gid,day,status){state.checks=state.checks.filter(x=>!(x.goalId===gid&&x.date===day));if(status!=='clear')state.checks.push({id:id(),goalId:gid,date:day,status,source:'manual',modifiedAt:new Date().toISOString()});save();render();notice(status==='yes'?'Zielerreichung bestätigt':status==='partial'?'Teilweise erreicht dokumentiert':status==='no'?'Nicht erreicht dokumentiert':'Eintrag entfernt')}
-const activeNum=()=>activeGoals().length;
-function statForDays(days,goal){let counts={yes:0,partial:0,no:0,unknown:0};for(const d of days){const st=getCheck(goal.id,d)?.status;counts[st||'unknown']++}return counts}
-function daysBack(n,end=today()){return Array.from({length:n},(_,i)=>plusDays(end,i-n+1))}
-function evaluated(){const goals=activeGoals(),range=daysBack(7);let yes=0,partial=0,no=0,unknown=0;for(const g of goals)for(const d of range){const s=getCheck(g.id,d)?.status;if(s==='yes')yes++;else if(s==='partial')partial++;else if(s==='no')no++;else unknown++}return {yes,partial,no,unknown,total:goals.length*range.length}}
-function percentile(){const s=evaluated(),n=s.yes+s.partial+s.no;return n?Math.round((s.yes+s.partial*.5)/n*100):null}
-function rank(){const logs=state.checks.filter(c=>c.status==='yes').length;const names=['Ashigaru','Kachi','Hirashi','Monogashira','Kumigashira','Karō','Daimyō','Shōgun'];const limits=[0,4,16,40,85,160,300,500];return {name:names[limits.reduce((acc,x,i)=>logs>=x?i:acc,0)],confirmed:logs};}
-function navItems(){return [['home','⌂','Heute'],['training','⌁','Training'],['goals','◎','Ziele'],['analysis','▤','Analyse'],['avatar','♜','Avatar']]}
-function header(title,sub){return `<header class="top"><div><p class="eyebrow">KONPASU · Dein Weg</p><h1 class="page-title">${safe(title)}</h1><p class="subtitle">${safe(sub)}</p></div><div class="top-actions"><button class="circle" data-action="nav" data-page="settings" aria-label="Einstellungen und Backup">⚙</button></div></header>`}
-function shell(){const titles={home:['Dein Überblick','Weniger Druck. Mehr Fortschritt.'],training:['Trainingstagebuch','Jeder Satz. Jeder Fortschritt.'],goals:['Deine Ziele','Du entscheidest, woran du arbeitest.'],analysis:['Deine Entwicklung','Nur dokumentierte Daten, keine Vermutungen.'],avatar:['Dein Weggefährte','Ein erster Vorgeschmack auf die Samurai-Welt.'],settings:['Daten & Einstellungen','Alles lokal. Alles in deiner Hand.']};const current=titles[page]||titles.home;$('#app').innerHTML=`<div class="app"><aside class="side"><div class="logo"><span class="logo-mark">道</span>KONPASU</div><nav class="nav">${navItems().map(([p,ico,name])=>`<button class="nav-item ${page===p?'active':''}" data-action="nav" data-page="${p}"><span class="nav-ico">${ico}</span>${name}</button>`).join('')}</nav><div class="sidefoot"><span class="badge">● Offline nutzbar</span><p style="margin-top:10px">Keine KI · Kein Konto · Keine Cloud-Kosten<br>Prototyp 0.1</p></div></aside><main class="main">${header(...current)}<div id="content">${{home:renderHome,training:renderTraining,goals:renderGoals,analysis:renderAnalysis,avatar:renderAvatar,settings:renderSettings}[page]?.()||renderHome()}</div></main><nav class="bottomnav">${navItems().map(([p,ico,name])=>`<button class="nav-bottom ${page===p?'active':''}" data-action="nav" data-page="${p}"><span class="sym">${ico}</span>${name}</button>`).join('')}</nav></div>`;renderModal();}
-function render(){shell()}
-function renderHome(){const s=evaluated(),rankInfo=rank(),p=percentile();const goals=activeGoals();const hasAny=state.checks.length;return `<div class="stack"><div class="panel hero"><div class="hero-content"><span class="badge gold">✦ ${safe(rankInfo.name)}</span><h2>${state.profile.name?'Willkommen, '+safe(state.profile.name)+'.':'Dein Weg beginnt hier.'}</h2><p>Ein Schritt nach dem anderen. Du bestimmst dein Tempo.</p><button class="btn primary" data-action="nav" data-page="training">Training öffnen ↗</button></div><div class="avatar-scene">${avatarSVG()}</div></div><div class="grid3"><div class="metric"><div class="label">Bestätigte Check-ins</div><div class="number">${state.checks.filter(x=>x.status==='yes').length}</div></div><div class="metric"><div class="label">Aktive Ziele</div><div class="number">${activeNum()}</div></div><div class="metric"><div class="label">Erfüllung*</div><div class="number">${p===null?'–':p+'%'}</div></div></div><div class="panel"><div class="between"><h2 style="font-size:18px">Schneller Check-in</h2><span class="badge muted">Nachträge möglich</span></div><div class="daybar"><button class="circle" data-action="shift-day" data-step="-1" aria-label="Vortag">‹</button><strong>${fmtDate(selectedDay)}</strong><button class="circle" data-action="shift-day" data-step="1" aria-label="Folgetag">›</button></div>${goals.length?goals.map(g=>renderGoalCheck(g)).join(''):'<div class="empty"><span class="big">◎</span>Aktiviere dein erstes Ziel im Bereich „Ziele“.</div>'}<p class="hint" style="margin-top:12px">✓ erreicht · ◐ teilweise · × nicht erreicht · ohne Eintrag = unbekannt.</p></div><div class="panel"><div class="between"><h3>Dein Offline-Coach</h3><span class="badge muted">Keine externe KI</span></div><p class="hint" style="margin-top:9px">${hasAny?'Deine Einträge sind gespeichert. Bei Bedarf findest du im Analysebereich die bestätigten Entwicklungen.':'Starte mit einer kleinen Routine. Du musst nicht täglich dokumentieren und kannst alle Einträge später ergänzen.'}</p></div><p class="hint">* Nur die bekannten Check-ins der letzten sieben Tage, teilweise = 50 % als Spielwert. Fehlende Tage werden nicht als Fehler gezählt. Dieser Prototyp enthält noch keine endgültige Ranglogik.</p></div>`}
-function renderGoalCheck(g){const st=getCheck(g.id,selectedDay)?.status;return `<div class="goalrow"><div class="goalicon">${g.icon||'◎'}</div><div class="goalinfo"><div class="title">${safe(g.title)}</div><div class="desc">${safe(g.target||'Dein Ziel')}</div></div><div class="status"><button class="statusbtn ${st==='yes'?'selected yes':''}" data-action="check" data-id="${safe(g.id)}" data-status="yes" title="Erreicht">✓</button><button class="statusbtn ${st==='partial'?'selected partial':''}" data-action="check" data-id="${safe(g.id)}" data-status="partial" title="Teilweise">◐</button><button class="statusbtn ${st==='no'?'selected no':''}" data-action="check" data-id="${safe(g.id)}" data-status="no" title="Nicht erreicht">×</button></div></div>`}
-function renderGoals(){const groups=[...new Set(state.goals.map(g=>g.category))];const filtered=goalFilter==='active'?activeGoals():goalFilter==='all'?state.goals:state.goals.filter(x=>!x.active);return `<div class="panel"><div class="between"><h2 style="font-size:18px">Deine Zielbibliothek</h2><span class="badge">19 Vorlagen</span></div><p class="hint" style="margin-top:7px">Ein Klick aktiviert ein Ziel. Alle Detailangaben bleiben optional.</p><div class="chips" style="margin:15px 0">${[['active','Aktiv'],['all','Alle Ziele'],['inactive','Inaktiv']].map(([key,label])=>`<button class="chip ${goalFilter===key?'active':''}" data-action="goal-filter" data-filter="${key}">${label}</button>`).join('')}</div>${filtered.length?groups.map(gr=>{const gg=filtered.filter(g=>g.category===gr);return gg.length?`<p class="kicker" style="margin:16px 0 8px">${safe(gr)}</p><div class="cards">${gg.map(g=>`<div class="goal-card"><div class="between"><div class="row"><div class="goalicon">${safe(g.icon)}</div><div><div class="bold">${safe(g.title)}</div><small>${safe(g.target||'Individuelles Ziel')}</small></div></div><button class="btn small ${g.active?'ghost':'primary'}" data-action="toggle-goal" data-id="${safe(g.id)}">${g.active?'Pausieren':'Aktivieren'}</button></div>${g.active?`<div class="actions"><button class="btn small" data-action="edit-goal" data-id="${safe(g.id)}">Zielvorgabe bearbeiten</button>${g.category==='Eigene Ziele'?`<button class="btn small danger" data-action="remove-goal" data-id="${safe(g.id)}">Löschen</button>`:''}</div>`:''}</div>`).join('')}</div>`:''}).join(''):'<div class="empty">Keine Ziele in dieser Ansicht.</div>'}<div class="actions" style="margin-top:16px"><button class="btn primary" data-action="modal" data-type="new-goal">＋ Eigenes Ziel erstellen</button></div></div><div class="note">Wichtig: Zielvorgaben können hier bearbeitet werden. Eine historisch versionierte Zielbewertung wird erst in einer späteren Version vollständig umgesetzt.</div>`}
-function lastExercise(exId,excludeSession=null){for(const s of [...state.sessions].sort((a,b)=>(b.finishedAt||b.date).localeCompare(a.finishedAt||a.date))){if(s.id===excludeSession)continue;const found=s.items?.find(x=>x.exerciseId===exId&&x.sets?.length);if(found)return {session:s,entry:found}}return null}
-function exById(exId){return state.exercises.find(x=>x.id===exId)}
-function planById(plId){return state.plans.find(x=>x.id===plId)}
-function renderTraining(){const draft=state.draft;if(draft)return renderActiveWorkout(draft);const plans=state.plans,exs=state.exercises;return `<div class="stack"><div class="panel"><div class="between"><h2 style="font-size:18px">Dein Trainingsbereich</h2><span class="badge gold">Offline</span></div><p class="hint" style="margin:8px 0 15px">Eigene Übungen und Trainingspläne. Gewicht und Wiederholungen für jeden einzelnen Satz erfassen.</p><div class="actions"><button class="btn primary" data-action="start-workout" data-id="">＋ Freies Training starten</button><button class="btn" data-action="modal" data-type="new-exercise">＋ Übung</button><button class="btn" data-action="modal" data-type="new-plan">＋ Plan</button></div></div><div class="panel"><div class="chips">${[['plans','Trainingspläne'],['exercises','Übungen'],['history','Verlauf']].map(([key,name])=>`<button class="chip ${workoutTab===key?'active':''}" data-action="training-tab" data-tab="${key}">${name}</button>`).join('')}</div><div style="margin-top:15px">${workoutTab==='plans'?(plans.length?plans.map(p=>`<div class="plan-card" style="margin-bottom:10px"><div class="between"><div><h3>${safe(p.name)}</h3><small>${p.exerciseIds.length} Übungen · ${p.exerciseIds.map(i=>safe(exById(i)?.name||'Gelöschte Übung')).join(' · ')}</small></div><button class="btn small primary" data-action="start-workout" data-id="${safe(p.id)}">Starten</button></div><div class="actions"><button class="btn small" data-action="modal" data-type="edit-plan" data-id="${safe(p.id)}">Bearbeiten</button><button class="btn small danger" data-action="delete-plan" data-id="${safe(p.id)}">Löschen</button></div></div>`).join(''):'<div class="empty"><span class="big">📋</span>Erstelle deinen ersten Trainingsplan.<br><button style="margin-top:11px" class="btn small" data-action="modal" data-type="new-plan">Plan erstellen</button></div>'):workoutTab==='exercises'?(exs.length?exs.map(ex=>{const last=lastExercise(ex.id);return `<div class="exercise-card" style="margin-bottom:10px"><div class="between"><div><h3>${safe(ex.name)}</h3><small>${safe(ex.equipment||'Eigene Übung')} · ${ex.unit==='kg'?'kg / Wdh.':'Wiederholungen'}</small></div><button class="btn small" data-action="modal" data-type="edit-exercise" data-id="${safe(ex.id)}">Bearbeiten</button></div>${ex.notes?`<p class="hint" style="margin:10px 0">⚙ ${safe(ex.notes)}</p>`:''}${last?`<div class="ex-prev" style="margin-top:9px">Letztes Training: ${last.entry.sets.map(s=>`${asLabel(s.kg)} kg × ${asLabel(s.reps)}`).join(' · ')}</div>`:''}</div>`}).join(''):'<div class="empty"><span class="big">🏋️</span>Lege „Bankdrücken“ oder deine erste eigene Übung an.</div>'):state.sessions.length?state.sessions.slice().reverse().map(s=>`<div class="exercise-card" style="margin-bottom:10px"><div class="between"><div><h3>${safe(s.title)}</h3><small>${fmtDate(s.date)} · ${s.items.reduce((n,i)=>n+i.sets.length,0)} Sätze</small></div><button class="btn small" data-action="modal" data-type="view-session" data-id="${safe(s.id)}">Ansehen</button></div></div>`).join(''):'<div class="empty">Noch keine abgeschlossenen Trainings.</div>'}</div></div><div class="note">Die Werte des letzten Trainings erscheinen beim nächsten Besuch derselben Übung direkt über der Satz-Eingabe. Vorschläge zählen erst nach dem Speichern als neue Sätze.</div></div>`}
-function renderActiveWorkout(d){const p=planById(d.planId);return `<div class="stack"><div class="training-banner"><div class="between"><div><span class="badge gold">● Training läuft</span><h2 style="margin-top:10px">${safe(d.title)}</h2><p class="hint">${fmtDate(d.date)} · automatisch lokal zwischengespeichert</p></div><button class="btn small" data-action="finish-workout">Abschließen ✓</button></div></div>${d.items.map((entry,k)=>{const ex=exById(entry.exerciseId),prev=lastExercise(entry.exerciseId);return `<div class="panel"><div class="between"><div><p class="kicker">Übung ${k+1}</p><h2 style="font-size:19px;margin-top:3px">${safe(ex?.name||'Übung entfernt')}</h2><p class="hint">${safe(ex?.equipment||'')} ${ex?.notes?' · ⚙ '+safe(ex.notes):''}</p></div><button class="btn small danger" data-action="remove-draft-ex" data-id="${entry.id}">Entfernen</button></div>${prev?`<div class="ex-prev" style="margin:14px 0 8px"><strong>Letztes Mal (${fmtDate(prev.session.date)}):</strong> ${prev.entry.sets.map((s,i)=>`<span>${i+1}: ${asLabel(s.kg)} kg × ${asLabel(s.reps)}</span>`).join(' · ')}</div>`:'<p class="hint" style="margin:11px 0">Noch keine vorherigen Satzwerte für diese Übung.</p>'}<div class="divider"></div><div class="between"><strong>Heute</strong><span class="muted small">${entry.sets.length} Sätze gespeichert</span></div>${entry.sets.length?`<table class="sets"><thead><tr><th style="width:17%">Satz</th><th>Gewicht (kg)</th><th>Wdh.</th><th style="width:18%"></th></tr></thead><tbody>${entry.sets.map((s,i)=>`<tr><td>${i+1}</td><td><strong>${asLabel(s.kg)}</strong></td><td><strong>${asLabel(s.reps)}</strong></td><td><button class="btn small danger" data-action="delete-set" data-entry="${entry.id}" data-set="${s.id}" title="Satz entfernen">×</button></td></tr>`).join('')}</tbody></table>`:''}<form class="form" style="margin-top:13px" data-submit="new-set" data-entry="${entry.id}"><div class="form-grid"><div class="field"><label>Gewicht (kg)</label><input name="kg" type="number" min="0" max="9999" step="0.25" inputmode="decimal" placeholder="60" value="${prev?.entry.sets[entry.sets.length]?.kg??prev?.entry.sets.at(-1)?.kg??''}" required></div><div class="field"><label>Wiederholungen</label><input name="reps" type="number" min="1" max="10000" step="1" inputmode="numeric" placeholder="8" value="${prev?.entry.sets[entry.sets.length]?.reps??prev?.entry.sets.at(-1)?.reps??''}" required></div></div><button class="btn primary full" type="submit">＋ Satz speichern</button></form><div class="actions" style="margin-top:9px"><button class="btn small" data-action="modal" data-type="edit-exercise" data-id="${safe(ex?.id||'')}">⚙ Gerätenotizen</button></div></div>`}).join('')}<div class="panel"><div class="between"><h3>Übung hinzufügen</h3><span class="muted small">${state.exercises.length} verfügbar</span></div>${state.exercises.length?`<div class="chips" style="margin:12px 0">${state.exercises.filter(x=>!d.items.some(i=>i.exerciseId===x.id)).map(ex=>`<button class="chip" data-action="draft-add-ex" data-id="${safe(ex.id)}">＋ ${safe(ex.name)}</button>`).join('')||'<p class="hint">Alle Übungen sind bereits im Training.</p>'}</div>`:''}<div class="actions"><button class="btn" data-action="modal" data-type="new-exercise">Neue Übung erstellen</button><button class="btn primary" data-action="finish-workout">Training abschließen</button><button class="btn danger" data-action="discard-workout">Verwerfen</button></div></div></div>`}
-function renderAnalysis(){const days=daysBack(analysisPeriod);const goals=activeGoals();const counts={yes:0,partial:0,no:0,unknown:0};const ratios=[];for(let k=0;k<days.length;k+=7){const chunk=days.slice(k,k+7);let known=0,pts=0;for(const g of goals){const c=statForDays(chunk,g);Object.keys(counts).forEach(st=>counts[st]+=c[st]);known+=c.yes+c.partial+c.no;pts+=c.yes+.5*c.partial}ratios.push({label:'W'+(Math.floor(k/7)+1),ratio:known?Math.round(pts/known*100):null})}const known=counts.yes+counts.partial+counts.no,rate=known?Math.round((counts.yes+.5*counts.partial)/known*100):null;const workouts=state.sessions.filter(s=>days.includes(s.date));const sets=workouts.reduce((acc,s)=>acc+s.items.reduce((n,i)=>n+i.sets.length,0),0);const exerciseStats=state.exercises.map(ex=>{const logs=state.sessions.flatMap(s=>s.items.filter(i=>i.exerciseId===ex.id).flatMap(i=>i.sets.map(set=>({date:s.date,...set}))));return {ex,logs}}).filter(x=>x.logs.length);return `<div class="stack"><div class="panel"><div class="between"><h2 style="font-size:18px">Deine Statistik</h2><span class="badge muted">Lokal berechnet</span></div><div class="chips" style="margin-top:13px">${[[28,'28 Tage'],[84,'12 Wochen'],[365,'1 Jahr']].map(([n,label])=>`<button class="chip ${analysisPeriod===n?'active':''}" data-action="analysis-period" data-days="${n}">${label}</button>`).join('')}</div><div class="grid3" style="margin-top:13px"><div class="metric"><div class="label">Zielerfüllung*</div><div class="number">${rate===null?'–':rate+'%'}</div></div><div class="metric"><div class="label">Bekannt</div><div class="number">${known}</div></div><div class="metric"><div class="label">Offen</div><div class="number">${counts.unknown}</div></div></div><div class="sectionhead"><h2>Verlauf der bewertbaren Einträge</h2></div><div class="bars">${ratios.map(r=>`<div class="bar-wrap"><div style="font-size:10px;color:#dfebd4">${r.ratio===null?'–':r.ratio+'%'}</div><div class="bar" style="height:${r.ratio===null?3:r.ratio}%"></div><div class="bar-label">${r.label}</div></div>`).join('')}</div><p class="hint" style="margin-top:8px">* Nur vorhandene Check-ins; teilweise zählt hier als 50 % Spielwert. Keine Rückschlüsse auf nicht dokumentierte Tage.</p></div><div class="grid2"><div class="metric"><div class="label">Abgeschlossene Workouts</div><div class="number">${workouts.length}</div></div><div class="metric"><div class="label">Erfasste Sätze</div><div class="number">${sets}</div></div></div><div class="panel"><div class="sectionhead" style="margin-top:0"><h2>Übungsrekorde</h2></div>${exerciseStats.length?exerciseStats.map(({ex,logs})=>{const best=logs.slice().sort((a,b)=>num(b.kg)-num(a.kg))[0];const latest=logs.slice().sort((a,b)=>b.date.localeCompare(a.date))[0];return `<div class="statline"><div><strong>${safe(ex.name)}</strong><br><span class="hint">${logs.length} erfasste Sätze</span></div><div style="text-align:right"><strong>${asLabel(best.kg)} kg × ${asLabel(best.reps)}</strong><br><span class="hint">höchstes dokumentiertes Gewicht</span></div></div>`}).join(''):'<div class="empty">Sobald du einen Satz protokolliert hast, erscheint hier deine Übungshistorie.</div>'}</div><div class="panel"><h3>Wissenschaftlich verantwortliche Auswertung</h3><p class="hint" style="margin-top:8px">Messwerte, Bestätigungen und unbekannte Angaben werden getrennt betrachtet. Für ursächliche Zusammenhänge zwischen Schlaf, Training und anderen Zielen fehlen im Prototyp noch die dafür benötigten Messreihen und Prüfungen. Es werden keine Korrelationen erfunden.</p></div></div>`}
-function avatarSVG(view=state.profile){const gender=view.gender||'neutral',accent=view.accent||'navy';const colors={navy:['#455e72','#264153'],forest:['#50795a','#294638'],wine:['#82565a','#4d3036']}[accent]||['#455e72','#264153'];const hair=gender==='feminine'?`<path d="M89 89 Q83 39 132 39 Q179 35 178 92 L173 154 Q159 168 153 136 L100 139 Q83 166 89 89" fill="#192322"/>`:`<path d="M92 79 Q90 45 117 47 Q150 32 171 70 L165 86 Q155 74 141 69 Q125 83 101 83Z" fill="#1a2522"/>`;const face=gender==='masculine'?'M101 77 Q101 60 131 62 Q163 65 163 85 L159 112 Q146 131 131 133 Q114 129 105 113 Z':'M101 77 Q105 59 131 62 Q163 66 163 85 L157 114 Q145 130 131 131 Q115 128 105 113 Z';return `<svg viewBox="0 0 265 305" role="img" aria-label="Stilisierter zweidimensionaler Samurai-Platzhalter, noch kein 3D-Modell"><defs><linearGradient id="coat-${accent}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${colors[0]}"/><stop offset="1" stop-color="${colors[1]}"/></linearGradient><linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d9b8"/><stop offset=".55" stop-color="#9fae9a"/><stop offset="1" stop-color="#6e8d86"/></linearGradient></defs><ellipse cx="132" cy="285" rx="85" ry="12" fill="#091b17" opacity=".5"/><path d="M92 185 L79 279 Q108 298 132 282 L131 194 Z" fill="#23382e" stroke="#486759" stroke-width="2"/><path d="M137 191 L136 282 Q159 296 184 279 L168 185Z" fill="#2a4037" stroke="#547467" stroke-width="2"/><path d="M84 277 L130 277 L125 290 L78 290Z M137 277 L183 277 L190 290 L141 290Z" fill="#b5a885"/><path d="M89 121 Q67 127 56 166 L43 221 Q44 232 54 232 L74 184 L87 203Z" fill="url(#coat-${accent})" stroke="#a3b49e" stroke-width="2"/><path d="M172 122 Q190 128 204 174 L223 219 Q223 230 211 232 L187 186 L181 200Z" fill="url(#coat-${accent})" stroke="#a3b49e" stroke-width="2"/><path d="M97 111 L80 154 Q83 199 82 235 L181 237 Q177 183 184 154 L163 113 L137 106 L125 107Z" fill="url(#coat-${accent})" stroke="#b6c9b8" stroke-width="2"/><path d="M100 118 L133 173 L163 114" stroke="#e9dbc2" stroke-width="13" fill="none"/><path d="M128 176 L144 236 L122 237 L107 189Z" fill="#d5d6be" opacity=".8"/><path d="M78 200 L184 199 L185 214 L80 215Z" fill="#c8ad79" stroke="#9b875d" stroke-width="2"/><rect x="119" y="201" width="30" height="15" rx="3" fill="#efddac"/><path d="M156 213 L180 211 L187 272" stroke="#deb987" stroke-width="8" stroke-linecap="round"/><path d="M178 222 L194 265" stroke="#c5c4b0" stroke-width="4"/><path d="M121 107 L121 116 L140 116 L140 106" fill="#debc9f"/>${hair}<path d="${face}" fill="#e0b79c"/><path d="M114 89 Q122 84 128 89 M138 88 Q145 84 151 88" stroke="#28352e" fill="none" stroke-width="3" stroke-linecap="round"/><ellipse cx="122" cy="90" rx="2" ry="3" fill="#1e2c29"/><ellipse cx="145" cy="90" rx="2" ry="3" fill="#1e2c29"/><path d="M133 93 L130 106 L135 107" fill="none" stroke="#b58d77" stroke-width="2"/><path d="M124 116 Q134 121 144 115" stroke="#9c6259" stroke-width="2" stroke-linecap="round" fill="none"/>${gender==='feminine'?`<path d="M93 73 Q103 30 142 48 L167 74" stroke="#192322" stroke-width="12" fill="none"/>`:`<path d="M96 79 L109 64 L122 68 L141 59 L162 78" stroke="#192322" stroke-width="11" fill="none"/>`}<path d="M71 164 L51 206 M193 164 L213 208" stroke="#b3c4b3" stroke-width="4" opacity=".6"/><path d="M130 155 L151 161 L146 187 L131 195 L116 187 L112 162Z" fill="none" stroke="url(#steel)" stroke-width="4"/><path d="M117 182 L145 182" stroke="#e9d39c" stroke-width="3"/></svg>`}
-function renderAvatar(){const rankInfo=rank();const snapshots=state.avatarHistory||[];const hist=snapshots.filter(h=>h.date<=historyDate).sort((a,b)=>b.date.localeCompare(a.date)||b.savedAt.localeCompare(a.savedAt));const shown=hist[0]?.profile||state.profile;return `<div class="stack"><div class="panel"><div class="between"><h2 style="font-size:17px">Dein Charakter</h2><span class="badge gold">${rankInfo.name}</span></div><div class="avatar-hero">${avatarSVG(shown)}<p class="hint" style="padding:8px;text-align:center">Stilisierte 2D-Vorschau – die geplante 3D-Engine folgt später.</p></div><div class="actions" style="margin-top:13px"><button class="btn primary" data-action="modal" data-type="avatar-edit">Erscheinungsbild anpassen</button></div></div><div class="panel"><h3>Avatar-Zeitreise – erste Grundlage</h3><p class="hint" style="margin:7px 0 12px">Gespeicherte Körper- und Stiländerungen werden mit Datum dokumentiert. Historische Ausrüstung und interaktive 3D-Darstellung folgen in späteren Versionen.</p><div class="field"><label>Datum anzeigen</label><input id="history-date" type="date" value="${safe(historyDate)}" max="${today()}"></div><div class="statline" style="margin-top:15px"><span>Gespeicherte Avatar-Änderungen</span><strong>${snapshots.length}</strong></div><div class="actions"><button class="btn small" data-action="avatar-today">Heute zeigen</button></div></div><div class="note gold">Starterausstattung bleibt immer vorhanden. Eine vollständige 3D-Samurai-Figur mit modularer Rüstung, Begleitern und Rangsystem ist Bestandteil der späteren Expo-Version – nicht dieses ersten Offline-Prototyps.</div></div>`}
-function renderSettings(){const created=state.createdAt?.slice(0,10)||today();return `<div class="stack"><div class="panel"><h2 style="font-size:18px">Deine Daten gehören dir</h2><p class="hint" style="margin:8px 0 13px">Kein Konto, kein Tracking, keine Cloud, keine KI, keine laufenden Kosten. Alles wird auf diesem Gerät gespeichert.</p><div class="statlist"><div class="statline"><span>Speicherung</span><strong>${persistenceOk?'Lokal aktiv':'Fehler'}</strong></div><div class="statline"><span>Erster Start</span><strong>${fmtDate(created)}</strong></div><div class="statline"><span>Offline-Cache</span><strong>${'serviceWorker'in navigator&&location.protocol==='https:'?'Installierbar':'Benötigt HTTPS'}</strong></div><div class="statline"><span>Protokollierte Trainings</span><strong>${state.sessions.length}</strong></div><div class="statline"><span>Erfasste Check-ins</span><strong>${state.checks.length}</strong></div></div><div class="actions" style="margin-top:15px"><button class="btn primary" data-action="export">⬇ Backup exportieren</button><button class="btn" data-action="import">⬆ Backup importieren</button><input id="import-file" class="sr" type="file" accept="application/json,.json"></div><div class="warnbox" style="margin-top:13px">Wichtig: iOS kann Website-Daten bei Speichermangel oder nach einer Löschung entfernen. Exportiere regelmäßig ein Backup und bewahre es außerhalb der App auf. Daten im Homescreen-Modus und in Safari können getrennt gespeichert sein.</div></div><div class="panel"><h3>Persönliche Einstellungen</h3><form class="form" data-submit="profile-name" style="margin-top:13px"><div class="field"><label>Vorname oder Spitzname (optional)</label><input name="name" value="${safe(state.profile.name)}" placeholder="Dein Name"></div><button class="btn" type="submit">Name speichern</button></form></div><div class="panel"><h3>Daten löschen</h3><p class="hint" style="margin:7px 0 12px">Entfernt alle Trainings, Ziele, Körperwerte und Einträge dieses Geräts. Exportiere vorher ein Backup.</p><button class="btn danger" data-action="reset">Alle App-Daten löschen</button></div><p class="hint">KONPASU Prototyp 0.1. Eine Cloud-Synchronisierung und echte KI sind bewusst nicht enthalten, um vollständig unabhängig und kostenlos zu bleiben.</p></div>`}
-function modalShell(title,body){return `<div class="modal-overlay" id="modal-overlay"><div class="modal" role="dialog" aria-modal="true"><div class="modal-header"><div><p class="eyebrow">KONPASU</p><h2>${safe(title)}</h2></div><button class="circle" data-action="modal-close" aria-label="Schließen">×</button></div>${body}</div></div>`}
-const field=(name,label,value='',type='text',extra='')=>`<div class="field"><label for="field-${name}">${safe(label)}</label>${type==='textarea'?`<textarea id="field-${name}" name="${safe(name)}" ${extra}>${safe(value)}</textarea>`:`<input id="field-${name}" name="${safe(name)}" type="${type}" value="${safe(value)}" ${extra}>`}</div>`;
-function renderModal(){document.querySelector('#modal-overlay')?.remove();if(!modal)return;let html='';const m=modal;const isEdit=['edit-exercise','edit-plan'].includes(m.type);const ex=isEdit&&m.type==='edit-exercise'?exById(m.id):null;const plan=isEdit&&m.type==='edit-plan'?planById(m.id):null;if(m.type==='new-exercise'||m.type==='edit-exercise'){html=modalShell(ex?'Übung bearbeiten':'Eigene Übung anlegen',`<form class="form" data-submit="exercise" data-id="${safe(ex?.id||'')}">${field('name','Übungsname',ex?.name||'','text','required placeholder="z. B. Bankdrücken"')}${field('equipment','Gerät / Variante',ex?.equipment||'','text','placeholder="z. B. Langhantel, Maschine 3"')}${field('notes','Gerätenotizen und Einstellungen',ex?.notes||'','textarea','placeholder="Sitzposition, Griffhöhe, Bankeinstellung ..."')}<button type="submit" class="btn primary full">Übung speichern</button>${ex?`<button class="btn danger" type="button" data-action="delete-exercise" data-id="${safe(ex.id)}">Übung löschen</button>`:''}</form>`)}
-else if(m.type==='new-plan'||m.type==='edit-plan'){html=modalShell(plan?'Trainingsplan bearbeiten':'Trainingsplan erstellen',`<form class="form" data-submit="plan" data-id="${safe(plan?.id||'')}">${field('name','Name des Plans',plan?.name||'','text','placeholder="Push, Pull, Beine, Ganzkörper ..." required')}<div class="field"><label>Übungen auswählen</label>${state.exercises.length?`<div class="checklist">${state.exercises.map(ex=>`<label class="checkline"><input type="checkbox" name="exerciseIds" value="${safe(ex.id)}" ${plan?.exerciseIds.includes(ex.id)?'checked':''}>${safe(ex.name)} <small>(${safe(ex.equipment||'eigene Übung')})</small></label>`).join('')}</div>`:'<div class="note">Du kannst einen leeren Plan anlegen und später Übungen hinzufügen. Lege Übungen im Trainingsbereich an.</div>'}</div><button type="submit" class="btn primary full">Plan speichern</button></form>`)}
-else if(m.type==='new-goal'){html=modalShell('Eigenes Ziel anlegen',`<form class="form" data-submit="goal">${field('title','Name des Ziels','','text','required placeholder="z. B. 2× Yoga pro Woche"')}${field('target','Deine persönliche Zielvorgabe','','text','placeholder="z. B. 2 Einheiten / Woche"')}<button type="submit" class="btn primary full">Ziel anlegen</button></form>`)}
-else if(m.type==='edit-goal'){const g=goalById(m.id);html=modalShell('Zielvorgabe bearbeiten',`<form class="form" data-submit="goal-edit" data-id="${safe(g.id)}">${field('title','Zielname',g.title,'text','required')}${field('target','Persönliche Vorgabe',g.target,'text')}<button type="submit" class="btn primary full">Speichern</button></form>`)}
-else if(m.type==='avatar-edit'){const p=state.profile;html=modalShell('Deinen Avatar gestalten',`<form class="form" data-submit="avatar"><div class="field"><label>Avatar-Darstellung</label><select name="gender"><option value="neutral" ${p.gender==='neutral'?'selected':''}>Androgyn / individuell</option><option value="masculine" ${p.gender==='masculine'?'selected':''}>Männlich</option><option value="feminine" ${p.gender==='feminine'?'selected':''}>Weiblich</option></select></div><div class="field"><label>Gewandfarbe</label><select name="accent"><option value="navy" ${p.accent==='navy'?'selected':''}>Indigo</option><option value="forest" ${p.accent==='forest'?'selected':''}>Waldgrün</option><option value="wine" ${p.accent==='wine'?'selected':''}>Bordeaux</option></select></div><div class="form-grid">${field('height','Größe (cm, optional)',p.height||'','number','min="0" step="0.1"')}${field('weight','Gewicht (kg, optional)',p.weight||'','number','min="0" step="0.1"')}${field('chest','Brustumfang (cm)',p.chest||'','number','min="0" step="0.1"')}${field('waist','Taillenumfang (cm)',p.waist||'','number','min="0" step="0.1"')}${field('hips','Hüftumfang (cm)',p.hips||'','number','min="0" step="0.1"')}</div><p class="hint">Körperwerte werden lokal gespeichert, aber in diesem Prototyp noch nicht in präzise Körperproportionen umgesetzt. Die automatische 3D-Körperanpassung folgt später.</p><button type="submit" class="btn primary full">Avatar speichern</button></form>`)}
-else if(m.type==='view-session'){const s=state.sessions.find(x=>x.id===m.id);html=modalShell('Training: '+s.title,`<p class="hint" style="margin-bottom:14px">${fmtDate(s.date)} · ${s.items.reduce((n,x)=>n+x.sets.length,0)} Sätze</p>${s.items.map(entry=>`<div class="exercise-card" style="margin-bottom:10px"><strong>${safe(exById(entry.exerciseId)?.name||'Entfernte Übung')}</strong><div class="statlist" style="margin-top:10px">${entry.sets.map((set,i)=>`<div class="statline"><span>Satz ${i+1}</span><strong>${asLabel(set.kg)} kg × ${asLabel(set.reps)}</strong></div>`).join('')}</div></div>`).join('')}<button class="btn danger" data-action="delete-session" data-id="${safe(s.id)}">Training löschen</button>`)}
-if(html)document.body.insertAdjacentHTML('beforeend',html)}
-function startWorkout(planId){if(state.draft){notice('Schließe zuerst das aktuelle Training ab.');return}const p=planById(planId);state.draft={id:id(),date:today(),planId:planId||null,title:p?.name||'Freies Training',startedAt:new Date().toISOString(),items:(p?.exerciseIds||[]).filter(x=>exById(x)).map(exId=>({id:id(),exerciseId:exId,sets:[]}))};save();page='training';render();notice('Training gestartet – alle Sätze werden lokal gespeichert')}
-function finishWorkout(){const d=state.draft;if(!d)return;const sets=d.items.reduce((n,i)=>n+i.sets.length,0);if(!sets){notice('Bitte erst mindestens einen Satz speichern oder Training verwerfen.');return}state.sessions.push({...d,finishedAt:new Date().toISOString()});state.draft=null;save();render();notice(`${sets} Sätze im Trainingstagebuch gespeichert`)}
-function makeExport(){const blob=new Blob([JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.download=`KONPASU-Backup-${today()}.json`;a.href=url;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);notice('Backup-Datei erstellt')}
-function openModal(type,which=null){modal={type,id:which};renderModal()}
-function closeModal(){modal=null;$('#modal-overlay')?.remove()}
-function withConfirm(message,run){if(window.confirm(message)){run();save();render()}}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action,i=b.dataset.id;
- if(a==='nav'){page=b.dataset.page;closeModal();render();window.scrollTo(0,0)}
- else if(a==='shift-day'){selectedDay=plusDays(selectedDay,Number(b.dataset.step));render()}
- else if(a==='check'){const existing=getCheck(i,selectedDay)?.status;setCheck(i,selectedDay,existing===b.dataset.status?'clear':b.dataset.status)}
- else if(a==='goal-filter'){goalFilter=b.dataset.filter;render()}
- else if(a==='toggle-goal'){const g=goalById(i);if(g){g.active=!g.active;save();render();notice(g.active?'Ziel aktiviert':'Ziel pausiert')}}
- else if(a==='modal'){openModal(b.dataset.type,i)}
- else if(a==='modal-close'){closeModal()}
- else if(a==='training-tab'){workoutTab=b.dataset.tab;render()}
- else if(a==='start-workout'){startWorkout(i||null)}
- else if(a==='draft-add-ex'){if(state.draft&&exById(i)){state.draft.items.push({id:id(),exerciseId:i,sets:[]});save();render();notice('Übung hinzugefügt')}}
- else if(a==='remove-draft-ex'){if(state.draft){state.draft.items=state.draft.items.filter(x=>x.id!==i);save();render()}}
- else if(a==='delete-set'){const entry=state.draft?.items.find(x=>x.id===b.dataset.entry);if(entry){entry.sets=entry.sets.filter(x=>x.id!==b.dataset.set);save();render()}}
- else if(a==='finish-workout'){finishWorkout()}
- else if(a==='discard-workout'){withConfirm('Aktives Training und alle noch nicht abgeschlossenen Sätze verwerfen?',()=>{state.draft=null;notice('Training verworfen')})}
- else if(a==='delete-plan'){withConfirm('Diesen Plan löschen? Bereits absolvierte Trainings bleiben erhalten.',()=>{state.plans=state.plans.filter(p=>p.id!==i)})}
- else if(a==='delete-exercise'){withConfirm('Übung entfernen? Die protokollierten Sätze bleiben erhalten, aber der Übungsname wird in der Historie nicht mehr angezeigt.',()=>{state.exercises=state.exercises.filter(ex=>ex.id!==i);state.plans.forEach(p=>p.exerciseIds=p.exerciseIds.filter(exId=>exId!==i));closeModal()})}
- else if(a==='remove-goal'){withConfirm('Eigenes Ziel wirklich löschen? Auch die zugehörigen Check-ins werden gelöscht.',()=>{state.goals=state.goals.filter(g=>g.id!==i);state.checks=state.checks.filter(c=>c.goalId!==i)})}
- else if(a==='delete-session'){withConfirm('Dieses abgeschlossene Training samt Satzprotokollen löschen?',()=>{state.sessions=state.sessions.filter(x=>x.id!==i);closeModal()})}
- else if(a==='analysis-period'){analysisPeriod=Number(b.dataset.days);render()}
- else if(a==='export'){makeExport()}
- else if(a==='import'){$('#import-file')?.click()}
- else if(a==='avatar-today'){historyDate=today();render()}
- else if(a==='reset'){withConfirm('WIRKLICH ALLE LOKALEN KONPASU-DATEN LÖSCHEN? Vorher ein Backup exportieren.',()=>{state=initial();selectedDay=today();page='home'})}
+const $=(s,root=document)=>root.querySelector(s);
+const $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>window.crypto?.randomUUID?.()||`${Date.now()}-${Math.random().toString(36).slice(2)}`;
+const number=(x,fallback=NaN)=>{if(x===null||x===undefined||String(x).trim()==='')return fallback;const v=Number(String(x).trim().replace(',','.'));return Number.isFinite(v)?v:fallback};
+const fmtNum=(x,max=1)=>Number(x).toLocaleString(data?.profile?.lang==='en'?'en-GB':'de-DE',{maximumFractionDigits:max});
+const isoDate=d=>{const x=d||new Date();return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`};
+const today=()=>isoDate();
+const atLocal=s=>new Date(String(s)+'T12:00:00');
+const dateShift=(s,n)=>{const x=atLocal(s);x.setDate(x.getDate()+n);return isoDate(x)};
+const monday=d=>{const x=atLocal(d),off=(x.getDay()+6)%7;return dateShift(d,-off)};
+const weekEnd=d=>dateShift(monday(d),6);
+const periodKey=(g,d)=>configAt(g,d).period==='weekly'?monday(d):d;
+const formatDate=d=>new Intl.DateTimeFormat(data?.profile?.lang==='en'?'en-GB':'de-DE',{day:'2-digit',month:'short',year:'numeric'}).format(atLocal(d));
+const periodLabel=(g,d)=>g.period==='weekly'?`${formatDate(monday(d))} – ${formatDate(weekEnd(d))}`:formatDate(d);
+const daysBack=(n,end=today())=>Array.from({length:n},(_,i)=>dateShift(end,i-n+1));
+const clamp=(x,l,h)=>Math.min(h,Math.max(l,x));
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+const TIERS=['Grundausstattung','Gewöhnlich','Selten','Episch','Legendär','Mythisch'];
+const TIER_WEEKS=[0,1,4,12,26,52];
+const RANKS=['Ashigaru','Kachi','Hirashi','Monogashira','Kumigashira','Karō','Daimyō','Shōgun'];
+const RANK_WEEKS=[0,1,4,8,12,26,39,52];
+const RANK_CONSISTENCY=[0,.5,.6,.7,.75,.8,.85,.9];
+const ITEM_NAMES={strength:['Kote des Anfängers','Eisen-Kote','Samurai-Sode','Kabuto des Willens','Himmlisches Gusoku'],cardio:['Lauf-Tabi','Wind-Haori','Falkenfeder-Umhang','Sturmwind-Aura','Windgott-Gewand'],steps:['Reisesandalen','Bambusstab','Pilger-Reisetasche','Goldene Wanderstiefel','Pfad der Tausend Wege'],mobility:['Seidenärmel','Trainingsgewand','Kranich-Pose','Fließendes Gewand','Himmlischer Kranich'],water:['Bambusbecher','Keramikflasche','Azur-Gefäß','Kristallquelle','Gefäß des Seegottes'],sleep:['Nachtband','Mond-Haori','Sternenlaterne','Traumwächter-Gewand','Mondpavillon'],nutrition:['Bento-Tuch','Verzierte Reisschale','Natur-Kochgewand','Goldenes Ernte-Artefakt','Garten der Fülle'],sugar:['Balance-Armband','Seiden-Obi','Balance-Fächer','Silberner Gleichgewichts-Obi','Aura des Gleichgewichts'],alcohol:['Gelassener Ausdruck','Stille Pose','Klarblick-Emote','Morgenlicht-Animation','Aura des inneren Friedens'],reading:['Lesezeichen','Gebundenes Buch','Große Schriftrolle','Bibliothekar-Haori','Ewiges Archiv'],meditation:['Perlenarmband','Zen-Kissen','Meditationsgewand','Lotus-Lichtkranz','Lotusthron'],nature:['Blatt-Anhänger','Waldumhang','Kleiner Waldgeist','Nebelwald','Kitsune-Wächter'],languages:['Kanji-Anhänger','Kalligrafiepinsel','Sprach-Schriftrolle','Schwebende Schriftzeichen','Flüsternde Schriftrolle'],learning:['Lernbeutel','Gelehrten-Kopfbedeckung','Gelehrten-Haori','Gewand des Weisen','Himmlische Akademie'],focus:['Konzentrationsstein','Hachimaki-Stirnband','Zen-Zeitmesser','Ring der Konzentration','Raum der Stille'],journal:['Tintenfläschchen','Fude-Schreibpinsel','Verziertes Journal','Laterne der Erinnerung','Halle der Lebensgeschichten'],social:['Freundschafts-Omamori','Fest-Haori','Tanuki-Begleiter','Schwebende Festlaternen','Himmlisches Matsuri'],screen:['Balance-Fächer','Zeitmesser','Laterne der Ruhe','Garten der Abendstille','Aura der Zeitbalance'],gaming:['Shōgi-Figur','Taktiker-Stirnband','Taktiker-Gewand','Zeitwächter-Tanuki','Sternen-Pavillon']};
+function createState(){const start=today();return {version:4,createdAt:new Date().toISOString(),profile:{lang:'de',coachTone:'balanced',name:'',gender:'neutral',accent:'navy',height:'',weight:'',chest:'',waist:'',hips:'',companion:'fox',equipped:{}},goals:PRESETS.map(([key,title,category,icon,target,period,targetValue,unit,direction])=>({id:key,key,title,category,icon,target,period,targetValue,unit,direction,active:['strength','water','reading'].includes(key),events:[{date:start,active:['strength','water','reading'].includes(key)}],versions:[{date:start,period,target,targetValue,unit,direction}]})),checks:[],measurements:[],exercises:[],plans:[],sessions:[],draft:null,avatarHistory:[],awards:[],coachDismissals:[],goalEdits:[],experiments:[],reflections:[]}}
+function migrate(data){if(!data||!Array.isArray(data.goals)||!Array.isArray(data.sessions)||!Array.isArray(data.checks)||!Array.isArray(data.exercises))throw Error('Keine gültige KONPASU-Sicherung.');const start=(data.createdAt||new Date().toISOString()).slice(0,10);const fromPreset=k=>PRESETS.find(x=>x[0]===k);const old=JSON.parse(JSON.stringify(data));old.version=4;old.measurements=Array.isArray(old.measurements)?old.measurements:[];old.awards=Array.isArray(old.awards)?old.awards:[];old.avatarHistory=Array.isArray(old.avatarHistory)?old.avatarHistory:[];old.coachDismissals=Array.isArray(old.coachDismissals)?old.coachDismissals:[];old.goalEdits=Array.isArray(old.goalEdits)?old.goalEdits:[];old.experiments=Array.isArray(old.experiments)?old.experiments:[];old.reflections=Array.isArray(old.reflections)?old.reflections:[];old.profile={...createState().profile,...old.profile};old.profile.equipped=old.profile.equipped||{};old.goals=old.goals.map(g=>{const p=fromPreset(g.key||g.id);const v=p?{period:p[5],target:p[4],targetValue:p[6],unit:p[7],direction:p[8]}:{period:g.period||'weekly',target:g.target||'',targetValue:null,unit:'',direction:'min'};return {...v,...g,events:g.events||[{date:start,active:!!g.active}],versions:g.versions||[{date:start,period:g.period||v.period,target:g.target||v.target,targetValue:v.targetValue,unit:v.unit,direction:v.direction}]}});if(data.version===2){old.checks=old.checks.map(c=>{const g=old.goals.find(x=>x.id===c.goalId);return g?.period==='weekly'?{...c,date:monday(c.date),originalDate:c.date}:c})}old.sessions=old.sessions.map(s=>({...s,items:(s.items||[]).map(i=>({...i,sets:i.sets||[]}))}));return old}
+let data=createState(),tab='today',day=today(),analysisDays=84,focusGoal=null,trainingView='plans',goalView='active',modal=null,db=null,saveQueue=Promise.resolve(),persistGood=true,backupReminder=false,toastTimeout=null,historyDate=today(),expandedCoach=false,restUntil=0,experimentExpanded=false;
+const getGoal=id=>data.goals.find(g=>g.id===id);
+const getEx=id=>data.exercises.find(e=>e.id===id);
+const getPlan=id=>data.plans.find(e=>e.id===id);
+const activeGoals=()=>data.goals.filter(g=>g.active);
+function openDB(){return new Promise((resolve,reject)=>{if(!('indexedDB'in window))return reject(Error('IndexedDB nicht vorhanden'));const req=indexedDB.open('KONPASU-LOCAL-2',1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('kv'))req.result.createObjectStore('kv')};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+function readDB(){return new Promise((resolve,reject)=>{const req=db.transaction('kv').objectStore('kv').get('state');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+function writeDB(v){return new Promise((resolve,reject)=>{const tx=db.transaction('kv','readwrite');tx.objectStore('kv').put(v,'state');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)})}
+function store(){const snap=JSON.parse(JSON.stringify(data));saveQueue=saveQueue.catch(()=>{}).then(async()=>{try{if(db)await writeDB(snap);else localStorage.setItem('konpasu-fallback-v2',JSON.stringify(snap));persistGood=true}catch(e){persistGood=false;alert('Speichern fehlgeschlagen. Bitte so bald wie möglich eine Sicherung erstellen.')}});return saveQueue}
+async function init(){try{db=await openDB();const saved=await readDB();if(saved){data=migrate(saved);await store()}else{let fallback;try{fallback=JSON.parse(localStorage.getItem('konpasu-fallback-v2')||'null')}catch{}if(fallback){data=migrate(fallback);await store()}}}catch(e){db=null;try{const old=JSON.parse(localStorage.getItem('konpasu-fallback-v2')||'null');if(old)data=migrate(old)}catch{}console.warn('Storage fallback',e)}
+ ensureAwards();render(); if('serviceWorker'in navigator&&location.protocol==='https:'){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v3')){sessionStorage.setItem('konpasu-reloaded-v3','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
+function notice(s){document.querySelector('#toast')?.remove();const d=document.createElement('div');d.id='toast';d.className='toast';d.textContent=translateText(s);document.body.appendChild(d);clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>d.remove(),2700)}
+function activeAt(g,d){const list=[...(g.events||[])].sort((a,b)=>a.date.localeCompare(b.date));let result=false;for(const x of list){if(x.date<=d)result=!!x.active}return result}
+function configAt(g,d){const list=(g.versions||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));let conf={period:g.period,target:g.target,targetValue:g.targetValue,unit:g.unit,direction:g.direction};for(const v of list){if(v.date<=d)conf={...conf,...v}}return conf}
+function canonicalCheck(g,d){const key=periodKey(g,d);return data.checks.filter(c=>c.goalId===g.id&&c.date===key).sort((a,b)=>(b.modifiedAt||'').localeCompare(a.modifiedAt||''))[0]||null}
+function canonicalMeasurement(g,d){const key=periodKey(g,d);return data.measurements.find(x=>x.goalId===g.id&&x.date===key)||null}
+function countWorkouts(week){return data.sessions.filter(s=>s.date>=week&&s.date<=dateShift(week,6)&&s.items.some(x=>x.sets.length)).length}
+function assessment(g,d){const key=periodKey(g,d),check=canonicalCheck(g,d);if(check)return {status:check.status,source:'Bestätigt',value:null,ratio:check.status==='yes'?1:check.status==='no'?0:null};const m=canonicalMeasurement(g,d),cfg=configAt(g,key);if(m&&Number.isFinite(m.value)){const target=number(cfg.targetValue);if(!Number.isFinite(target)||target<0)return {status:'unknown',source:'Messwert ohne Ziel',value:m.value};const success=cfg.direction==='max'?m.value<=target:m.value>=target;const ratio=cfg.direction==='max'?null:target>0?clamp(m.value/target,0,1):1;return {status:success?'yes':'partial',source:'Erfasst',value:m.value,ratio}}
+ if(g.key==='strength'&&g.period==='weekly'){const total=countWorkouts(key),target=number(cfg.targetValue);if(Number.isFinite(target)&&total>=target)return {status:'yes',source:'Trainingstagebuch',value:total,ratio:1};if(total>0)return {status:'unknown',source:'Bisher dokumentiert',value:total};}
+ return {status:'unknown',source:'Keine Angabe',value:null,ratio:null}}
+function mark(g,d,status){const key=periodKey(g,d);data.checks=data.checks.filter(x=>!(x.goalId===g.id&&x.date===key));if(status!=='clear')data.checks.push({id:uid(),goalId:g.id,date:key,status,modifiedAt:new Date().toISOString(),source:'manual'});ensureAwards();store();render();notice(status==='clear'?'Bestätigung entfernt':status==='yes'?'Ziel bestätigt':status==='partial'?'Teilweise erreicht':'Nicht erreicht dokumentiert')}
+function recordNumber(g,d,v){const key=periodKey(g,d);data.measurements=data.measurements.filter(x=>!(x.goalId===g.id&&x.date===key));data.measurements.push({id:uid(),goalId:g.id,date:key,value:v,source:'manual',updatedAt:new Date().toISOString()});ensureAwards();store();render();notice('Messwert gespeichert')}
+function periodList(g,limit=90,end=today()){let date=periodKey(g,end),out=[];for(let i=0;i<limit;i++){out.push(date);date=dateShift(date,g.period==='weekly'?-7:-1)}return out.reverse()}
+function goalStats(g,limit=12,end=today()){const list=periodList(g,limit,end),counts={yes:0,partial:0,no:0,unknown:0};let progress=0,known=0;for(const d of list){const a=assessment(g,d);counts[a.status]++;if(a.status!=='unknown'){known++;progress+=a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)}}return {list,counts,known,success:counts.yes,percentage:known?Math.round(100*progress/known):null,coverage:Math.round(100*known/list.length)}}
+function allCompletedWeekStarts(){const from=(data.createdAt||new Date().toISOString()).slice(0,10),current=monday(today());let date=monday(from),out=[];while(date<current&&out.length<2600){out.push(date);date=dateShift(date,7)}return out}
+function completedWeeks(end=today(),n=70){const dates=allCompletedWeekStarts().filter(d=>d<monday(end)).slice(-n);return dates.map(week=>{const active=data.goals.filter(g=>activeAt(g,week));if(!active.length)return {week,score:null,known:0,needed:0,success:false};let sum=0,count=0;for(const g of active){const cfg=configAt(g,week);if(cfg.period==='weekly'){const a=assessment(g,week);if(a.status!=='unknown'){count++;sum+=a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)}}else{const vals=daysBack(7,dateShift(week,6)).filter(d=>activeAt(g,d)).map(d=>assessment(g,d));if(vals.length===7&&vals.every(a=>a.status!=='unknown')){count++;sum+=vals.reduce((acc,a)=>acc+(a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)),0)/7}}}const score=count===active.length?sum/count:null;return {week,score,known:count,needed:active.length,success:score!==null&&score>=.8}})}
+function currentRank(){const weeks=completedWeeks(today(),2600),successful=weeks.filter(w=>w.success).length,earnt=RANK_WEEKS.reduce((r,n,i)=>successful>=n?i:r,0);const valid=weeks.filter(w=>w.score!==null).slice(-4);const consistency=valid.length?valid.reduce((s,w)=>s+w.score,0)/valid.length:0;const eligible=valid.length?RANK_CONSISTENCY.reduce((r,v,i)=>consistency>=v?i:r,0):0;const index=valid.length?Math.min(earnt,eligible):0;const latest=valid.at(-1)?.week;return {name:RANKS[index],index,successful,consistency,valid:valid.length,notice:!latest||latest<dateShift(monday(today()),-21)?'Zuletzt bestätigter Rang – neuere Wochen nicht ausreichend bewertet':valid.length<4?'Rang vorläufig: Noch nicht vier bewertete Wochen':''}}
+function goalWeekStatus(g,week){if(!activeAt(g,week))return 'unknown';if(configAt(g,week).period==='weekly')return assessment(g,week).status;const daily=daysBack(7,dateShift(week,6)).map(d=>assessment(g,d).status);return daily.every(x=>x==='yes')?'yes':daily.some(x=>x==='unknown')?'unknown':daily.some(x=>x==='no')?'no':'partial'}
+function successfulGoalWeeks(g){return allCompletedWeekStarts().filter(w=>goalWeekStatus(g,w)==='yes').length}
+function gearTier(g){const successful=successfulGoalWeeks(g),owned=TIER_WEEKS.reduce((t,n,i)=>successful>=n?i:t,0);const weeks=allCompletedWeekStarts().slice(-4).map(w=>goalWeekStatus(g,w));const known=weeks.filter(x=>x!=='unknown').length,good=weeks.filter(x=>x==='yes').length;const wearable=weeks.length===4&&known===4?[0,2,3,4,5][good]:owned;return {owned,wearable:Math.min(owned,wearable),successful,known}}
+function ensureAwards(){data.awards=data.awards||[];for(const g of data.goals){const completed=successfulGoalWeeks(g);for(const t of [4,12,26,52])if(completed>=t&&!data.awards.some(a=>a.goalId===g.id&&a.weeks===t))data.awards.push({id:uid(),goalId:g.id,weeks:t,firstAt:today(),type:'goal-weeks'})}}
+function lastExercise(exId,skip=null){const sessions=data.sessions.slice().sort((a,b)=>(b.finishedAt||b.date).localeCompare(a.finishedAt||a.date));for(const s of sessions){if(s.id===skip)continue;const entry=s.items.find(x=>x.exerciseId===exId&&x.sets.length);if(entry)return {session:s,entry}}return null}
+function exPerformance(exId){const entries=[];for(const s of data.sessions){for(const i of s.items){if(i.exerciseId===exId)for(const x of i.sets)entries.push({...x,date:s.date,session:s.id})}}return entries.sort((a,b)=>a.date.localeCompare(b.date))}
+function exRecord(exId){const ss=exPerformance(exId);return {bestWeight:ss.length?Math.max(...ss.map(s=>number(s.kg,0))):null,sets:ss.length,bestVolume:ss.length?Math.max(...ss.map(s=>number(s.kg,0)*number(s.reps,0))):null}}
+function formatKg(x){return `${fmtNum(x)} kg`}
+function navItems(){return [['today','⌂','Heute'],['training','⌁','Training'],['goals','◎','Ziele'],['analysis','▤','Analyse'],['avatar','♜','Avatar']]}
+function render(){const titles={today:['Dein Überblick','Weniger Druck. Mehr Fortschritt.'],training:['Trainingstagebuch','Deine Übungen. Deine echten Satzwerte.'],goals:['Ziele & Gewohnheiten','19 Vorlagen und eigene Ziele.'],analysis:['Deine Entwicklung','Messwerte und Datenlücken getrennt.'],coach:['Dein persönlicher Coach','Offline · ruhig · freiwillig'],avatar:['Dein Samurai','Dein persönlicher Weg.'],settings:['Daten & Sicherheit','Offline, lokal, ohne Abo.']};const [heading,sub]=titles[tab]||titles.today;$('#app').innerHTML=`<div class="app"><aside class="side"><div class="logo"><span class="logo-mark">道</span>KONPASU</div><nav class="nav">${navItems().map(([t,ic,title])=>`<button class="nav-item ${tab===t?'active':''}" data-action="nav" data-tab="${t}"><span class="nav-ico">${ic}</span>${title}</button>`).join('')}</nav><div class="sidefoot"><span class="badge">● Lokal & offline</span><p style="margin-top:10px">Ohne Abo · Ohne KI-Server<br>Version 0.3</p></div></aside><main class="main"><header class="top"><div><p class="eyebrow">KONPASU · Dein Weg</p><h1 class="page-title">${heading}</h1><p class="subtitle">${sub}</p></div><div class="toptools"><label class="lang-label"><span class="sr">Sprache / Language</span><select id="language-select" aria-label="Sprache / Language"><option value="de" ${data.profile.lang!=='en'?'selected':''}>DE</option><option value="en" ${data.profile.lang==='en'?'selected':''}>EN</option></select></label><button class="circle" aria-label="Einstellungen" data-action="nav" data-tab="settings">⚙</button></div></header><div id="content">${({today:renderToday,training:renderTraining,goals:renderGoals,analysis:renderAnalysis,coach:renderCoach,avatar:renderAvatar,settings:renderSettings}[tab]||renderToday)()}</div></main><nav class="bottomnav">${navItems().map(([t,ic,title])=>`<button class="nav-bottom ${tab===t?'active':''}" data-action="nav" data-tab="${t}"><span class="sym">${ic}</span>${title}</button>`).join('')}</nav></div>`;renderModal();applyLanguage()}
+function button(text,action,attrs='',cls='btn'){return `<button type="button" class="${cls}" data-action="${action}" ${attrs}>${text}</button>`}
+function goalCheck(g){const key=periodKey(g,day),a=assessment(g,key),m=canonicalMeasurement(g,key),config=configAt(g,key);return `<div class="goalrow"><div class="goalicon">${esc(g.icon||'✦')}</div><div class="goalinfo"><div class="title">${esc(g.title)} ${g.period==='weekly'?'<span class="micro muted">· Woche</span>':''}</div><div class="desc">${esc(config.target||'Deine Vorgabe')} · ${esc(a.source)}</div>${m?`<div class="micro muted">Erfasst: ${fmtNum(m.value)} ${esc(config.unit||'')}</div>`:''}</div><div class="status">${['yes','partial','no'].map((s,i)=>`<button title="${['Erreicht','Teilweise','Nicht erreicht'][i]}" aria-label="${esc(g.title)}: ${['Erreicht','Teilweise','Nicht erreicht'][i]}" class="statusbtn ${a.status===s?'selected '+s:''}" data-action="check" data-id="${esc(g.id)}" data-status="${s}">${['✓','◐','×'][i]}</button>`).join('')}<button class="statusbtn" title="Wert eintragen" aria-label="Wert eintragen" data-action="open-modal" data-type="measure" data-id="${esc(g.id)}">#</button></div></div>`}
+function coachingTip(){const completed=completedWeeks(today(),8).filter(x=>x.needed>0),miss=completed.slice(-3).filter(x=>x.score!==null&&x.score<.6);if(miss.length>=2)return data.profile.coachTone==='direct'?'Mehrere bestätigte Wochen lagen unter deinem Ziel. Prüfe einen konkreten Wenn-dann-Plan.':data.profile.coachTone==='gentle'?'Manche Wochen liefen anders als geplant. Wenn du möchtest, finden wir gemeinsam einen leichteren Einstieg.':'Einige bestätigte Wochen liefen anders als geplant. Vielleicht hilft ein kleinerer, konkreter Wenn-dann-Plan. Du kannst deine Ziele jederzeit anpassen.';return data.checks.length?'Deine Einträge bleiben gespeichert. Wenn du möchtest, kannst du später einzelne Muster in der Analyse betrachten.':'Beginne mit einem kleinen Ziel. Details sind freiwillig, und du kannst Tage oder Wochen jederzeit nachtragen.'}
+function renderToday(){const r=currentRank();let last7=0,known=0;for(const g of activeGoals()){for(const key of periodList(g,g.period==='weekly'?1:7)){const a=assessment(g,key);if(a.status!=='unknown'){known++;last7+=a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)}}}const pct=known?Math.round(last7/known*100):null;const active=activeGoals();return `<div class="stack"><div class="panel hero"><div class="hero-content"><span class="badge gold">✦ ${esc(r.name)}</span><h2>${data.profile.name?'Willkommen, '+esc(data.profile.name)+'.':'Dein Weg beginnt hier.'}</h2><p>Dein Training und deine Gewohnheiten. Ohne Druck und ohne Abo.</p>${button('Training öffnen ↗','nav','data-tab="training"','btn primary')}</div><div class="avatar-scene">${avatarSVG()}</div></div><div class="grid3"><div class="metric"><div class="label">Bewertete Check-ins</div><div class="number">${data.checks.length}</div></div><div class="metric"><div class="label">Aktive Ziele</div><div class="number">${active.length}</div></div><div class="metric"><div class="label">Erfüllung*</div><div class="number">${pct===null?'–':pct+'%'}</div></div></div><div class="panel"><div class="between"><h2 style="font-size:18px">Schneller Check-in</h2><span class="badge muted">Auch rückwirkend</span></div><div class="daybar">${button('‹','shift-day','data-offset="-1" aria-label="Vorheriger Tag"','circle')}<input class="date-inline" type="date" id="selected-day" value="${day}" max="${today()}">${button('›','shift-day',`data-offset="1" ${day===today()?'disabled':''} aria-label="Nächster Tag"`,'circle')}</div><div class="hint">Wochenziele gelten jeweils von Montag bis Sonntag. Ein Check-in bestätigt genau diese Woche.</div>${active.length?active.map(goalCheck).join(''):'<div class="empty">Aktiviere unter „Ziele“ ein erstes Ziel.</div>'}<p class="hint" style="margin-top:12px">✓ erreicht · ◐ teilweise · × nicht erreicht · # optionaler Messwert · ohne Eintrag = unbekannt</p></div><div class="panel"><div class="between"><h3>Dein Offline-Coach</h3><span class="badge muted">Zurückhaltend</span></div><p class="hint" style="margin-top:9px">${esc(coachingTip())}</p><div class="actions" style="margin-top:12px">${button('Coach öffnen','nav','data-tab="coach"','btn small')}${button('Alle Analysen','nav','data-tab="analysis"','btn small')}</div></div><div class="note">* Nur bekannte Check-ins und Messwerte im gewählten Zeitraum. Unbekannte Tage werden nicht als Misserfolg gezählt. Aktueller Rang beruht auf bestätigten, abgeschlossenen Wochen.</div></div>`}
+function renderGoals(){const filtered=goalView==='active'?activeGoals():goalView==='all'?data.goals:data.goals.filter(x=>!x.active);const groups=[...new Set(filtered.map(g=>g.category))];return `<div class="stack"><div class="panel"><div class="between"><h2>Deine Zielbibliothek</h2><span class="badge">19 Vorlagen</span></div><p class="hint">Alle Ziele funktionieren mit einem Tap. Messwerte und Details bleiben optional.</p><div class="chips" style="margin:15px 0">${[['active','Aktiv'],['all','Alle'],['inactive','Inaktiv']].map(([v,l])=>button(l,'goal-view',`data-view="${v}"`,'chip '+(goalView===v?'active':''))).join('')}</div>${groups.map(group=>`<p class="kicker" style="margin:15px 0 8px">${esc(group)}</p><div class="cards">${filtered.filter(x=>x.category===group).map(g=>`<div class="goal-card"><div class="between"><div class="row"><span class="goalicon">${esc(g.icon)}</span><div><b>${esc(g.title)}</b><p class="small muted">${esc(g.target||'Persönliches Ziel')} · ${g.period==='weekly'?'Wöchentlich':'Täglich'}</p></div></div>${button(g.active?'Pausieren':'Aktivieren','toggle-goal',`data-id="${esc(g.id)}"`,'btn small '+(g.active?'ghost':'primary'))}</div><div class="actions" style="margin-top:10px">${button('Bearbeiten','open-modal',`data-type="edit-goal" data-id="${esc(g.id)}"`,'btn small')}${!g.key?button('Löschen','delete-goal',`data-id="${esc(g.id)}"`,'btn small danger'):''}</div></div>`).join('')}</div>`).join('')}<div class="actions" style="margin-top:15px">${button('＋ Eigenes Ziel','open-modal','data-type="new-goal"','btn primary')}</div></div><div class="note">Zieländerungen gelten ab dem Änderungstag. Frühere Vorgaben werden separat gespeichert; bereits eingetragene Wochen werden nicht rückwirkend umdefiniert.</div></div>`}
+function renderTraining(){if(data.draft)return renderDraft(data.draft);const exs=data.exercises.filter(x=>!x.archived),plans=data.plans;return `<div class="stack"><div class="panel"><div class="between"><h2>Dein Trainingstagebuch</h2><span class="badge gold">Offline</span></div><p class="hint" style="margin:8px 0 15px">Übungen selbst erstellen, eigene Splits planen und jeden Satz speichern. Beim nächsten Mal siehst du deine letzten Werte.</p><div class="actions">${button('＋ Freies Training','start-workout','','btn primary')}${button('＋ Übung','open-modal','data-type="new-exercise"')}${button('＋ Plan','open-modal','data-type="new-plan"')}</div></div><div class="panel"><div class="chips">${[['plans','Pläne'],['exercises','Übungen'],['history','Verlauf']].map(([v,l])=>button(l,'training-view',`data-view="${v}"`,'chip '+(trainingView===v?'active':''))).join('')}</div><div style="margin-top:14px">${trainingView==='plans'?(plans.length?plans.map(p=>`<div class="plan-card" style="margin-bottom:10px"><div class="between"><div><h3>${esc(p.name)}</h3><small>${p.exerciseIds.length} Übungen · ${p.exerciseIds.map(x=>esc(getEx(x)?.name||'Archivierte Übung')).join(' · ')}</small></div>${button('Starten','start-workout',`data-id="${p.id}"`,'btn small primary')}</div><div class="actions">${button('Bearbeiten','open-modal',`data-type="edit-plan" data-id="${p.id}"`,'btn small')}${button('Löschen','delete-plan',`data-id="${p.id}"`,'btn small danger')}</div></div>`).join(''):'<div class="empty">Noch kein Plan. Lege deine Übungen an und erstelle deinen ersten Split.</div>'):trainingView==='exercises'?(exs.length?exs.map(ex=>{const prev=lastExercise(ex.id),pr=exRecord(ex.id);return `<div class="exercise-card" style="margin-bottom:10px"><div class="between"><div><h3>${esc(ex.name)}</h3><small>${esc(ex.equipment||'Freie Übung')} · ${pr.sets} gespeicherte Sätze</small></div>${button('Bearbeiten','open-modal',`data-type="edit-exercise" data-id="${ex.id}"`,'btn small')}</div>${ex.notes?`<p class="hint">⚙ ${esc(ex.notes)}</p>`:''}${prev?`<div class="ex-prev">Letztes Mal (${formatDate(prev.session.date)}): ${prev.entry.sets.map((s,i)=>`${i+1}. ${fmtNum(s.kg)} kg × ${fmtNum(s.reps,0)}`).join(' · ')}</div>`:''}<p class="small muted" style="margin-top:9px">${pr.bestWeight!==null?`Bestes protokolliertes Gewicht: ${fmtNum(pr.bestWeight)} kg`:'Noch keine Bestleistung'}</p></div>`}).join(''):'<div class="empty">Lege zuerst eine Übung an, beispielsweise Bankdrücken.</div>'):data.sessions.length?data.sessions.slice().sort((a,b)=>(b.date+b.finishedAt).localeCompare(a.date+a.finishedAt)).map(s=>`<div class="exercise-card" style="margin-bottom:9px"><div class="between"><div><b>${esc(s.title)}</b><p class="small muted">${formatDate(s.date)} · ${s.items.reduce((n,x)=>n+x.sets.length,0)} Sätze</p></div>${button('Öffnen','open-modal',`data-type="session" data-id="${s.id}"`,'btn small')}</div></div>`).join(''):'<div class="empty">Es wurden noch keine Trainingseinheiten abgeschlossen.</div>'}</div></div><div class="note">Trainingsdaten werden lokal gespeichert. Eine automatisch übernommene letzte Gewichtsangabe ist nur ein Vorschlag und zählt erst nach dem Speichern als neuer Satz.</div></div>`}
+function renderDraft(d){const allEx=data.exercises.filter(x=>!x.archived);return `<div class="stack"><div class="training-banner"><div class="between"><div><span class="badge gold">● Training läuft</span><h2 style="margin:8px 0">${esc(d.title)}</h2><p class="hint">Jeder Satz wird unmittelbar lokal gesichert.</p></div>${button('Abschließen ✓','finish-workout','','btn primary small')}</div><div class="actions" style="margin-top:12px">${button('Pause 60 s','rest-timer','data-seconds="60"','btn small')}${button('Pause 90 s','rest-timer','data-seconds="90"','btn small')}${button('Pause 120 s','rest-timer','data-seconds="120"','btn small')}${button('Stop','rest-stop','','btn small')}<span id="rest-clock" class="badge">–</span></div><div class="row" style="margin-top:12px"><label class="small" for="draft-date">Datum:</label><input id="draft-date" class="date-inline" type="date" value="${esc(d.date)}" max="${today()}"></div></div>${d.items.map((item,idx)=>{const ex=getEx(item.exerciseId),prev=lastExercise(item.exerciseId);return `<div class="panel"><div class="between"><div><p class="kicker">Übung ${idx+1}</p><h2>${esc(ex?.name||item.exerciseName||'Archivierte Übung')}</h2><p class="hint">${esc(ex?.equipment||'')} ${ex?.notes?'· ⚙ '+esc(ex.notes):''}</p></div>${button('✕','remove-draft-ex',`data-id="${item.id}" aria-label="Übung entfernen"`,'btn small danger')}</div>${prev?`<div class="ex-prev" style="margin:12px 0 8px"><strong>Letztes Training (${formatDate(prev.session.date)}):</strong><div class="prevsets">${prev.entry.sets.map((s,i)=>`<span class="chip">${i+1}. ${fmtNum(s.kg)} kg × ${fmtNum(s.reps,0)}</span>`).join('')}</div></div>`:'<p class="hint" style="margin-top:9px">Noch keine Vergleichswerte für diese Übung.</p>'}
+ ${item.sets.length?`<table class="sets"><thead><tr><th>Satz</th><th>Gewicht</th><th>Wdh.</th><th></th></tr></thead><tbody>${item.sets.map((s,i)=>`<tr><td>${i+1}</td><td>${fmtNum(s.kg)} kg</td><td>${fmtNum(s.reps,0)}</td><td>${button('✎','open-modal',`data-type="edit-set" data-entry="${item.id}" data-set="${s.id}"`,'btn small')}</td></tr>`).join('')}</tbody></table>`:''}
+ <form class="new-set" data-submit="new-set" data-entry="${item.id}"><label>Neuer Satz</label><div class="set-form"><input inputmode="decimal" type="number" min="0" max="9999" step="0.5" name="kg" aria-label="Gewicht in Kilogramm" placeholder="kg" value="${esc(item.sets.at(-1)?.kg??prev?.entry.sets[item.sets.length]?.kg??'')}" required><input inputmode="numeric" type="number" min="1" max="10000" step="1" name="reps" aria-label="Wiederholungen" placeholder="Wdh." value="${esc(item.sets.at(-1)?.reps??prev?.entry.sets[item.sets.length]?.reps??'')}" required><button type="submit" class="btn primary">✓ Satz</button></div></form>${item.suggestions?.length?`<div class="note" style="margin-top:8px"><b>Letzte Sätze einzeln bestätigen:</b><div class="actions" style="margin-top:7px">${item.suggestions.map((s,i)=>button(`${i+1}. ${fmtNum(s.kg)} kg × ${fmtNum(s.reps,0)} ✓`,'confirm-suggestion',`data-entry="${item.id}" data-idx="${i}"`,'btn small')).join('')}</div></div>`:''}<div class="actions" style="margin-top:9px">${button('⚙ Gerätenotiz','open-modal',`data-type="edit-exercise" data-id="${item.exerciseId}"`,'btn small')}${button('Letzte Werte übernehmen','copy-prev',`data-id="${item.id}"`,'btn small')}</div></div>`}).join('')}
+ <div class="panel"><div class="between"><h3>Übung hinzufügen</h3>${button('＋ Neue Übung','open-modal','data-type="new-exercise"','btn small')}</div><div class="chips" style="margin-top:12px">${allEx.map(e=>button(esc(e.name),'draft-add-ex',`data-id="${e.id}"`,'chip')).join('')||'<p class="hint">Du kannst zuerst eine eigene Übung erstellen.</p>'}</div></div><div class="actions">${button('Training abschließen','finish-workout','','btn primary')}${button('Training verwerfen','discard-workout','','btn danger')}</div></div>`}
+function rankSummary(){const r=currentRank();return `${r.name} · ${r.successful} nachgewiesene Erfolgswochen${r.notice?' · '+r.notice:''}`}
+function renderAnalysis(){const selected=focusGoal?getGoal(focusGoal):null;const active=activeGoals();const max=analysisDays;const choice=selected&&data.goals.includes(selected)?selected:null;const periods=choice?periodList(choice,choice.period==='weekly'?Math.min(52,Math.ceil(max/7)):max):[];const assessments=choice?periods.map(d=>({d,...assessment(choice,d)})):[];let success=assessments.filter(x=>x.status==='yes').length,partial=assessments.filter(x=>x.status==='partial').length,not=assessments.filter(x=>x.status==='no').length,unknown=assessments.filter(x=>x.status==='unknown').length;
+const countKnown=success+partial+not, pct=countKnown?Math.round(100*(success+partial*.5)/countKnown):null;return `<div class="stack"><div class="panel"><div class="between"><h2>Analyse</h2><span class="badge muted">Ohne externe KI</span></div><div class="chips" style="margin-top:12px">${[[28,'4 Wochen'],[84,'12 Wochen'],[365,'1 Jahr']].map(([v,l])=>button(l,'analysis-period',`data-period="${v}"`,'chip '+(analysisDays===v?'active':''))).join('')}</div><div class="field" style="margin-top:15px"><label>Ein Ziel genauer ansehen</label><select id="analysis-goal"><option value="">Bitte auswählen</option>${data.goals.map(g=>`<option value="${esc(g.id)}" ${choice?.id===g.id?'selected':''}>${esc(g.title)}</option>`).join('')}</select></div></div>
+ ${choice?`<div class="panel"><h2>${esc(choice.icon)} ${esc(choice.title)}</h2><p class="hint">${esc(choice.period==='weekly'?'Bewertete Wochen':'Bewertete Tage')} · ${esc(choice.target)}</p><div class="grid3" style="margin-top:14px"><div class="metric"><div class="label">Erreicht</div><div class="number">${success}</div></div><div class="metric"><div class="label">Teilweise</div><div class="number">${partial}</div></div><div class="metric"><div class="label">Unbekannt</div><div class="number">${unknown}</div></div></div><p class="hint" style="margin-top:13px">Erfüllung bei bekannten Bewertungen: ${pct===null?'–':pct+'%'} · Bekannt: ${countKnown}/${periods.length} · Nicht erreicht: ${not}</p><div class="spark-bars" aria-label="Zielverlauf">${assessments.map(x=>`<span title="${esc(periodLabel(choice,x.d))}: ${esc(x.status)}" class="bar-day ${x.status}"></span>`).join('')}</div><p class="hint">Grün = erfüllt, Gold = teilweise, Rot = verfehlt, Grau = unbekannt. Kein Eintrag ist kein Misserfolg.</p>${data.measurements.filter(m=>m.goalId===choice.id).length?`<h3 style="margin-top:18px">Dokumentierte Messwerte</h3><div class="statlist" style="margin-top:8px">${data.measurements.filter(m=>m.goalId===choice.id).slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,15).map(m=>`<div class="statline"><span>${formatDate(m.date)}</span><strong>${fmtNum(m.value)} ${esc(choice.unit||'')}</strong></div>`).join('')}</div>`:''}</div>`:`<div class="panel"><h3>Deine Ziele auf einen Blick</h3><p class="hint">Tippe oben ein Ziel an. Die Statistik unterscheidet bestätigte Erfolge, selbst eingetragene Messwerte und Datenlücken.</p><div class="cards" style="margin-top:14px">${active.map(g=>{const st=goalStats(g,g.period==='weekly'?12:30);return `<div class="statline"><span>${esc(g.icon)} ${esc(g.title)}</span><strong>${st.percentage===null?'–':st.percentage+'%'} <span class="muted micro">(${st.coverage}% bewertet)</span></strong></div>`}).join('')||'<div class="empty">Aktiviere Ziele, um Statistiken zu sehen.</div>'}</div></div>`}
+ <div class="panel"><h3>Training und persönliche Rekorde</h3>${data.exercises.filter(x=>!x.archived).length?data.exercises.filter(x=>!x.archived).map(ex=>{const pr=exRecord(ex.id);return `<div class="statline"><span>${esc(ex.name)} <span class="muted small">${pr.sets} Sätze</span></span><strong>${pr.bestWeight===null?'–':fmtNum(pr.bestWeight)+' kg'}</strong></div>`}).join(''):'<p class="hint">Lege im Trainingstagebuch eine Übung an.</p>'}</div>${renderExploratory()}<div class="actions">${button('Coach & Experimente','nav','data-tab="coach"','btn small')}</div></div>`}
+function avatarSVG(view=data.profile){const gender=view.gender||'neutral',accent=view.accent||'navy';const colors={navy:['#455e72','#264153'],forest:['#50795a','#294638'],wine:['#82565a','#4d3036']}[accent]||['#455e72','#264153'];const hair=gender==='feminine'?`<path d="M89 89 Q83 39 132 39 Q179 35 178 92 L173 154 Q159 168 153 136 L100 139 Q83 166 89 89" fill="#192322"/>`:`<path d="M92 79 Q90 45 117 47 Q150 32 171 70 L165 86 Q155 74 141 69 Q125 83 101 83Z" fill="#1a2522"/>`;const face=gender==='masculine'?'M101 77 Q101 60 131 62 Q163 65 163 85 L159 112 Q146 131 131 133 Q114 129 105 113 Z':'M101 77 Q105 59 131 62 Q163 66 163 85 L157 114 Q145 130 131 131 Q115 128 105 113 Z';return `<svg viewBox="0 0 265 305" role="img" aria-label="Stilisierter zweidimensionaler Samurai-Platzhalter, noch kein 3D-Modell"><defs><linearGradient id="coat-${accent}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${colors[0]}"/><stop offset="1" stop-color="${colors[1]}"/></linearGradient><linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2d9b8"/><stop offset=".55" stop-color="#9fae9a"/><stop offset="1" stop-color="#6e8d86"/></linearGradient></defs><ellipse cx="132" cy="285" rx="85" ry="12" fill="#091b17" opacity=".5"/><path d="M92 185 L79 279 Q108 298 132 282 L131 194 Z" fill="#23382e" stroke="#486759" stroke-width="2"/><path d="M137 191 L136 282 Q159 296 184 279 L168 185Z" fill="#2a4037" stroke="#547467" stroke-width="2"/><path d="M84 277 L130 277 L125 290 L78 290Z M137 277 L183 277 L190 290 L141 290Z" fill="#b5a885"/><path d="M89 121 Q67 127 56 166 L43 221 Q44 232 54 232 L74 184 L87 203Z" fill="url(#coat-${accent})" stroke="#a3b49e" stroke-width="2"/><path d="M172 122 Q190 128 204 174 L223 219 Q223 230 211 232 L187 186 L181 200Z" fill="url(#coat-${accent})" stroke="#a3b49e" stroke-width="2"/><path d="M97 111 L80 154 Q83 199 82 235 L181 237 Q177 183 184 154 L163 113 L137 106 L125 107Z" fill="url(#coat-${accent})" stroke="#b6c9b8" stroke-width="2"/><path d="M100 118 L133 173 L163 114" stroke="#e9dbc2" stroke-width="13" fill="none"/><path d="M128 176 L144 236 L122 237 L107 189Z" fill="#d5d6be" opacity=".8"/><path d="M78 200 L184 199 L185 214 L80 215Z" fill="#c8ad79" stroke="#9b875d" stroke-width="2"/><rect x="119" y="201" width="30" height="15" rx="3" fill="#efddac"/><path d="M156 213 L180 211 L187 272" stroke="#deb987" stroke-width="8" stroke-linecap="round"/><path d="M178 222 L194 265" stroke="#c5c4b0" stroke-width="4"/><path d="M121 107 L121 116 L140 116 L140 106" fill="#debc9f"/>${hair}<path d="${face}" fill="#e0b79c"/><path d="M114 89 Q122 84 128 89 M138 88 Q145 84 151 88" stroke="#28352e" fill="none" stroke-width="3" stroke-linecap="round"/><ellipse cx="122" cy="90" rx="2" ry="3" fill="#1e2c29"/><ellipse cx="145" cy="90" rx="2" ry="3" fill="#1e2c29"/><path d="M133 93 L130 106 L135 107" fill="none" stroke="#b58d77" stroke-width="2"/><path d="M124 116 Q134 121 144 115" stroke="#9c6259" stroke-width="2" stroke-linecap="round" fill="none"/>${gender==='feminine'?`<path d="M93 73 Q103 30 142 48 L167 74" stroke="#192322" stroke-width="12" fill="none"/>`:`<path d="M96 79 L109 64 L122 68 L141 59 L162 78" stroke="#192322" stroke-width="11" fill="none"/>`}<path d="M71 164 L51 206 M193 164 L213 208" stroke="#b3c4b3" stroke-width="4" opacity=".6"/><path d="M130 155 L151 161 L146 187 L131 195 L116 187 L112 162Z" fill="none" stroke="url(#steel)" stroke-width="4"/><path d="M117 182 L145 182" stroke="#e9d39c" stroke-width="3"/>${avatarAdornment(view)}</svg>`}
+function avatarAdornment(view){const levels=view.equipped||{},strength=levels.strength||0,water=levels.water||0,reading=levels.reading||0;let html='';if(strength>=1)html+='<path d="M83 157 L59 150 L49 172 L76 190Z M180 156 L209 149 L220 171 L191 191Z" fill="#627976" stroke="#e4c888" stroke-width="3"/>';if(strength>=3)html+='<path d="M104 149 L133 163 L161 149 L167 196 L101 196Z" fill="#667b7a" stroke="#e7ce98" stroke-width="3"/><path d="M106 169 L160 169 M108 183 L158 183" stroke="#d7bb83" stroke-width="2"/>';if(strength>=4)html+='<path d="M92 76 L95 58 Q133 30 166 60 L171 78 L91 78Z" fill="#5f7b78" stroke="#e7c991" stroke-width="3"/><path d="M132 50 L132 25 L120 35 M133 25 L149 33" fill="none" stroke="#ead197" stroke-width="7" stroke-linecap="round"/>';if(water>=1)html+='<rect x="72" y="205" width="19" height="43" rx="6" fill="#7bbbc3" stroke="#eadcb3" stroke-width="3"/><path d="M78 206 L85 194" stroke="#d1af77" stroke-width="4"/>';if(reading>=1)html+='<rect x="173" y="208" width="14" height="53" rx="6" fill="#e8d2a6" stroke="#a68c5c" stroke-width="2"/><path d="M179 212 L179 256" stroke="#ad9272" stroke-width="2"/>';const pet={fox:'🦊',shiba:'🐕',cat:'🐈',crane:'🦢'}[view.companion]||'🦊';html+=`<circle cx="222" cy="267" r="27" fill="#233b34" stroke="#99bc96" stroke-width="2"/><text x="222" y="277" font-size="30" text-anchor="middle">${pet}</text>`;if(Object.values(levels).some(v=>v>=5))html+='<g opacity=".75" stroke="#d6c58b" fill="none"><circle cx="132" cy="153" r="122" stroke-dasharray="5 11" stroke-width="2"/><circle cx="132" cy="153" r="111" stroke-width="1" opacity=".4"/></g>';return html}
+function showProfileForDate(d){const hist=(data.avatarHistory||[]).filter(x=>x.date<=d).sort((a,b)=>(b.date+b.savedAt).localeCompare(a.date+a.savedAt));return hist[0]?.profile||data.profile}
+function renderAvatar(){const r=currentRank(),profile=showProfileForDate(historyDate);return `<div class="stack"><div class="panel"><div class="between"><h2>Dein Charakter</h2><span class="badge gold">${esc(r.name)}</span></div><div class="avatar-hero">${avatarSVG(profile)}<p class="hint" style="text-align:center;padding:8px">Stilisierte 2D-Samurai-Figur · 3D-Avatar noch in Entwicklung</p></div><div class="actions" style="margin-top:13px">${button('Charakter gestalten','open-modal','data-type="avatar"','btn primary')}</div><p class="hint" style="margin-top:11px">Begleiter: ${esc({fox:'🦊 Kitsune',shiba:'🐕 Shiba Inu',cat:'🐈 Katze',crane:'🦢 Kranich'}[profile.companion]||'🦊 Kitsune')} · Grundausstattung jederzeit verfügbar.</p></div><div class="panel"><h3>Ausrüstungs-Kollektionen</h3><p class="hint">Aus erfolgreichen, abgeschlossenen Zielwochen. Keine Gegenstände werden ungefragt angelegt.</p><div class="cards" style="margin-top:13px">${data.goals.filter(g=>g.active).map(g=>{const tier=gearTier(g),names=ITEM_NAMES[g.key]||['Erstes Accessoire','Seltenes Accessoire','Epische Ausrüstung','Legendäres Artefakt','Mythisches Artefakt'];return `<div class="exercise-card"><div class="between"><div><b>${esc(g.icon)} ${esc(g.title)}</b><p class="small muted">${tier.successful} bestätigte Zielwochen · ${esc(TIERS[tier.owned])} erworben</p></div><span class="badge muted">${tier.wearable} / 5</span></div><div class="actions" style="margin-top:8px">${[1,2,3,4,5].map(i=>button(esc(names[i-1]),'equip',`data-id="${g.id}" data-level="${i}"`,'chip '+(data.profile.equipped?.[g.id]===i?'active':''))).join('')}</div>${tier.known<4?'<p class="micro muted" style="margin-top:8px">Weniger als 4 abgeschlossene Wochen bewertet: kein automatischer Ausrüstungsverlust.</p>':''}</div>`}).join('')||'<div class="empty">Aktiviere Ziele, um Ausrüstung freizuschalten.</div>'}</div></div><div class="panel"><h3>Ruhmeshalle</h3><p class="hint">Einmal erreichte, korrekt belegte Meilensteine bleiben bei späteren Rückschlägen bestehen.</p><div class="chips" style="margin-top:12px">${data.awards.map(a=>`<span class="chip">🏅 ${esc(getGoal(a.goalId)?.title||'Eigenes Ziel')} · ${a.weeks} Wochen</span>`).join('')||'<p class="hint">Noch keine besonderen Meilensteine erreicht.</p>'}</div></div><div class="panel"><h3>Avatar-Zeitreise</h3><p class="hint">Wähle einen Zeitpunkt, um deine damals gespeicherte Avatar-Darstellung zu betrachten. Eine echte interaktive 3D-Welt wird separat entwickelt.</p><div class="field" style="margin-top:10px"><label>Datum</label><input id="history-date" type="date" value="${historyDate}" max="${today()}"></div><p class="hint">${(data.avatarHistory||[]).length} gespeicherte Avatar-Zustände</p><div class="timeline">${(data.avatarHistory||[]).slice().reverse().slice(0,14).map(h=>button(formatDate(h.date),'avatar-jump',`data-date="${h.date}"`,'chip')).join('')}</div>${button('Heute anzeigen','avatar-today','','btn small')}</div></div>`}
+function renderSettings(){return `<div class="stack"><div class="panel"><h2>Deine Daten gehören dir</h2><p class="hint">KONPASU verarbeitet deine Daten nur auf diesem Gerät. Es gibt keinen Account, keine Cloud, keine API-Anfragen und keine Abokosten. GitHub Pages liefert nur die App-Dateien aus.</p><div class="statlist" style="margin-top:14px"><div class="statline"><span>Datenspeicherung</span><strong>${persistGood?'Lokal aktiv':'Fehler – Backup exportieren'}</strong></div><div class="statline"><span>Trainings</span><strong>${data.sessions.length}</strong></div><div class="statline"><span>Sätze</span><strong>${data.sessions.reduce((n,s)=>n+s.items.reduce((x,i)=>x+i.sets.length,0),0)}</strong></div><div class="statline"><span>Ziel-Bestätigungen</span><strong>${data.checks.length}</strong></div><div class="statline"><span>Erster Start</span><strong>${formatDate((data.createdAt||new Date().toISOString()).slice(0,10))}</strong></div></div><div class="actions" style="margin-top:15px">${button('⬇ JSON-Backup','backup','','btn primary')}${button('⬆ Backup laden','import-backup')}${button('⬇ Trainings-CSV','csv')}</div><input id="import-backup-file" type="file" accept="application/json,.json" class="sr"><div class="warnbox" style="margin-top:14px">Wichtig: Das Löschen von Website-Daten oder der Homescreen-App kann die lokalen Einträge entfernen. Sichere sie regelmäßig außerhalb der App. Vor diesem Update unbedingt ein Backup erstellen.</div></div><div class="panel"><h3>Sprache / Language</h3><div class="actions" style="margin:12px 0"><button class="btn small" data-action="set-lang" data-lang="de">Deutsch</button><button class="btn small" data-action="set-lang" data-lang="en">English</button></div><p class="hint">Alle Kernfunktionen stehen in Deutsch und Englisch zur Verfügung. Eigene Übungsnamen und Notizen bleiben unverändert.</p></div><div class="panel"><h3>Persönliche Einstellungen</h3><form data-submit="name" class="form" style="margin-top:13px"><div class="field"><label>Name oder Spitzname (optional)</label><input name="name" value="${esc(data.profile.name)}" placeholder="Dein Name"></div><button type="submit" class="btn">Speichern</button></form></div><div class="panel"><h3>App-Version und Update</h3><p class="hint">KONPASU 0.3. Aktualisierte App-Dateien werden beim nächsten Online-Öffnen geladen; die gespeicherten Daten bleiben in derselben lokalen Datenbank.</p>${button('Auf Updates prüfen','check-update','','btn small')}</div><div class="panel"><h3>Alle Daten löschen</h3><p class="hint">Unwiderruflich, wenn du kein Backup hast.</p>${button('App zurücksetzen','reset','','btn danger')}</div></div>`}
+const field=(key,title,value='',type='text',attrs='')=>`<div class="field"><label for="${key}">${esc(title)}</label>${type==='textarea'?`<textarea id="${key}" name="${key}" ${attrs}>${esc(value)}</textarea>`:`<input id="${key}" name="${key}" type="${type}" value="${esc(value)}" ${attrs}>`}</div>`;
+const select=(name,title,options,selected)=>`<div class="field"><label>${esc(title)}</label><select name="${esc(name)}">${options.map(([v,l])=>`<option value="${esc(v)}" ${String(v)===String(selected)?'selected':''}>${esc(l)}</option>`).join('')}</select></div>`;
+const modalShell=(title,html)=>`<div id="modal-overlay" class="modal-overlay"><div class="modal" role="dialog" aria-modal="true"><div class="modal-header"><div><p class="eyebrow">KONPASU</p><h2>${esc(title)}</h2></div>${button('×','close-modal','aria-label="Schließen"','circle')}</div>${html}</div></div>`;
+function renderModal(){document.querySelector('#modal-overlay')?.remove();if(!modal)return;const m=modal,ex=getEx(m.id),plan=getPlan(m.id),goal=getGoal(m.id);let html='';
+ if(m.type==='new-exercise'||m.type==='edit-exercise'){html=modalShell(ex?'Übung bearbeiten':'Eigene Übung anlegen',`<form class="form" data-submit="exercise" data-id="${esc(ex?.id||'')}">${field('name','Übungsname',ex?.name||'','text','required placeholder="z. B. Bankdrücken"')}${field('equipment','Gerät / genaue Variante',ex?.equipment||'','text','placeholder="z. B. Langhantel, Gerät Nr. 3"')}${field('notes','Geräteeinstellungen und Notizen',ex?.notes||'','textarea','placeholder="Sitzhöhe 4, Griffposition 2 ..."')}${button('Übung speichern','none','','btn primary full').replace('type="button"','type="submit"').replace('data-action="none"','')}${ex?button('Übung archivieren','archive-ex',`data-id="${ex.id}"`,'btn danger full'):''}</form>`)}
+ else if(m.type==='new-plan'||m.type==='edit-plan'){html=modalShell(plan?'Trainingsplan bearbeiten':'Trainingsplan anlegen',`<form class="form" data-submit="plan" data-id="${esc(plan?.id||'')}">${field('name','Name des Plans',plan?.name||'','text','required placeholder="z. B. Push"')}<div class="field"><label>Übungen auswählen (Reihenfolge per Auswahl)</label><div class="checklist">${data.exercises.filter(x=>!x.archived).map(e=>`<label class="checkline"><input type="checkbox" name="exIds" value="${esc(e.id)}" ${plan?.exerciseIds.includes(e.id)?'checked':''}>${esc(e.name)} <small>${esc(e.equipment||'')}</small></label>`).join('')||'<div class="hint">Lege zuerst Übungen an.</div>'}</div></div><button class="btn primary full" type="submit">Plan speichern</button></form>`)}
+ else if(m.type==='new-goal'||m.type==='edit-goal'){const editing=!!goal,period=editing?goal.period:'weekly',targetValue=editing?goal.targetValue:'';html=modalShell(editing?'Ziel bearbeiten':'Neues Ziel',`<form class="form" data-submit="goal" data-id="${esc(goal?.id||'')}">${field('title','Zielname',goal?.title||'','text','required')}${field('target','Zielbeschreibung',goal?.target||'','text','placeholder="z. B. dreimal wöchentlich"')}${select('period','Bewertungszeitraum',[['daily','Täglich'],['weekly','Wöchentlich']],period)}<div class="form-grid">${field('targetValue','Optionaler Zielwert',targetValue??'','number','min="0" step="any" placeholder="z. B. 3"')}${field('unit','Einheit (optional)',goal?.unit||'','text','placeholder="Einheiten, ml, Minuten ..."')}</div>${select('direction','Zielart',[['min','Mindestens'],['max','Höchstens']],goal?.direction||'min')}<button class="btn primary full" type="submit">${editing?'Neue Zielversion speichern':'Ziel anlegen'}</button><p class="hint">Ohne Zahlen kannst du das Ziel jederzeit direkt als erreicht, teilweise oder nicht erreicht bestätigen.</p></form>`)}
+ else if(m.type==='measure'&&goal){const key=periodKey(goal,day),cfg=configAt(goal,key),ms=canonicalMeasurement(goal,key);html=modalShell('Messwert · '+goal.title,`<form class="form" data-submit="measure" data-id="${goal.id}"><p class="hint">${esc(periodLabel(goal,key))}</p>${field('value',`Erfasster Wert ${cfg.unit?'('+cfg.unit+')':''}`,ms?.value??'','number','required min="0" step="any"')}<button class="btn primary full" type="submit">Wert speichern</button>${ms?button('Messwert entfernen','remove-measure',`data-id="${goal.id}"`,'btn small danger full'):''}</form>`)}
+ else if(m.type==='edit-set'||m.type==='session-set'){const isDraft=m.type==='edit-set',entry=isDraft?data.draft?.items.find(x=>x.id===m.entry):data.sessions.find(x=>x.id===m.session)?.items.find(x=>x.id===m.entry),set=entry?.sets.find(x=>x.id===m.set);if(set)html=modalShell('Satz bearbeiten',`<form class="form" data-submit="edit-set" data-scope="${isDraft?'draft':'session'}" data-session="${esc(m.session||'')}" data-entry="${esc(m.entry)}" data-set="${esc(m.set)}"><div class="form-grid">${field('kg','Gewicht (kg)',set.kg,'number','required min="0" max="9999" step="0.5"')}${field('reps','Wiederholungen',set.reps,'number','required min="1" step="1" max="10000"')}</div>${field('note','Satznotiz (optional)',set.note||'','text','placeholder="z. B. sauber, RPE 8"')}<button class="btn primary full" type="submit">Änderungen speichern</button>${button('Satz löschen','delete-set',`data-scope="${isDraft?'draft':'session'}" data-session="${esc(m.session||'')}" data-entry="${esc(m.entry)}" data-set="${esc(m.set)}"`,'btn danger full')}</form>`)}
+ else if(m.type==='session'){const s=data.sessions.find(x=>x.id===m.id);if(s)html=modalShell('Training · '+s.title,`<form class="form" data-submit="session-meta" data-id="${s.id}">${field('sessionDate','Datum',s.date,'date',`max="${today()}"`)}${field('sessionTitle','Trainingsname',s.title,'text','required')}${field('sessionNotes','Trainingsnotiz',s.notes||'','textarea')}<button class="btn small" type="submit">Training aktualisieren</button></form><div class="divider"></div>${s.items.map(entry=>`<div class="exercise-card" style="margin-bottom:10px"><h3>${esc(getEx(entry.exerciseId)?.name||entry.exerciseName||'Archivierte Übung')}</h3><div class="statlist" style="margin:10px 0">${entry.sets.map((set,i)=>`<div class="statline"><span>${i+1}. ${fmtNum(set.kg)} kg × ${fmtNum(set.reps,0)}${set.note?' · '+esc(set.note):''}</span>${button('✎','open-modal',`data-type="session-set" data-session="${s.id}" data-entry="${entry.id}" data-set="${set.id}"`,'btn small')}</div>`).join('')}</div><form data-submit="session-add-set" data-session="${s.id}" data-entry="${entry.id}" class="set-form"><input name="kg" type="number" inputmode="decimal" step="0.5" min="0" placeholder="kg" aria-label="Gewicht" required><input name="reps" type="number" inputmode="numeric" step="1" min="1" placeholder="Wdh." aria-label="Wiederholungen" required><button class="btn small" type="submit">＋ Satz</button></form></div>`).join('')}${button('Training löschen','delete-session',`data-id="${s.id}"`,'btn danger full')}`)}
+ else if(m.type==='experiment'){html=modalShell('Persönliches Strategie-Experiment',`<form class="form" data-submit="experiment">${field('title','Fragestellung','','text','placeholder="Wann funktioniert meine Routine besser?" required')}${select('goalId','Welches Ziel?',data.goals.filter(g=>g.active).map(g=>[g.id,g.title]),data.goals.find(g=>g.active)?.id||'')}${field('strategyA','Strategie A','','text','required')}${field('strategyB','Strategie B','','text','required')}<p class="hint">Beide Strategien kannst du freiwillig ausprobieren. Ein kurzer Vergleich beweist keine Ursache.</p><button class="btn primary full" type="submit">Experiment beginnen</button></form>`)}
+ else if(m.type==='reflection'){html=modalShell('Freiwillige Reflexion',`<form class="form" data-submit="reflection">${field('text','Was möchtest du festhalten?','','textarea','required rows="4" placeholder="Nur für dich."')}<p class="hint">Dein Text bleibt auf diesem Gerät und wird nicht automatisch analysiert.</p><button class="btn primary full" type="submit">Reflexion speichern</button></form>`)}
+ else if(m.type==='avatar'){const p=data.profile;html=modalShell('Avatar gestalten',`<form class="form" data-submit="avatar">${select('gender','Darstellung',[['neutral','Androgyn / individuell'],['masculine','Männlich'],['feminine','Weiblich']],p.gender)}${select('accent','Gewandfarbe',[['navy','Indigo'],['forest','Waldgrün'],['wine','Bordeaux']],p.accent)}${select('companion','Begleiter',[['fox','Kitsune 🦊'],['shiba','Shiba Inu 🐕'],['cat','Katze 🐈'],['crane','Kranich 🦢']],p.companion)}<div class="form-grid">${['height','weight','chest','waist','hips'].map((k,i)=>field(k,['Größe (cm)','Gewicht (kg)','Brustumfang (cm)','Taillenumfang (cm)','Hüftumfang (cm)'][i],p[k]||'','number','min="0" step="0.1"')).join('')}</div><p class="hint">Alle Werte sind freiwillig. Die Körpermaße werden gespeichert, aber noch nicht automatisch auf einen echten 3D-Mesh übertragen.</p><button class="btn primary full" type="submit">Avatar speichern</button></form>`)}
+ if(html){document.body.insertAdjacentHTML('beforeend',html);applyLanguage()}}
+function openModal(type,id,extra={}){modal={type,id,...extra};renderModal()}
+function closeModal(){modal=null;document.querySelector('#modal-overlay')?.remove()}
+function changeDate(to){if(!/^\d{4}-\d{2}-\d{2}$/.test(to)||to>today())return notice('Bitte ein gültiges Datum bis heute wählen.');day=to;render()}
+function confirmed(msg,fn){if(confirm(msg)){fn();ensureAwards();store();render()}}
+function startWorkout(id){if(data.draft)return notice('Ein Training läuft bereits.');const p=id?getPlan(id):null;data.draft={id:uid(),title:p?.name||'Freies Training',planId:p?.id||null,date:today(),startedAt:new Date().toISOString(),items:(p?.exerciseIds||[]).map(exId=>({id:uid(),exerciseId:exId,exerciseName:getEx(exId)?.name||'Übung',sets:[]}))};tab='training';store();render();notice('Training gestartet')}
+function finishWorkout(){const d=data.draft;if(!d)return;const count=d.items.reduce((n,x)=>n+x.sets.length,0);if(!count)return notice('Bitte mindestens einen Satz speichern.');data.sessions.push({...d,finishedAt:new Date().toISOString()});data.draft=null;ensureAwards();store();render();notice(`${count} Sätze gespeichert`)}
+function downloadBlob(blob,name){const link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),20000)}
+function backup(){downloadBlob(new Blob([JSON.stringify({...data,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'}),`KONPASU-Backup-${today()}.json`);notice('Backup heruntergeladen')}
+function csv(){const rows=[['Datum','Training','Übung','Gerät','Satz','Gewicht_kg','Wiederholungen','Satznotiz']];for(const session of data.sessions)for(const entry of session.items){const ex=getEx(entry.exerciseId);for(const [i,s] of entry.sets.entries())rows.push([session.date,session.title,ex?.name||entry.exerciseName||'',ex?.equipment||'',i+1,s.kg,s.reps,s.note||''])}const encode=v=>'"'+String(v??'').replace(/"/g,'""')+'"';downloadBlob(new Blob(['\ufeff'+rows.map(row=>row.map(encode).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}),`KONPASU-Trainingssaetze-${today()}.csv`);notice('CSV exportiert')}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action,id=b.dataset.id;
+ if(action==='nav'){tab=b.dataset.tab;closeModal();render();scrollTo(0,0)}
+ else if(action==='shift-day')changeDate(dateShift(day,Number(b.dataset.offset)))
+ else if(action==='check'){const g=getGoal(id);if(g){const prev=canonicalCheck(g,day);mark(g,day,prev?.status===b.dataset.status?'clear':b.dataset.status)}}
+ else if(action==='goal-view'){goalView=b.dataset.view;render()}
+ else if(action==='toggle-goal'){const g=getGoal(id);if(!g)return;g.active=!g.active;g.events.push({date:today(),active:g.active});store();render();notice(g.active?'Ziel aktiviert':'Ziel pausiert')}
+ else if(action==='delete-goal'){confirmed('Eigenes Ziel und alle zugehörigen Einträge entfernen?',()=>{data.goals=data.goals.filter(g=>g.id!==id);data.checks=data.checks.filter(c=>c.goalId!==id);data.measurements=data.measurements.filter(c=>c.goalId!==id)})}
+ else if(action==='open-modal')openModal(b.dataset.type,id,{entry:b.dataset.entry,set:b.dataset.set,session:b.dataset.session})
+ else if(action==='close-modal')closeModal()
+ else if(action==='remove-measure'){data.measurements=data.measurements.filter(m=>!(m.goalId===id&&m.date===periodKey(getGoal(id),day)));closeModal();store();render();notice('Messwert entfernt')}
+ else if(action==='set-lang'){data.profile.lang=b.dataset.lang==='en'?'en':'de';store();render()}
+ else if(action==='coach-tone'){data.profile.coachTone=b.dataset.tone;store();render()}
+ else if(action==='training-view'){trainingView=b.dataset.view;render()}
+ else if(action==='start-workout')startWorkout(id)
+ else if(action==='rest-timer'){restUntil=Date.now()+Number(b.dataset.seconds||60)*1000;updateRestClock();notice('Pausentimer gestartet')}
+ else if(action==='rest-stop'){restUntil=0;updateRestClock()}
+ else if(action==='draft-add-ex'){if(!data.draft)return;if(data.draft.items.some(x=>x.exerciseId===id))return notice('Übung bereits vorhanden');const ex=getEx(id);if(ex){data.draft.items.push({id:uid(),exerciseId:id,exerciseName:ex.name,sets:[]});store();render()}}
+ else if(action==='remove-draft-ex'){confirmed('Übung und ihre nicht abgeschlossenen Sätze entfernen?',()=>{data.draft.items=data.draft.items.filter(x=>x.id!==id)})}
+ else if(action==='finish-workout')finishWorkout()
+ else if(action==='discard-workout'){confirmed('Dieses Training mit allen noch nicht abgeschlossenen Sätzen verwerfen?',()=>{data.draft=null})}
+ else if(action==='copy-prev'){const entry=data.draft?.items.find(x=>x.id===id);if(!entry)return;const prev=lastExercise(entry.exerciseId);if(!prev)return notice('Noch keine früheren Sätze vorhanden');entry.suggestions=prev.entry.sets.map(x=>({kg:x.kg,reps:x.reps}));store();render();notice('Letzte Sätze als Vorschläge geladen – einzeln bestätigen')}
+ else if(action==='confirm-suggestion'){const entry=data.draft?.items.find(x=>x.id===b.dataset.entry);if(!entry)return;const i=Number(b.dataset.idx),suggestion=entry.suggestions?.[i];if(!suggestion)return;entry.sets.push({id:uid(),kg:suggestion.kg,reps:suggestion.reps,recordedAt:new Date().toISOString(),fromSuggestion:true});entry.suggestions.splice(i,1);store();render();notice('Satz bestätigt und gespeichert')}
+ else if(action==='archive-ex'){confirmed('Übung archivieren? Historische Sätze und Übungsname bleiben erhalten.',()=>{const ex=getEx(id);if(ex){ex.archived=true;data.plans.forEach(p=>p.exerciseIds=p.exerciseIds.filter(i=>i!==id));closeModal()}})}
+ else if(action==='delete-plan'){confirmed('Plan löschen? Frühere Trainings bleiben erhalten.',()=>{data.plans=data.plans.filter(p=>p.id!==id)})}
+ else if(action==='delete-set'){confirmed('Satz wirklich entfernen?',()=>{const ent=b.dataset.scope==='draft'?data.draft?.items.find(x=>x.id===b.dataset.entry):data.sessions.find(s=>s.id===b.dataset.session)?.items.find(x=>x.id===b.dataset.entry);if(ent)ent.sets=ent.sets.filter(s=>s.id!==b.dataset.set);closeModal()})}
+ else if(action==='delete-session'){confirmed('Abgeschlossenes Training samt aller Sätze löschen?',()=>{data.sessions=data.sessions.filter(s=>s.id!==id);closeModal()})}
+ else if(action==='analysis-period'){analysisDays=Number(b.dataset.period);render()}
+ else if(action==='experiment-view'){experimentExpanded=!experimentExpanded;render()}
+ else if(action==='delete-experiment'){confirmed('Experiment löschen?',()=>{data.experiments=data.experiments.filter(x=>x.id!==id)})}
+ else if(action==='finish-experiment'){const exp=data.experiments.find(x=>x.id===id);if(exp){exp.completedAt=new Date().toISOString();store();render()}}
+ else if(action==='equip'){const g=getGoal(id),level=Number(b.dataset.level);if(!g||!g.active||level>gearTier(g).wearable)return notice('Diese Ausrüstung ist noch nicht tragbar.');data.profile.equipped[id]=level;data.avatarHistory.push({id:uid(),date:today(),savedAt:new Date().toISOString(),profile:JSON.parse(JSON.stringify(data.profile))});store();render();notice('Gegenstand ausgerüstet')}
+ else if(action==='avatar-today'){historyDate=today();render()}
+ else if(action==='avatar-jump'){historyDate=b.dataset.date;render()}
+ else if(action==='backup')backup()
+ else if(action==='csv')csv()
+ else if(action==='import-backup')$('#import-backup-file')?.click()
+ else if(action==='check-update'){navigator.serviceWorker?.getRegistration?.().then(reg=>reg?.update()).then(()=>notice('App-Dateien auf Aktualisierung geprüft')).catch(()=>notice('Keine Verbindung – Offline-Version weiterhin nutzbar'))}
+ else if(action==='reset')confirmed('ALLE lokalen KONPASU-Daten löschen? Diese Aktion kann nicht rückgängig gemacht werden!',()=>{data=createState();day=today();tab='today';focusGoal=null;closeModal()})
 });
-document.addEventListener('submit',e=>{const f=e.target.closest('[data-submit]');if(!f)return;e.preventDefault();const data=new FormData(f),kind=f.dataset.submit,i=f.dataset.id;
- if(kind==='exercise'){const name=String(data.get('name')||'').trim(),equipment=String(data.get('equipment')||'').trim(),notes=String(data.get('notes')||'').trim();if(!name)return notice('Bitte Übungsnamen eingeben');if(i){const ex=exById(i);if(ex)Object.assign(ex,{name,equipment,notes})}else{state.exercises.push({id:id(),name,equipment,notes,unit:'kg',createdAt:new Date().toISOString()})}closeModal();save();render();notice('Übung gespeichert')}
- else if(kind==='plan'){const name=String(data.get('name')||'').trim(),exerciseIds=data.getAll('exerciseIds').map(String).filter(x=>exById(x));if(!name)return notice('Bitte Planname eingeben');if(i){const p=planById(i);if(p)Object.assign(p,{name,exerciseIds})}else state.plans.push({id:id(),name,exerciseIds,createdAt:new Date().toISOString()});closeModal();save();render();notice('Trainingsplan gespeichert')}
- else if(kind==='goal'){const title=String(data.get('title')||'').trim(),target=String(data.get('target')||'').trim();if(!title)return;state.goals.push({id:id(),key:null,title,target,period:'weekly',category:'Eigene Ziele',icon:'✦',active:true});closeModal();save();render();notice('Eigenes Ziel erstellt')}
- else if(kind==='goal-edit'){const g=goalById(i);if(g)Object.assign(g,{title:String(data.get('title')||g.title).trim(),target:String(data.get('target')||'').trim()});closeModal();save();render();notice('Ziel bearbeitet')}
- else if(kind==='new-set'){const entry=state.draft?.items.find(x=>x.id===f.dataset.entry);if(!entry)return;const kg=num(data.get('kg'),NaN),reps=num(data.get('reps'),NaN);if(!Number.isFinite(kg)||!Number.isFinite(reps)||kg<0||kg>9999||reps<1||reps>10000)return notice('Bitte gültige Gewichts- und Wiederholungswerte eingeben');entry.sets.push({id:id(),kg,reps,recordedAt:new Date().toISOString()});save();render();notice('Satz gespeichert')}
- else if(kind==='avatar'){const p={...state.profile};for(const key of ['gender','accent','height','weight','chest','waist','hips'])p[key]=String(data.get(key)||'');state.profile=p;state.avatarHistory.push({date:today(),savedAt:new Date().toISOString(),profile:JSON.parse(JSON.stringify(p))});closeModal();save();render();notice('Avatar-Einstellungen gespeichert')}
- else if(kind==='profile-name'){state.profile.name=String(data.get('name')||'').trim().slice(0,100);save();render();notice('Gespeichert')}
+document.addEventListener('submit',e=>{const form=e.target.closest('[data-submit]');if(!form)return;e.preventDefault();const input=new FormData(form),action=form.dataset.submit,id=form.dataset.id;
+ if(action==='exercise'){const name=String(input.get('name')||'').trim().slice(0,120),equipment=String(input.get('equipment')||'').trim().slice(0,160),notes=String(input.get('notes')||'').trim().slice(0,2000);if(!name)return notice('Bitte Übungsnamen eintragen.');const ex=getEx(id);if(ex){Object.assign(ex,{name,equipment,notes})}else{data.exercises.push({id:uid(),name,equipment,notes,createdAt:new Date().toISOString(),archived:false})}closeModal();store();render();notice('Übung gespeichert')}
+ else if(action==='plan'){const name=String(input.get('name')||'').trim().slice(0,100);if(!name)return notice('Bitte Planname eintragen.');const exIds=input.getAll('exIds').map(String).filter(x=>getEx(x));const p=getPlan(id);if(p)Object.assign(p,{name,exerciseIds:exIds});else data.plans.push({id:uid(),name,exerciseIds:exIds,createdAt:new Date().toISOString()});closeModal();store();render();notice('Trainingsplan gespeichert')}
+ else if(action==='goal'){const title=String(input.get('title')||'').trim().slice(0,120);if(!title)return notice('Bitte einen Zielnamen angeben.');const target=String(input.get('target')||'').trim().slice(0,180),period=input.get('period')==='daily'?'daily':'weekly',v=number(input.get('targetValue'),null),unit=String(input.get('unit')||'').trim().slice(0,35),direction=input.get('direction')==='max'?'max':'min';if(v!==null&&(!Number.isFinite(v)||v<0))return notice('Bitte gültigen Zielwert eingeben.');const g=getGoal(id),version={date:today(),period,target,targetValue:v,unit,direction};if(g){Object.assign(g,{title,target,period,targetValue:v,unit,direction});g.versions.push(version)}else data.goals.push({id:uid(),key:null,title,category:'Eigene Ziele',icon:'✦',active:true,events:[{date:today(),active:true}],versions:[version],...version});closeModal();store();render();notice('Ziel gespeichert')}
+ else if(action==='measure'){const g=getGoal(id),value=number(input.get('value'));if(!g||!Number.isFinite(value)||value<0||value>10000000)return notice('Bitte einen gültigen Messwert eingeben.');closeModal();recordNumber(g,day,value)}
+ else if(action==='new-set'||action==='session-add-set'){const kg=number(input.get('kg')),reps=number(input.get('reps'));if(!Number.isFinite(kg)||kg<0||kg>9999||!Number.isInteger(reps)||reps<1||reps>10000)return notice('Bitte gültige Satzwerte eingeben.');const entry=action==='new-set'?data.draft?.items.find(i=>i.id===form.dataset.entry):data.sessions.find(s=>s.id===form.dataset.session)?.items.find(i=>i.id===form.dataset.entry);if(!entry)return;entry.sets.push({id:uid(),kg,reps,recordedAt:new Date().toISOString()});store();render();notice('Satz gespeichert')}
+ else if(action==='edit-set'){const kg=number(input.get('kg')),reps=number(input.get('reps'));if(!Number.isFinite(kg)||kg<0||kg>9999||!Number.isInteger(reps)||reps<1||reps>10000)return notice('Ungültige Satzwerte');const entry=form.dataset.scope==='draft'?data.draft?.items.find(i=>i.id===form.dataset.entry):data.sessions.find(s=>s.id===form.dataset.session)?.items.find(i=>i.id===form.dataset.entry),set=entry?.sets.find(s=>s.id===form.dataset.set);if(!set)return;Object.assign(set,{kg,reps,note:String(input.get('note')||'').slice(0,300),updatedAt:new Date().toISOString()});closeModal();store();render();notice('Satz geändert')}
+ else if(action==='session-meta'){const s=data.sessions.find(x=>x.id===id),date=String(input.get('sessionDate')||''),title=String(input.get('sessionTitle')||'').trim();if(!s||!title||!/^\d{4}-\d\d-\d\d$/.test(date)||date>today())return notice('Datum oder Titel ungültig.');s.date=date;s.title=title.slice(0,100);s.notes=String(input.get('sessionNotes')||'').slice(0,1000);closeModal();store();render();notice('Training aktualisiert')}
+ else if(action==='avatar'){const p={...data.profile};for(const k of ['gender','accent','companion','height','weight','chest','waist','hips'])p[k]=String(input.get(k)||'').slice(0,100);data.profile=p;data.avatarHistory.push({id:uid(),date:today(),savedAt:new Date().toISOString(),profile:JSON.parse(JSON.stringify(p))});closeModal();store();render();notice('Avatar gespeichert')}
+ else if(action==='experiment'){const name=String(input.get('title')||'').trim().slice(0,140),a=String(input.get('strategyA')||'').trim().slice(0,180),b=String(input.get('strategyB')||'').trim().slice(0,180),goalId=String(input.get('goalId')||'');if(!name||!a||!b||!getGoal(goalId))return notice('Bitte Fragestellung und beide Strategien eingeben.');if(data.experiments.some(x=>!x.completedAt))return notice('Schließe zuerst dein aktives Experiment ab.');data.experiments.push({id:uid(),title:name,strategyA:a,strategyB:b,goalId,createdAt:new Date().toISOString(),startDate:today(),completedAt:null});closeModal();store();render();notice('Experiment gespeichert')}
+ else if(action==='reflection'){const text=String(input.get('text')||'').trim().slice(0,2000);if(!text)return notice('Bitte etwas eintragen.');data.reflections.push({id:uid(),date:today(),text,createdAt:new Date().toISOString()});closeModal();store();render();notice('Reflexion lokal gespeichert')}
+ else if(action==='name'){data.profile.name=String(input.get('name')||'').trim().slice(0,100);store();render();notice('Name gespeichert')}
 });
-document.addEventListener('change',async e=>{if(e.target.id==='history-date'){historyDate=e.target.value||today();render();return}if(e.target.id==='import-file'){const file=e.target.files?.[0];if(!file)return;try{const d=JSON.parse(await file.text());if(d.version!==2||!Array.isArray(d.goals)||!Array.isArray(d.exercises)||!Array.isArray(d.plans)||!Array.isArray(d.sessions)||!Array.isArray(d.checks)||!d.profile)throw Error('Kein gültiges KONPASU-Backup');if(!confirm('Das Backup ersetzt alle aktuellen Daten auf diesem Gerät. Fortfahren?'))return;state=d;await save();page='home';render();notice('Backup erfolgreich wiederhergestellt')}catch(err){notice('Import fehlgeschlagen: '+err.message)}}});
+document.addEventListener('change',async e=>{const el=e.target;if(el.id==='selected-day')changeDate(el.value);else if(el.id==='draft-date'){const value=el.value;if(value&&value<=today()){data.draft.date=value;store();render()}else notice('Bitte Datum bis heute wählen')}
+ else if(el.id==='language-select'){data.profile.lang=el.value==='en'?'en':'de';document.documentElement.lang=data.profile.lang;store();render()}
+ else if(el.id==='analysis-goal'){focusGoal=el.value||null;render()}else if(el.id==='history-date'){historyDate=el.value||today();render()}
+ else if(el.id==='import-backup-file'){const file=el.files?.[0];if(!file)return;try{if(file.size>15*1024*1024)throw Error('Datei zu groß (max. 15 MB).');const parsed=JSON.parse(await file.text()),restored=migrate(parsed);if(!confirm('Dieses Backup ersetzt ALLE lokalen Einträge auf diesem Gerät. Fortfahren?'))return;data=restored;ensureAwards();await store();tab='today';focusGoal=null;render();notice('Backup wiederhergestellt')}catch(err){notice('Import fehlgeschlagen: '+err.message)}finally{el.value=''}}});
 document.addEventListener('click',e=>{if(e.target.id==='modal-overlay')closeModal()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-init();
+/* v0.3 optional, entirely offline modules: language, coach, correlations and timers. */
+function updateRestClock(){const n=document.querySelector('#rest-clock');if(!n)return;const remaining=Math.max(0,Math.ceil((restUntil-Date.now())/1000));n.textContent=remaining?`${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`:'–';if(!remaining)restUntil=0}
+function weekValue(g,w){if(!activeAt(g,w))return null;const cfg=configAt(g,w);if(cfg.period==='weekly'){const a=assessment(g,w);return a.status==='unknown'?null:a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)}const vals=daysBack(7,dateShift(w,6)).filter(d=>activeAt(g,d)).map(d=>assessment(g,d));if(vals.length!==7||vals.some(a=>a.status==='unknown'))return null;return vals.reduce((sum,a)=>sum+(a.status==='yes'?1:a.status==='no'?0:(a.ratio??.5)),0)/7}
+function correlation(a,b){if(a.length!==b.length||a.length<6)return null;const n=a.length,mean=v=>v.reduce((s,x)=>s+x,0)/v.length,xm=mean(a),ym=mean(b);let xy=0,xx=0,yy=0;for(let i=0;i<n;i++){let x=a[i]-xm,y=b[i]-ym;xy+=x*y;xx+=x*x;yy+=y*y}return xx>0&&yy>0?xy/Math.sqrt(xx*yy):null}
+function exploratoryPairs(){const weeks=allCompletedWeekStarts().slice(-26),goals=activeGoals(),out=[];for(let i=0;i<goals.length;i++)for(let j=i+1;j<goals.length;j++){const xa=[],ya=[];for(const w of weeks){const a=weekValue(goals[i],w),b=weekValue(goals[j],w);if(a!==null&&b!==null){xa.push(a);ya.push(b)}}const r=correlation(xa,ya);if(r!==null)out.push({a:goals[i],b:goals[j],r,n:xa.length})}return out.sort((a,b)=>Math.abs(b.r)-Math.abs(a.r))}
+function renderExploratory(){const pairs=exploratoryPairs();return `<div class="panel"><div class="between"><h3>Explorative Zusammenhänge</h3><span class="badge muted">Offline</span></div><p class="hint" style="margin:9px 0">Vergleiche der letzten 26 abgeschlossenen Wochen mit vollständig bewerteten Paaren. Nur Beobachtungen – keine Ursachenbeweise. Viele Vergleiche können Zufallsmuster erzeugen.</p><div class="statlist">${pairs.length?pairs.slice(0,8).map(p=>`<div class="statline"><span>${esc(p.a.icon)} ${esc(p.a.title)} / ${esc(p.b.title)}<br><small class="muted">${p.n} vergleichbare Wochen · explorativ</small></span><strong>${p.r>0?'+':''}${p.r.toFixed(2)}</strong></div>`).join(''):'<p class="hint">Noch nicht genug unterschiedliche, vollständig dokumentierte Wochen für einen sinnvollen Vergleich. Leere Daten bleiben unbekannt.</p>'}</div><p class="hint" style="margin-top:13px">r ist eine deskriptive Korrelation. Keine Signifikanz- oder Wahrscheinlichkeitsaussage; bei vielen getesteten Paaren sind Zufallstreffer möglich.</p></div>`}
+function renderCoach(){const active=data.experiments.filter(x=>!x.completedAt),history=data.experiments.filter(x=>!!x.completedAt);const tone=data.profile.coachTone||'balanced';return `<div class="stack"><div class="panel"><div class="between"><h2>Dein Offline-Coach</h2><span class="badge muted">Keine externe KI</span></div><p class="hint" style="margin-top:8px">Kurze, freiwillige Unterstützung. Keine Diagnose, keine automatische Zieländerung und keine Push-Flut.</p><div class="note" style="margin-top:13px">${esc(coachingTip())}</div><h3 style="margin-top:17px">Coaching-Stil</h3><div class="chips" style="margin-top:9px">${[['gentle','Weniger Druck'],['balanced','Ausgewogen'],['direct','Direkt']].map(([x,label])=>button(label,'coach-tone',`data-tone="${x}"`,'chip '+(tone===x?'active':''))).join('')}</div><p class="hint" style="margin-top:10px">Der Stil ändert die Ansprache, nicht die Bewertung deiner Ziele.</p></div><div class="panel"><div class="between"><h3>Persönliche Strategie-Experimente</h3>${button('＋ Experiment','open-modal','data-type="experiment"','btn primary small')}</div><p class="hint" style="margin:10px 0">Vergleiche freiwillig zwei Routinen. Für belastbare Aussagen sind längere, vergleichbare Zeiträume nötig.</p>${active.length?active.map(x=>`<div class="exercise-card" style="margin-top:10px"><h3>${esc(x.title)}</h3><p class="hint" style="margin-top:8px">${esc(getGoal(x.goalId)?.title||'')}</p><div class="grid2" style="margin:10px 0"><div class="note">A · ${esc(x.strategyA)}</div><div class="note">B · ${esc(x.strategyB)}</div></div><p class="hint">Beginn: ${formatDate(x.startDate)}. Trage deine Ziele wie gewohnt ein.</p><div class="actions" style="margin-top:10px">${button('Abschließen','finish-experiment',`data-id="${x.id}"`,'btn small primary')}${button('Löschen','delete-experiment',`data-id="${x.id}"`,'btn small danger')}</div></div>`).join(''):'<p class="hint">Kein aktives Experiment. Du kannst jederzeit eines starten.</p>'}${history.length?`<h3 style="margin-top:17px">Beendete Experimente</h3>${history.slice().reverse().slice(0,8).map(x=>`<div class="statline"><span>${esc(x.title)}</span>${button('Löschen','delete-experiment',`data-id="${x.id}"`,'btn small danger')}</div>`).join('')}`:''}</div><div class="panel"><div class="between"><h3>Freiwillige Reflexionen</h3>${button('＋ Eintrag','open-modal','data-type="reflection"','btn small')}</div><p class="hint" style="margin:10px 0">Nur lokal und privat. Kein Pflicht-Check-in.</p>${data.reflections.slice().reverse().slice(0,5).map(x=>`<div class="exercise-card" style="margin:8px 0"><p class="micro muted">${formatDate(x.date)}</p><p style="white-space:pre-wrap">${esc(x.text)}</p></div>`).join('')||'<p class="hint">Noch keine Reflexionen gespeichert.</p>'}</div></div>`}
+const I18N_ROWS=`Dein Überblick|Your overview
+Weniger Druck. Mehr Fortschritt.|Less pressure. More progress.
+Trainingstagebuch|Training log
+Deine Übungen. Deine echten Satzwerte.|Your exercises. Your actual set results.
+Ziele & Gewohnheiten|Goals & habits
+19 Vorlagen und eigene Ziele.|19 presets and your own goals.
+Deine Entwicklung|Your progress
+Messwerte und Datenlücken getrennt.|Measurements and missing data shown separately.
+Dein persönlicher Coach|Your personal coach
+Offline · ruhig · freiwillig|Offline · calm · optional
+Dein Samurai|Your samurai
+Dein persönlicher Weg.|Your personal journey.
+Daten & Sicherheit|Data & security
+Offline, lokal, ohne Abo.|Offline, local, no subscription.
+Heute|Today
+Training|Training
+Ziele|Goals
+Analyse|Analytics
+Avatar|Avatar
+Einstellungen|Settings
+Lokal & offline|Local & offline
+Ohne Abo · Ohne KI-Server|No subscription · No AI server
+Dein Weg|Your journey
+Weniger Druck|Less pressure
+Mehr Fortschritt|More progress
+Dein Weg beginnt hier.|Your journey starts here.
+Dein Training und deine Gewohnheiten. Ohne Druck und ohne Abo.|Your training and habits. Without pressure or subscriptions.
+Training öffnen ↗|Open workout ↗
+Bewertete Check-ins|Reviewed check-ins
+Aktive Ziele|Active goals
+Erfüllung*|Achievement*
+Schneller Check-in|Quick check-in
+Auch rückwirkend|Backdating supported
+Vorheriger Tag|Previous day
+Nächster Tag|Next day
+Wochenziele gelten jeweils von Montag bis Sonntag. Ein Check-in bestätigt genau diese Woche.|Weekly goals run Monday through Sunday. A check-in confirms that week.
+Aktiviere unter „Ziele“ ein erstes Ziel.|Activate your first goal under Goals.
+✓ erreicht · ◐ teilweise · × nicht erreicht · # optionaler Messwert · ohne Eintrag = unbekannt|✓ achieved · ◐ partial · × not achieved · # optional value · no entry = unknown
+Dein Offline-Coach|Your offline coach
+Zurückhaltend|Low-key
+Coach öffnen|Open coach
+Alle Analysen|All analytics
+Deine Zielbibliothek|Your goal library
+19 Vorlagen|19 presets
+Alle Ziele funktionieren mit einem Tap. Messwerte und Details bleiben optional.|All goals work with one tap. Detailed measurements are optional.
+Aktiv|Active
+Alle|All
+Inaktiv|Inactive
+Pausieren|Pause
+Aktivieren|Activate
+Bearbeiten|Edit
+Löschen|Delete
+＋ Eigenes Ziel|＋ Custom goal
+Persönliches Ziel|Personal goal
+Wöchentlich|Weekly
+Täglich|Daily
+Zieländerungen gelten ab dem Änderungstag. Frühere Vorgaben werden separat gespeichert; bereits eingetragene Wochen werden nicht rückwirkend umdefiniert.|Goal changes take effect from the change date. Earlier definitions are kept.
+Dein Trainingstagebuch|Your training log
+Übungen selbst erstellen, eigene Splits planen und jeden Satz speichern. Beim nächsten Mal siehst du deine letzten Werte.|Create exercises and splits, save every set, and see your previous results next time.
+＋ Freies Training|＋ Free workout
+＋ Übung|＋ Exercise
+＋ Plan|＋ Plan
+Pläne|Plans
+Übungen|Exercises
+Verlauf|History
+Noch kein Plan. Lege deine Übungen an und erstelle deinen ersten Split.|No plans yet. Create exercises and your first split.
+Noch keine Trainingseinheiten abgeschlossen.|No completed workouts yet.
+Noch keine Bestleistung|No personal best yet
+Bestes protokolliertes Gewicht|Highest recorded weight
+Trainingsdaten werden lokal gespeichert. Eine automatisch übernommene letzte Gewichtsangabe ist nur ein Vorschlag und zählt erst nach dem Speichern als neuer Satz.|Workout data is stored locally. Previous results are suggestions, not completed sets.
+Training läuft|Workout in progress
+Jeder Satz wird unmittelbar lokal gesichert.|Every set is saved locally as you go.
+Abschließen ✓|Finish ✓
+Pause 60 s|Rest 60 s
+Pause 90 s|Rest 90 s
+Pause 120 s|Rest 120 s
+Stop|Stop
+Datum|Date
+Übung hinzufügen|Add exercise
+＋ Neue Übung|＋ New exercise
+Noch keine Vergleichswerte für diese Übung.|No previous results for this exercise.
+Letztes Training|Previous workout
+Neuer Satz|New set
+Satz|Set
+Wdh.|Reps
+Wiederholungen|Repetitions
+Gewicht|Weight
+✓ Satz|✓ Save set
+⚙ Gerätenotiz|⚙ Machine notes
+Letzte Werte übernehmen|Use previous values
+Training abschließen|Finish workout
+Training verwerfen|Discard workout
+Übung entfernen|Remove exercise
+Lege zuerst eine Übung an, beispielsweise Bankdrücken.|Create an exercise first, such as bench press.
+Ein Ziel genauer ansehen|Select a goal to explore
+Bitte auswählen|Please select
+4 Wochen|4 weeks
+12 Wochen|12 weeks
+1 Jahr|1 year
+Ohne externe KI|No external AI
+Erreicht|Achieved
+Teilweise|Partial
+Nicht erreicht|Not achieved
+Unbekannt|Unknown
+Bekannt|Known
+Bewertete Wochen|Assessed weeks
+Bewertete Tage|Assessed days
+Erfüllung bei bekannten Bewertungen|Achievement among known entries
+Dokumentierte Messwerte|Recorded measurements
+Deine Ziele auf einen Blick|Your goals at a glance
+Tippe oben ein Ziel an. Die Statistik unterscheidet bestätigte Erfolge, selbst eingetragene Messwerte und Datenlücken.|Choose a goal above. Analytics separates achievements, measurements and missing data.
+Aktiviere Ziele, um Statistiken zu sehen.|Activate goals to see analytics.
+Training und persönliche Rekorde|Training and personal records
+Lege im Trainingstagebuch eine Übung an.|Create an exercise in your training log.
+Muster und Zusammenhänge aus nur wenigen Daten können zufällig entstehen. Diese Version zeigt nachvollziehbare Einzelstatistiken; umfangreiche explorative Analysen und Strategie-Experimente folgen in einer späteren Ausbaustufe.|Patterns in small datasets may happen by chance. Explore your data carefully.
+Explorative Zusammenhänge|Exploratory correlations
+Vergleiche der letzten 26 abgeschlossenen Wochen mit vollständig bewerteten Paaren. Nur Beobachtungen – keine Ursachenbeweise. Viele Vergleiche können Zufallsmuster erzeugen.|Comparisons from the last 26 completed weeks with known paired values. Observations, not proof of causation. Multiple comparisons can create false patterns.
+Noch nicht genug unterschiedliche, vollständig dokumentierte Wochen für einen sinnvollen Vergleich. Leere Daten bleiben unbekannt.|Not enough varied, fully assessed weeks yet for a meaningful comparison. Missing data stays unknown.
+Nur Beobachtungen|Observations only
+vergleichbare Wochen · explorativ|comparable weeks · exploratory
+r ist eine deskriptive Korrelation. Keine Signifikanz- oder Wahrscheinlichkeitsaussage; bei vielen getesteten Paaren sind Zufallstreffer möglich.|r is a descriptive correlation, not a probability or significance claim. Multiple testing may produce spurious findings.
+Dein Charakter|Your character
+Charakter gestalten|Customize character
+Begleiter|Companion
+Grundausstattung jederzeit verfügbar.|Starter outfit always available.
+Ausrüstungs-Kollektionen|Equipment collections
+Aus erfolgreichen, abgeschlossenen Zielwochen. Keine Gegenstände werden ungefragt angelegt.|Earned through completed successful goal-weeks. Items are never equipped automatically.
+bestätigte Zielwochen|confirmed goal-weeks
+erworben|earned
+Weniger als 4 abgeschlossene Wochen bewertet: kein automatischer Ausrüstungsverlust.|Fewer than 4 completed weeks assessed: no automatic equipment loss.
+Aktiviere Ziele, um Ausrüstung freizuschalten.|Activate goals to unlock gear.
+Ruhmeshalle|Hall of fame
+Einmal erreichte, korrekt belegte Meilensteine bleiben bei späteren Rückschlägen bestehen.|Once validly achieved, milestones remain after setbacks.
+Noch keine besonderen Meilensteine erreicht.|No special milestones achieved yet.
+Avatar-Zeitreise|Avatar time travel
+Wähle einen Zeitpunkt, um deine damals gespeicherte Avatar-Darstellung zu betrachten. Eine echte interaktive 3D-Welt wird separat entwickelt.|Browse saved appearance changes by date. Full interactive 3D time travel is not yet implemented.
+gespeicherte Avatar-Zustände|saved avatar states
+Heute anzeigen|Show today
+Stilisierte 2D-Samurai-Figur · 3D-Avatar noch in Entwicklung|Stylized 2D samurai · 3D avatar under development
+Deine Daten gehören dir|Your data belongs to you
+Datenspeicherung|Data storage
+Lokal aktiv|Local storage active
+Fehler – Backup exportieren|Error – export a backup
+Trainings|Workouts
+Sätze|Sets
+Ziel-Bestätigungen|Goal confirmations
+Erster Start|First launch
+⬇ JSON-Backup|⬇ JSON backup
+⬆ Backup laden|⬆ Restore backup
+⬇ Trainings-CSV|⬇ Workout CSV
+Persönliche Einstellungen|Personal settings
+Name oder Spitzname (optional)|Name or nickname (optional)
+Dein Name|Your name
+Speichern|Save
+App-Version und Update|App version and update
+Auf Updates prüfen|Check for updates
+Alle Daten löschen|Delete all data
+Unwiderruflich, wenn du kein Backup hast.|Irreversible without a backup.
+App zurücksetzen|Reset app
+Sprache / Language|Language / Sprache
+Deutsch|Deutsch
+English|English
+Alle Kernfunktionen stehen in Deutsch und Englisch zur Verfügung. Eigene Übungsnamen und Notizen bleiben unverändert.|Core features are available in German and English. Your custom exercise names and notes stay unchanged.
+Eigene Übung anlegen|Create exercise
+Übung bearbeiten|Edit exercise
+Übungsname|Exercise name
+Gerät / genaue Variante|Machine / exercise variant
+Geräteeinstellungen und Notizen|Machine settings and notes
+Übung speichern|Save exercise
+Übung archivieren|Archive exercise
+Trainingsplan anlegen|Create workout plan
+Trainingsplan bearbeiten|Edit workout plan
+Name des Plans|Plan name
+Übungen auswählen (Reihenfolge per Auswahl)|Select exercises (in selection order)
+Lege zuerst Übungen an.|Create exercises first.
+Plan speichern|Save plan
+Neues Ziel|New goal
+Ziel bearbeiten|Edit goal
+Zielname|Goal name
+Zielbeschreibung|Goal description
+Bewertungszeitraum|Goal interval
+Optionaler Zielwert|Optional target value
+Einheit (optional)|Unit (optional)
+Zielart|Goal type
+Mindestens|At least
+Höchstens|At most
+Neue Zielversion speichern|Save updated goal
+Ziel anlegen|Create goal
+Ohne Zahlen kannst du das Ziel jederzeit direkt als erreicht, teilweise oder nicht erreicht bestätigen.|Without numeric measurements, you can still mark a goal achieved, partial, or not achieved.
+Messwert|Measurement
+Erfasster Wert|Recorded value
+Wert speichern|Save value
+Messwert entfernen|Remove value
+Satz bearbeiten|Edit set
+Gewicht (kg)|Weight (kg)
+Satznotiz (optional)|Set note (optional)
+Änderungen speichern|Save changes
+Satz löschen|Delete set
+Trainingsname|Workout name
+Trainingsnotiz|Workout note
+Training aktualisieren|Update workout
+Training löschen|Delete workout
+Avatar gestalten|Customize avatar
+Darstellung|Appearance
+Androgyn / individuell|Androgynous / custom
+Männlich|Masculine
+Weiblich|Feminine
+Gewandfarbe|Robe color
+Waldgrün|Forest green
+Bordeaux|Burgundy
+Katze 🐈|Cat 🐈
+Kranich 🦢|Crane 🦢
+Größe (cm)|Height (cm)
+Gewicht (kg)|Weight (kg)
+Brustumfang (cm)|Chest (cm)
+Taillenumfang (cm)|Waist (cm)
+Hüftumfang (cm)|Hips (cm)
+Avatar speichern|Save avatar
+Schließen|Close
+Wert eintragen|Record value
+Erstes Accessoire|First accessory
+Seltenes Accessoire|Rare accessory
+Epische Ausrüstung|Epic equipment
+Legendäres Artefakt|Legendary artifact
+Mythisches Artefakt|Mythic artifact
+Gewöhnlich|Common
+Selten|Rare
+Episch|Epic
+Legendär|Legendary
+Mythisch|Mythic
+Grundausstattung|Starter equipment
+Persönliches Strategie-Experiment|Personal strategy experiment
+Fragestellung|Question
+Welches Ziel?|Which goal?
+Strategie A|Strategy A
+Strategie B|Strategy B
+Experiment beginnen|Start experiment
+Experiment löschen?|Delete experiment?
+Freiwillige Reflexion|Optional reflection
+Was möchtest du festhalten?|What would you like to record?
+Nur für dich.|Just for you.
+Reflexion speichern|Save reflection
+Dein Offline-Coach|Your offline coach
+Keine externe KI|No external AI
+Kurze, freiwillige Unterstützung. Keine Diagnose, keine automatische Zieländerung und keine Push-Flut.|Brief, optional support. No diagnosis, no automatic goal changes, no notification overload.
+Coaching-Stil|Coaching style
+Weniger Druck|Less pressure
+Ausgewogen|Balanced
+Direkt|Direct
+Der Stil ändert die Ansprache, nicht die Bewertung deiner Ziele.|Style changes tone, not goal assessment.
+Persönliche Strategie-Experimente|Personal strategy experiments
+＋ Experiment|＋ Experiment
+Vergleiche freiwillig zwei Routinen. Für belastbare Aussagen sind längere, vergleichbare Zeiträume nötig.|Compare two routines if you wish. Robust conclusions require longer, comparable periods.
+Beginn|Started
+Schließe zuerst dein aktives Experiment ab.|Finish your active experiment first.
+Abschließen|Finish
+Kein aktives Experiment. Du kannst jederzeit eines starten.|No active experiments. Start one whenever you want.
+Beendete Experimente|Completed experiments
+Freiwillige Reflexionen|Optional reflections
+＋ Eintrag|＋ Entry
+Nur lokal und privat. Kein Pflicht-Check-in.|Private and local. No mandatory check-ins.
+Noch keine Reflexionen gespeichert.|No reflections saved yet.
+Du kannst deine Ziele jederzeit anpassen.|You can always adjust your goals.
+Einige bestätigte Wochen liefen anders als geplant. Vielleicht hilft ein kleinerer, konkreter Wenn-dann-Plan. Du kannst deine Ziele jederzeit anpassen.|Some confirmed weeks didn't go as planned. A small if-then plan might help. You can adjust your goals anytime.
+Deine Einträge bleiben gespeichert. Wenn du möchtest, kannst du später einzelne Muster in der Analyse betrachten.|Your entries are saved. Explore patterns in Analytics if you want.
+Beginne mit einem kleinen Ziel. Details sind freiwillig, und du kannst Tage oder Wochen jederzeit nachtragen.|Start with a small goal. Details are optional, and you can backdate entries anytime.
+Sport|Fitness
+Gesundheit|Health
+Wissen|Knowledge
+Achtsamkeit|Mindfulness
+Leben|Lifestyle
+Digital|Digital
+Eigene Ziele|Custom goals
+Krafttraining|Strength training
+Cardio|Cardio
+Schritte & Bewegung|Steps & activity
+Beweglichkeit|Mobility
+Wasser trinken|Hydration
+Schlaf|Sleep
+Ernährung|Nutrition
+Zucker reduzieren|Reduce added sugar
+Alkohol reduzieren|Reduce alcohol
+Lesen|Reading
+Sprachen lernen|Learn languages
+Weiterbildung|Learning & skills
+Fokus & Deep Work|Focus & deep work
+Meditation|Meditation
+Tagebuch & Reflexion|Journaling & reflection
+Gemeinsame Aktivitäten|Shared activities
+Zeit in der Natur|Time in nature
+Bildschirmzeit|Screen time
+Gaming reduzieren|Reduce gaming
+3 Einheiten / Woche|3 sessions / week
+2 Einheiten / Woche|2 sessions / week
+8.000 Schritte / Tag|8,000 steps / day
+2.000 ml / Tag|2,000 ml / day
+8 Stunden / Nacht|8 hours / night
+Individuelle Wochenbalance|Flexible weekly balance
+5 Tage / Woche|5 days / week
+Persönliches Wochenziel|Personal weekly goal
+4 Lesetage / Woche|4 reading days / week
+4 Lerntage / Woche|4 learning days / week
+3 Lerntage / Woche|3 learning days / week
+5 Fokussitzungen / Woche|5 focus sessions / week
+4 Tage / Woche|4 days / week
+3 Tage / Woche|3 days / week
+2 Aktivitäten / Woche|2 activities / week
+120 Minuten / Tag|120 minutes / day
+300 Minuten / Woche|300 minutes / week
+Einheiten|Sessions
+Minuten|Minutes
+Stunden|Hours
+Schritte|Steps
+Tage|Days
+Aktivitäten|Activities
+Sitzungen|Sessions
+Erfasst|Recorded
+Bestätigt|Confirmed
+Keine Angabe|No entry
+Bisher dokumentiert|Documented so far
+Messwert ohne Ziel|Measurement without target
+Trainingstagebuch|Training log
+Woche|Week
+Erstes Accessoire|First accessory
+Ziel bestätigt|Goal confirmed
+Teilweise erreicht|Partially achieved
+Nicht erreicht dokumentiert|Not achieved recorded
+Bestätigung entfernt|Confirmation removed
+Messwert gespeichert|Measurement saved
+Satz gespeichert|Set saved
+Übung gespeichert|Exercise saved
+Trainingsplan gespeichert|Workout plan saved
+Ziel gespeichert|Goal saved
+Avatar gespeichert|Avatar saved
+Name gespeichert|Name saved
+Training aktualisiert|Workout updated
+Satz geändert|Set updated
+Backup heruntergeladen|Backup downloaded
+Backup wiederhergestellt|Backup restored
+Keine früheren Sätze vorhanden|No previous sets available
+Es wurden bereits Sätze eingetragen.|Sets were already entered.
+Bitte mindestens einen Satz speichern.|Save at least one set.
+Keine Verbindung – Offline-Version weiterhin nutzbar|No connection – offline version remains available
+App-Dateien auf Aktualisierung geprüft|App files checked for updates
+Bitte ein gültiges Datum bis heute wählen.|Choose a valid date up to today.
+Bitte gültige Satzwerte eingeben.|Enter valid set values.
+Bitte Übungsnamen eintragen.|Enter an exercise name.
+Bitte Planname eintragen.|Enter a plan name.
+Bitte einen Zielnamen angeben.|Enter a goal name.
+Bitte gültigen Zielwert eingeben.|Enter a valid target value.
+Bitte einen gültigen Messwert eingeben.|Enter a valid measurement.
+Bitte Fragestellung und beide Strategien eingeben.|Enter your question and both strategies.
+Experiment gespeichert|Experiment saved
+Reflexion lokal gespeichert|Reflection saved
+Kote des Anfängers|Novice bracers
+Eisen-Kote|Iron bracers
+Samurai-Sode|Samurai shoulder guards
+Kabuto des Willens|Helm of resolve
+Himmlisches Gusoku|Celestial armor
+Lauf-Tabi|Runner tabi
+Wind-Haori|Wind haori
+Falkenfeder-Umhang|Falcon-feather cape
+Sturmwind-Aura|Stormwind aura
+Windgott-Gewand|Wind deity robe
+Reisesandalen|Travel sandals
+Bambusstab|Bamboo staff
+Pilger-Reisetasche|Pilgrim pack
+Goldene Wanderstiefel|Golden travel boots
+Pfad der Tausend Wege|Path of a thousand trails
+Seidenärmel|Silk sleeves
+Trainingsgewand|Training robe
+Kranich-Pose|Crane pose
+Fließendes Gewand|Flowing robe
+Himmlischer Kranich|Celestial crane
+Bambusbecher|Bamboo cup
+Keramikflasche|Ceramic flask
+Azur-Gefäß|Azure vessel
+Kristallquelle|Crystal spring
+Gefäß des Seegottes|Sea deity vessel
+Nachtband|Night headband
+Mond-Haori|Moon haori
+Sternenlaterne|Star lantern
+Traumwächter-Gewand|Dream guardian robe
+Mondpavillon|Moon pavilion
+Bento-Tuch|Bento cloth
+Verzierte Reisschale|Decorated rice bowl
+Natur-Kochgewand|Nature cook robe
+Goldenes Ernte-Artefakt|Golden harvest artifact
+Garten der Fülle|Garden of abundance
+Balance-Armband|Balance bracelet
+Seiden-Obi|Silk obi
+Balance-Fächer|Balance fan
+Silberner Gleichgewichts-Obi|Silver balance obi
+Aura des Gleichgewichts|Aura of balance
+Gelassener Ausdruck|Calm expression
+Stille Pose|Still pose
+Klarblick-Emote|Clarity emote
+Morgenlicht-Animation|Morning light animation
+Aura des inneren Friedens|Inner peace aura
+Lesezeichen|Bookmark
+Gebundenes Buch|Bound book
+Große Schriftrolle|Grand scroll
+Bibliothekar-Haori|Librarian haori
+Ewiges Archiv|Eternal archive
+Kanji-Anhänger|Kanji pendant
+Kalligrafiepinsel|Calligraphy brush
+Sprach-Schriftrolle|Language scroll
+Schwebende Schriftzeichen|Floating characters
+Flüsternde Schriftrolle|Whispering scroll
+Lernbeutel|Study bag
+Gelehrten-Kopfbedeckung|Scholar's headpiece
+Gelehrten-Haori|Scholar haori
+Gewand des Weisen|Wise one's robe
+Himmlische Akademie|Celestial academy
+Konzentrationsstein|Focus stone
+Hachimaki-Stirnband|Hachimaki headband
+Zen-Zeitmesser|Zen timepiece
+Ring der Konzentration|Ring of focus
+Raum der Stille|Chamber of stillness
+Perlenarmband|Beaded bracelet
+Zen-Kissen|Zen cushion
+Meditationsgewand|Meditation robe
+Lotus-Lichtkranz|Lotus halo
+Lotusthron|Lotus throne
+Tintenfläschchen|Ink bottle
+Fude-Schreibpinsel|Fude brush
+Verziertes Journal|Decorated journal
+Laterne der Erinnerung|Lantern of remembrance
+Halle der Lebensgeschichten|Hall of life stories
+Freundschafts-Omamori|Friendship omamori
+Fest-Haori|Festival haori
+Tanuki-Begleiter|Tanuki companion
+Schwebende Festlaternen|Floating festival lanterns
+Himmlisches Matsuri|Celestial matsuri
+Blatt-Anhänger|Leaf pendant
+Waldumhang|Forest cape
+Kleiner Waldgeist|Little forest spirit
+Nebelwald|Misty forest
+Kitsune-Wächter|Kitsune guardian
+Shōgi-Figur|Shogi piece
+Taktiker-Stirnband|Tactician headband
+Taktiker-Gewand|Tactician robe
+Zeitwächter-Tanuki|Timekeeper tanuki
+Sternen-Pavillon|Star pavilion
+Zeitmesser|Timepiece
+Laterne der Ruhe|Lantern of calm
+Garten der Abendstille|Garden of evening calm
+Aura der Zeitbalance|Aura of time balance
+Erstes Accessoire|First accessory
+Seltenes Accessoire|Rare accessory
+Epische Ausrüstung|Epic equipment
+Legendäres Artefakt|Legendary artifact
+Mythisches Artefakt|Mythic artifact
+* Nur bekannte Check-ins und Messwerte im gewählten Zeitraum. Unbekannte Tage werden nicht als Misserfolg gezählt. Aktueller Rang beruht auf bestätigten, abgeschlossenen Wochen.|* Based only on known check-ins and measurements in the selected period. Missing days are not failures. Rank depends on confirmed completed weeks.
+KONPASU verarbeitet deine Daten nur auf diesem Gerät. Es gibt keinen Account, keine Cloud, keine API-Anfragen und keine Abokosten. GitHub Pages liefert nur die App-Dateien aus.|KONPASU processes data on this device only. There is no account, cloud, API call or subscription. GitHub Pages only delivers the app files.
+Wichtig: Das Löschen von Website-Daten oder der Homescreen-App kann die lokalen Einträge entfernen. Sichere sie regelmäßig außerhalb der App. Vor diesem Update unbedingt ein Backup erstellen.|Important: Deleting website data or removing the Home Screen app may delete local entries. Export backups regularly, especially before updating.
+KONPASU 0.3. Aktualisierte App-Dateien werden beim nächsten Online-Öffnen geladen; die gespeicherten Daten bleiben in derselben lokalen Datenbank.|KONPASU 0.3. Updated app files load on your next online visit; your existing records remain in the same local database.
+Alle Werte sind freiwillig. Die Körpermaße werden gespeichert, aber noch nicht automatisch auf einen echten 3D-Mesh übertragen.|All body measurements are optional. They are saved, but not yet applied to a real 3D model.
+Coach & Experimente|Coach & experiments
+Letzte Sätze einzeln bestätigen:|Confirm previous sets individually:
+Letzte Sätze als Vorschläge geladen – einzeln bestätigen|Previous sets loaded as suggestions – confirm individually
+Satz bestätigt und gespeichert|Set confirmed and saved
+Pausentimer gestartet|Rest timer started
+Nicht erreicht|Not achieved
+Nicht erreicht dokumentiert|Not achieved recorded
+Kein Eintrag ist kein Misserfolg.|No entry is not a failure.
+Grün = erfüllt, Gold = teilweise, Rot = verfehlt, Grau = unbekannt. Kein Eintrag ist kein Misserfolg.|Green = achieved, gold = partial, red = not achieved, grey = unknown. Missing is not failure.
+Beispielsweise|For example
+Du kannst deine Ziele jederzeit anpassen.|You can adjust your goals anytime.
+Ein Training läuft bereits.|A workout is already in progress.
+Bitte ein gültiges Datum bis heute wählen.|Enter a valid date up to today.
+Du kannst Tage oder Wochen jederzeit nachtragen.|You can backdate days or weeks anytime.
+Übung bereits vorhanden|Exercise already in workout
+Übung und ihre nicht abgeschlossenen Sätze entfernen?|Remove the exercise and its unfinished sets?
+Training löschen|Delete workout
+Training abschließen|Finish workout
+Training verwerfen|Discard workout
+Dieses Training mit allen noch nicht abgeschlossenen Sätzen verwerfen?|Discard this workout and all unfinished sets?
+Eigenes Ziel und alle zugehörigen Einträge entfernen?|Remove custom goal and all related entries?
+ALLE lokalen KONPASU-Daten löschen? Diese Aktion kann nicht rückgängig gemacht werden!|Delete ALL local KONPASU data? This cannot be undone!
+Backup laden|Restore backup
+Satz wirklich entfernen?|Remove this set?
+Plan löschen? Frühere Trainings bleiben erhalten.|Delete this plan? Previous workouts remain saved.
+Abgeschlossenes Training samt aller Sätze löschen?|Delete the completed workout and all sets?
+Satz gelöscht|Set removed
+CSV exportiert|CSV exported
+Messwert entfernt|Measurement removed
+Ziel aktiviert|Goal activated
+Ziel pausiert|Goal paused
+Satznotiz|Set note
+Letzte Satzwerte als neue Sätze übernehmen? Prüfe sie nach der Eingabe.|Use previous set values? Confirm them individually before saving.
+Kein aktives Experiment. Du kannst jederzeit eines starten.|No active experiments. Start one whenever you like.
+Wochen|weeks
+Tage|days
+bewertet|assessed
+Letztes Mal|Previous
+Letztes Training|Previous workout
+Weniger als 4 abgeschlossene Wochen bewertet|Fewer than 4 completed weeks assessed`;
+const EN_MAP=new Map(I18N_ROWS.split('\n').filter(Boolean).map(line=>{const k=line.indexOf('|');return [line.slice(0,k),line.slice(k+1)]}));
+const EN_ENTRIES=[...EN_MAP.entries()].sort((a,b)=>b[0].length-a[0].length);
+function translateText(x){let s=String(x??'');if(data.profile.lang!=='en'||!s.trim())return s;const before=s.trim();if(EN_MAP.has(before))return s.replace(before,EN_MAP.get(before));for(const [de,en] of EN_ENTRIES){if(de.length<4||!s.includes(de))continue;const escaped=de.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const rg=new RegExp('(^|[^A-Za-zÀ-ž0-9])'+escaped+'(?![A-Za-zÀ-ž0-9])','g');s=s.replace(rg,(_,p)=>p+en)}return s}
+function applyLanguage(){const lang=data?.profile?.lang==='en'?'en':'de';document.documentElement.lang=lang;if(lang!=='en')return;const roots=[document.getElementById('app'),document.getElementById('modal-overlay')].filter(Boolean);for(const root of roots){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){if(['SCRIPT','STYLE','TEXTAREA'].includes(node.parentElement?.tagName))continue;node.nodeValue=translateText(node.nodeValue)}for(const el of root.querySelectorAll('[placeholder],[aria-label],[title]'))for(const attr of ['placeholder','aria-label','title'])if(el.hasAttribute(attr))el.setAttribute(attr,translateText(el.getAttribute(attr)))}}
+
+setInterval(updateRestClock,1000);init();
