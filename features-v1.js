@@ -1,7 +1,7 @@
 'use strict';
 /* KONPASU 1.0 Preview: locally stored optional goal details and offline coaching.
    This code augments rather than resets the existing v0.4 IndexedDB schema. */
-const KONPASU_V1 = '1.0 Preview';
+const KONPASU_V1 = '1.2 QC';
 const tr=(de,en)=>data.profile.lang==='en'?en:de;
 const _baseState=createState;
 createState=function(){return {..._baseState(),version:10,detailLogs:[],copingPlans:[],gentleReminders:[],streakAwards:[],settingsV1:{detailGoal:'water',remindersEnabled:false,quietStart:'21:00',quietEnd:'08:00'}}};
@@ -110,7 +110,7 @@ function renderV1CoachAddons(){const plans=data.copingPlans||[],reminders=data.g
 const _renderCoachOriginal=renderCoach;
 renderCoach=function(){return _renderCoachOriginal()+renderV1CoachAddons()};
 const _renderSettingsOriginal=renderSettings;
-renderSettings=function(){return _renderSettingsOriginal()+`<div class="panel"><h3>${tr('KONPASU 1.0 – Datensicherung und Transparenz','KONPASU 1.0 – Backup & transparency')}</h3><p class="hint">${tr('Offline-Kern ohne Konto, laufenden Server oder externe KI. iPhone-Browserdaten können bei Löschung verloren gehen; sichere deine Datei außerhalb der App.','Offline core with no account, running server or external AI. iPhone browser data can be lost; save your backup outside the app.')}</p><div class="actions">${button(tr('Detailprotokolle als CSV','Export detailed logs CSV'),'v1-detail-csv','','btn small')}${button(tr('Alle Daten als JSON','Full JSON backup'),'backup','','btn small primary')}</div><p class="hint">${tr('Nicht implementiert: native iOS-/Android-App, externe KI, Cloud-Sync, hochwertige 3D-Engine, automatische native Bildschirmzeit-/Schritt-Integration.','Not implemented: native iOS/Android, cloud sync, external AI, high-end 3D engine, native screen-time/step imports.')}</p></div>`};
+renderSettings=function(){return _renderSettingsOriginal()+`<div class="panel"><h3>${tr('KONPASU 1.2 – Datensicherung und Transparenz','KONPASU 1.2 – Backup & transparency')}</h3><p class="hint">${tr('Offline-Kern ohne Konto, laufenden Server oder externe KI. iPhone-Browserdaten können bei Löschung verloren gehen; sichere deine Datei außerhalb der App.','Offline core with no account, running server or external AI. iPhone browser data can be lost; save your backup outside the app.')}</p><div class="actions">${button(tr('Detailprotokolle als CSV','Export detailed logs CSV'),'v1-detail-csv','','btn small')}${button(tr('Alle Daten als JSON','Full JSON backup'),'backup','','btn small primary')}</div><p class="hint">${tr('Nicht implementiert: native iOS-/Android-App, externe KI, Cloud-Sync, hochwertige 3D-Engine, automatische native Bildschirmzeit-/Schritt-Integration.','Not implemented: native iOS/Android, cloud sync, external AI, high-end 3D engine, native screen-time/step imports.')}</p></div>`};
 
 const _originalModalRender=renderModal;
 renderModal=function(){if(!modal||!['v1-log','v1-coping','v1-reminder'].includes(modal.type))return _originalModalRender();
@@ -226,15 +226,19 @@ function v1StreakTimeline(g,end=today()){
 }
 function v1Streaks(g,end=today()){
  const {daily,hits}=v1StreakTimeline(g,end),milestones=daily?[7,30,100,365]:[4,12,26,52];
- let run=0,max=0,mostRecent=0;const reached={};let lastKnownStatus='unknown';
+ let run=0,max=0,pending=0,unknownTrailing=false;const reached={};
  for(const row of hits){
-  if(row.status==='yes'){run++;max=Math.max(max,run);for(const n of milestones)if(run>=n&&!reached[n])reached[n]=row.d;lastKnownStatus='yes'}
-  else if(row.status==='unknown'){if(lastKnownStatus==='yes')mostRecent=run;run=0;lastKnownStatus='unknown'}
-  else {run=0;lastKnownStatus=row.status}
+  if(row.status==='yes'){
+   run++;max=Math.max(max,run);pending=run;unknownTrailing=false;
+   for(const n of milestones)if(run>=n&&!reached[n])reached[n]=row.d;
+  }else if(row.status==='unknown'){
+   if(!unknownTrailing)pending=run;
+   run=0;unknownTrailing=true;
+  }else{run=0;pending=0;unknownTrailing=false}
  }
- // Never interpret missing periods as a confirmed broken streak, but do not extend it either.
- const current=hits.at(-1)?.status==='yes'?run:(hits.at(-1)?.status==='unknown'?mostRecent:0);
- return {daily,reached,current,best:max,unknownLatest:hits.at(-1)?.status==='unknown',possibleContinuation:mostRecent,milestones};
+ const last=hits.at(-1),current=last?.status==='yes'?run:0;
+ // An unknown period does NOT prove failure; it also does NOT qualify as a confirmed active streak.
+ return {daily,reached,current,best:max,unknownLatest:last?.status==='unknown',possibleContinuation:unknownTrailing?pending:0,milestones};
 }
 function v1RebuildStreakAwards(){
  const old=data.streakAwards||[],result=[];
@@ -250,7 +254,7 @@ const _ensureAwardsOriginal=ensureAwards;
 ensureAwards=function(){_ensureAwardsOriginal();v1RebuildStreakAwards()};
 function v1SeriesPanel(){const entries=(data.streakAwards||[]).slice().sort((a,b)=>b.earnedAt.localeCompare(a.earnedAt));
  return `<div class="panel"><div class="between"><h3>${tr('Echte Erfolgsserien','Verified success streaks')}</h3><span class="badge muted">${entries.length} ${tr('Auszeichnungen','awards')}</span></div><p class="hint">${tr('Tägliche und wöchentliche Serien sind getrennt. Fehlende Daten beenden keine Serie nachweislich – verlängern sie aber auch nicht.','Daily and weekly streaks are separate. Missing data cannot prove failure or extend a streak.')}</p>
- ${activeGoals().map(g=>{const st=v1Streaks(g);return `<div class="statline"><span>${esc(g.icon)} ${esc(g.title)}<br><small class="muted">${tr('Längste belegte Serie','Longest documented streak')}: ${st.best} ${st.daily?tr('Tage','days'):tr('Wochen','weeks')}</small></span><strong>${st.current} ${st.daily?tr('Tage','days'):tr('Wochen','weeks')}${st.unknownLatest?' ?':''}</strong></div>`}).join('')}
+ ${activeGoals().map(g=>{const st=v1Streaks(g);return `<div class="statline"><span>${esc(g.icon)} ${esc(g.title)}<br><small class="muted">${tr('Längste belegte Serie','Longest documented streak')}: ${st.best} ${st.daily?tr('Tage','days'):tr('Wochen','weeks')}</small></span><strong>${st.unknownLatest?(st.possibleContinuation?tr('Offen nach ','Pending after ')+st.possibleContinuation:tr('Unbekannt','Unknown')):st.current+' '+(st.daily?tr('Tage','days'):tr('Wochen','weeks'))}</strong></div>`}).join('')}
  <div class="chips" style="margin-top:12px">${entries.slice(0,22).map(a=>`<span class="chip">🏅 ${esc(getGoal(a.goalId)?.title||'')} · ${a.count} ${a.daily?tr('Tage','days'):tr('Wochen','weeks')} (${formatDate(a.earnedAt)})</span>`).join('')||`<p class="hint">${tr('Noch keine bewiesene Serie.','No verified streak yet.')}</p>`}</div></div>`;
 }
 const _renderAvatarV1=renderAvatar;
@@ -305,6 +309,86 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');
  }
  if(a==='v1-dismiss-due'){data.settingsV1.reminderHiddenOn=today();store();document.querySelector('#v1-reminders')?.remove();return}
  if(a==='v1-choose-reminder'){detailGoalId=b.dataset.id;tab='goals';render()}
+},true);
+
+
+// KONPASU 1.2 – verified quality fixes: correctly matched log units,
+// honest workout counting and genuinely opt-in, quiet-time-aware reminders.
+const _detailMetricBefore12=detailMetric;
+function logUnitKind(unit){
+ const u=String(unit||'').trim().toLocaleLowerCase('de-DE');
+ if(['min','minute','minuten','minutes'].includes(u))return 'minutes';
+ if(['stunden','stunde','std','hours','hour','h'].includes(u))return 'hours';
+ if(['seiten','seite','pages','page'].includes(u))return 'pages';
+ if(['km','kilometer','kilometres','kilometers'].includes(u))return 'km';
+ return '';
+}
+detailMetric=function(g,key){
+ const cf=configAt(g,key),kind=logUnitKind(cf.unit),start=cf.period==='weekly'?monday(key):key,
+ end=cf.period==='weekly'?dateShift(start,6):start,rows=recordsFor(g,start,end);
+ const metricFields={cardio:{minutes:'minutes',hours:'minutes',km:'km'},
+ mobility:{minutes:'minutes',hours:'minutes'},reading:{minutes:'minutes',hours:'minutes',pages:'pages'},
+ languages:{minutes:'minutes',hours:'minutes'},learning:{minutes:'minutes',hours:'minutes'},
+ focus:{minutes:'minutes',hours:'minutes'},meditation:{minutes:'minutes',hours:'minutes'},
+ social:{minutes:'minutes',hours:'minutes'},nature:{minutes:'minutes',hours:'minutes'}};
+ const fieldName=metricFields[g.key]?.[kind];
+ if(!fieldName||!rows.length)return _detailMetricBefore12(g,key);
+ // A missing number is *not* zero, so only actual measured values contribute.
+ const values=rows.map(r=>number(r.values?.[fieldName])).filter(Number.isFinite);
+ if(!values.length)return {value:null,status:'unknown',ratio:null,source:tr('Kein passender Messwert','No matching measurement')};
+ let value=values.reduce((s,x)=>s+x,0);
+ if(kind==='hours')value/=60;
+ const target=number(cf.targetValue);
+ const source=tr('Detailliert protokolliert','Detailed log');
+ if(!Number.isFinite(target)||target<=0)return {value,status:'unknown',ratio:null,source};
+ if(cf.direction==='max')return value>target?{value,status:'no',ratio:0,source}:{value,status:'unknown',ratio:null,source:tr('Nicht vollständig bestätigt','Not fully confirmed')};
+ return value>=target?{value,status:'yes',ratio:1,source}:{value,status:'unknown',ratio:null,source:tr('Bisher dokumentiert','Recorded so far')};
+};
+// An unreported alcohol event is not proof of an alcohol-free day.
+const _assessmentBefore12=assessment;
+assessment=function(g,d){
+ const a=_assessmentBefore12(g,d);
+ if(g.key==='alcohol'&&a.status==='unknown'&&a.source==='Keine Angabe')return {...a,source:tr('Kein Alkohol gemeldet (nicht bestätigt)','No alcohol reported (unconfirmed)')};
+ return a;
+};
+// A warm-up-only entry does not prove a complete strength-training session.
+countWorkouts=function(week){return data.sessions.filter(s=>s.date>=week&&s.date<=dateShift(week,6)&&
+ (s.items||[]).some(i=>(i.sets||[]).some(set=>set.kind!=='warmup'))).length};
+function isQuietClock(now,start,end){
+ if(!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(start||'')||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(end||'')||start===end)return false;
+ const toMin=t=>Number(t.slice(0,2))*60+Number(t.slice(3));
+ const t=toMin(now),a=toMin(start),b=toMin(end);
+ return a<b?t>=a&&t<b:t>=a||t<b;
+}
+const _reminderDueBefore12=v1ReminderDue;
+v1ReminderDue=function(){
+ const settings=data.settingsV1||{};
+ if(!settings.remindersEnabled)return [];
+ const d=new Date(),clock=`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+ if(isQuietClock(clock,settings.quietStart,settings.quietEnd))return [];
+ return _reminderDueBefore12();
+};
+const _renderCoachBefore12=renderCoach;
+renderCoach=function(){
+ const st=data.settingsV1||{},on=!!st.remindersEnabled;
+ return _renderCoachBefore12()+`<div class="panel"><div class="between"><h3>${tr('Erinnerungen steuern','Reminder controls')}</h3><span class="badge muted">${on?tr('Aktiv','On'):tr('Aus','Off')}</span></div>
+ <p class="hint">${tr('Standardmäßig ausgeschaltet. Maximal zwei Hinweise beim Öffnen der App; keine Push-Nachrichten.','Off by default. At most two in-app reminders; no push notifications.')}</p>
+ <div class="actions" style="margin-top:12px">${button(on?tr('Erinnerungen ausschalten','Turn reminders off'):tr('Erinnerungen aktivieren','Enable reminders'),'v12-toggle-reminders','','btn small '+(on?'':'primary'))}</div>
+ <form data-submit="v12-quiet" class="form" style="margin-top:12px"><div class="grid2">${field('quietStart',tr('Ruhezeit ab','Quiet hours from'),st.quietStart||'21:00','time','required')}${field('quietEnd',tr('Ruhezeit bis','Quiet hours until'),st.quietEnd||'08:00','time','required')}</div><button class="btn small" type="submit">${tr('Ruhezeiten speichern','Save quiet hours')}</button></form>
+ <p class="hint">${tr('Die Ruhezeit gilt auch für individuell eingerichtete Hinweise.','Quiet hours also apply to individually scheduled reminders.')}</p></div>`;
+};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-action="v12-toggle-reminders"]');if(!b)return;
+ e.preventDefault();e.stopImmediatePropagation();data.settingsV1.remindersEnabled=!data.settingsV1.remindersEnabled;
+ if(!data.settingsV1.remindersEnabled)document.querySelector('#v1-reminders')?.remove();
+ store();render();
+},true);
+document.addEventListener('submit',e=>{
+ const form=e.target.closest('[data-submit="v12-quiet"]');if(!form)return;
+ e.preventDefault();e.stopImmediatePropagation();
+ const f=new FormData(form),a=String(f.get('quietStart')||''),b=String(f.get('quietEnd')||'');
+ if(!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(a)||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(b))return notice(tr('Ungültige Uhrzeit','Invalid time'));
+ data.settingsV1.quietStart=a;data.settingsV1.quietEnd=b;store();render();notice(tr('Ruhezeiten gespeichert','Quiet hours saved'));
 },true);
 
 // Fix CSV bug already in core; add semantic export of detailed measurements.
