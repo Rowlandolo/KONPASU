@@ -1,24 +1,33 @@
-# KONPASU 2.0 – Qualitäts- und Darstellungsprüfung
+# KONPASU 2.2 – Funktions- und Regressionstest
 
-## Tatsächlich ausgeführte Tests
+**Testumgebung:** Chromium headless, lokale HTML-/JS-Inline-Ausführung (da der Testbrowser lokale HTTP-Adressen blockiert), Viewports 320, 390, 430 und 768 Pixel. Die statischen App-Assets und der Cache-Manifest-Inhalt wurden gesondert gegen vorhandene Dateien geprüft.
 
-- `node --check` für sämtliche JavaScript-Laufzeitdateien und den Service Worker: **bestanden**.
-- Chromium-Simulation mit Breiten **320, 375, 390, 430, 768 und 1024 px**: **keine JavaScript-Laufzeitfehler und keine horizontale Dokumentüberbreite**.
-- Trainingsplan: **97 Standardübungen** direkt vorhanden, **0 dauerhaft eingeblendete Übungsbilder**; Übungen lassen sich auswählen und ein Plan speichern.
-- Suchfilter im Plan nach **Bankdrücken** reduziert die Treffer; Prescriptions (Sätze, Wiederholungen, Pausen, Supersatz) werden bei ausgewählter Übung sichtbar.
-- Eigene Übung `Mein Kletterzug` in der frei benannten Kategorie `Klettern`: erstellt und im Übungstab angezeigt. Vorschau nur auf Klick: **bestanden**.
-- Avatar: Inventar mit 15 Beispielen für die drei standardmäßig aktiven Ziele; einzelne illustrierte Inventarbilder laden erfolgreich.
-- Artbook-Tab: 8 Bildtafeln vorhanden und geladen.
-- Premium-Grafik-Bundle: **104 Bilder** vollständig eingebettet (1 Cover, 8 Artboards, 95 Item-Crops); keine externen Bilddienste benötigt.
-- Prüffarben WCAG-Kontrastrechner: **12 wichtige Text-/Hintergrundpaare**, alle über 4,5:1. Dies ist ein repräsentativer Check, keine vollständige Zertifizierung aller Zustände.
+## Bestandene Abläufe
 
-## Grenzen
+- App ohne JavaScript-Laufzeitfehler initialisiert.
+- Navigation zum Trainingsbereich funktioniert.
+- 97 vorbereitete Standardübungen sind beim Start vorhanden.
+- Katalog zeigt die Auswahl kompakt und ohne Bilder in den Zeilen.
+- Suche findet passende Übungen; Suchbegriff bleibt nach Detailansicht und Rückkehr erhalten.
+- Detailansicht zeigt Übungs- und Muskelillustration sowie Beschreibung.
+- Aus dem Katalog lässt sich direkt ein neuer Trainingsplan anlegen und eine Übung zuordnen.
+- Eigene Übung mit freier Kategorie erstellt und in der Bibliothek gespeichert.
+- Diese eigene Übung lässt sich aus dem Katalog einem Plan zuordnen.
+- Vor dem ersten gespeicherten Satz bleibt `data.draft === null`.
+- Übungen im Plan lassen sich in der Reihenfolge ändern.
+- Erster gespeicherter Satz erzeugt die laufende Trainingseinheit; ein Beispiel mit 42,5 kg × 8 Wiederholungen wurde geprüft.
+- Abschließen erzeugt eine gespeicherte Einheit und leert den Entwurf.
+- Trainingskalender ist danach erreichbar.
+- Kein horizontales Seitenüberlaufen bei 320, 390, 430 und 768 Pixeln in den geprüften Testabläufen.
+- Alle geprüften Abläufe liefen ohne Browser-JavaScript-Fehler durch.
+- Die relevanten JavaScript-Dateien bestehen die Syntaxprüfung.
 
-- Die Testumgebung blockiert direkte `file://`- und lokale HTTP-URLs. Der Browser-Test lud die **tatsächlich gelieferten JS/CSS-Dateien inline**, die Bilder für UI-Screenshots aus den Originaldateien bzw. dem Bündel. Deshalb ist **der HTTPS-Service-Worker-Offline-Neustart auf einem iPhone nicht nachgewiesen**.
-- Nur die getesteten Abläufe sind abgedeckt, nicht jede mögliche Kombination; insbesondere sind keine Screenreader-, iOS-Safari- und Android-Realgerätetests durchgeführt.
-- Inventarbilder sind aus bestehenden Anime-Übersichtsillustrationen sorgfältig ausgeschnitten und als 95 einzelne Preview-Karten aufbereitet. Die angelegte Ausrüstung am dynamischen Avatar verwendet weiterhin die 2D-SVG-Ebenen.
-- Keine Cloud-Synchronisation, keine native Geräte-Health-Integration.
+## Noch nicht vollständig getestet
 
-## Freigabeempfehlung
+- iPhone-Homescreen-App: Update, Flugmodus, Hintergrundspeicherung und echte langfristige Nutzung.
+- Große Datenbestände nach mehreren Monaten und umfangreiche JSON-Importe.
+- Sämtliche Kombinationen aus Supersatz, Resttimer, RPE, Training mit Unterbrechung, Wiederaufnahme und Archivierung.
+- Vollständige fachliche Technikabnahme aller 97 Übungsbeschreibungen.
+- Übungsbilder sind bewusst schematisch, keine fotorealistischen Schritt-für-Schritt-Darstellungen.
 
-Als installierbaren **Beta-Designstand** verwenden. Vor jedem Update JSON-Backup; Offline-Test auf dem Zielgerät separat durchführen.
+**Freigabestatus:** Funktional ausgebauter und automatisiert getesteter Trainingsprototyp. Kein Anspruch auf garantierte Fehlerfreiheit.

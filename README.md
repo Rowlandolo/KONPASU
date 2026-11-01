@@ -1,36 +1,40 @@
-# KONPASU 2.0 · Botanical Anime Edition
+# KONPASU 2.2 – Training Studio
 
-## Update auf deinem iPhone (GitHub Pages)
+Das ist das Update des bestehenden KONPASU-Offline-PWA-Projekts. Ziele, bisherige Trainings, Belohnungssystem und Avatar werden durch dieses Update **nicht absichtlich zurückgesetzt**. Es nutzt weiterhin dieselbe lokale Datenbank.
 
-1. Öffne zuerst deine **bereits installierte** KONPASU-App und exportiere ein **JSON-Backup**. Speichere es außerhalb von KONPASU, z. B. in Dateien/iCloud Drive.
-2. Entpacke **KONPASU-2.0-Offline-Design-Update.zip** auf deinem Windows-PC.
-3. Öffne dein bestehendes Repository `Rowlandolo/KONPASU` bei GitHub und lade **alle 14 App-Laufzeitdateien aus dem ZIP-Hauptordner** hoch. Vorhandene Dateien ersetzen; neu dazu kommt besonders `premium-art-bundle.js`. Die Dokumentationsdateien und Screenshots sind optional.
-4. Öffne anschließend `https://rowlandolo.github.io/KONPASU/` online in Safari und lade die Seite gegebenenfalls erneut. Warte, bis alle App-Dateien geladen sind, bevor du den Flugmodus testest.
-5. Starte die **vorhandene** KONPASU-Homescreen-App neu. Bitte **nicht löschen**, weil lokale Daten sonst verlorengehen können.
-6. Prüfe Trainingseinträge, Pläne, Ziel-Daten und Inventar. Teste zuletzt den Flugmodus und den JSON-Export.
+## Installation
 
-## Neues Design und Training
+1. **Vor dem Update in deiner bisherigen KONPASU-App ein JSON-Backup speichern und extern sichern.**
+2. `KONPASU-2.2-Trainingsstudio-Update.zip` entpacken.
+3. Sämtliche Laufzeitdateien aus der ZIP direkt ins **Hauptverzeichnis** des bestehenden GitHub-Repositories `Rowlandolo/KONPASU` hochladen, bestehende Dateien ersetzen. Die neue Datei **`training-v22.js` unbedingt hinzufügen**; nicht nur die `index.html` hochladen.
+4. Nach der Veröffentlichung `https://rowlandolo.github.io/KONPASU/` online in Safari öffnen und aktualisieren. Danach die bestehende Homescreen-App öffnen und die neue Version kontrollieren.
+5. **Die bisherige Homescreen-App nicht löschen**; auf iOS sind die lokalen App-Daten sonst unter Umständen weg. Falls eine Migration nicht funktioniert, dein JSON-Backup nutzen.
 
-- Hochwertige original erstellte Anime-Belohnungsillustrationen von KONPASU als Artbook (8 Bildtafeln).
-- 95 einzelne, aus den Illustrationsvorlagen zugeschnittene und grafisch gerahmte **Inventar-Vorschaubilder**, nach Ziel und Freischaltstufe zugeordnet.
-- Weiterhin **separat austauschbare modulare SVG-Ausrüstungsebenen** am tatsächlich verwendeten 2D-Avatar. Die neuen Artbook-Grafiken sind **keine automatisch passend zum Körper ausgerichteten Sprite-Layer**.
-- Neue sorgfältig gestaltete Startseite mit Anime-Cover; das Cover ist eine Illustration und nicht die dynamisch berechnete Ausrüstungskombination.
-- Alle 97 Standardübungen werden beim ersten Start automatisch in die Übungsbibliothek aufgenommen (ohne historische Trainings oder selbst erstellte Übungen zu entfernen).
-- Eigene Übungen: vorhandene Muskelgruppe oder frei benannte eigene Kategorie; Foto, Gerätenotizen und Gerätebezeichnung bleiben erhalten.
-- Trainingspläne: Suche nach Übung und Muskelgruppe, kompakte Listen ohne Vorschaubilder; Satz-/Pausen-/Supersatzfelder werden erst nach Auswahl sichtbar.
-- Während eines Trainings: kompakter Such- und Hinzufügen-Dialog ohne permanent sichtbare Grafiken.
-- Bilder erscheinen erst nach Tippen auf **Ansehen**.
-- Kontrastverbesserungen an Text, Cards, Eingabefeldern, Buttons, Kalender und Inventar.
+## Das ist neu
 
-## Was im Update enthalten ist
+### Übungskatalog
+- 97 vorhandene Standardübungen automatisch in der lokalen Übungsbibliothek; zusätzlich alle selbst angelegten Übungen.
+- Übersichtliche, bildfreie Liste mit Suchfeld und Muskelgruppen-/Kategorieauswahl.
+- Übung antippen: eigenständige Beschreibung, primäre und unterstützende Muskelgruppen, Bewegungsablauf und offline verfügbare **schematische** Übungs-/Muskelillustration.
+- Rückweg zum Katalog mit gespeicherter Suche.
+- Aus der Liste oder Detailansicht direkt zu einem vorhandenen oder neuen Trainingsplan hinzufügen, ohne den Katalog zu verlassen.
+- Eigene Übung mit Name, Gerät, Foto und eigener Kategorie; sie ist automatisch im Katalog vorhanden.
 
-Laufzeitdateien: `index.html`, `app.css`, `app.js`, `features-v1.js`, `goal-modules.js`, `training-library.js`, `core-v15.js`, `avatar-art-bundle.js`, `avatar2d.js`, `premium-art-bundle.js`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`.
+### Planübersicht und Workout
+- Ein Plan wird beim Öffnen **nicht** automatisch gestartet.
+- Reihenfolge der Übungen ändern, Übung entfernen, Übungen direkt über die eingebaute Katalogauswahl hinzufügen.
+- Geplante Sätze, Wiederholungen, Pausen und Supersatzkennzeichnungen festlegen.
+- Erst wenn ein echter Satz gespeichert wird, entsteht ein laufendes Training.
+- Jeder Satz mit kg, Wiederholungen oder Dauer, optional Satzart, RPE und Notiz.
+- Belegbare Satzwerte und historische Trainings bleiben in der lokalen Datenbank; abgeschlossene Trainings werden im Kalender angezeigt.
+- Alte freie laufende Trainingseinheiten bleiben über die bisherige Oberfläche zugänglich.
 
-Die Bildtafeln und 95 Vorschaubilder liegen komplett in **einer** Datei `premium-art-bundle.js`, deshalb werden für die GitHub-Pages-Installation **keine 104 Einzelbilder** benötigt.
+## Grenzen
 
-## Hinweise
+Die Übungsillustrationen sind **eigene schematische SVG-Zeichnungen**, keine anatomisch geprüften Bildfolgen oder individuellen Coaching-Anleitungen. Die Anleitungstexte werden je Übungsart differenziert und für häufige Übungen zusätzlich spezifisch angepasst. Für komplexe Übungen sollte die Technik mit einer qualifizierten Person geprüft werden.
 
-- Dies ist weiterhin eine kostenlose, lokal speichernde Offline-PWA, keine native iOS-/Android-App.
-- Im Browser automatisiert getestete Funktionen sind keine Garantie für Fehlerfreiheit auf echten Geräten.
-- Private Trainings- und Ziel-Daten werden im lokalen Browser-Speicher abgelegt; ohne Backup können sie nach Deinstallation/Löschen von Website-Daten verlorengehen.
-- Der 2D-Avatar ist technisch modular und benutzbar, aber die austauschbaren SVG-Körper- und Kleidungsillustrationen sind weiterhin stilisierter als die hochwertigen Anime-Artbook-Vorlagen.
+Die neue Version wurde in einem Chromium-Browser mit Testskripten auf mehreren mobilen Viewports getestet. Ein vollständiger Installations-, Service-Worker- und Neustarttest auf einem echten iPhone **ist noch nicht erfolgt**. Die Tests ersetzen keine vollständige Freigabe.
+
+## Technischer Aufbau
+
+Alle Dateien liegen in einem Verzeichnis. Keine CDN-Abhängigkeiten, kein Account erforderlich. `training-v22.js` überschreibt nur die Trainingsansicht und ergänzt lokal gespeicherte Daten, ohne das bestehende Trainingsschema auszutauschen. Der Service Worker verwendet den Cache-Namen `konpasu-offline-v220` und enthält die für die App nötigen Assets.
