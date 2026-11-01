@@ -1,0 +1,22 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KONPASU – Versionsdiagnose</title><meta name="theme-color" content="#f4f3ea"><style>
+:root{font:16px/1.5 system-ui,-apple-system,sans-serif;color:#233e31;background:#f5f3ea}body{margin:0;padding:26px 16px}main{max-width:700px;margin:auto}.panel{background:#fffdf8;border:1px solid #d2decd;border-radius:22px;padding:22px;box-shadow:0 12px 28px #243d2f12;margin-bottom:13px}.eyebrow{letter-spacing:.14em;color:#55765d;font-size:11px;font-weight:800}h1{margin:8px 0;font-size:30px}h2{font-size:19px}p,li{color:#4d6657}.check{font-weight:700;color:#276742}.warn{color:#835b34}.err{color:#973d3a}button,a.button{display:inline-block;border:0;border-radius:12px;padding:12px 16px;margin:5px 6px 5px 0;color:#fff;background:#275741;text-decoration:none;font-weight:750;cursor:pointer}.secondary{background:#e6ece4!important;color:#264332!important}code{font-size:13px;overflow-wrap:anywhere}pre{background:#f1f4ee;padding:13px;white-space:pre-wrap;overflow-wrap:anywhere;border-radius:14px}.foot{font-size:13px}</style></head><body><main><div class="panel"><div class="eyebrow">KONPASU · TECHNISCHE HILFE</div><h1>Welche Version liegt online?</h1><p>Diese Seite lädt die Versionsinformationen direkt von GitHub Pages und nicht aus dem alten App-Cache. Deine Ziele und Trainingsdaten werden dabei nicht verändert.</p><div id="status" role="status" aria-live="polite">Prüfung läuft …</div><pre id="detail"></pre><button id="retry">Erneut prüfen</button><a class="button secondary" href="./">KONPASU öffnen</a></div><div class="panel"><h2>App-Cache reparieren (optional)</h2><p><strong>Bitte zuerst ein JSON-Backup in deiner bestehenden KONPASU-App erstellen!</strong> Dieser Schritt löscht nur KONPASU-Offline-Caches, keine IndexedDB oder lokalen Ziele. Bei iOS können Safari und die installierte Homescreen-App getrennte Speicherbereiche haben.</p><button id="repair">Nur KONPASU-App-Cache erneuern</button><p class="foot" id="repairStatus" role="status"></p><p class="foot">Die Homescreen-App niemals vor dem Backup deinstallieren. Wenn hier nur Version 1.8 online ist, musst du zuerst die neuen Dateien in GitHub hochladen.</p></div></main><script>
+const s=document.getElementById('status'),d=document.getElementById('detail');
+async function check(){s.textContent='Live-Version wird geprüft …';try{
+ const url=new URL('./version.json',location.href);url.searchParams.set('no-cache',String(Date.now()));
+ const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status+' für version.json. Wurde die Datei hochgeladen?');
+ const obj=await res.json();const files=Array.isArray(obj.features)?obj.features:[];
+ const checks=await Promise.all(files.map(async f=>{try{const r=await fetch(new URL(f+'?check='+Date.now(),location.href),{cache:'no-store',method:'HEAD'});return f+' — '+(r.ok?'erreichbar':'FEHLT (HTTP '+r.status+')')}catch(e){return f+' — Netzwerkfehler'}}));
+ const reg=await navigator.serviceWorker?.getRegistration?.();
+ s.innerHTML='<span class="check">Online gemeldet: KONPASU '+String(obj.version||'unbekannt').replace(/</g,'&lt;')+'</span>';
+ d.textContent='Dateien:\n'+checks.join('\n')+'\nService Worker: '+(reg?.active?'aktiv':'nicht aktiv')+(reg?.waiting?' · neues Update wartet':'');
+ }catch(e){s.textContent='Online-Version nicht bestätigt';s.className='err';d.textContent=e.message+'\nMöglicherweise liegt auf GitHub noch ein älteres Paket.'}}
+ document.getElementById('retry').addEventListener('click',check);check();
+ document.getElementById('repair').addEventListener('click',async()=>{
+  if(!confirm('Hast du ein JSON-Backup deiner KONPASU-Daten angelegt? Nur App-Cache löschen, KEINE gespeicherten Daten?'))return;
+  const status=document.getElementById('repairStatus');status.textContent='App-Cache wird erneuert …';
+  try{const names=await caches.keys();const targets=names.filter(n=>n.startsWith('konpasu-offline-'));
+   await Promise.all(targets.map(n=>caches.delete(n)));const reg=await navigator.serviceWorker?.getRegistration?.();if(reg)await reg.update();
+   status.textContent='KONPASU-App-Caches erneuert ('+targets.length+'). Schließe die App vollständig und starte sie bei bestehender Internetverbindung neu. Bitte gespeicherte Daten prüfen.';
+  }catch(e){status.textContent='Reparatur fehlgeschlagen: '+e.message}
+ });
+</script></body></html>

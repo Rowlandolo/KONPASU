@@ -1,0 +1,10 @@
+{
+  "version": "2.3.1",
+  "release": "KONPASU 2.3.1",
+  "features": [
+    "goal-calendar-v23.js",
+    "training-v22.js",
+    "premium-art-bundle.js"
+  ],
+  "cache": "konpasu-offline-v231"
+}
