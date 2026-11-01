@@ -1,6 +1,6 @@
-/* KONPASU 1.6: atomic offline-first shell; no third-party resources. */
-const CACHE='konpasu-offline-v160';
-const ASSETS=['./','./index.html','./app.css','./app.js','./features-v1.js','./goal-modules.js','./training-library.js','./core-v15.js','./avatar-art-bundle.js','./avatar2d.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+/* KONPASU 2.0: atomic offline-first shell; no third-party resources. */
+const CACHE='konpasu-offline-v200';
+const ASSETS=['./premium-art-bundle.js','./','./index.html','./app.css','./app.js','./features-v1.js','./goal-modules.js','./training-library.js','./core-v15.js','./avatar-art-bundle.js','./avatar2d.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('konpasu-offline-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;const url=new URL(event.request.url);if(url.origin!==self.location.origin)return;
