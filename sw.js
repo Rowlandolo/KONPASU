@@ -1,5 +1,5 @@
 /* KONPASU 2.0: atomic offline-first shell; no third-party resources. */
-const CACHE='konpasu-offline-v220';
+const CACHE='konpasu-offline-v221';
 const ASSETS=['./premium-art-bundle.js','./','./index.html','./app.css','./app.js','./features-v1.js','./goal-modules.js','./training-library.js','./core-v15.js','./avatar-art-bundle.js','./avatar2d.js','./training-v22.js','./blueprint-avatar-main.png','./blueprint-heads.png','./blueprint-expressions.png','./blueprint-modules-board.png','./blueprint-companion.png','./blueprint-backgrounds.png','./blueprint-auras.png','./konpasu_avatar_concept_blueprint.png','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('konpasu-offline-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
