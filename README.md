@@ -1,40 +1,33 @@
-# KONPASU 2.2 – Training Studio
+# KONPASU 2.3 – Tages-Check-ins und Zielkalender
 
-Das ist das Update des bestehenden KONPASU-Offline-PWA-Projekts. Ziele, bisherige Trainings, Belohnungssystem und Avatar werden durch dieses Update **nicht absichtlich zurückgesetzt**. Es nutzt weiterhin dieselbe lokale Datenbank.
-
-## Installation
-
-1. **Vor dem Update in deiner bisherigen KONPASU-App ein JSON-Backup speichern und extern sichern.**
-2. `KONPASU-2.2-Trainingsstudio-Update.zip` entpacken.
-3. Sämtliche Laufzeitdateien aus der ZIP direkt ins **Hauptverzeichnis** des bestehenden GitHub-Repositories `Rowlandolo/KONPASU` hochladen, bestehende Dateien ersetzen. Die neue Datei **`training-v22.js` unbedingt hinzufügen**; nicht nur die `index.html` hochladen.
-4. Nach der Veröffentlichung `https://rowlandolo.github.io/KONPASU/` online in Safari öffnen und aktualisieren. Danach die bestehende Homescreen-App öffnen und die neue Version kontrollieren.
-5. **Die bisherige Homescreen-App nicht löschen**; auf iOS sind die lokalen App-Daten sonst unter Umständen weg. Falls eine Migration nicht funktioniert, dein JSON-Backup nutzen.
+Diese ZIP-Datei ist ein **vollständiges Offline-PWA-Update** für die bestehende KONPASU-Installation auf GitHub Pages. Alle Laufzeitdateien gehören ins Hauptverzeichnis deines vorhandenen GitHub-Repositories.
 
 ## Das ist neu
 
-### Übungskatalog
-- 97 vorhandene Standardübungen automatisch in der lokalen Übungsbibliothek; zusätzlich alle selbst angelegten Übungen.
-- Übersichtliche, bildfreie Liste mit Suchfeld und Muskelgruppen-/Kategorieauswahl.
-- Übung antippen: eigenständige Beschreibung, primäre und unterstützende Muskelgruppen, Bewegungsablauf und offline verfügbare **schematische** Übungs-/Muskelillustration.
-- Rückweg zum Katalog mit gespeicherter Suche.
-- Aus der Liste oder Detailansicht direkt zu einem vorhandenen oder neuen Trainingsplan hinzufügen, ohne den Katalog zu verlassen.
-- Eigene Übung mit Name, Gerät, Foto und eigener Kategorie; sie ist automatisch im Katalog vorhanden.
+1. **Wochenziele jeden Tag abhaken:** Beispielsweise wird `3× Krafttraining pro Woche` durch drei einzelne, dokumentierte Trainingstage erreicht. Ein pauschaler Wochenhaken am Montag ist nicht mehr möglich.
+2. **Frühzeitige Erfüllung:** Bei `3/3` erscheint sofort ein Hinweis auf der Startseite. Ein vierter oder fünfter Erfolg bleibt möglich und wird zusätzlich gezählt.
+3. **Automatischer Wochenabschluss:** Die aktuelle Woche umfasst Montag bis Sonntag, 23:59:59 Ortszeit. Ab Montag, 00:00 wird die Vorwoche als abgeschlossen ausgewertet. Es ist keine Hintergrundverbindung nötig; die Anzeige wird beim nächsten Öffnen bzw. bei offenem Browser am Tageswechsel neu berechnet.
+4. **Unbekannt ist nicht „Nein“:** Unvollständige Wochen ohne hinreichende Angaben werden nicht als nachgewiesenes Scheitern eingestuft. Sind alle relevanten Tage bewertet und die Vorgabe nicht erreicht, wird die abgeschlossene Woche als verfehlt ausgewertet.
+5. **Kalender pro Ziel:** Unter „Ziele“ Kalender öffnen, vergangene Tage auswählen, direkt dort nachtragen oder korrigieren.
+6. **Direkt zur Analyse:** Jede Zielkarte hat einen Button „Analysieren“. Die Analyse öffnet zuerst den passenden Tageskalender und die letzten zwölf Wochen und zeigt danach die bisherigen Statistiken.
+7. **Trainingstagebuch berücksichtigt:** Ein abgeschlossenes Krafttraining mit Nicht-Aufwärmsätzen gilt als ein Trainingstag. Zusätzlicher manueller Haken am selben Tag wird nicht doppelt gezählt.
+8. **Tägliche Ziele unverändert:** Wasser, Schlaf, Schritte und andere Tagesziele bleiben tageweise bewertbar.
 
-### Planübersicht und Workout
-- Ein Plan wird beim Öffnen **nicht** automatisch gestartet.
-- Reihenfolge der Übungen ändern, Übung entfernen, Übungen direkt über die eingebaute Katalogauswahl hinzufügen.
-- Geplante Sätze, Wiederholungen, Pausen und Supersatzkennzeichnungen festlegen.
-- Erst wenn ein echter Satz gespeichert wird, entsteht ein laufendes Training.
-- Jeder Satz mit kg, Wiederholungen oder Dauer, optional Satzart, RPE und Notiz.
-- Belegbare Satzwerte und historische Trainings bleiben in der lokalen Datenbank; abgeschlossene Trainings werden im Kalender angezeigt.
-- Alte freie laufende Trainingseinheiten bleiben über die bisherige Oberfläche zugänglich.
+## Wichtig bei bestehenden Daten
 
-## Grenzen
+Alte pauschale Wochenbestätigungen werden **nicht** stillschweigend zu angeblichen Trainingstagen umgewandelt. Sie verbleiben im JSON-Backup und im Altbestand; für die neue genaue Tagesstatistik sind Tagesnachweise erforderlich. Bestehende Trainingseinheiten können dagegen aus dem Trainingstagebuch als Nachweise verwendet werden.
 
-Die Übungsillustrationen sind **eigene schematische SVG-Zeichnungen**, keine anatomisch geprüften Bildfolgen oder individuellen Coaching-Anleitungen. Die Anleitungstexte werden je Übungsart differenziert und für häufige Übungen zusätzlich spezifisch angepasst. Für komplexe Übungen sollte die Technik mit einer qualifizierten Person geprüft werden.
+Bei Wochenzielen mit einer **Zeit-, Mengen- oder Obergrenze** (etwa Gaming-Minuten pro Woche) kannst du weiterhin jeden Tag dokumentieren. Eine bloße Folge von Tageshäkchen beweist jedoch keine aufsummierte Zeit oder Menge; für solche Ziele sind die gemessenen Detailwerte beziehungsweise eine vollständige Bestätigung erforderlich.
 
-Die neue Version wurde in einem Chromium-Browser mit Testskripten auf mehreren mobilen Viewports getestet. Ein vollständiger Installations-, Service-Worker- und Neustarttest auf einem echten iPhone **ist noch nicht erfolgt**. Die Tests ersetzen keine vollständige Freigabe.
+## Installation ohne Datenverlust
 
-## Technischer Aufbau
+1. **Zuerst** in der bisherigen App unter „Einstellungen“ ein **JSON-Backup** erstellen und außerhalb der App sichern.
+2. ZIP-Datei entpacken.
+3. Sämtliche **App-Laufzeitdateien** einschließlich `goal-calendar-v23.js` aus dem ZIP in das Hauptverzeichnis von `Rowlandolo/KONPASU` hochladen/ersetzen. Dokumentationen und Testvorschaubilder müssen nicht auf GitHub liegen.
+4. `https://rowlandolo.github.io/KONPASU/` in Safari **mit Internetverbindung** öffnen und aktualisieren.
+5. Bestehende Homescreen-App starten und prüfen, ob Übungen, Trainings und Ziele vorhanden sind. **Die Homescreen-App nicht deinstallieren.**
+6. Im Flugmodus tägliche Check-ins hinzufügen, App schließen und erneut öffnen; dann JSON-Backup und Rückkehr in den Online-Modus testen.
 
-Alle Dateien liegen in einem Verzeichnis. Keine CDN-Abhängigkeiten, kein Account erforderlich. `training-v22.js` überschreibt nur die Trainingsansicht und ergänzt lokal gespeicherte Daten, ohne das bestehende Trainingsschema auszutauschen. Der Service Worker verwendet den Cache-Namen `konpasu-offline-v220` und enthält die für die App nötigen Assets.
+## Abnahmegrenzen
+
+Die Browser-Abläufe und die Datumslogik wurden mit automatisierten Tests geprüft. Ein vollständiger, echter iPhone-Offline-End-to-End-Test ist noch ausstehend. „100% fehlerfrei“ wird nicht zugesichert.

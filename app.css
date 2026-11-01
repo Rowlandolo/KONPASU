@@ -340,3 +340,45 @@ input::placeholder,textarea::placeholder{color:#627b68;opacity:1}.btn{border:1px
 @media(max-width:480px){.t22-prescription-form{grid-template-columns:repeat(2,minmax(0,1fr))}.t22-prescription-form button{grid-column:1/-1}}
 .t22-advanced{grid-column:1/-1;color:#496c52;font-size:12px;padding:7px 2px}.t22-advanced summary{cursor:pointer;font-weight:730}.t22-advanced-grid{display:grid;grid-template-columns:1fr 80px 1.6fr;gap:8px;margin-top:9px}.t22-advanced-grid label{font-size:11px}.t22-advanced-grid input,.t22-advanced-grid select{min-height:38px;margin-top:4px;padding:7px;font-size:12px}
 @media(max-width:480px){.t22-advanced-grid{grid-template-columns:1fr 1fr}.t22-advanced-grid label:last-child{grid-column:1/-1}}
+
+/* KONPASU 2.3 — daily check-ins, weekly progress, per-goal calendar */
+.gc23-row{flex-wrap:wrap;gap:9px;padding:15px 0 9px}
+.gc23-row .goalinfo{flex:1 1 145px;min-width:0}
+.gc23-row .goalinfo .desc{font-size:12px;line-height:1.5;color:#4d6a59}
+.gc23-row .status{flex:0 0 auto}
+.gc23-row .statusbtn{min-width:34px;min-height:36px;font-size:16px}
+.gc23-detail-shortcut{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;border-bottom:1px solid #dce6d9;padding:0 0 13px}
+.gc23-detail-shortcut .btn{min-height:36px}
+.gc23-celebrate{border-color:#c4b079;background:linear-gradient(120deg,#fdf4d9,#e8f1dd);box-shadow:0 5px 19px #6a76411c}
+.gc23-celebrate h3{font-size:16px;color:#345238}
+.gc23-celebrate p{color:#49614e;font-size:13px;line-height:1.55;margin:9px 0}
+.gc23-reached{display:flex;flex-wrap:wrap;gap:8px}
+.gc23-calendar{background:#fffdf7;border:1px solid #d7dfd0}
+.gc23-month{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 12px}
+.gc23-month strong{font-size:17px;color:#2b503d}
+.gc23-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.gc23-weekday{text-align:center;padding:5px 0;font-size:11px;font-weight:800;color:#566e5f}
+.gc23-empty{display:block;min-height:55px}
+.gc23-cell{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1px;min-width:0;min-height:56px;padding:8px 1px 6px;background:#f2f5ee;color:#566b5c;border:1px solid #d5dfd5;border-radius:12px;font-size:11px;font-weight:650}
+.gc23-cell b{font-size:13px;line-height:1.1}.gc23-cell span{font-size:14px}
+.gc23-cell.yes{background:#e1eddd;color:#225a3a;border-color:#90ba94}
+.gc23-cell.no{background:#f9e5e1;color:#923e3b;border-color:#dcaba5}
+.gc23-cell.partial{background:#f8efda;color:#825e1f;border-color:#ddc28e}
+.gc23-cell.unknown{background:#f4f5f1;color:#65766b}
+.gc23-cell.inactive{opacity:.52;background:#f5f6f4;color:#7f8983}
+.gc23-cell.selected{outline:2px solid #255d40;outline-offset:1px}
+.gc23-cell.today b{text-decoration:underline;text-underline-offset:3px}
+.gc23-legend{display:flex;gap:8px 14px;flex-wrap:wrap;margin-top:14px;font-size:11px;font-weight:700;color:#516954}
+.gc23-legend .yes{color:#286e44}.gc23-legend .no{color:#a2504c}.gc23-legend .partial{color:#8c6e33}.gc23-legend .unknown{color:#6b7b71}
+.gc23-weekline{background:#edf3e6;border-radius:12px;padding:12px;margin-top:13px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:#3c614c}
+.gc23-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.gc23-old-note{color:#5b7163;font-size:12px;line-height:1.5;padding:8px 15px}
+.gc23-warning{color:#994840;font-size:11px;font-weight:700;margin-top:4px}
+.gc23-summary{margin:12px 0;display:flex;gap:8px;align-items:center;justify-content:space-between;padding:12px;background:#e5f0e3;border:1px solid #bad3bd;border-radius:13px;color:#29543a;font-size:13px}
+.gc23-weektable{display:grid;gap:7px;margin-top:13px}
+.gc23-weektable>div{display:grid;grid-template-columns:1fr auto 22px;align-items:center;gap:10px;padding:10px 12px;border:1px solid #dce5d7;border-radius:11px;background:#f8faf3;font-size:12px}
+.gc23-weektable strong{color:#3c5946}
+.gc23-weekstatus{text-align:center;font-weight:900;color:#687c6e}.gc23-weekstatus.yes{color:#237044}.gc23-weekstatus.no{color:#aa544d}
+@media(max-width:390px){.gc23-row{display:grid;grid-template-columns:42px minmax(0,1fr)}.gc23-row .goalinfo{min-width:0}.gc23-row .status{grid-column:2;justify-content:flex-start}.gc23-cell{min-height:48px;padding:6px 0}.gc23-grid{gap:3px}.gc23-calendar{padding:13px}.gc23-celebrate h3{font-size:14px}}
+
+.gc23-dayeditor{border:1px solid #cbdcc8;background:#f5f8ef;border-radius:13px;padding:13px;margin-top:13px;display:grid;gap:10px;color:#2f553c}.gc23-dayeditor b{font-size:13px}.gc23-dayactions{display:flex;gap:6px;flex-wrap:wrap}.gc23-dayactions .btn{font-size:11px;padding:8px 11px}.gc23-dayactions .btn.active{color:#fffdf5;background:#30684b;border-color:#30684b}
