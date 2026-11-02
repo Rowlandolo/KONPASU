@@ -1,0 +1,77 @@
+{
+  "status": "passed-two-forms-alpha-scene-prototype-review",
+  "testedSourceCommit": "89e6dcc4bbcc9c90c2043628a8440a0b65e40c57",
+  "workflowRun": 41529386209,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209",
+  "automatedTests": 230,
+  "baseSelectionsTested": 256,
+  "rewardSelectionsTested": 64,
+  "allCartesianCombinationsVisuallyReviewed": false,
+  "appChromium": "passed existing acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Eight verified PNG fragments loaded",
+      "Verified base PNGs in one depth-ordered SVG scene",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all eight equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Reversible rear-strap occlusion without deselection",
+      "All 32 selectable combinations",
+      "Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching",
+      "Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Corrupted required layer fails visibly with no partial body or equipment",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed"
+  },
+  "visualReview": {
+    "formACompleteSetReviewed": true,
+    "formBCompleteSetUnderbodyAndOutfitReviewed": true,
+    "formBIndependentAnatomyNotGlobalScale": true,
+    "individualClothingAndEquipmentFitReviewed": true,
+    "productionAcceptance": false
+  },
+  "depthVerification": {
+    "realSVGPixels": "Opaque synthetic red garment hides overlapping blue arm part; exposed blue pixel stays visible. Disabling garment/occlusion reveals blue while selected item remains.",
+    "bodySwitching": "All eight selected fragments retained when switching A/B; 32 selections per body.",
+    "limits": "Declared alpha occluders and depth order; not inferred 3D geometry. Harness still has pose-specific transported clip regions."
+  },
+  "screenshots": [
+    {
+      "file": "review-form-a-scene-v04.png",
+      "sourceArtifactPath": "artbook/fullset.png",
+      "sha256": "f837e583d5954f18af735f472803fdce3cc52f85e24fe983f01a114f71d089cc"
+    },
+    {
+      "file": "review-form-b-scene-v04.png",
+      "sourceArtifactPath": "artbook/form-b-fullset.png",
+      "sha256": "d28ea2e6a10094956c533a798a3542680354163f263ffec68f798ffce6d56e92"
+    },
+    {
+      "file": "review-form-b-underbody-v04.png",
+      "sourceArtifactPath": "artbook/form-b-underbody.png",
+      "sha256": "91027d966d56d07e3ded5dba41d0b1187bbf8b436df9b3dc46c5fbb7d96d6a70"
+    },
+    {
+      "file": "review-form-b-outfit-v04.png",
+      "sourceArtifactPath": "artbook/form-b-dressed.png",
+      "sha256": "7c03756d0f7fbbdeee8b2ecdc1b3c271bdfef7383ce2a5d006cc0938db8a8052"
+    }
+  ],
+  "provenance": "Unmodified GitHub Actions PNG screenshots, fresh synthetic profile, no personal data. Independent body/garment PNGs generated from approved artwork, not raster-edited.",
+  "budget": {
+    "uniqueBasePNGs": 10,
+    "uniqueBasePNGBytes": 9905070,
+    "equipmentPNGBytes": 9379782,
+    "productionBudgetAccepted": false
+  },
+  "remaining": [
+    "Only one standing pose for each of two anatomies.",
+    "True rear/front harness, sleeve and headwear assets require additional depth declarations and artwork.",
+    "Other 90 fitted reward articles, production size/rendering budget and persistent multi-item outfits/favorites/history/offline integration remain open.",
+    "Actual iPhone/VoiceOver/old PWA upgrade acceptance remains separate."
+  ]
+}

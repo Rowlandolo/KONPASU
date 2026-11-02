@@ -225,7 +225,9 @@ Aktueller Sieben-Ebenen-Nachweis: 512f877d51d61654cc2eec7d0d41f201883fe7d9, [Chr
 
 - [x] Beide Körpergrafiken und Variantenkleidung per SHA-256/nativen Maßen geprüft; Körperplacement unverändert, unabhängige Bilder statt Ganzkörperstretch.
 - [x] 32 Rewardauswahlen je Form, feste Tiefenreihenfolge, aktive/nicht aktive Verdeckungsflächen, seitenverhältnistreue Passform samt transportierter Clips und unveränderte Eingaben: acht neue Tests, 230 insgesamt.
-- [ ] Reales Chromium: 256 Basiszustände, 64 Rewardzustände und Körperwechsel ohne Verlust der Auswahl.
-- [ ] Synthetische reale SVG-Pixel bestätigen reversible Verdeckung und erhaltene Artikelauswahl.
-- [ ] Beide Körper/Grundoutfits/kompletten Sets gesichtet; Passformen nachgearbeitet.
+- [x] Reales Chromium: 256 Basiszustände, 64 Rewardzustände und Körperwechsel ohne Verlust der Auswahl.
+- [x] Synthetische reale SVG-Pixel bestätigen reversible Verdeckung und erhaltene Artikelauswahl.
+- [x] Form A mit vollem Set sowie Form B mit Körperunterbau, Grundoutfit und komplettem Set gesichtet; unterschiedliche Körper-/Kleider-/Ausrüstungspassform geprüft.
 - [ ] Renderingbudget, zusätzliche tiefengetrennte Assets, produktive Daten-/Offline-/Geräteabnahme.
+
+Aktueller Nachweis: 89e6dcc4bbcc9c90c2043628a8440a0b65e40c57, [Zwei-Formen-Lauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209), 230 Regressionen, App-Chromium und 14 Atelier-Prüfgruppen erfolgreich. Archivierte Aufnahmen und Grenzen: design/avatar/verification-two-forms-v04.json.

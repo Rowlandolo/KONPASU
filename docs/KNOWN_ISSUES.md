@@ -81,6 +81,8 @@ ART-07 (im Atelier korrigiert): Neues Ärmelinnenfutter verdeckte Unterarme, obw
 
 ## Körperform B / Verdeckung
 
-ART-08: Zweite Körpergrafik sowie angepasstes Gewand und Hakama vorhanden; Passformen sind zunächst ungesichtete Prototypen. Körperwechsel soll keine bestehende Artikel-/Basisauswahl verändern. Alle 95 Pfade bleiben unverändert; nur bestehendes Fünferset besitzt passende Prototypgrafiken.
+ART-08: Zweite Körpergrafik sowie angepasstes Gewand und Hakama vorhanden; Passformen für beide Standfiguren im Chromium gesichtet, Nachweis verification-two-forms-v04.json. ART-08 für den Zwei-Formen-Prototyp abgeschlossen; keine universelle Anatomie-/Gerätefreigabe. Körperwechsel soll keine bestehende Artikel-/Basisauswahl verändern. Alle 95 Pfade bleiben unverändert; nur bestehendes Fünferset besitzt passende Prototypgrafiken.
 
 ART-09: Gemeinsame SVG-Szene und alphabasierte deklarative Verdeckung umgesetzt, einschließlich aktivem Gewand vor Armrüstung. Dies ist keine vollständige universelle Vorder-/Hintersegmentierung aller Ärmel, Riemen und künftigen Kopfteile. Rückwärtige Geschirrriemen verwenden weiterhin transportierte, posebezogene Clippolygone. Weitere Tiefenoberflächen müssen ausdrücklich modelliert werden.
+
+Zwei-Formen-Nachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209, 230 Regressionen und 14 Atelier-Prüfgruppen. ART-09: aktive Alpha-Verdeckung und erhaltener Auswahlstatus durch echte SVG-Pixel bestätigt; zukünftige Tiefenfragmente weiter offen. Gemeinsame Basismenge umfasst 9,905,070 Bytes in zehn PNGs; Produktionsbudget weiterhin nicht akzeptiert.

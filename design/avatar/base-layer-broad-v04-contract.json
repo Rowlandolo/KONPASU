@@ -4,7 +4,7 @@
   "width": 512,
   "height": 768,
   "status": "seven-independent-layers-one-pose-prototype",
-  "registration": "pending-body-form-review",
+  "registration": "browser-reviewed-form-b-standing-pose",
   "layers": [
     {
       "id": "hair-back",
@@ -155,9 +155,11 @@
     }
   ],
   "limits": [
-    "Independent broader anatomy for the same standing pose.",
-    "Fitted clothing and equipment are provisional pending actual browser review.",
-    "Alpha occlusion uses declared active surfaces, not inferred universal 3D geometry."
+    "Two independently drawn body forms share the standing pose.",
+    "Form B has individually registered garment, hakama, obi, shoes and equipment placements.",
+    "Alpha occlusion uses declared active surfaces, not inferred universal 3D geometry.",
+    "Rendering/file budget and production/persistence/device acceptance remain open."
   ],
-  "bodyForm": "form-b"
+  "bodyForm": "form-b",
+  "reviewEvidence": "./verification-two-forms-v04.json"
 }

@@ -17,7 +17,7 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Sieben getrennte Basisebenen und das erste Fünferset sind in Chromium geprüft und gesichtet. Nächster Abschnitt: allgemeine Ärmel-/Arm-/Kopfteilverdeckung sowie eine zweite gezeichnete Anatomie, danach ein verbindliches mobiles Grafik-/Renderingbudget. Produktive Mehrfach-Outfits erst mit verlustfreier Besitz-/Favoriten-/History-Anbindung; die übrigen 90 Artikel folgen schrittweise auf dem geprüften Grafikvertrag.
+Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Zwei gezeichnete Körperformen mit individuell passender Kleidung/Ausrüstung und gemeinsame Alpha-Verdeckung sind im Chromium geprüft und gesichtet. Nächster Abschnitt: verbindliches mobiles Asset-/Renderingbudget und echte Vorder-/Hinterfragmente für Riemen, Ärmel und spätere Kopfteile. Danach produktive Mehrfach-Outfits mit verlustfreier Besitz-/Favoriten-/History-Anbindung; übrige 90 Artikel auf dem geprüften Vertrag schrittweise erstellen.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
@@ -82,3 +82,5 @@ Sieben-Ebenen-Abschnitt einschließlich korrigierter Unterarmkanäle abgeschloss
 ## Nach zwei Körperformen und gemeinsamer Szene
 
 Beide Formen mit Grundoutfit, Unterbau und vollständigem Set im realen Chromium sichten und Passformen korrigieren. Anschließend Rendering-/Dateigrößenbudget verbindlich festlegen, echte Kopf-/Ärmel-/Riemenfragmente in dieselbe Szenenlogik einordnen und erst danach produktive Mehrfach-Outfits mit Besitz-/Favoriten-/History-Rückweg anbinden. Weitere 90 Artikel nacheinander, keine neue Schemaänderung ohne Auftrag und Rückweg.
+
+Zwei-Formen-/Szenenabschnitt erfolgreich geprüft und gesichtet: https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209, verification-two-forms-v04.json. Aktuelle nächste Priorität steht oben; frühere Körpervarianten- und Maskenaufträge sind für diesen Prototyp abgeschlossen, nicht universell für alle zukünftigen Artikel.
