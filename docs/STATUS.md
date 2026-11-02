@@ -152,3 +152,7 @@ Original-ZIP KONPASU-main.zip mit allen 45 Basisdateien erhalten, sämtliche Git
 Nach Nutzer-Neuverbindung Branchanlage erfolgreich. Ausgangspunkt main weiterhin 444bdb3981ccc03c550fb402c2cca9e45ad8a46a. Übertragung des vollständigen geprüften Kandidaten in eigenen Remote-Branch beauftragt; Pull Request als Entwurf, echte Geräteabnahme bleibt offen. Originaldateien werden per bekanntem SHA erhalten; keine privaten Backups hochladen.
 
 Remoteprüfung: alle 72 geänderten/neuen Dateien stimmen per Git-Blob-SHA mit dem lokalen Kandidaten überein; Remote-Tree hat vollständig 106 Dateien. PR #1 als Entwurf geöffnet. GitHub-Reviewchecks für den aktuellen PR-Commit gesondert prüfen; die 193 bisherigen Ergebnisse sind lokale Prüfungen. main unverändert, nicht veröffentlicht.
+
+## Veröffentlichungsfreigabe
+
+Nutzerfreigabe zur Übernahme des vollständigen aktuellen Standes nach main liegt vor. Extern gesichertes JSON-Backup wurde im Gespräch bestätigt. Vor Merge zusätzlichen Chromiumlauf in GitHub Actions ausführen; danach Pages-Lauf für den tatsächlichen Mergecommit und ausgelieferte Version prüfen. Echte iPhone-Abnahme bleibt als offener Gerätebefund dokumentiert.
