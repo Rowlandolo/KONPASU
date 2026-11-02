@@ -1,0 +1,2 @@
+# Markdown hard breaks in the original briefing are intentional.
+*.md whitespace=-blank-at-eol

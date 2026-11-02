@@ -30,14 +30,22 @@ function loggedDay(g,date){const logs=(data.detailLogs||[]).filter(x=>x.goalId==
  case 'mobility':case 'languages':case 'learning':case 'focus':case 'meditation':case 'nature':case 'social':return logs.some(has);
  case 'reading':return logs.some(r=>has(r)||num(r,'pages')>0);
  case 'journal':return logs.some(r=>String(r.values?.text||'').trim());
- case 'sugar':return logs.some(r=>['Ja','Yes'].includes(r.values?.sugarFree))&&!logs.some(r=>num(r,'grams')>0||num(r,'sweets')>0);
- case 'alcohol':return logs.some(r=>['Ja','Yes'].includes(r.values?.alcoholFree))&&!logs.some(r=>num(r,'ml')>0&&num(r,'abv')>0);
+ case 'nutrition':return gmMode(g,date)==='meal-days'&&logs.some(r=>String(r.values?.food||r.values?.meal||'').trim());
+ case 'gaming':return gmMode(g,date)==='free-days'&&logs.some(r=>v15Yes(r.values?.gamingFree))&&!logs.some(r=>num(r,'minutes')>0);
+ case 'screen':return gmMode(g,date)==='free-days'&&logs.some(r=>v15Yes(r.values?.screenFree))&&!logs.some(r=>!['Beruf / Schule','Work / school'].includes(r.values?.purpose)&&num(r,'minutes')>0);
+ case 'sugar':return logs.some(r=>v15Yes(r.values?.sugarFree))&&!logs.some(r=>num(r,'grams')>0||num(r,'sweets')>0);
+ case 'alcohol':return gmFreeDayEvidence(g,logs).confirmed;
  default:return false;
  }
 }
 function dayEvidence(g,date){
  if(!activeAt(g,date)||date>today())return {status:'unknown',source:'inactive'};
  const check=dayRecord(g,date);
+ const mode=gmMode(g,date);
+ if(['free-days','abstain'].includes(mode)&&['alcohol','sugar','screen','gaming'].includes(g.key)){
+  const logs=(data.detailLogs||[]).filter(r=>r.goalId===g.id&&r.date===date);
+  if(gmFreeDayEvidence(g,logs).conflict)return {status:'unknown',source:'conflict',conflict:true};
+ }
  const workout=g.key==='strength'&&completedWorkoutOnDate(date);
  if(workout){return {status:'yes',source:check?.status==='no'?'conflict':'workout',conflict:check?.status==='no'}};
  if(check)return {status:check.status,source:'manual'};
@@ -62,6 +70,12 @@ function weeklyProgress(g,when){
 const originalAssessment=assessment;
 assessment=function(g,date){
  const cfg=planConfig(g,date);
+ if(date>today())return {status:'unknown',source:language('Zukunft – noch kein Nachweis','Future – no evidence yet'),value:null,ratio:null};
+ if(cfg.direction==='max'){
+  const result=gmCapAssessment(g,date,canonicalMeasurement(g,date)),check=cfg.period==='weekly'?null:dayRecord(g,date)||canonicalCheck(g,date);
+  if(result.status!=='no'&&['no','partial'].includes(check?.status))return {...result,status:check.status,ratio:check.status==='no'?0:null,source:language('Ausdrücklich dokumentiert','Explicitly recorded')};
+  return result;
+ }
  if(cfg.period==='weekly'){
   if(frequencyGoal(g,date)){
    const p=weeklyProgress(g,date);
@@ -72,7 +86,7 @@ assessment=function(g,date){
   const key=monday(date),m=canonicalMeasurement(g,key),target=number(cfg.targetValue);
   if(m&&Number.isFinite(m.value)&&Number.isFinite(target)){
    const fulfilled=cfg.direction==='max'?m.value<=target:m.value>=target;
-   const complete=(data.detailLogs||[]).some(x=>x.goalId===g.id&&x.date>=key&&x.date<=dateShift(key,6)&&['Ja','Yes'].includes(x.values?.complete));
+   const complete=(data.detailLogs||[]).some(x=>x.goalId===g.id&&x.date>=key&&x.date<=dateShift(key,6)&&v15Yes(x.values?.complete));
    const status=cfg.direction==='max'?(m.value>target?'no':complete?'yes':'unknown'):(fulfilled?'yes':dateShift(key,6)<today()?'no':'unknown');
    return {status,source:cfg.direction==='max'&&!complete&&fulfilled?language('Obergrenze noch nicht vollständig bestätigt','Maximum period not fully confirmed'):language('Expliziter Wochenmesswert','Explicit weekly measurement'),value:m.value,ratio:status==='yes'?1:null};
   }
@@ -89,7 +103,7 @@ goalCheck=function(g){
  if(planConfig(g,day).period!=='weekly')return originalGoalCheck(g);
  const cfg=planConfig(g,day),e=dayEvidence(g,day),p=frequencyGoal(g,day)?weeklyProgress(g,day):null;
  const subtitle=p?`${p.achieved} / ${fmtNum(p.target,0)} ${language('Tage mit Nachweis','confirmed days')} · ${p.success?language('✓ Wochenziel erreicht','✓ weekly goal achieved'):p.finished?language('Woche abgeschlossen','Week closed'):language('läuft bis Sonntag, 23:59','until Sunday 23:59')}`:language('Heute dokumentieren · Wochenwert separat bewerten','Log today · evaluate weekly value separately');
- return `<div class="goalrow gc23-row"><div class="goalicon">${esc(g.icon||'✦')}</div><div class="goalinfo"><div class="title">${esc(g.title)} <span class="micro muted">· ${language('Heute','Today')}</span></div><div class="desc">${esc(cfg.target||'')} · ${esc(subtitle)}</div>${e.conflict?`<p class="gc23-warning">${language('Training dokumentiert, aber Tag als Nein markiert. Bitte prüfen.','Workout recorded but day marked No. Please review.')}</p>`:''}</div><div class="status">${['yes','partial','no'].map((status,i)=>`<button title="${language(['Erreicht','Teilweise','Nicht erreicht'][i],['Done','Partial','Not done'][i])}" aria-label="${esc(g.title)}: ${language(['Erreicht','Teilweise','Nicht erreicht'][i],['Done','Partial','Not done'][i])}" class="statusbtn ${e.status===status?'selected '+status:''}" data-action="gc23-day-check" data-id="${esc(g.id)}" data-status="${status}">${['✓','◐','×'][i]}</button>`).join('')}<button class="statusbtn" title="${language('Wert erfassen','Log value')}" data-action="open-modal" data-type="measure" data-id="${esc(g.id)}">#</button></div></div><div class="gc23-detail-shortcut">${button(language('＋ Details','＋ Details'),'v1-jump-detail',`data-id="${esc(g.id)}"`,'btn small')}${button(language('Kalender','Calendar'),'gc23-open-calendar',`data-id="${esc(g.id)}"`,'btn small')}</div>`;
+ return `<div class="goalrow gc23-row"><div class="goalicon">${esc(g.icon||'✦')}</div><div class="goalinfo"><div class="title">${esc(g.title)} <span class="micro muted">· ${language('Heute','Today')}</span></div><div class="desc">${esc(cfg.target||'')} · ${esc(subtitle)}</div>${e.conflict?`<p class="gc23-warning">${language('Widersprüchliche Einträge. Bitte prüfe diesen Tag.','Conflicting entries. Please review this day.')}</p>`:''}</div><div class="status">${['yes','partial','no'].map((status,i)=>`<button title="${language(['Erreicht','Teilweise','Nicht erreicht'][i],['Done','Partial','Not done'][i])}" aria-label="${esc(g.title)}: ${language(['Erreicht','Teilweise','Nicht erreicht'][i],['Done','Partial','Not done'][i])}" class="statusbtn ${e.status===status?'selected '+status:''}" data-action="gc23-day-check" data-id="${esc(g.id)}" data-status="${status}">${['✓','◐','×'][i]}</button>`).join('')}<button class="statusbtn" title="${language('Wert erfassen','Log value')}" data-action="open-modal" data-type="measure" data-id="${esc(g.id)}">#</button></div></div><div class="gc23-detail-shortcut">${button(language('＋ Details','＋ Details'),'v1-jump-detail',`data-id="${esc(g.id)}"`,'btn small')}${button(language('Kalender','Calendar'),'gc23-open-calendar',`data-id="${esc(g.id)}"`,'btn small')}</div>`;
 };
 function saveDaily(g,date,status){
  if(!g||!activeAt(g,date)||date>today())return notice(language('Dieses Ziel ist am gewählten Tag nicht aktiv.','This goal was not active on this day.'));

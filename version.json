@@ -1,10 +1,13 @@
 {
-  "version": "2.3.1",
-  "release": "KONPASU 2.3.1",
+  "version": "2.4.0",
+  "release": "KONPASU 2.4.0 – layered 2D avatar preview",
   "features": [
     "goal-calendar-v23.js",
     "training-v22.js",
+    "avatar2d.js",
+    "avatar-composer-v24.js",
+    "avatar-art-bundle.js",
     "premium-art-bundle.js"
   ],
-  "cache": "konpasu-offline-v231"
+  "cache": "konpasu-offline-v240"
 }

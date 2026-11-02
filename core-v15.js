@@ -54,9 +54,7 @@ detailMetric=function(g,d){
   const byDate=new Map();for(const r of rows){if(!byDate.has(r.date))byDate.set(r.date,[]);byDate.get(r.date).push(r)}
   let days=0;
   for(const list of byDate.values()){
-   const consumed=list.some(r=>g.key==='sugar'?number(r.values?.grams,0)>0||number(r.values?.sweets,0)>0:(number(r.values?.ml,0)>0&&number(r.values?.abv,0)>0));
-   const explicit=list.some(r=>v15Yes(r.values?.[g.key==='sugar'?'sugarFree':'alcoholFree']));
-   if(explicit&&!consumed)days++;
+   if(gmFreeDayEvidence(g,list).confirmed)days++;
   }
   const target=number(configAt(g,d).targetValue);
   const status=Number.isFinite(target)&&target>0&&days>=target?'yes':'unknown';

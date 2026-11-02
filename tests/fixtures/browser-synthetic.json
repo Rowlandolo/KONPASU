@@ -1,0 +1,638 @@
+{
+  "version": 10,
+  "createdAt": "2026-10-01T12:00:00Z",
+  "profile": {
+    "lang": "de",
+    "coachTone": "balanced",
+    "name": "",
+    "gender": "neutral",
+    "accent": "navy",
+    "height": "",
+    "weight": "",
+    "chest": "",
+    "waist": "",
+    "hips": "",
+    "companion": "fox",
+    "equipped": {},
+    "avatar2d": {
+      "slots": {},
+      "favorites": [],
+      "customFamilies": {},
+      "hairStyle": "swept",
+      "hairColor": "black",
+      "expression": "calm",
+      "scene": "garden",
+      "effects": "subtle",
+      "pet": "fox",
+      "streakSelection": null
+    }
+  },
+  "goals": [
+    {
+      "id": "strength",
+      "key": "strength",
+      "title": "Krafttraining",
+      "category": "Sport",
+      "icon": "🏋️",
+      "target": "3 Einheiten / Woche",
+      "period": "weekly",
+      "targetValue": 3,
+      "unit": "Einheiten",
+      "direction": "min",
+      "active": true,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "3 Einheiten / Woche",
+          "targetValue": 3,
+          "unit": "Einheiten",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "cardio",
+      "key": "cardio",
+      "title": "Cardio",
+      "category": "Sport",
+      "icon": "🚴",
+      "target": "2 Einheiten / Woche",
+      "period": "weekly",
+      "targetValue": 2,
+      "unit": "Einheiten",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "2 Einheiten / Woche",
+          "targetValue": 2,
+          "unit": "Einheiten",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "key": "steps",
+      "title": "Schritte & Bewegung",
+      "category": "Sport",
+      "icon": "🚶",
+      "target": "8.000 Schritte / Tag",
+      "period": "daily",
+      "targetValue": 8000,
+      "unit": "Schritte",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "daily",
+          "target": "8.000 Schritte / Tag",
+          "targetValue": 8000,
+          "unit": "Schritte",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "mobility",
+      "key": "mobility",
+      "title": "Beweglichkeit",
+      "category": "Sport",
+      "icon": "🧘",
+      "target": "3 Einheiten / Woche",
+      "period": "weekly",
+      "targetValue": 3,
+      "unit": "Einheiten",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "3 Einheiten / Woche",
+          "targetValue": 3,
+          "unit": "Einheiten",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "key": "water",
+      "title": "Wasser trinken",
+      "category": "Gesundheit",
+      "icon": "💧",
+      "target": "2.000 ml / Tag",
+      "period": "daily",
+      "targetValue": 2000,
+      "unit": "ml",
+      "direction": "min",
+      "active": true,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "daily",
+          "target": "2.000 ml / Tag",
+          "targetValue": 2000,
+          "unit": "ml",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "key": "sleep",
+      "title": "Schlaf",
+      "category": "Gesundheit",
+      "icon": "🌙",
+      "target": "8 Stunden / Nacht",
+      "period": "daily",
+      "targetValue": 8,
+      "unit": "Stunden",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "daily",
+          "target": "8 Stunden / Nacht",
+          "targetValue": 8,
+          "unit": "Stunden",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "key": "nutrition",
+      "title": "Ernährung",
+      "category": "Gesundheit",
+      "icon": "🍱",
+      "target": "Individuelle Wochenbalance",
+      "period": "weekly",
+      "targetValue": null,
+      "unit": "",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "Individuelle Wochenbalance",
+          "targetValue": null,
+          "unit": "",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "sugar",
+      "key": "sugar",
+      "title": "Zucker reduzieren",
+      "category": "Gesundheit",
+      "icon": "🍵",
+      "target": "5 Tage / Woche",
+      "period": "weekly",
+      "targetValue": 5,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "5 Tage / Woche",
+          "targetValue": 5,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "alcohol",
+      "key": "alcohol",
+      "title": "Alkohol reduzieren",
+      "category": "Gesundheit",
+      "icon": "🌿",
+      "target": "Persönliches Wochenziel",
+      "period": "weekly",
+      "targetValue": null,
+      "unit": "",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "Persönliches Wochenziel",
+          "targetValue": null,
+          "unit": "",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "key": "reading",
+      "title": "Lesen",
+      "category": "Wissen",
+      "icon": "📚",
+      "target": "4 Lesetage / Woche",
+      "period": "weekly",
+      "targetValue": 4,
+      "unit": "Tage",
+      "direction": "min",
+      "active": true,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "4 Lesetage / Woche",
+          "targetValue": 4,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "key": "languages",
+      "title": "Sprachen lernen",
+      "category": "Wissen",
+      "icon": "🖌️",
+      "target": "4 Lerntage / Woche",
+      "period": "weekly",
+      "targetValue": 4,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "4 Lerntage / Woche",
+          "targetValue": 4,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "key": "learning",
+      "title": "Weiterbildung",
+      "category": "Wissen",
+      "icon": "🎓",
+      "target": "3 Lerntage / Woche",
+      "period": "weekly",
+      "targetValue": 3,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "3 Lerntage / Woche",
+          "targetValue": 3,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "key": "focus",
+      "title": "Fokus & Deep Work",
+      "category": "Wissen",
+      "icon": "🎯",
+      "target": "5 Fokussitzungen / Woche",
+      "period": "weekly",
+      "targetValue": 5,
+      "unit": "Sitzungen",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "5 Fokussitzungen / Woche",
+          "targetValue": 5,
+          "unit": "Sitzungen",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "meditation",
+      "key": "meditation",
+      "title": "Meditation",
+      "category": "Achtsamkeit",
+      "icon": "🪷",
+      "target": "4 Tage / Woche",
+      "period": "weekly",
+      "targetValue": 4,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "4 Tage / Woche",
+          "targetValue": 4,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "journal",
+      "key": "journal",
+      "title": "Tagebuch & Reflexion",
+      "category": "Achtsamkeit",
+      "icon": "📜",
+      "target": "3 Tage / Woche",
+      "period": "weekly",
+      "targetValue": 3,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "3 Tage / Woche",
+          "targetValue": 3,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "key": "social",
+      "title": "Gemeinsame Aktivitäten",
+      "category": "Leben",
+      "icon": "🤝",
+      "target": "2 Aktivitäten / Woche",
+      "period": "weekly",
+      "targetValue": 2,
+      "unit": "Aktivitäten",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "2 Aktivitäten / Woche",
+          "targetValue": 2,
+          "unit": "Aktivitäten",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "key": "nature",
+      "title": "Zeit in der Natur",
+      "category": "Leben",
+      "icon": "🌲",
+      "target": "3 Tage / Woche",
+      "period": "weekly",
+      "targetValue": 3,
+      "unit": "Tage",
+      "direction": "min",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "3 Tage / Woche",
+          "targetValue": 3,
+          "unit": "Tage",
+          "direction": "min"
+        }
+      ]
+    },
+    {
+      "id": "screen",
+      "key": "screen",
+      "title": "Bildschirmzeit",
+      "category": "Digital",
+      "icon": "📵",
+      "target": "120 Minuten / Tag",
+      "period": "daily",
+      "targetValue": 120,
+      "unit": "Minuten",
+      "direction": "max",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "daily",
+          "target": "120 Minuten / Tag",
+          "targetValue": 120,
+          "unit": "Minuten",
+          "direction": "max"
+        }
+      ]
+    },
+    {
+      "id": "gaming",
+      "key": "gaming",
+      "title": "Gaming reduzieren",
+      "category": "Digital",
+      "icon": "🎮",
+      "target": "300 Minuten / Woche",
+      "period": "weekly",
+      "targetValue": 300,
+      "unit": "Minuten",
+      "direction": "max",
+      "active": false,
+      "events": [
+        {
+          "date": "2026-10-01",
+          "active": true
+        }
+      ],
+      "versions": [
+        {
+          "date": "2026-11-02",
+          "period": "weekly",
+          "target": "300 Minuten / Woche",
+          "targetValue": 300,
+          "unit": "Minuten",
+          "direction": "max"
+        }
+      ]
+    }
+  ],
+  "checks": [],
+  "measurements": [],
+  "exercises": [],
+  "plans": [],
+  "sessions": [],
+  "draft": null,
+  "avatarHistory": [],
+  "awards": [],
+  "coachDismissals": [],
+  "goalEdits": [],
+  "experiments": [],
+  "reflections": [],
+  "detailLogs": [
+    {
+      "id": "qa-a",
+      "goalId": "alcohol",
+      "date": "2026-10-26",
+      "values": {
+        "alcoholFree": "Yes"
+      }
+    },
+    {
+      "id": "qa-b",
+      "goalId": "alcohol",
+      "date": "2026-10-26",
+      "values": {
+        "ml": 330,
+        "drink": "Synthetic ambiguous drink"
+      }
+    },
+    {
+      "id": "qa-c",
+      "goalId": "gaming",
+      "date": "2026-10-26",
+      "values": {
+        "minutes": 20,
+        "complete": "Yes"
+      }
+    }
+  ],
+  "copingPlans": [],
+  "gentleReminders": [],
+  "streakAwards": [],
+  "settingsV1": {
+    "detailGoal": "water",
+    "remindersEnabled": false,
+    "quietStart": "21:00",
+    "quietEnd": "08:00"
+  },
+  "goalPresets": {},
+  "goalLibraries": {},
+  "goalTimers": {},
+  "goalUi": {},
+  "goalModeHistory": {},
+  "dailyGoalChecks": []
+}
