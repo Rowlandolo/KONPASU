@@ -56,3 +56,7 @@ ART-03: Drei neue PNGs sind Prototypen für eine Pose, keine fertigen universell
 ## Krafttraining-Fünferset
 
 Die fünf zuvor fehlenden Krafttrainingfragmente existieren jetzt als Prototypen. ART-03 bleibt für endgültige Passform/Masken und weitere Körper gültig. Die neue Geschirrverdeckung ist eine feste Sichtbarkeitsmaske für genau diese Pose, keine universelle Tiefenlösung. Große PNGs sind noch kein freigegebenes mobiles Offline-Assetbudget. Weitere 90 Artikel stehen als angepasste Grafiken aus. Keine Aussage, dass alle Kleidungs-/Handüberlagerungen bereits visuell abgenommen sind.
+
+## Vorläufige Basissegmentierung
+
+ART-04: Die neue Aufteilung klassifiziert sichtbare Quellpixel durch vorläufige Masken; deren Anatomie-/Kleidungsgrenzen sind noch visuell nachzuarbeiten. Ohne Kleidung erscheinen nur im Original vorhandene Haut-/Gesichtsbereiche, keine vollständige Anatomie. Haare entfernen rekonstruiert keine verdeckte Kopfhaut. Der breitere Zustand ist eine gemeinsame 6-Prozent-Transformation, kein eigenständiger Körperbau. Vor frei wechselbaren Kleidungs- oder Haarassets passende Körper-/Kopfbasis neu zeichnen.

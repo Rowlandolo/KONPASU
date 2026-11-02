@@ -184,3 +184,11 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] Riemenmaskenkoordinaten validiert, Metadaten unverändert, Maske abschaltbar.
 - [x] Erweiterter Atelier-Chromiumlauf für 437a240c bestanden: vollständiges Set, Maskenvergleich, alle 32 Auswahlen, mobile Breite, keine Datenwrites. Tatsächliche Aufnahme gesichtet; Handgelenkbänder und Armschienen danach nachjustiert und erneut grün geprüft.
 - [ ] Ärmel-/Handübergänge, Masken, zweite Körpervariante, Produktions-Dateigrößen/Offline und produktive Datenanbindung.
+
+## Basisaufteilung / Proportionen
+
+- [x] Original-PNG unverändert; Hash und Abmessungen geprüft.
+- [x] Sieben neue Tests: Pixelzuordnung/Rekonstruktion, acht Basis-Auswahlen, Trennbereiche, ungültige Eingaben und gemeinsame Proportionsparameter.
+- [ ] Native Browser-Rekonstruktion, acht Basisbilder und breiteres komplettes Set für diesen Commit abnehmen.
+- [ ] Isolierte Maskenkanten visuell korrigieren; verdeckte Körper-/Kopfflächen zeichnen.
+- [ ] Eigenständige Körpervariante mit echter Anatomie, separate produktive Kleider-/Haarassets.
