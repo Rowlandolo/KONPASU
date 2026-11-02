@@ -208,3 +208,13 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [ ] Produktives Datenmodell, Offlinebudget und Geräteabnahme.
 
 Aktueller Beleg: 6a8775a71b297c0c1616146e7d61ad13e9f5c675, [Reviewlauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41509862640), 222 Regressionen, App-Chromium und elf Atelier-Prüfgruppen erfolgreich. Archivierte Aufnahmen und ausdrücklich begrenzte Sichtabnahme: design/avatar/verification-body-foundation-v02.json. Keine neue Veröffentlichung.
+
+## Sieben unabhängige Basisebenen
+
+- [x] Vollständigen Unterbau bytegleich erhalten; sechs neue separate PNGs samt SHA-256 und nativen Maßen geprüft.
+- [x] 128 Auswahlen aller sieben Basisteile mit stabiler Reihenfolge und unveränderten Eingaben; 222 lokale Regressionen.
+- [x] Unterschiedliche Zeichenflächen für Hinterhaare/Körper/Kleider und Vorderhaare; Ausrüstung bleibt dazwischen.
+- [ ] Chromium: alle 128 realen Basisauswahlen, drei Schnellansichten, identischer Neuaufbau und weiter 32 Rewardkombinationen.
+- [ ] Beschädigtes Pflichtasset zeigt Fehler und lässt keine teilweise Basis/Ausrüstung erscheinen.
+- [ ] Aktuelle Einzelbilder und Komposition samt Taille, Ärmeln, Schuhen und Frisur gesichtet.
+- [ ] Ärmel-Tiefenaufteilung, weitere Anatomie, Produktionsbudget und App-/Offline-/Geräteintegration.

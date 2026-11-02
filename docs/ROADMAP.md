@@ -72,3 +72,7 @@ Neuer separat gezeichneter Körperunterbau vorhanden. Jetzt Proportionen/Anker m
 Neue unabhängige Haare/Kleider und vollständigen Unterbau gemeinsam im realen Browser sichten, Registrierung bei Bedarf korrigieren. Insbesondere Gesichtöffnung, Kragen, Unterärmel, Hände, Füße sowie alle acht Ausrüstungsfragmente prüfen. Danach Grundoutfit in Gewand/Obi/Hakama/Schuhe und Haare in Vorder-/Hinterteil aufteilen, damit weitere Belohnungen sinnvoll dazwischen liegen können. Vor Liveintegration Größenbudget und zweite gezeichnete Anatomie festlegen; Datenmodell/Favoriten/History erst mit verlustfreiem Rückweg anbinden.
 
 Basis- und Unterbauabschnitt im Chromium abgeschlossen und gesichtet; aktueller Nachweis verification-body-foundation-v02.json. Die nächsten Arbeiten stehen im aktuellen Abschnitt oben, nicht in den historischen Ablaufnotizen.
+
+## Nach sieben unabhängigen Basisgrafiken
+
+Sieben Ebenen und komplette Kombination im Chromium sichten, Taille/Ärmel/Schuhe und Haaranschlüsse korrigieren. Danach Ärmel-Vorder-/Hinterseiten für natürliche Armverdeckung ausarbeiten; zwei gezeichnete Anatomien mit denselben Artikeln prüfen und mobiles Asset-/Renderingbudget festlegen. Produktive Auswahl erst anschließend mit stabilen IDs, vollständigem Besitz-/Favoriten-/Historienrückweg und Offline-/Geräteprüfung anbinden.

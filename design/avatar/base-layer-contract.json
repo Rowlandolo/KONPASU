@@ -1,11 +1,32 @@
 {
-  "version": 2,
+  "version": 3,
   "rig": "adult-three-quarter-v1",
   "width": 512,
   "height": 768,
-  "status": "independent-layers-one-pose-prototype",
-  "registration": "browser-reviewed-one-pose-prototype",
+  "status": "seven-independent-layers-one-pose-prototype",
+  "registration": "pending-browser-review",
   "layers": [
+    {
+      "id": "hair-back",
+      "file": "./layers/hair-back-v03.png",
+      "sha256": "2e1d8792eb675934c3c9d1b8a932e70ca53931178d1d7d6a89ef97fcb780118e",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.985954,
+      "opaqueBounds": [
+        283,
+        188,
+        470,
+        373
+      ],
+      "placement": {
+        "x": 67.5,
+        "y": -2,
+        "width": 368.64,
+        "height": 552.96
+      },
+      "origin": "image generation edit of hair-v02.png; independent completed layer; PNG bytes unmodified"
+    },
     {
       "id": "body",
       "file": "./layers/body-v02.png",
@@ -28,16 +49,16 @@
       "origin": "image generation edit of approved base and underbody reference; PNG bytes unmodified"
     },
     {
-      "id": "clothes",
-      "file": "./layers/clothes-v02.png",
-      "sha256": "462735285f961e5e6b52eb7e2759ff4e24f54ad2c8b47cbf6f551bd3bd4ad822",
+      "id": "shoes",
+      "file": "./layers/shoes-v03.png",
+      "sha256": "49a7176b329c223ec7520db492cecc46ec86890a6b20cc099f7473ec37a83bc9",
       "width": 1024,
       "height": 1536,
-      "transparentPixelsFraction": 0.670439,
+      "transparentPixelsFraction": 0.98494,
       "opaqueBounds": [
-        226,
-        198,
-        777,
+        299,
+        1401,
+        739,
         1532
       ],
       "placement": {
@@ -46,20 +67,83 @@
         "width": 512,
         "height": 768
       },
-      "origin": "image generation edit of approved base and underbody reference; PNG bytes unmodified"
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
     },
     {
-      "id": "hair",
-      "file": "./layers/hair-v02.png",
-      "sha256": "80c1a7c4a428b9343b4e6d9fc8af09776ae2e6750e10a39535fc7c2f1c8ac009",
+      "id": "kimono",
+      "file": "./layers/kimono-v03.png",
+      "sha256": "10b1ab6ed2676dc7bd40b08721d2313488648a336ef7c99a696729017d13416c",
       "width": 1024,
       "height": 1536,
-      "transparentPixelsFraction": 0.961375,
+      "transparentPixelsFraction": 0.833549,
       "opaqueBounds": [
-        289,
-        14,
-        681,
-        357
+        212,
+        199,
+        813,
+        853
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 768
+      },
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "hakama",
+      "file": "./layers/hakama-v03.png",
+      "sha256": "019c844c45682de085eaf7e8a1e87a32c2af0cf3a5d580575fe858e2b2abf752",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.782848,
+      "opaqueBounds": [
+        236,
+        525,
+        782,
+        1420
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 768
+      },
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "obi",
+      "file": "./layers/obi-v03.png",
+      "sha256": "8ba56385aa0d1155818404dd07df56be84b28955ea5dd3a29a829f834202cffc",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.984522,
+      "opaqueBounds": [
+        437,
+        505,
+        635,
+        716
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 768
+      },
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "hair-front",
+      "file": "./layers/hair-front-v03.png",
+      "sha256": "87298570aa222a4da90452339393acccb4f6ba2df3166cf7b50858f5c1949aa1",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.966857,
+      "opaqueBounds": [
+        331,
+        9,
+        686,
+        287
       ],
       "placement": {
         "x": 67.5,
@@ -67,14 +151,13 @@
         "width": 368.64,
         "height": 552.96
       },
-      "origin": "image generation edit of approved base and underbody reference; PNG bytes unmodified"
+      "origin": "image generation edit of hair-v02.png; independent completed layer; PNG bytes unmodified"
     }
   ],
   "limits": [
-    "One adult pose, not universal anatomy.",
-    "Broader option is a shared scale, not a separate body.",
-    "Clothing currently includes obi, hakama and footwear as one base outfit.",
-    "Front/back hair separation, file-size budget and production integration remain open."
-  ],
-  "reviewEvidence": "./verification-body-foundation-v02.json"
+    "One drawn anatomy. The broader option is a shared scale.",
+    "Kimono sleeves are not yet split into front/back depth surfaces.",
+    "Hair front is above current equipment; future headwear needs explicit depth planning.",
+    "Production budget, further reward paths and persistent multi-item outfits remain open."
+  ]
 }
