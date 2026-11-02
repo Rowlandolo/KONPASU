@@ -1,33 +1,19 @@
-# KONPASU 2.3 – Tages-Check-ins und Zielkalender
+# KONPASU
 
-Diese ZIP-Datei ist ein **vollständiges Offline-PWA-Update** für die bestehende KONPASU-Installation auf GitHub Pages. Alle Laufzeitdateien gehören ins Hauptverzeichnis deines vorhandenen GitHub-Repositories.
+Offline nutzbarer Ziel- und Trainingsbegleiter mit modularer 2D-Figur, Belohnungssammlung und lokalen Nutzerdaten.
 
-## Das ist neu
+Aktueller Kandidat: **2.4.0**, Stand 02.11.2026. Vollständiges Upload-Paket einschließlich Originalgrafiken. 193 automatisierte Quellcode-/VM-/Integritätsprüfungen bestanden; echte Browser-/iPhone-/Upgradeabnahme bleibt offen. Noch nicht von dieser Sitzung veröffentlicht.
 
-1. **Wochenziele jeden Tag abhaken:** Beispielsweise wird `3× Krafttraining pro Woche` durch drei einzelne, dokumentierte Trainingstage erreicht. Ein pauschaler Wochenhaken am Montag ist nicht mehr möglich.
-2. **Frühzeitige Erfüllung:** Bei `3/3` erscheint sofort ein Hinweis auf der Startseite. Ein vierter oder fünfter Erfolg bleibt möglich und wird zusätzlich gezählt.
-3. **Automatischer Wochenabschluss:** Die aktuelle Woche umfasst Montag bis Sonntag, 23:59:59 Ortszeit. Ab Montag, 00:00 wird die Vorwoche als abgeschlossen ausgewertet. Es ist keine Hintergrundverbindung nötig; die Anzeige wird beim nächsten Öffnen bzw. bei offenem Browser am Tageswechsel neu berechnet.
-4. **Unbekannt ist nicht „Nein“:** Unvollständige Wochen ohne hinreichende Angaben werden nicht als nachgewiesenes Scheitern eingestuft. Sind alle relevanten Tage bewertet und die Vorgabe nicht erreicht, wird die abgeschlossene Woche als verfehlt ausgewertet.
-5. **Kalender pro Ziel:** Unter „Ziele“ Kalender öffnen, vergangene Tage auswählen, direkt dort nachtragen oder korrigieren.
-6. **Direkt zur Analyse:** Jede Zielkarte hat einen Button „Analysieren“. Die Analyse öffnet zuerst den passenden Tageskalender und die letzten zwölf Wochen und zeigt danach die bisherigen Statistiken.
-7. **Trainingstagebuch berücksichtigt:** Ein abgeschlossenes Krafttraining mit Nicht-Aufwärmsätzen gilt als ein Trainingstag. Zusätzlicher manueller Haken am selben Tag wird nicht doppelt gezählt.
-8. **Tägliche Ziele unverändert:** Wasser, Schlaf, Schritte und andere Tagesziele bleiben tageweise bewertbar.
+## Hochladen und ansehen
 
-## Wichtig bei bestehenden Daten
+[START-HIER.md](START-HIER.md) erklärt die Testvorschau in einem eigenen GitHub-Pages-Repository sowie den späteren geprüften Updateweg für die bestehende App. Die App benötigt weder Installation von Paketen noch einen Build. ZIP entpacken und die Dateien direkt im Repository-Hauptverzeichnis bereitstellen.
 
-Alte pauschale Wochenbestätigungen werden **nicht** stillschweigend zu angeblichen Trainingstagen umgewandelt. Sie verbleiben im JSON-Backup und im Altbestand; für die neue genaue Tagesstatistik sind Tagesnachweise erforderlich. Bestehende Trainingseinheiten können dagegen aus dem Trainingstagebuch als Nachweise verwendet werden.
+Vor echtem Update JSON-Backup außerhalb der App sichern. Bestehende App, Origin und Datenbanken erhalten; keine Browserdaten als Reparatur löschen. Neue Nachweisregeln können Auswertungen korrigieren, Rohdaten bleiben erhalten.
 
-Bei Wochenzielen mit einer **Zeit-, Mengen- oder Obergrenze** (etwa Gaming-Minuten pro Woche) kannst du weiterhin jeden Tag dokumentieren. Eine bloße Folge von Tageshäkchen beweist jedoch keine aufsummierte Zeit oder Menge; für solche Ziele sind die gemessenen Detailwerte beziehungsweise eine vollständige Bestätigung erforderlich.
+## Entwicklung
 
-## Installation ohne Datenverlust
+Node 22: `node scripts/check.cjs`. Optionaler echter Browserlauf: [docs/BROWSER_ACCEPTANCE.md](docs/BROWSER_ACCEPTANCE.md); Gerätefälle: [docs/DEVICE_ACCEPTANCE.md](docs/DEVICE_ACCEPTANCE.md). Die mitgelieferte Testdatei enthält ausschließlich synthetische Daten und wird nicht automatisch ins Profil geladen.
 
-1. **Zuerst** in der bisherigen App unter „Einstellungen“ ein **JSON-Backup** erstellen und außerhalb der App sichern.
-2. ZIP-Datei entpacken.
-3. Sämtliche **App-Laufzeitdateien** einschließlich `goal-calendar-v23.js` aus dem ZIP in das Hauptverzeichnis von `Rowlandolo/KONPASU` hochladen/ersetzen. Dokumentationen und Testvorschaubilder müssen nicht auf GitHub liegen.
-4. `https://rowlandolo.github.io/KONPASU/` in Safari **mit Internetverbindung** öffnen und aktualisieren.
-5. Bestehende Homescreen-App starten und prüfen, ob Übungen, Trainings und Ziele vorhanden sind. **Die Homescreen-App nicht deinstallieren.**
-6. Im Flugmodus tägliche Check-ins hinzufügen, App schließen und erneut öffnen; dann JSON-Backup und Rückkehr in den Online-Modus testen.
+Verbindliche Anforderungen: [docs/PRODUCT_SPEC.md](docs/PRODUCT_SPEC.md) und archiviertes Masterbriefing. Aktueller Stand: [docs/STATUS.md](docs/STATUS.md), Fehler: [docs/KNOWN_ISSUES.md](docs/KNOWN_ISSUES.md), nächste Schritte: [docs/ROADMAP.md](docs/ROADMAP.md), Liefernachweis: [docs/PAKET_PRUEFBERICHT.md](docs/PAKET_PRUEFBERICHT.md).
 
-## Abnahmegrenzen
-
-Die Browser-Abläufe und die Datumslogik wurden mit automatisierten Tests geprüft. Ein vollständiger, echter iPhone-Offline-End-to-End-Test ist noch ausstehend. „100% fehlerfrei“ wird nicht zugesichert.
+Frühere Root-Prüfberichte und VORSCHAU-PNGs sind historische Originaldateien. Die ursprüngliche README ist unverändert in [docs/ARCHIV-README-2.3.1.md](docs/ARCHIV-README-2.3.1.md) archiviert.

@@ -47,6 +47,11 @@ for(const [key,fields] of Object.entries(GM_ADDITIONAL_FIELDS)){
  const present=new Set((FIELD[key]||[]).map(x=>x[0]));
  FIELD[key]=[...(FIELD[key]||[]),...fields.filter(x=>!present.has(x[0]))];
 }
+const _gmDetailSchema=detailSchema;
+detailSchema=function(g){
+ const fields=_gmDetailSchema(g);
+ return configAt(g,day).direction==='max'&&!fields.some(f=>f[0]==='complete')?[...fields,['complete','Eingestellter Zeitraum vollständig protokolliert?','Configured period completely recorded?','select:Nein~No;Ja~Yes']]:fields;
+};
 const _gmMigrateBase=migrate;
 migrate=function(v){const x=_gmMigrateBase(v);x.goalPresets= x.goalPresets&&typeof x.goalPresets==='object'?x.goalPresets:{};x.goalLibraries=x.goalLibraries&&typeof x.goalLibraries==='object'?x.goalLibraries:{};x.goalTimers=x.goalTimers&&typeof x.goalTimers==='object'?x.goalTimers:{};x.goalUi=x.goalUi&&typeof x.goalUi==='object'?x.goalUi:{};x.goalModeHistory=x.goalModeHistory&&typeof x.goalModeHistory==='object'?x.goalModeHistory:{};return x};
 const _gmCreateBase=createState;
@@ -54,15 +59,58 @@ createState=function(){const x=_gmCreateBase();x.goalPresets={};x.goalLibraries=
 function gmMode(g,d=today()){
  const entries=(data.goalModeHistory?.[g.id]||[]).filter(x=>x.date<=d).sort((a,b)=>a.date.localeCompare(b.date));
  const explicit=entries.at(-1)?.mode;if(explicit)return explicit;
- const cfg=configAt(g,d),u=String(cfg.unit||'').toLowerCase(),opts=GM_MODES[g.key]||[];
+ const cfg=configAt(g,d),u=String(cfg.unit||'').toLowerCase(),opts=gmGoalModeOptions(g);
  const matching=opts.find(x=>x[5].toLowerCase()===u&&x[3]===cfg.period&&x[6]===cfg.direction);
  return matching?.[0]||opts[0]?.[0]||'custom';
 }
-const gmRows=(g,d)=>{const cf=configAt(g,d),start=cf.period==='weekly'?monday(d):d,end=cf.period==='weekly'?dateShift(start,6):start;return recordsFor(g,start,end)};
+const gmRows=(g,d)=>{const cf=configAt(g,d),start=cf.period==='weekly'?monday(d):d,end=cf.period==='weekly'?dateShift(start,6):start;return recordsFor(g,start,end).filter(r=>r.date<=today())};
 const gmNum=(obj,k)=>number(obj?.[k]);
 const gmHas=(row,key)=>Number.isFinite(gmNum(row.values,key));
 const gmSum=(rows,key,filter=()=>true)=>rows.filter(r=>filter(r)&&gmHas(r,key)).reduce((s,r)=>s+gmNum(r.values,key),0);
 const gmDistinct=(rows,pred)=>new Set(rows.filter(pred).map(r=>r.date)).size;
+// Available before core-v15.js loads: this module renders during deferred startup.
+function gmYes(value){return ['Ja','Yes',true,'true','yes','ja'].includes(value)}
+// Shared conservative evidence rules; raw legacy records are never rewritten.
+function gmAlcoholEvidence(r){
+ const v=r.values||{},ml=gmNum(v,'ml'),abv=gmNum(v,'abv');
+ const mentioned=String(v.drink||'').trim()||v.ml!==undefined&&v.ml!==''||v.abv!==undefined&&v.abv!=='';
+ if(!mentioned)return 'none';
+ if(Number.isFinite(ml)&&ml===0)return 'none';
+ if(Number.isFinite(ml)&&ml>0&&Number.isFinite(abv)&&abv>=0&&abv<=100)return abv===0?'none':'consumed';
+ return 'unknown';
+}
+function gmFreeDayEvidence(g,rows){
+ const flag={alcohol:'alcoholFree',sugar:'sugarFree',screen:'screenFree',gaming:'gamingFree'}[g.key];
+ const relevant=rows.filter(r=>g.key!=='screen'||!['Beruf / Schule','Work / school'].includes(r.values?.purpose));
+ const conflict=relevant.some(r=>{
+  if(g.key==='alcohol')return gmAlcoholEvidence(r)!=='none';
+  const fields=g.key==='sugar'?['grams','sweets']:['minutes'];
+  return fields.some(k=>{const v=r.values?.[k];return v!==undefined&&v!==null&&v!==''&&(!gmHas(r,k)||gmNum(r.values,k)!==0)});
+ });
+ return {confirmed:!!flag&&rows.some(r=>gmYes(r.values?.[flag]))&&!conflict,conflict};
+}
+function gmCapEvidence(g,d){
+ const cfg=configAt(g,d),rows=gmRows(g,d),weekly=cfg.period==='weekly',start=weekly?monday(d):d,end=weekly?dateShift(start,6):d;
+ const byDay=new Map();for(const r of rows){const list=byDay.get(r.date)||[];list.push(r);byDay.set(r.date,list)}
+ const freeCoverage=Array.from({length:weekly?7:1},(_,i)=>gmFreeDayEvidence(g,byDay.get(dateShift(start,i))||[]).confirmed).every(Boolean);
+ const confirmed=g.key==='screen'&&weekly?Array.from({length:7},(_,i)=>rows.some(r=>r.date===dateShift(start,i)&&gmYes(r.values?.complete))).every(Boolean):rows.some(r=>gmYes(r.values?.complete));
+ const relevant=rows.filter(r=>g.key!=='screen'||!['Beruf / Schule','Work / school'].includes(r.values?.purpose));
+ const field=g.key==='sugar'?(gmMode(g,d)==='sweets'?'sweets':'grams'):['gaming','screen'].includes(g.key)?'minutes':null;
+ const invalid=field?relevant.some(r=>{const v=r.values?.[field];return v!==undefined&&v!==null&&v!==''&&(!gmHas(r,field)||gmNum(r.values,field)<0)}):g.key==='alcohol'&&relevant.some(r=>gmAlcoholEvidence(r)==='unknown');
+ let value=gmAggregate(g,d);
+ if(field&&relevant.some(r=>gmHas(r,field)))value=relevant.reduce((n,r)=>n+(gmHas(r,field)?Math.max(0,gmNum(r.values,field)):0),0);
+ if(value===null&&freeCoverage)value=0;
+ return {value,complete:(confirmed||freeCoverage)&&!invalid&&end<=today()&&(!weekly||end<today()),invalid,start,end};
+}
+function gmCapAssessment(g,d,measurement=null){
+ const cfg=configAt(g,d),target=number(cfg.targetValue),e=gmCapEvidence(g,d);
+ const explicit=measurement&&Number.isFinite(measurement.value)?measurement.value:null;
+ const value=explicit===null?e.value:e.value===null?explicit:Math.max(explicit,e.value);
+ const validTarget=Number.isFinite(target)&&target>=0;
+ const exceeded=validTarget&&value!==null&&value>target;
+ const status=exceeded?'no':validTarget&&value!==null&&e.complete?'yes':'unknown';
+ return {value,status,ratio:status==='yes'?1:status==='no'?0:null,source:exceeded?tr('Dokumentierte Überschreitung','Recorded limit exceeded'):status==='yes'?tr('Zeitraum vollständig bestätigt','Full period confirmed'):tr('Obergrenze offen · vollständigen Zeitraum bestätigen','Limit unverified · confirm the full period')};
+}
 function gmAggregate(g,d){
  const mode=gmMode(g,d),rows=gmRows(g,d),key=g.key;
  if(!rows.length)return null;
@@ -75,30 +123,24 @@ function gmAggregate(g,d){
  const times=()=>sum('minutes');
  const events=()=>rows.filter(r=>logged(r)).length;
  const days=fn=>gmDistinct(rows,fn);
- const freeDay=(flag,positive)=>{
-  const byDay=new Map();for(const r of rows){const ds=byDay.get(r.date)||[];ds.push(r);byDay.set(r.date,ds)}
-  let result=0;for(const list of byDay.values()){
-   if(list.some(r=>positive(r)))continue;
-   if(list.some(r=>r.values?.[flag]==='Ja'))result++;
-  }return result;
- };
+ const freeDay=()=>{const dates=new Set(rows.map(r=>r.date));return [...dates].filter(date=>gmFreeDayEvidence(g,rows.filter(r=>r.date===date)).confirmed).length};
  switch(key){
  case 'strength':{const cf=configAt(g,d),wk=cf.period==='weekly'?monday(d):monday(d);const count=countWorkouts(wk);return count>0?count:null}
  case 'cardio':n=mode==='minutes'?times():mode==='km'?sum('km'):rows.filter(r=>timed(r)||(gmHas(r,'km')&&gmNum(r.values,'km')>0)||!!r.values?.activity).length;break;
  case 'steps':n=sum('steps');break;
  case 'mobility':n=mode==='minutes'?times():rows.filter(r=>timed(r)||!!r.values?.activity).length;break;
- case 'water':n=rows.some(r=>gmHas(r,'ml'))?gmSum(rows,'ml',r=>['Wasser','Tee ungesüßt','Kaffee ungesüßt'].includes(r.values?.drink)):null;break;
+ case 'water':n=rows.some(r=>gmHas(r,'ml'))?gmSum(rows,'ml',r=>['Wasser','Tee ungesüßt','Kaffee ungesüßt','Water','Unsweetened tea','Unsweetened coffee'].includes(r.values?.drink)):null;break;
  case 'sleep':{
   const valid=rows.map(r=>{const a=Date.parse(r.values?.bed),b=Date.parse(r.values?.wake);return Number.isFinite(a)&&Number.isFinite(b)&&b>a&&b-a<=36*3600000?(b-a)/3600000:null}).filter(x=>x!==null);
   n=mode==='quality'?(()=>{const scores=rows.map(r=>gmNum(r.values,'quality')).filter(Number.isFinite);return scores.length?scores.reduce((s,v)=>s+v,0)/scores.length:null})():valid.length?valid.reduce((s,v)=>s+v,0):null;break;
  }
  case 'nutrition':n=mode==='meal-days'?days(r=>!!r.values?.food||!!r.values?.meal):null;break;
- case 'sugar':n=mode==='free-days'?freeDay('sugarFree',r=>gmHas(r,'grams')&&gmNum(r.values,'grams')>0||gmHas(r,'sweets')&&gmNum(r.values,'sweets')>0):mode==='grams'?sum('grams'):sum('sweets');break;
+ case 'sugar':n=mode==='free-days'?freeDay():mode==='grams'?sum('grams'):sum('sweets');break;
  case 'alcohol':{
-  const consumption=r=>(gmHas(r,'ml')&&gmNum(r.values,'ml')>0&&(gmNum(r.values,'abv')>0||!!r.values?.drink));
-  if(mode==='free-days'||mode==='abstain')n=freeDay('alcoholFree',consumption);
-  else if(mode==='grams')n=rows.some(consumption)?(rows.filter(consumption).every(r=>gmHas(r,'abv'))?rows.reduce((s,r)=>s+(consumption(r)?gmNum(r.values,'ml')*gmNum(r.values,'abv')*.00789:0),0):null):(freeDay('alcoholFree',consumption)>=7?0:null);
-  else n=rows.some(consumption)?rows.filter(consumption).length:null;
+  const consumption=r=>gmAlcoholEvidence(r)==='consumed';
+  if(mode==='free-days'||mode==='abstain')n=freeDay();
+  else if(mode==='grams')n=rows.some(consumption)?rows.filter(consumption).reduce((s,r)=>s+gmNum(r.values,'ml')*gmNum(r.values,'abv')*.00789,0):(rows.some(r=>gmAlcoholEvidence(r)==='unknown')?null:freeDay()>0?0:null);
+  else n=rows.some(consumption)?rows.filter(consumption).length:(rows.some(r=>gmAlcoholEvidence(r)==='unknown')?null:freeDay()>0?0:null);
   break;
  }
  case 'reading':n=mode==='minutes'?times():mode==='pages'?sum('pages'):days(r=>(gmHas(r,'pages')&&gmNum(r.values,'pages')>0)||(gmHas(r,'minutes')&&gmNum(r.values,'minutes')>0)||!!r.values?.book);break;
@@ -109,8 +151,8 @@ function gmAggregate(g,d){
  case 'journal':n=mode==='entries'?rows.filter(r=>!!r.values?.text).length:days(r=>!!r.values?.text);break;
  case 'social':n=mode==='minutes'?times():mode==='days'?days(r=>!!r.values?.activity||timed(r)):rows.filter(r=>!!r.values?.activity||timed(r)).length;break;
  case 'nature':n=mode==='minutes'?times():mode==='outings'?rows.filter(r=>!!r.values?.activity||timed(r)).length:days(r=>!!r.values?.activity||timed(r));break;
- case 'screen':n=mode==='free-days'?freeDay('screenFree',r=>gmHas(r,'minutes')&&gmNum(r.values,'minutes')>0&&r.values?.purpose!=='Beruf / Schule'):rows.some(r=>gmHas(r,'minutes'))?gmSum(rows,'minutes',r=>r.values?.purpose!=='Beruf / Schule'):null;break;
- case 'gaming':n=mode==='free-days'?freeDay('gamingFree',r=>gmHas(r,'minutes')&&gmNum(r.values,'minutes')>0):sum('minutes');break;
+ case 'screen':n=mode==='free-days'?freeDay():rows.some(r=>gmHas(r,'minutes'))?gmSum(rows,'minutes',r=>!['Beruf / Schule','Work / school'].includes(r.values?.purpose)):null;break;
+ case 'gaming':n=mode==='free-days'?freeDay():sum('minutes');break;
  default: n=sum('amount');
  }
  return Number.isFinite(n)?n:null;
@@ -118,24 +160,20 @@ function gmAggregate(g,d){
 // Never auto-award a maximum-value goal from partial usage logs, nor infer abstinence from silence.
 const _gmPriorMetric=detailMetric;
 detailMetric=function(g,d){
- if(!GM_MODES[g?.key])return _gmPriorMetric(g,d);
+ if(!Object.prototype.hasOwnProperty.call(GM_MODES,g?.key))return _gmPriorMetric(g,d);
  const cfg=configAt(g,d),mode=gmMode(g,d),rows=gmRows(g,d),val=gmAggregate(g,d);
+ if(cfg.direction==='max')return gmCapAssessment(g,d);
  if(g.key==='nutrition'&&mode==='balance')return {value:null,status:'unknown',ratio:null,source:tr('Wochenbalance selbst bestätigen','Confirm weekly balance manually')};
  if(val===null)return {value:null,status:'unknown',ratio:null,source:tr('Keine geeigneten Messwerte','No suitable measurements')};
  const target=number(cfg.targetValue);if(!Number.isFinite(target)||target<0)return {value:val,status:'unknown',ratio:null,source:tr('Keine Zielvorgabe','No numeric target')};
  const source=tr('Detailprotokolle','Detailed entries');
- if(cfg.direction==='max'){
-  if(val>target)return {value:val,status:'no',ratio:0,source};
-  // The user must explicitly confirm the daily or weekly period is fully captured.
-  const confirmed=rows.some(r=>r.values?.complete==='Ja')||(g.key==='alcohol'&&rows.filter(r=>r.values?.alcoholFree==='Ja').length>=7&&!rows.some(r=>gmNum(r.values,'ml')>0));
-  return confirmed?{value:val,status:'yes',ratio:1,source:tr('Zeitraum bestätigt','Period confirmed')}:{value:val,status:'unknown',ratio:null,source:tr('Unvollständige Obergrenze – Bestätigung nötig','Max limit not verified – confirmation needed')};
- }
+
  if(target===0)return {value:val,status:val===0?'unknown':'yes',ratio:null,source};
  if(val>=target)return {value:val,status:'yes',ratio:1,source};
  return {value:val,status:'unknown',ratio:null,source:tr('Bisher dokumentiert; keine automatische Niederlage','Recorded so far; not a failure')};
 };
 function gmCurrentGoal(){return v1Goal()}
-function gmGoalModeOptions(g){return GM_MODES[g.key]||[]}
+function gmGoalModeOptions(g){return Object.prototype.hasOwnProperty.call(GM_MODES,g.key)?GM_MODES[g.key]:[]}
 function gmFieldForLibrary(key){return ({water:'drink',nutrition:'food',reading:'book',languages:'language',learning:'subject',focus:'task',meditation:'practice',nature:'activity',social:'activity',gaming:'game',screen:'app',cardio:'activity',mobility:'activity',sugar:'item',alcohol:'drink',journal:'prompt',steps:'place'}[key]||'activity')}
 function gmLibraryFor(g){return data.goalLibraries?.[g.id]||[]}
 function gmLibraryMarkup(g){
@@ -157,11 +195,19 @@ function gmBreakdown(g){const rows=recordsFor(g),keys=gmNutrientKeys[g.key]||[];
  if(!metrics.length)return '';
  return `<div class="gm-block"><h3>${tr('Dokumentierte Detailwerte','Recorded details')}</h3><div class="gm-breakdown">${metrics.map(m=>`<div class="gm-pill"><span>${esc(m.key)}</span><b>${fmtNum(m.amount,2)}</b><small>${m.count} ${tr('Einträge','entries')}</small></div>`).join('')}</div><p class="hint">${tr('Summen aller gespeicherten Details; keine Schätzung aus Check-ins.','Totals of stored detail entries only; no estimates from check-ins.')}</p></div>`;
 }
-function gmSummaryMarkup(g){const cfg=configAt(g,day),period=cfg.period==='weekly'?monday(day):day,v=gmAggregate(g,period),test=detailMetric(g,period),mode=gmMode(g,day);
+function gmEvidenceHint(g){
+ const cfg=configAt(g,day),rows=gmRows(g,day),flag={alcohol:'alcoholFree',sugar:'sugarFree',gaming:'gamingFree',screen:'screenFree'}[g.key];
+ const conflicts=[...new Set(rows.map(r=>r.date))].filter(date=>{const list=rows.filter(r=>r.date===date);return list.some(r=>gmYes(r.values?.[flag]))&&gmFreeDayEvidence(g,list).conflict});
+ const warning=conflicts.length?`<p class="hint" role="status">${tr('Widersprüchliche Tagesangaben – bitte die Detailprotokolle prüfen:','Conflicting day entries – please review the detailed records:')} ${conflicts.map(esc).join(', ')}. ${tr('Bei Getränken ohne Menge oder Alkoholgehalt bleibt der Nachweis offen.','Drinks with missing volume or alcohol content leave evidence unverified.')}</p>`:'';
+ if(cfg.direction!=='max')return warning;
+ const scope=g.key==='screen'&&cfg.period==='weekly'?tr('Für diese Woche jeden der sieben Tage vollständig bestätigen.','Confirm complete usage for each of the seven days in this week.'):tr('Die Vollständigkeitsangabe gilt für den eingestellten Zeitraum.','The completeness confirmation applies to the configured period.');
+ return warning+`<p class="hint">${esc(scope)} ${cfg.period==='weekly'?tr('Ein Wochenlimit ist frühestens nach Sonntag als eingehalten bestätigt.','A weekly limit can only be verified after Sunday has ended.'):''} ${tr('Fehlende Angaben bleiben offen; bestätigte Überschreitungen sind sofort sichtbar.','Missing information stays unverified; recorded excess is visible immediately.')}</p>`;
+}
+function gmSummaryMarkup(g){const cfg=configAt(g,day),period=cfg.period==='weekly'?monday(day):day,test=cfg.direction==='max'?assessment(g,period):detailMetric(g,period),v=cfg.direction==='max'?test.value:gmAggregate(g,period),mode=gmMode(g,day);
  return `<div class="gm-block"><div class="between"><h3>${tr('Passende Zielauswertung','Goal-specific summary')}</h3>${button(tr('Zielmodus ändern','Change tracking mode'),'gm-open-mode',`data-id="${esc(g.id)}"`,'btn small')}</div>
  <p class="hint" style="margin:8px 0">${tr('Modus','Mode')}: ${esc(gmGoalModeOptions(g).find(x=>x[0]===mode)?.[data.profile.lang==='en'?2:1]||cfg.unit||'Individuell')} · ${esc(cfg.period==='weekly'?tr('Woche','Week'):tr('Tag','Day'))}</p>
- <div class="gm-total"><div><span class="micro muted">${tr('Protokollierter Wert','Recorded value')}</span><p class="gm-big">${v===null?'–':fmtNum(v,2)} <span class="small">${esc(cfg.unit||'')}</span></p></div><div class="gm-status"><span class="badge muted">${test.status==='yes'?tr('Aus Protokoll erfüllt','Verified from records'):test.status==='no'?tr('Limit überschritten','Limit exceeded'):tr('Noch ungeklärt','Not yet verified')}</span></div></div>
- <p class="micro muted">${esc(test.source||'')} · ${tr('Ein-Tipp-Bestätigungen bleiben davon unabhängig.','One-tap confirmations remain independent.')}</p></div>`;
+ <div class="gm-total"><div><span class="micro muted">${tr('Protokollierter Wert','Recorded value')}</span><p class="gm-big">${v===null?'–':fmtNum(v,2)} <span class="small">${esc(cfg.unit||'')}</span></p></div><div class="gm-status"><span class="badge muted">${test.status==='yes'?tr('Aus Protokoll erfüllt','Verified from records'):test.status==='no'?tr('Nicht erreicht','Not achieved'):tr('Noch ungeklärt','Not yet verified')}</span></div></div>
+ <p class="micro muted">${esc(test.source||'')} · ${cfg.direction==='max'?tr('Ein Häkchen allein bestätigt keine vollständige Mengen- oder Zeiterfassung.','A tick alone does not confirm complete quantity or time records.'):tr('Ein-Tipp-Bestätigungen bleiben davon unabhängig.','One-tap confirmations remain independent.')}</p>${gmEvidenceHint(g)}</div>`;
 }
 function gmTimerMarkup(g){const allowable=['focus','meditation','gaming','reading','cardio','nature','learning','languages','mobility','social'].includes(g.key);if(!allowable)return '';
  const t=data.goalTimers[g.id],running=!!t?.startedAt;
@@ -186,8 +232,9 @@ renderModal=function(){
  if(modal.type==='gm-mode'){
   const options=gmGoalModeOptions(g),selected=gmMode(g,today()),opt=options.find(x=>x[0]===selected)||options[0];
   h=modalShell(tr('Zielmodus einstellen','Set tracking mode'),`<form class="form" data-submit="gm-mode" data-id="${esc(g.id)}">
+  ${modal.fromReward?`<div class="note">${tr('Du legst deine Vorgabe selbst fest. Erst Speichern ändert dein Ziel.','You choose your own target. Only saving changes your goal.')}${g.key==='nutrition'?'<p>'+tr('Flexible Wochenbalance ohne Zielwert bleibt möglich. Für ihre Belohnungsbewertung fehlt derzeit ein messbarer Modus.','Flexible weekly balance without a target stays available. Its reward assessment currently needs a measurable mode.')+'</p>':''}</div>`:''}
   ${select('mode',tr('Messgröße und Zeitraum','Metric and period'),options.map(x=>[x[0],tr(x[1],x[2])]),opt[0])}
-  ${field('targetValue',tr('Persönlicher Zielwert','Personal target'),configAt(g,today()).targetValue??opt[4]??'','number','min="0" step="any"')}
+  ${field('targetValue',tr('Persönlicher Zielwert','Personal target'),configAt(g,today()).targetValue??(modal.fromReward?'':opt[4]??''),'number','min="0" step="any"')}
   <div class="note">${tr('Der neue Modus gilt ab heute. Alte Wochen verwenden ihre frühere Zielvorgabe.','New mode applies from today. Earlier periods retain their old target.')}</div>
   <button type="submit" class="btn primary full">${tr('Zielmodus speichern','Save tracking mode')}</button></form>`);
  }else{

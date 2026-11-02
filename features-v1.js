@@ -32,7 +32,7 @@ const FIELD={
 };
 let detailGoalId=null;
 function v1Goal(){const id=detailGoalId||data.settingsV1.detailGoal;return getGoal(id)||activeGoals()[0]||data.goals[0]}
-function detailSchema(g){return FIELD[g?.key]||FIELD.custom}
+function detailSchema(g){return Object.prototype.hasOwnProperty.call(FIELD,g?.key)?FIELD[g.key]:FIELD.custom}
 function goalDetailLabel(g){return g?.title||tr('Eigenes Ziel','Custom goal')}
 function recordsFor(g,from=null,to=null){return (data.detailLogs||[]).filter(x=>x.goalId===g.id&&(!from||x.date>=from)&&(!to||x.date<=to)).sort((a,b)=>(b.date+'|'+(b.createdAt||'')).localeCompare(a.date+'|'+(a.createdAt||'')))}
 function detailMetric(g,key){const cf=configAt(g,key),start=cf.period==='weekly'?monday(key):key,end=cf.period==='weekly'?dateShift(start,6):start;
@@ -241,11 +241,15 @@ function v1Streaks(g,end=today()){
  return {daily,reached,current,best:max,unknownLatest:last?.status==='unknown',possibleContinuation:unknownTrailing?pending:0,milestones};
 }
 function v1RebuildStreakAwards(){
- const old=data.streakAwards||[],result=[];
+ // Preserve the recorded award history. Corrections can remove today's proof,
+ // but must not silently delete a previously recorded milestone. The hall marks
+ // unsupported records as pending; equipment still uses current goal evidence.
+ const result=(data.streakAwards||[]).slice();
  for(const g of data.goals){const summary=v1Streaks(g);
   for(const [n,date] of Object.entries(summary.reached)){
-   const existing=old.find(x=>x.goalId===g.id&&x.count===Number(n)&&x.daily===summary.daily);
-   result.push(existing?{...existing,earnedAt:date}:{id:uid(),goalId:g.id,count:Number(n),daily:summary.daily,earnedAt:date});
+   const index=result.findIndex(x=>x?.goalId===g.id&&x.count===Number(n)&&x.daily===summary.daily);
+   if(index>=0)result[index]={...result[index],earnedAt:date};
+   else result.push({id:uid(),goalId:g.id,count:Number(n),daily:summary.daily,earnedAt:date});
   }
  }
  data.streakAwards=result;

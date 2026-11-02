@@ -1,0 +1,337 @@
+✔ Studio and every tab render in DE and EN with real assets (53.969661ms)
+✔ best replaces locked old selection and keeps awards, favorites and training (8.44973ms)
+✔ favorite synchronizes both companion fields; locked companion falls back with its own stage (8.414618ms)
+✔ hall only shows empty state when both award types are empty (7.963983ms)
+✔ locked preview and close never save profile, rewards or training (12.98381ms)
+✔ corrupt custom reward family fails closed without crashing inventory (10.239817ms)
+✔ historic date excludes a week that had not ended yet (5.554895ms)
+✔ earned items of paused goals remain in inventory (14.250571ms)
+✔ verified selected streak is visible; effects off hides it (5.655782ms)
+✔ home uses the current modular avatar rather than a fixed hero image (8.338576ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.495147
+✔ collection distinguishes worn, available, resting and locked rewards (43.243103ms)
+✔ resting and locked filters never present equipment actions as available (14.997386ms)
+✔ filters, reset and inspecting a locked item never persist or change profile (8.746207ms)
+✔ earned filter includes resting pieces without classifying them as wearable (12.205598ms)
+✔ legacy visible equipment can be removed with a single click (7.782186ms)
+✔ progress clamps visual meter and never writes a success or unlock (11.829519ms)
+✔ custom goal names are escaped in cards and preview (7.117757ms)
+✔ English inventory uses explicit English actions and status (9.337288ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.953186
+✔ default nutrition and alcohol targets stay blank while setup is offered (45.979795ms)
+✔ nutrition requirements explain the flexible balance limitation without changing it (12.24353ms)
+✔ weekly distinct-day target explains same-day deduplication (11.030192ms)
+✔ daily target explains seven verified successful days for a reward week (10.259646ms)
+✔ zero maximum is valid and requires complete evidence (12.223169ms)
+✔ unreachable weekly day target is flagged without mutating the target (9.979112ms)
+✔ opening specialized settings makes no writes and never suggests an unchosen default (6.419268ms)
+✔ closing settings preserves inventory filter and item context (10.766863ms)
+✔ custom goals open their own editor instead of another goal family (4.964524ms)
+✔ English requirement labels and user-defined units are escaped (12.362644ms)
+✔ blank numeric reward target is rejected by the actual submit handler without a write (6.192113ms)
+✔ only explicit save applies the user target and leaves earlier goal versions and records intact (8.0705ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.011845
+✔ all 95 mappings unlock exactly at 1/4/12/26/52 verified completed weeks and keep original assets/slots (1862.590853ms)
+✔ unknown recent weeks preserve earned gear; documented setbacks rest it without deleting selection (27.354683ms)
+✔ pause blocks wear without losing earned tier or favorite selection (21.822172ms)
+✔ no data and future evidence grant no rewards (13.779883ms)
+✔ custom family uses custom goal proof, never the source family goal progress (12.975377ms)
+✔ corrected weekly records do not silently erase stored milestone history (183.143386ms)
+✔ repeated rebuild and restored evidence keep one award with its original ID (349.629309ms)
+✔ switching goal period keeps previously recorded daily milestone history (110.039237ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2588.864766
+✔ hall separates verified weekly milestones from verified daily streaks (35.858412ms)
+✔ unsupported saved achievements remain visible without granting gear (8.511461ms)
+✔ invalid, missing and future dates do not crash or invent an achievement date (5.076379ms)
+✔ hall type filters are transient and never save awards or equipment (6.707743ms)
+✔ record of a former goal remains readable and pending (6.82779ms)
+✔ goal titles and dates are escaped in achievement cards (5.948975ms)
+✔ English hall has meaningful permanent and pending explanations (6.038166ms)
+✔ recorded future milestone stays pending even when enough weeks are verified (4.971375ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87.60904
+✔ paused source goal blocks selecting a gated companion without changing saved selection (26.213662ms)
+✔ companion gallery shows actual forms even for unselected companions (8.472563ms)
+✔ invalid imported companion safely displays fox without rewriting the record (6.251461ms)
+✔ favorite applies only its own slots and synchronizes both companion fields (6.918693ms)
+✔ saving favorite preserves legacy equipment and resting raw selections (7.746724ms)
+✔ outfit gallery renders live previews without writing any data (6.978982ms)
+✔ favorite rename changes only the explicit name and requires nonblank input (8.071542ms)
+✔ negative favorite index can never delete the final outfit (5.820776ms)
+✔ fallback fox can be explicitly selected while unavailable dragon stays remembered until that action (8.459914ms)
+✔ cancelled rename and cancelled deletion never save or remove favorites (5.418894ms)
+✔ outfit names are escaped and missing old optional fields remain renderable (5.765614ms)
+✔ unavailable favorite items remain saved while only allowed gear is rendered (7.276431ms)
+✔ all four basic companion forms follow the existing wearable thresholds (5.436029ms)
+✔ English companion and outfit descriptions stay explicit about current state (7.471799ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.020985
+✔ all 16 existing slots are represented with visible and saved values (21.612383ms)
+✔ lower-tier replacement is explained without changing remembered higher-tier selection (8.74211ms)
+✔ paused goal explains resting selection and starter appearance (12.105256ms)
+✔ legacy equipment is identified as visible and selected (7.96169ms)
+✔ unknown saved selection is preserved and explained without crashing (7.206944ms)
+✔ effect Off is distinguished from a missing or locked equipped aura (10.716018ms)
+✔ selection inspection and inventory navigation cause no saves (15.686883ms)
+✔ equipment tab returns from history to current date without changing stored data (7.397279ms)
+✔ English slot overview distinguishes defaults and saved selections (6.092336ms)
+✔ unverified saved equipment remains unavailable rather than claimed earned (6.836583ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116.612707
+✔ base avatar includes scene, body, original hair and fox companion (2.429059ms)
+✔ controls visibly change hair, body, scene, expression, clothing, evolved companion (0.772728ms)
+✔ wearable reward renders; unavailable item stays absent (0.88232ms)
+✔ preview remains ephemeral and escapes display name (0.741482ms)
+✔ unsupported asset key, hostile family and unknown settings safely fall back (0.700322ms)
+✔ no original art means fallback requested, no data write (0.578422ms)
+✔ compact view and size clamping prevent layout break (0.764016ms)
+✔ partial original bundle requests fallback instead of rendering an incomplete figure (0.561998ms)
+✔ all 95 real reward mappings resolve and render on the intended layer (32.564759ms)
+✔ real body, hair, face, scene and companion combinations render without missing selected assets (21.139211ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 69.282683
+✔ old and current backups preserve goals, sessions, rewards, favorites and private notes through migrate + save + reload (39.509541ms)
+✔ quota error locks subsequent writes without removing previous storage (5.541535ms)
+✔ malformed backup and duplicate goal IDs are rejected (6.782132ms)
+✔ weekly training counts distinct documented days, excludes warmups and keeps gaps unknown (6.627014ms)
+✔ partial gaming cap and missing alcohol records never create success (7.565567ms)
+✔ IndexedDB revision conflict aborts instead of overwriting another tab (5.688301ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 80.192001
+✔ backup rejects scalar avatar before profile replacement (24.005058ms)
+✔ backup rejects invalid favorites before profile replacement (7.29568ms)
+✔ backup rejects invalid slots before profile replacement (5.784272ms)
+✔ backup rejects impossible date before profile replacement (6.219404ms)
+✔ backup rejects invalid goal versions before profile replacement (6.464285ms)
+✔ backup rejects invalid optional day checks before profile replacement (6.022944ms)
+✔ backup rejects invalid draft before profile replacement (6.642838ms)
+✔ backup rejects invalid goal mode history before profile replacement (6.855039ms)
+✔ backup rejects invalid detail values before profile replacement (8.345797ms)
+✔ backup rejects prototype keys before profile replacement (5.113414ms)
+✔ duration-only sets with explicit zero weight are valid, without inventing repetitions (5.722792ms)
+✔ nutrition meal-days logs contribute distinct day evidence (5.801718ms)
+✔ gaming-free confirmation contributes only without conflicting recorded usage (6.322175ms)
+✔ private screen-free day can include logged work use but never private use (4.786772ms)
+✔ clear ends stale visual try-on (24.59682ms)
+✔ best ends stale visual try-on (9.30533ms)
+✔ interactive tabs leave time travel before editing current profile (7.728687ms)
+✔ invalid history date cannot replace current view date (5.038793ms)
+✔ measure-only submission preserves companion, clothing and all avatar options (6.588307ms)
+✔ negative body measurement is rejected before any profile mutation (4.50641ms)
+✔ quota failure leaves a persistent on-screen warning (6.56279ms)
+✔ status filter restores keyboard focus to the active control (4.37781ms)
+✔ time-only sets do not produce a false integrity error (4.722347ms)
+✔ goal CSV includes periods evidenced only by daily checks or detailed logs (6.505344ms)
+✔ training CSV preserves duration values (6.15583ms)
+✔ free-day detail summary agrees with boolean day evidence (6.07468ms)
+✔ English work-use records are excluded from private screen totals (12.134279ms)
+✔ English water and unsweetened drink records count as hydration (4.732122ms)
+✔ unrecognized imported goal family cannot resolve inherited object methods as a reward or tracking mode (10.691663ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 234.032604
+✔ ambiguous alcohol cannot prove abstinence: {"ml":330,"drink":"Beer"} (28.7508ms)
+✔ ambiguous alcohol cannot prove abstinence: {"ml":330} (7.841142ms)
+✔ ambiguous alcohol cannot prove abstinence: {"drink":"Wine"} (6.988276ms)
+✔ ambiguous alcohol cannot prove abstinence: {"ml":330,"abv":-1} (6.058506ms)
+✔ ambiguous alcohol cannot prove abstinence: {"ml":330,"abv":101} (6.677258ms)
+✔ explicit zero ABV does not contradict a confirmed alcohol-free day (5.572139ms)
+✔ known alcohol grams remain a lower bound despite another unknown event (7.496605ms)
+✔ unknown ABV blocks grams success even with period confirmation (7.868082ms)
+✔ seven duplicates on one alcohol-free day cannot prove a zero-consumption week (7.441334ms)
+✔ weekly cap stays unverified until Sunday has ended, exceedance is immediate (7.49942ms)
+✔ closed gaming period accepts English completeness; historical corrections recompute (5.607792ms)
+✔ weekly screen cap needs seven daily confirmations (5.617196ms)
+✔ manual value and check cannot conceal higher logged consumption (6.508329ms)
+✔ legacy manual cap measurement remains stored but needs completeness (5.959881ms)
+✔ a daily tick alone never proves the numerical cap, explicit rejection is preserved (6.715564ms)
+✔ negative entries cannot cancel a proven excess (5.009095ms)
+✔ invalid negative record prevents claimed complete success below limit (5.908775ms)
+✔ future rows cannot prove a current exceedance or confirmed period (4.554881ms)
+✔ work screen use never contributes to private cap exceedance (6.364547ms)
+✔ abstinence conflict is corrected without deleting historical awards or logs (4.635229ms)
+✔ summary explains open evidence and locates conflicting day in both languages (13.192928ms)
+✔ cap summary uses the assessed lower bound and explains tick limitations (5.596926ms)
+✔ custom maximum exposes a completeness field without altering stored goal or schema (5.233231ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 188.717934
+✔ invalid backup is rejected before confirmation and never replaces current data (19.212196ms)
+✔ cancelled restore leaves memory and storage untouched (8.060355ms)
+✔ failed restore save rolls back the in-memory profile (8.400848ms)
+✔ post-validation award failure also rolls back without a write (7.651935ms)
+✔ confirmed valid restore saves the requested profile (6.973204ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56.290706
+✔ all primary pages render in both languages with a new profile (86.287687ms)
+✔ all primary pages render in both languages with synthetic historical data (61.325496ms)
+✔ all 47 existing goal mode dialogs render without saving (8.171039ms)
+✔ body measurement dialog excludes companion and clothing controls (10.480107ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 172.612771
+✔ incomplete checkout is blocked without substituting missing scripts or graphics (4.689304ms)
+✔ empty critical file and an undeclared HTML dependency block acceptance (1.1404ms)
+✔ preflight records content fingerprints rather than claiming browser checks (2.496458ms)
+✔ local server refuses repository internals, backups, encoded traversal and null paths (1.269871ms)
+✔ allowed asset name cannot follow a symlink outside test checkout (1.169383ms)
+✔ worker declarations must be recognizable rather than silently checking nothing (0.767491ms)
+✔ browser runner rejects external target URLs and missing option values (0.496121ms)
+✔ device fixture passes actual application import validation (20.778074ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40.084053
+✔ full distribution has every declared HTML and worker runtime/visual file (15.981557ms)
+✔ manifest icons are real PNGs with their declared dimensions (0.356405ms)
+✔ all 104 original premium assets contain complete WEBP payloads and resolve offline (7.074383ms)
+✔ all literal premium image references in runtime sources resolve to actual bundled artwork (3.092106ms)
+✔ actual original premium bundle coexists with the modular avatar and primary views in DE/EN (56.499323ms)
+✔ German and English release labels agree with version.json, HTML and installed cache (6.405928ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.341408
+✔ invalid fallback "{broken" is preserved when IndexedDB is unavailable (22.691933ms)
+✔ invalid fallback "null" is preserved when IndexedDB is unavailable (7.633076ms)
+✔ invalid fallback "false" is preserved when IndexedDB is unavailable (8.561494ms)
+✔ invalid fallback "0" is preserved when IndexedDB is unavailable (8.007017ms)
+✔ invalid fallback "\"text\"" is preserved when IndexedDB is unavailable (7.741597ms)
+✔ invalid fallback "{}" is preserved when IndexedDB is unavailable (6.329986ms)
+✔ invalid fallback "" is preserved when IndexedDB is unavailable (7.736249ms)
+✔ bad fallback cannot seed a newly opened empty IndexedDB (5.634452ms)
+✔ IndexedDB read failure never restores and overwrites from a stale fallback (6.050264ms)
+✔ invalid existing IndexedDB records block writes rather than loading fallback (30.132215ms)
+✔ localStorage access failure blocks seeding writes (8.482197ms)
+✔ valid fallback still restores goals, workouts, rewards and favorites with and without IndexedDB (21.417186ms)
+✔ genuinely new profiles may seed catalog normally (17.560362ms)
+✔ read error prevents exporting placeholder data as a valid personal backup (5.917789ms)
+✔ valid IndexedDB wins over an invalid stale fallback and does not rewrite on boot (8.346878ms)
+✔ startup read failure renders a persistent warning (27.156071ms)
+✔ malformed nested fallback state is locked before automatic seeding (6.50246ms)
+✔ malformed nested IndexedDB state is not rewritten or replaced from fallback (6.225162ms)
+✔ new verified milestone computed on startup is persisted once without rewriting unchanged history (26.970597ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 248.067151
+✔ stale fallback tab cannot overwrite the newer profile (45.681395ms)
+✔ two simultaneous fallback saves admit exactly one winner (17.159326ms)
+✔ the losing tab retains its unsaved data for an explicit backup (19.044459ms)
+✔ same tab queued saves remain ordered without false conflicts (14.376392ms)
+✔ freshly loaded tab may continue after another writer finishes (22.234159ms)
+✔ changed fallback is checked inside the acquired lock (14.600631ms)
+✔ without Web Locks fallback becomes read-only instead of risking a concurrent overwrite (13.795676ms)
+✔ fallback lock failure does not modify existing storage (14.685758ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173.492221
+✔ failed critical precache never activates replacement or deletes previous cache (25.386944ms)
+✔ complete precache includes composer and offline navigation returns cached entry (1.575311ms)
+✔ version diagnostics bypass worker cache (0.727321ms)
+✔ online navigation keeps cached HTML instead of mixing next HTML with installed scripts (1.020253ms)
+✔ missing entry cache and offline network return an explanatory page without deleting data (3.801621ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 39.356206
