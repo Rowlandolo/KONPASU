@@ -150,3 +150,11 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] Remote-Dateistand vollständig per Git-Blob-SHA verifiziert und Entwurfs-PR #1 erstellt.
 - [ ] GitHub-Reviewchecks für den aktuellen PR-Commit bestehen; lokale 193 Prüfungen sind getrennte Belege.
 - [ ] Browser/iPhone/Upgrade und Veröffentlichung weiterhin separat freigeben.
+
+## Release-Abnahme 2.4.0
+
+- [x] Nutzerfreigabe und bereits bestätigtes externes Backup berücksichtigt.
+- [x] 194 Regressionen sowie zehn echte Chromium-Prüfgruppen erfolgreich (Import/Abbruch, echte IndexedDB, Offline-Tab/Reload/Save, konkurrierende Tabs, sieben Ansichten DE/EN in fünf Breiten, JSON-Download und keine ungefangenen Browserfehler).
+- [x] PR #1 übernommen, Pages erfolgreich für caf1aeada7954ab8b35004eb4186492b9b4bfc51.
+- [x] Live version.json=2.4.0/v240 und Startseite unabhängig erreichbar.
+- [ ] Reales iPhone, VoiceOver und Upgrade einer bestehenden persönlichen PWA weiterhin zu prüfen.
