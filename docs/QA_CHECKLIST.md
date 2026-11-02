@@ -243,3 +243,14 @@ Aktueller Nachweis: 89e6dcc4bbcc9c90c2043628a8440a0b65e40c57, [Zwei-Formen-Lauf]
 - [ ] Kleine Produktionsgrafiken und reale Zielgeräte: Etappe 1 noch nicht abgeschlossen.
 
 Leistungsbeleg: e05b0c3f5228b10a83ef270fcac1b28045f1bf8a, [Lauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108), 236 Regressionen und 17 Atelier-Prüfgruppen. Produktive Größen-/Geräteziele bleiben offen.
+
+## Mobile Auslieferungsdateien
+
+- [x] 18 Laufzeitdateien mit kanonischer Quell-SHA, echten WebP-Maßen, Ausgabehash und Dateigröße verifiziert.
+- [x] Build prüft unveränderte Transparenz zur passend skalierten Referenz und begrenzten Farbfehler; Original-PNGs unangetastet.
+- [x] Veraltete Quellen, falsche Maße, doppelte/ungültige Pfade und fehlende Einträge werden abgewiesen; Originalvergleich ausdrücklich getrennt. Sieben neue Tests, 243 insgesamt.
+- [x] 8 MB Startgrafiken und 48 MiB Quell-RGBA numerisch erfüllt; weiterhin keine physische Gerätefreigabe.
+- [ ] Echter Browser: beide Formen, 256 Basis-/64 Rewardzustände, mobile Ressourcen-/Retry-/Race-/Maskenprüfungen weiterhin erfolgreich.
+- [ ] Bilder gegen Originalmodus vergleichen: gesamtes Set, Gesicht, Goldmuster und Anteil stärker abweichender Pixel.
+- [ ] 390 px bei 3× Pixeldichte prüfen; tatsächliche Aufnahmen sichten.
+- [ ] Echte Zieltelefon-/GPU-/Speicherspitzenabnahme vor Liveupdate.

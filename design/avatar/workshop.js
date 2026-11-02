@@ -67,6 +67,8 @@
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);
   if(profiles.version!==1||profiles.profiles.length!==2||profiles.profiles.map(p=>p.id).sort().join(',')!=='form-a,form-b')throw Error('Ungültige Körperprofile');
   for(const profile of profiles.profiles){if(!['form-a','form-b'].includes(profile.id)||!/^\.\/base-layer(-broad-v04)?-contract\.json$/.test(profile.contract))throw Error('Ungültige Körperquelle');profilesById.set(profile.id,profile)}
+  const original=new URLSearchParams(location.search).get('artwork')==='original';
+  window.KONPASU_DELIVERY25.configure(original?null:await json('./delivery-assets-v06.json'));document.body.dataset.delivery=original?'original':'mobile';
   await Promise.all([loadModel('form-a'),art.load(manifest)]);
   ready=true;active='form-a';document.body.dataset.bodyShape=active;document.getElementById('body-shape').disabled=false;refreshBase();document.body.dataset.artworkReady='true';
  }catch(error){document.getElementById('artwork-status').textContent='Grafikvorschau konnte nicht geladen werden: '+error.message;document.body.dataset.artworkReady='false'}

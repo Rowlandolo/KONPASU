@@ -32,6 +32,7 @@
   return {...PROPORTIONS[id]};
  }
  async function decode(layer){
+  layer=root.KONPASU_DELIVERY25?.resolve(layer)||{...layer,mime:'image/png'};
   const key=layer.file+':'+layer.sha256;if(decodedCache.has(key))return decodedCache.get(key);
   const pending=decodeFile(layer);decodedCache.set(key,pending);try{return await pending}catch(error){decodedCache.delete(key);throw error}
  }
@@ -41,7 +42,7 @@
   const bytes=await response.arrayBuffer();
   const digest=new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes));
   if(Array.from(digest,v=>v.toString(16).padStart(2,'0')).join('')!==layer.sha256)throw Error('Base checksum mismatch: '+layer.id);
-  const src=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:'image/png'}))});
+  const src=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:layer.mime}))});
   const image=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Invalid base PNG: '+layer.id));img.src=src});
   if(image.naturalWidth!==layer.width||image.naturalHeight!==layer.height)throw Error('Base dimensions mismatch: '+layer.id);
   return {image,src};

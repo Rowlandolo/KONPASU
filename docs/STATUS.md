@@ -248,3 +248,11 @@ https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108 für e05b0c3f5228
 40 synchron gemessene Rendererzyklen auf CI: Median 6.5 ms, p95 8.1 ms, Maximum 13.2 ms, ohne Paint. Keine Geräte-/Frameratezusage daraus ableiten. Die vollständigen Set-Aufnahmen beider Körper sind sogar bytegleich mit den archivierten v04-PNGs; keine visuelle Verschlechterung durch Knoten-/Maskenwiederverwendung. Vollbeleg mit Inventar/Messgrenzen: verification-performance-v05.json.
 
 Etappe 1 bleibt aktiv: Produktionsgrafikgrößen und reale Zielgerätmessung fehlen. Sechs übergeordnete Avatar-Etappen in AVATAR_RELEASE_STEPS.md; zusätzliche App-/Copilotarbeiten separat. Kein Liveupdate, keine Profil-/Schema-/Cacheänderung. Abschlussnachtrag verändert nur Dokumentation, Nachweise und die Budget-Scopebeschreibung.
+
+## Mobile Auslieferungsgrafiken (Etappe 1)
+
+Reproduzierbare Buildpipeline scripts/build-avatar-delivery.cjs mit gepinnter Playwright-/Chromiumversion erstellt. 18 verkleinerte WebP-Laufzeitdateien aus unveränderten kanonischen PNGs; vollständige Bildkoordinaten bleiben erhalten. Originale, Artikel-IDs, Passformen und Quellen-Hashes bleiben erhalten. Build-Lauf 41540836840 erfolgreich: Alpha-Abweichung zur passend skalierten Referenz je Datei null, maximaler Farb-RMSE etwa 7.25/255 in opaken Bereichen. Das ist keine Behauptung identischer Pixel zur unskalierten Originaldatei.
+
+Strikter Deliveryadapter prüft Quell-SHA, Maße, Ausgabehash und tatsächliche Bildmaße. Mobile Dateien sind Standard im Atelier; ?artwork=original bietet den getrennten Originalvergleich. Fehlende oder veraltete Deliveryeinträge fallen nicht still auf große Originale zurück. Kein Profil-/Schema-/Live-/Cacheupdate.
+
+Bestandsrechnung jetzt 543,984 Bytes Startgrafiken, 776,544 Bytes insgesamt für beide Körper und das Fünferset. Quell-RGBA der Auslieferungsdateien 39,292,672 Bytes, numerische 8-MB-/48-MiB-Ziele erfüllt. Physische Geräte-/GPU-/Peakmessung weiterhin offen. Sieben neue Delivery-/Integritätstests; insgesamt 243 lokale Prüfungen. Neuer echter Browservergleich für beide Formen sowie 390 px bei 3× Pixeldichte vorbereitet; Ergebnis ausstehend.

@@ -3,30 +3,32 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {inventory,evaluate}=require('./avatar-budget.cjs');
 const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/artbook');
 (async()=>{
- fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js','design/avatar/reference-board.webp'];
+ fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js','design/avatar/reference-board.webp','browser-results/artbook/fullset.png','browser-results/artbook/form-b-fullset.png','browser-results/artbook/original-form-a.png','browser-results/artbook/original-form-b.png','browser-results/artbook/retina-mobile.png','browser-results/artbook/retina-original.png'];
+ const delivery=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/delivery-assets-v06.json'),'utf8'));files.push('design/avatar/asset-delivery.js','design/avatar/delivery-assets-v06.json',...delivery.entries.map(e=>'design/avatar/'+e.file.replace('./','')));
+ const payload=source=>delivery.entries.find(e=>e.source===source).file.slice(1),payloadRoute=source=>'**'+payload(source);
  const baseContract=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/base-layer-contract.json'),'utf8'));files.push(...baseContract.layers.map(l=>'design/avatar/'+l.file.replace('./','')));
  const broadContract=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/base-layer-broad-v04-contract.json'),'utf8'));files.push(...broadContract.layers.map(l=>'design/avatar/'+l.file.replace('./','')));
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/prototype-assets.json'),'utf8'));files.push(...manifest.assets.map(a=>'design/avatar/'+a.file.replace('./','')));
  let server,browser,context;const report={checks:[],status:'failed'},errors=[];
  try{
-  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage(),requests=[];page.on('request',r=>{if(r.url().startsWith(server.url))requests.push(new URL(r.url()).pathname)});page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Eight verified PNG fragments loaded');
+  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage(),requests=[];page.on('request',r=>{if(r.url().startsWith(server.url))requests.push(new URL(r.url()).pathname)});page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Eight verified equipment delivery fragments loaded');
   const budget=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/performance-budget.json'),'utf8')),assets=inventory(root);
-  assert.equal(evaluate(assets,budget).prototypePassed,true);
+  assert.equal(evaluate(assets,budget).prototypePassed,true);assert.equal(evaluate(assets,budget).productionTargetsPassed,true);assert.equal(await page.getAttribute('body','data-delivery'),'mobile');
   assert.ok(!requests.some(p=>p.includes('broad-v04')||p.endsWith('/premium-art-bundle.js')||p.endsWith('/reference-board.webp')));
   assert.equal(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.diagnostics().rasterSurfaces),0);
   assert.equal(await page.locator('#scene defs image').count(),0);assert.equal(await page.locator('#scene mask use').count(),4);assert.equal(await page.locator('#scene image').count(),15);
   await page.evaluate(()=>window.__bodyNode=document.querySelector('#scene [data-base-id="body"]'));
   await page.locator('[data-item="strength-1"]').uncheck();await page.locator('[data-item="strength-1"]').check();
   assert.equal(await page.evaluate(()=>window.__bodyNode===document.querySelector('#scene [data-base-id="body"]')),true);
-  const startupPNGs=requests.filter(p=>p.endsWith('.png')),byFile=new Map(assets.assets.map(a=>[a.file,a.bytes]));assert.equal(startupPNGs.length,15);const startupPNGBytes=startupPNGs.reduce((sum,p)=>{const file='.'+p.slice('/design/avatar'.length);assert.ok(byFile.has(file),'Unexpected startup bitmap: '+p);return sum+byFile.get(file)},0);assert.equal(startupPNGBytes,assets.startupAssetBytes);
-  report.performance={...assets,assets:undefined,observedStartupPNGRequests:startupPNGs.length,observedStartupRequestedPNGBytes:startupPNGBytes,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
+  const startupPNGs=requests.filter(p=>/\.(png|webp)$/.test(p)),byFile=new Map(assets.assets.map(a=>[a.file,a.bytes]));assert.equal(startupPNGs.length,15);const startupPNGBytes=startupPNGs.reduce((sum,p)=>{const file='.'+p.slice('/design/avatar'.length);assert.ok(byFile.has(file),'Unexpected startup delivery bitmap: '+p);return sum+byFile.get(file)},0);assert.equal(startupPNGBytes,assets.startupAssetBytes);
+  report.performance={...assets,assets:undefined,observedStartupDeliveryRequests:startupPNGs.length,observedStartupRequestedDeliveryBytes:startupPNGBytes,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
   report.checks.push('Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings');
   async function chooseShape(id){await page.locator('#body-shape').selectOption(id);await page.waitForFunction(value=>document.body.dataset.bodyShape===value&&!document.body.dataset.shapeLoading,id)}
   const baseParts=['hair-back','body','shoes','kimono','hakama','obi','hair-front'];
   assert.deepEqual(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.getSelection()),baseParts);
   assert.equal(await page.locator('#scene > image[data-base-id]').count(),7);
   const digest=()=>page.evaluate(async()=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',window.KONPASU_WORKSHOP_BASE.snapshot()))).join(','));
-  const complete=await digest();report.checks.push('Verified base PNGs in one depth-ordered SVG scene');
+  const complete=await digest();report.checks.push('Canonical base geometry with verified runtime bitmaps in one SVG scene');
   await page.locator('[data-preview="base"]').click();
   // Gray code visits every combination with one user toggle between adjacent states.
   for(const part of baseParts)await page.locator(`[data-base-part="${part}"]`).uncheck();
@@ -70,7 +72,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   await chooseShape('form-a');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
   await chooseShape('form-b');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
   assert.equal(await page.locator('#scene > image[mask]').count(),4);await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene > image[mask]').count(),0);assert.equal(await page.locator('#scene > image[data-item-id]').count(),8);await page.locator('[data-base-part="kimono"]').check();
-  assert.equal(requests.filter(p=>p.endsWith('/body-broad-v04.png')).length,1);assert.equal(requests.filter(p=>p.endsWith('/kimono-broad-v04.png')).length,1);assert.equal(requests.filter(p=>p.endsWith('/hakama-broad-v04.png')).length,1);
+  assert.equal(requests.filter(p=>p.endsWith(payload('./layers/body-broad-v04.png'))).length,1);assert.equal(requests.filter(p=>p.endsWith(payload('./layers/kimono-broad-v04.png'))).length,1);assert.equal(requests.filter(p=>p.endsWith(payload('./layers/hakama-broad-v04.png'))).length,1);
   report.checks.push('Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching');
   const pixels=await page.evaluate(async()=>{
    const api=window.KONPASU_SCENE25,svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='occlusion-probe';svg.setAttribute('width',512);svg.setAttribute('height',768);
@@ -86,12 +88,12 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   await page.locator('#artbook-reference').evaluate(e=>e.open=false);await page.locator('#artbook-reference').evaluate(e=>e.open=true);
   assert.equal(requests.filter(p=>p.endsWith('/reference-board.webp')).length,1);assert.equal(requests.filter(p=>p.endsWith('/premium-art-bundle.js')).length,0);report.checks.push('Original artbook board loads once on demand without the large bundle');
   const retry=await context.newPage();retry.on('pageerror',e=>errors.push(e.message));let bodyAttempts=0;
-  await retry.route('**/layers/body-broad-v04.png',route=>++bodyAttempts===1?route.fulfill({status:503,body:'synthetic temporary failure'}):route.continue());
+  await retry.route(payloadRoute('./layers/body-broad-v04.png'),route=>++bodyAttempts===1?route.fulfill({status:503,body:'synthetic temporary failure'}):route.continue());
   await retry.goto(server.url+'design/avatar/index.html');await retry.waitForFunction(()=>document.body.dataset.artworkReady==='true');
   await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.getElementById('shape-status').textContent.includes('konnte'));
   assert.equal(await retry.getAttribute('body','data-body-shape'),'form-a');assert.equal(await retry.locator('#scene > image[data-item-id]').count(),8);
   await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.body.dataset.bodyShape==='form-b'&&!document.body.dataset.shapeLoading);assert.equal(bodyAttempts,2);await retry.close();
-  const race=await context.newPage();race.on('pageerror',e=>errors.push(e.message));await race.route('**/layers/body-broad-v04.png',async route=>{await new Promise(resolve=>setTimeout(resolve,250));await route.continue()});
+  const race=await context.newPage();race.on('pageerror',e=>errors.push(e.message));await race.route(payloadRoute('./layers/body-broad-v04.png'),async route=>{await new Promise(resolve=>setTimeout(resolve,250));await route.continue()});
   await race.goto(server.url+'design/avatar/index.html');await race.waitForFunction(()=>document.body.dataset.artworkReady==='true');
   await race.locator('#body-shape').selectOption('form-b');await race.locator('[data-item="strength-1"]').uncheck();await race.locator('#body-shape').selectOption('form-a');
   await race.waitForFunction(()=>window.KONPASU_WORKSHOP_RESOURCES().loadedForms.includes('form-b')&&window.KONPASU_WORKSHOP_RESOURCES().pendingForms.length===0);
@@ -103,8 +105,27 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    samples.sort((a,b)=>a-b);return {samples:40,medianMs:samples[20],p95Ms:samples[37],maxMs:samples[39],includesPaint:false};
   });
   const renderStats=await page.evaluate(()=>window.KONPASU_SCENE25.diagnostics(document.getElementById('scene')));assert.ok(renderStats.liveImages<=budget.prototype.maxSceneImages);report.performance.renderStats=renderStats;
+  const original=await context.newPage();original.on('pageerror',e=>errors.push(e.message));await original.goto(server.url+'design/avatar/index.html?artwork=original');await original.waitForFunction(()=>document.body.dataset.artworkReady==='true');assert.equal(await original.getAttribute('body','data-delivery'),'original');
+  await original.locator('.stage').screenshot({path:path.join(output,'original-form-a.png')});
+  await original.locator('#body-shape').selectOption('form-b');await original.waitForFunction(()=>document.body.dataset.bodyShape==='form-b'&&!document.body.dataset.shapeLoading);await original.locator('.stage').screenshot({path:path.join(output,'original-form-b.png')});
+  const compare=async(target,file,baseline)=>target.evaluate(async({file,baseline})=>{
+   const load=url=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=url});const [a,b]=await Promise.all([load(file),load(baseline)]);if(a.naturalWidth!==b.naturalWidth||a.naturalHeight!==b.naturalHeight)throw Error('Comparison frame mismatch');
+   const c=document.createElement('canvas');c.width=a.naturalWidth;c.height=a.naturalHeight;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(a,0,0);const left=ctx.getImageData(0,0,c.width,c.height).data;ctx.clearRect(0,0,c.width,c.height);ctx.drawImage(b,0,0);const right=ctx.getImageData(0,0,c.width,c.height).data;
+   let total=0,large=0,face=0,faceCount=0,gold=0,goldCount=0;
+   for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){const p=(y*c.width+x)*4;let max=0;for(let k=0;k<3;k++){const d=Math.abs(left[p+k]-right[p+k]);total+=d;max=Math.max(max,d);if(x>=190*c.width/430&&x<255*c.width/430&&y>=30*c.height/645&&y<95*c.height/645){face+=d;faceCount++}if(x>=110*c.width/430&&x<320*c.width/430&&y>=110*c.height/645&&y<220*c.height/645){gold+=d;goldCount++}}if(max>32)large++}
+   return {meanAbsoluteError:total/(c.width*c.height*3),highDifferenceFraction:large/(c.width*c.height),faceMAE:face/faceCount,goldMAE:gold/goldCount};
+  },{file:server.url+'browser-results/artbook/'+file,baseline:server.url+'browser-results/artbook/'+baseline});
+  report.deliveryComparison={formA:await compare(original,'fullset.png','original-form-a.png'),formB:await compare(original,'form-b-fullset.png','original-form-b.png')};
+  for(const result of Object.values(report.deliveryComparison)){assert.ok(result.meanAbsoluteError<=3);assert.ok(result.highDifferenceFraction<=.025);assert.ok(result.faceMAE<=5);assert.ok(result.goldMAE<=5)}await original.close();report.checks.push('Mobile delivery matches original framing with bounded full-figure, face, gold-detail and high-difference pixel errors');
+  const retinaContext=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3});
+  try{
+   const mobile=await retinaContext.newPage();mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(server.url+'design/avatar/index.html');await mobile.waitForFunction(()=>document.body.dataset.artworkReady==='true');await mobile.locator('.stage').screenshot({path:path.join(output,'retina-mobile.png')});
+   const source=await retinaContext.newPage();source.on('pageerror',e=>errors.push(e.message));await source.goto(server.url+'design/avatar/index.html?artwork=original');await source.waitForFunction(()=>document.body.dataset.artworkReady==='true');await source.locator('.stage').screenshot({path:path.join(output,'retina-original.png')});
+   report.deliveryComparison.retina3x=await compare(source,'retina-mobile.png','retina-original.png');
+   const r=report.deliveryComparison.retina3x;assert.ok(r.meanAbsoluteError<=3);assert.ok(r.highDifferenceFraction<=.025);assert.ok(r.faceMAE<=5);assert.ok(r.goldMAE<=5);report.checks.push('390px at device scale factor 3 retains bounded face and gold-detail errors against original delivery');
+  }finally{await retinaContext.close()}
   const failed=await context.newPage();
-  await failed.route('**/layers/obi-v03.png',route=>route.fulfill({status:200,contentType:'image/png',body:Buffer.from('corrupted synthetic PNG')}));
+  await failed.route(payloadRoute('./layers/obi-v03.png'),route=>route.fulfill({status:200,contentType:'image/webp',body:Buffer.from('corrupted synthetic delivery')}));
   await failed.goto(server.url+'design/avatar/index.html');await failed.waitForFunction(()=>document.body.dataset.artworkReady==='false');
   assert.match(await failed.locator('#artwork-status').innerText(),/checksum mismatch/);
   assert.equal(await failed.locator('#scene image[data-item-id]').count(),0);

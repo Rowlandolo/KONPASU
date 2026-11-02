@@ -109,3 +109,9 @@ performance-budget.json enthält getrennte Prototypobergrenzen und noch nicht er
 Szenenrenderer hält unveränderte Bildknoten, aktualisiert nur veränderte Attribute und referenziert aktive Bildflächen per SVG-use in Masken. Die Zeichenreihenfolge bleibt explizit. Basisraster entstehen nur für angeforderte Prüfsnapshots; dieselbe Daten-URL dient Decode und SVG. Keine PNG-/Artikel-/Passformänderung und keine neuen Profilwrites. Restlicher Lieferplan mit sechs Etappen: AVATAR_RELEASE_STEPS.md.
 
 Leistungsprüfung erfolgreich für e05b0c3f5228b10a83ef270fcac1b28045f1bf8a: https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108, 236 Regressionen und 17 Atelier-Gruppen. Beide Set-PNGs bytegleich zu v04, tatsächliche Maskenpixel und verzögertes Laden korrekt. 39.32 % weniger anfängliche Grafik-/Bundle-Quelldateibytes laut Bestandsvergleich, Start-PNG-Anfragen bestätigt. Produktionsziele weiter offen; aktueller Sechs-Etappen-Plan: AVATAR_RELEASE_STEPS.md.
+
+## Getrennte kanonische Bilder und Laufzeitdateien
+
+Die Bild-Buildpipeline liest die bestätigten PNGs, ändert sie nicht und erzeugt kleinere WebPs mit vollständigem Bildrahmen. delivery-assets-v06.json bindet jede Ausgabe an ihre kanonische Quell-SHA, Quellmaße, tatsächlichen Ausgabemaße und Hash. Reg-/Ankergeometrie bleibt in den bisherigen kanonischen Manifesten; nur der Pixeltransport wird ersetzt. Originalmodus ist über ?artwork=original getrennt überprüfbar.
+
+asset-delivery.js validiert die Zuordnung atomar und verweigert fehlende oder veraltete Einträge. Die Loader prüfen weiterhin Ausgabehash und echte decodierte Maße. Gleiche stabile IDs/Passformen bleiben erhalten. scripts/avatar-budget.cjs rechnet standardmäßig die reale Auslieferung; inventory(root,{original:true}) bleibt als Ursprungsrechnung verfügbar. Numerische Ziele sind jetzt erfüllt; visuelle und physische Abnahmen werden separat belegt.

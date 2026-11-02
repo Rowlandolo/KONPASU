@@ -94,3 +94,7 @@ PERF-01: Vorher beide Formen und komplettes 6,3-MB-Referenzbundle beim Start. Fo
 PERF-02 bleibt Produktionsblocker für den neuen Avatar: aktuelle PNG-Quellauflösungen benötigen 15.52 MB beim Start und geschätzt 108 MiB decodiertes RGBA für alle verfügbaren Formen/Artikel. Die Schätzung enthält keine GPU-, DOM-, String- oder Browserkosten. Prototypbudgets sind kein Ersatz für kleinere Auslieferungsgrafiken und physische Gerätemessungen. Neue Grafikversionen/Formatwahl und Leistungsprüfung bleiben Bestandteil von Etappe 1.
 
 Aktueller Leistungsnachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108, 236 Regressionen und 17 Atelier-Prüfgruppen erfolgreich. Referenzen werden erst bei ausdrücklichem Öffnen, dann unmittelbar geladen. PERF-02 bleibt offen; weder die Prototypbudgets noch CI-Skriptzeiten sind eine Produktions-/iPhonefreigabe.
+
+## Verkleinerte Laufzeitgrafiken
+
+PERF-02: Eigene Mobile-Auslieferungsdateien erfüllen nun rechnerisch die Größen-/Quell-RGBA-Ziele. Die Originale bleiben im Repository und sind unverändert. Visuelle Browserabnahme gegen Originale und bei 3× Pixeldichte steht für diesen Stand aus. Bildvergleich ist verlustbegrenzt, nicht byteidentisch zur kanonischen PNG-Darstellung. Echte iPhone-/GPU-/Speicherspitzenprüfung bleibt offen.

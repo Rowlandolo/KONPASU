@@ -23,13 +23,14 @@
   for(const spec of manifest.assets){
    placement(spec);clippingPolygons(spec);
    if(!/^\.\/equipment\/[a-z-]+\.png$/.test(spec.file))throw Error('Unsupported prototype path');
-   const response=await fetch(spec.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
+   const delivered=root.KONPASU_DELIVERY25?.resolve(spec)||{...spec,mime:'image/png'};
+   const response=await fetch(delivered.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
    const bytes=await response.arrayBuffer(),view=new Uint8Array(bytes);
-   if(view.length<24||hex(view.slice(0,8))!=='89504e470d0a1a0a')throw Error('Invalid PNG: '+spec.partId);
-   if(hex(new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes)))!==spec.sha256)throw Error('Artwork checksum mismatch: '+spec.partId);
-   const src=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:'image/png'}))});
+   if(view.length<24||(delivered.mime==='image/png'?hex(view.slice(0,8))!=='89504e470d0a1a0a':hex(view.slice(0,4))!=='52494646'||hex(view.slice(8,12))!=='57454250'))throw Error('Invalid PNG: '+spec.partId);
+   if(hex(new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes)))!==delivered.sha256)throw Error('Artwork checksum mismatch: '+spec.partId);
+   const src=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:delivered.mime}))});
    const image=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=src});
-   if(image.naturalWidth!==spec.width||image.naturalHeight!==spec.height)throw Error('Artwork dimensions mismatch: '+spec.partId);
+   if(image.naturalWidth!==delivered.width||image.naturalHeight!==delivered.height)throw Error('Artwork dimensions mismatch: '+spec.partId);
    next.set(spec.logicalAsset,{...spec,src});
   }
   loaded.clear();for(const [key,value] of next)loaded.set(key,value);return next.size;
