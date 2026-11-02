@@ -156,3 +156,5 @@ Remoteprüfung: alle 72 geänderten/neuen Dateien stimmen per Git-Blob-SHA mit d
 ## Veröffentlichungsfreigabe
 
 Nutzerfreigabe zur Übernahme des vollständigen aktuellen Standes nach main liegt vor. Extern gesichertes JSON-Backup wurde im Gespräch bestätigt. Vor Merge zusätzlichen Chromiumlauf in GitHub Actions ausführen; danach Pages-Lauf für den tatsächlichen Mergecommit und ausgelieferte Version prüfen. Echte iPhone-Abnahme bleibt als offener Gerätebefund dokumentiert.
+
+Chromiumlauf in GitHub Actions erstmals durchgeführt: reale Speicherung, Import/Abbruch/Validierung, Offline-Reload/Save, 70 Ansichts-/Sprach-/Viewportkombinationen und Konfliktschutz funktionieren. Kaltstartfehler gm-Auswertung vor core-v15-Helferdefinition erkannt und durch eigenen frühen gmYes-Helfer korrigiert. Zusätzliche Regression; Gesamtstand jetzt 194. Beide Tabs werden im Browserprüflauf vor gezielter Konflikterzeugung auf denselben gespeicherten Ausgangsstand synchronisiert. Reales iPhone/VoiceOver/Alt-PWA-Upgrade weiterhin offen.

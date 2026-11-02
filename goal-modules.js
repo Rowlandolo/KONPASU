@@ -68,6 +68,8 @@ const gmNum=(obj,k)=>number(obj?.[k]);
 const gmHas=(row,key)=>Number.isFinite(gmNum(row.values,key));
 const gmSum=(rows,key,filter=()=>true)=>rows.filter(r=>filter(r)&&gmHas(r,key)).reduce((s,r)=>s+gmNum(r.values,key),0);
 const gmDistinct=(rows,pred)=>new Set(rows.filter(pred).map(r=>r.date)).size;
+// Available before core-v15.js loads: this module renders during deferred startup.
+function gmYes(value){return ['Ja','Yes',true,'true','yes','ja'].includes(value)}
 // Shared conservative evidence rules; raw legacy records are never rewritten.
 function gmAlcoholEvidence(r){
  const v=r.values||{},ml=gmNum(v,'ml'),abv=gmNum(v,'abv');
@@ -85,13 +87,13 @@ function gmFreeDayEvidence(g,rows){
   const fields=g.key==='sugar'?['grams','sweets']:['minutes'];
   return fields.some(k=>{const v=r.values?.[k];return v!==undefined&&v!==null&&v!==''&&(!gmHas(r,k)||gmNum(r.values,k)!==0)});
  });
- return {confirmed:!!flag&&rows.some(r=>v15Yes(r.values?.[flag]))&&!conflict,conflict};
+ return {confirmed:!!flag&&rows.some(r=>gmYes(r.values?.[flag]))&&!conflict,conflict};
 }
 function gmCapEvidence(g,d){
  const cfg=configAt(g,d),rows=gmRows(g,d),weekly=cfg.period==='weekly',start=weekly?monday(d):d,end=weekly?dateShift(start,6):d;
  const byDay=new Map();for(const r of rows){const list=byDay.get(r.date)||[];list.push(r);byDay.set(r.date,list)}
  const freeCoverage=Array.from({length:weekly?7:1},(_,i)=>gmFreeDayEvidence(g,byDay.get(dateShift(start,i))||[]).confirmed).every(Boolean);
- const confirmed=g.key==='screen'&&weekly?Array.from({length:7},(_,i)=>rows.some(r=>r.date===dateShift(start,i)&&v15Yes(r.values?.complete))).every(Boolean):rows.some(r=>v15Yes(r.values?.complete));
+ const confirmed=g.key==='screen'&&weekly?Array.from({length:7},(_,i)=>rows.some(r=>r.date===dateShift(start,i)&&gmYes(r.values?.complete))).every(Boolean):rows.some(r=>gmYes(r.values?.complete));
  const relevant=rows.filter(r=>g.key!=='screen'||!['Beruf / Schule','Work / school'].includes(r.values?.purpose));
  const field=g.key==='sugar'?(gmMode(g,d)==='sweets'?'sweets':'grams'):['gaming','screen'].includes(g.key)?'minutes':null;
  const invalid=field?relevant.some(r=>{const v=r.values?.[field];return v!==undefined&&v!==null&&v!==''&&(!gmHas(r,field)||gmNum(r.values,field)<0)}):g.key==='alcohol'&&relevant.some(r=>gmAlcoholEvidence(r)==='unknown');
@@ -195,7 +197,7 @@ function gmBreakdown(g){const rows=recordsFor(g),keys=gmNutrientKeys[g.key]||[];
 }
 function gmEvidenceHint(g){
  const cfg=configAt(g,day),rows=gmRows(g,day),flag={alcohol:'alcoholFree',sugar:'sugarFree',gaming:'gamingFree',screen:'screenFree'}[g.key];
- const conflicts=[...new Set(rows.map(r=>r.date))].filter(date=>{const list=rows.filter(r=>r.date===date);return list.some(r=>v15Yes(r.values?.[flag]))&&gmFreeDayEvidence(g,list).conflict});
+ const conflicts=[...new Set(rows.map(r=>r.date))].filter(date=>{const list=rows.filter(r=>r.date===date);return list.some(r=>gmYes(r.values?.[flag]))&&gmFreeDayEvidence(g,list).conflict});
  const warning=conflicts.length?`<p class="hint" role="status">${tr('Widersprüchliche Tagesangaben – bitte die Detailprotokolle prüfen:','Conflicting day entries – please review the detailed records:')} ${conflicts.map(esc).join(', ')}. ${tr('Bei Getränken ohne Menge oder Alkoholgehalt bleibt der Nachweis offen.','Drinks with missing volume or alcohol content leave evidence unverified.')}</p>`:'';
  if(cfg.direction!=='max')return warning;
  const scope=g.key==='screen'&&cfg.period==='weekly'?tr('Für diese Woche jeden der sieben Tage vollständig bestätigen.','Confirm complete usage for each of the seven days in this week.'):tr('Die Vollständigkeitsangabe gilt für den eingestellten Zeitraum.','The completeness confirmation applies to the configured period.');
