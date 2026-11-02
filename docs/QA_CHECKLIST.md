@@ -248,9 +248,12 @@ Leistungsbeleg: e05b0c3f5228b10a83ef270fcac1b28045f1bf8a, [Lauf](https://github.
 
 - [x] 18 Laufzeitdateien mit kanonischer Quell-SHA, echten WebP-Maßen, Ausgabehash und Dateigröße verifiziert.
 - [x] Build prüft unveränderte Transparenz zur passend skalierten Referenz und begrenzten Farbfehler; Original-PNGs unangetastet.
-- [x] Veraltete Quellen, falsche Maße, doppelte/ungültige Pfade und fehlende Einträge werden abgewiesen; Originalvergleich ausdrücklich getrennt. Sieben neue Tests, 243 insgesamt.
+- [x] Veraltete Quellen, falsche Maße, doppelte/ungültige Pfade und fehlende Einträge werden abgewiesen; Originalvergleich ausdrücklich getrennt. Neun neue Tests, 245 insgesamt, einschließlich Rezeptkonsistenz und Ausgabehash im Dateinamen.
 - [x] 8 MB Startgrafiken und 48 MiB Quell-RGBA numerisch erfüllt; weiterhin keine physische Gerätefreigabe.
-- [ ] Echter Browser: beide Formen, 256 Basis-/64 Rewardzustände, mobile Ressourcen-/Retry-/Race-/Maskenprüfungen weiterhin erfolgreich.
-- [ ] Bilder gegen Originalmodus vergleichen: gesamtes Set, Gesicht, Goldmuster und Anteil stärker abweichender Pixel.
-- [ ] 390 px bei 3× Pixeldichte prüfen; tatsächliche Aufnahmen sichten.
+- [x] Echter Browser: beide Formen, 256 Basis-/64 Rewardzustände, mobile Ressourcen-/Retry-/Race-/Maskenprüfungen weiterhin erfolgreich.
+- [x] Bilder gegen Originalmodus vergleichen: gesamtes Set, Gesicht, Goldmuster und Anteil stärker abweichender Pixel. Gesamt-MAE ≤3, Gesicht/Gold jeweils ≤5 auf 0–255-Skala; Anteil der Pixel mit Kanalabweichung >32 ≤2.5 %.
+- [x] 390 px bei 3× Pixeldichte geprüft; tatsächliche Aufnahmen gesichtet. Keine Behauptung eines physischen Telefonlaufs.
+- [x] Wiederholung des gepinnten Builds auf frischem CI-Runner: Manifest und alle 18 Laufzeitdateien bytegleich; kanonische PNGs unverändert.
 - [ ] Echte Zieltelefon-/GPU-/Speicherspitzenabnahme vor Liveupdate.
+
+Aktueller Abschluss: c99b943e70666452aeba9e9a95fe0f05f2c4ad34, [Browser/Regressionen](https://github.com/Rowlandolo/KONPASU/actions/runs/41544503356), [Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41544503475). 245 Regressionen und 19 Atelier-Prüfgruppen erfolgreich. Nachweis und archivierte Vergleichsaufnahmen: design/avatar/verification-delivery-v06.json. Historische offene Produktionsgrößen-/Browserpunkte oben sind für diesen technischen Stand abgeschlossen; Geräte-/Offlineintegration bleibt offen.

@@ -17,7 +17,7 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Aktuelle Entwicklungspriorität ist Etappe 1 aus AVATAR_RELEASE_STEPS.md: mobile Leistung und Grafikbudget. Bedarfsgesteuertes Laden, SVG-Wiederverwendung und Prototypgrenzen sind geprüft; kleinere Produktionsgrafiken und reale Gerätemessung stehen aus. Danach folgen fehlende Tiefenfragmente, App-/Datenintegration, die übrigen 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Eine erste Liveversion mit dem Startset kann vor allen 90 weiteren Grafiken erscheinen, sobald die zugehörigen Integrations-/Geräte-/Releasegates erfüllt sind und nicht übertragene Artikel erhalten bleiben.
+Aktuelle Entwicklungspriorität ist Etappe 2 aus AVATAR_RELEASE_STEPS.md: tatsächliche Vorder-/Hinterfragmente und Passform. Zuerst Geschirrriemen vor/hinter dem Körper ausdrücklich trennen, danach Ärmelöffnungen und Armartikel auf beiden Formen prüfen. Auswahl und stabile Artikel-IDs müssen erhalten bleiben. Etappe 1 ist technisch geprüft: 0.77 MB Startgrafiken und 47.74 MiB Quell-RGBA, Originalvergleich bei beiden Formen und 3× Pixeldichte bestanden. Reale Telefon-/GPU-/Peakmessungen bleiben als Freigabebedingung in Etappe 5. Danach folgen App-/Datenintegration, die übrigen 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Eine erste Liveversion mit dem Startset kann vor allen 90 weiteren Grafiken erscheinen, sobald die zugehörigen Integrations-/Geräte-/Releasegates erfüllt sind und nicht übertragene Artikel erhalten bleiben.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
@@ -94,3 +94,5 @@ Aktueller Etappe-1-Beleg: https://github.com/Rowlandolo/KONPASU/actions/runs/415
 ## Numerische Produktionsbudgets / nächster Abschnitt
 
 Neue Laufzeitgrafiken erfüllen die numerischen Datei-/Quell-RGBA-Ziele. Nach echtem Vergleich gegen Originale und 3×-Vorschau ist der technische Teil von Etappe 1 abgeschlossen. Die physische Gerätebestätigung bleibt in Etappe 5 und ist weiterhin Voraussetzung vor Veröffentlichung. Danach Etappe 2: tatsächliche Vorder-/Hinterfragmente für Riemen, Ärmel und spätere Kopfteile.
+
+Abschluss belegt: verification-delivery-v06.json, 245 Regressionen und 19 Atelier-Prüfgruppen im Lauf 41544503356 erfolgreich, finaler Build bytegleich wiederholt. Etappe 2 ist die nächste konkrete Lieferung; übrige fünf Etappen und reale Gerätefreigabe bleiben offen.

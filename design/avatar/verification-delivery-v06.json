@@ -1,0 +1,417 @@
+{
+  "status": "passed-technical-delivery-review-physical-device-review-open",
+  "testedSourceCommit": "c99b943e70666452aeba9e9a95fe0f05f2c4ad34",
+  "workflowRun": 41544503356,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41544503356",
+  "rebuildWorkflowRun": 41544503475,
+  "rebuildWorkflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41544503475",
+  "automatedTests": 245,
+  "appChromium": "passed existing acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Eight verified equipment delivery fragments loaded",
+      "Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings",
+      "Canonical base geometry with verified runtime bitmaps in one SVG scene",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all eight equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Reversible rear-strap occlusion without deselection",
+      "All 32 selectable combinations",
+      "Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching",
+      "Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Original artbook board loads once on demand without the large bundle",
+      "Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice",
+      "Mobile delivery matches original framing with bounded full-figure, face, gold-detail and high-difference pixel errors",
+      "390px at device scale factor 3 retains bounded face and gold-detail errors against original delivery",
+      "Corrupted required layer fails visibly with no partial body or equipment",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed",
+    "performance": {
+      "startupAssetBytes": 770084,
+      "totalAssetBytes": 1099250,
+      "additionalBodyBytes": 329166,
+      "referenceBundleBytes": 6298236,
+      "optionalReferenceBytes": 436058,
+      "previousEagerStartupBytes": 25583088,
+      "startupBytesAvoided": 24813004,
+      "initialAssets": 15,
+      "totalAssets": 18,
+      "initialDecodedSourceRGBABytes": 36624896,
+      "decodedSourceRGBABytes": 50061824,
+      "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+      "mode": "mobile",
+      "canonical": {
+        "startupAssetBytes": 15523832,
+        "totalAssetBytes": 19284852,
+        "decodedSourceRGBABytes": 113246724
+      },
+      "observedStartupDeliveryRequests": 15,
+      "observedStartupRequestedDeliveryBytes": 770084,
+      "startupRasterSurfaces": 0,
+      "maskImageCopies": 0,
+      "stableBodyNode": true,
+      "sceneScriptTiming": {
+        "samples": 40,
+        "medianMs": 0.20000000001164153,
+        "p95Ms": 0.40000000002328306,
+        "maxMs": 0.40000000002328306,
+        "includesPaint": false
+      },
+      "renderStats": {
+        "created": 334,
+        "reused": 2610,
+        "attributeWrites": 3309,
+        "lastRenderMs": 0.29999999998835847,
+        "liveImages": 15
+      }
+    },
+    "deliveryComparison": {
+      "formA": {
+        "meanAbsoluteError": 1.0332265341877265,
+        "highDifferenceFraction": 0.0024191806465548274,
+        "faceMAE": 3.319605522682446,
+        "goldMAE": 3.781861471861472
+      },
+      "formB": {
+        "meanAbsoluteError": 1.1053795569635443,
+        "highDifferenceFraction": 0.0025271797825617394,
+        "faceMAE": 3.3385404339250493,
+        "goldMAE": 4.058326118326118
+      },
+      "retina3x": {
+        "meanAbsoluteError": 0.8748688528635231,
+        "highDifferenceFraction": 0.0018765267599378192,
+        "faceMAE": 2.811431623931624,
+        "goldMAE": 3.0645637237909855
+      }
+    }
+  },
+  "assetInventory": {
+    "startupAssetBytes": 770084,
+    "totalAssetBytes": 1099250,
+    "additionalBodyBytes": 329166,
+    "referenceBundleBytes": 6298236,
+    "optionalReferenceBytes": 436058,
+    "previousEagerStartupBytes": 25583088,
+    "startupBytesAvoided": 24813004,
+    "initialAssets": 15,
+    "totalAssets": 18,
+    "initialDecodedSourceRGBABytes": 36624896,
+    "decodedSourceRGBABytes": 50061824,
+    "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+    "assets": [
+      {
+        "file": "./runtime-v06/hair-back-v03-75fb26428847.webp",
+        "source": "./layers/hair-back-v03.png",
+        "bytes": 19008,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/body-v02-58ee0ba1d390.webp",
+        "source": "./layers/body-v02.png",
+        "bytes": 109622,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/shoes-v03-ef517aa70556.webp",
+        "source": "./layers/shoes-v03.png",
+        "bytes": 14688,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/kimono-v03-54ff60b6f3e1.webp",
+        "source": "./layers/kimono-v03.png",
+        "bytes": 165768,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/hakama-v03-b454df083dbe.webp",
+        "source": "./layers/hakama-v03.png",
+        "bytes": 53328,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/obi-v03-785a052777e4.webp",
+        "source": "./layers/obi-v03.png",
+        "bytes": 14434,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/hair-front-v03-e28b46beb9dd.webp",
+        "source": "./layers/hair-front-v03.png",
+        "bytes": 41166,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/body-broad-v04-8b42e3e4a16a.webp",
+        "source": "./layers/body-broad-v04.png",
+        "bytes": 122198,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/kimono-broad-v04-89bfcf9025df.webp",
+        "source": "./layers/kimono-broad-v04.png",
+        "bytes": 154574,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/hakama-broad-v04-8f8255c120eb.webp",
+        "source": "./layers/hakama-broad-v04.png",
+        "bytes": 52394,
+        "width": 864,
+        "height": 1296,
+        "rgbaBytes": 4478976
+      },
+      {
+        "file": "./runtime-v06/chest-harness-5fe35786dda3.webp",
+        "source": "./equipment/chest-harness.png",
+        "bytes": 92176,
+        "width": 603,
+        "height": 640,
+        "rgbaBytes": 1543680
+      },
+      {
+        "file": "./runtime-v06/shoulder-left-fc03b44048f0.webp",
+        "source": "./equipment/shoulder-left.png",
+        "bytes": 69732,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/shoulder-right-cec18341f17b.webp",
+        "source": "./equipment/shoulder-right.png",
+        "bytes": 51840,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+        "source": "./equipment/wrist-wrap-left.png",
+        "bytes": 7322,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-right-05b252d16626.webp",
+        "source": "./equipment/wrist-wrap-right.png",
+        "bytes": 7440,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/armguard-left-4b24e7a18d02.webp",
+        "source": "./equipment/armguard-left.png",
+        "bytes": 27368,
+        "width": 166,
+        "height": 448,
+        "rgbaBytes": 297472
+      },
+      {
+        "file": "./runtime-v06/armguard-right-60a08d589bc2.webp",
+        "source": "./equipment/armguard-right.png",
+        "bytes": 25786,
+        "width": 160,
+        "height": 448,
+        "rgbaBytes": 286720
+      },
+      {
+        "file": "./runtime-v06/breastplate-4bcabe678718.webp",
+        "source": "./equipment/breastplate.png",
+        "bytes": 70406,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      }
+    ],
+    "mode": "mobile",
+    "canonical": {
+      "startupAssetBytes": 15523832,
+      "totalAssetBytes": 19284852,
+      "decodedSourceRGBABytes": 113246724
+    },
+    "prototypePassed": true,
+    "violations": [],
+    "productionTargetsPassed": true,
+    "physicalDeviceAccepted": false
+  },
+  "startupReductionAgainstCanonicalPercent": 95.04,
+  "buildChecks": {
+    "sourcePNGsModified": false,
+    "entryCount": 18,
+    "maxAlphaErrorAgainstResampledSource": 0,
+    "maxVisibleColorRMSE": 8.118180106444186,
+    "rebuildFiles": [
+      {
+        "file": "delivery-assets-v06.json",
+        "sha256": "657b9c142545e72b0b0031f49baf8a21af039e041cdb915a689739e9087bf282",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/hair-back-v03-75fb26428847.webp",
+        "sha256": "75fb2642884753c07d0e3121ed47dc6ecb8fd9a259a8a8ad1ef975af9f02c7be",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/body-v02-58ee0ba1d390.webp",
+        "sha256": "58ee0ba1d3906c4370fa8fbafbb292caedc8aaf5a1ef00c1eee682b692453f48",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/shoes-v03-ef517aa70556.webp",
+        "sha256": "ef517aa70556f1883bd187d78dda32ea0603c39314bb5d3e7c45616ae3e2f336",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/kimono-v03-54ff60b6f3e1.webp",
+        "sha256": "54ff60b6f3e152c7ff232ff94b7eaa7a315a92cad127a6b77c406db9032b679d",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/hakama-v03-b454df083dbe.webp",
+        "sha256": "b454df083dbec506cfe58e69e82968f6d7cfd426466194f9b532f7b3c6b97e8d",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/obi-v03-785a052777e4.webp",
+        "sha256": "785a052777e4d9e1f132ec02e63eba985d2391d73ead99001f8b63b2d37fba3e",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/hair-front-v03-e28b46beb9dd.webp",
+        "sha256": "e28b46beb9dd7591dc94b8c4f6e5ef7bf8525bb096d52bdd8bfe3b70d53db8fe",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/body-broad-v04-8b42e3e4a16a.webp",
+        "sha256": "8b42e3e4a16a5a50399c831c4aab20c8e20d1ae18918cb344ce7bff34d65a5c1",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/kimono-broad-v04-89bfcf9025df.webp",
+        "sha256": "89bfcf9025df1ec0becbb425b6f0fceed236b58281eebf3189757d892ed03e86",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/hakama-broad-v04-8f8255c120eb.webp",
+        "sha256": "8f8255c120eb73d366ed62862efe538f1f9f859a580339a5a03f4cd8c2fc3094",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/chest-harness-5fe35786dda3.webp",
+        "sha256": "5fe35786dda34e3b73c97ca462239ee79ef2fc53b15ecd0336eca1cd8f38ab17",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/shoulder-left-fc03b44048f0.webp",
+        "sha256": "fc03b44048f07a5f15a5edcf35e15565e1508bb2a0aef8ac41694b74b3d96fc1",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/shoulder-right-cec18341f17b.webp",
+        "sha256": "cec18341f17bba43744509ffce7510cb61dbe50c0f76123b7396caa85789ae56",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+        "sha256": "d34ac9bc8dcb1dbfc2c3ac740857ee381c9e6dbaea973497925bd8a00c532516",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/wrist-wrap-right-05b252d16626.webp",
+        "sha256": "05b252d16626227e2768f93c559551606393a231971dad6f2c7ebba19505333c",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/armguard-left-4b24e7a18d02.webp",
+        "sha256": "4b24e7a18d02b80f43f7375610147aaeba828bf05891c258e61fffc66ba3b941",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/armguard-right-60a08d589bc2.webp",
+        "sha256": "60a08d589bc28bcf0c61dc27dbac3aa58303f243cd56d2bbafcfca8bfa464193",
+        "byteIdentical": true
+      },
+      {
+        "file": "runtime-v06/breastplate-4bcabe678718.webp",
+        "sha256": "4bcabe67871870283f344a7e5b7ce13c3ff3338729ecc6288141f3608cab696a",
+        "byteIdentical": true
+      }
+    ]
+  },
+  "visualComparisons": [
+    {
+      "archivedFile": "review-mobile-retina-v06.png",
+      "artifactPath": "artbook/retina-mobile.png",
+      "sha256": "86804d98eb8abcb1bce80cce6990204d27d212ae04013ec4ec1592dd2686ad19",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-original-retina-v06.png",
+      "artifactPath": "artbook/retina-original.png",
+      "sha256": "fa00a6ea40f59879502c7d5db73ca0ed397d5dc8a173025beed4c751d25f97d3",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-form-b-delivery-v06.png",
+      "artifactPath": "artbook/form-b-fullset.png",
+      "sha256": "6393281570c7ed37ec2a0c0fd0caf1e36336033a415b56ad14369578da9217d6",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    }
+  ],
+  "comparisonThresholds": {
+    "wholeFigureMAE": 3,
+    "faceMAE": 5,
+    "goldMAE": 5,
+    "highDifferenceChannelThreshold": 32,
+    "maxHighDifferencePixelFraction": 0.025,
+    "channelRange": [
+      0,
+      255
+    ]
+  },
+  "measurementLimits": [
+    "Loss-bounded resampling and color encoding; not pixel-identical to full-resolution PNGs.",
+    "Alpha equality is against each resampled source, not against the original unscaled image.",
+    "Observed initial WebP request payload bytes exclude HTML/JS/JSON and HTTP headers.",
+    "Source RGBA is width times height times four; not physical browser/GPU peak memory.",
+    "390px at device scale factor three is CI Chromium emulation, not a physical phone.",
+    "Synchronous scene scripting excludes paint; timings are not a device frame-rate promise.",
+    "256 base and 64 reward states are separate suites, not an exhaustive cartesian visual review."
+  ],
+  "remaining": [
+    "Physical target phone, GPU, peak-memory, VoiceOver and installed-PWA upgrade acceptance.",
+    "Stage 2: real front/rear harness and sleeve fragments and their two-form fit.",
+    "Live inventory/outfit/persistence/offline integration and remaining 90 reward articles.",
+    "Review and explicit release approval before publishing; current app/storage/schema/cache unchanged."
+  ],
+  "provenance": "Read-only canonical art sources; generated transport bitmaps and unchanged CI screenshots. No personal data. Evidence-only follow-up does not change tested runtime or geometry."
+}

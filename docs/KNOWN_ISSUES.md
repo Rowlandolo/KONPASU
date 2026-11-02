@@ -97,4 +97,6 @@ Aktueller Leistungsnachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/
 
 ## Verkleinerte Laufzeitgrafiken
 
-PERF-02: Eigene Mobile-Auslieferungsdateien erfüllen nun rechnerisch die Größen-/Quell-RGBA-Ziele. Die Originale bleiben im Repository und sind unverändert. Visuelle Browserabnahme gegen Originale und bei 3× Pixeldichte steht für diesen Stand aus. Bildvergleich ist verlustbegrenzt, nicht byteidentisch zur kanonischen PNG-Darstellung. Echte iPhone-/GPU-/Speicherspitzenprüfung bleibt offen.
+PERF-02 teilweise behoben: Mobile-Auslieferung erfüllt Datei-/Quell-RGBA-Ziele mit 770,084 Startbytes und 50,061,824 RGBA-Bytes. Originale bleiben unverändert. Browservergleich beider Formen und 390 px bei 3× Pixeldichte bestanden und Aufnahmen gesichtet; Nachweis verification-delivery-v06.json, Lauf 41544503356. Bildvergleich ist verlustbegrenzt, nicht byteidentisch zur kanonischen PNG-Darstellung. Echte iPhone-/GPU-/Speicherspitzenprüfung bleibt offen und verhindert weiterhin eine allgemeine mobile Produktionsfreigabe.
+
+PERF-03 (im Atelier abgesichert): Geänderte WebP-Rezepte dürfen keine neue Revision unter bisherigem Dateinamen ausliefern. Dateinamen enthalten den SHA-256-Präfix der tatsächlichen Ausgabe, nicht nur der Quelle. Integritätsprüfung verifiziert weiterhin den vollständigen Hash. Das ersetzt keine spätere versionierte Service-Worker-/Offlineintegration.
