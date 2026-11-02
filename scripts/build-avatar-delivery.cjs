@@ -28,9 +28,10 @@ const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
     return {base64:uri.split(',')[1],alphaMaxError,visibleColorRMSE:Math.sqrt(visibleColorSquaredError/Math.max(1,visibleChannels))};
    },{url:server.url+'design/avatar/'+source.file.replace('./',''),width,height,quality:recipe.quality});
    if(result.alphaMaxError!==0||result.visibleColorRMSE>12)throw Error('Delivery quality gate failed: '+source.file);
-   const data=Buffer.from(result.base64,'base64'),name=path.basename(source.file,'.png')+'-'+source.sha256.slice(0,10)+'.webp',file='./runtime-v06/'+name;fs.writeFileSync(path.join(dir,file),data);
+   const data=Buffer.from(result.base64,'base64'),name=path.basename(source.file,'.png')+'-'+digest(data).slice(0,12)+'.webp',file='./runtime-v06/'+name;fs.writeFileSync(path.join(dir,file),data);
    manifest.entries.push({source:source.file,sourceSHA256:source.sha256,sourceWidth:source.width,sourceHeight:source.height,file,sha256:digest(data),width,height,bytes:data.length,alphaMaxError:result.alphaMaxError,visibleColorRMSE:result.visibleColorRMSE});
   }
+  const live=new Set(manifest.entries.map(e=>path.basename(e.file)));for(const name of fs.readdirSync(output))if(/^[a-z0-9-]+-[a-f0-9]{10,12}\.webp$/.test(name)&&!live.has(name))fs.unlinkSync(path.join(output,name));
   fs.writeFileSync(path.join(dir,'delivery-assets-v06.json'),JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify({built:manifest.entries.length,bytes:manifest.entries.reduce((n,e)=>n+e.bytes,0)},null,2));
  }finally{if(browser)await browser.close();if(server)await server.close()}
 })().catch(error=>{console.error(error);process.exitCode=1});

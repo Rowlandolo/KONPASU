@@ -9,3 +9,5 @@ test('mobile numeric budgets are met while originals remain available and device
 test('invalid or truncated WebP headers cannot falsify memory estimates',()=>{assert.throws(()=>webpSize(Buffer.alloc(4)));const b=Buffer.alloc(30);b.write('RIFF',0);b.write('WEBP',8);b.write('XXXX',12);assert.throws(()=>webpSize(b))});
 
 test('committed delivery files agree with the declared build recipe',()=>{const recipe=require('../design/avatar/delivery-recipe-v06.json');assert.equal(manifest.codec,recipe.codec);assert.equal(manifest.quality,recipe.quality);for(const e of manifest.entries){const part=path.basename(e.source,'.png'),scale=e.source.startsWith('./layers/')?recipe.baseScale:Math.min(1,recipe.equipmentMaxEdges[part]/Math.max(e.sourceWidth,e.sourceHeight));assert.equal(e.width,Math.round(e.sourceWidth*scale));assert.equal(e.height,Math.round(e.sourceHeight*scale))}});
+
+test('runtime URLs change with output bytes to prevent mixed cached image revisions',()=>{for(const e of manifest.entries)assert.ok(e.file.endsWith('-'+e.sha256.slice(0,12)+'.webp'))});
