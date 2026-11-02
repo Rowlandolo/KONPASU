@@ -5,6 +5,10 @@ on:
     paths:
       - scripts/build-avatar-delivery.cjs
       - design/avatar/delivery-recipe-v06.json
+      - design/avatar/prototype-assets.json
+      - design/avatar/equipment/**
+      - design/avatar/base-layer*contract.json
+      - design/avatar/layers/**
 permissions:
   contents: read
 jobs:

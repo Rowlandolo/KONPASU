@@ -10,7 +10,7 @@
     },
     {
       "id": "form-b",
-      "labelDe": "Form B \u00b7 breiter gezeichnet",
+      "labelDe": "Form B · breiter gezeichnet",
       "contract": "./base-layer-broad-v04-contract.json",
       "equipment": {
         "shoulder-left": {
@@ -60,6 +60,12 @@
           "y": 339,
           "width": 31.9,
           "height": 22
+        },
+        "chest-harness-back": {
+          "x": 200.34,
+          "y": 130.48,
+          "width": 144.48,
+          "height": 206.08
         }
       },
       "anchors": {

@@ -22,7 +22,7 @@
   const next=new Map();
   for(const spec of manifest.assets){
    placement(spec);clippingPolygons(spec);
-   if(!/^\.\/equipment\/[a-z-]+\.png$/.test(spec.file))throw Error('Unsupported prototype path');
+   if(!/^\.\/equipment\/[a-z0-9-]+\.png$/.test(spec.file))throw Error('Unsupported prototype path');
    const delivered=root.KONPASU_DELIVERY25?.resolve(spec)||{...spec,mime:'image/png'};
    const response=await fetch(delivered.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
    const bytes=await response.arrayBuffer(),view=new Uint8Array(bytes);

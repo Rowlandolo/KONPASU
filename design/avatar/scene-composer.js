@@ -23,10 +23,13 @@
   }
   for(const part of equipment){
    if(!ID.test(part.partId)||seen.has(part.partId)||!Number.isFinite(part.z)||typeof fitArtwork!=='function')throw Error('Invalid equipment scene node');seen.add(part.partId);
+   const depthRole=part.depthRole||'front';
+   if(!['front','back'].includes(depthRole)||(depthRole==='back'?(part.z<=DEPTH['hair-back']||part.z>=DEPTH.body):part.z<=DEPTH.obi||part.z>=DEPTH['hair-front']))throw Error('Invalid equipment depth role');
+   if(part.spec.depthRole!==undefined&&part.spec.depthRole!==depthRole)throw Error('Artwork depth role mismatch');
    const fitted=fitSpec(part.spec,profile),occluders=profile.occlusion?.[part.partId]??(/^(forearm|wrist)/.test(part.anchor)?['kimono']:[]);
    if(!Array.isArray(occluders)||occluders.length>7||occluders.some(id=>!Object.prototype.hasOwnProperty.call(DEPTH,id)))throw Error('Unknown occlusion surface');
    const placement=fitArtwork(fitted);checkPlacement(placement);
-   nodes.push({id:'gear-'+part.partId,partId:part.partId,itemId:part.itemId,kind:'equipment',z:part.z,src:part.src,placement,occludedBy:applyOcclusion?[...new Set(occluders)].filter(id=>base.has(id)):[],clipPolygons:applyOcclusion?(fitted.clipPolygons||[]).map(poly=>poly.map(p=>[...p])):[]});
+   nodes.push({id:'gear-'+part.partId,partId:part.partId,itemId:part.itemId,kind:'equipment',z:part.z,depthRole,src:part.src,placement,occludedBy:applyOcclusion?[...new Set(occluders)].filter(id=>base.has(id)):[],clipPolygons:applyOcclusion?(fitted.clipPolygons||[]).map(poly=>poly.map(p=>[...p])):[]});
   }
   for(const node of nodes){
    if(typeof node.src!=='string'||!/^data:image\/(png|webp|svg\+xml);base64,/.test(node.src))throw Error('Unverified scene image');
@@ -46,7 +49,7 @@
    live.add(part.id);set(img,'id',prefix+'-'+part.id);
    for(const [k,v] of Object.entries(part.placement))set(img,k,v);
    set(img,'href',part.src);set(img,'data-scene-id',part.id);
-   if(part.kind==='base')set(img,'data-base-id',part.baseId);else{set(img,'data-part-id',part.partId);set(img,'data-item-id',part.itemId)}
+   if(part.kind==='base')set(img,'data-base-id',part.baseId);else{set(img,'data-part-id',part.partId);set(img,'data-item-id',part.itemId);set(img,'data-depth-role',part.depthRole)}
    if(part.occludedBy.length){set(img,'mask','url(#'+prefix+'-mask-'+part.id+')');set(img,'data-occluded-by',part.occludedBy.join(','))}else{img.removeAttribute('mask');img.removeAttribute('data-occluded-by')}
    if(part.clipPolygons.length)set(img,'clip-path','url(#'+prefix+'-clip-'+part.id+')');else img.removeAttribute('clip-path');
    elements.push(img);

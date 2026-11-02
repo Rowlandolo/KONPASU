@@ -15,7 +15,7 @@ const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
   await page.goto(server.url+files[0]); // A same-origin image document permits isolated source loading.
   for(const source of sources.values()){
    const bytes=fs.readFileSync(path.join(dir,source.file));if(digest(bytes)!==source.sha256)throw Error('Canonical source mismatch: '+source.file);
-   const scale=source.kind==='base'?recipe.baseScale:Math.min(1,recipe.equipmentMaxEdges[source.partId]/Math.max(source.width,source.height));
+   const scale=source.kind==='base'?recipe.baseScale:Math.min(1,recipe.equipmentMaxEdges[path.basename(source.file,'.png')]/Math.max(source.width,source.height));
    if(!Number.isFinite(scale)||scale<=0||scale>1)throw Error('Invalid delivery scale');
    const width=Math.max(1,Math.round(source.width*scale)),height=Math.max(1,Math.round(source.height*scale));
    const result=await page.evaluate(async({url,width,height,quality})=>{

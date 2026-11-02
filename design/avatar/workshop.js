@@ -22,14 +22,14 @@
   }
   for(const part of [...plan.draw,...plan.pending].sort((a,b)=>a.z-b.z)){
    const node=currentScene?.nodes.find(n=>n.partId===part.partId),anchor=profile?.anchors?.[part.anchor]||api.RIG.anchors[part.anchor];
-   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?(node?.occludedBy.length?'Angelegt · Gewand kann überdecken':'Angelegt'):'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
+   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?(part.depthRole==='back'?'Angelegt · hinter dem Körper':node?.occludedBy.length?'Angelegt · Gewand kann überdecken':'Angelegt'):'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
    const circle=svgNode('circle'),title=svgNode('title');circle.setAttribute('cx',anchor.x);circle.setAttribute('cy',anchor.y);circle.setAttribute('r',9);circle.setAttribute('fill','#35644f');circle.setAttribute('stroke','#fff');circle.setAttribute('stroke-width',3);title.textContent=part.partId;circle.append(title);document.getElementById('anchors').append(circle);
   }
  }
  function setSelection(ids){selected.clear();ids.forEach(id=>selected.add(id));controls.querySelectorAll('input').forEach(i=>i.checked=selected.has(i.dataset.item));refresh()}
  function refreshBase(){
   if(!ready)return;
-  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();
+  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();refreshHarnessPreview();
   document.getElementById('base-limit').textContent=baseSelection().includes('body')?'Individuell gezeichnete Körperform. Kleidung und Ausrüstung behalten ihre Auswahl beim Wechsel.':'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.';
  }
  function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(i=>i.checked=ids.includes(i.dataset.basePart));refreshBase()}
@@ -62,6 +62,11 @@
   if(event.target.open&&!reference.getAttribute('src')){referenceStatus.textContent='Artbook wird geladen …';reference.loading='eager';reference.src='./reference-board.webp'}
  });
  document.getElementById('style-reference').addEventListener('toggle',event=>{const image=document.getElementById('style-reference-image');if(event.target.open&&!image.getAttribute('src')){image.loading='eager';image.src='./base-art-direction-v01.png'}});refresh();
+ function refreshHarnessPreview(){
+  if(!document.getElementById('harness-layers').open||!ready)return;
+  for(const [id,key] of [['harness-front-image','chest-harness'],['harness-back-image','chest-harness-back']])document.getElementById(id).src=art.specFor('assets/avatar-v25/strength/'+key+'.png').src;
+ }
+ document.getElementById('harness-layers').addEventListener('toggle',refreshHarnessPreview);
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);

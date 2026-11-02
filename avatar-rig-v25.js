@@ -3,11 +3,11 @@
 (function(root){
  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value)}return value};
  const RIG=freeze({id:'adult-three-quarter-v1',width:512,height:768,provisional:true,poseSource:'design/avatar/layers/body-v02.png',coordinateOrigin:'top-left',sideConvention:'viewer-left / viewer-right',anchors:{torso:{x:251,y:196},shoulderLeft:{x:187,y:139},shoulderRight:{x:319,y:150},forearmLeft:{x:153,y:330},forearmRight:{x:354.5,y:330},wristLeft:{x:152.5,y:348},wristRight:{x:363.5,y:350}}});
- const part=(id,anchor,z)=>({id,anchor,z,asset:`assets/avatar-v25/strength/${id}.png`,status:'prototype-review'});
+ const part=(id,anchor,z,depthRole='front')=>({id,anchor,z,depthRole,asset:`assets/avatar-v25/strength/${id}.png`,status:'prototype-review'});
  const CATALOG=freeze([
   {id:'strength-1',titleDe:'Handgelenkbänder',titleEn:'Wrist wraps',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-1.webp',legacySlot:'arm',parts:[part('wrist-wrap-left','wristLeft',510),part('wrist-wrap-right','wristRight',511)]},
   {id:'strength-2',titleDe:'Kote-Armschienen',titleEn:'Kote armguards',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-2.webp',legacySlot:'arm',parts:[part('armguard-left','forearmLeft',500),part('armguard-right','forearmRight',501)]},
-  {id:'strength-3',titleDe:'Brustgeschirr',titleEn:'Chest harness',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-3.webp',legacySlot:'arm',parts:[part('chest-harness','torso',430)]},
+  {id:'strength-3',titleDe:'Brustgeschirr',titleEn:'Chest harness',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-3.webp',legacySlot:'arm',parts:[part('chest-harness-back','torso',150,'back'),part('chest-harness','torso',430)]},
   {id:'strength-4',titleDe:'Samurai-Schulterpanzer',titleEn:'Samurai shoulder armor',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-4.webp',legacySlot:'head',parts:[part('shoulder-left','shoulderLeft',460),part('shoulder-right','shoulderRight',461)]},
   {id:'strength-5',titleDe:'Disziplin-Brustpanzer',titleEn:'Disciplined breastplate',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-5.webp',legacySlot:'upper',parts:[part('breastplate','torso',450)]}
  ]);
@@ -22,13 +22,17 @@
    // Future app integration must supply its existing evidence resolver. Preview is not ownership.
    if(options.isAllowed&&options.isAllowed(id)!==true){issues.push({id,reason:'not-allowed'});continue}
    selected.push(id);
+   const itemDraw=[],itemPending=[];
    for(const p of item.parts){
-    const command={itemId:id,partId:p.id,anchor:p.anchor,x:RIG.anchors[p.anchor].x,y:RIG.anchors[p.anchor].y,z:p.z,asset:p.asset};
+    const command={itemId:id,partId:p.id,anchor:p.anchor,x:RIG.anchors[p.anchor].x,y:RIG.anchors[p.anchor].y,z:p.z,depthRole:p.depthRole,asset:p.asset};
     // Only an explicitly supplied fitted-art resolver can make a fragment renderable.
     const fitted=options.resolveAsset?.(p.asset,{rig:RIG.id,anchor:p.anchor});
-    if(fitted&&fitted.rig===RIG.id&&fitted.anchor===p.anchor&&fitted.transparent===true&&typeof fitted.src==='string'&&fitted.src.startsWith('data:image/'))draw.push({...command,src:fitted.src});
-    else pending.push({...command,reason:'needs-fitted-transparent-artwork'});
+    if(fitted&&fitted.rig===RIG.id&&fitted.anchor===p.anchor&&fitted.transparent===true&&typeof fitted.src==='string'&&fitted.src.startsWith('data:image/'))itemDraw.push({...command,src:fitted.src});
+    else itemPending.push({...command,reason:'needs-fitted-transparent-artwork'});
    }
+   // A multi-fragment reward is visible only when its complete artwork group resolves.
+   if(itemPending.length)pending.push(...itemPending,...itemDraw.map(({src,...p})=>({...p,reason:'incomplete-item-artwork'})));
+   else draw.push(...itemDraw);
   }
   const order=(a,b)=>a.z-b.z||a.partId.localeCompare(b.partId);
   return {rigId:RIG.id,previewOnly:true,selectedIds:selected.sort(),draw:draw.sort(order),pending:pending.sort(order),issues};

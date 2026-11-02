@@ -4,14 +4,15 @@
   "quality": 0.98,
   "baseScale": 0.84375,
   "equipmentMaxEdges": {
-    "chest-harness": 640,
     "breastplate": 512,
     "shoulder-left": 512,
     "shoulder-right": 512,
     "armguard-left": 448,
     "armguard-right": 448,
     "wrist-wrap-left": 192,
-    "wrist-wrap-right": 192
+    "wrist-wrap-right": 192,
+    "chest-harness-front": 640,
+    "chest-harness-back": 256
   },
   "preserveFullFrame": true,
   "originalsModified": false

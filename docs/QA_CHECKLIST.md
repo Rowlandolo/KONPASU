@@ -257,3 +257,14 @@ Leistungsbeleg: e05b0c3f5228b10a83ef270fcac1b28045f1bf8a, [Lauf](https://github.
 - [ ] Echte Zieltelefon-/GPU-/Speicherspitzenabnahme vor Liveupdate.
 
 Aktueller Abschluss: c99b943e70666452aeba9e9a95fe0f05f2c4ad34, [Browser/Regressionen](https://github.com/Rowlandolo/KONPASU/actions/runs/41544503356), [Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41544503475). 245 Regressionen und 19 Atelier-Prüfgruppen erfolgreich. Nachweis und archivierte Vergleichsaufnahmen: design/avatar/verification-delivery-v06.json. Historische offene Produktionsgrößen-/Browserpunkte oben sind für diesen technischen Stand abgeschlossen; Geräte-/Offlineintegration bleibt offen.
+
+## Etappe 2: zweigeteiltes Geschirr
+
+- [x] Getrennte neue PNGs mit Quellreferenz, SHA-256, Maßen und Alpha-Grenzen; bisheriges Original erhalten.
+- [x] Vorhandener Artikel-/Frontschlüssel erhalten, Rückteil ergänzt; fehlendes Teil lässt den ganzen Artikel ausstehend.
+- [x] Beide Formregistrierungen, neun Fragmente, Rücken-/Vorderrolle und ungültige Tiefen durch 28 gezielte Rig-/Artwork-/Szenentests geprüft.
+- [ ] Frischer Auslieferungsbuild, vollständige Regressionen und unveränderte numerische Budgets.
+- [ ] Reale SVG-Pixel für Rücken/Körper/Vorderseite und getrennte Grafikvorschau, ohne Teilverlust.
+- [ ] Beide Formen mit Geschirr allein, vollem Set und ausgeblendeter Basis sichten; 3×-Bildqualität gegen neue Originale.
+- [ ] Beschädigte Rückgrafik zeigt Fehler ohne halben Artikel/Teilfigur; Retry/Race und bestehende Offline-Appprüfung weiterhin erfolgreich.
+- [ ] Ärmel-Vorder-/Hinterflächen, weitere Kopfteile und physische Geräte-/Produktionsintegration.

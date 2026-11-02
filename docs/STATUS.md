@@ -14,6 +14,8 @@ Datum: 02.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständige
 
 Die folgende Bestandsaufnahme und spätere Verlaufsabschnitte enthalten ältere Befunde. Maßgeblich für den aktuellen Lieferstand sind diese Übersicht und der jüngste Phasenabschluss.
 
+Etappe 2 begonnen: neue eigenständige Vorder-/Rückgrafiken für strength-3, explizite Tiefenrollen, gemeinsame Artikelauswahl und atomare Auflösung bei fehlenden Fragmenten vorbereitet. 28 gezielte Rig-/Artwork-/Szenentests erfolgreich; Auslieferungsrebuild und reale Browser-/Sichtabnahme dieses neuen Stands noch offen. Vertrag: AVATAR_DEPTH_CONTRACT.md. Live-App und Daten unverändert.
+
 ## Ist–Soll
 
 | Bereich | Tatsächlich im Quellcode | Zum verbindlichen Ziel noch offen |

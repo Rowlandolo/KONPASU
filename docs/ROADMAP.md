@@ -96,3 +96,5 @@ Aktueller Etappe-1-Beleg: https://github.com/Rowlandolo/KONPASU/actions/runs/415
 Neue Laufzeitgrafiken erfüllen die numerischen Datei-/Quell-RGBA-Ziele. Nach echtem Vergleich gegen Originale und 3×-Vorschau ist der technische Teil von Etappe 1 abgeschlossen. Die physische Gerätebestätigung bleibt in Etappe 5 und ist weiterhin Voraussetzung vor Veröffentlichung. Danach Etappe 2: tatsächliche Vorder-/Hinterfragmente für Riemen, Ärmel und spätere Kopfteile.
 
 Abschluss belegt: verification-delivery-v06.json, 245 Regressionen und 19 Atelier-Prüfgruppen im Lauf 41544503356 erfolgreich, finaler Build bytegleich wiederholt. Etappe 2 ist die nächste konkrete Lieferung; übrige fünf Etappen und reale Gerätefreigabe bleiben offen.
+
+Etappe 2 in Entwicklung: zunächst zweigeteiltes Geschirr mit unverändertem Artikel-/Frontschlüssel. Auf neuen Build folgen Browser-/Sichtabnahme beider Körper, dann Ärmel-Vorder-/Hinterflächen. AVATAR_DEPTH_CONTRACT.md dokumentiert Tiefen, Gruppenregistrierung, Fehlerverhalten und Prüfgrenzen.
