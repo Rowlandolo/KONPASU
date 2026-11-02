@@ -4,9 +4,9 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 | Phase | Ziel / kleinste überprüfbare Lieferung | Stand |
 |---|---|---|
-| 0 | Repo-/Speicheraudit, verbindliche Spezifikation, Status, Fehlerregister, QA | Lokal erstellt; DATA-01/02-Speicherschutz mit 24 zusätzlichen VM-Prüfungen ergänzt; Remote-Branch/PR durch 403 blockiert |
-| 1 | 2.3.2 Avatar-/Inventar-/Favoriten-/Versionsfehler | In lokalem 2.4-Kandidaten integriert und VM-getestet |
-| 2 | Tatsächlicher Layeravatar, echte Reward-Assets, Vorschau, Personalisierung, Cache | Lokal implementiert; Browser-/Geräte-/Updateabnahme offen |
+| 0 | Repo-/Speicheraudit, verbindliche Spezifikation, Status, Fehlerregister, QA | Dokumentiert und gepflegt; Speicherschutz getestet, GitHub-Zugriff wiederhergestellt, PR #1 veröffentlicht |
+| 1 | 2.3.2 Avatar-/Inventar-/Favoriten-/Versionsfehler | Mit 2.4.0 veröffentlicht; VM- und Chromiumprüfungen erfolgreich |
+| 2 | Tatsächlicher Layeravatar, echte Reward-Assets, Vorschau, Personalisierung, Cache | Technischer SVG-Avatar live; Artbook-Stil und neue modulare Basis in separatem Atelier, reales iPhone/Upgrade offen |
 | 3 | 95 Voraussetzungen semantisch auditieren, ca. 30 Slots, Sets, Begleiter, historische Rewards und finales Design | Sammlung, Schwellenaudit und Ruhmeshalle lokal umgesetzt; Historienkorrektur abgesichert. Visuelle Abnahme, Konfigurationshilfe, Balancefragen und weitere Ausbauten offen |
 | 4 | Workout-UX, Katalog/Pläne/Sätze/PBs, historische Bearbeitung und Doppelzählung absichern | Codebasis vorhanden; vollständige Abnahme offen |
 | 5 | Alle 19 Zielmodule: Einheiten, Pausen, Nachträge, Wochenwechsel, Obergrenzen | Stichproben getestet, Ziel-für-Ziel-E2E offen |
@@ -17,9 +17,13 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Auf Nutzerauftrag umfangreicher Qualitätsaudit abgeschlossen: 43 neue Prüfungen und Korrekturen an Datenübernahme, Speicherung, Nachweisen, Avatarinteraktion, Export und Worker; insgesamt 156 Tests. Details und Grenzen: QUALITY_AUDIT_2026-11-02.md.
+Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Nach sauber getrennten Basisgrafiken und vollständigem Körperunterbau folgen getrennte Gewand-/Obi-/Hakama-/Schuhebenen sowie Vorder-/Hinterhaare. Dann Tiefenmasken und eine zweite gezeichnete Anatomie prüfen. Produktive Mehrfach-Outfits mit verlustfreier Favoriten-/History-Anbindung erst danach; weitere 90 Belohnungsgrafiken schrittweise.
 
-Nächste Priorität sind widersprüchliche Konsum-/Obergrenzennachweise und deren historische Semantik vor neuen Features. Regeln zuerst dokumentieren, Altwerte nicht heimlich umdeuten. Vollständige Browser-/iPhone-/Offlineabnahme und GitHub-Schreibzugriff bleiben Releasevoraussetzungen. Inventarsuche/Zielpfadfilter ist danach ein kleiner UX-Ausbau, kein Ersatz für diese Kernprüfung.
+Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
+
+## Historische Entwicklungsschritte
+
+Die folgenden Abschnitte dokumentieren die Reihenfolge bisheriger Lieferungen; frühere „nächste Schritte“ sind durch den aktuellen Abschnitt oben ersetzt.
 
 ## Nach Abschnitt Verbrauchsnachweise
 
@@ -66,3 +70,5 @@ Neuer separat gezeichneter Körperunterbau vorhanden. Jetzt Proportionen/Anker m
 ## Nach Bereinigung und Körperunterbau
 
 Neue unabhängige Haare/Kleider und vollständigen Unterbau gemeinsam im realen Browser sichten, Registrierung bei Bedarf korrigieren. Insbesondere Gesichtöffnung, Kragen, Unterärmel, Hände, Füße sowie alle acht Ausrüstungsfragmente prüfen. Danach Grundoutfit in Gewand/Obi/Hakama/Schuhe und Haare in Vorder-/Hinterteil aufteilen, damit weitere Belohnungen sinnvoll dazwischen liegen können. Vor Liveintegration Größenbudget und zweite gezeichnete Anatomie festlegen; Datenmodell/Favoriten/History erst mit verlustfreiem Rückweg anbinden.
+
+Basis- und Unterbauabschnitt im Chromium abgeschlossen und gesichtet; aktueller Nachweis verification-body-foundation-v02.json. Die nächsten Arbeiten stehen im aktuellen Abschnitt oben, nicht in den historischen Ablaufnotizen.

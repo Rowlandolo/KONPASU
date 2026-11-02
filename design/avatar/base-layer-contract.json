@@ -4,7 +4,7 @@
   "width": 512,
   "height": 768,
   "status": "independent-layers-one-pose-prototype",
-  "registration": "pending-browser-visual-review",
+  "registration": "browser-reviewed-one-pose-prototype",
   "layers": [
     {
       "id": "body",
@@ -75,5 +75,6 @@
     "Broader option is a shared scale, not a separate body.",
     "Clothing currently includes obi, hakama and footwear as one base outfit.",
     "Front/back hair separation, file-size budget and production integration remain open."
-  ]
+  ],
+  "reviewEvidence": "./verification-body-foundation-v02.json"
 }

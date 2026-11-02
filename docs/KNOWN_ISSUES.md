@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 02.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Behoben bedeutet lokal, nicht deployed.
+Stand 02.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -15,7 +15,7 @@ Stand 02.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Behoben be
 | AV-09 | P1 | Serien-Aura auswählen → 2.4-Kit rendert sie nicht | Qualifizierte aktuelle Aura ergänzt; historisch vorerst ausgeblendet statt aktuelle Serie zu behaupten |
 | AV-10 | P1 | Nur Teil des Assetbundles geladen → Kit kann unvollständige Figur anzeigen | Erforderliche Körperebenen prüfen, Blueprintfallback |
 | AV-11 | P2 | Startseite zeigt statische home-hero-Grafik trotz personalisiertem Avatar | Gleicher Renderer eingebunden; vollständige Startseite C noch offen |
-| QA-01 | P0 | Kein echter Browser-/iPhone-Upgrade-/Offline-/IndexedDB-Test in dieser Sitzung | Offen, keine Releasefreigabe |
+| QA-01 | P0 | Kein echter Browser-/iPhone-Upgrade-/Offline-/IndexedDB-Test in dieser Sitzung | Chromium und Release 2.4.0 erfolgreich; reales iPhone/VoiceOver/Alt-PWA-Upgrade weiter offen |
 | OPS-01 | P0 | Frühere create_branch-Aufrufe → 403 Resource not accessible by integration | Nach GitHub-Neuverbindung behoben: separater Remote-Branch erfolgreich angelegt. Übertragung/Review-PR möglich; kein Deployment |
 | DATA-01 | P1 | init() liest beschädigten localStorage-Fallback: JSON-/Migrationsfehler werden in catch teils verschluckt; Katalogseeding kann anschließend store() auslösen | Lokal behoben: fehlend vs. unlesbar getrennt, Schreibschutz, Warnhinweis und kein Export des Ersatzprofils. 16 Start-/Lesefehlerregressionen bestanden; echte Browserabnahme offen |
 | DATA-02 | P1 | localStorage-Fallback hat keine Revisionsprüfung wie writeDB() | Lokal gehärtet: Web Locks + Vergleich des zuletzt gelesenen Rohstands innerhalb des Locks; Konflikt sperrt alte Tabs. Acht Regressionen bestanden. Ohne Web Locks ist nur dieser Ersatzspeicher schreibgeschützt; alte App-Tabs ohne Lockprotokoll bleiben ein Upgrade-Risiko. Browserabnahme offen |
@@ -67,6 +67,8 @@ ART-05: Die neue Unterkörper-/Kopfbasis ist ein gesonderter Grafikentwurf und n
 
 ## Ablösung der groben Masken durch neue Einzelgrafiken
 
-ART-04: Die alten polygonalen Quellpixelmasken sind aus der aktiven Atelierdarstellung entfernt. Eigenständige Haar-/Kleidungsgrafiken enthalten keine absichtlich ausgeschnittenen Gesichts-/Handfragmente. Neue Browser-/Sichtprüfung erforderlich; historische Rekonstruktionsnachweise beziehen sich auf den vorherigen Versuch.
+ART-04: Die alten polygonalen Quellpixelmasken sind aus der aktiven Atelierdarstellung entfernt. Eigenständige Haar-/Kleidungsgrafiken enthalten keine absichtlich ausgeschnittenen Gesichts-/Handfragmente. Neue isolierte Ebenen im Chromium gesichtet: keine offensichtlichen Gesichts-/Handreste. ART-04 für das Ein-Pose-Atelier behoben; historische Rekonstruktionsnachweise beziehen sich auf den vorherigen Versuch.
 
-ART-05: Vollständiger neuer Körperunterbau jetzt unter separater Grundkleidung und Haaren im Atelier eingebunden. Registrierung zunächst nur für diese Pose, bis zur aktuellen Browser-Sichtung nicht als visuell abgenommen markieren. Unterkleidung bleibt Bestandteil des Körpers; Gewand, Obi, Hakama und Schuhe bilden noch ein gemeinsames Grundoutfit. Vorder-/Hinterhaar, echte zweite Anatomie, mobile Dateigrößen und produktive Speicherung bleiben offen. Die alte underbody-study.json beschreibt ausschließlich die archivierte v01-Studie.
+ART-05: Vollständiger neuer Körperunterbau jetzt unter separater Grundkleidung und Haaren im Atelier eingebunden. Registrierung für diese Pose im Chromium gesichtet und korrigiert, einschließlich Haaren, vier Armfragmenten und gemeinsamem Breitentest; Nachweis verification-body-foundation-v02.json. ART-05 für diesen Prototyp behoben, keine allgemeine Produktionsfreigabe. Unterkleidung bleibt Bestandteil des Körpers; Gewand, Obi, Hakama und Schuhe bilden noch ein gemeinsames Grundoutfit. Vorder-/Hinterhaar, echte zweite Anatomie, mobile Dateigrößen und produktive Speicherung bleiben offen. Die alte underbody-study.json beschreibt ausschließlich die archivierte v01-Studie.
+
+ART-06: Grundoutfit noch zusammengefasst, Vorder-/Hinterhaar nicht getrennt und nur eine gezeichnete Anatomie. Basis-PNGs 3.45 MB plus Ausrüstungs-PNGs 9.38 MB sind noch kein akzeptiertes mobiles Produktionsbudget. Vollständige App-/Offlineintegration und persistente Mehrfachauswahl fehlen weiterhin; keine Nutzerdatenmigration in diesem Abschnitt.

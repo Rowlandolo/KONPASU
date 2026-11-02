@@ -4,12 +4,14 @@ Datum: 02.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständige
 
 ## Verifizierte Basis und Arbeitsstand
 
-- Veröffentlicht: KONPASU 2.4.0, Cache konpasu-offline-v240. Runtime-Mergecommit caf1aeada7954ab8b35004eb4186492b9b4bfc51; PR #1 übernommen. Basis vor diesem Release war 444bdb3981ccc03c550fb402c2cca9e45ad8a46a (2.3.1).
-- Pages-Run 41486638959 erfolgreich für den Runtime-Mergecommit. Live version.json meldet unabhängig gelesen 2.4.0/v240; Startseite erreichbar und app-version=2.4.0-layered-avatar bestätigt.
-- Repository: 45 Rootdateien; kein package.json, kein Build-System, keine eingecheckten Workflows oder automatisierten Tests an der geprüften Basis. Pages verwendet einen von GitHub bereitgestellten Deploymentlauf; Einstellungen konnten nicht vollständig gelesen werden.
-- Lokal: `feature/konpasu-24-audit`; verifizierter Textsnapshot als eigene Baseline, NICHT der originale Upstream-Gitverlauf. Die zuvor fehlenden Binärassets und premium-art-bundle.js wurden aus der am 02.11. gelieferten vollständigen Original-ZIP ergänzt. Alle 45 Originaldateien stimmen vor Übernahme exakt mit den bekannten Git-Blob-Hashes überein. Die Textsnapshot-Baseline bleibt ein eigener lokaler Gitverlauf; das neue Komplettpaket benötigt keine Patch-Anwendung.
-- GitHub-Neuverbindung erfolgreich: Entwicklungsbranch feature/konpasu-24-reviewed-update vom unveränderten main angelegt. Die geprüften Dateien wurden direkt über GitHub übertragen: Entwurfs-PR https://github.com/Rowlandolo/KONPASU/pull/1. Kein Merge und kein Deployment. Frühere HTTP-403-Befunde weiter unten sind historische Sitzungsbefunde.
-- Kandidat lokal: 2.4.0 mit 2.3.2-Fixes plus zusätzlicher Härtung. Produkt-/Datenversion und IndexedDB-Version bleiben unverändert.
+- Live: KONPASU 2.4.0 / konpasu-offline-v240, Runtime-Merge caf1aeada7954ab8b35004eb4186492b9b4bfc51 aus PR #1; Pages-Lauf 41486638959 und Live-Version bestätigt. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme bleibt offen.
+- Aktuelle Entwicklung: feature/avatar-artbook-foundation, Entwurfs-PR [#3](https://github.com/Rowlandolo/KONPASU/pull/3). Neuer Avatar ausschließlich im Entwicklungsatelier, keine neue Live-/Schema-/Cacheänderung.
+- Neu: vollständiger Körperunterbau in geschlossener Unterkleidung, unabhängige saubere Haar-/Grundkleidungsgrafiken, fünf kombinierbare Krafttrainingartikel als acht Rüstungsteile. Haarposition und Arm-/Handgelenkpassform anhand echter Aufnahmen korrigiert.
+- 222 Regressionen sowie App- und Atelier-Chromiumlauf erfolgreich für 6a8775a71b297c0c1616146e7d61ad13e9f5c675. [Browsernachweis](https://github.com/Rowlandolo/KONPASU/actions/runs/41509862640); Aufnahmen und Sichtbefunde in design/avatar/verification-body-foundation-v02.json.
+- Nur eine gezeichnete Anatomie; 6-Prozent-Breite ist ein gemeinsamer Transform. Grundoutfit, Vorder-/Hinterhaar, weitere 90 Artikel, Produktionsbudget und gespeicherte Mehrfach-Outfits noch offen.
+- Lokaler Gitverlauf bleibt eine eigene Snapshot-Baseline. Remoteänderungen erfolgen auf dem echten Upstream-Branch mit erwartetem Parent und SHA-geprüften Dateien, kein Push der synthetischen lokalen Historie.
+
+Die folgende Bestandsaufnahme und spätere Verlaufsabschnitte enthalten ältere Befunde. Maßgeblich für den aktuellen Lieferstand sind diese Übersicht und der jüngste Phasenabschluss.
 
 ## Ist–Soll
 
@@ -191,6 +193,12 @@ Unterkörperstudie ergänzt: vollständige separate Figur mit geschlossener Unte
 
 Die grobe Pixelmaskenzerlegung wurde aus dem Atelier-Renderer entfernt. Drei neue, unabhängig generierte transparente PNGs bilden jetzt vollständigen Körper/Kopf in geschlossener Unterkleidung, äußere Grundkleidung und Haare; Originalreferenz und frühere Studien bleiben unverändert archiviert. Der Körper enthält auch unter dem Gewand Rumpf und Beine. Haare werden separat mit erhaltener Proportion auf den Kopf registriert. Hashes, native Maße und Platzierungen stehen im versionierten base-layer-contract.json. Keine Bilddatei nachträglich rasterbearbeitet.
 
-Elf aktualisierte Basisprüfungen, insgesamt 222 lokale Prüfungen erfolgreich. Browserabnahme dieses neuen Stands noch ausstehend: acht Basiszustände, vollständige Anatomie an Referenzpunkten, keine Gesichts-/Handreste in isolierten Ebenen, deterministischer Neuaufbau, 32 Ausrüstungskombinationen und gemeinsame Breitenvariation. Ein-Pose-Prototyp, keine universelle Produktionsfreigabe. Live-App, Schema, Offline-Cache und Nutzerdaten unverändert.
+Elf aktualisierte Basisprüfungen, insgesamt 222 lokale Prüfungen erfolgreich. Browserprüfung für diesen Stand umfasst: acht Basiszustände, vollständige Anatomie an Referenzpunkten, keine Gesichts-/Handreste in isolierten Ebenen, deterministischer Neuaufbau, 32 Ausrüstungskombinationen und gemeinsame Breitenvariation. Ein-Pose-Prototyp, keine universelle Produktionsfreigabe. Live-App, Schema, Offline-Cache und Nutzerdaten unverändert.
 
-Sichtkorrektur: Haarregistrierung nach echter Aufnahme verkleinert und nach links/oben versetzt; Gesichtöffnung passt nun. Arm-/Handgelenkanker und vier Armfragmente anschließend auf die neuen Körperproportionen nachgeführt, statt die alten Handpositionen zu übernehmen. Erneuter kompletter Browserlauf für diese Passform ausstehend.
+Sichtkorrektur: Haarregistrierung nach echter Aufnahme verkleinert und nach links/oben versetzt; Gesichtöffnung passt nun. Arm-/Handgelenkanker und vier Armfragmente anschließend auf die neuen Körperproportionen nachgeführt, statt die alten Handpositionen zu übernehmen. Erneuter kompletter Browserlauf für diese Passform erfolgreich, siehe Abschluss unten.
+
+## Abschluss: saubere Basis und Körperunterbau
+
+222 Regressionen und reale Chromiumprüfungen erfolgreich für 6a8775a71b297c0c1616146e7d61ad13e9f5c675: https://github.com/Rowlandolo/KONPASU/actions/runs/41509862640. Alle acht Basisansichten, vollständiger Kopf/Rumpf/Beine/Füße/Hände ohne Gewand, keine Gesichts-/Handreste in isolierten Haaren/Kleidern, deterministischer Neuaufbau, 32 Ausrüstungsauswahlen, mobile Breite und keine Speicherwrites geprüft. Tatsächliche Aufnahmen von Unterbau, Kombination, komplettem Set und Breitenvariation gesichtet und unverändert archiviert. Haarpassform und vier Armfragmente nach Sichtprüfung korrigiert.
+
+Prototyp für diese Pose visuell geprüft, keine universelle Produktionsfreigabe. Die groben Masken sind abgelöst. Alle früheren „noch ausstehenden“ Browserbefunde dieses Abschnitts sind damit abgeschlossen; iPhone/Produktionsintegration und die im aktuellen Kopf genannten Ausbauarbeiten bleiben offen. Abschluss-Nachtrag ändert nur Nachweise/Dokumentation und die Registrierungsannotation, keine getestete Geometrie oder Runtime.

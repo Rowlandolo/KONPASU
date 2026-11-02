@@ -1,10 +1,10 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand: lokaler Kandidat 2.4.0, 02.11.2026. Veröffentlichung vom Nutzer beauftragt, aber technisch blockiert und noch nicht geräteabgenommen. Produktfreigabe durch Nutzer und belegte technische Abnahme getrennt festhalten.
+Stand 02.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PR #3. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
-`node scripts/check.cjs` (Node 22, keine Dependencies). Tests/harness lädt echte Runtimequellen, unterdrückt nur Top-Level-init/render und ersetzt Browserdienste. Keine Browserprüfung behaupten.
+`node scripts/check.cjs` (Node 22, keine Dependencies). Tests/harness lädt echte Runtimequellen, unterdrückt nur Top-Level-init/render und ersetzt Browserdienste. VM-Tests allein sind kein Browserbeleg; reale Chromiumläufe werden separat verlinkt.
 
 - [x] Alle Studiotabs DE/EN rendern ohne fehlende Hilfsfunktionen.
 - [x] Best neu aus tragbaren Items; Awards, Favoriten und Trainings bleiben.
@@ -202,7 +202,9 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] Grobe Quellpixelmasken im aktiven Renderer durch drei unabhängig gezeichnete PNGs ersetzt.
 - [x] Alle PNG-Hashes, RGBA-Maße, Platzierungsgrenzen, eindeutige IDs und feste Tiefenreihenfolge geprüft.
 - [x] Acht Basis-Auswahlen, ungültige Quellen/IDs/Registrierungen und unveränderte Eingaben geprüft; insgesamt 222 lokale Prüfungen.
-- [ ] Neuer Chromiumlauf: vollständiger Kopf/Rumpf/Beine/Füße/Hände auch ohne Gewand, keine Gesichts-/Handreste in Haar-/Kleidungsansicht.
-- [ ] Tatsächliche Komposition mit allen acht Ausrüstungsgrafiken, Haaransatz, Kragen-/Ärmel-/Handübergänge gesichtet.
+- [x] Neuer Chromiumlauf: vollständiger Kopf/Rumpf/Beine/Füße/Hände auch ohne Gewand, keine Gesichts-/Handreste in Haar-/Kleidungsansicht.
+- [x] Tatsächliche Komposition mit allen acht Ausrüstungsgrafiken, Haaransatz, Kragen-/Ärmel-/Handübergänge gesichtet; Haarregistrierung und vier Armfragmente korrigiert.
 - [ ] Vorder-/Hinterhaare, getrennte Grundkleidungsteile und zweite Anatomie.
 - [ ] Produktives Datenmodell, Offlinebudget und Geräteabnahme.
+
+Aktueller Beleg: 6a8775a71b297c0c1616146e7d61ad13e9f5c675, [Reviewlauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41509862640), 222 Regressionen, App-Chromium und elf Atelier-Prüfgruppen erfolgreich. Archivierte Aufnahmen und ausdrücklich begrenzte Sichtabnahme: design/avatar/verification-body-foundation-v02.json. Keine neue Veröffentlichung.
