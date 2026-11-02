@@ -170,3 +170,5 @@ Audit: 95 Kartenbilder sind keine transparenten, passend geriggten Ausrüstungst
 ## Avatar-Grafikprototypen (nur Entwicklungsbranch)
 
 Grundkörperrichtung bestätigt. Geschirr und beide Schulterpanzer als drei unabhängige transparente PNGs erstellt und mit geprüftem Metadatenadapter im Atelier kombinierbar. Sechs zusätzliche Integritäts-/Einpassungsprüfungen; insgesamt 209 lokal bestanden. Eigener Atelier-Chromiumtest erfasst reale Kombinationsansichten und 32 UI-Kombinationen. Freigabe der Passform, Vorder-/Hintermasken und Körpervarianten weiter offen. Live-App unverändert, keine Schema-/Rewardänderung.
+
+Atelier-Nachweis: GitHub-Lauf 41492495604 für 836160db erfolgreich; 209 Regressionen, bestehender App-Chromiumlauf und zusätzliche Atelierprüfung grün. Die echte kombinierte Browseraufnahme ist in design/avatar/review-combined-v01.png archiviert und wurde gesichtet. Schulterpanzer und Geschirr sind gemeinsam sichtbar. Die reine Sichtprüfung dieser Pose ersetzt keine Masken-/Körpervariantenabnahme.

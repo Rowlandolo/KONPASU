@@ -174,5 +174,5 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] Drei eigenständige RGBA-PNGs vorhanden, Hash/Abmessungen und gemessene Transparenz dokumentiert.
 - [x] Seitenverhältnis erhaltende Einpassung aus Alpha-Bounds, falsche Bounds/Rigs abgewiesen.
 - [x] 32 Auswahlkombinationen mit Teilverfügbarkeit geprüft; noch fehlende Grafiken bleiben offen.
-- [ ] Atelier-Chromiumlauf mit vier Darstellungen, allen 32 UI-Kombinationen und mobiler Breite für den aktuellen Commit bestehen lassen.
+- [x] Atelier-Chromiumlauf für 836160db: vier reale Darstellungen, alle 32 UI-Kombinationen, mobile Breite und keine Speicherschreibvorgänge bestanden. Browseraufnahme der Kombination gesichtet; design/avatar/verification-v01.json enthält den Beleg.
 - [ ] Sichtabnahme der Paarpassform sowie Vorder-/Hintermasken, danach Körpervarianten.
