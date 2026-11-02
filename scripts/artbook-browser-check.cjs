@@ -145,7 +145,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   }finally{await retinaContext.close()}
   for(const required of ['./layers/obi-v03.png','./equipment/chest-harness-back.png']){
    const failed=await context.newPage();
-   await failed.route(payloadRoute(required),route=>route.fulfill({status:200,contentType:'image/webp',body:Buffer.from('corrupted synthetic delivery')}));
+   const corrupted=Buffer.from(fs.readFileSync(path.join(root,'design/avatar'+payload(required))));corrupted[corrupted.length-1]^=1;
+   await failed.route(payloadRoute(required),route=>route.fulfill({status:200,contentType:'image/webp',body:corrupted}));
    await failed.goto(server.url+'design/avatar/index.html');await failed.waitForFunction(()=>document.body.dataset.artworkReady==='false');
    assert.match(await failed.locator('#artwork-status').innerText(),/checksum mismatch/);
    assert.equal(await failed.locator('#scene image[data-item-id]').count(),0);
