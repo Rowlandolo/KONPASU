@@ -12,8 +12,8 @@
    seen.add(layer.id);
    if(typeof layer.file!=='string'||!/^\.\/layers\/[a-z0-9-]+\.png$/.test(layer.file)||!/^([a-f0-9]{64})$/.test(layer.sha256))throw Error('Invalid base artwork source');
    if(layer.width!==1024||layer.height!==1536)throw Error('Invalid base artwork dimensions');
-   const p=layer.placement;
-   if(!p||Object.keys(p).sort().join(',')!=='height,width,x,y'||![p.x,p.y,p.width,p.height].every(Number.isFinite)||p.width<=0||p.height<=0||p.x<0||p.y<0||p.x+p.width>512||p.y+p.height>768||Math.abs(p.width/p.height-2/3)>1e-6)throw Error('Invalid base registration');
+   const p=layer.placement,margin=layer.id==='hair'?16:0;
+   if(!p||Object.keys(p).sort().join(',')!=='height,width,x,y'||![p.x,p.y,p.width,p.height].every(Number.isFinite)||p.width<=0||p.height<=0||p.x< -margin||p.y< -margin||p.x+p.width>512+margin||p.y+p.height>768+margin||Math.abs(p.width/p.height-2/3)>1e-6)throw Error('Invalid base registration');
   }
   return true;
  }

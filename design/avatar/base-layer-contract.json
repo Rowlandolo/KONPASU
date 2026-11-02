@@ -62,10 +62,10 @@
         357
       ],
       "placement": {
-        "x": 75,
-        "y": 0,
-        "width": 384,
-        "height": 576
+        "x": 67.5,
+        "y": -2,
+        "width": 368.64,
+        "height": 552.96
       },
       "origin": "image generation edit of approved base and underbody reference; PNG bytes unmodified"
     }

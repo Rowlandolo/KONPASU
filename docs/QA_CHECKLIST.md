@@ -201,7 +201,7 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 
 - [x] Grobe Quellpixelmasken im aktiven Renderer durch drei unabhängig gezeichnete PNGs ersetzt.
 - [x] Alle PNG-Hashes, RGBA-Maße, Platzierungsgrenzen, eindeutige IDs und feste Tiefenreihenfolge geprüft.
-- [x] Acht Basis-Auswahlen, ungültige Quellen/IDs/Registrierungen und unveränderte Eingaben geprüft; insgesamt 221 lokale Prüfungen.
+- [x] Acht Basis-Auswahlen, ungültige Quellen/IDs/Registrierungen und unveränderte Eingaben geprüft; insgesamt 222 lokale Prüfungen.
 - [ ] Neuer Chromiumlauf: vollständiger Kopf/Rumpf/Beine/Füße/Hände auch ohne Gewand, keine Gesichts-/Handreste in Haar-/Kleidungsansicht.
 - [ ] Tatsächliche Komposition mit allen acht Ausrüstungsgrafiken, Haaransatz, Kragen-/Ärmel-/Handübergänge gesichtet.
 - [ ] Vorder-/Hinterhaare, getrennte Grundkleidungsteile und zweite Anatomie.
