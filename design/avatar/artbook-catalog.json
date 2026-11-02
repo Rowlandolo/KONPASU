@@ -15,9 +15,9 @@
       "asset": "reward/strength-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/strength-1.webp",
-      "fittedArtworkStatus": "not-produced",
+      "fittedArtworkStatus": "prototype-review",
       "semanticMappingStatus": "artbook-identified-first-slice",
-      "equippableAssetStatus": "legacy-svg-only"
+      "equippableAssetStatus": "development-workshop-only"
     },
     {
       "id": "strength-2",
@@ -32,9 +32,9 @@
       "asset": "reward/strength-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/strength-2.webp",
-      "fittedArtworkStatus": "not-produced",
+      "fittedArtworkStatus": "prototype-review",
       "semanticMappingStatus": "artbook-identified-first-slice",
-      "equippableAssetStatus": "legacy-svg-only"
+      "equippableAssetStatus": "development-workshop-only"
     },
     {
       "id": "strength-3",
@@ -83,9 +83,9 @@
       "asset": "reward/strength-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/strength-5.webp",
-      "fittedArtworkStatus": "not-produced",
+      "fittedArtworkStatus": "prototype-review",
       "semanticMappingStatus": "artbook-identified-first-slice",
-      "equippableAssetStatus": "legacy-svg-only"
+      "equippableAssetStatus": "development-workshop-only"
     },
     {
       "id": "cardio-1",

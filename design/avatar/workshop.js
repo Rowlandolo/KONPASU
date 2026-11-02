@@ -16,7 +16,14 @@
   for(const part of plan.draw){
    const spec=art.specFor(part.asset),fit=art.placement(spec),img=svgNode('image');
    for(const [key,value] of Object.entries(fit))img.setAttribute(key,value);
-   img.setAttribute('href',part.src);img.dataset.partId=part.partId;img.dataset.itemId=part.itemId;document.getElementById('equipment').append(img);
+   img.setAttribute('href',part.src);
+   const polygons=art.clippingPolygons(spec);
+   if(document.getElementById('apply-occlusion').checked&&polygons.length){
+    const defs=svgNode('defs'),clip=svgNode('clipPath');clip.id='clip-'+part.partId;clip.setAttribute('clipPathUnits','userSpaceOnUse');
+    for(const points of polygons){const polygon=svgNode('polygon');polygon.setAttribute('points',points.map(p=>p.join(',')).join(' '));clip.append(polygon)}
+    defs.append(clip);document.getElementById('equipment').append(defs);img.setAttribute('clip-path','url(#'+clip.id+')');
+   }
+   img.dataset.partId=part.partId;img.dataset.itemId=part.itemId;document.getElementById('equipment').append(img);
   }
   for(const part of [...plan.draw,...plan.pending].sort((a,b)=>a.z-b.z)){
    const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?'Grafikprototyp':'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
@@ -26,7 +33,8 @@
  function setSelection(ids){selected.clear();ids.forEach(id=>selected.add(id));controls.querySelectorAll('input').forEach(i=>i.checked=selected.has(i.dataset.item));refresh()}
  document.getElementById('all').addEventListener('click',()=>setSelection(api.CATALOG.map(i=>i.id)));
  document.getElementById('none').addEventListener('click',()=>setSelection([]));
- for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4']}[button.dataset.preview]));
+ for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4'],fullset:api.CATALOG.map(i=>i.id)}[button.dataset.preview]));
+ document.getElementById('apply-occlusion').addEventListener('change',refresh);
  document.getElementById('show-anchors').addEventListener('change',event=>document.getElementById('anchors').style.display=event.target.checked?'block':'none');
  document.getElementById('reference').src=window.KONPASU_PREMIUM_SRC('assets/konpasu_body_motion_rewards.webp');refresh();
  try{

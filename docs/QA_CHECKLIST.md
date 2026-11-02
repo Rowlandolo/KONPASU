@@ -176,3 +176,11 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] 32 Auswahlkombinationen mit Teilverfügbarkeit geprüft; noch fehlende Grafiken bleiben offen.
 - [x] Atelier-Chromiumlauf für 836160db: vier reale Darstellungen, alle 32 UI-Kombinationen, mobile Breite und keine Speicherschreibvorgänge bestanden. Browseraufnahme der Kombination gesichtet; design/avatar/verification-v01.json enthält den Beleg.
 - [ ] Sichtabnahme der Paarpassform sowie Vorder-/Hintermasken, danach Körpervarianten.
+
+## Vollständiges Krafttraining-Set als Prototyp
+
+- [x] Acht eigenständige PNG-Fragmente für fünf Artikel; Binär-/Größen-/Rigzuordnung geprüft.
+- [x] Alle 32 Kombinationen ohne verdrängende Auswahl, jetzt ohne fehlende Prototypgrafiken.
+- [x] Riemenmaskenkoordinaten validiert, Metadaten unverändert, Maske abschaltbar.
+- [ ] Erweiterten Atelier-Chromiumlauf inklusive vollem Set und Maskenvergleich für diesen Commit bestehen lassen und tatsächliche Aufnahme sichten.
+- [ ] Ärmel-/Handübergänge, Masken, zweite Körpervariante, Produktions-Dateigrößen/Offline und produktive Datenanbindung.

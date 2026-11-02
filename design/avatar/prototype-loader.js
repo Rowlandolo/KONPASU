@@ -8,12 +8,20 @@
   const scale=Math.min(b.width/(right-left),b.height/(bottom-top));
   return {x:b.x+(b.width-(right-left)*scale)/2-left*scale,y:b.y+(b.height-(bottom-top)*scale)/2-top*scale,width:spec.width*scale,height:spec.height*scale};
  }
+ function clippingPolygons(spec){
+  if(spec.clipPolygons===undefined)return [];
+  if(!Array.isArray(spec.clipPolygons)||spec.clipPolygons.length>16)throw Error('Invalid clipping regions');
+  return spec.clipPolygons.map(polygon=>{
+   if(!Array.isArray(polygon)||polygon.length<3||polygon.length>64||!polygon.every(point=>Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&point[0]>=0&&point[0]<=512&&point[1]>=0&&point[1]<=768))throw Error('Invalid clipping polygon');
+   return polygon.map(point=>point.slice());
+  });
+ }
  const hex=bytes=>Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');
  async function load(manifest){
   if(!root.crypto?.subtle)throw Error('Die Werkstatt bitte über localhost oder HTTPS öffnen.');
   const next=new Map();
   for(const spec of manifest.assets){
-   placement(spec);
+   placement(spec);clippingPolygons(spec);
    if(!/^\.\/equipment\/[a-z-]+\.png$/.test(spec.file))throw Error('Unsupported prototype path');
    const response=await fetch(spec.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
    const bytes=await response.arrayBuffer(),view=new Uint8Array(bytes);
@@ -27,5 +35,5 @@
   loaded.clear();for(const [key,value] of next)loaded.set(key,value);return next.size;
  }
  function resolveAsset(key,expected){const spec=loaded.get(key);return spec&&spec.rig===expected.rig&&spec.anchor===expected.anchor?{src:spec.src,rig:spec.rig,anchor:spec.anchor,transparent:true}:null}
- root.KONPASU_PROTOTYPE_ART={placement,load,resolveAsset,specFor:key=>loaded.get(key)||null};
+ root.KONPASU_PROTOTYPE_ART={placement,clippingPolygons,load,resolveAsset,specFor:key=>loaded.get(key)||null};
 })(typeof window!=='undefined'?window:globalThis);

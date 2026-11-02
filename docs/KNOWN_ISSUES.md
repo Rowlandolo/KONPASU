@@ -52,3 +52,7 @@ ART-01: Vorhandene 95 Premiumkarten sind abgeflachte, teils abgeschnittene Illus
 ## Ausrüstungsprototypen
 
 ART-03: Drei neue PNGs sind Prototypen für eine Pose, keine fertigen universellen Rüstungsebenen. Geschirr enthält noch rückwärtige Riemen, die bei einfacher Überlagerung sichtbar bleiben können; Vorder-/Hintermaskierung erforderlich. Größen/Perspektiven und paarige Schulterpassform visuell abnehmen. Keine Übernahme in den Live-Avatar. Weitere fünf Fragmente des Krafttrainingpfads stehen aus.
+
+## Krafttraining-Fünferset
+
+Die fünf zuvor fehlenden Krafttrainingfragmente existieren jetzt als Prototypen. ART-03 bleibt für endgültige Passform/Masken und weitere Körper gültig. Die neue Geschirrverdeckung ist eine feste Sichtbarkeitsmaske für genau diese Pose, keine universelle Tiefenlösung. Große PNGs sind noch kein freigegebenes mobiles Offline-Assetbudget. Weitere 90 Artikel stehen als angepasste Grafiken aus. Keine Aussage, dass alle Kleidungs-/Handüberlagerungen bereits visuell abgenommen sind.

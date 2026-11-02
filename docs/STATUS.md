@@ -172,3 +172,7 @@ Audit: 95 Kartenbilder sind keine transparenten, passend geriggten Ausrüstungst
 Grundkörperrichtung bestätigt. Geschirr und beide Schulterpanzer als drei unabhängige transparente PNGs erstellt und mit geprüftem Metadatenadapter im Atelier kombinierbar. Sechs zusätzliche Integritäts-/Einpassungsprüfungen; insgesamt 209 lokal bestanden. Eigener Atelier-Chromiumtest erfasst reale Kombinationsansichten und 32 UI-Kombinationen. Freigabe der Passform, Vorder-/Hintermasken und Körpervarianten weiter offen. Live-App unverändert, keine Schema-/Rewardänderung.
 
 Atelier-Nachweis: GitHub-Lauf 41492495604 für 836160db erfolgreich; 209 Regressionen, bestehender App-Chromiumlauf und zusätzliche Atelierprüfung grün. Die echte kombinierte Browseraufnahme ist in design/avatar/review-combined-v01.png archiviert und wurde gesichtet. Schulterpanzer und Geschirr sind gemeinsam sichtbar. Die reine Sichtprüfung dieser Pose ersetzt keine Masken-/Körpervariantenabnahme.
+
+## Vollständiges erstes Set als Grafikprototyp
+
+Fünf neue transparente PNGs ergänzt: zwei Handgelenkbänder, zwei Armschienen, Brustpanzer. Damit sind alle fünf Krafttrainingartikel als acht unabhängig auflösbare Fragmente im Atelier vorhanden. Alle 32 Auswahlen bleiben erhalten. Umschaltbare rigbezogene Riemenmaske; keine Pixel- oder Nutzerdatenänderung. 211 lokale Prüfungen bestanden. Produktionspassform, weitere Körper, echte Vorder-/Hintersegmentierung und Dateigrößenbudget bleiben offen. Live-App unverändert; Entwurfs-PR #3.
