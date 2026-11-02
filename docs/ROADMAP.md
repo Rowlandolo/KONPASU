@@ -60,3 +60,5 @@ Erste Fünferset-Aufnahme nach Handgelenk-/Unterarmkorrektur in Chromium erfolgr
 ## Nach erster Basisaufteilung
 
 Isolierte Körper-/Haar-/Kleidungsbilder prüfen und Trennmasken korrigieren. Darauf aufbauend verborgene Körper-/Kopfflächen anhand der bestätigten Pose zeichnen und für wirklichen Wechsel passende neue Einzelgrafiken erstellen. Die geometrische Breitenvariation dient nur dem gemeinsamen Einpassungstest und ersetzt keine individuell gezeichnete zweite Anatomie. Erst nach dieser Sichtabnahme produktive freie Umkleidung.
+
+Neuer separat gezeichneter Körperunterbau vorhanden. Jetzt Proportionen/Anker mit bestätigter Basis vergleichen, danach passende vollständige Haar- und Grundkleidungsfragmente erzeugen und anpassen. Keine allein aus groben sichtbaren Masken abgeleitete Produktionsfreigabe.

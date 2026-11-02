@@ -60,3 +60,7 @@ Die fünf zuvor fehlenden Krafttrainingfragmente existieren jetzt als Prototypen
 ## Vorläufige Basissegmentierung
 
 ART-04: Die neue Aufteilung klassifiziert sichtbare Quellpixel durch vorläufige Masken; deren Anatomie-/Kleidungsgrenzen sind noch visuell nachzuarbeiten. Ohne Kleidung erscheinen nur im Original vorhandene Haut-/Gesichtsbereiche, keine vollständige Anatomie. Haare entfernen rekonstruiert keine verdeckte Kopfhaut. Der breitere Zustand ist eine gemeinsame 6-Prozent-Transformation, kein eigenständiger Körperbau. Vor frei wechselbaren Kleidungs- oder Haarassets passende Körper-/Kopfbasis neu zeichnen.
+
+Sichtbefund ART-04 bestätigt: Isolierte Körpermaske übernimmt noch Haar-/Kragenpixel, Haarmaske Haut-/Kragenreste, Kleidung einzelne Haar-/Hautreste. Grüne Rekonstruktions-/UI-Tests belegen deshalb ausdrücklich keine fertig separierten Produktionsassets. Neue Körperunterlage und neue/saubere Haar-/Kleiderdaten vor freiem Wechsel erforderlich.
+
+ART-05: Die neue Unterkörper-/Kopfbasis ist ein gesonderter Grafikentwurf und noch nicht auf die alten Kleidungs-/Haar-/Rüstungsebenen registriert. Unterbody-Metadaten markieren dies explizit. Das Atelier zeigt sie separat; keine automatische Pose-/Passformbehauptung oder Produktintegration.

@@ -189,6 +189,10 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 
 - [x] Original-PNG unverändert; Hash und Abmessungen geprüft.
 - [x] Sieben neue Tests: Pixelzuordnung/Rekonstruktion, acht Basis-Auswahlen, Trennbereiche, ungültige Eingaben und gemeinsame Proportionsparameter.
-- [ ] Native Browser-Rekonstruktion, acht Basisbilder und breiteres komplettes Set für diesen Commit abnehmen.
+- [x] Native Pixelrekonstruktion, acht Basisbilder und breiteres komplettes Set für 0eaa849d im Chromium technisch bestanden.
+- [ ] Sichtabnahme isolierter Trennbereiche: noch NICHT bestanden; Artefakt dokumentiert.
 - [ ] Isolierte Maskenkanten visuell korrigieren; verdeckte Körper-/Kopfflächen zeichnen.
 - [ ] Eigenständige Körpervariante mit echter Anatomie, separate produktive Kleider-/Haarassets.
+
+- [x] Gesonderte vollständige Körperunterbau-Grafik erstellt, PNG/Hash/Abmessungen getestet, Rigregistrierung explizit nicht akzeptiert.
+- [ ] Registrierung auf die bestätigte Pose, saubere passende Haar-/Kleidungsassets und unabhängige visuelle Abnahme.
