@@ -196,3 +196,13 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 
 - [x] Gesonderte vollständige Körperunterbau-Grafik erstellt, PNG/Hash/Abmessungen getestet, Rigregistrierung explizit nicht akzeptiert.
 - [ ] Registrierung auf die bestätigte Pose, saubere passende Haar-/Kleidungsassets und unabhängige visuelle Abnahme.
+
+## Saubere Einzelgrafiken / vollständiger Körperunterbau
+
+- [x] Grobe Quellpixelmasken im aktiven Renderer durch drei unabhängig gezeichnete PNGs ersetzt.
+- [x] Alle PNG-Hashes, RGBA-Maße, Platzierungsgrenzen, eindeutige IDs und feste Tiefenreihenfolge geprüft.
+- [x] Acht Basis-Auswahlen, ungültige Quellen/IDs/Registrierungen und unveränderte Eingaben geprüft; insgesamt 221 lokale Prüfungen.
+- [ ] Neuer Chromiumlauf: vollständiger Kopf/Rumpf/Beine/Füße/Hände auch ohne Gewand, keine Gesichts-/Handreste in Haar-/Kleidungsansicht.
+- [ ] Tatsächliche Komposition mit allen acht Ausrüstungsgrafiken, Haaransatz, Kragen-/Ärmel-/Handübergänge gesichtet.
+- [ ] Vorder-/Hinterhaare, getrennte Grundkleidungsteile und zweite Anatomie.
+- [ ] Produktives Datenmodell, Offlinebudget und Geräteabnahme.

@@ -64,3 +64,9 @@ ART-04: Die neue Aufteilung klassifiziert sichtbare Quellpixel durch vorläufige
 Sichtbefund ART-04 bestätigt: Isolierte Körpermaske übernimmt noch Haar-/Kragenpixel, Haarmaske Haut-/Kragenreste, Kleidung einzelne Haar-/Hautreste. Grüne Rekonstruktions-/UI-Tests belegen deshalb ausdrücklich keine fertig separierten Produktionsassets. Neue Körperunterlage und neue/saubere Haar-/Kleiderdaten vor freiem Wechsel erforderlich.
 
 ART-05: Die neue Unterkörper-/Kopfbasis ist ein gesonderter Grafikentwurf und noch nicht auf die alten Kleidungs-/Haar-/Rüstungsebenen registriert. Unterbody-Metadaten markieren dies explizit. Das Atelier zeigt sie separat; keine automatische Pose-/Passformbehauptung oder Produktintegration.
+
+## Ablösung der groben Masken durch neue Einzelgrafiken
+
+ART-04: Die alten polygonalen Quellpixelmasken sind aus der aktiven Atelierdarstellung entfernt. Eigenständige Haar-/Kleidungsgrafiken enthalten keine absichtlich ausgeschnittenen Gesichts-/Handfragmente. Neue Browser-/Sichtprüfung erforderlich; historische Rekonstruktionsnachweise beziehen sich auf den vorherigen Versuch.
+
+ART-05: Vollständiger neuer Körperunterbau jetzt unter separater Grundkleidung und Haaren im Atelier eingebunden. Registrierung zunächst nur für diese Pose, bis zur aktuellen Browser-Sichtung nicht als visuell abgenommen markieren. Unterkleidung bleibt Bestandteil des Körpers; Gewand, Obi, Hakama und Schuhe bilden noch ein gemeinsames Grundoutfit. Vorder-/Hinterhaar, echte zweite Anatomie, mobile Dateigrößen und produktive Speicherung bleiben offen. Die alte underbody-study.json beschreibt ausschließlich die archivierte v01-Studie.

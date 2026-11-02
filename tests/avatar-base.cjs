@@ -1,9 +1,28 @@
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');const c={};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../design/avatar/base-layers.js'),'utf8'),c);const api=c.KONPASU_BASE_LAYERS25,contract=require('../design/avatar/base-layer-contract.json');
-test('base study keeps the approved source image byte-identical and dimensions explicit',()=>{const b=fs.readFileSync(path.join(__dirname,'../design/avatar/base-art-direction-v01.png'));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),contract.sha256);assert.equal(b.readUInt32BE(16),contract.sourceWidth);assert.equal(b.readUInt32BE(20),contract.sourceHeight);assert.equal(api.validate(contract),true)});
-test('face, visible hands, hair and clothing are separately selectable regions',()=>{const classify=api.classifier(contract);assert.equal(classify(270,75),1);assert.equal(classify(153,390),1);assert.equal(classify(374,393),1);assert.equal(classify(220,35),2);assert.equal(classify(260,350),4);assert.equal(classify(-1,50),0);assert.equal(classify(NaN,2),0)});
-test('all base parts reconstruct every original RGBA byte, including semitransparent edges',()=>{const source=new Uint8ClampedArray([255,20,50,255,150,140,130,127,9,12,13,1,0,0,0,0]),owners=new Uint8Array([1,2,4,1]),before=Array.from(source);const result=api.filterPixels(source,owners,['body','hair','clothes']);assert.deepEqual(Array.from(result),before);assert.deepEqual(Array.from(source),before)});
-test('all eight base visibility combinations preserve enabled pixels and only hide disabled alpha',()=>{const source=new Uint8ClampedArray([5,6,7,150,8,9,10,200,12,13,14,254]),owners=new Uint8Array([1,2,4]),parts=['body','hair','clothes'];for(let mask=0;mask<8;mask++){const result=api.filterPixels(source,owners,parts.filter((_,i)=>mask&(1<<i)));for(let i=0;i<3;i++){assert.deepEqual(Array.from(result.slice(i*4,i*4+3)),Array.from(source.slice(i*4,i*4+3)));assert.equal(result[i*4+3],mask&(1<<i)?source[i*4+3]:0)}}});
-test('unknown parts, malformed ownership and invalid masks cannot silently change the body',()=>{assert.throws(()=>api.filterPixels(new Uint8Array(4),new Uint8Array([0]),['body']));assert.throws(()=>api.filterPixels(new Uint8Array(4),new Uint8Array([1]),['unknown']));assert.throws(()=>api.filterPixels(new Uint8Array(8),new Uint8Array([1]),['body']));assert.throws(()=>api.validate({...contract,source:'https://example.com/body.png'}));assert.throws(()=>api.validate({...contract,regions:{...contract.regions,hair:[[[0,0],[10,10],[999,100]]]}}))});
-test('proportion presets are bounded shared transforms with immutable defaults',()=>{const regular=api.proportion('regular'),broader=api.proportion('broader');assert.equal(regular.x,1);assert.equal(broader.x,1.06);assert.equal(broader.y,1);broader.x=7;assert.equal(api.proportion('broader').x,1.06);assert.throws(()=>api.proportion('constructor'))});
-test('region partition has no unassigned source positions across a dense grid',()=>{const classify=api.classifier(contract);for(let y=.5;y<768;y+=3)for(let x=.5;x<512;x+=3)assert.ok([1,2,4].includes(classify(x,y)))});
-test('separate underbody study is complete RGBA artwork but explicitly not registered to the old outfit',()=>{const metadata=require('../design/avatar/underbody-study.json'),b=fs.readFileSync(path.join(__dirname,'../design/avatar',metadata.file));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),metadata.sha256);assert.equal(b.readUInt32BE(16),metadata.width);assert.equal(b.readUInt32BE(20),metadata.height);assert.equal(b[25],6);assert.ok(metadata.transparentPixelsFraction>0);assert.equal(metadata.rigRegistration,'not-accepted');assert.equal(metadata.status,'underbody-art-study-only')});
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
+const context={};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../design/avatar/base-layers.js'),'utf8'),context);
+const api=context.KONPASU_BASE_LAYERS25,contract=require('../design/avatar/base-layer-contract.json');
+const copy=()=>JSON.parse(JSON.stringify(contract));
+test('independent base artwork has verified PNG bytes and explicit native registration',()=>{
+ assert.equal(api.validate(contract),true);
+ for(const layer of contract.layers){const b=fs.readFileSync(path.join(__dirname,'../design/avatar',layer.file));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),layer.sha256);assert.equal(b.subarray(1,4).toString(),'PNG');assert.equal(b.readUInt32BE(16),layer.width);assert.equal(b.readUInt32BE(20),layer.height);assert.equal(b[25],6)}
+});
+test('all eight visibility combinations use complete independent parts in stable depth order',()=>{
+ const parts=['body','clothes','hair'];for(let mask=0;mask<8;mask++){const selected=parts.filter((_,i)=>mask&(1<<i));assert.deepEqual(Array.from(api.plan(contract,[...selected].reverse()),l=>l.id),selected)}
+});
+test('repeated selection never duplicates a drawing or replaces another part',()=>{assert.deepEqual(Array.from(api.selection(['hair','body','hair','clothes'])),['body','clothes','hair'])});
+test('base planning does not mutate metadata, placement or caller selection',()=>{
+ const before=JSON.stringify(contract),selected=['hair','body'],result=api.plan(contract,selected);result[0].placement.x=99;result[0].file='changed';assert.equal(JSON.stringify(contract),before);assert.deepEqual(selected,['hair','body'])
+});
+test('invalid rig, missing layers and duplicate layer identifiers are rejected',()=>{
+ for(const change of [c=>c.rig='other',c=>c.version=1,c=>c.layers.pop(),c=>c.layers[1].id=c.layers[0].id]){const c=copy();change(c);assert.throws(()=>api.validate(c))}
+});
+test('external files, traversal, unsupported sizes and malformed checksums are rejected',()=>{
+ for(const value of ['https://example.com/body.png','./layers/../body.png','./layers/BODY.png']){const c=copy();c.layers[0].file=value;assert.throws(()=>api.validate(c))}
+ const c=copy();c.layers[0].width=512;assert.throws(()=>api.validate(c));c.layers[0].width=1024;c.layers[0].sha256='x'.repeat(64);assert.throws(()=>api.validate(c))
+});
+test('registration rejects off-canvas, stretched or non-finite placements',()=>{
+ for(const placement of [{x:-1,y:0,width:512,height:768},{x:0,y:0,width:513,height:768},{x:0,y:0,width:512,height:700},{x:NaN,y:0,width:512,height:768}]){const c=copy();c.layers[0].placement=placement;assert.throws(()=>api.validate(c))}
+});
+test('unknown visibility selections fail before changing the composition',()=>{assert.throws(()=>api.selection(['body','constructor']));assert.throws(()=>api.selection('body'));assert.throws(()=>api.plan(contract,['unknown']))});
+test('proportion presets are bounded shared transforms with immutable defaults',()=>{assert.equal(api.proportion('regular').x,1);const p=api.proportion('broader');assert.equal(p.x,1.06);assert.equal(p.y,1);p.x=7;assert.equal(api.proportion('broader').x,1.06);assert.throws(()=>api.proportion('constructor'))});
+test('original approved style reference remains byte-identical',()=>{const b=fs.readFileSync(path.join(__dirname,'../design/avatar/base-art-direction-v01.png'));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),'e2387b82c8734e169d47308ed596ecc227a261b572179df8dcb78f19c701b2c6')});

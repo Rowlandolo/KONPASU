@@ -34,7 +34,7 @@
  function refreshBase(){
   if(!baseRenderer)return;
   const parts=Array.from(document.querySelectorAll('[data-base-part]:checked'),input=>input.dataset.basePart);baseRenderer.draw(parts);
-  document.getElementById('base-limit').textContent=parts.includes('clothes')?'Vorläufige Maskenstudie. Verdeckte Körperflächen sind noch nicht neu gezeichnet.':'Ohne Grundkleidung bleiben nur die im Original sichtbaren Körperpartien. Fehlende Körperflächen werden nicht erfunden.';
+  document.getElementById('base-limit').textContent=!parts.includes('body')?'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.':parts.includes('clothes')?'Vollständiger Körperunterbau mit separater Grundkleidung. Alle Ebenen sind einzeln schaltbar.':'Vollständiger Körperunterbau in geschlossener Unterkleidung – einschließlich Kopf, Rumpf und Beinen.';
  }
  for(const input of document.querySelectorAll('[data-base-part]'))input.addEventListener('change',refreshBase);
  document.getElementById('body-proportions').addEventListener('change',event=>{const p=window.KONPASU_BASE_LAYERS25.proportion(event.target.value);document.getElementById('avatar-rig').style.transform=`scale(${p.x},${p.y})`;document.body.dataset.proportion=event.target.value});
@@ -46,6 +46,6 @@
  document.getElementById('reference').src=window.KONPASU_PREMIUM_SRC('assets/konpasu_body_motion_rewards.webp');refresh();
  try{
   const response=await fetch('./prototype-assets.json',{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt.');
-  const manifest=await response.json();const baseResponse=await fetch('./base-layer-contract.json',{cache:'no-store'});if(!baseResponse.ok)throw Error('Basismasken fehlen.');baseRenderer=await window.KONPASU_BASE_LAYERS25.load(document.getElementById('base-canvas'),await baseResponse.json());window.KONPASU_WORKSHOP_BASE=baseRenderer;refreshBase();await art.load(manifest);ready=true;refresh();document.body.dataset.artworkReady='true';
+  const manifest=await response.json();const baseResponse=await fetch('./base-layer-contract.json',{cache:'no-store'});if(!baseResponse.ok)throw Error('Basisebenen fehlen.');baseRenderer=await window.KONPASU_BASE_LAYERS25.load(document.getElementById('base-canvas'),await baseResponse.json());window.KONPASU_WORKSHOP_BASE=baseRenderer;refreshBase();await art.load(manifest);ready=true;refresh();document.body.dataset.artworkReady='true';
  }catch(error){document.getElementById('artwork-status').textContent='Grafikvorschau konnte nicht geladen werden: '+error.message;document.body.dataset.artworkReady='false'}
 })();
