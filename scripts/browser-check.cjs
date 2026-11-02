@@ -68,7 +68,12 @@ async function runBrowser(root,preflight,report,output,engine='chromium'){
   });
   await check('Two real IndexedDB tabs reject the stale writer',async()=>{
    // Stable profile now loaded in two tabs; no schema, storage or revision mocks.
-   const other=await context.newPage();await other.clock.setFixedTime(new Date('2026-11-02T12:00:00Z'));other.on('dialog',d=>d.accept());await other.goto(server.url);await loaded(other);
+   const other=await context.newPage();await other.clock.setFixedTime(new Date('2026-11-02T12:00:00Z'));other.on('dialog',d=>d.accept());await other.goto(server.url);await loaded(other);await other.evaluate(()=>saveQueue);
+   // Startup may persist newly derived awards/catalog defaults. Synchronize both
+   // snapshots before asserting which tab wins the subsequent deliberate edit.
+   await page.reload();await loaded(page);await page.evaluate(()=>saveQueue);
+   report.tabRevisions={first:await page.evaluate(()=>knownRevision),second:await other.evaluate(()=>knownRevision)};
+   assert.equal(report.tabRevisions.first,report.tabRevisions.second,'Both tabs must start at the same saved revision');
    assert.equal(await page.evaluate(async()=>{data.profile.name='Synthetic first tab';return store()}),true);
    assert.equal(await other.evaluate(async()=>{data.profile.name='Synthetic stale tab';return store()}),false);
    assert.equal(await other.evaluate(()=>storageLocked),true);await other.close();await page.reload();await loaded(page);assert.equal(await page.evaluate(()=>data.profile.name),'Synthetic first tab');
@@ -96,6 +101,6 @@ async function main(args=process.argv.slice(2)){
  validateArgs(args);
  const output=path.resolve(args.includes('--output')?args[args.indexOf('--output')+1]:path.join(require('node:os').tmpdir(),'konpasu-browser-'+Date.now()));fs.mkdirSync(output,{recursive:true});
  const report={startedAt:new Date().toISOString(),status:'blocked',checks:[],limitations:['Does not replace real Safari/iPhone, PWA upgrade, VoiceOver, quotas or visual approval.'],preflight:inspect()};
- try{if(report.preflight.status!=='ready')throw Error('Incomplete checkout: see missingCritical/missingVisual. No browser checks started.');if(args.includes('--run'))await runBrowser(ROOT,report.preflight,report,output,args.includes('--engine')?args[args.indexOf('--engine')+1]:'chromium');else report.status='preflight-only'}catch(error){report.status=report.checks.some(c=>c.status==='failed')?'failed':'blocked';report.error=error.message;process.exitCode=1}finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2));console.log('Browser acceptance: '+report.status+'; report '+path.join(output,'report.json'));console.log(JSON.stringify({checks:report.checks,consoleErrors:report.consoleErrors},null,2));if(report.error)console.error(report.error)}
+ try{if(report.preflight.status!=='ready')throw Error('Incomplete checkout: see missingCritical/missingVisual. No browser checks started.');if(args.includes('--run'))await runBrowser(ROOT,report.preflight,report,output,args.includes('--engine')?args[args.indexOf('--engine')+1]:'chromium');else report.status='preflight-only'}catch(error){report.status=report.checks.some(c=>c.status==='failed')?'failed':'blocked';report.error=error.message;process.exitCode=1}finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2));console.log('Browser acceptance: '+report.status+'; report '+path.join(output,'report.json'));console.log(JSON.stringify({checks:report.checks,consoleErrors:report.consoleErrors,tabRevisions:report.tabRevisions},null,2));if(report.error)console.error(report.error)}
 }
 module.exports={inspect,resource,workerList,validateArgs};if(require.main===module)main().catch(e=>{console.error(e.message);process.exitCode=1});
