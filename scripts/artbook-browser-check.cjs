@@ -58,6 +58,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   assert.ok(harnessNodes.findIndex(n=>n.part==='chest-harness-back')<harnessNodes.findIndex(n=>n.base==='body'));
   assert.ok(harnessNodes.findIndex(n=>n.part==='chest-harness')>harnessNodes.findIndex(n=>n.base==='obi'));
   assert.ok(harnessNodes.filter(n=>n.part).every(n=>n.clip===null));
+  await page.locator('[data-base-part="kimono"]').uncheck();await page.locator('.stage').screenshot({path:path.join(output,'harness-without-kimono-a.png')});await page.locator('[data-base-part="kimono"]').check();
   await page.locator('#apply-occlusion').uncheck();assert.equal(await page.locator('#scene image[data-item-id="strength-3"]').count(),2);await page.locator('#apply-occlusion').check();
   await page.locator('#harness-layers').evaluate(e=>e.open=true);await page.waitForFunction(()=>['harness-front-image','harness-back-image'].every(id=>document.getElementById(id).naturalWidth>0));
   assert.equal(await page.locator('[data-item="strength-3"]').isChecked(),true);await page.locator('#harness-layers').screenshot({path:path.join(output,'harness-layers.png')});await page.locator('#harness-layers').evaluate(e=>e.open=false);
@@ -69,6 +70,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   await chooseShape('form-b');assert.equal(await page.getAttribute('body','data-body-shape'),'form-b');
   assert.equal(await page.locator('#scene > image[data-item-id]').count(),9);assert.deepEqual(await page.evaluate(()=>{const m=new DOMMatrix(getComputedStyle(document.getElementById('avatar-rig')).transform);return [m.a,m.b,m.c,m.d]}),[1,0,0,1]);
   await page.locator('.stage').screenshot({path:path.join(output,'form-b-fullset.png')});
+  await page.locator('[data-preview="harness"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-harness.png')});
+  await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene image[data-item-id="strength-3"]').count(),2);assert.equal(await page.locator('#scene image[clip-path]').count(),0);await page.locator('.stage').screenshot({path:path.join(output,'harness-without-kimono-b.png')});await page.locator('[data-base-part="kimono"]').check();
   await page.locator('[data-base-preview="hairstyle"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-underbody.png')});
   await page.locator('[data-base-preview="dressed"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-dressed.png')});
   for(const part of baseParts)await page.locator(`[data-base-part="${part}"]`).uncheck();previous=0;
