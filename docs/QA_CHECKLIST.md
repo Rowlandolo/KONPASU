@@ -263,8 +263,11 @@ Aktueller Abschluss: c99b943e70666452aeba9e9a95fe0f05f2c4ad34, [Browser/Regressi
 - [x] Getrennte neue PNGs mit Quellreferenz, SHA-256, Maßen und Alpha-Grenzen; bisheriges Original erhalten.
 - [x] Vorhandener Artikel-/Frontschlüssel erhalten, Rückteil ergänzt; fehlendes Teil lässt den ganzen Artikel ausstehend.
 - [x] Beide Formregistrierungen, neun Fragmente, Rücken-/Vorderrolle und ungültige Tiefen durch 28 gezielte Rig-/Artwork-/Szenentests geprüft.
-- [ ] Frischer Auslieferungsbuild, vollständige Regressionen und unveränderte numerische Budgets.
-- [ ] Reale SVG-Pixel für Rücken/Körper/Vorderseite und getrennte Grafikvorschau, ohne Teilverlust.
-- [ ] Beide Formen mit Geschirr allein, vollem Set und ausgeblendeter Basis sichten; 3×-Bildqualität gegen neue Originale.
-- [ ] Beschädigte Rückgrafik zeigt Fehler ohne halben Artikel/Teilfigur; Retry/Race und bestehende Offline-Appprüfung weiterhin erfolgreich.
+- [x] Frischer Auslieferungsbuild, 248 vollständige Regressionen und unveränderte numerische Budgets: 760,882 Startbytes, 50,269,696 Quell-RGBA-Bytes.
+- [x] Reale SVG-Pixel für Rücken/Körper/Vorderseite und getrennte Grafikvorschau, ohne Teilverlust.
+- [x] Beide Formen mit Geschirr allein, vollem Set und ausgeblendeter Basis gesichtet; 3×-Bildqualität gegen neue Originale erfolgreich.
+- [x] Ohne Gewand zu weit außen liegende Rückriemen korrigiert; echte Alpha-Prüfung unterhalb y=190 maximal vier Randpixel außerhalb Körperfläche (A: 1, B: 3).
+- [x] Beschädigte Rückgrafik zeigt Fehler ohne halben Artikel/Teilfigur; Retry/Race und bestehende Offline-Appprüfung weiterhin erfolgreich. Negativtest verändert gültige WebP-Bytes nach dem Header und prüft die SHA-Verweigerung.
 - [ ] Ärmel-Vorder-/Hinterflächen, weitere Kopfteile und physische Geräte-/Produktionsintegration.
+
+Aktueller Beleg: 0a65c3c7d62943028fcd12e49a8021a91b195574, [248 Regressionen, App-Chromium und 21 Atelier-Prüfgruppen](https://github.com/Rowlandolo/KONPASU/actions/runs/41547850324), [bytegleicher Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41547850475). Original-/Mobilevergleich verlustbegrenzt, keine Pixelidentität zum früheren maskierten Geschirr behauptet. Archivierte Ansichten, Prüfgrenzen und Messwerte: design/avatar/verification-harness-depth-v07.json. Keine neue Liveversion.
