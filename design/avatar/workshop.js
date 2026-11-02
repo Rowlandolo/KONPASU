@@ -59,8 +59,9 @@
  reference.addEventListener('load',()=>referenceStatus.textContent='');
  reference.addEventListener('error',()=>{reference.removeAttribute('src');referenceStatus.textContent='Artbook konnte nicht geladen werden. Bitte schließen und erneut öffnen.'});
  document.getElementById('artbook-reference').addEventListener('toggle',event=>{
-  if(event.target.open&&!reference.getAttribute('src')){referenceStatus.textContent='Artbook wird geladen …';reference.src='./reference-board.webp'}
- });refresh();
+  if(event.target.open&&!reference.getAttribute('src')){referenceStatus.textContent='Artbook wird geladen …';reference.loading='eager';reference.src='./reference-board.webp'}
+ });
+ document.getElementById('style-reference').addEventListener('toggle',event=>{const image=document.getElementById('style-reference-image');if(event.target.open&&!image.getAttribute('src')){image.loading='eager';image.src='./base-art-direction-v01.png'}});refresh();
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);

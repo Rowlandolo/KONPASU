@@ -18,7 +18,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   await page.evaluate(()=>window.__bodyNode=document.querySelector('#scene [data-base-id="body"]'));
   await page.locator('[data-item="strength-1"]').uncheck();await page.locator('[data-item="strength-1"]').check();
   assert.equal(await page.evaluate(()=>window.__bodyNode===document.querySelector('#scene [data-base-id="body"]')),true);
-  report.performance={...assets,assets:undefined,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
+  const startupPNGs=requests.filter(p=>p.endsWith('.png')),byFile=new Map(assets.assets.map(a=>[a.file,a.bytes]));assert.equal(startupPNGs.length,15);const startupPNGBytes=startupPNGs.reduce((sum,p)=>{const file='.'+p.slice('/design/avatar'.length);assert.ok(byFile.has(file),'Unexpected startup bitmap: '+p);return sum+byFile.get(file)},0);assert.equal(startupPNGBytes,assets.startupAssetBytes);
+  report.performance={...assets,assets:undefined,observedStartupPNGRequests:startupPNGs.length,observedStartupRequestedPNGBytes:startupPNGBytes,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
   report.checks.push('Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings');
   async function chooseShape(id){await page.locator('#body-shape').selectOption(id);await page.waitForFunction(value=>document.body.dataset.bodyShape===value&&!document.body.dataset.shapeLoading,id)}
   const baseParts=['hair-back','body','shoes','kimono','hakama','obi','hair-front'];
