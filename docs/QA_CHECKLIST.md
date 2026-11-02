@@ -182,5 +182,5 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] Acht eigenständige PNG-Fragmente für fünf Artikel; Binär-/Größen-/Rigzuordnung geprüft.
 - [x] Alle 32 Kombinationen ohne verdrängende Auswahl, jetzt ohne fehlende Prototypgrafiken.
 - [x] Riemenmaskenkoordinaten validiert, Metadaten unverändert, Maske abschaltbar.
-- [ ] Erweiterten Atelier-Chromiumlauf inklusive vollem Set und Maskenvergleich für diesen Commit bestehen lassen und tatsächliche Aufnahme sichten.
+- [x] Erweiterter Atelier-Chromiumlauf für 437a240c bestanden: vollständiges Set, Maskenvergleich, alle 32 Auswahlen, mobile Breite, keine Datenwrites. Tatsächliche Aufnahme gesichtet; Handgelenkbänder und Armschienen danach nachjustiert und erneut grün geprüft.
 - [ ] Ärmel-/Handübergänge, Masken, zweite Körpervariante, Produktions-Dateigrößen/Offline und produktive Datenanbindung.

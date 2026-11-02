@@ -176,3 +176,5 @@ Atelier-Nachweis: GitHub-Lauf 41492495604 für 836160db erfolgreich; 209 Regress
 ## Vollständiges erstes Set als Grafikprototyp
 
 Fünf neue transparente PNGs ergänzt: zwei Handgelenkbänder, zwei Armschienen, Brustpanzer. Damit sind alle fünf Krafttrainingartikel als acht unabhängig auflösbare Fragmente im Atelier vorhanden. Alle 32 Auswahlen bleiben erhalten. Umschaltbare rigbezogene Riemenmaske; keine Pixel- oder Nutzerdatenänderung. 211 lokale Prüfungen bestanden. Produktionspassform, weitere Körper, echte Vorder-/Hintersegmentierung und Dateigrößenbudget bleiben offen. Live-App unverändert; Entwurfs-PR #3.
+
+Fünferset-Nachweis: Für 437a240c sind 211 Regressionen, App-Chromium und erweiterter Atelierlauf erfolgreich (41495775682). Nach Sichtung der ersten Aufnahme wurden zu tief sitzende Bänder höher gesetzt und Armschienen verkürzt; neue Aufnahme erneut gesichtet und archiviert. design/avatar/verification-full-set-v01.json und review-full-set-v01.png belegen den tatsächlichen Stand. Keine Veröffentlichung.
