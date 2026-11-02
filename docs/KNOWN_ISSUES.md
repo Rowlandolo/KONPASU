@@ -44,3 +44,7 @@ PKG-01 lokal behoben: vollständige Original-ZIP erhalten, alle 45 Basisdateien 
 ## Nach Veröffentlichung 2.4.0
 
 Chromiumblocker der lokalen Arbeitsumgebung bleibt lokal bestehen; reale Chromiumabnahme wurde erfolgreich in GitHub Actions ausgeführt. Startabhängigkeit gmYes vor core-v15 behoben, Regression vorhanden. QA-01 bleibt für reales iPhone/VoiceOver/Alt-PWA-Upgrade offen. Runtime-Merge und Pagesveröffentlichung erfolgreich, aktuelle Nachweise in STATUS.md.
+
+## Artbookabweichung / Mehrfachausrüstung
+
+ART-01: Vorhandene 95 Premiumkarten sind abgeflachte, teils abgeschnittene Illustrationen; keine tragbaren transparenten Assets. ART-02: Legacy-Slots verdrängen Artikel und weisen z.B. Schulterpanzer dem Kopf zu. Neuer Planer prüft unabhängige Auswahl, Livepfad bleibt unverändert. Acht Krafttrainingfragmente noch anzufertigen; Grundkörper ist ein generierter Stilentwurf mit Transparenz, kein fertiges segmentiertes Rig. Kein Anspruch auf abgeschlossene visuelle Abnahme.

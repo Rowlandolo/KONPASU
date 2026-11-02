@@ -162,3 +162,7 @@ Chromiumlauf in GitHub Actions erstmals durchgeführt: reale Speicherung, Import
 ## Veröffentlichung abgeschlossen (02.11.2026)
 
 Nutzerfreigabe umgesetzt, PR #1 nach grünen Prüfungen gemergt. 194 Regressionen und kompletter realer Chromiumlauf erfolgreich für PR-Commit 4cb2c2e52b87928e56daf93538bdf04d95200232. Quelle: https://github.com/Rowlandolo/KONPASU/pull/1. Pages-Lauf https://github.com/Rowlandolo/KONPASU/actions/runs/41486638959 erfolgreich. Live-JSON und Startseite über unabhängigen Abruf geprüft. Native iPhone-/VoiceOver-/Alt-PWA-Upgradefälle bleiben offen. Frühere Nicht-deployed-/Browserblockerabschnitte sind historische Befunde. Dokumentationsnachtrag verändert keine Runtime oder Nutzerdaten.
+
+## Avatar-Artbook-Grundlage (Entwicklung, nicht live)
+
+Audit: 95 Kartenbilder sind keine transparenten, passend geriggten Ausrüstungsteile; mehrere alte Slotzuordnungen widersprechen den Bildern. Neuer separater Branch. Grundkörper-Stilentwurf, 95er-Arbeitsinventar, reine Ebenenplanung für fünf unabhängige Krafttrainingartikel/acht Fragmente und Entwickleratelier erstellt. Neun neue Prüfungen einschließlich aller 32 Startkombinationen; 203 Gesamtprüfungen. Keine neuen produktionsfertigen Rüstungsgrafiken, keine neue Persistenz/Live-Anbindung. Plan in AVATAR_ARTBOOK_PLAN.md, Copilot-/Appplan in PROFESSIONAL_APP_PLAN.md.

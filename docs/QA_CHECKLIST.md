@@ -158,3 +158,13 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [x] PR #1 übernommen, Pages erfolgreich für caf1aeada7954ab8b35004eb4186492b9b4bfc51.
 - [x] Live version.json=2.4.0/v240 und Startseite unabhängig erreichbar.
 - [ ] Reales iPhone, VoiceOver und Upgrade einer bestehenden persönlichen PWA weiterhin zu prüfen.
+
+## Artbook-Grundlage
+
+- [x] Alte Kartenbilder als ungeeignet für direktes Anziehen erkannt, Quelle/Artikel-IDs erhalten.
+- [x] Alle 32 Auswahlkombinationen des ersten Fünfersets ohne stillen Ersatz geprüft.
+- [x] Feste Reihenfolge, acht getrennte anatomische Fragmente, unbekannte IDs/gesperrte Artikel und unveränderte Eingaben geprüft.
+- [x] Alle 95 bestehenden Artikel-IDs inventarisiert, alle neuen Grafiken offen markiert.
+- [ ] Basis in Körper/Haar/Gewand segmentieren, endgültige Anker/Masken und Körpervarianten.
+- [ ] Acht neue angepasste Rüstungsfragmente erzeugen und visuell mit der Basis abnehmen.
+- [ ] Echte Appintegration, Persistenz/Favoriten/History-Konvertierung mit Rückweg und Gerätetest.
