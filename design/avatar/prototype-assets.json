@@ -179,7 +179,7 @@
       "transparentPixelsFraction": 0.8452,
       "placement": {
         "x": 144,
-        "y": 386,
+        "y": 366,
         "width": 29,
         "height": 20
       },
@@ -206,7 +206,7 @@
       "transparentPixelsFraction": 0.8386,
       "placement": {
         "x": 363,
-        "y": 389,
+        "y": 375,
         "width": 29,
         "height": 20
       },
@@ -235,7 +235,7 @@
         "x": 141,
         "y": 325,
         "width": 31,
-        "height": 62
+        "height": 50
       },
       "sha256": "4b84c53c126436b245c343f94377f0c278c9025a91622e3ba264bb9823dd3af7",
       "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
@@ -262,7 +262,7 @@
         "x": 358,
         "y": 332,
         "width": 29,
-        "height": 57
+        "height": 52
       },
       "sha256": "d977b937eb336288cf7f56b620aee3560536c2cc35cdd3276bb566091b690637",
       "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
