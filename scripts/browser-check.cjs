@@ -27,14 +27,14 @@ async function serve(root,files){
 async function runBrowser(root,preflight,report,output,engine='chromium'){
  const playwright=require('playwright');assert.ok(['chromium','webkit'].includes(engine),'Only chromium/webkit supported');
  let browser,server,context;
- const check=async(name,fn)=>{try{await fn();report.checks.push({name,status:'passed'})}catch(error){report.checks.push({name,status:'failed',error:error.message});throw error}};
+ const check=async(name,fn)=>{try{await fn();report.checks.push({name,status:'passed'})}catch(error){report.checks.push({name,status:'failed',error:error.stack||error.message});throw error}};
  try{
   // Fresh, non-persistent contexts and a random loopback origin isolate all synthetic writes.
   browser=await playwright[engine].launch({headless:true,...(process.env.KONPASU_BROWSER_EXECUTABLE?{executablePath:process.env.KONPASU_BROWSER_EXECUTABLE}:{})});
   report.browser=await browser.version();report.engine=engine;
   server=await serve(root,preflight.files);report.testOrigin=server.url;
   context=await browser.newContext({viewport:{width:1280,height:900},timezoneId:'Europe/Berlin',locale:'de-DE',acceptDownloads:true});
-  const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
+  const errors=[];report.consoleErrors=[];context.on('page',p=>{p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text())})});
   const page=await context.newPage();await page.clock.setFixedTime(new Date('2026-11-02T12:00:00Z'));
   let acceptImport=false;page.on('dialog',async dialog=>{if(dialog.type()==='confirm'&&!acceptImport)await dialog.dismiss();else await dialog.accept()});
   async function loaded(p){await p.waitForFunction(()=>document.querySelector('.page-title')&&typeof data!=='undefined'&&db&&!storageLocked);}
@@ -96,6 +96,6 @@ async function main(args=process.argv.slice(2)){
  validateArgs(args);
  const output=path.resolve(args.includes('--output')?args[args.indexOf('--output')+1]:path.join(require('node:os').tmpdir(),'konpasu-browser-'+Date.now()));fs.mkdirSync(output,{recursive:true});
  const report={startedAt:new Date().toISOString(),status:'blocked',checks:[],limitations:['Does not replace real Safari/iPhone, PWA upgrade, VoiceOver, quotas or visual approval.'],preflight:inspect()};
- try{if(report.preflight.status!=='ready')throw Error('Incomplete checkout: see missingCritical/missingVisual. No browser checks started.');if(args.includes('--run'))await runBrowser(ROOT,report.preflight,report,output,args.includes('--engine')?args[args.indexOf('--engine')+1]:'chromium');else report.status='preflight-only'}catch(error){report.status=report.checks.some(c=>c.status==='failed')?'failed':'blocked';report.error=error.message;process.exitCode=1}finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2));console.log('Browser acceptance: '+report.status+'; report '+path.join(output,'report.json'));if(report.error)console.error(report.error)}
+ try{if(report.preflight.status!=='ready')throw Error('Incomplete checkout: see missingCritical/missingVisual. No browser checks started.');if(args.includes('--run'))await runBrowser(ROOT,report.preflight,report,output,args.includes('--engine')?args[args.indexOf('--engine')+1]:'chromium');else report.status='preflight-only'}catch(error){report.status=report.checks.some(c=>c.status==='failed')?'failed':'blocked';report.error=error.message;process.exitCode=1}finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2));console.log('Browser acceptance: '+report.status+'; report '+path.join(output,'report.json'));console.log(JSON.stringify({checks:report.checks,consoleErrors:report.consoleErrors},null,2));if(report.error)console.error(report.error)}
 }
 module.exports={inspect,resource,workerList,validateArgs};if(require.main===module)main().catch(e=>{console.error(e.message);process.exitCode=1});
