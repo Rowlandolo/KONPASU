@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "codec": "image/webp",
+  "quality": 0.95,
+  "baseScale": 0.75,
+  "equipmentMaxEdges": {
+    "chest-harness": 576,
+    "breastplate": 512,
+    "shoulder-left": 384,
+    "shoulder-right": 384,
+    "armguard-left": 384,
+    "armguard-right": 384,
+    "wrist-wrap-left": 160,
+    "wrist-wrap-right": 160
+  },
+  "preserveFullFrame": true,
+  "originalsModified": false
+}
