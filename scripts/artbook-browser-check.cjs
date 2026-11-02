@@ -24,6 +24,15 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   report.performance={...assets,assets:undefined,observedStartupDeliveryRequests:startupPNGs.length,observedStartupRequestedDeliveryBytes:startupPNGBytes,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
   report.checks.push('Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings');
   async function chooseShape(id){await page.locator('#body-shape').selectOption(id);await page.waitForFunction(value=>document.body.dataset.bodyShape===value&&!document.body.dataset.shapeLoading,id)}
+  async function assertRearFit(){
+   const result=await page.evaluate(async()=>{
+    const read=async selector=>{const node=document.querySelector(selector),image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=node.getAttribute('href')});const c=document.createElement('canvas');c.width=512;c.height=768;const ctx=c.getContext('2d');ctx.drawImage(image,...['x','y','width','height'].map(k=>Number(node.getAttribute(k))));return ctx.getImageData(0,0,512,768).data};
+    const body=await read('#scene [data-base-id="body"]'),rear=await read('#scene [data-part-id="chest-harness-back"]');let outsideBelowShoulder=0,opaqueRearPixels=0;
+    for(let y=0;y<768;y++)for(let x=0;x<512;x++){const p=(y*512+x)*4;if(rear[p+3]>128){opaqueRearPixels++;if(y>=190&&body[p+3]<128)outsideBelowShoulder++}}
+    return {shape:document.body.dataset.bodyShape,opaqueRearPixels,outsideBelowShoulder,scope:'512x768 actual delivered alpha; rear alpha >128 and body alpha <128 below rig y=190'};
+   });
+   assert.ok(result.opaqueRearPixels>0);assert.ok(result.outsideBelowShoulder<=4,JSON.stringify(result));report.harnessFit??={};report.harnessFit[result.shape]=result;
+  }
   const baseParts=['hair-back','body','shoes','kimono','hakama','obi','hair-front'];
   assert.deepEqual(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.getSelection()),baseParts);
   assert.equal(await page.locator('#scene > image[data-base-id]').count(),7);
@@ -58,6 +67,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   assert.ok(harnessNodes.findIndex(n=>n.part==='chest-harness-back')<harnessNodes.findIndex(n=>n.base==='body'));
   assert.ok(harnessNodes.findIndex(n=>n.part==='chest-harness')>harnessNodes.findIndex(n=>n.base==='obi'));
   assert.ok(harnessNodes.filter(n=>n.part).every(n=>n.clip===null));
+  await assertRearFit();
   await page.locator('[data-base-part="kimono"]').uncheck();await page.locator('.stage').screenshot({path:path.join(output,'harness-without-kimono-a.png')});await page.locator('[data-base-part="kimono"]').check();
   await page.locator('#apply-occlusion').uncheck();assert.equal(await page.locator('#scene image[data-item-id="strength-3"]').count(),2);await page.locator('#apply-occlusion').check();
   await page.locator('#harness-layers').evaluate(e=>e.open=true);await page.waitForFunction(()=>['harness-front-image','harness-back-image'].every(id=>document.getElementById(id).naturalWidth>0));
@@ -71,6 +81,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   assert.equal(await page.locator('#scene > image[data-item-id]').count(),9);assert.deepEqual(await page.evaluate(()=>{const m=new DOMMatrix(getComputedStyle(document.getElementById('avatar-rig')).transform);return [m.a,m.b,m.c,m.d]}),[1,0,0,1]);
   await page.locator('.stage').screenshot({path:path.join(output,'form-b-fullset.png')});
   await page.locator('[data-preview="harness"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-harness.png')});
+  await assertRearFit();report.checks.push('Both actual rear sprites stay within the underbody below shoulders; no hanging external return strap');
   await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene image[data-item-id="strength-3"]').count(),2);assert.equal(await page.locator('#scene image[clip-path]').count(),0);await page.locator('.stage').screenshot({path:path.join(output,'harness-without-kimono-b.png')});await page.locator('[data-base-part="kimono"]').check();
   await page.locator('[data-base-preview="hairstyle"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-underbody.png')});
   await page.locator('[data-base-preview="dressed"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-dressed.png')});
