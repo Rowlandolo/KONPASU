@@ -147,5 +147,6 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 ## GitHub-Neuverbindung
 
 - [x] main gelesen und separaten Entwicklungsbranch erfolgreich angelegt.
-- [ ] Remote-Dateistand gegen lokale Git-Blob-Hashes verifizieren, Entwurfs-PR und zugehörige Checks prüfen.
+- [x] Remote-Dateistand vollständig per Git-Blob-SHA verifiziert und Entwurfs-PR #1 erstellt.
+- [ ] GitHub-Reviewchecks für den aktuellen PR-Commit bestehen; lokale 193 Prüfungen sind getrennte Belege.
 - [ ] Browser/iPhone/Upgrade und Veröffentlichung weiterhin separat freigeben.

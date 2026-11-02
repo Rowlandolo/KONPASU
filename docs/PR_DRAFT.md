@@ -1,6 +1,6 @@
 # KONPASU 2.4 – modularer Avatar, Belohnungen und Datensicherheit
 
-Zielbranch main; Remote-Entwicklungsbranch feature/konpasu-24-reviewed-update. Schreibzugriff nach Neuverbindung erfolgreich geprüft. Reviewkandidat; kein Merge und kein Deployment durch diese Änderung.
+Zielbranch main; Remote-Entwicklungsbranch feature/konpasu-24-reviewed-update. Schreibzugriff nach Neuverbindung erfolgreich geprüft. Entwurfs-PR: https://github.com/Rowlandolo/KONPASU/pull/1. Reviewkandidat; kein Merge und kein Deployment durch diese Änderung.
 
 Avatarabsturz der Basis 2.3.1 behoben und echte SVG-Ebenen auf Studio/Startseite integriert. Belohnungssammlung mit Status-/Slotfiltern, Voraussetzungen, Begleitern, Favoriten, Ruhmeshalle und Ausrüstungsübersicht ergänzt. Gesperrte Anprobe bleibt ohne Besitzänderung.
 

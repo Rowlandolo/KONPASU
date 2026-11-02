@@ -8,7 +8,7 @@ Datum: 02.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständige
 - Letzter GitHub-Pages-Run: 41301820103, success für exakt diesen Commit. Öffentliche Live-URL konnte in dieser Sitzung nicht unabhängig gelesen werden; kein neuer Live-Versionsnachweis.
 - Repository: 45 Rootdateien; kein package.json, kein Build-System, keine eingecheckten Workflows oder automatisierten Tests an der geprüften Basis. Pages verwendet einen von GitHub bereitgestellten Deploymentlauf; Einstellungen konnten nicht vollständig gelesen werden.
 - Lokal: `feature/konpasu-24-audit`; verifizierter Textsnapshot als eigene Baseline, NICHT der originale Upstream-Gitverlauf. Die zuvor fehlenden Binärassets und premium-art-bundle.js wurden aus der am 02.11. gelieferten vollständigen Original-ZIP ergänzt. Alle 45 Originaldateien stimmen vor Übernahme exakt mit den bekannten Git-Blob-Hashes überein. Die Textsnapshot-Baseline bleibt ein eigener lokaler Gitverlauf; das neue Komplettpaket benötigt keine Patch-Anwendung.
-- GitHub-Neuverbindung erfolgreich: Entwicklungsbranch feature/konpasu-24-reviewed-update vom unveränderten main angelegt. Die geprüften Dateien werden direkt über GitHub übertragen und als Review-PR bereitgestellt. Kein Merge und kein Deployment. Frühere HTTP-403-Befunde weiter unten sind historische Sitzungsbefunde.
+- GitHub-Neuverbindung erfolgreich: Entwicklungsbranch feature/konpasu-24-reviewed-update vom unveränderten main angelegt. Die geprüften Dateien wurden direkt über GitHub übertragen: Entwurfs-PR https://github.com/Rowlandolo/KONPASU/pull/1. Kein Merge und kein Deployment. Frühere HTTP-403-Befunde weiter unten sind historische Sitzungsbefunde.
 - Kandidat lokal: 2.4.0 mit 2.3.2-Fixes plus zusätzlicher Härtung. Produkt-/Datenversion und IndexedDB-Version bleiben unverändert.
 
 ## Ist–Soll
@@ -150,3 +150,5 @@ Original-ZIP KONPASU-main.zip mit allen 45 Basisdateien erhalten, sämtliche Git
 ## GitHub-Schreibzugriff wiederhergestellt
 
 Nach Nutzer-Neuverbindung Branchanlage erfolgreich. Ausgangspunkt main weiterhin 444bdb3981ccc03c550fb402c2cca9e45ad8a46a. Übertragung des vollständigen geprüften Kandidaten in eigenen Remote-Branch beauftragt; Pull Request als Entwurf, echte Geräteabnahme bleibt offen. Originaldateien werden per bekanntem SHA erhalten; keine privaten Backups hochladen.
+
+Remoteprüfung: alle 72 geänderten/neuen Dateien stimmen per Git-Blob-SHA mit dem lokalen Kandidaten überein; Remote-Tree hat vollständig 106 Dateien. PR #1 als Entwurf geöffnet. GitHub-Reviewchecks für den aktuellen PR-Commit gesondert prüfen; die 193 bisherigen Ergebnisse sind lokale Prüfungen. main unverändert, nicht veröffentlicht.
