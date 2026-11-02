@@ -1,7 +1,7 @@
 {
   "version": 1,
   "codec": "image/webp",
-  "quality": 0.95,
+  "quality": 0.98,
   "builder": "Playwright Chromium 1.56.1; canvas high quality resampling; full-frame coordinates preserved",
   "entries": [
     {
@@ -10,12 +10,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/hair-back-v03-2e1d8792eb.webp",
-      "sha256": "b67725b8b13612ca39852a21b1fe523218654fa405ed0d7d92536f44063e4b0e",
-      "width": 768,
-      "height": 1152,
-      "bytes": 15248,
+      "sha256": "75fb2642884753c07d0e3121ed47dc6ecb8fd9a259a8a8ad1ef975af9f02c7be",
+      "width": 864,
+      "height": 1296,
+      "bytes": 19008,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 2.1879451962456082
+      "visibleColorRMSE": 1.785138707919031
     },
     {
       "source": "./layers/body-v02.png",
@@ -23,12 +23,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/body-v02-8025dee046.webp",
-      "sha256": "d771a5098b396a176a78c5b5051170a0960f8eb994350411c22172498941b016",
-      "width": 768,
-      "height": 1152,
-      "bytes": 81268,
+      "sha256": "58ee0ba1d3906c4370fa8fbafbb292caedc8aaf5a1ef00c1eee682b692453f48",
+      "width": 864,
+      "height": 1296,
+      "bytes": 109622,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 1.5820489662245312
+      "visibleColorRMSE": 1.3188955716910173
     },
     {
       "source": "./layers/shoes-v03.png",
@@ -36,12 +36,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/shoes-v03-49a7176b32.webp",
-      "sha256": "437bc2075ddd964af3f2ecf4fe9e7226bd2826d53b57ce3618773bf9a5d06e25",
-      "width": 768,
-      "height": 1152,
-      "bytes": 11012,
+      "sha256": "ef517aa70556f1883bd187d78dda32ea0603c39314bb5d3e7c45616ae3e2f336",
+      "width": 864,
+      "height": 1296,
+      "bytes": 14688,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 3.153023338932785
+      "visibleColorRMSE": 2.719277349921226
     },
     {
       "source": "./layers/kimono-v03.png",
@@ -49,12 +49,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/kimono-v03-115b7d1929.webp",
-      "sha256": "d33b9c5e907e63a85b9d70640652e9ca119490f45418f088fea214ec158f3fc5",
-      "width": 768,
-      "height": 1152,
-      "bytes": 114180,
+      "sha256": "54ff60b6f3e152c7ff232ff94b7eaa7a315a92cad127a6b77c406db9032b679d",
+      "width": 864,
+      "height": 1296,
+      "bytes": 165768,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 2.1672071549958325
+      "visibleColorRMSE": 1.8358864475843368
     },
     {
       "source": "./layers/hakama-v03.png",
@@ -62,12 +62,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/hakama-v03-019c844c45.webp",
-      "sha256": "17197807da50ccd39c24fb62e72c432c0d8e763d9c2a7d68c80870c4508a5b07",
-      "width": 768,
-      "height": 1152,
-      "bytes": 37970,
+      "sha256": "b454df083dbec506cfe58e69e82968f6d7cfd426466194f9b532f7b3c6b97e8d",
+      "width": 864,
+      "height": 1296,
+      "bytes": 53328,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 1.5486205833126894
+      "visibleColorRMSE": 1.3329204582424905
     },
     {
       "source": "./layers/obi-v03.png",
@@ -75,12 +75,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/obi-v03-8ba56385aa.webp",
-      "sha256": "671078a1eefce13fd6ee2cd2f591b6b8580c25d5627ff25b8df84c67912fb05d",
-      "width": 768,
-      "height": 1152,
-      "bytes": 11208,
+      "sha256": "785a052777e4d9e1f132ec02e63eba985d2391d73ead99001f8b63b2d37fba3e",
+      "width": 864,
+      "height": 1296,
+      "bytes": 14434,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 1.7693579282957814
+      "visibleColorRMSE": 1.4694645101005537
     },
     {
       "source": "./layers/hair-front-v03.png",
@@ -88,12 +88,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/hair-front-v03-87298570aa.webp",
-      "sha256": "1915b62c68eeb5f832b0389791cead9643ff71753da172a12fd8c782475b167f",
-      "width": 768,
-      "height": 1152,
-      "bytes": 31790,
+      "sha256": "e28b46beb9dd7591dc94b8c4f6e5ef7bf8525bb096d52bdd8bfe3b70d53db8fe",
+      "width": 864,
+      "height": 1296,
+      "bytes": 41166,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 2.48313612765384
+      "visibleColorRMSE": 2.0952448668766213
     },
     {
       "source": "./layers/body-broad-v04.png",
@@ -101,12 +101,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/body-broad-v04-79f3b1ca34.webp",
-      "sha256": "87325b4bf9b5eb467d558cc811bac0427c2a345b62f9a19ab8f85d40021ac6d0",
-      "width": 768,
-      "height": 1152,
-      "bytes": 89454,
+      "sha256": "8b42e3e4a16a5a50399c831c4aab20c8e20d1ae18918cb344ce7bff34d65a5c1",
+      "width": 864,
+      "height": 1296,
+      "bytes": 122198,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 1.5366341040090845
+      "visibleColorRMSE": 1.297082719894619
     },
     {
       "source": "./layers/kimono-broad-v04.png",
@@ -114,12 +114,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/kimono-broad-v04-6893a048f9.webp",
-      "sha256": "bc4cc908e3ea50a57a33011637b4d1e9fd2340158d1a4ccf2816e34bd91db47e",
-      "width": 768,
-      "height": 1152,
-      "bytes": 107072,
+      "sha256": "89bfcf9025df1ec0becbb425b6f0fceed236b58281eebf3189757d892ed03e86",
+      "width": 864,
+      "height": 1296,
+      "bytes": 154574,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 2.215329881755452
+      "visibleColorRMSE": 1.8689370242998447
     },
     {
       "source": "./layers/hakama-broad-v04.png",
@@ -127,12 +127,12 @@
       "sourceWidth": 1024,
       "sourceHeight": 1536,
       "file": "./runtime-v06/hakama-broad-v04-4210201de2.webp",
-      "sha256": "359823d01cba1ccb0eba4031891229d3f7d49ab5d9551843d4065325f46aafe8",
-      "width": 768,
-      "height": 1152,
-      "bytes": 36034,
+      "sha256": "8f8255c120eb73d366ed62862efe538f1f9f859a580339a5a03f4cd8c2fc3094",
+      "width": 864,
+      "height": 1296,
+      "bytes": 52394,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 1.471997502470499
+      "visibleColorRMSE": 1.2669347847080497
     },
     {
       "source": "./equipment/chest-harness.png",
@@ -140,12 +140,12 @@
       "sourceWidth": 1218,
       "sourceHeight": 1292,
       "file": "./runtime-v06/chest-harness-bc5b8d92d6.webp",
-      "sha256": "602afe359f4db055ece4a5ddebef6e25610d65d63fcc845a2a30fd31c8e10afc",
-      "width": 543,
-      "height": 576,
-      "bytes": 67784,
+      "sha256": "5fe35786dda34e3b73c97ca462239ee79ef2fc53b15ecd0336eca1cd8f38ab17",
+      "width": 603,
+      "height": 640,
+      "bytes": 92176,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 5.060201768466564
+      "visibleColorRMSE": 4.506030657393665
     },
     {
       "source": "./equipment/shoulder-left.png",
@@ -153,12 +153,12 @@
       "sourceWidth": 1312,
       "sourceHeight": 1199,
       "file": "./runtime-v06/shoulder-left-623b98ba0c.webp",
-      "sha256": "de8479d57fe8726c02b76dd7683dfc83b8deaff0e3171dd8f2656f0df03859c0",
-      "width": 384,
-      "height": 351,
-      "bytes": 38976,
+      "sha256": "fc03b44048f07a5f15a5edcf35e15565e1508bb2a0aef8ac41694b74b3d96fc1",
+      "width": 512,
+      "height": 468,
+      "bytes": 69732,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 6.1349133416197965
+      "visibleColorRMSE": 4.881416916251303
     },
     {
       "source": "./equipment/shoulder-right.png",
@@ -166,12 +166,12 @@
       "sourceWidth": 1312,
       "sourceHeight": 1199,
       "file": "./runtime-v06/shoulder-right-5bfb7b91ee.webp",
-      "sha256": "d830ed514dea611b48acda4a7900e42e787bb2dd4e5246b6e49c17e9cebb241c",
-      "width": 384,
-      "height": 351,
-      "bytes": 28660,
+      "sha256": "cec18341f17bba43744509ffce7510cb61dbe50c0f76123b7396caa85789ae56",
+      "width": 512,
+      "height": 468,
+      "bytes": 51840,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 6.046410890966573
+      "visibleColorRMSE": 4.787267482357619
     },
     {
       "source": "./equipment/wrist-wrap-left.png",
@@ -179,12 +179,12 @@
       "sourceWidth": 1312,
       "sourceHeight": 1199,
       "file": "./runtime-v06/wrist-wrap-left-3478785494.webp",
-      "sha256": "c557df9e010091e358f939f45432db996e04f4a3152b733dcab70b03e3dd6719",
-      "width": 160,
-      "height": 146,
-      "bytes": 4754,
+      "sha256": "d34ac9bc8dcb1dbfc2c3ac740857ee381c9e6dbaea973497925bd8a00c532516",
+      "width": 192,
+      "height": 175,
+      "bytes": 7322,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 7.252005124615127
+      "visibleColorRMSE": 8.118180106444186
     },
     {
       "source": "./equipment/wrist-wrap-right.png",
@@ -192,12 +192,12 @@
       "sourceWidth": 1312,
       "sourceHeight": 1199,
       "file": "./runtime-v06/wrist-wrap-right-ea9b40f378.webp",
-      "sha256": "a124923a06a443784982afb969b0e6f2d6ca0b4ea3bb2d9f0dcdf92360fb6d1d",
-      "width": 160,
-      "height": 146,
-      "bytes": 5082,
+      "sha256": "05b252d16626227e2768f93c559551606393a231971dad6f2c7ebba19505333c",
+      "width": 192,
+      "height": 175,
+      "bytes": 7440,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 6.595982096331768
+      "visibleColorRMSE": 7.499809834500117
     },
     {
       "source": "./equipment/armguard-left.png",
@@ -205,12 +205,12 @@
       "sourceWidth": 763,
       "sourceHeight": 2061,
       "file": "./runtime-v06/armguard-left-4b84c53c12.webp",
-      "sha256": "a5143c485c0b5c1eee43092e8a7fa1ae4f3b743db8e73a6e69c3e07c6e5cce3f",
-      "width": 142,
-      "height": 384,
-      "bytes": 18596,
+      "sha256": "4b24e7a18d02b80f43f7375610147aaeba828bf05891c258e61fffc66ba3b941",
+      "width": 166,
+      "height": 448,
+      "bytes": 27368,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 6.163810401378013
+      "visibleColorRMSE": 5.164024698764196
     },
     {
       "source": "./equipment/armguard-right.png",
@@ -218,12 +218,12 @@
       "sourceWidth": 749,
       "sourceHeight": 2098,
       "file": "./runtime-v06/armguard-right-d977b937eb.webp",
-      "sha256": "5a1f39ef65b51407d4d170462f6a6af44f57c3c26409ae3241df8dabb96e1c94",
-      "width": 137,
-      "height": 384,
-      "bytes": 17808,
+      "sha256": "60a08d589bc28bcf0c61dc27dbac3aa58303f243cd56d2bbafcfca8bfa464193",
+      "width": 160,
+      "height": 448,
+      "bytes": 25786,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 6.209589410160887
+      "visibleColorRMSE": 5.371718028058997
     },
     {
       "source": "./equipment/breastplate.png",
@@ -231,12 +231,12 @@
       "sourceWidth": 1312,
       "sourceHeight": 1199,
       "file": "./runtime-v06/breastplate-6b0bfd2b00.webp",
-      "sha256": "6ea6f7fce3e216b51a0b06c3c2ad89deffb48a6b79629761ee30ae1f66fa64d9",
+      "sha256": "4bcabe67871870283f344a7e5b7ce13c3ff3338729ecc6288141f3608cab696a",
       "width": 512,
       "height": 468,
-      "bytes": 59648,
+      "bytes": 70406,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 5.2316083452867845
+      "visibleColorRMSE": 5.105507726783278
     }
   ]
 }
