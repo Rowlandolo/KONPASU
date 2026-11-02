@@ -22,3 +22,7 @@ Unveränderte SVG-Bildknoten bleiben erhalten. Masken verweisen auf die aktive B
 Technische Budgetdatei: design/avatar/performance-budget.json. Wiederholbare Bestandsrechnung: `node scripts/avatar-budget.cjs`. Gegenwärtig gilt eine vorläufige Prototypobergrenze von 16 MB Startgrafiken, 20 MB gesamten Avatar-Dateien und 128 MiB geschätztem decodiertem Quell-RGBA. Ziel für die Produktion sind höchstens 8 MB Startgrafiken und 48 MiB Quell-RGBA. Diese Produktionsziele sind noch nicht erfüllt; das verhindert eine irreführende mobile Produktionsfreigabe.
 
 Die Dateirechnung verwendet unkomprimierte HTTP-Nutzdateigrößen und native Breite × Höhe × 4. Sie misst keine gesamte App-Netzlast und keinen tatsächlichen Browser-/GPU-Spitzenspeicher. Skriptzeiten aus Chromium schließen Bildaufbau/Paint nicht ein und ersetzen keine Messung auf dem Zieltelefon. Bildgrößen/Auslieferungsformate und echte Gerätemessungen bleiben Teil dieser Etappe.
+
+## Letzter Prüfbeleg
+
+https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108, Quellcommit e05b0c3f5228b10a83ef270fcac1b28045f1bf8a: 236 Regressionen, App-Chromium und 17 Atelier-Prüfgruppen erfolgreich. 15 Start-PNG-Anfragen, unveränderte vollständige Set-Aufnahmen, Fehlerretry und Schutz vor verspäteter Antwort geprüft. Messwerte und Grenzen stehen in design/avatar/verification-performance-v05.json. Das bestätigt den umgesetzten Teil von Etappe 1; die sechs Etappen sind dadurch noch nicht vollständig abgeschlossen.

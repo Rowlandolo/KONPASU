@@ -17,7 +17,7 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Zwei gezeichnete Körperformen mit individuell passender Kleidung/Ausrüstung und gemeinsame Alpha-Verdeckung sind im Chromium geprüft und gesichtet. Nächster Abschnitt: verbindliches mobiles Asset-/Renderingbudget und echte Vorder-/Hinterfragmente für Riemen, Ärmel und spätere Kopfteile. Danach produktive Mehrfach-Outfits mit verlustfreier Besitz-/Favoriten-/History-Anbindung; übrige 90 Artikel auf dem geprüften Vertrag schrittweise erstellen.
+Aktuelle Entwicklungspriorität ist Etappe 1 aus AVATAR_RELEASE_STEPS.md: mobile Leistung und Grafikbudget. Bedarfsgesteuertes Laden, SVG-Wiederverwendung und Prototypgrenzen sind geprüft; kleinere Produktionsgrafiken und reale Gerätemessung stehen aus. Danach folgen fehlende Tiefenfragmente, App-/Datenintegration, die übrigen 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Eine erste Liveversion mit dem Startset kann vor allen 90 weiteren Grafiken erscheinen, sobald die zugehörigen Integrations-/Geräte-/Releasegates erfüllt sind und nicht übertragene Artikel erhalten bleiben.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
@@ -88,3 +88,5 @@ Zwei-Formen-/Szenenabschnitt erfolgreich geprüft und gesichtet: https://github.
 ## Zählbarer Weg zum vollständigen Artbook-Avatar
 
 Sechs größere Etappen mit Ergebnissen und Abschlusskriterien: AVATAR_RELEASE_STEPS.md. Etappe 1 (Leistung/Grafikbudget) ist aktiv, mit bedarfsgesteuertem Laden und Bild-/Maskenwiederverwendung. Produktionsziele sind noch nicht erreicht. Dann Tiefenfragmente, Daten-/Appintegration, weitere 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Der KI-Copilot und die restliche App besitzen zusätzliche Phasen im PROFESSIONAL_APP_PLAN.md.
+
+Aktueller Etappe-1-Beleg: https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108, verification-performance-v05.json. Bedarfssteuerung und Rendering optimiert, visuelle Set-Ausgabe bytegleich; Produktionsgrößen bleiben ein offenes Abschlusskriterium.

@@ -89,6 +89,8 @@ Zwei-Formen-Nachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/4152938
 
 ## Leistungsabschnitt
 
-PERF-01: Vorher beide Formen und komplettes 6,3-MB-Referenzbundle beim Start. Form B und Referenz nun bedarfsgesteuert; SVG-Bilder werden wiederverwendet, Masken referenzieren ihre Bildfläche statt Daten zu duplizieren. Prüfraster werden erst durch Snapshot-Aufruf angelegt. Browserbeleg für diesen neuen Stand ausstehend.
+PERF-01: Vorher beide Formen und komplettes 6,3-MB-Referenzbundle beim Start. Form B und Referenz nun bedarfsgesteuert; SVG-Bilder werden wiederverwendet, Masken referenzieren ihre Bildfläche statt Daten zu duplizieren. Prüfraster werden erst durch Snapshot-Aufruf angelegt. Neuer Browserbeleg erfolgreich: verification-performance-v05.json, inklusive Retry/Race, Maskenpixeln und bytegleichen Vergleichsbildern. PERF-01 im aktuellen Prototyp behoben.
 
 PERF-02 bleibt Produktionsblocker für den neuen Avatar: aktuelle PNG-Quellauflösungen benötigen 15.52 MB beim Start und geschätzt 108 MiB decodiertes RGBA für alle verfügbaren Formen/Artikel. Die Schätzung enthält keine GPU-, DOM-, String- oder Browserkosten. Prototypbudgets sind kein Ersatz für kleinere Auslieferungsgrafiken und physische Gerätemessungen. Neue Grafikversionen/Formatwahl und Leistungsprüfung bleiben Bestandteil von Etappe 1.
+
+Aktueller Leistungsnachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108, 236 Regressionen und 17 Atelier-Prüfgruppen erfolgreich. Referenzen werden erst bei ausdrücklichem Öffnen, dann unmittelbar geladen. PERF-02 bleibt offen; weder die Prototypbudgets noch CI-Skriptzeiten sind eine Produktions-/iPhonefreigabe.

@@ -236,8 +236,10 @@ Aktueller Nachweis: 89e6dcc4bbcc9c90c2043628a8440a0b65e40c57, [Zwei-Formen-Lauf]
 
 - [x] Unveränderte Quell-PNGs; optionale Referenz exakt bytegleich zum Original-WebP.
 - [x] Wiederholbare Byte-/Quell-RGBA-Rechnung, eindeutige Ressourcen, Prototypobergrenzen und offen ausgewiesene Produktionsziele; sechs neue Tests, 236 insgesamt.
-- [ ] Chromium: keine zweite Körperform/Artbook beim Start, null Prüfraster und keine PNG-Kopien in Masken.
-- [ ] Stabile Körper-Bildknoten, pro Sitzung nur einmal geladene Zusatzgrafiken, echte Maskenpixel weiter korrekt.
-- [ ] Fehlgeschlagene Körperladung erhält Auswahl und lässt Retry zu; verspätete Antwort überschreibt neuere Auswahl/Artikel nicht.
-- [ ] Skriptzeiten samt Messgrenze aufzeichnen; bestehende Kombinationen/Offline-Appprüfung weiterhin erfolgreich.
+- [x] Chromium: keine zweite Körperform/Artbook beim Start, null Prüfraster und keine PNG-Kopien in Masken.
+- [x] Stabile Körper-Bildknoten, pro Sitzung nur einmal geladene Zusatzgrafiken, echte Maskenpixel weiter korrekt.
+- [x] Fehlgeschlagene Körperladung erhält Auswahl und lässt Retry zu; verspätete Antwort überschreibt neuere Auswahl/Artikel nicht.
+- [x] Skriptzeiten samt Messgrenze aufgezeichnet; bestehende Kombinationen/Offline-Appprüfung weiter erfolgreich. Set-PNGs beider Körper bytegleich zum vorherigen Stand.
 - [ ] Kleine Produktionsgrafiken und reale Zielgeräte: Etappe 1 noch nicht abgeschlossen.
+
+Leistungsbeleg: e05b0c3f5228b10a83ef270fcac1b28045f1bf8a, [Lauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108), 236 Regressionen und 17 Atelier-Prüfgruppen. Produktive Größen-/Geräteziele bleiben offen.

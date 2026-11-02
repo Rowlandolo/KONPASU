@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "scope": "development atelier; source PNG estimates exclude GPU, DOM, strings and browser overhead",
+  "scope": "development atelier first five-article set; source PNG estimates exclude GPU, DOM, strings and browser overhead",
   "prototype": {
     "startupAssetBytes": 16000000,
     "totalAssetBytes": 20000000,
