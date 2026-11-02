@@ -214,7 +214,9 @@ Aktueller Beleg: 6a8775a71b297c0c1616146e7d61ad13e9f5c675, [Reviewlauf](https://
 - [x] Vollständigen Unterbau bytegleich erhalten; sechs neue separate PNGs samt SHA-256 und nativen Maßen geprüft.
 - [x] 128 Auswahlen aller sieben Basisteile mit stabiler Reihenfolge und unveränderten Eingaben; 222 lokale Regressionen.
 - [x] Unterschiedliche Zeichenflächen für Hinterhaare/Körper/Kleider und Vorderhaare; Ausrüstung bleibt dazwischen.
-- [ ] Chromium: alle 128 realen Basisauswahlen, drei Schnellansichten, identischer Neuaufbau und weiter 32 Rewardkombinationen.
-- [ ] Beschädigtes Pflichtasset zeigt Fehler und lässt keine teilweise Basis/Ausrüstung erscheinen.
-- [ ] Aktuelle Einzelbilder und Komposition samt Taille, Ärmeln, Schuhen und Frisur gesichtet.
+- [x] Chromium: alle 128 realen Basisauswahlen, drei Schnellansichten, identischer Neuaufbau und weiter 32 Rewardkombinationen.
+- [x] Beschädigtes Pflichtasset zeigt Fehler und lässt keine teilweise Basis/Ausrüstung erscheinen.
+- [x] Aktuelle Einzelbilder und Komposition samt Taille, Ärmeln, Schuhen und Frisur gesichtet; Unterarmkanäle korrigiert und an vier Punkten abgesichert.
 - [ ] Ärmel-Tiefenaufteilung, weitere Anatomie, Produktionsbudget und App-/Offline-/Geräteintegration.
+
+Aktueller Sieben-Ebenen-Nachweis: 512f877d51d61654cc2eec7d0d41f201883fe7d9, [Chromiumlauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41518792450), 222 Regressionen und zwölf Atelier-Prüfgruppen erfolgreich. Aufnahmen verification-seven-layers-v03.json. Produktions-/Gerätefreigabe weiterhin separat.

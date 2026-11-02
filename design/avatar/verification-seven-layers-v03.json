@@ -1,0 +1,72 @@
+{
+  "status": "passed-one-pose-seven-layer-review",
+  "testedSourceCommit": "512f877d51d61654cc2eec7d0d41f201883fe7d9",
+  "workflowRun": 41518792450,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41518792450",
+  "automatedTests": 222,
+  "baseSelectionsTested": 128,
+  "rewardSelectionsTested": 32,
+  "fullCartesian4096CombinationsTested": false,
+  "appChromium": "passed existing app acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Eight verified PNG fragments loaded",
+      "Seven verified base PNGs; front hair is a separate plane above equipment",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all eight equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Reversible rear-strap occlusion without deselection",
+      "All 32 selectable combinations",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Corrupted required layer fails visibly with no partial body or equipment",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed"
+  },
+  "visualReview": {
+    "completeOutfitAndFullRewardSetReviewed": true,
+    "withoutHakamaAndWithoutObiReviewed": true,
+    "bodyWithIndependentHairReviewed": true,
+    "sharedBroaderTransformReviewed": true,
+    "transparentForearmChannelsCorrected": true,
+    "productionAcceptance": false
+  },
+  "firstAttempt": {
+    "sourceCommit": "dc16d9b8cd78d5c972e22b210a03e80139b9740e",
+    "workflowRun": 41516918584,
+    "technicalResult": "passed",
+    "visualFinding": "Sleeve lining covered actual forearm paths while armor was drawn above it. Kimono artwork corrected and four forearm-point assertions added before acceptance."
+  },
+  "screenshots": [
+    {
+      "file": "review-seven-layers-v03.png",
+      "sourceArtifactPath": "artbook/fullset.png",
+      "sha256": "815026a602826bfd633431e36261db62d1510dd40f2181c188b69ca9b47c647d"
+    },
+    {
+      "file": "review-base-outfit-v03.png",
+      "sourceArtifactPath": "artbook/preset-dressed.png",
+      "sha256": "601b31530402a4baf21b98b72adca1941ba7553d700f4b5d619083f5b46c1fa3"
+    },
+    {
+      "file": "review-without-hakama-v03.png",
+      "sourceArtifactPath": "artbook/base-parts-111.png",
+      "sha256": "5d07f018eee5eac8ce1b2d6bc56e36363ce5cd3eec191007552bd014ad0e7ca0"
+    },
+    {
+      "file": "review-body-with-hair-v03.png",
+      "sourceArtifactPath": "artbook/preset-hairstyle.png",
+      "sha256": "6aea1f8cd73b4d6af57ac3f3a33c8768d3b236e126e955c05fccc4c11d20fe03"
+    }
+  ],
+  "provenance": "Unmodified PNG screenshots from the named GitHub Actions artifact, fresh synthetic browser profile. No personal data.",
+  "remaining": [
+    "Only one drawn anatomy; broader is a shared geometry study.",
+    "Sleeve front/back and future headwear require general depth handling; current forearm openings are for this pose.",
+    "Basis PNGs 6,144,050 bytes plus reward PNGs 9,379,782 bytes; no accepted production budget.",
+    "Other 90 fitted reward articles and persistent multi-item favorites/history/offline integration remain open.",
+    "Actual iPhone/VoiceOver/old PWA upgrade acceptance remains separate."
+  ]
+}

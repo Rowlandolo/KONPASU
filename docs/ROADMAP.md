@@ -17,7 +17,7 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Nach sauber getrennten Basisgrafiken und vollständigem Körperunterbau folgen getrennte Gewand-/Obi-/Hakama-/Schuhebenen sowie Vorder-/Hinterhaare. Dann Tiefenmasken und eine zweite gezeichnete Anatomie prüfen. Produktive Mehrfach-Outfits mit verlustfreier Favoriten-/History-Anbindung erst danach; weitere 90 Belohnungsgrafiken schrittweise.
+Aktuelle Entwicklungspriorität ist der Artbook-Avatar in Entwurfs-PR #3. Sieben getrennte Basisebenen und das erste Fünferset sind in Chromium geprüft und gesichtet. Nächster Abschnitt: allgemeine Ärmel-/Arm-/Kopfteilverdeckung sowie eine zweite gezeichnete Anatomie, danach ein verbindliches mobiles Grafik-/Renderingbudget. Produktive Mehrfach-Outfits erst mit verlustfreier Besitz-/Favoriten-/History-Anbindung; die übrigen 90 Artikel folgen schrittweise auf dem geprüften Grafikvertrag.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
@@ -76,3 +76,5 @@ Basis- und Unterbauabschnitt im Chromium abgeschlossen und gesichtet; aktueller 
 ## Nach sieben unabhängigen Basisgrafiken
 
 Sieben Ebenen und komplette Kombination im Chromium sichten, Taille/Ärmel/Schuhe und Haaranschlüsse korrigieren. Danach Ärmel-Vorder-/Hinterseiten für natürliche Armverdeckung ausarbeiten; zwei gezeichnete Anatomien mit denselben Artikeln prüfen und mobiles Asset-/Renderingbudget festlegen. Produktive Auswahl erst anschließend mit stabilen IDs, vollständigem Besitz-/Favoriten-/Historienrückweg und Offline-/Geräteprüfung anbinden.
+
+Sieben-Ebenen-Abschnitt einschließlich korrigierter Unterarmkanäle abgeschlossen; [Nachweis](https://github.com/Rowlandolo/KONPASU/actions/runs/41518792450) und verification-seven-layers-v03.json. Allgemeine Ärmel-/Arm-Tiefen und zweite Anatomie bleiben der nächste gestalterische Abschnitt.

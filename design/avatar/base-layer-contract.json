@@ -4,7 +4,7 @@
   "width": 512,
   "height": 768,
   "status": "seven-independent-layers-one-pose-prototype",
-  "registration": "pending-browser-review",
+  "registration": "browser-reviewed-seven-layers-one-pose",
   "layers": [
     {
       "id": "hair-back",
@@ -159,5 +159,6 @@
     "Kimono sleeves are not yet split into front/back depth surfaces.",
     "Hair front is above current equipment; future headwear needs explicit depth planning.",
     "Production budget, further reward paths and persistent multi-item outfits remain open."
-  ]
+  ],
+  "reviewEvidence": "./verification-seven-layers-v03.json"
 }
