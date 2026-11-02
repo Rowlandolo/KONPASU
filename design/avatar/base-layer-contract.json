@@ -72,23 +72,23 @@
     {
       "id": "kimono",
       "file": "./layers/kimono-v03.png",
-      "sha256": "10b1ab6ed2676dc7bd40b08721d2313488648a336ef7c99a696729017d13416c",
+      "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434",
       "width": 1024,
       "height": 1536,
-      "transparentPixelsFraction": 0.833549,
+      "transparentPixelsFraction": 0.70753,
       "opaqueBounds": [
-        212,
-        199,
-        813,
-        853
+        55,
+        233,
+        970,
+        1232
       ],
       "placement": {
-        "x": 0,
-        "y": 0,
-        "width": 512,
-        "height": 768
+        "x": 88,
+        "y": 22.75,
+        "width": 335.872,
+        "height": 503.808
       },
-      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+      "origin": "image generation edit of kimono-v03 plus complete body and previous clothing references to clear forearm openings; PNG bytes unmodified; registered without stretching"
     },
     {
       "id": "hakama",

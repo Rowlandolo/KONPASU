@@ -25,6 +25,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    if(mask===0)assert.equal(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.snapshot().some(v=>v!==0)),false);
    if(mask===2){const alpha=await page.evaluate(()=>{const p=window.KONPASU_WORKSHOP_BASE.snapshot();return [[535,80],[510,400],[440,900],[650,1490],[315,780],[738,785]].map(([x,y])=>p[(y*1024+x)*4+3])});assert.ok(alpha.every(v=>v>240),'Complete underbody remains present without any clothing or hair')}
    if([1,4,8,16,32,64].includes(mask)){const alpha=await page.evaluate(()=>{const p=window.KONPASU_WORKSHOP_BASE.snapshot();return [[315,780],[738,785],[535,145]].map(([x,y])=>p[(y*1024+x)*4+3])});assert.ok(alpha.every(v=>v<20),'No face or hand remnants in isolated modular parts')}
+   if(mask===8){const alpha=await page.evaluate(()=>{const p=window.KONPASU_WORKSHOP_BASE.snapshot();return [[305,660],[305,690],[710,660],[727,700]].map(([x,y])=>p[(y*1024+x)*4+3])});assert.ok(alpha.every(v=>v<20),'Sleeve openings must leave both actual forearm paths unobstructed')}
    if(capture.has(mask))await page.locator('.stage').screenshot({path:path.join(output,`base-parts-${mask}.png`)});
    previous=mask;
   }
