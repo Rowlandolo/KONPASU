@@ -40,3 +40,7 @@ Cloud/Sync, echte KI, native Apps, Sensoren, Barcode/Fotosuche und 3D sind gepla
 ## Aktueller Lieferblocker
 
 PKG-01 lokal behoben: vollständige Original-ZIP erhalten, alle 45 Basisdateien hashgeprüft, fehlende Originalbilder und premium-art-bundle.js ergänzt. Neues Komplettpaket ersetzt frühere unvollständige Änderungs-ZIPs. Die alte Original-UI hatte „1.8“ fest eingetragen; Versionsanzeige nun DE/EN mit zentraler 2.4.0 abgeglichen. Browser-/iPhone-/Upgradeblocker QA-01 bleibt offen.
+
+## Nach Veröffentlichung 2.4.0
+
+Chromiumblocker der lokalen Arbeitsumgebung bleibt lokal bestehen; reale Chromiumabnahme wurde erfolgreich in GitHub Actions ausgeführt. Startabhängigkeit gmYes vor core-v15 behoben, Regression vorhanden. QA-01 bleibt für reales iPhone/VoiceOver/Alt-PWA-Upgrade offen. Runtime-Merge und Pagesveröffentlichung erfolgreich, aktuelle Nachweise in STATUS.md.

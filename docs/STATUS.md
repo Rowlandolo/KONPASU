@@ -4,8 +4,8 @@ Datum: 02.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständige
 
 ## Verifizierte Basis und Arbeitsstand
 
-- GitHub `main`: `444bdb3981ccc03c550fb402c2cca9e45ad8a46a`, Version 2.3.1, Cache `konpasu-offline-v231`.
-- Letzter GitHub-Pages-Run: 41301820103, success für exakt diesen Commit. Öffentliche Live-URL konnte in dieser Sitzung nicht unabhängig gelesen werden; kein neuer Live-Versionsnachweis.
+- Veröffentlicht: KONPASU 2.4.0, Cache konpasu-offline-v240. Runtime-Mergecommit caf1aeada7954ab8b35004eb4186492b9b4bfc51; PR #1 übernommen. Basis vor diesem Release war 444bdb3981ccc03c550fb402c2cca9e45ad8a46a (2.3.1).
+- Pages-Run 41486638959 erfolgreich für den Runtime-Mergecommit. Live version.json meldet unabhängig gelesen 2.4.0/v240; Startseite erreichbar und app-version=2.4.0-layered-avatar bestätigt.
 - Repository: 45 Rootdateien; kein package.json, kein Build-System, keine eingecheckten Workflows oder automatisierten Tests an der geprüften Basis. Pages verwendet einen von GitHub bereitgestellten Deploymentlauf; Einstellungen konnten nicht vollständig gelesen werden.
 - Lokal: `feature/konpasu-24-audit`; verifizierter Textsnapshot als eigene Baseline, NICHT der originale Upstream-Gitverlauf. Die zuvor fehlenden Binärassets und premium-art-bundle.js wurden aus der am 02.11. gelieferten vollständigen Original-ZIP ergänzt. Alle 45 Originaldateien stimmen vor Übernahme exakt mit den bekannten Git-Blob-Hashes überein. Die Textsnapshot-Baseline bleibt ein eigener lokaler Gitverlauf; das neue Komplettpaket benötigt keine Patch-Anwendung.
 - GitHub-Neuverbindung erfolgreich: Entwicklungsbranch feature/konpasu-24-reviewed-update vom unveränderten main angelegt. Die geprüften Dateien wurden direkt über GitHub übertragen: Entwurfs-PR https://github.com/Rowlandolo/KONPASU/pull/1. Kein Merge und kein Deployment. Frühere HTTP-403-Befunde weiter unten sind historische Sitzungsbefunde.
@@ -158,3 +158,7 @@ Remoteprüfung: alle 72 geänderten/neuen Dateien stimmen per Git-Blob-SHA mit d
 Nutzerfreigabe zur Übernahme des vollständigen aktuellen Standes nach main liegt vor. Extern gesichertes JSON-Backup wurde im Gespräch bestätigt. Vor Merge zusätzlichen Chromiumlauf in GitHub Actions ausführen; danach Pages-Lauf für den tatsächlichen Mergecommit und ausgelieferte Version prüfen. Echte iPhone-Abnahme bleibt als offener Gerätebefund dokumentiert.
 
 Chromiumlauf in GitHub Actions erstmals durchgeführt: reale Speicherung, Import/Abbruch/Validierung, Offline-Reload/Save, 70 Ansichts-/Sprach-/Viewportkombinationen und Konfliktschutz funktionieren. Kaltstartfehler gm-Auswertung vor core-v15-Helferdefinition erkannt und durch eigenen frühen gmYes-Helfer korrigiert. Zusätzliche Regression; Gesamtstand jetzt 194. Beide Tabs werden im Browserprüflauf vor gezielter Konflikterzeugung auf denselben gespeicherten Ausgangsstand synchronisiert. Reales iPhone/VoiceOver/Alt-PWA-Upgrade weiterhin offen.
+
+## Veröffentlichung abgeschlossen (02.11.2026)
+
+Nutzerfreigabe umgesetzt, PR #1 nach grünen Prüfungen gemergt. 194 Regressionen und kompletter realer Chromiumlauf erfolgreich für PR-Commit 4cb2c2e52b87928e56daf93538bdf04d95200232. Quelle: https://github.com/Rowlandolo/KONPASU/pull/1. Pages-Lauf https://github.com/Rowlandolo/KONPASU/actions/runs/41486638959 erfolgreich. Live-JSON und Startseite über unabhängigen Abruf geprüft. Native iPhone-/VoiceOver-/Alt-PWA-Upgradefälle bleiben offen. Frühere Nicht-deployed-/Browserblockerabschnitte sind historische Befunde. Dokumentationsnachtrag verändert keine Runtime oder Nutzerdaten.
