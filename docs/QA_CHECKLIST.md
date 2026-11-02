@@ -168,3 +168,11 @@ Gesamt: 179 automatisierte Tests; kein Gerätefreigabebeleg.
 - [ ] Basis in Körper/Haar/Gewand segmentieren, endgültige Anker/Masken und Körpervarianten.
 - [ ] Acht neue angepasste Rüstungsfragmente erzeugen und visuell mit der Basis abnehmen.
 - [ ] Echte Appintegration, Persistenz/Favoriten/History-Konvertierung mit Rückweg und Gerätetest.
+
+## Getrennte Ausrüstungsgrafiken
+
+- [x] Drei eigenständige RGBA-PNGs vorhanden, Hash/Abmessungen und gemessene Transparenz dokumentiert.
+- [x] Seitenverhältnis erhaltende Einpassung aus Alpha-Bounds, falsche Bounds/Rigs abgewiesen.
+- [x] 32 Auswahlkombinationen mit Teilverfügbarkeit geprüft; noch fehlende Grafiken bleiben offen.
+- [ ] Atelier-Chromiumlauf mit vier Darstellungen, allen 32 UI-Kombinationen und mobiler Breite für den aktuellen Commit bestehen lassen.
+- [ ] Sichtabnahme der Paarpassform sowie Vorder-/Hintermasken, danach Körpervarianten.

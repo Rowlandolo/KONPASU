@@ -53,3 +53,11 @@ Alle Körperproportionen müssen Figur und Ausrüstung im selben Koordinatenraum
 ## Nächster kleinster konkreter Schritt
 
 Grundkörper-/Posevertrag anhand des hier erzeugten Entwurfs und Originalartbooks abnehmen; dann zunächst **Schulterpanzer und Brustgeschirr** als passende transparente Vorder-/Hinterfragmente ausarbeiten und am selben Körper sichtbar kombinieren. Danach Armschienen, Bänder und Brustpanzer zum vollständigen Fünferset ergänzen. Die jetzigen acht fehlenden Rüstungsgrafiken sind weiterhin offen.
+
+## Zweiter Entwicklungsabschnitt: erste getrennte Grafikprototypen
+
+Grundkörper als gestalterische Richtung vom Nutzer positiv bestätigt. Drei neue bildgenerierte transparente PNGs anhand von Grundkörper und Originalartbook erstellt: Geschirr, Schulter links und Schulter rechts. Sie sind eigenständige Dateien, keine ins Körperbild eingebrannten Änderungen. SHA256, PNG-Größen, Alpha-Bounds, gemessener transparenter Anteil und vorläufige Einpassrechtecke stehen in design/avatar/prototype-assets.json. Die Original-PNGs wurden nicht nachträglich ausgeschnitten oder umgefärbt; Einpassung erfolgt nichtdestruktiv im Browser und erhält das Seitenverhältnis.
+
+Entwickleratelier zeigt jetzt tatsächliche Prototypgrafiken, mit Direktansichten Grundkörper/Geschirr/Schultern/beides. Der Adapter prüft Datei-Hash und decodierte Größe vor Freigabe. Drei der acht Fragmente als Prototyp vorhanden; Bänder, Armschienen und Brustpanzer weiterhin ohne neue Grafik. Keine Produktionsfreigabe: Perspektive, harmonische Größen und besonders rückwärtige Geschirrriemen benötigen Sichtabnahme und Masken. Keine Körpervarianten oder automatische Anpassung an andere Posen behaupten. Das Geschirr ist derzeit ein komplettes transparentes Objekt; eine Vorder-/Hintertrennung muss für korrekte räumliche Verdeckung noch erfolgen.
+
+Sechs zusätzliche Prüfungen (jetzt 209 insgesamt): Binärintegrität/Abmessungen, nicht verzerrende Platzierung, ungültige Bounds, alle 32 tatsächlichen Prototypzuordnungen, unabhängige Fragmentreihenfolge, falsches Rig. Zusätzlich eigener Chromiumlauf fürs Atelier mit vier Bildern, allen 32 UI-Kombinationen, mobiler Breite und ohne Speicherschreibvorgang. Browserergebnis im jeweiligen aktuellen PR-Check, nicht allein aus diesen Quellcodetests ableiten.

@@ -3,7 +3,7 @@
 (function(root){
  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value)}return value};
  const RIG=freeze({id:'adult-three-quarter-v1',width:512,height:768,provisional:true,poseSource:'design/avatar/base-art-direction-v01.png',coordinateOrigin:'top-left',sideConvention:'viewer-left / viewer-right',anchors:{torso:{x:251,y:196},shoulderLeft:{x:187,y:139},shoulderRight:{x:319,y:150},forearmLeft:{x:155,y:347},forearmRight:{x:368,y:359},wristLeft:{x:157,y:392},wristRight:{x:375,y:401}}});
- const part=(id,anchor,z)=>({id,anchor,z,asset:`assets/avatar-v25/strength/${id}.png`,status:'needs-artwork'});
+ const part=(id,anchor,z)=>({id,anchor,z,asset:`assets/avatar-v25/strength/${id}.png`,status:['chest-harness','shoulder-left','shoulder-right'].includes(id)?'prototype-review':'needs-artwork'});
  const CATALOG=freeze([
   {id:'strength-1',titleDe:'Handgelenkbänder',titleEn:'Wrist wraps',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-1.webp',legacySlot:'arm',parts:[part('wrist-wrap-left','wristLeft',510),part('wrist-wrap-right','wristRight',511)]},
   {id:'strength-2',titleDe:'Kote-Armschienen',titleEn:'Kote armguards',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-2.webp',legacySlot:'arm',parts:[part('armguard-left','forearmLeft',500),part('armguard-right','forearmRight',501)]},

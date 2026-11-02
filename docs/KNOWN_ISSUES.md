@@ -48,3 +48,7 @@ Chromiumblocker der lokalen Arbeitsumgebung bleibt lokal bestehen; reale Chromiu
 ## Artbookabweichung / Mehrfachausrüstung
 
 ART-01: Vorhandene 95 Premiumkarten sind abgeflachte, teils abgeschnittene Illustrationen; keine tragbaren transparenten Assets. ART-02: Legacy-Slots verdrängen Artikel und weisen z.B. Schulterpanzer dem Kopf zu. Neuer Planer prüft unabhängige Auswahl, Livepfad bleibt unverändert. Acht Krafttrainingfragmente noch anzufertigen; Grundkörper ist ein generierter Stilentwurf mit Transparenz, kein fertiges segmentiertes Rig. Kein Anspruch auf abgeschlossene visuelle Abnahme.
+
+## Ausrüstungsprototypen
+
+ART-03: Drei neue PNGs sind Prototypen für eine Pose, keine fertigen universellen Rüstungsebenen. Geschirr enthält noch rückwärtige Riemen, die bei einfacher Überlagerung sichtbar bleiben können; Vorder-/Hintermaskierung erforderlich. Größen/Perspektiven und paarige Schulterpassform visuell abnehmen. Keine Übernahme in den Live-Avatar. Weitere fünf Fragmente des Krafttrainingpfads stehen aus.

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "rig": "adult-three-quarter-v1",
+  "status": "development-prototype-not-production",
+  "assets": [
+    {
+      "partId": "chest-harness",
+      "itemId": "strength-3",
+      "logicalAsset": "assets/avatar-v25/strength/chest-harness.png",
+      "file": "./equipment/chest-harness.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "torso",
+      "status": "prototype-review",
+      "width": 1218,
+      "height": 1292,
+      "alphaBounds": [
+        27,
+        37,
+        1180,
+        1261
+      ],
+      "transparentPixelsFraction": 0.7577,
+      "placement": {
+        "x": 179,
+        "y": 126,
+        "width": 159,
+        "height": 190
+      },
+      "sha256": "bc5b8d92d6dfba22d3413b77c258871002729dfcddd00ad29d56a58996265265",
+      "origin": "image-generated from existing user-supplied artbook and approved base direction; not extracted artbook pixels",
+      "masksStatus": "not-produced"
+    },
+    {
+      "partId": "shoulder-left",
+      "itemId": "strength-4",
+      "logicalAsset": "assets/avatar-v25/strength/shoulder-left.png",
+      "file": "./equipment/shoulder-left.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "shoulderLeft",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        0,
+        31,
+        1280,
+        1183
+      ],
+      "transparentPixelsFraction": 0.6346,
+      "placement": {
+        "x": 145,
+        "y": 128,
+        "width": 96,
+        "height": 114
+      },
+      "sha256": "623b98ba0c0250cff4b797af65b8f663324a6022567a1fee05a43ce6848fdf47",
+      "origin": "image-generated from existing user-supplied artbook and approved base direction; not extracted artbook pixels",
+      "masksStatus": "not-produced"
+    },
+    {
+      "partId": "shoulder-right",
+      "itemId": "strength-4",
+      "logicalAsset": "assets/avatar-v25/strength/shoulder-right.png",
+      "file": "./equipment/shoulder-right.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "shoulderRight",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        0,
+        17,
+        1296,
+        1199
+      ],
+      "transparentPixelsFraction": 0.7118,
+      "placement": {
+        "x": 294,
+        "y": 139,
+        "width": 78,
+        "height": 96
+      },
+      "sha256": "5bfb7b91eec125906996668762987049dc0635ca35fa6fc0b4b7316c08a95971",
+      "origin": "image-generated from existing user-supplied artbook and approved base direction; not extracted artbook pixels",
+      "masksStatus": "not-produced"
+    }
+  ]
+}

@@ -166,3 +166,7 @@ Nutzerfreigabe umgesetzt, PR #1 nach grünen Prüfungen gemergt. 194 Regressione
 ## Avatar-Artbook-Grundlage (Entwicklung, nicht live)
 
 Audit: 95 Kartenbilder sind keine transparenten, passend geriggten Ausrüstungsteile; mehrere alte Slotzuordnungen widersprechen den Bildern. Neuer separater Branch. Grundkörper-Stilentwurf, 95er-Arbeitsinventar, reine Ebenenplanung für fünf unabhängige Krafttrainingartikel/acht Fragmente und Entwickleratelier erstellt. Neun neue Prüfungen einschließlich aller 32 Startkombinationen; 203 Gesamtprüfungen. Keine neuen produktionsfertigen Rüstungsgrafiken, keine neue Persistenz/Live-Anbindung. Plan in AVATAR_ARTBOOK_PLAN.md, Copilot-/Appplan in PROFESSIONAL_APP_PLAN.md.
+
+## Avatar-Grafikprototypen (nur Entwicklungsbranch)
+
+Grundkörperrichtung bestätigt. Geschirr und beide Schulterpanzer als drei unabhängige transparente PNGs erstellt und mit geprüftem Metadatenadapter im Atelier kombinierbar. Sechs zusätzliche Integritäts-/Einpassungsprüfungen; insgesamt 209 lokal bestanden. Eigener Atelier-Chromiumtest erfasst reale Kombinationsansichten und 32 UI-Kombinationen. Freigabe der Passform, Vorder-/Hintermasken und Körpervarianten weiter offen. Live-App unverändert, keine Schema-/Rewardänderung.

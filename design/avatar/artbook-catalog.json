@@ -49,9 +49,9 @@
       "asset": "reward/strength-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/strength-3.webp",
-      "fittedArtworkStatus": "not-produced",
+      "fittedArtworkStatus": "prototype-review",
       "semanticMappingStatus": "artbook-identified-first-slice",
-      "equippableAssetStatus": "legacy-svg-only"
+      "equippableAssetStatus": "development-workshop-only"
     },
     {
       "id": "strength-4",
@@ -66,9 +66,9 @@
       "asset": "reward/strength-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/strength-4.webp",
-      "fittedArtworkStatus": "not-produced",
+      "fittedArtworkStatus": "prototype-review",
       "semanticMappingStatus": "artbook-identified-first-slice",
-      "equippableAssetStatus": "legacy-svg-only"
+      "equippableAssetStatus": "development-workshop-only"
     },
     {
       "id": "strength-5",
