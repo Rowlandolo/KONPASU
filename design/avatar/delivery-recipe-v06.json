@@ -1,17 +1,17 @@
 {
   "version": 1,
   "codec": "image/webp",
-  "quality": 0.95,
-  "baseScale": 0.75,
+  "quality": 0.98,
+  "baseScale": 0.84375,
   "equipmentMaxEdges": {
-    "chest-harness": 576,
+    "chest-harness": 640,
     "breastplate": 512,
-    "shoulder-left": 384,
-    "shoulder-right": 384,
-    "armguard-left": 384,
-    "armguard-right": 384,
-    "wrist-wrap-left": 160,
-    "wrist-wrap-right": 160
+    "shoulder-left": 512,
+    "shoulder-right": 512,
+    "armguard-left": 448,
+    "armguard-right": 448,
+    "wrist-wrap-left": 192,
+    "wrist-wrap-right": 192
   },
   "preserveFullFrame": true,
   "originalsModified": false
