@@ -2,6 +2,7 @@
 /* Pure scene planning plus SVG rendering. No storage, ownership or app mutations. */
 (function(root){
  const DEPTH=Object.freeze({'hair-back':100,body:200,shoes:300,kimono:320,hakama:330,obi:350,'hair-front':600});
+ const states=new WeakMap();
  const ID=/^[a-z0-9-]+$/;
  function checkPlacement(p){if(!p||![p.x,p.y,p.width,p.height].every(Number.isFinite)||p.width<=0||p.height<=0||p.width>2048||p.height>3072||Math.abs(p.x)>2048||Math.abs(p.y)>3072)throw Error('Invalid scene placement')}
  function fitSpec(spec,profile={}){
@@ -34,21 +35,42 @@
   return {nodes:nodes.sort((a,b)=>a.z-b.z||a.id.localeCompare(b.id)),equipmentIds:[...seen].sort()};
  }
  function render(svg,scene){
-  const doc=svg.ownerDocument,node=tag=>doc.createElementNS('http://www.w3.org/2000/svg',tag),prefix=ID.test(svg.id)?svg.id:'avatar-scene';
-  const imgFor=part=>{const img=node('image');for(const [k,v] of Object.entries(part.placement))img.setAttribute(k,v);img.setAttribute('href',part.src);return img};
-  const defs=node('defs'),filter=node('filter'),matrix=node('feColorMatrix');filter.id=prefix+'-ink';matrix.setAttribute('type','matrix');matrix.setAttribute('values','0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0');filter.append(matrix);defs.append(filter);
-  const elements=[defs],base=new Map(scene.nodes.filter(p=>p.kind==='base').map(p=>[p.baseId,p]));
+  const started=typeof performance!=='undefined'?performance.now():0,doc=svg.ownerDocument,node=tag=>doc.createElementNS('http://www.w3.org/2000/svg',tag),prefix=ID.test(svg.id)?svg.id:'avatar-scene';
+  let state=states.get(svg);
+  if(!state){state={images:new Map(),defs:node('defs'),signature:null,stats:{created:0,reused:0,attributeWrites:0,lastRenderMs:0}};states.set(svg,state)}
+  const set=(element,key,value)=>{const text=String(value);if(element.getAttribute(key)!==text){element.setAttribute(key,text);state.stats.attributeWrites++}};
+  const elements=[state.defs],live=new Set();
   for(const part of scene.nodes){
-   const img=imgFor(part);img.dataset.sceneId=part.id;
-   if(part.kind==='base')img.dataset.baseId=part.baseId;else{img.dataset.partId=part.partId;img.dataset.itemId=part.itemId}
-   if(part.occludedBy.length){
-    const mask=node('mask'),rect=node('rect');mask.id=prefix+'-mask-'+part.id;mask.setAttribute('maskUnits','userSpaceOnUse');mask.setAttribute('x',0);mask.setAttribute('y',0);mask.setAttribute('width',512);mask.setAttribute('height',768);mask.style.maskType='luminance';rect.setAttribute('width',512);rect.setAttribute('height',768);rect.setAttribute('fill','white');mask.append(rect);
-    for(const id of part.occludedBy){const surface=imgFor(base.get(id));surface.setAttribute('filter','url(#'+filter.id+')');mask.append(surface)}defs.append(mask);img.setAttribute('mask','url(#'+mask.id+')');img.dataset.occludedBy=part.occludedBy.join(',');
-   }
-   if(part.clipPolygons.length){const clip=node('clipPath');clip.id=prefix+'-clip-'+part.id;clip.setAttribute('clipPathUnits','userSpaceOnUse');for(const points of part.clipPolygons){const polygon=node('polygon');polygon.setAttribute('points',points.map(p=>p.join(',')).join(' '));clip.append(polygon)}defs.append(clip);img.setAttribute('clip-path','url(#'+clip.id+')')}
+   let img=state.images.get(part.id);
+   if(!img){img=node('image');state.images.set(part.id,img);state.stats.created++}else state.stats.reused++;
+   live.add(part.id);set(img,'id',prefix+'-'+part.id);
+   for(const [k,v] of Object.entries(part.placement))set(img,k,v);
+   set(img,'href',part.src);set(img,'data-scene-id',part.id);
+   if(part.kind==='base')set(img,'data-base-id',part.baseId);else{set(img,'data-part-id',part.partId);set(img,'data-item-id',part.itemId)}
+   if(part.occludedBy.length){set(img,'mask','url(#'+prefix+'-mask-'+part.id+')');set(img,'data-occluded-by',part.occludedBy.join(','))}else{img.removeAttribute('mask');img.removeAttribute('data-occluded-by')}
+   if(part.clipPolygons.length)set(img,'clip-path','url(#'+prefix+'-clip-'+part.id+')');else img.removeAttribute('clip-path');
    elements.push(img);
   }
-  svg.replaceChildren(...elements);
+  const signature=JSON.stringify(scene.nodes.map(p=>[p.id,p.occludedBy,p.clipPolygons]));
+  if(signature!==state.signature){
+   const filter=node('filter'),matrix=node('feColorMatrix');filter.id=prefix+'-ink';matrix.setAttribute('type','matrix');matrix.setAttribute('values','0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0');filter.append(matrix);
+   const definitions=[filter];
+   for(const part of scene.nodes){
+    if(part.occludedBy.length){
+     const mask=node('mask'),rect=node('rect');mask.id=prefix+'-mask-'+part.id;mask.setAttribute('maskUnits','userSpaceOnUse');mask.setAttribute('x',0);mask.setAttribute('y',0);mask.setAttribute('width',512);mask.setAttribute('height',768);mask.style.maskType='luminance';rect.setAttribute('width',512);rect.setAttribute('height',768);rect.setAttribute('fill','white');mask.append(rect);
+     for(const id of part.occludedBy){const use=node('use');use.setAttribute('href','#'+prefix+'-base-'+id);use.setAttribute('filter','url(#'+filter.id+')');mask.append(use)}definitions.push(mask);
+    }
+    if(part.clipPolygons.length){const clip=node('clipPath');clip.id=prefix+'-clip-'+part.id;clip.setAttribute('clipPathUnits','userSpaceOnUse');for(const points of part.clipPolygons){const polygon=node('polygon');polygon.setAttribute('points',points.map(p=>p.join(',')).join(' '));clip.append(polygon)}definitions.push(clip)}
+   }
+   state.defs.replaceChildren(...definitions);state.signature=signature;
+  }
+  const desired=new Set(elements);
+  for(const child of Array.from(svg.children))if(!desired.has(child))child.remove();
+  elements.forEach((element,index)=>{if(svg.children[index]!==element)svg.insertBefore(element,svg.children[index]||null)});
+  for(const id of state.images.keys())if(!live.has(id))state.images.delete(id);
+  state.stats.lastRenderMs=(typeof performance!=='undefined'?performance.now():started)-started;
  }
- root.KONPASU_SCENE25={DEPTH,fitSpec,plan,render};
+ function diagnostics(svg){const state=states.get(svg);return state?{...state.stats,liveImages:state.images.size}:null}
+
+ root.KONPASU_SCENE25={DEPTH,fitSpec,plan,render,diagnostics};
 })(typeof window!=='undefined'?window:globalThis);

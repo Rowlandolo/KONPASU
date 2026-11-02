@@ -84,3 +84,7 @@ Sieben-Ebenen-Abschnitt einschließlich korrigierter Unterarmkanäle abgeschloss
 Beide Formen mit Grundoutfit, Unterbau und vollständigem Set im realen Chromium sichten und Passformen korrigieren. Anschließend Rendering-/Dateigrößenbudget verbindlich festlegen, echte Kopf-/Ärmel-/Riemenfragmente in dieselbe Szenenlogik einordnen und erst danach produktive Mehrfach-Outfits mit Besitz-/Favoriten-/History-Rückweg anbinden. Weitere 90 Artikel nacheinander, keine neue Schemaänderung ohne Auftrag und Rückweg.
 
 Zwei-Formen-/Szenenabschnitt erfolgreich geprüft und gesichtet: https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209, verification-two-forms-v04.json. Aktuelle nächste Priorität steht oben; frühere Körpervarianten- und Maskenaufträge sind für diesen Prototyp abgeschlossen, nicht universell für alle zukünftigen Artikel.
+
+## Zählbarer Weg zum vollständigen Artbook-Avatar
+
+Sechs größere Etappen mit Ergebnissen und Abschlusskriterien: AVATAR_RELEASE_STEPS.md. Etappe 1 (Leistung/Grafikbudget) ist aktiv, mit bedarfsgesteuertem Laden und Bild-/Maskenwiederverwendung. Produktionsziele sind noch nicht erreicht. Dann Tiefenfragmente, Daten-/Appintegration, weitere 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Der KI-Copilot und die restliche App besitzen zusätzliche Phasen im PROFESSIONAL_APP_PLAN.md.

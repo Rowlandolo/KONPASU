@@ -2,7 +2,9 @@
 (async function(){
  const api=window.KONPASU_AVATAR_RIG25,art=window.KONPASU_PROTOTYPE_ART,sceneApi=window.KONPASU_SCENE25;
  const selected=new Set(api.CATALOG.map(i=>i.id)),controls=document.getElementById('selection'),models=new Map();
- let ready=false,active='form-a',baseRenderer=null,currentScene=null;
+ let ready=false,active='form-a',baseRenderer=null,currentScene=null,profilesById=new Map(),shapeRequest=0;
+ const modelLoads=new Map();
+ window.KONPASU_WORKSHOP_RESOURCES=()=>({loadedForms:[...models.keys()].sort(),pendingForms:[...modelLoads.keys()].sort()});
  const svgNode=tag=>document.createElementNS('http://www.w3.org/2000/svg',tag);
  const baseSelection=()=>Array.from(document.querySelectorAll('[data-base-part]:checked'),i=>i.dataset.basePart);
  for(const item of api.CATALOG){
@@ -33,23 +35,38 @@
  function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(i=>i.checked=ids.includes(i.dataset.basePart));refreshBase()}
  for(const button of document.querySelectorAll('[data-base-preview]'))button.addEventListener('click',()=>{setSelection([]);setBaseSelection({underbody:['body'],hairstyle:['hair-back','body','hair-front'],dressed:[...window.KONPASU_BASE_LAYERS25.PARTS]}[button.dataset.basePreview])});
  for(const input of document.querySelectorAll('[data-base-part]'))input.addEventListener('change',refreshBase);
- document.getElementById('body-shape').addEventListener('change',event=>{if(!ready)return;active=event.target.value;document.body.dataset.bodyShape=active;refreshBase()});
+ async function loadModel(id){
+  if(models.has(id))return models.get(id);
+  if(modelLoads.has(id))return modelLoads.get(id);
+  const profile=profilesById.get(id);if(!profile)throw Error('Unbekannte Körperform');
+  const pending=(async()=>{const contract=await json(profile.contract),canvas=id==='form-a'?document.getElementById('base-canvas'):document.createElement('canvas'),front=id==='form-a'?document.getElementById('front-canvas'):document.createElement('canvas');const model={profile,renderer:await window.KONPASU_BASE_LAYERS25.load(canvas,contract,front)};models.set(id,model);return model})();
+  modelLoads.set(id,pending);try{return await pending}finally{modelLoads.delete(id)}
+ }
+ document.getElementById('body-shape').addEventListener('change',async event=>{
+  if(!ready)return;
+  const id=event.target.value,request=++shapeRequest,status=document.getElementById('shape-status');document.body.dataset.shapeLoading=id;status.textContent='Körperform wird geladen …';
+  try{await loadModel(id);if(request!==shapeRequest)return;active=id;document.body.dataset.bodyShape=id;refreshBase();status.textContent=''}
+  catch(error){if(request!==shapeRequest)return;event.target.value=active;status.textContent='Körperform konnte nicht geladen werden. Die bisherige Auswahl bleibt erhalten. Bitte erneut versuchen.'}
+  finally{if(request===shapeRequest)delete document.body.dataset.shapeLoading}
+ });
  document.getElementById('body-proportions').addEventListener('change',event=>{const p=window.KONPASU_BASE_LAYERS25.proportion(event.target.value);document.getElementById('avatar-rig').style.transform=`scale(${p.x},${p.y})`;document.body.dataset.proportion=event.target.value});
  document.getElementById('all').addEventListener('click',()=>setSelection(api.CATALOG.map(i=>i.id)));
  document.getElementById('none').addEventListener('click',()=>setSelection([]));
  for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4'],fullset:api.CATALOG.map(i=>i.id)}[button.dataset.preview]));
  document.getElementById('apply-occlusion').addEventListener('change',refresh);
  document.getElementById('show-anchors').addEventListener('change',e=>document.getElementById('anchors').style.display=e.target.checked?'block':'none');
- document.getElementById('reference').src=window.KONPASU_PREMIUM_SRC('assets/konpasu_body_motion_rewards.webp');refresh();
+ const reference=document.getElementById('reference'),referenceStatus=document.getElementById('reference-status');
+ reference.addEventListener('load',()=>referenceStatus.textContent='');
+ reference.addEventListener('error',()=>{reference.removeAttribute('src');referenceStatus.textContent='Artbook konnte nicht geladen werden. Bitte schließen und erneut öffnen.'});
+ document.getElementById('artbook-reference').addEventListener('toggle',event=>{
+  if(event.target.open&&!reference.getAttribute('src')){referenceStatus.textContent='Artbook wird geladen …';reference.src='./reference-board.webp'}
+ });refresh();
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);
   if(profiles.version!==1||profiles.profiles.length!==2||profiles.profiles.map(p=>p.id).sort().join(',')!=='form-a,form-b')throw Error('Ungültige Körperprofile');
-  await Promise.all(profiles.profiles.map(async profile=>{
-   if(!['form-a','form-b'].includes(profile.id)||!/^\.\/base-layer(-broad-v04)?-contract\.json$/.test(profile.contract))throw Error('Ungültige Körperquelle');
-   const contract=await json(profile.contract),canvas=profile.id==='form-a'?document.getElementById('base-canvas'):document.createElement('canvas'),front=profile.id==='form-a'?document.getElementById('front-canvas'):document.createElement('canvas');
-   models.set(profile.id,{profile,renderer:await window.KONPASU_BASE_LAYERS25.load(canvas,contract,front)});
-  }));
-  await art.load(manifest);ready=true;active='form-a';document.body.dataset.bodyShape=active;document.getElementById('body-shape').disabled=false;refreshBase();document.body.dataset.artworkReady='true';
+  for(const profile of profiles.profiles){if(!['form-a','form-b'].includes(profile.id)||!/^\.\/base-layer(-broad-v04)?-contract\.json$/.test(profile.contract))throw Error('Ungültige Körperquelle');profilesById.set(profile.id,profile)}
+  await Promise.all([loadModel('form-a'),art.load(manifest)]);
+  ready=true;active='form-a';document.body.dataset.bodyShape=active;document.getElementById('body-shape').disabled=false;refreshBase();document.body.dataset.artworkReady='true';
  }catch(error){document.getElementById('artwork-status').textContent='Grafikvorschau konnte nicht geladen werden: '+error.message;document.body.dataset.artworkReady='false'}
 })();

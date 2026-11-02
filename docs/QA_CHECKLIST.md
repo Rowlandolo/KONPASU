@@ -231,3 +231,13 @@ Aktueller Sieben-Ebenen-Nachweis: 512f877d51d61654cc2eec7d0d41f201883fe7d9, [Chr
 - [ ] Renderingbudget, zusätzliche tiefengetrennte Assets, produktive Daten-/Offline-/Geräteabnahme.
 
 Aktueller Nachweis: 89e6dcc4bbcc9c90c2043628a8440a0b65e40c57, [Zwei-Formen-Lauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209), 230 Regressionen, App-Chromium und 14 Atelier-Prüfgruppen erfolgreich. Archivierte Aufnahmen und Grenzen: design/avatar/verification-two-forms-v04.json.
+
+## Bedarfsgesteuertes Laden / Renderbudget
+
+- [x] Unveränderte Quell-PNGs; optionale Referenz exakt bytegleich zum Original-WebP.
+- [x] Wiederholbare Byte-/Quell-RGBA-Rechnung, eindeutige Ressourcen, Prototypobergrenzen und offen ausgewiesene Produktionsziele; sechs neue Tests, 236 insgesamt.
+- [ ] Chromium: keine zweite Körperform/Artbook beim Start, null Prüfraster und keine PNG-Kopien in Masken.
+- [ ] Stabile Körper-Bildknoten, pro Sitzung nur einmal geladene Zusatzgrafiken, echte Maskenpixel weiter korrekt.
+- [ ] Fehlgeschlagene Körperladung erhält Auswahl und lässt Retry zu; verspätete Antwort überschreibt neuere Auswahl/Artikel nicht.
+- [ ] Skriptzeiten samt Messgrenze aufzeichnen; bestehende Kombinationen/Offline-Appprüfung weiterhin erfolgreich.
+- [ ] Kleine Produktionsgrafiken und reale Zielgeräte: Etappe 1 noch nicht abgeschlossen.

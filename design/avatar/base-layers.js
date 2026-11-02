@@ -41,13 +41,9 @@
   const bytes=await response.arrayBuffer();
   const digest=new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes));
   if(Array.from(digest,v=>v.toString(16).padStart(2,'0')).join('')!==layer.sha256)throw Error('Base checksum mismatch: '+layer.id);
-  const objectURL=URL.createObjectURL(new Blob([bytes],{type:'image/png'}));
-  let image;
-  try{
-   image=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Invalid base PNG: '+layer.id));img.src=objectURL});
-  }finally{URL.revokeObjectURL(objectURL)}
-  if(image.naturalWidth!==layer.width||image.naturalHeight!==layer.height)throw Error('Base dimensions mismatch: '+layer.id);
   const src=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob([bytes],{type:'image/png'}))});
+  const image=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Invalid base PNG: '+layer.id));img.src=src});
+  if(image.naturalWidth!==layer.width||image.naturalHeight!==layer.height)throw Error('Base dimensions mismatch: '+layer.id);
   return {image,src};
  }
  async function load(canvas,contract,frontCanvas){
@@ -55,22 +51,26 @@
   // No partial body is shown if any required file fails validation.
   const decoded=await Promise.all(contract.layers.map(async layer=>[layer.id,await decode(layer)])),images=new Map(decoded);
   if(!frontCanvas||frontCanvas===canvas)throw Error('A separate front hair canvas is required');
-  const composite=document.createElement('canvas');
-  for(const surface of [canvas,frontCanvas,composite]){surface.width=1024;surface.height=1536}
-  const baseContext=canvas.getContext('2d'),frontContext=frontCanvas.getContext('2d'),compositeContext=composite.getContext('2d',{willReadFrequently:true});
-  let active=[];
+  let active=[],raster=null,dirty=true;
   function draw(selected){
-   const layers=plan(contract,selected);
-   for(const ctx of [baseContext,frontContext,compositeContext])ctx.clearRect(0,0,1024,1536);
-   for(const layer of layers){
-    const p=layer.placement,ctx=layer.id==='hair-front'?frontContext:baseContext;
-    ctx.drawImage(images.get(layer.id).image,p.x*2,p.y*2,p.width*2,p.height*2);
-   }
-   compositeContext.drawImage(canvas,0,0);compositeContext.drawImage(frontCanvas,0,0);
-   active=layers.map(layer=>layer.id);
-   return [...active];
+   const next=selection(selected);
+   if(next.join(',')!==active.join(','))dirty=true;
+   active=next;return [...active];
   }
-  return {draw,describe:selected=>plan(contract,selected).map(layer=>({...layer,src:images.get(layer.id).src})),getSelection:()=>[...active],snapshot:()=>compositeContext.getImageData(0,0,1024,1536).data};
+  function snapshot(){
+   if(!raster){
+    const composite=document.createElement('canvas');
+    for(const surface of [canvas,frontCanvas,composite]){surface.width=1024;surface.height=1536}
+    raster={base:canvas.getContext('2d'),front:frontCanvas.getContext('2d'),composite:composite.getContext('2d',{willReadFrequently:true})};
+   }
+   if(dirty){
+    for(const ctx of Object.values(raster))ctx.clearRect(0,0,1024,1536);
+    for(const layer of plan(contract,active)){const p=layer.placement,ctx=layer.id==='hair-front'?raster.front:raster.base;ctx.drawImage(images.get(layer.id).image,p.x*2,p.y*2,p.width*2,p.height*2)}
+    raster.composite.drawImage(canvas,0,0);raster.composite.drawImage(frontCanvas,0,0);dirty=false;
+   }
+   return raster.composite.getImageData(0,0,1024,1536).data;
+  }
+  return {draw,describe:selected=>plan(contract,selected).map(layer=>({...layer,src:images.get(layer.id).src})),getSelection:()=>[...active],snapshot,diagnostics:()=>({rasterSurfaces:raster?3:0})};
  }
  root.KONPASU_BASE_LAYERS25={PARTS,PROPORTIONS,validate,selection,plan,proportion,load};
 })(typeof window!=='undefined'?window:globalThis);

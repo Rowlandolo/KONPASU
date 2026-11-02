@@ -86,3 +86,9 @@ ART-08: Zweite Körpergrafik sowie angepasstes Gewand und Hakama vorhanden; Pass
 ART-09: Gemeinsame SVG-Szene und alphabasierte deklarative Verdeckung umgesetzt, einschließlich aktivem Gewand vor Armrüstung. Dies ist keine vollständige universelle Vorder-/Hintersegmentierung aller Ärmel, Riemen und künftigen Kopfteile. Rückwärtige Geschirrriemen verwenden weiterhin transportierte, posebezogene Clippolygone. Weitere Tiefenoberflächen müssen ausdrücklich modelliert werden.
 
 Zwei-Formen-Nachweis: https://github.com/Rowlandolo/KONPASU/actions/runs/41529386209, 230 Regressionen und 14 Atelier-Prüfgruppen. ART-09: aktive Alpha-Verdeckung und erhaltener Auswahlstatus durch echte SVG-Pixel bestätigt; zukünftige Tiefenfragmente weiter offen. Gemeinsame Basismenge umfasst 9,905,070 Bytes in zehn PNGs; Produktionsbudget weiterhin nicht akzeptiert.
+
+## Leistungsabschnitt
+
+PERF-01: Vorher beide Formen und komplettes 6,3-MB-Referenzbundle beim Start. Form B und Referenz nun bedarfsgesteuert; SVG-Bilder werden wiederverwendet, Masken referenzieren ihre Bildfläche statt Daten zu duplizieren. Prüfraster werden erst durch Snapshot-Aufruf angelegt. Browserbeleg für diesen neuen Stand ausstehend.
+
+PERF-02 bleibt Produktionsblocker für den neuen Avatar: aktuelle PNG-Quellauflösungen benötigen 15.52 MB beim Start und geschätzt 108 MiB decodiertes RGBA für alle verfügbaren Formen/Artikel. Die Schätzung enthält keine GPU-, DOM-, String- oder Browserkosten. Prototypbudgets sind kein Ersatz für kleinere Auslieferungsgrafiken und physische Gerätemessungen. Neue Grafikversionen/Formatwahl und Leistungsprüfung bleiben Bestandteil von Etappe 1.

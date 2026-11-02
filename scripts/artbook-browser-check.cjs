@@ -1,14 +1,26 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{serve}=require('./browser-check.cjs'),{chromium}=require('playwright');
+const {inventory,evaluate}=require('./avatar-budget.cjs');
 const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/artbook');
 (async()=>{
- fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js'];
+ fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js','design/avatar/reference-board.webp'];
  const baseContract=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/base-layer-contract.json'),'utf8'));files.push(...baseContract.layers.map(l=>'design/avatar/'+l.file.replace('./','')));
  const broadContract=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/base-layer-broad-v04-contract.json'),'utf8'));files.push(...broadContract.layers.map(l=>'design/avatar/'+l.file.replace('./','')));
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/prototype-assets.json'),'utf8'));files.push(...manifest.assets.map(a=>'design/avatar/'+a.file.replace('./','')));
  let server,browser,context;const report={checks:[],status:'failed'},errors=[];
  try{
-  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Eight verified PNG fragments loaded');
+  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage(),requests=[];page.on('request',r=>{if(r.url().startsWith(server.url))requests.push(new URL(r.url()).pathname)});page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Eight verified PNG fragments loaded');
+  const budget=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/performance-budget.json'),'utf8')),assets=inventory(root);
+  assert.equal(evaluate(assets,budget).prototypePassed,true);
+  assert.ok(!requests.some(p=>p.includes('broad-v04')||p.endsWith('/premium-art-bundle.js')||p.endsWith('/reference-board.webp')));
+  assert.equal(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.diagnostics().rasterSurfaces),0);
+  assert.equal(await page.locator('#scene defs image').count(),0);assert.equal(await page.locator('#scene mask use').count(),4);assert.equal(await page.locator('#scene image').count(),15);
+  await page.evaluate(()=>window.__bodyNode=document.querySelector('#scene [data-base-id="body"]'));
+  await page.locator('[data-item="strength-1"]').uncheck();await page.locator('[data-item="strength-1"]').check();
+  assert.equal(await page.evaluate(()=>window.__bodyNode===document.querySelector('#scene [data-base-id="body"]')),true);
+  report.performance={...assets,assets:undefined,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
+  report.checks.push('Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings');
+  async function chooseShape(id){await page.locator('#body-shape').selectOption(id);await page.waitForFunction(value=>document.body.dataset.bodyShape===value&&!document.body.dataset.shapeLoading,id)}
   const baseParts=['hair-back','body','shoes','kimono','hakama','obi','hair-front'];
   assert.deepEqual(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.getSelection()),baseParts);
   assert.equal(await page.locator('#scene > image[data-base-id]').count(),7);
@@ -40,7 +52,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   for(const [state,count] of [['base',0],['harness',1],['shoulders',2],['both',3],['fullset',8]]){await page.locator(`[data-preview="${state}"]`).click();assert.equal(await page.locator('#scene image[data-item-id]').count(),count);await page.locator('.stage').screenshot({path:path.join(output,state+'.png')});}report.checks.push('Five independently toggled actual compositions including full set');
   await page.locator('[data-preview="harness"]').click();await page.locator('#apply-occlusion').uncheck();assert.equal(await page.locator('#scene image[data-item-id]').first().getAttribute('clip-path'),null);await page.locator('.stage').screenshot({path:path.join(output,'harness-unmasked.png')});await page.locator('#apply-occlusion').check();assert.ok(await page.locator('#scene image[data-item-id]').first().getAttribute('clip-path'));report.checks.push('Reversible rear-strap occlusion without deselection');
   const ids=['strength-1','strength-2','strength-3','strength-4','strength-5'];for(let mask=0;mask<32;mask++){for(let i=0;i<5;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?1:0)+(mask&8?2:0)+(mask&16?1:0));}report.checks.push('All 32 selectable combinations');
-  await page.locator('#body-shape').selectOption('form-b');assert.equal(await page.getAttribute('body','data-body-shape'),'form-b');
+  await chooseShape('form-b');assert.equal(await page.getAttribute('body','data-body-shape'),'form-b');
   assert.equal(await page.locator('#scene > image[data-item-id]').count(),8);assert.deepEqual(await page.evaluate(()=>{const m=new DOMMatrix(getComputedStyle(document.getElementById('avatar-rig')).transform);return [m.a,m.b,m.c,m.d]}),[1,0,0,1]);
   await page.locator('.stage').screenshot({path:path.join(output,'form-b-fullset.png')});
   await page.locator('[data-base-preview="hairstyle"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-underbody.png')});
@@ -54,20 +66,42 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   await page.locator('[data-base-preview="dressed"]').click();
   for(let mask=0;mask<32;mask++){for(let i=0;i<5;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene > image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?1:0)+(mask&8?2:0)+(mask&16?1:0))}
   const bodyBIds=await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId));
-  await page.locator('#body-shape').selectOption('form-a');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
-  await page.locator('#body-shape').selectOption('form-b');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
+  await chooseShape('form-a');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
+  await chooseShape('form-b');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
   assert.equal(await page.locator('#scene > image[mask]').count(),4);await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene > image[mask]').count(),0);assert.equal(await page.locator('#scene > image[data-item-id]').count(),8);await page.locator('[data-base-part="kimono"]').check();
+  assert.equal(requests.filter(p=>p.endsWith('/body-broad-v04.png')).length,1);assert.equal(requests.filter(p=>p.endsWith('/kimono-broad-v04.png')).length,1);assert.equal(requests.filter(p=>p.endsWith('/hakama-broad-v04.png')).length,1);
   report.checks.push('Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching');
   const pixels=await page.evaluate(async()=>{
    const api=window.KONPASU_SCENE25,svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='occlusion-probe';svg.setAttribute('width',512);svg.setAttribute('height',768);
    const color=c=>{const surface=document.createElement('canvas');surface.width=20;surface.height=20;const ctx=surface.getContext('2d');ctx.fillStyle=c;ctx.fillRect(0,0,20,20);return surface.toDataURL()};
    const red=color('red'),blue=color('blue'),base=[{id:'kimono',src:red,placement:{x:20,y:20,width:10,height:10}}],gear=[{partId:'probe',itemId:'synthetic',anchor:'forearmLeft',z:500,src:blue,spec:{placement:{x:15,y:15,width:20,height:20}}}];
    const sample=async(layers,enabled)=>{api.render(svg,api.plan({baseLayers:layers,equipment:gear,fitArtwork:s=>s.placement,applyOcclusion:enabled}));const image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='data:image/svg+xml;base64,'+btoa(new XMLSerializer().serializeToString(svg))});const surface=document.createElement('canvas');surface.width=512;surface.height=768;const ctx=surface.getContext('2d');ctx.drawImage(image,0,0);return [Array.from(ctx.getImageData(22,22,1,1).data),Array.from(ctx.getImageData(16,16,1,1).data),svg.querySelectorAll('[data-item-id]').length]};
-   return [await sample(base,true),await sample(base,false),await sample([],true)];
+   return [await sample(base,true),await sample(base,false),await sample([],true),await sample([{...base[0],src:color('lime')}],true)];
   });
-  assert.deepEqual(pixels[0],[[255,0,0,255],[0,0,255,255],1]);assert.deepEqual(pixels[1][0],[0,0,255,255]);assert.deepEqual(pixels[2][0],[0,0,255,255]);report.checks.push('Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible');
+  assert.deepEqual(pixels[0],[[255,0,0,255],[0,0,255,255],1]);assert.deepEqual(pixels[1][0],[0,0,255,255]);assert.deepEqual(pixels[2][0],[0,0,255,255]);assert.deepEqual(pixels[3][0],[0,255,0,255]);report.checks.push('Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible');
   await page.setViewportSize({width:390,height:844});await page.locator('[data-preview="fullset"]').click();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});report.checks.push('390px mobile layout');
   await page.locator('#style-reference').evaluate(element=>element.open=true);await page.waitForFunction(()=>document.querySelector('#style-reference-image').naturalWidth>0);report.checks.push('Original approved style reference remains available separately');
+  await page.locator('#artbook-reference').evaluate(e=>e.open=true);await page.waitForFunction(()=>document.getElementById('reference').naturalWidth>0);
+  await page.locator('#artbook-reference').evaluate(e=>e.open=false);await page.locator('#artbook-reference').evaluate(e=>e.open=true);
+  assert.equal(requests.filter(p=>p.endsWith('/reference-board.webp')).length,1);assert.equal(requests.filter(p=>p.endsWith('/premium-art-bundle.js')).length,0);report.checks.push('Original artbook board loads once on demand without the large bundle');
+  const retry=await context.newPage();retry.on('pageerror',e=>errors.push(e.message));let bodyAttempts=0;
+  await retry.route('**/layers/body-broad-v04.png',route=>++bodyAttempts===1?route.fulfill({status:503,body:'synthetic temporary failure'}):route.continue());
+  await retry.goto(server.url+'design/avatar/index.html');await retry.waitForFunction(()=>document.body.dataset.artworkReady==='true');
+  await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.getElementById('shape-status').textContent.includes('konnte'));
+  assert.equal(await retry.getAttribute('body','data-body-shape'),'form-a');assert.equal(await retry.locator('#scene > image[data-item-id]').count(),8);
+  await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.body.dataset.bodyShape==='form-b'&&!document.body.dataset.shapeLoading);assert.equal(bodyAttempts,2);await retry.close();
+  const race=await context.newPage();race.on('pageerror',e=>errors.push(e.message));await race.route('**/layers/body-broad-v04.png',async route=>{await new Promise(resolve=>setTimeout(resolve,250));await route.continue()});
+  await race.goto(server.url+'design/avatar/index.html');await race.waitForFunction(()=>document.body.dataset.artworkReady==='true');
+  await race.locator('#body-shape').selectOption('form-b');await race.locator('[data-item="strength-1"]').uncheck();await race.locator('#body-shape').selectOption('form-a');
+  await race.waitForFunction(()=>window.KONPASU_WORKSHOP_RESOURCES().loadedForms.includes('form-b')&&window.KONPASU_WORKSHOP_RESOURCES().pendingForms.length===0);
+  assert.equal(await race.getAttribute('body','data-body-shape'),'form-a');assert.equal(await race.locator('#scene > image[data-item-id]').count(),6);await race.close();
+  report.checks.push('Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice');
+  report.performance.sceneScriptTiming=await page.evaluate(()=>{
+   const box=document.querySelector('[data-item="strength-1"]'),samples=[];
+   for(let i=0;i<40;i++){box.checked=!box.checked;box.dispatchEvent(new Event('change',{bubbles:true}));samples.push(window.KONPASU_SCENE25.diagnostics(document.getElementById('scene')).lastRenderMs)}
+   samples.sort((a,b)=>a-b);return {samples:40,medianMs:samples[20],p95Ms:samples[37],maxMs:samples[39],includesPaint:false};
+  });
+  const renderStats=await page.evaluate(()=>window.KONPASU_SCENE25.diagnostics(document.getElementById('scene')));assert.ok(renderStats.liveImages<=budget.prototype.maxSceneImages);report.performance.renderStats=renderStats;
   const failed=await context.newPage();
   await failed.route('**/layers/obi-v03.png',route=>route.fulfill({status:200,contentType:'image/png',body:Buffer.from('corrupted synthetic PNG')}));
   await failed.goto(server.url+'design/avatar/index.html');await failed.waitForFunction(()=>document.body.dataset.artworkReady==='false');
