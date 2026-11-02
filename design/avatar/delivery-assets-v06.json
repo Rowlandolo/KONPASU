@@ -135,17 +135,30 @@
       "visibleColorRMSE": 1.2669347847080497
     },
     {
-      "source": "./equipment/chest-harness.png",
-      "sourceSHA256": "bc5b8d92d6dfba22d3413b77c258871002729dfcddd00ad29d56a58996265265",
+      "source": "./equipment/chest-harness-back.png",
+      "sourceSHA256": "1495a498c111974689d3b8649be413083323d70db10336ad0a3976c6b0d8b05d",
+      "sourceWidth": 1117,
+      "sourceHeight": 1409,
+      "file": "./runtime-v06/chest-harness-back-70eeac41b6a2.webp",
+      "sha256": "70eeac41b6a29cf85c57de07fb11988c342a5536edf228785e8e1c8494481e2b",
+      "width": 203,
+      "height": 256,
+      "bytes": 6906,
+      "alphaMaxError": 0,
+      "visibleColorRMSE": 4.65661772323458
+    },
+    {
+      "source": "./equipment/chest-harness-front.png",
+      "sourceSHA256": "28b3889b54eb8575d477d218def57da9fec29ce02319d36e06e611b69e3a7b38",
       "sourceWidth": 1218,
       "sourceHeight": 1292,
-      "file": "./runtime-v06/chest-harness-5fe35786dda3.webp",
-      "sha256": "5fe35786dda34e3b73c97ca462239ee79ef2fc53b15ecd0336eca1cd8f38ab17",
+      "file": "./runtime-v06/chest-harness-front-a910df75bba9.webp",
+      "sha256": "a910df75bba972edd152861f9170503574169d93bfa2a66052e8d2f8bd385b2e",
       "width": 603,
       "height": 640,
-      "bytes": 92176,
+      "bytes": 76068,
       "alphaMaxError": 0,
-      "visibleColorRMSE": 4.506030657393665
+      "visibleColorRMSE": 5.279704997691838
     },
     {
       "source": "./equipment/shoulder-left.png",
