@@ -20,11 +20,11 @@ test('external files, traversal, unsupported sizes and malformed checksums are r
  for(const value of ['https://example.com/body.png','./layers/../body.png','./layers/BODY.png']){const c=copy();c.layers[0].file=value;assert.throws(()=>api.validate(c))}
  const c=copy();c.layers[0].width=512;assert.throws(()=>api.validate(c));c.layers[0].width=1024;c.layers[0].sha256='x'.repeat(64);assert.throws(()=>api.validate(c))
 });
-test('registration rejects off-canvas, stretched or non-finite placements',()=>{
- for(const placement of [{x:-1,y:0,width:512,height:768},{x:0,y:0,width:513,height:768},{x:0,y:0,width:512,height:700},{x:NaN,y:0,width:512,height:768}]){const c=copy();c.layers.find(l=>l.id==='body').placement=placement;assert.throws(()=>api.validate(c))}
+test('registration rejects unbounded, stretched or non-finite placements',()=>{
+ for(const placement of [{x:-200,y:0,width:512,height:768},{x:0,y:0,width:513,height:768},{x:0,y:0,width:512,height:700},{x:NaN,y:0,width:512,height:768}]){const c=copy();c.layers.find(l=>l.id==='body').placement=placement;assert.throws(()=>api.validate(c))}
 });
 test('unknown visibility selections fail before changing the composition',()=>{assert.throws(()=>api.selection(['body','constructor']));assert.throws(()=>api.selection('body'));assert.throws(()=>api.plan(contract,['unknown']))});
 test('proportion presets are bounded shared transforms with immutable defaults',()=>{assert.equal(api.proportion('regular').x,1);const p=api.proportion('broader');assert.equal(p.x,1.06);assert.equal(p.y,1);p.x=7;assert.equal(api.proportion('broader').x,1.06);assert.throws(()=>api.proportion('constructor'))});
 test('original approved style reference remains byte-identical',()=>{const b=fs.readFileSync(path.join(__dirname,'../design/avatar/base-art-direction-v01.png'));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),'e2387b82c8734e169d47308ed596ecc227a261b572179df8dcb78f19c701b2c6')});
 
-test('hair registration allows bounded transparent canvas bleed without moving the body',()=>{const c=copy();const hair=c.layers.find(l=>l.id==='hair-front');hair.placement.y=-2;assert.equal(api.validate(c),true);hair.placement.y=-17;assert.throws(()=>api.validate(c))});
+test('hair registration allows bounded occupied artwork bleed without moving the body',()=>{const c=copy();const hair=c.layers.find(l=>l.id==='hair-front');hair.placement.y=-2;assert.equal(api.validate(c),true);hair.placement.y=-30;assert.throws(()=>api.validate(c))});

@@ -78,3 +78,9 @@ ART-06: Grundoutfit noch zusammengefasst, Vorder-/Hinterhaar nicht getrennt und 
 ART-06 teilweise umgesetzt: Gewand, Hakama, Obi und Schuhe sind im Atelier unabhängig gezeichnet und schaltbar; Vorder-/Hinterhaare liegen auf getrennten Tiefenebenen. Keine polygonale Rückzerlegung des alten Gesamtbilds. Browser- und Sichtabnahme für diese Pose erfolgreich, Beleg verification-seven-layers-v03.json. Kimono hat weiterhin zusammengefasste Vorder-/Hinterseiten der weiten Ärmel; Hand-/Armrüstung kann deshalb weitere Tiefenmasken benötigen. Zweite Anatomie, Größenbudget und produktive Mehrfachauswahl bleiben offen. Die sieben aktuellen Basisgrafiken benötigen zusammen 6,144,050 Bytes.
 
 ART-07 (im Atelier korrigiert): Neues Ärmelinnenfutter verdeckte Unterarme, obwohl Armschienen davor gezeichnet wurden. Gewand mit transparenten Armkanälen neu gezeichnet und auf dieselbe Pose registriert. Vier tatsächliche Unterarmpunkte jetzt im Chromium gegen erneute Verdeckung abgesichert; finale Gesamtaufnahme gesichtet. Dies ersetzt noch keine allgemeine Vorder-/Hinterärmel-Tiefenlösung für andere Anatomien.
+
+## Körperform B / Verdeckung
+
+ART-08: Zweite Körpergrafik sowie angepasstes Gewand und Hakama vorhanden; Passformen sind zunächst ungesichtete Prototypen. Körperwechsel soll keine bestehende Artikel-/Basisauswahl verändern. Alle 95 Pfade bleiben unverändert; nur bestehendes Fünferset besitzt passende Prototypgrafiken.
+
+ART-09: Gemeinsame SVG-Szene und alphabasierte deklarative Verdeckung umgesetzt, einschließlich aktivem Gewand vor Armrüstung. Dies ist keine vollständige universelle Vorder-/Hintersegmentierung aller Ärmel, Riemen und künftigen Kopfteile. Rückwärtige Geschirrriemen verwenden weiterhin transportierte, posebezogene Clippolygone. Weitere Tiefenoberflächen müssen ausdrücklich modelliert werden.

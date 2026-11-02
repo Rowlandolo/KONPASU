@@ -220,3 +220,12 @@ Aktueller Beleg: 6a8775a71b297c0c1616146e7d61ad13e9f5c675, [Reviewlauf](https://
 - [ ] Ärmel-Tiefenaufteilung, weitere Anatomie, Produktionsbudget und App-/Offline-/Geräteintegration.
 
 Aktueller Sieben-Ebenen-Nachweis: 512f877d51d61654cc2eec7d0d41f201883fe7d9, [Chromiumlauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41518792450), 222 Regressionen und zwölf Atelier-Prüfgruppen erfolgreich. Aufnahmen verification-seven-layers-v03.json. Produktions-/Gerätefreigabe weiterhin separat.
+
+## Zwei Körperformen / gemeinsame Szene
+
+- [x] Beide Körpergrafiken und Variantenkleidung per SHA-256/nativen Maßen geprüft; Körperplacement unverändert, unabhängige Bilder statt Ganzkörperstretch.
+- [x] 32 Rewardauswahlen je Form, feste Tiefenreihenfolge, aktive/nicht aktive Verdeckungsflächen, seitenverhältnistreue Passform samt transportierter Clips und unveränderte Eingaben: acht neue Tests, 230 insgesamt.
+- [ ] Reales Chromium: 256 Basiszustände, 64 Rewardzustände und Körperwechsel ohne Verlust der Auswahl.
+- [ ] Synthetische reale SVG-Pixel bestätigen reversible Verdeckung und erhaltene Artikelauswahl.
+- [ ] Beide Körper/Grundoutfits/kompletten Sets gesichtet; Passformen nachgearbeitet.
+- [ ] Renderingbudget, zusätzliche tiefengetrennte Assets, produktive Daten-/Offline-/Geräteabnahme.

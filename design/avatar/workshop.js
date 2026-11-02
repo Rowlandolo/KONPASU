@@ -1,53 +1,55 @@
 'use strict';
 (async function(){
- const api=window.KONPASU_AVATAR_RIG25,art=window.KONPASU_PROTOTYPE_ART;
- const selected=new Set(api.CATALOG.map(i=>i.id)),controls=document.getElementById('selection');
- let ready=false,baseRenderer=null;
+ const api=window.KONPASU_AVATAR_RIG25,art=window.KONPASU_PROTOTYPE_ART,sceneApi=window.KONPASU_SCENE25;
+ const selected=new Set(api.CATALOG.map(i=>i.id)),controls=document.getElementById('selection'),models=new Map();
+ let ready=false,active='form-a',baseRenderer=null,currentScene=null;
  const svgNode=tag=>document.createElementNS('http://www.w3.org/2000/svg',tag);
+ const baseSelection=()=>Array.from(document.querySelectorAll('[data-base-part]:checked'),i=>i.dataset.basePart);
  for(const item of api.CATALOG){
   const label=document.createElement('label'),box=document.createElement('input'),text=document.createElement('span');
   box.type='checkbox';box.checked=true;box.dataset.item=item.id;text.textContent=item.titleDe;
   box.addEventListener('change',()=>{box.checked?selected.add(item.id):selected.delete(item.id);refresh()});label.append(box,text);controls.append(label);
  }
  function refresh(){
-  const plan=api.plan({selectedIds:[...selected],resolveAsset:ready?art.resolveAsset:undefined});
-  document.getElementById('summary').textContent=plan.selectedIds.length+' Artikel ausgewählt · '+plan.draw.length+' Grafikprototypen sichtbar · '+plan.pending.length+' Fragmente noch in Arbeit';
-  document.getElementById('parts').replaceChildren();document.getElementById('anchors').replaceChildren();document.getElementById('equipment').replaceChildren();
-  for(const part of plan.draw){
-   const spec=art.specFor(part.asset),fit=art.placement(spec),img=svgNode('image');
-   for(const [key,value] of Object.entries(fit))img.setAttribute(key,value);
-   img.setAttribute('href',part.src);
-   const polygons=art.clippingPolygons(spec);
-   if(document.getElementById('apply-occlusion').checked&&polygons.length){
-    const defs=svgNode('defs'),clip=svgNode('clipPath');clip.id='clip-'+part.partId;clip.setAttribute('clipPathUnits','userSpaceOnUse');
-    for(const points of polygons){const polygon=svgNode('polygon');polygon.setAttribute('points',points.map(p=>p.join(',')).join(' '));clip.append(polygon)}
-    defs.append(clip);document.getElementById('equipment').append(defs);img.setAttribute('clip-path','url(#'+clip.id+')');
-   }
-   img.dataset.partId=part.partId;img.dataset.itemId=part.itemId;document.getElementById('equipment').append(img);
+  const plan=api.plan({selectedIds:[...selected],resolveAsset:ready?art.resolveAsset:undefined}),profile=models.get(active)?.profile;
+  document.getElementById('summary').textContent=plan.selectedIds.length+' Artikel ausgewählt · '+plan.draw.length+' Grafikfragmente angelegt · '+plan.pending.length+' noch in Arbeit';
+  document.getElementById('parts').replaceChildren();document.getElementById('anchors').replaceChildren();
+  if(ready){
+   currentScene=sceneApi.plan({baseLayers:baseRenderer.describe(baseSelection()),equipment:plan.draw.map(part=>({...part,spec:art.specFor(part.asset)})),profile,fitArtwork:art.placement,applyOcclusion:document.getElementById('apply-occlusion').checked});
+   sceneApi.render(document.getElementById('scene'),currentScene);
   }
   for(const part of [...plan.draw,...plan.pending].sort((a,b)=>a.z-b.z)){
-   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?'Grafikprototyp':'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
-   const circle=svgNode('circle'),title=svgNode('title');circle.setAttribute('cx',part.x);circle.setAttribute('cy',part.y);circle.setAttribute('r',9);circle.setAttribute('fill','#35644f');circle.setAttribute('stroke','#fff');circle.setAttribute('stroke-width',3);title.textContent=part.partId;circle.append(title);document.getElementById('anchors').append(circle);
+   const node=currentScene?.nodes.find(n=>n.partId===part.partId),anchor=profile?.anchors?.[part.anchor]||api.RIG.anchors[part.anchor];
+   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?(node?.occludedBy.length?'Angelegt · Gewand kann überdecken':'Angelegt'):'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
+   const circle=svgNode('circle'),title=svgNode('title');circle.setAttribute('cx',anchor.x);circle.setAttribute('cy',anchor.y);circle.setAttribute('r',9);circle.setAttribute('fill','#35644f');circle.setAttribute('stroke','#fff');circle.setAttribute('stroke-width',3);title.textContent=part.partId;circle.append(title);document.getElementById('anchors').append(circle);
   }
  }
  function setSelection(ids){selected.clear();ids.forEach(id=>selected.add(id));controls.querySelectorAll('input').forEach(i=>i.checked=selected.has(i.dataset.item));refresh()}
  function refreshBase(){
-  if(!baseRenderer)return;
-  const parts=Array.from(document.querySelectorAll('[data-base-part]:checked'),input=>input.dataset.basePart);baseRenderer.draw(parts);
-  document.getElementById('base-limit').textContent=!parts.includes('body')?'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.':parts.includes('kimono')?'Gewand, Hakama, Obi, Schuhe und beide Haarbereiche sind unabhängig schaltbar.':'Vollständiger Körperunterbau in geschlossener Unterkleidung – einschließlich Kopf, Rumpf und Beinen.';
+  if(!ready)return;
+  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();
+  document.getElementById('base-limit').textContent=baseSelection().includes('body')?'Individuell gezeichnete Körperform. Kleidung und Ausrüstung behalten ihre Auswahl beim Wechsel.':'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.';
  }
- function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(input=>input.checked=ids.includes(input.dataset.basePart));refreshBase()}
+ function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(i=>i.checked=ids.includes(i.dataset.basePart));refreshBase()}
  for(const button of document.querySelectorAll('[data-base-preview]'))button.addEventListener('click',()=>{setSelection([]);setBaseSelection({underbody:['body'],hairstyle:['hair-back','body','hair-front'],dressed:[...window.KONPASU_BASE_LAYERS25.PARTS]}[button.dataset.basePreview])});
  for(const input of document.querySelectorAll('[data-base-part]'))input.addEventListener('change',refreshBase);
+ document.getElementById('body-shape').addEventListener('change',event=>{if(!ready)return;active=event.target.value;document.body.dataset.bodyShape=active;refreshBase()});
  document.getElementById('body-proportions').addEventListener('change',event=>{const p=window.KONPASU_BASE_LAYERS25.proportion(event.target.value);document.getElementById('avatar-rig').style.transform=`scale(${p.x},${p.y})`;document.body.dataset.proportion=event.target.value});
  document.getElementById('all').addEventListener('click',()=>setSelection(api.CATALOG.map(i=>i.id)));
  document.getElementById('none').addEventListener('click',()=>setSelection([]));
  for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4'],fullset:api.CATALOG.map(i=>i.id)}[button.dataset.preview]));
  document.getElementById('apply-occlusion').addEventListener('change',refresh);
- document.getElementById('show-anchors').addEventListener('change',event=>document.getElementById('anchors').style.display=event.target.checked?'block':'none');
+ document.getElementById('show-anchors').addEventListener('change',e=>document.getElementById('anchors').style.display=e.target.checked?'block':'none');
  document.getElementById('reference').src=window.KONPASU_PREMIUM_SRC('assets/konpasu_body_motion_rewards.webp');refresh();
+ async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
-  const response=await fetch('./prototype-assets.json',{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt.');
-  const manifest=await response.json();const baseResponse=await fetch('./base-layer-contract.json',{cache:'no-store'});if(!baseResponse.ok)throw Error('Basisebenen fehlen.');baseRenderer=await window.KONPASU_BASE_LAYERS25.load(document.getElementById('base-canvas'),await baseResponse.json(),document.getElementById('front-canvas'));window.KONPASU_WORKSHOP_BASE=baseRenderer;refreshBase();await art.load(manifest);ready=true;refresh();document.body.dataset.artworkReady='true';
+  const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);
+  if(profiles.version!==1||profiles.profiles.length!==2||profiles.profiles.map(p=>p.id).sort().join(',')!=='form-a,form-b')throw Error('Ungültige Körperprofile');
+  await Promise.all(profiles.profiles.map(async profile=>{
+   if(!['form-a','form-b'].includes(profile.id)||!/^\.\/base-layer(-broad-v04)?-contract\.json$/.test(profile.contract))throw Error('Ungültige Körperquelle');
+   const contract=await json(profile.contract),canvas=profile.id==='form-a'?document.getElementById('base-canvas'):document.createElement('canvas'),front=profile.id==='form-a'?document.getElementById('front-canvas'):document.createElement('canvas');
+   models.set(profile.id,{profile,renderer:await window.KONPASU_BASE_LAYERS25.load(canvas,contract,front)});
+  }));
+  await art.load(manifest);ready=true;active='form-a';document.body.dataset.bodyShape=active;document.getElementById('body-shape').disabled=false;refreshBase();document.body.dataset.artworkReady='true';
  }catch(error){document.getElementById('artwork-status').textContent='Grafikvorschau konnte nicht geladen werden: '+error.message;document.body.dataset.artworkReady='false'}
 })();
