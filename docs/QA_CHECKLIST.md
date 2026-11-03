@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4 und #5. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5 und #6. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -337,6 +337,23 @@ Entwurfs-PR [#5](https://github.com/Rowlandolo/KONPASU/pull/5) baut auf #4 auf. 
 - [x] Acht Browserfälle für aktuell/Favorit/Historie; 12 Browsergruppen einschließlich 390 px, XSS-Text, kaputter Fixture und Warm-Offlinebetrieb.
 - [x] Leerer Favorit erbt keine Ausrüstung; fehlender historischer Schnappschuss erhält keine heutigen Teile.
 - [x] Keine Appinitialisierung, persönlichen Exporte, Profilimporte oder Speichereinträge; sechs Browserbilder gesichtet/archiviert.
-- [ ] Geordneter Mehrfachentwurf und Undo im Sitzungsspeicher.
+- [x] Geordneter Mehrfachentwurf und Undo/Redo im Sitzungsspeicher: Etappe 3.2 abgeschlossen, siehe jüngster Nachweis.
 - [ ] Persistenter Mehrfachvertrag, Altprofilvergleich, Import/Export, Rollback, App- und PWA-Integration.
 - [ ] Reale Geräte-/VoiceOver-/Kaltstart-/Upgradeabnahme; finale Grafik und Veröffentlichung.
+
+## Abschluss Etappe 3.2: Mehrfachoutfit im Sitzungsspeicher
+
+Eigene Werkstatt `design/avatar/outfit-draft.html` und reiner Editor `avatar-outfit-draft-v25.js` in Entwurfs-PR [#6](https://github.com/Rowlandolo/KONPASU/pull/6), aufbauend auf #5. Artikel unabhängig hinzufügen, ausblenden, sortieren und entfernen; Undo/Redo für alle Aktionen einschließlich Körperform und Reset. Stabile Instanzen erhalten eigene Ziel-IDs bei geteilter Grafik. Start nur mit tatsächlicher Altauflösung; vollständige Originalquelle unverändert. Jedes synthetische Beispiel behält seinen Entwurf während der geöffneten Seite; Neuladen verwirft ihn sichtbar angekündigt. Kein sessionStorage, localStorage oder IndexedDB-Zugriff.
+
+**324 Regressionen (21 neu), bestehende App-/Atelierprüfung mit 26 Gruppen und 16 neue Chromiumgruppen erfolgreich** für `7b90e8a535e52d64b8f2767ef2954f1526b591e2`: [bestehende Prüfungen](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823151), [Entwurfsprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823134). Tatsächliche UI-Undo/Redo-Kette, geteilte PNG-Grafik mit eindeutigen SVG-IDs, veränderte gleich tiefe SVG-Reihenfolge, 95er-Kombination mit 134 Vektor-/12 PNG-Modulen, DE/EN, 320/390/430 px, 44-px-Ziele, Warm-Offlinebetrieb und Fehlerfälle bestanden. Drei echte Browserbilder gesichtet und unverändert unter `design/avatar/review-outfit-draft-v01/` archiviert. Vollbeleg `design/avatar/verification-outfit-draft-v01.json`; Vertrag und Grenzen AVATAR_SESSION_DRAFT.md.
+
+Keine Live-, Profil-, Schema-, Rewardregel- oder Cacheänderung. Historische Personalisierung, Szenen und gesonderter Legacy-Begleiter bleiben im Original erhalten; ihre Rendererübernahme ist noch offen. Prototypgrafiken, physisches Gerät und kaltes PWA-Upgrade bleiben eigene Gates. Als Nächstes Etappe 3.3: expliziter additiver Speicher-/Import-/Export-/Rollbackvertrag mit Datenvergleich und bestehendem Revisions-/Konfliktschutz. Noch keine dauerhafte Speicherung oder neue Figur in der Live-App.
+
+- [x] 21 neue Regressionen für Instanzen, Quelltreue, komplette Undo/Redo-Kette, No-ops, Fehlaktionen und Render-Akzeptanzrollback.
+- [x] 16 neue Browsergruppen: tatsächliche UI-Aktionen, gleiche PNG-Grafik getrennt, eindeutige IDs, feste Tiefe und geänderte SVG-Reihenfolge, alle 95 gemeinsam.
+- [x] Beispielwechsel erhält Entwürfe; Reload verwirft sie. Originalquelle bleibt nach Reset/Entfernen/Undo unverändert.
+- [x] Fehlende Historie/ungültiger Favorit sperren Bearbeitung und verbergen Vorschau; unsichere Texte führen kein HTML aus.
+- [x] DE/EN, 320/390/430 px, 44-px-Ziele, erhaltene Tastaturfokussierung, bereits geladene Formen offline.
+- [x] Keine localStorage-/sessionStorage-/IndexedDB-Einträge und keine Browserfehler; drei Screenshots gesichtet.
+- [ ] Dauerhafte Mehrfachauswahl, tatsächliche Appaktionen, Import/Export/Rollback und Speicher-Konflikt-/Offlinefälle.
+- [ ] Physische Geräte-/VoiceOver-/PWA-Kaltstart-/Upgradeabnahme und Veröffentlichung.

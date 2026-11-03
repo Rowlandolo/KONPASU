@@ -34,7 +34,7 @@ Die Werkstatt prüft vor dem Bearbeiten sämtliche Vektorquellen und die benöti
 
 ## Prüfstand
 
-`node tests/outfit-draft.cjs`: 21 neue erfolgreiche Prüfungen. `node scripts/check.cjs`: 324 erfolgreiche Prüfungen. Lokaler Browserlauf ist durch den hier nicht erlaubten lokalen Listener (`listen EPERM 127.0.0.1`) blockiert; die tatsächliche Chromiumabnahme läuft über `.github/workflows/outfit-draft.yml` mit Playwright 1.56.1. Bis zu deren Abschluss keine Browser-/Geräteabnahme behaupten. Abschließende Belege folgen unter `design/avatar/verification-outfit-draft-v01.json`.
+`node tests/outfit-draft.cjs`: 21 neue erfolgreiche Prüfungen. `node scripts/check.cjs`: 324 erfolgreiche Prüfungen. Tatsächliche GitHub-Chromiumabnahme über `.github/workflows/outfit-draft.yml` mit Playwright 1.56.1: 16 Gruppen erfolgreich für `7b90e8a535e52d64b8f2767ef2954f1526b591e2`. Bestehende App-/Atelierprüfung mit 26 Gruppen ebenfalls erfolgreich. [Entwurfsprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823134); [bestehende Prüfungen](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823151). Drei gesichtete Original-Browserbilder und Bericht unter `design/avatar/review-outfit-draft-v01/`; vollständiger Beleg `design/avatar/verification-outfit-draft-v01.json`. Der abschließende Archivcommit verändert ausschließlich Dokumentation und Belege. Physische Geräte, VoiceOver und kalte PWA-Upgrades sind damit nicht abgenommen. Der lokale Browserlauf war durch `listen EPERM 127.0.0.1` blockiert; die Browseraussagen stammen aus CI, nicht aus VM-Tests.
 
 ## Danach: dauerhafte Speicherung mit geprüftem Rückweg
 

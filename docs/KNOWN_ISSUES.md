@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4 und #5. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5 und #6. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -149,3 +149,17 @@ OUTFIT-01 offen in der Live-App: `showProfileForDate` verwendet ohne früheren S
 OUTFIT-02 Formatgrenze: alte Favoriten besitzen keine vollständige historische Haar-/Mimik-/Effekt-/Zielfamilienkopie. Adapter erhält Originalfavorit und Basisprofil getrennt; fehlende damalige Werte lassen sich nicht zuverlässig rekonstruieren. Keine nachträgliche Erfindung oder stille Migration.
 
 OUTFIT-03 im neuen Inspektor behoben: dreispaltige Statuskarten ließen bei 390 px die lange Quellprüfung überstehen. Mobile Zweispaltenansicht mit eigener voller Zeile sowie horizontal begrenzten lesbaren Tabellen; tatsächlicher Chromiumbeleg und Sichtprüfung vorhanden.
+
+## Abschluss Etappe 3.2: Mehrfachoutfit im Sitzungsspeicher
+
+Eigene Werkstatt `design/avatar/outfit-draft.html` und reiner Editor `avatar-outfit-draft-v25.js` in Entwurfs-PR [#6](https://github.com/Rowlandolo/KONPASU/pull/6), aufbauend auf #5. Artikel unabhängig hinzufügen, ausblenden, sortieren und entfernen; Undo/Redo für alle Aktionen einschließlich Körperform und Reset. Stabile Instanzen erhalten eigene Ziel-IDs bei geteilter Grafik. Start nur mit tatsächlicher Altauflösung; vollständige Originalquelle unverändert. Jedes synthetische Beispiel behält seinen Entwurf während der geöffneten Seite; Neuladen verwirft ihn sichtbar angekündigt. Kein sessionStorage, localStorage oder IndexedDB-Zugriff.
+
+**324 Regressionen (21 neu), bestehende App-/Atelierprüfung mit 26 Gruppen und 16 neue Chromiumgruppen erfolgreich** für `7b90e8a535e52d64b8f2767ef2954f1526b591e2`: [bestehende Prüfungen](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823151), [Entwurfsprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41608823134). Tatsächliche UI-Undo/Redo-Kette, geteilte PNG-Grafik mit eindeutigen SVG-IDs, veränderte gleich tiefe SVG-Reihenfolge, 95er-Kombination mit 134 Vektor-/12 PNG-Modulen, DE/EN, 320/390/430 px, 44-px-Ziele, Warm-Offlinebetrieb und Fehlerfälle bestanden. Drei echte Browserbilder gesichtet und unverändert unter `design/avatar/review-outfit-draft-v01/` archiviert. Vollbeleg `design/avatar/verification-outfit-draft-v01.json`; Vertrag und Grenzen AVATAR_SESSION_DRAFT.md.
+
+Keine Live-, Profil-, Schema-, Rewardregel- oder Cacheänderung. Historische Personalisierung, Szenen und gesonderter Legacy-Begleiter bleiben im Original erhalten; ihre Rendererübernahme ist noch offen. Prototypgrafiken, physisches Gerät und kaltes PWA-Upgrade bleiben eigene Gates. Als Nächstes Etappe 3.3: expliziter additiver Speicher-/Import-/Export-/Rollbackvertrag mit Datenvergleich und bestehendem Revisions-/Konfliktschutz. Noch keine dauerhafte Speicherung oder neue Figur in der Live-App.
+
+OUTFIT-04 im neuen Editor behoben: eine Zuweisung an `SVGElement.hidden` versteckte die SVG-Vorschau bei fehlender Historie nicht zuverlässig. Explizites `hidden`-Attribut und tatsächliche Browserprüfung für fehlende Historie/ungültigen Favoriten; blockierte Quellen zeigen keine Ersatzfigur. Live-App unverändert.
+
+OUTFIT-05 im Editor behoben: Sticky-Vorschau konnte beim Scrollen die Sammlung überlagern; normale Positionierung plus Browser-Grenzprüfung. Identische Standardartikel aus Quelle/Katalog erscheinen nur einmal. Mobile Sammlung zeigt bis 600 px ganze Karten, damit Namen lesbar bleiben.
+
+OUTFIT-06 offen: neue Entwürfe sind ausdrücklich flüchtig und noch nicht auf echte Profile anwendbar. Speicherung, Backups und Offline-Neustart benötigen Etappe 3.3; die Entwicklungswerkstatt ist keine neue Datensicherung.
