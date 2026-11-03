@@ -1,5 +1,5 @@
 'use strict';
-const KONPASU_RELEASE='2.4.0';
+const KONPASU_RELEASE='2.4.1-preview.1';
 /* KONPASU 1.4 Goals and Training – offline app: no trackers, APIs, CDNs or remote dependencies. */
 const PRESETS=[
  ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
@@ -49,6 +49,7 @@ const ITEM_NAMES={strength:['Kote des Anfängers','Eisen-Kote','Samurai-Sode','K
 function createState(){const start=today();return {version:4,createdAt:new Date().toISOString(),profile:{lang:'de',coachTone:'balanced',name:'',gender:'neutral',accent:'navy',height:'',weight:'',chest:'',waist:'',hips:'',companion:'fox',equipped:{}},goals:PRESETS.map(([key,title,category,icon,target,period,targetValue,unit,direction])=>({id:key,key,title,category,icon,target,period,targetValue,unit,direction,active:['strength','water','reading'].includes(key),events:[{date:start,active:['strength','water','reading'].includes(key)}],versions:[{date:start,period,target,targetValue,unit,direction}]})),checks:[],measurements:[],exercises:[],plans:[],sessions:[],draft:null,avatarHistory:[],awards:[],coachDismissals:[],goalEdits:[],experiments:[],reflections:[]}}
 function migrate(data){if(!data||!Array.isArray(data.goals)||!Array.isArray(data.sessions)||!Array.isArray(data.checks)||!Array.isArray(data.exercises))throw Error('Keine gültige KONPASU-Sicherung.');const start=(data.createdAt||new Date().toISOString()).slice(0,10);const fromPreset=k=>PRESETS.find(x=>x[0]===k);const old=JSON.parse(JSON.stringify(data));old.version=4;old.measurements=Array.isArray(old.measurements)?old.measurements:[];old.awards=Array.isArray(old.awards)?old.awards:[];old.avatarHistory=Array.isArray(old.avatarHistory)?old.avatarHistory:[];old.coachDismissals=Array.isArray(old.coachDismissals)?old.coachDismissals:[];old.goalEdits=Array.isArray(old.goalEdits)?old.goalEdits:[];old.experiments=Array.isArray(old.experiments)?old.experiments:[];old.reflections=Array.isArray(old.reflections)?old.reflections:[];old.profile={...createState().profile,...old.profile};old.profile.equipped=old.profile.equipped||{};old.goals=old.goals.map(g=>{const p=fromPreset(g.key||g.id);const v=p?{period:p[5],target:p[4],targetValue:p[6],unit:p[7],direction:p[8]}:{period:g.period||'weekly',target:g.target||'',targetValue:null,unit:'',direction:'min'};return {...v,...g,events:g.events||[{date:start,active:!!g.active}],versions:g.versions||[{date:start,period:g.period||v.period,target:g.target||v.target,targetValue:v.targetValue,unit:v.unit,direction:v.direction}]}});if(data.version===2){old.checks=old.checks.map(c=>{const g=old.goals.find(x=>x.id===c.goalId);return g?.period==='weekly'?{...c,date:monday(c.date),originalDate:c.date}:c})}old.sessions=old.sessions.map(s=>({...s,items:(s.items||[]).map(i=>({...i,sets:i.sets||[]}))}));return old}
 let knownRevision=0,storageLocked=false,writeFaultNotified=false,storageReadFailed=false,knownFallbackRaw=null;
+let outfitMutationSerial25=0;
 let data=createState(),tab='today',day=today(),analysisDays=84,focusGoal=null,trainingView='plans',goalView='active',modal=null,db=null,saveQueue=Promise.resolve(),persistGood=true,backupReminder=false,toastTimeout=null,historyDate=today(),expandedCoach=false,restUntil=0,experimentExpanded=false;
 const getGoal=id=>data.goals.find(g=>g.id===id);
 const getEx=id=>data.exercises.find(e=>e.id===id);
@@ -59,12 +60,12 @@ function readDB(){return new Promise((resolve,reject)=>{const req=db.transaction
 // A revision-checked IndexedDB transaction prevents silent data loss when two tabs edit the same local profile.
 // A tab with stale data can export a JSON backup but must reload before writing again.
 function writeDB(v){return new Promise((resolve,reject)=>{
- let conflict=false,tx;try{tx=db.transaction('kv','readwrite');const store=tx.objectStore('kv');const req=store.get('state');
- req.onsuccess=()=>{const existing=req.result,revision=Number.isInteger(existing?._writeRevision)?existing._writeRevision:0;
+ let conflict=false,tx,operationError;try{tx=db.transaction('kv','readwrite');const store=tx.objectStore('kv');const req=store.get('state');
+ req.onsuccess=()=>{try{const existing=req.result,revision=Number.isInteger(existing?._writeRevision)?existing._writeRevision:0;
   if(revision!==knownRevision){conflict=true;try{tx.abort()}catch{}return}
-  store.put({...v,_writeRevision:knownRevision+1},'state')};
+  store.put({...v,_writeRevision:knownRevision+1},'state')}catch(error){operationError=error;try{tx.abort()}catch{}}};
  tx.oncomplete=()=>{knownRevision++;resolve(true)};
- tx.onabort=()=>reject(new Error(conflict?'Datenkonflikt: Ein anderes KONPASU-Fenster hat neuere Änderungen gespeichert.':'Lokale Datenbank-Transaktion abgebrochen.'));
+ tx.onabort=()=>reject(operationError||new Error(conflict?'Datenkonflikt: Ein anderes KONPASU-Fenster hat neuere Änderungen gespeichert.':'Lokale Datenbank-Transaktion abgebrochen.'));
  tx.onerror=()=>reject(tx.error||new Error('Lokale Datenbank konnte nicht schreiben.'));
  }catch(e){reject(e)}
 })}
@@ -80,14 +81,16 @@ function writeFallback(snapshot){
   knownFallbackRaw=next;
  });
 }
-function store(){const snap=JSON.parse(JSON.stringify(data));saveQueue=saveQueue.catch(()=>false).then(async()=>{
+function storageWriteFailed(e){persistGood=false;storageLocked=true;console.error('KONPASU save failed',e);
+ document.querySelector('#toast')?.remove();refreshStorageStatus();
+ if(!writeFaultNotified){writeFaultNotified=true;alert(storageReadFailed?storageReadMessage():'KONPASU hat ein Speicherproblem erkannt. Neue Änderungen werden NICHT zuverlässig gesichert. Bitte sofort ein JSON-Backup exportieren und die App danach erneut öffnen.\n\n'+e.message)}
+}
+function store(){const snap=JSON.parse(JSON.stringify(data)),outfitSerial=outfitMutationSerial25;saveQueue=saveQueue.catch(()=>false).then(async()=>{
  try{if(storageLocked)throw Error('Schreibschutz: Bitte erst die gespeicherten Daten sichern und die App neu öffnen.');
+  // Only outfit-owned fields are rebased when a preceding outfit transaction committed.
+  if(outfitSerial!==outfitMutationSerial25)window.KONPASU_OUTFIT_PERSIST25.replaceFields(snap,data);
   if(db)await writeDB(snap);else await writeFallback(snap);persistGood=true;return true;
- }catch(e){persistGood=false;storageLocked=true;console.error('KONPASU save failed',e);
-  document.querySelector('#toast')?.remove();refreshStorageStatus();
-  if(!writeFaultNotified){writeFaultNotified=true;alert(storageReadFailed?storageReadMessage():'KONPASU hat ein Speicherproblem erkannt. Neue Änderungen werden NICHT zuverlässig gesichert. Bitte sofort ein JSON-Backup exportieren und die App danach erneut öffnen.\n\n'+e.message)}
-  return false;
- }});return saveQueue}
+ }catch(e){storageWriteFailed(e);return false; }});return saveQueue}
 // Absence is different from unreadable data. Never turn a failed read into an empty profile write.
 function readFallbackState(){
  const raw=localStorage.getItem('konpasu-fallback-v2');
@@ -137,7 +140,7 @@ async function init(){
   // Persist newly verified awards, but do not rewrite an unchanged profile on boot.
   if(seeded||awardsChanged)await store();
  }
- render(); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v240')){sessionStorage.setItem('konpasu-reloaded-v240','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
+ render(); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview1')){sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview1','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
 function notice(s){document.querySelector('#toast')?.remove();const d=document.createElement('div');d.id='toast';d.className='toast';d.textContent=translateText(s);document.body.appendChild(d);clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>d.remove(),2700)}
 function activeAt(g,d){const list=[...(g.events||[])].sort((a,b)=>a.date.localeCompare(b.date));let result=false;for(const x of list){if(x.date<=d)result=!!x.active}return result}
 function configAt(g,d){const list=(g.versions||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));let conf={period:g.period,target:g.target,targetValue:g.targetValue,unit:g.unit,direction:g.direction};for(const v of list){if(v.date<=d)conf={...conf,...v}}return conf}
@@ -378,7 +381,7 @@ function validateImportedBackup(raw){
  for(const p of raw.plans){if(!record(p)||!id(p.id)||!Array.isArray(p.exerciseIds)||!p.exerciseIds.every(id))fail('plans');text(p,'name','plan')}
  for(const d of raw.detailLogs||[]){if(!record(d)||!id(d.goalId)||!date(d.date))fail('detailLogs');optionalObject(d,'values','detailLog')}
  const profile=(p)=>{
-  if(!record(p))fail('profile');for(const key of ['name','lang','gender','accent','companion'])text(p,key,'profile');
+  if(!record(p))fail('profile');if(window.KONPASU_OUTFIT_PERSIST25)window.KONPASU_OUTFIT_PERSIST25.validateExtension({profile:p});for(const key of ['name','lang','gender','accent','companion'])text(p,key,'profile');
   const equipped=optionalObject(p,'equipped','profile');for(const tier of Object.values(equipped))if(!Number.isInteger(number(tier))||number(tier)<1||number(tier)>5)fail('profile.equipped');
   if(p.avatar2d===undefined||p.avatar2d===null)return;
   const a=p.avatar2d;if(!record(a))fail('profile.avatar2d');
@@ -388,6 +391,7 @@ function validateImportedBackup(raw){
   if(a.streakSelection!==undefined&&a.streakSelection!==null&&(!record(a.streakSelection)||!id(a.streakSelection.goalId)||!Number.isInteger(a.streakSelection.level)||a.streakSelection.level<1||a.streakSelection.level>4))fail('avatar2d.streakSelection');
  };
  if(raw.profile!==undefined)profile(raw.profile);
+ if(window.KONPASU_OUTFIT_PERSIST25)window.KONPASU_OUTFIT_PERSIST25.validateExtension(raw);
  for(const h of raw.avatarHistory||[]){if(!record(h)||!date(h.date))fail('avatarHistory');profile(h.profile)}
  for(const a of [...(raw.awards||[]),...(raw.streakAwards||[])])if(!record(a)||!id(a.goalId))fail('awards');
  for(const key of ['copingPlans','gentleReminders','experiments','reflections']){const entries=optionalArray(raw,key,'Daten');if(entries.some(x=>!record(x)))fail(key)}

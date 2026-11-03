@@ -1,0 +1,32 @@
+name: Durable outfit storage
+on:
+  pull_request:
+    paths:
+      - avatar-outfit*.js
+      - app.js
+      - index.html
+      - sw.js
+      - version.json
+      - scripts/outfit-storage-browser-check.cjs
+      - tests/outfit-persistence.cjs
+      - .github/workflows/outfit-storage.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  outfit-storage-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/outfit-storage-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: outfit-storage-acceptance
+          path: browser-results/outfit-storage/

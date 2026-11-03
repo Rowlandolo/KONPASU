@@ -1,13 +1,17 @@
 {
-  "version": "2.4.0",
-  "release": "KONPASU 2.4.0 – layered 2D avatar preview",
+  "version": "2.4.1-preview.1",
+  "release": "KONPASU 2.4.1 preview 1 – additive outfit storage contract",
   "features": [
     "goal-calendar-v23.js",
     "training-v22.js",
     "avatar2d.js",
     "avatar-composer-v24.js",
     "avatar-art-bundle.js",
-    "premium-art-bundle.js"
+    "premium-art-bundle.js",
+    "avatar-outfit-v25.js",
+    "avatar-outfit-persistence-v25.js",
+    "avatar-outfit-store-v25.js",
+    "avatar-outfit-draft-v25.js"
   ],
-  "cache": "konpasu-offline-v240"
+  "cache": "konpasu-offline-v241-outfit-preview1"
 }

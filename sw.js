@@ -1,6 +1,6 @@
-/* KONPASU 2.4.0: offline cache, cache-first app navigation, fail-safe activation. */
-const CACHE='konpasu-offline-v240';
-const CRITICAL=['./','./index.html','./app.css','./app.js','./features-v1.js','./goal-modules.js','./training-library.js','./core-v15.js','./avatar-art-bundle.js','./premium-art-bundle.js','./avatar-composer-v24.js','./avatar2d.js','./training-v22.js','./goal-calendar-v23.js','./manifest.webmanifest'];
+/* KONPASU 2.4.1 preview 1: offline cache, cache-first app navigation, fail-safe activation. */
+const CACHE='konpasu-offline-v241-outfit-preview1';
+const CRITICAL=['./','./index.html','./app.css','./app.js','./avatar-outfit-v25.js','./avatar-outfit-draft-v25.js','./avatar-outfit-persistence-v25.js','./avatar-outfit-store-v25.js','./features-v1.js','./goal-modules.js','./training-library.js','./core-v15.js','./avatar-art-bundle.js','./premium-art-bundle.js','./avatar-composer-v24.js','./avatar2d.js','./training-v22.js','./goal-calendar-v23.js','./manifest.webmanifest'];
 const OPTIONAL=['./blueprint-avatar-main.png','./blueprint-heads.png','./blueprint-expressions.png','./blueprint-modules-board.png','./blueprint-companion.png','./blueprint-backgrounds.png','./blueprint-auras.png','./konpasu_avatar_concept_blueprint.png','./icon-192.png','./icon-512.png'];
 const ALL=[...CRITICAL,...OPTIONAL];
 self.addEventListener('install',event=>event.waitUntil((async()=>{

@@ -3,7 +3,7 @@
 (function(root){
  const adapter=typeof module!=='undefined'&&module.exports?require('./avatar-outfit-v25.js'):root.KONPASU_OUTFIT25;
  const copy=adapter.copyJSON,freeze=v=>{if(v&&typeof v==='object'){Object.values(v).forEach(freeze);Object.freeze(v)}return v};
- function create(projection,{catalogue}={}){
+ function create(projection,{catalogue,initialSelection}={}){
   adapter.recoverSource(projection);
   const source=freeze(copy(projection));
   if(!catalogue||!Array.isArray(catalogue.items)||catalogue.items.length!==95)throw Error('Checked 95-item catalogue required');
@@ -14,6 +14,15 @@
   for(const i of catalogue.items)put({choiceId:'catalogue:'+i.id,itemId:i.id,artworkId:i.id,origin:'catalogue-preview',evidence:{owned:null,allowed:null},state:'preview-only'});
   const instance=(choice,visible=true,provenance=[])=>({instanceId:'draft-item-'+(++sequence),itemId:choice.itemId,artworkId:choice.artworkId,choiceId:choice.choiceId,origin:choice.origin,evidence:copy(choice.evidence),visible,provenance:copy(provenance)});
   const initial={body:'form-a',items:source.blocked?[]:source.resolvedSlots.map(r=>instance(choices.get('source:'+r.item.id),r.display!=='effect-hidden',[{slot:r.slot,requestedEntryIds:copy(r.requestedEntryIds)}]))};
+  if(initialSelection!==undefined){
+   const stored=copy(initialSelection);
+   if(stored.format!=='konpasu-multi-outfit'||stored.version!==1||!['form-a','form-b'].includes(stored.body)||!Array.isArray(stored.items)||stored.items.length>500||source.blocked)throw Error('Invalid saved selection');
+   const ids=new Set(),items=new Set();initial.body=stored.body;initial.items=stored.items.map(i=>{
+    if(!/^draft-item-[1-9]\d{0,12}$/.test(i.instanceId)||typeof i.itemId!=='string'||typeof i.artworkId!=='string'||typeof i.visible!=='boolean'||ids.has(i.instanceId)||items.has(i.itemId))throw Error('Invalid saved instance');
+    ids.add(i.instanceId);items.add(i.itemId);sequence=Math.max(sequence,Number(i.instanceId.slice(11)));
+    const choice=choices.get('source:'+i.itemId);return {instanceId:i.instanceId,itemId:i.itemId,artworkId:i.artworkId,visible:i.visible,choiceId:choice?.choiceId||'persisted:'+i.instanceId,origin:'persisted',evidence:copy(choice?.evidence||{owned:null,allowed:null}),provenance:[{savedOperationId:stored.operationId}]};
+   });
+  }
   let current=copy(initial);
   function snapshot(){return {format:'konpasu-session-outfit-draft',version:1,sessionOnly:true,blocked:source.blocked,body:current.body,items:copy(current.items),canUndo:undo.length>0,canRedo:redo.length>0,undoDepth:undo.length,redoDepth:redo.length,source:copy(source),choices:[...choices.values()].map(copy)}}
   function change(action){
