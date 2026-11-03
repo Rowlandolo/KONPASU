@@ -109,6 +109,8 @@ function storageReadMessage(){return data.profile.lang==='en'
  ?'Saved data could not be loaded. Writes are blocked. This view does not show your saved profile. Do not reset the app or delete website data.'
  :'Gespeicherte Daten konnten nicht geladen werden. Schreibzugriffe sind gesperrt. Diese Ansicht zeigt nicht dein gespeichertes Profil. Bitte die App nicht zurücksetzen und keine Website-Daten löschen.'}
 async function init(){
+ // Deferred modules must finish before startup reads, reward evaluation and first Home rendering.
+ if(document.readyState==='loading')await new Promise(resolve=>document.addEventListener('DOMContentLoaded',resolve,{once:true}));
  // A failure to open IndexedDB may use the existing fallback. A failure to read an
  // opened database must stop: the fallback could be older than its actual records.
  try{db=await openDB()}catch(e){db=null;console.warn('Storage fallback',e)}
