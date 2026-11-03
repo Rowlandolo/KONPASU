@@ -26,7 +26,7 @@
   const s=current().snapshot(),m=models.get(s.body),result=window.KONPASU_OUTFIT_DRAFT_SCENE.plan({draft:s,catalogue,baseLayers:m.renderer.describe(window.KONPASU_BASE_LAYERS25.PARTS),profile:m.profile,art});
   window.KONPASU_CATALOG_RENDERER.render($('draft-scene'),result.base,result.plan);
   for(const part of $('draft-scene').querySelectorAll('[data-item-id]')){const i=s.items.find(i=>part.id.endsWith('-'+i.instanceId));if(i)part.dataset.instanceId=i.instanceId}
-  $('draft-scene').hidden=s.blocked;$('draft-blocked').hidden=!s.blocked;$('draft-blocked').textContent=t('blocked');$('draft-empty').hidden=s.items.length>0||s.blocked;
+  $('draft-scene').toggleAttribute('hidden',s.blocked);$('draft-blocked').hidden=!s.blocked;$('draft-blocked').textContent=t('blocked');$('draft-empty').hidden=s.items.length>0||s.blocked;
   $('draft-counts').textContent=s.items.length+' '+t('items')+' · '+s.items.filter(i=>!i.visible).length+' '+t('hidden');$('draft-pending').hidden=!result.pending.length;$('draft-pending').textContent=t('pending');
   $('draft-undo').disabled=loading||!s.canUndo;$('draft-redo').disabled=loading||!s.canRedo;$('draft-reset').disabled=loading||s.blocked;$('draft-body').disabled=loading||s.blocked;$('draft-case').disabled=loading;$('draft-body').value=s.body;
   $('draft-list').replaceChildren(...s.items.map((i,index)=>{const li=node('li');li.className='draft-item'+(i.visible?'':' hidden-item');li.dataset.instanceId=i.instanceId;li.append(node('h3',name(i)));const identity=node('p',i.itemId+' · '+t(i.visible?'visible':'hidden'));identity.className='identity';li.append(identity);const actions=node('div');actions.className='item-actions';
