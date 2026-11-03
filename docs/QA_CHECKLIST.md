@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5 und #6. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5, #6 und #7. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -357,3 +357,22 @@ Keine Live-, Profil-, Schema-, Rewardregel- oder Cacheänderung. Historische Per
 - [x] Keine localStorage-/sessionStorage-/IndexedDB-Einträge und keine Browserfehler; drei Screenshots gesichtet.
 - [ ] Dauerhafte Mehrfachauswahl, tatsächliche Appaktionen, Import/Export/Rollback und Speicher-Konflikt-/Offlinefälle.
 - [ ] Physische Geräte-/VoiceOver-/PWA-Kaltstart-/Upgradeabnahme und Veröffentlichung.
+
+## Abschluss Etappe 3.3: dauerhafter Outfitvertrag mit Rückweg
+
+Entwurfs-PR [#7](https://github.com/Rowlandolo/KONPASU/pull/7) auf #6 ergänzt `profile.outfit25` ausschließlich nach ausdrücklichem Speichern sowie genau einen dauerhaften Rücknahmeeintrag `outfitRecovery25`. Reine Kandidatenprüfung und struktureller Datenvergleich in `avatar-outfit-persistence-v25.js`; Anbindung an dieselbe Speicherqueue, IndexedDB-Revision und Fallback-Web-Lock in `avatar-outfit-store-v25.js`. Alte Ausrüstung, Favoriten/History, Ziele/Trainings und unbekannte Daten bleiben erhalten. Frischer Besitz-/Tragbarkeitsnachweis; ruhende/unbekannte gespeicherte Wünsche bleiben erhalten, ohne als tragbar zu gelten. Rücknahme nach Neuladen ändert nur Outfitfelder und erhält spätere andere Einträge. Noch Backend/API, keine produktive Verbindung der neuen Editor-/Rendereroberfläche.
+
+**350 Regressionen (26 neu), bestehende App-/26 Ateliergruppen, 16 bestehende Editorgruppen und 13 neue Speicher-Browsergruppen erfolgreich** für `b6e0d96c0d331360ab77a4a15e0ada309af9bfcb`: [Basis/App](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181636), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181657), [echte Speicherprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181638). Reale IndexedDB, Startup/Reload, vorhandene JSON-Backup-/Import-UI, frische Offline-Seite mit tatsächlichem Worker, konkurrierende Tabs, Queueüberlagerung, Rücknahme nach späteren Daten und erzwungener Put-Fehler geprüft. Browser-Evidenz über echte Reward-/Kalenderfunktionen mit expliziten Wochenmesswerten; keine Tier-/Evidenzstubs. Der synthetische Screenshot ist eine ausschließlich vom Test erzeugte Ergebniskarte, kein neues produktives Bedienelement. Belege unter `design/avatar/review-outfit-storage-v01/`, Vollbeleg `design/avatar/verification-outfit-storage-v01.json`.
+
+Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-outfit-preview1` und precacht alle vier neuen Laufzeitabhängigkeiten kritisch. Dieser Entwicklungsstand ist nicht veröffentlicht; main/Pages und persönliche Daten wurden nicht geändert. Nächster Abschnitt 3.4: Editorbedienung mit Speichern/Rücknahme und klaren Konfliktzuständen an die API anbinden, neuen Renderer samt Personalisierung/Szenen/Begleiter und Legacy-Rückweg integrieren. Physisches iPhone, VoiceOver und Alt-PWA-Upgrade bleiben eigenständige Abnahmen. Details: AVATAR_OUTFIT_PERSISTENCE.md.
+
+- [x] Additive Felder nur nach expliziter Aktion; struktureller Vergleich sämtlicher übrigen Profile-/Ziel-/Training-/History-/Reward-/Fremdfelder.
+- [x] Frischer tatsächlicher Besitz/Tragbarkeitsnachweis; unverdiente Anproben blockiert, ruhende/unklare frühere Wünsche erhalten.
+- [x] Backup-/Import-/Migrationsvergleich; beschädigte bekannte Erweiterungen auch in History abgewiesen, künftige Versionen neutral erhalten.
+- [x] Wiederaufnahme mit Reihenfolge/Instanzidentitäten/Körperform/Sichtbarkeit nach tatsächlichem Startup/Reload.
+- [x] Eine dauerhafte gezielte Rücknahme nach Neuladen; spätere Notizen/Checks/Trainings bleiben erhalten.
+- [x] Echte IndexedDB-Revisionskonflikte und Put-Abbruch; Fallback-Web-Lock/Rohdaten-CAS und fehlende Web Locks.
+- [x] Gemeinsam vorgemerkte gewöhnliche Saves können neue Outfitfelder nicht überschreiben; Quota-/Schreibfehler lassen bisherigen Diskstand bestehen.
+- [x] Tatsächliche kalte Offline-Seite mit neuem Worker und kritischen Abhängigkeiten lädt, speichert, lädt erneut und nimmt zurück. Das ist keine Alt-PWA-/physische iPhone-Abnahme.
+- [ ] Produktive Editor-/Rendererbedienung, Personalisierung/Szenen/Begleiter und Legacy-Rückweg samt allen UI-/Offlinefällen.
+- [ ] Physische Geräte, VoiceOver, Alt-PWA-Upgrade und freigegebene Veröffentlichung.

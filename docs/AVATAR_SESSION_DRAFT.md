@@ -48,3 +48,7 @@ Die jetzige Implementierung speichert bewusst noch nichts. Vor dem nächsten Abs
 6. Separater Reviewpunkt mit echten Browserbelegen; physische Zielgeräte und PWA-Upgrade vor Veröffentlichung. Kein Main-Merge oder Deployment in dieser Lieferung.
 
 Diese reine Aktionslogik liefert ein überprüfbares Muster für den späteren Copilot. Sie ist noch keine gemeinsame produktive Aktionsengine für andere Appdaten.
+
+## Folgestand Etappe 3.3
+
+Der dauerhafte Backendvertrag mit Datenvergleich, bestehenden Konfliktschutzmechanismen und einer gezielten dauerhaften Rücknahme ist in PR #7 implementiert und geprüft. Die eigenständige Werkstatt dieser Datei bleibt weiterhin flüchtig und greift nicht auf Profile zu. Datenmodell, Prüfbelege und nächster Integrationsabschnitt: [AVATAR_OUTFIT_PERSISTENCE.md](AVATAR_OUTFIT_PERSISTENCE.md). Keine Appbedienung als bereits integriert ausgeben.

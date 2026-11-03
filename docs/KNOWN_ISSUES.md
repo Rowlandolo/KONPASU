@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5 und #6. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6 und #7. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -163,3 +163,19 @@ OUTFIT-04 im neuen Editor behoben: eine Zuweisung an `SVGElement.hidden` verstec
 OUTFIT-05 im Editor behoben: Sticky-Vorschau konnte beim Scrollen die Sammlung überlagern; normale Positionierung plus Browser-Grenzprüfung. Identische Standardartikel aus Quelle/Katalog erscheinen nur einmal. Mobile Sammlung zeigt bis 600 px ganze Karten, damit Namen lesbar bleiben.
 
 OUTFIT-06 offen: neue Entwürfe sind ausdrücklich flüchtig und noch nicht auf echte Profile anwendbar. Speicherung, Backups und Offline-Neustart benötigen Etappe 3.3; die Entwicklungswerkstatt ist keine neue Datensicherung.
+
+## Abschluss Etappe 3.3: dauerhafter Outfitvertrag mit Rückweg
+
+Entwurfs-PR [#7](https://github.com/Rowlandolo/KONPASU/pull/7) auf #6 ergänzt `profile.outfit25` ausschließlich nach ausdrücklichem Speichern sowie genau einen dauerhaften Rücknahmeeintrag `outfitRecovery25`. Reine Kandidatenprüfung und struktureller Datenvergleich in `avatar-outfit-persistence-v25.js`; Anbindung an dieselbe Speicherqueue, IndexedDB-Revision und Fallback-Web-Lock in `avatar-outfit-store-v25.js`. Alte Ausrüstung, Favoriten/History, Ziele/Trainings und unbekannte Daten bleiben erhalten. Frischer Besitz-/Tragbarkeitsnachweis; ruhende/unbekannte gespeicherte Wünsche bleiben erhalten, ohne als tragbar zu gelten. Rücknahme nach Neuladen ändert nur Outfitfelder und erhält spätere andere Einträge. Noch Backend/API, keine produktive Verbindung der neuen Editor-/Rendereroberfläche.
+
+**350 Regressionen (26 neu), bestehende App-/26 Ateliergruppen, 16 bestehende Editorgruppen und 13 neue Speicher-Browsergruppen erfolgreich** für `b6e0d96c0d331360ab77a4a15e0ada309af9bfcb`: [Basis/App](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181636), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181657), [echte Speicherprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41619181638). Reale IndexedDB, Startup/Reload, vorhandene JSON-Backup-/Import-UI, frische Offline-Seite mit tatsächlichem Worker, konkurrierende Tabs, Queueüberlagerung, Rücknahme nach späteren Daten und erzwungener Put-Fehler geprüft. Browser-Evidenz über echte Reward-/Kalenderfunktionen mit expliziten Wochenmesswerten; keine Tier-/Evidenzstubs. Der synthetische Screenshot ist eine ausschließlich vom Test erzeugte Ergebniskarte, kein neues produktives Bedienelement. Belege unter `design/avatar/review-outfit-storage-v01/`, Vollbeleg `design/avatar/verification-outfit-storage-v01.json`.
+
+Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-outfit-preview1` und precacht alle vier neuen Laufzeitabhängigkeiten kritisch. Dieser Entwicklungsstand ist nicht veröffentlicht; main/Pages und persönliche Daten wurden nicht geändert. Nächster Abschnitt 3.4: Editorbedienung mit Speichern/Rücknahme und klaren Konfliktzuständen an die API anbinden, neuen Renderer samt Personalisierung/Szenen/Begleiter und Legacy-Rückweg integrieren. Physisches iPhone, VoiceOver und Alt-PWA-Upgrade bleiben eigenständige Abnahmen. Details: AVATAR_OUTFIT_PERSISTENCE.md.
+
+OUTFIT-07 im Entwicklungsbackend behoben: Ein gewöhnlicher vorab kopierter Speichersnapshot konnte neue Outfitfelder nach der Outfittransaktion wieder entfernen oder rückgenommene wieder einführen. Gemeinsame Queue und gezieltes Rebase ausschließlich dieser zwei Felder; tatsächliche IndexedDB- und Fallbacktests. Andere Snapshotdaten bleiben erhalten.
+
+OUTFIT-08 im Kandidaten behoben: `ObjectStore.put` konnte im onsuccess-Callback des bestehenden Schreibpfads synchron werfen, ohne kontrolliert zur Promise-/Transaktionsbehandlung zu gelangen. Fehler abfangen, Transaktion abbrechen, Memoryfelder zurücksetzen und bestehenden Schreibschutz verwenden; echter Browser-Put-Fehlertest ohne Datenverlust/ungefangenen Fehler.
+
+OUTFIT-09 Versionsgrenze: unbekannte spätere Outfit-/Recoveryformate werden erhalten und nicht herunterkonvertiert. Auch ein bekanntes Receipt mit unbekanntem Ziel-Outfit darf keinen Rollback auslösen. Produktive Editor-/Renderer-Anbindung, bekannte Live-Historiefallbackfrage und Synchronisierung mit späteren Legacy-UI-Aktionen bleiben offen.
+
+OUTFIT-06 Fortschritt: der Backendteil ist mit Etappe 3.3 erledigt und real gespeichert/geprüft. Die separate Werkstatt aus 3.2 bleibt absichtlich flüchtig; ihre produktive Speichern-/Konflikt-/Rücknahmebedienung folgt in 3.4.
