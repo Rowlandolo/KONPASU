@@ -455,3 +455,20 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [ ] Automatische vollständige historische Schnappschüsse für alle neuen Save-/Rücknahmeaktionen plus letzte Inventar-/Favoriten-/Legacy-Integrationsabnahme (3.4.4).
 - [ ] Vollständige persönliche Körper-/Gesichts-/Hautbandbreite, endgültige Premiumfarben/-zeichnungen und universelle optische Passform.
 - [ ] Physisches iPhone/GPU/VoiceOver/Alt-PWA-Upgrade, Review/Freigabe und Veröffentlichung.
+
+## Abschluss Etappe 3.4.4: vollständige Historie und Gesamtintegration
+
+Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regressionen und alle sieben Browser-Workflows erfolgreich. Vollbeleg `design/avatar/verification-stage3-complete-v01.json`; Vertrag AVATAR_HISTORY_STAGE3.md.
+
+- [x] Outfit-Save/-Rücknahme erzeugen je einen vollständigen resultierenden Profilschnappschuss.
+- [x] Persönliche Save-/Rücknahme und Artbook-/SVG-Ansichtswahl/-Rücknahme erzeugen je einen vollständigen resultierenden Profilschnappschuss.
+- [x] No-op, ungültige/stale Quelle, Revisionskonflikt und fehlgeschlagener DB-/Fallback-Write erzeugen keinen Schnappschuss.
+- [x] Schreibfehler entfernt nur den vorbereiteten eigenen Eintrag; gleichzeitig entstandene fremde Historie bleibt erhalten.
+- [x] Hinter Avatartransaktionen wartender gewöhnlicher Save kann neue Historie, Outfit- oder persönliche Felder nicht zurücksetzen.
+- [x] Alte sparsame Historie bleibt importierbar und unverändert; fehlende Vergangenheit wird nicht aus heutigen Daten erfunden.
+- [x] Identisches Datum und UTC-Timestamp wählen deterministisch den zuletzt angehängten Eintrag.
+- [x] JSON-Export/Bestätigungsimport, Reload, kalter Offline-Neustart, echte IndexedDB, Fallback-CAS und Zweitabkonflikte erhalten die Historie.
+- [x] Inventar, unabhängige Mehrfachartikel, Sichtbarkeit/Reihenfolge, Personalisierung, Hauptansicht, Szenen, Begleiter, Favoriten und bestehende historische Quellen gemeinsam geprüft.
+- [x] Kritischer Offline-Precache enthält den neuen Historienvertrag; Releaseversion 2.4.1 und eigener Cache `konpasu-offline-v241`.
+- [ ] Nach Main-Merge: exakten Pages-Commit, `version.json`, Kernressourcen und Liveansicht prüfen.
+- [ ] Physisches iPhone/GPU/VoiceOver und Upgrade einer bereits installierten alten PWA prüfen; Daten nicht löschen.

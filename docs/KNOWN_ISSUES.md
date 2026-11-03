@@ -242,3 +242,11 @@ MAIN-02 im Kandidaten behoben: 480×600-Szenenbild im 512×768-Hauptviewport lie
 OUTFIT-14 weiterhin teilweise offen: neue Standfigur mit persönlichen Varianten, Szenen, Begleitern, unabhängiger Artikelauswahl und SVG-Rückweg funktioniert als ausdrücklich gewählte Hauptansicht. Automatische vollständige Historien-Schnappschüsse bei jeder neuen API-Aktion fehlen noch (nächster Abschnitt 3.4.4); vorhandene Snapshots sind lesbar. Historische Zielkonfiguration und reale Geräte bleiben gesonderte Grenzen.
 
 Nachweis: 438 Regressionen, 15 neue Browsergruppen und alle bestehenden Integrationsprüfungen erfolgreich für `0f72f4713487fb014a03d637e4a3f1b4624435e9`. Fünf Originalbilder gesichtet, Belege in `design/avatar/verification-artbook-main-settings-v01.json`; Vertrag AVATAR_SAVED_APPEARANCE_MAIN.md. Nur synthetische Daten, keine Veröffentlichung.
+
+## Abschlussnachtrag Etappe 3.4.4
+
+OUTFIT-14 hinsichtlich automatischer Historisierung behoben: Alle erfolgreichen neuen Outfit-, persönlichen und Ansichtsaktionen einschließlich dauerhafter Rücknahmen schreiben einen vollständigen resultierenden Profilschnappschuss. Konflikte, No-op und Schreibfehler schreiben keinen. Alte unvollständige Vergangenheit wird nicht erfunden; vorhandene Legacyeinträge bleiben unverändert. Gleichzeitige fremde Historie und hinter Avatartransaktionen wartende normale Saves sind abgesichert.
+
+HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und identischer UTC-Speicherzeit konnten den älteren Eintrag wählen. Zeitreise sortiert bei Gleichstand nun nach Einfügereihenfolge, der zuletzt gespeicherte Zustand gewinnt. Regression vorhanden.
+
+Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
