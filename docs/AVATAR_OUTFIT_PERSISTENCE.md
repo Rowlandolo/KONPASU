@@ -37,3 +37,7 @@ Entwicklungskandidat **2.4.1-preview.1**, eigener Cache `konpasu-offline-v241-ou
 Die neue Browserprüfung verwendet echte Kalender-/Reward-APIs mit vier expliziten abgeschlossenen Wochenmesswerten zweier synthetischer eigener Ziele; keine Tier-/Evidenzstubs. Sie prüft echte IndexedDB, Startup/Reload, vorhandene UI für JSON-Backup/-Import, Offline-Kaltstart mit Worker, Konflikttabs, Queueüberlagerung, Rücknahme mit späteren Daten und erzwungenen Put-Fehler. Die zusätzlichen Ergebniskarten werden ausschließlich vom Testskript erzeugt und gehören nicht zur Appoberfläche.
 
 Danach: geöffneter Mehrfacheditor an diese API anbinden, klare Anprobe-/Speichern-/Konflikt-/Rücknahmezustände, aktuellen Look nach jedem erneuten Evidenzcheck darstellen; Altgrafik, Szenen, Begleiter und Personalisierung vollständig erhalten. Die bekannte Live-Historie-Fallbackfrage bleibt ein eigener Integrationspunkt. Reales iPhone, VoiceOver, Alt-PWA-Upgrade und finale Grafik bleiben Gates vor Veröffentlichung. Kein Anspruch auf vollständige App- oder Geräteabnahme durch diesen Vertrag.
+
+## Folgestand 3.4.1
+
+Die sichtbare Speicherbedienung ist in PR #8 verbunden: tatsächlicher Editor unter Avatar → Outfits, explizites Speichern, Konfliktstatus, sichere Aktualisierung mit behaltenem Entwurf und dauerhafte Rücknahme. Refresh schützt auch ungespeicherte andere Appdaten. Die neue Hauptavatarroute bleibt separat. Aktueller UI-Vertrag und Grenzen: [AVATAR_OUTFIT_EDITOR.md](AVATAR_OUTFIT_EDITOR.md).

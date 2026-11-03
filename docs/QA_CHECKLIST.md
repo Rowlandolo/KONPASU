@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5, #6 und #7. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5, #6, #7 und #8. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -376,3 +376,24 @@ Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-ou
 - [x] Tatsächliche kalte Offline-Seite mit neuem Worker und kritischen Abhängigkeiten lädt, speichert, lädt erneut und nimmt zurück. Das ist keine Alt-PWA-/physische iPhone-Abnahme.
 - [ ] Produktive Editor-/Rendererbedienung, Personalisierung/Szenen/Begleiter und Legacy-Rückweg samt allen UI-/Offlinefällen.
 - [ ] Physische Geräte, VoiceOver, Alt-PWA-Upgrade und freigegebene Veröffentlichung.
+
+## Abschluss Etappe 3.4.1: sichtbarer Editor mit Speichern, Konflikt und Rücknahme
+
+Entwurfs-PR [#8](https://github.com/Rowlandolo/KONPASU/pull/8) auf #7 ergänzt den tatsächlichen Einstieg **Avatar → Outfits → Mehrfachoutfit bearbeiten**. Native Dialogbedienung mit Artbook-Anprobe, Artikelwahl/Suche, unabhängiger Sichtbarkeit/Reihenfolge, Körperform, Undo/Redo/Reset und ausdrücklichem Speichern. Separate dauerhafte Rücknahme ist bei ungespeicherten Entwurfsänderungen gesperrt. Schließen behält den Entwurf in der laufenden App. Vorhandene Ausrüstung, Favoriten, History, Ziele/Trainings und übrige Daten bleiben erhalten.
+
+Konflikt zeigt klare Meldung, sperrt Speichern und erhält den Entwurf. „Neueste Daten laden · Entwurf behalten“ liest und validiert denselben Speicher, prüft lokale Appänderungen vor/nach dem Lesen und rebasiert nur auf ausdrückliche Aktion. Ungespeicherte andere Einträge werden nicht überschrieben; vorhandener JSON-Export ist erreichbar. Geprüfter Memory-Ausgangsstand nach Startup/Schreibabschluss, typisierter Konflikthinweis und erwartetes Recovery-Token ergänzen den vorhandenen Schutz. Keine automatische Wiederholung fehlgeschlagener Writes.
+
+**366 Regressionen (16 neu), 12 neue UI-Browsergruppen, 13 bestehende Speichergruppen und bisherige App-/26 Ateliergruppen erfolgreich** für `cb18dd1142783b34331eed1d9566448f79c9c056`: [App/Tests](https://github.com/Rowlandolo/KONPASU/actions/runs/41623795811), [sichtbare UI](https://github.com/Rowlandolo/KONPASU/actions/runs/41623795808), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41623795918). Echter Offline-Neustart mit Anprobe, Speichern/Neuladen/Rücknahme, tatsächlicher Zweitab-Konflikt und behaltener Entwurf, lokale Fremdänderungen, JSON-Sicherung, DE/EN, 320/390/430 px, Touch/Fokus, Textsicherheit und Integritäts-Retry geprüft. 24 Liefer-WebPs reproduziert: [Build](https://github.com/Rowlandolo/KONPASU/actions/runs/41623795888). Drei tatsächliche UI-Bilder gesichtet und unverändert archiviert; Bericht/Vollbeleg unter `design/avatar/review-outfit-editor-v01/` und `design/avatar/verification-outfit-editor-v01.json`.
+
+Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-preview2`; alle benötigten Vorschauverträge/Skripte/24 WebPs sind kritisch precached. Keine Original-Artbooktafeln oder einzelnen 134 SVG-Dateien dafür geladen. Kein Main-Merge/Deployment und kein Zugriff auf private Browserprofile. **3.4 insgesamt bleibt offen:** Hauptavatarroute samt Personalisierung/Szenen/Begleiter, Favoriten/History und Synchronisierung mit Legacyaktionen ist der nächste Integrationsabschnitt 3.4.2. Die neue Standfigur wird in diesem Schritt ausdrücklich als Editor-Anprobe angezeigt, die bisherige Hauptdarstellung bleibt aktiv. Physische Geräte-/GPU-/VoiceOver-/Alt-PWA-Abnahme und finale Grafik bleiben offen. Vertrag: AVATAR_OUTFIT_EDITOR.md.
+
+- [x] Tatsächlicher Studioeinstieg ohne automatische Writes; vorhandene Favoriten und Legacydarstellung erhalten.
+- [x] Sichtbare Save-/Recoverykontrollen, Erfolg erst nach Commit, frische Folgequelle, unverdiente Anprobe bleibt korrigierbar.
+- [x] Realer Tabkonflikt behält Entwurf/sperrt Save; ausdrückliches Aktualisieren rebasiert Auswahl und erlaubt sicheren Folgesave.
+- [x] Lokale andere Einträge und Änderungen während Lesen geschützt, bestehende vollständige JSON-Sicherung erreichbar.
+- [x] Schließen/Wiederöffnen behält Entwurf; ungespeicherter Entwurf sperrt dauerhafte Rücknahme. Kein Autosave oder automatische Konfliktwiederholung.
+- [x] DE/EN, native Dialog-/Tastaturbedienung, 320/390/430 px, 44 px, Textsicherheit und fehlgeschlagene Integrität mit Retry.
+- [x] Kalte Offline-Seite öffnet geprüfte Vorschau und bedient Save/Reload/Recovery über tatsächlichen Worker/IndexedDB.
+- [x] 24 Grafiklieferdateien reproduziert, bisherige App-/Atelier- und Speicherprüfung erfolgreich; drei UI-Screenshots gesichtet/archiviert.
+- [ ] Neue Hauptavatarroute, persönliche Darstellung/Szenen/Begleiter/Favoriten/History und Legacy-Aktionssynchronisierung.
+- [ ] Physische Geräte/GPU/VoiceOver/Alt-PWA-Upgrade, finale Premiumgrafik und freigegebene Veröffentlichung.
