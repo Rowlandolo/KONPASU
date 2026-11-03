@@ -3,6 +3,7 @@
 (function(root){
  const DEPTH=Object.freeze({'hair-back':100,body:200,shoes:300,kimono:320,hakama:330,obi:350,'hair-front':600});
  const SURFACE_DEPTH=root.KONPASU_BASE_LAYERS25.SURFACE_DEPTH;
+ const HEAD_DEPTH=Object.freeze({'head-back':90,'head-band':580,'head-front':620});
  const states=new WeakMap();
  const ID=/^[a-z0-9-]+$/;
  function checkPlacement(p){if(!p||![p.x,p.y,p.width,p.height].every(Number.isFinite)||p.width<=0||p.height<=0||p.width>2048||p.height>3072||Math.abs(p.x)>2048||Math.abs(p.y)>3072)throw Error('Invalid scene placement')}
@@ -29,7 +30,9 @@
   for(const part of equipment){
    if(!ID.test(part.partId)||seen.has(part.partId)||!Number.isFinite(part.z)||typeof fitArtwork!=='function')throw Error('Invalid equipment scene node');seen.add(part.partId);
    const depthRole=part.depthRole||'front';
-   if(!['front','back'].includes(depthRole)||(depthRole==='back'?(part.z<=DEPTH['hair-back']||part.z>=DEPTH.body):part.z<=DEPTH.obi||part.z>=DEPTH['hair-front']))throw Error('Invalid equipment depth role');
+   if(Object.prototype.hasOwnProperty.call(HEAD_DEPTH,depthRole)){
+    if(part.z!==HEAD_DEPTH[depthRole]||!['head','headTie'].includes(part.anchor)||part.spec.depthRole!==depthRole)throw Error('Invalid headwear depth role');
+   }else if(!['front','back'].includes(depthRole)||(depthRole==='back'?(part.z<=DEPTH['hair-back']||part.z>=DEPTH.body):part.z<=DEPTH.obi||part.z>=DEPTH['hair-front']))throw Error('Invalid equipment depth role');
    if(part.spec.depthRole!==undefined&&part.spec.depthRole!==depthRole)throw Error('Artwork depth role mismatch');
    const fitted=fitSpec(part.spec,profile),occluders=profile.occlusion?.[part.partId]??(/^(forearm|wrist)/.test(part.anchor)?['kimono']:[]);
    if(!Array.isArray(occluders)||occluders.length>7||occluders.some(id=>!Object.prototype.hasOwnProperty.call(DEPTH,id)))throw Error('Unknown occlusion surface');
@@ -80,5 +83,5 @@
  }
  function diagnostics(svg){const state=states.get(svg);return state?{...state.stats,liveImages:state.images.size}:null}
 
- root.KONPASU_SCENE25={DEPTH,fitSpec,plan,render,diagnostics};
+ root.KONPASU_SCENE25={DEPTH,HEAD_DEPTH,fitSpec,plan,render,diagnostics};
 })(typeof window!=='undefined'?window:globalThis);

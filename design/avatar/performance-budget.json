@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "scope": "development atelier seven logical base parts/eight surfaces and nine reward fragments; RGBA excludes GPU, DOM, strings and browser overhead",
+  "scope": "development atelier six selected articles, twelve reward fragments and eight base surfaces; source RGBA excludes GPU, DOM, strings and browser overhead",
   "prototype": {
     "startupAssetBytes": 16000000,
     "totalAssetBytes": 20000000,
     "decodedSourceRGBABytes": 134217728,
-    "maxSceneImages": 17,
+    "maxSceneImages": 20,
     "maxMaskImageCopies": 0,
     "maxStartupRasterSurfaces": 0
   },

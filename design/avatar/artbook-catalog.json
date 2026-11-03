@@ -1035,9 +1035,12 @@
       "asset": "reward/focus-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/focus-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "prototype-review",
+      "semanticMappingStatus": "artbook-identified-headwear-slice",
+      "equippableAssetStatus": "development-workshop-only",
+      "artbookTitle": "Focus Headband",
+      "developmentTitleDe": "Fokus-Stirnband",
+      "semanticReview": "./headwear-contract-v09.json"
     },
     {
       "id": "focus-2",

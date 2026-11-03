@@ -286,3 +286,14 @@ Aktueller Beleg: 0a65c3c7d62943028fcd12e49a8021a91b195574, [248 Regressionen, Ap
 - [ ] Kopfteile, reale Geräte-/PWA-Abnahme und App-/Persistenzintegration.
 
 Nachweis: dde46f6de2c07a7b4bc7755e8a8ea6447827076a, [255 Regressionen, App-Chromium und 23 Atelier-Prüfgruppen](https://github.com/Rowlandolo/KONPASU/actions/runs/41551201193), [Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41551201181). Gewand-Einzelrandprobe erlaubt <32 Alpha für eine schwach geglättete Goldkante, andere Einzelteile weiterhin <20; Passform-/Bildqualitätstests bleiben separat unverändert. Archivierte Aufnahmen und Messgrenzen: design/avatar/verification-sleeve-depth-v08.json. Keine neue Liveversion.
+
+## Etappe 2: Fokus-Stirnband / Haarüberlagerung
+
+- [x] Quellboard/Karte bytegleich archiviert, tatsächliche Stufe-1-Abbildung und unveränderte ID/Voraussetzung dokumentiert; keine Gleichsetzung von Legacy-Slot und Körperposition.
+- [x] Drei neue native PNGs mit getrennten Rollen; sichtbare Registrierungsgrenzen nur für neue Grafiken definiert, native Dateien unverändert.
+- [x] Sieben gezielte Tests: Referenzbytes, gültige Grenzen, vollständige Gruppe, acht unabhängige Haarzustände beider Formen, Tiefenrollen, bestehende Freischaltsperre und gemeinsame Haarregistrierung.
+- [ ] Frischer Build prüft tatsächliche Alpha>16-Grenzen, Ausgabehashes, Maße und unveränderte Budgets.
+- [ ] Vollständige Regressionen, 256 Basis-/128 Rewardzustände im Browser, kein Entfernen anderer ausgewählter Artikel oder Haare.
+- [ ] Reale SVG-Pixel für Hinterbänder, Haare, Stirnband und Schleife; Gesichtsproben frei, beide Figuren mit/ohne Haare sichten.
+- [ ] Original-/Mobilevergleich beider Formen und 390 px/3×; kaputte Kopfteilgrafik ohne Teilfigur, Retry/Race/Offline-App weiter erfolgreich.
+- [ ] Physische Geräte-/PWA-Abnahme, universelle weitere Kopfartikel und App-/Datenintegration.

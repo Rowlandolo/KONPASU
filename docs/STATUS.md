@@ -18,6 +18,8 @@ Etappe-2-Geschirrabschnitt abgeschlossen, siehe aktueller Abschluss am Dokumente
 
 Ärmelabschnitt abgeschlossen; der Zwischenstand mit offenem Build/Browser ist durch den Phasenabschluss am Dokumentende ersetzt. V4 verlangt vollständige Gewandgruppen; v3-Verträge bleiben validier- und planbar, ihre Pixelquellen benötigen weiterhin eine passende explizite Deliveryzuordnung bzw. Originalmodus. Keine automatische Altquellen-/Profilmigration. Live-App und Daten unverändert.
 
+Kopfteilabschnitt in Entwicklung: tatsächliches Fokus-Stirnband auf Artbook-Stufe 1 identifiziert, bestehende ID focus-1 und Ein-Wochen-Nachweis beibehalten. Legacy-Titel Konzentrationsstein/Slot main bleiben im Live-Mapping unverändert; focus-2 zeigt im Artbook eine Sanduhr, kein Stirnband. Drei neue PNGs für hintere Bänder, Band unter Pony und vordere Schleife vorbereitet. Sieben neue gezielte Kopfteiltests erfolgreich; frischer Deliverybuild und Browser-/Sichtabnahme offen. Jetzt sechs Prototypartikel, weitere 89 Grafiken offen.
+
 ## Ist–Soll
 
 | Bereich | Tatsächlich im Quellcode | Zum verbindlichen Ziel noch offen |

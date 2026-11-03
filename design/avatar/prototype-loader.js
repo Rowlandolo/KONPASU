@@ -2,8 +2,15 @@
 /* Development artwork adapter. No profile, storage or reward access. */
 (function(root){
  const loaded=new Map();
+ function fittingBounds(spec){
+  const valid=b=>Array.isArray(b)&&b.length===4&&b.every(Number.isFinite)&&b[0]>=0&&b[1]>=0&&b[2]>b[0]&&b[3]>b[1]&&b[2]<=spec.width&&b[3]<=spec.height;
+  if(!valid(spec.alphaBounds))throw Error('Invalid artwork bounds');
+  if(spec.fitBounds!==undefined){if(spec.fitAlphaThreshold!==16||!valid(spec.fitBounds)||spec.fitBounds[0]<spec.alphaBounds[0]||spec.fitBounds[1]<spec.alphaBounds[1]||spec.fitBounds[2]>spec.alphaBounds[2]||spec.fitBounds[3]>spec.alphaBounds[3])throw Error('Invalid visible fitting bounds');return [...spec.fitBounds]}
+  if(spec.fitAlphaThreshold!==undefined)throw Error('Missing visible fitting bounds');
+  return [...spec.alphaBounds];
+ }
  function placement(spec){
-  const [left,top,right,bottom]=spec.alphaBounds,b=spec.placement;
+  const [left,top,right,bottom]=fittingBounds(spec),b=spec.placement;
   if(![left,top,right,bottom,b.x,b.y,b.width,b.height,spec.width,spec.height].every(Number.isFinite)||left<0||top<0||right<=left||bottom<=top||right>spec.width||bottom>spec.height||b.width<=0||b.height<=0)throw Error('Invalid artwork bounds');
   const scale=Math.min(b.width/(right-left),b.height/(bottom-top));
   return {x:b.x+(b.width-(right-left)*scale)/2-left*scale,y:b.y+(b.height-(bottom-top)*scale)/2-top*scale,width:spec.width*scale,height:spec.height*scale};
@@ -36,5 +43,5 @@
   loaded.clear();for(const [key,value] of next)loaded.set(key,value);return next.size;
  }
  function resolveAsset(key,expected){const spec=loaded.get(key);return spec&&spec.rig===expected.rig&&spec.anchor===expected.anchor?{src:spec.src,rig:spec.rig,anchor:spec.anchor,transparent:true}:null}
- root.KONPASU_PROTOTYPE_ART={placement,clippingPolygons,load,resolveAsset,specFor:key=>loaded.get(key)||null};
+ root.KONPASU_PROTOTYPE_ART={placement,fittingBounds,clippingPolygons,load,resolveAsset,specFor:key=>loaded.get(key)||null};
 })(typeof window!=='undefined'?window:globalThis);

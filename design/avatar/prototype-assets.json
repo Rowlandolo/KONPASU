@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "rig": "adult-three-quarter-v1",
   "status": "development-prototype-not-production",
   "assets": [
@@ -255,6 +255,111 @@
       "sha256": "6b0bfd2b0047f8ebb238b5a4daf5b86a743829437518de64885d6a59ae0c65e5",
       "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
       "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "focus-headband-band",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-band.png",
+      "file": "./equipment/focus-headband-band.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "head",
+      "depthRole": "head-band",
+      "status": "prototype-review",
+      "width": 1774,
+      "height": 887,
+      "alphaBounds": [
+        0,
+        19,
+        1762,
+        887
+      ],
+      "fitBounds": [
+        127,
+        171,
+        1647,
+        717
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.747758,
+      "placement": {
+        "x": 220,
+        "y": 32,
+        "width": 94,
+        "height": 34
+      },
+      "sha256": "232ed5b1d01edbfe87d3b3ee5bfe04a49883b9a1e0424834c3067baeee3f0723",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
+    },
+    {
+      "partId": "focus-headband-bow",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-bow.png",
+      "file": "./equipment/focus-headband-bow.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "headTie",
+      "depthRole": "head-front",
+      "status": "prototype-review",
+      "width": 1254,
+      "height": 1254,
+      "alphaBounds": [
+        0,
+        9,
+        1240,
+        1214
+      ],
+      "fitBounds": [
+        74,
+        212,
+        1180,
+        1045
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.642303,
+      "placement": {
+        "x": 211,
+        "y": 51,
+        "width": 32,
+        "height": 25
+      },
+      "sha256": "56a8422442c71079075adc35f79554e82c4005757f62a9320c201bc60c74d691",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
+    },
+    {
+      "partId": "focus-headband-tails",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-tails.png",
+      "file": "./equipment/focus-headband-tails.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "headTie",
+      "depthRole": "head-back",
+      "status": "prototype-review",
+      "width": 1024,
+      "height": 1536,
+      "alphaBounds": [
+        0,
+        5,
+        980,
+        1512
+      ],
+      "fitBounds": [
+        109,
+        173,
+        815,
+        1342
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.834032,
+      "placement": {
+        "x": 184,
+        "y": 56,
+        "width": 42,
+        "height": 70
+      },
+      "sha256": "f8d82f9f95d1d0edc66024596fdf74db1abbbabcefafdf7a06094a73a0bdaade",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
     }
   ]
 }

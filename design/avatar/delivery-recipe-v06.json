@@ -2,7 +2,7 @@
   "version": 1,
   "codec": "image/webp",
   "quality": 0.98,
-  "baseScale": 0.828125,
+  "baseScale": 0.8203125,
   "equipmentMaxEdges": {
     "breastplate": 512,
     "shoulder-left": 512,
@@ -12,7 +12,10 @@
     "wrist-wrap-left": 192,
     "wrist-wrap-right": 192,
     "chest-harness-front": 640,
-    "chest-harness-back": 256
+    "chest-harness-back": 256,
+    "focus-headband-band": 384,
+    "focus-headband-bow": 256,
+    "focus-headband-tails": 384
   },
   "preserveFullFrame": true,
   "originalsModified": false,

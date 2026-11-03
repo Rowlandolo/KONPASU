@@ -22,14 +22,15 @@
   }
   for(const part of [...plan.draw,...plan.pending].sort((a,b)=>a.z-b.z)){
    const node=currentScene?.nodes.find(n=>n.partId===part.partId),anchor=profile?.anchors?.[part.anchor]||api.RIG.anchors[part.anchor];
-   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?(part.depthRole==='back'?'Angelegt · hinter dem Körper':node?.occludedBy.length?'Angelegt · Gewand kann überdecken':'Angelegt'):'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
+   const headLabel={'head-back':'Angelegt · hinter den Haaren','head-band':'Angelegt · unter dem Pony','head-front':'Angelegt · vor den Haaren'};
+   const row=document.createElement('tr');for(const value of [part.partId,part.anchor,part.src?(headLabel[part.depthRole]|| (part.depthRole==='back'?'Angelegt · hinter dem Körper':node?.occludedBy.length?'Angelegt · Gewand kann überdecken':'Angelegt')):'In Arbeit']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}document.getElementById('parts').append(row);
    const circle=svgNode('circle'),title=svgNode('title');circle.setAttribute('cx',anchor.x);circle.setAttribute('cy',anchor.y);circle.setAttribute('r',9);circle.setAttribute('fill','#35644f');circle.setAttribute('stroke','#fff');circle.setAttribute('stroke-width',3);title.textContent=part.partId;circle.append(title);document.getElementById('anchors').append(circle);
   }
  }
  function setSelection(ids){selected.clear();ids.forEach(id=>selected.add(id));controls.querySelectorAll('input').forEach(i=>i.checked=selected.has(i.dataset.item));refresh()}
  function refreshBase(){
   if(!ready)return;
-  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();refreshHarnessPreview();refreshSleevePreview();
+  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();refreshHarnessPreview();refreshSleevePreview();refreshHeadwearPreview();
   document.getElementById('base-limit').textContent=baseSelection().includes('body')?'Individuell gezeichnete Körperform. Kleidung und Ausrüstung behalten ihre Auswahl beim Wechsel.':'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.';
  }
  function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(i=>i.checked=ids.includes(i.dataset.basePart));refreshBase()}
@@ -52,7 +53,7 @@
  document.getElementById('body-proportions').addEventListener('change',event=>{const p=window.KONPASU_BASE_LAYERS25.proportion(event.target.value);document.getElementById('avatar-rig').style.transform=`scale(${p.x},${p.y})`;document.body.dataset.proportion=event.target.value});
  document.getElementById('all').addEventListener('click',()=>setSelection(api.CATALOG.map(i=>i.id)));
  document.getElementById('none').addEventListener('click',()=>setSelection([]));
- for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4'],fullset:api.CATALOG.map(i=>i.id)}[button.dataset.preview]));
+ for(const button of document.querySelectorAll('[data-preview]'))button.addEventListener('click',()=>setSelection({base:[],harness:['strength-3'],shoulders:['strength-4'],both:['strength-3','strength-4'],headband:['focus-1'],strengthset:api.CATALOG.filter(i=>i.id.startsWith('strength-')).map(i=>i.id),fullset:api.CATALOG.map(i=>i.id)}[button.dataset.preview]));
  document.getElementById('apply-occlusion').addEventListener('change',refresh);
  document.getElementById('show-anchors').addEventListener('change',e=>document.getElementById('anchors').style.display=e.target.checked?'block':'none');
  const reference=document.getElementById('reference'),referenceStatus=document.getElementById('reference-status');
@@ -74,6 +75,13 @@
   document.getElementById('sleeve-shape').textContent=models.get(active).profile.labelDe;
  }
  document.getElementById('sleeve-layers').addEventListener('toggle',refreshSleevePreview);
+ function refreshHeadwearPreview(){
+  if(!ready||!document.getElementById('headwear-layers').open)return;
+  for(const [id,part] of [['headwear-band-image','band'],['headwear-bow-image','bow'],['headwear-tails-image','tails']]){const image=document.getElementById(id),src=art.specFor('assets/avatar-v25/focus/focus-headband-'+part+'.png').src;if(image.getAttribute('src')!==src)image.src=src}
+  document.getElementById('headwear-shape').textContent=models.get(active).profile.labelDe;
+ }
+ document.getElementById('headwear-layers').addEventListener('toggle',refreshHeadwearPreview);
+ document.getElementById('headwear-reference').addEventListener('toggle',event=>{const img=document.getElementById('headwear-reference-image');if(event.target.open&&!img.getAttribute('src'))img.src='./headwear-reference-board.webp'});
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);

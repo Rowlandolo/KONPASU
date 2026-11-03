@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "itemId": "focus-1",
+  "status": "prototype-implementation-browser-review-pending",
+  "legacy": {
+    "titleDe": "Konzentrationsstein",
+    "slot": "main",
+    "successfulCompletedWeeks": 1
+  },
+  "artbook": {
+    "name": "Focus Headband",
+    "boardRow": 4,
+    "boardColumn": 1,
+    "displayedTier": "1W",
+    "depiction": "navy/gold botanical band with ivory/navy tied ornament and ribbons"
+  },
+  "decision": "Use existing focus-1 identity and unchanged evidence rules. Artwork depiction differs from legacy title/slot. No live reward rename, gate change or ownership migration. focus-2 is Sand Timer in this artbook, not headband.",
+  "references": [
+    {
+      "file": "./headwear-reference-board.webp",
+      "bundle": "premium-art-bundle.js",
+      "bundleKey": "assets/konpasu_knowledge_productivity_rewards.webp",
+      "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+      "bytes": 468962,
+      "encoding": "byte-identical base64 payload copy; no raster editing"
+    },
+    {
+      "file": "./headwear-reference-card.webp",
+      "bundle": "premium-art-bundle.js",
+      "bundleKey": "reward-art/focus-1.webp",
+      "sha256": "898889857900798a7b15834356cff4c6c946ed1c336fcfa7d4db8e4af4582cef",
+      "bytes": 8576,
+      "encoding": "byte-identical base64 payload copy; no raster editing"
+    }
+  ],
+  "fragments": [
+    {
+      "partId": "focus-headband-band",
+      "depthRole": "head-band",
+      "z": 580
+    },
+    {
+      "partId": "focus-headband-bow",
+      "depthRole": "head-front",
+      "z": 620
+    },
+    {
+      "partId": "focus-headband-tails",
+      "depthRole": "head-back",
+      "z": 90
+    }
+  ],
+  "registration": "Both body forms share the exact current hair placement; explicit head placements per profile are initially identical and require separate browser/visual acceptance.",
+  "limits": [
+    "This headband and these two stand figures in one pose; not all future headgear or hairstyles.",
+    "No hair or selected reward is removed by equipping a headband.",
+    "Six fitted prototype articles, 89 remaining; live app and data unchanged."
+  ]
+}

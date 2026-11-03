@@ -4,7 +4,7 @@ const {inventory,evaluate}=require('./avatar-budget.cjs');
 const baseAPI=require('../design/avatar/base-layers.js');
 const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/artbook');
 (async()=>{
- fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js','design/avatar/reference-board.webp','browser-results/artbook/fullset.png','browser-results/artbook/form-b-fullset.png','browser-results/artbook/original-form-a.png','browser-results/artbook/original-form-b.png','browser-results/artbook/retina-mobile.png','browser-results/artbook/retina-original.png'];
+ fs.mkdirSync(output,{recursive:true});const files=['premium-art-bundle.js','avatar-rig-v25.js','design/avatar/index.html','design/avatar/base-art-direction-v01.png','design/avatar/prototype-loader.js','design/avatar/workshop.js','design/avatar/prototype-assets.json','design/avatar/base-layers.js','design/avatar/base-layer-contract.json','design/avatar/base-layer-broad-v04-contract.json','design/avatar/body-profiles-v04.json','design/avatar/scene-composer.js','design/avatar/reference-board.webp','design/avatar/headwear-reference-board.webp','browser-results/artbook/fullset.png','browser-results/artbook/form-b-fullset.png','browser-results/artbook/original-form-a.png','browser-results/artbook/original-form-b.png','browser-results/artbook/retina-mobile.png','browser-results/artbook/retina-original.png'];
  const delivery=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/delivery-assets-v06.json'),'utf8'));files.push('design/avatar/asset-delivery.js','design/avatar/delivery-assets-v06.json',...delivery.entries.map(e=>'design/avatar/'+e.file.replace('./','')));
  const payload=source=>delivery.entries.find(e=>e.source===source).file.slice(1),payloadRoute=source=>'**'+payload(source);
  const baseContract=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/base-layer-contract.json'),'utf8'));files.push(...baseAPI.artwork(baseContract).map(l=>'design/avatar/'+l.file.replace('./','')));
@@ -12,16 +12,16 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/prototype-assets.json'),'utf8'));files.push(...manifest.assets.map(a=>'design/avatar/'+a.file.replace('./','')));
  let server,browser,context;const report={checks:[],status:'failed'},errors=[];
  try{
-  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage(),requests=[];page.on('request',r=>{if(r.url().startsWith(server.url))requests.push(new URL(r.url()).pathname)});page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Nine verified equipment delivery fragments loaded');
+  server=await serve(root,files);browser=await chromium.launch({headless:true});context=await browser.newContext({viewport:{width:1200,height:1000}});const page=await context.newPage(),requests=[];page.on('request',r=>{if(r.url().startsWith(server.url))requests.push(new URL(r.url()).pathname)});page.on('pageerror',e=>errors.push(e.message));await page.goto(server.url+'design/avatar/index.html');await page.waitForFunction(()=>['true','false'].includes(document.body.dataset.artworkReady));assert.equal(await page.getAttribute('body','data-artwork-ready'),'true',await page.locator('#artwork-status').innerText());report.checks.push('Twelve verified equipment delivery fragments loaded');
   const budget=JSON.parse(fs.readFileSync(path.join(root,'design/avatar/performance-budget.json'),'utf8')),assets=inventory(root);
   assert.equal(evaluate(assets,budget).prototypePassed,true);assert.equal(evaluate(assets,budget).productionTargetsPassed,true);assert.equal(await page.getAttribute('body','data-delivery'),'mobile');
-  assert.ok(!requests.some(p=>p.includes('broad-v04')||p.endsWith('/premium-art-bundle.js')||p.endsWith('/reference-board.webp')));
+  assert.ok(!requests.some(p=>p.includes('broad-v04')||p.endsWith('/premium-art-bundle.js')||p.endsWith('/reference-board.webp')||p.endsWith('/headwear-reference-board.webp')));
   assert.equal(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.diagnostics().rasterSurfaces),0);
-  assert.equal(await page.locator('#scene defs image').count(),0);assert.equal(await page.locator('#scene mask use').count(),4);assert.equal(await page.locator('#scene image').count(),17);
+  assert.equal(await page.locator('#scene defs image').count(),0);assert.equal(await page.locator('#scene mask use').count(),4);assert.equal(await page.locator('#scene image').count(),20);
   await page.evaluate(()=>window.__bodyNode=document.querySelector('#scene [data-base-id="body"]'));
   await page.locator('[data-item="strength-1"]').uncheck();await page.locator('[data-item="strength-1"]').check();
   assert.equal(await page.evaluate(()=>window.__bodyNode===document.querySelector('#scene [data-base-id="body"]')),true);
-  const startupPNGs=requests.filter(p=>/\.(png|webp)$/.test(p)),byFile=new Map(assets.assets.map(a=>[a.file,a.bytes]));assert.equal(startupPNGs.length,17);const startupPNGBytes=startupPNGs.reduce((sum,p)=>{const file='.'+p.slice('/design/avatar'.length);assert.ok(byFile.has(file),'Unexpected startup delivery bitmap: '+p);return sum+byFile.get(file)},0);assert.equal(startupPNGBytes,assets.startupAssetBytes);
+  const startupPNGs=requests.filter(p=>/\.(png|webp)$/.test(p)),byFile=new Map(assets.assets.map(a=>[a.file,a.bytes]));assert.equal(startupPNGs.length,20);const startupPNGBytes=startupPNGs.reduce((sum,p)=>{const file='.'+p.slice('/design/avatar'.length);assert.ok(byFile.has(file),'Unexpected startup delivery bitmap: '+p);return sum+byFile.get(file)},0);assert.equal(startupPNGBytes,assets.startupAssetBytes);
   report.performance={...assets,assets:undefined,observedStartupDeliveryRequests:startupPNGs.length,observedStartupRequestedDeliveryBytes:startupPNGBytes,startupRasterSurfaces:0,maskImageCopies:0,stableBodyNode:true};
   report.checks.push('Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings');
   async function chooseShape(id){await page.locator('#body-shape').selectOption(id);await page.waitForFunction(value=>document.body.dataset.bodyShape===value&&!document.body.dataset.shapeLoading,id)}
@@ -45,10 +45,32 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    assert.ok(result.points.every(p=>p.frontAlpha<32&&p.bodyAlpha>240),JSON.stringify(result));assert.ok(result.order.indexOf('kimono-back')<result.order.indexOf('body'));assert.ok(result.order.indexOf('body')<result.order.indexOf('kimono'));report.sleeveFit??={};report.sleeveFit[shape]=result;
    await page.locator('#sleeve-layers').evaluate(e=>e.open=true);await page.waitForFunction(()=>['sleeve-front-image','sleeve-back-image'].every(id=>document.getElementById(id).naturalWidth>0));assert.match(await page.locator('#sleeve-shape').innerText(),new RegExp(shape==='form-a'?'Form A':'Form B'));await page.locator('#sleeve-layers').screenshot({path:path.join(output,'sleeve-layers-'+shape+'.png')});await page.locator('#sleeve-layers').evaluate(e=>e.open=false);
   }
+  async function assertHeadwear(){
+   const shape=await page.getAttribute('body','data-body-shape');
+   const clearance=await page.evaluate(async()=>{
+    const points=[[268,61],[289,60],[279,74],[272,86]],out=[];
+    for(const id of ['focus-headband-band','focus-headband-bow']){const node=document.querySelector('#scene [data-part-id="'+id+'"]'),image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=node.getAttribute('href')});const canvas=document.createElement('canvas');canvas.width=512;canvas.height=768;const ctx=canvas.getContext('2d');ctx.drawImage(image,...['x','y','width','height'].map(k=>Number(node.getAttribute(k))));const data=ctx.getImageData(0,0,512,768).data;out.push({partId:id,faceProbeAlpha:points.map(([x,y])=>data[(y*512+x)*4+3])})}return out;
+   });
+   assert.ok(clearance.every(p=>p.faceProbeAlpha.every(a=>a<=16)),JSON.stringify(clearance));report.headwearFit??={};report.headwearFit[shape]={clearance,hairStates:[]};
+   for(const front of [true,false])for(const back of [true,false]){
+    await page.locator('[data-base-part="hair-front"]').setChecked(front);await page.locator('[data-base-part="hair-back"]').setChecked(back);
+    assert.equal(await page.locator('#scene image[data-item-id="focus-1"]').count(),3);assert.equal(await page.locator('[data-item="focus-1"]').isChecked(),true);
+    assert.equal(await page.locator('#selection input:checked').count(),6);
+    const order=await page.locator('#scene > image').evaluateAll(nodes=>nodes.map(n=>n.dataset.sceneId));
+    if(front){assert.ok(order.indexOf('gear-focus-headband-band')<order.indexOf('base-hair-front'));assert.ok(order.indexOf('base-hair-front')<order.indexOf('gear-focus-headband-bow'))}if(back)assert.ok(order.indexOf('gear-focus-headband-tails')<order.indexOf('base-hair-back'));
+    report.headwearFit[shape].hairStates.push({front,back,retainedFragments:3,selectedItems:6});
+    if(front===back)await page.locator('.stage').screenshot({path:path.join(output,'headwear-'+shape+(front?'-haired':'-hairless')+'.png')});
+   }
+   await page.locator('[data-base-part="hair-front"]').check();await page.locator('[data-base-part="hair-back"]').check();
+   await page.locator('[data-item="focus-1"]').uncheck();assert.equal(await page.locator('#scene image[data-item-id]').count(),9);assert.equal(await page.locator('#scene image[data-base-id^="hair-"]').count(),2);await page.locator('[data-item="focus-1"]').check();
+   await page.locator('[data-preview="headband"]').click();await page.locator('.stage').screenshot({path:path.join(output,'headwear-'+shape+'-only.png')});assert.equal(await page.locator('#scene image[data-item-id]').count(),3);await page.locator('[data-preview="fullset"]').click();
+   await page.locator('#headwear-layers').evaluate(e=>e.open=true);await page.waitForFunction(()=>['headwear-band-image','headwear-bow-image','headwear-tails-image'].every(id=>document.getElementById(id).naturalWidth>0));await page.locator('#headwear-layers').screenshot({path:path.join(output,'headwear-parts-'+shape+'.png')});await page.locator('#headwear-layers').evaluate(e=>e.open=false);
+  }
   const baseParts=['hair-back','body','shoes','kimono','hakama','obi','hair-front'];
   assert.deepEqual(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.getSelection()),baseParts);
   assert.equal(await page.locator('#scene > image[data-base-id]').count(),8);
   await assertSleeveFit();
+  await assertHeadwear();
   await page.locator('.stage').screenshot({path:path.join(output,'fullset.png')});
   const digest=()=>page.evaluate(async()=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',window.KONPASU_WORKSHOP_BASE.snapshot()))).join(','));
   const complete=await digest();report.checks.push('Canonical base geometry with verified runtime bitmaps in one SVG scene');
@@ -74,8 +96,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   }
   assert.equal(await digest(),complete);report.checks.push('Three quick presets and deterministic reconstruction without accumulated pixels');
   await page.locator('[data-preview="fullset"]').click();const beforeIds=await page.locator('#scene image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId));
-  await page.locator('#body-proportions').selectOption('broader');assert.equal(await page.locator('#scene image[data-item-id]').count(),9);assert.deepEqual(await page.locator('#scene image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),beforeIds);assert.ok((await page.locator('#avatar-rig').getAttribute('style')).includes('1.06'));await page.locator('.stage').screenshot({path:path.join(output,'fullset-broader.png')});await page.locator('#body-proportions').selectOption('regular');report.checks.push('Shared 6 percent proportion variation retains all nine equipment layers');
-  for(const [state,count] of [['base',0],['harness',2],['shoulders',2],['both',4],['fullset',9]]){await page.locator(`[data-preview="${state}"]`).click();assert.equal(await page.locator('#scene image[data-item-id]').count(),count);await page.locator('.stage').screenshot({path:path.join(output,state+'.png')});}report.checks.push('Five independently toggled actual compositions including full set');
+  await page.locator('#body-proportions').selectOption('broader');assert.equal(await page.locator('#scene image[data-item-id]').count(),12);assert.deepEqual(await page.locator('#scene image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),beforeIds);assert.ok((await page.locator('#avatar-rig').getAttribute('style')).includes('1.06'));await page.locator('.stage').screenshot({path:path.join(output,'fullset-broader.png')});await page.locator('#body-proportions').selectOption('regular');report.checks.push('Shared 6 percent proportion variation retains all twelve equipment layers');
+  for(const [state,count] of [['base',0],['harness',2],['shoulders',2],['both',4],['headband',3],['strengthset',9],['fullset',12]]){await page.locator(`[data-preview="${state}"]`).click();assert.equal(await page.locator('#scene image[data-item-id]').count(),count);await page.locator('.stage').screenshot({path:path.join(output,state+'.png')});}report.checks.push('Seven independently toggled actual compositions including full set');
   await page.locator('[data-preview="harness"]').click();
   const harnessNodes=await page.locator('#scene > image').evaluateAll(nodes=>nodes.map(n=>({part:n.dataset.partId,base:n.dataset.baseId,depth:n.dataset.depthRole,clip:n.getAttribute('clip-path')})));
   assert.ok(harnessNodes.findIndex(n=>n.part==='chest-harness-back')<harnessNodes.findIndex(n=>n.base==='body'));
@@ -90,10 +112,11 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
   assert.equal(await page.locator('#scene image[data-item-id="strength-3"]').count(),2);await page.locator('.stage').screenshot({path:path.join(output,'harness-fragments-only.png')});
   for(const part of baseParts)await page.locator(`[data-base-part="${part}"]`).check();
   report.checks.push('Real separate front/rear harness artwork: rear behind body, front above clothes, no pose clips, selection retained in isolated preview');
-  const ids=['strength-1','strength-2','strength-3','strength-4','strength-5'];for(let mask=0;mask<32;mask++){for(let i=0;i<5;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?2:0)+(mask&8?2:0)+(mask&16?1:0));}report.checks.push('All 32 selectable combinations');
+  const ids=['strength-1','strength-2','strength-3','strength-4','strength-5','focus-1'];for(let mask=0;mask<64;mask++){for(let i=0;i<6;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?2:0)+(mask&8?2:0)+(mask&16?1:0)+(mask&32?3:0));}report.checks.push('All 64 selectable combinations');
   await chooseShape('form-b');assert.equal(await page.getAttribute('body','data-body-shape'),'form-b');
   await assertSleeveFit();report.checks.push('Both garment groups retain one selection and two real surfaces; actual forearm channels stay clear and shape-specific previews match');
-  assert.equal(await page.locator('#scene > image[data-item-id]').count(),9);assert.deepEqual(await page.evaluate(()=>{const m=new DOMMatrix(getComputedStyle(document.getElementById('avatar-rig')).transform);return [m.a,m.b,m.c,m.d]}),[1,0,0,1]);
+  await assertHeadwear();report.checks.push('Both headwear fits retain all six items and three modules across eight independent hair states; face probes remain clear');
+  assert.equal(await page.locator('#scene > image[data-item-id]').count(),12);assert.deepEqual(await page.evaluate(()=>{const m=new DOMMatrix(getComputedStyle(document.getElementById('avatar-rig')).transform);return [m.a,m.b,m.c,m.d]}),[1,0,0,1]);
   await page.locator('.stage').screenshot({path:path.join(output,'form-b-fullset.png')});
   await page.locator('[data-preview="harness"]').click();await page.locator('.stage').screenshot({path:path.join(output,'form-b-harness.png')});
   await assertRearFit();report.checks.push('Both actual rear sprites stay within the underbody below shoulders; no hanging external return strap');
@@ -107,13 +130,13 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    assert.deepEqual(await page.evaluate(()=>window.KONPASU_WORKSHOP_BASE.getSelection()),baseParts.filter((_,i)=>mask&(1<<i)));assert.equal(await page.locator('#scene image[data-base-id="kimono"]').count(),mask&8?2:0);previous=mask;
   }
   await page.locator('[data-base-preview="dressed"]').click();
-  for(let mask=0;mask<32;mask++){for(let i=0;i<5;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene > image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?2:0)+(mask&8?2:0)+(mask&16?1:0))}
+  for(let mask=0;mask<64;mask++){for(let i=0;i<6;i++)await page.locator(`[data-item="${ids[i]}"]`).setChecked(!!(mask&(1<<i)));assert.equal(await page.locator('#scene > image[data-item-id]').count(),(mask&1?2:0)+(mask&2?2:0)+(mask&4?2:0)+(mask&8?2:0)+(mask&16?1:0)+(mask&32?3:0))}
   const bodyBIds=await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId));
   await chooseShape('form-a');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
   await chooseShape('form-b');assert.deepEqual(await page.locator('#scene > image[data-item-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.partId)),bodyBIds);
-  assert.equal(await page.locator('#scene > image[mask]').count(),4);await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene > image[mask]').count(),0);assert.equal(await page.locator('#scene > image[data-item-id]').count(),9);await page.locator('[data-base-part="kimono"]').check();
+  assert.equal(await page.locator('#scene > image[mask]').count(),4);await page.locator('[data-base-part="kimono"]').uncheck();assert.equal(await page.locator('#scene > image[mask]').count(),0);assert.equal(await page.locator('#scene > image[data-item-id]').count(),12);await page.locator('[data-base-part="kimono"]').check();
   assert.equal(requests.filter(p=>p.endsWith(payload('./layers/body-broad-v04.png'))).length,1);assert.equal(requests.filter(p=>p.endsWith(payload('./layers/kimono-front-b-v08.png'))).length,1);assert.equal(requests.filter(p=>p.endsWith(payload('./layers/hakama-broad-v04.png'))).length,1);assert.equal(requests.filter(p=>p.endsWith(payload('./layers/kimono-back-b-v08.png'))).length,1);
-  report.checks.push('Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching');
+  report.checks.push('Both drawn body forms: 256 base selections, 128 reward selections and lossless shape switching');
   const pixels=await page.evaluate(async()=>{
    const api=window.KONPASU_SCENE25,svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='occlusion-probe';svg.setAttribute('width',512);svg.setAttribute('height',768);
    const color=c=>{const surface=document.createElement('canvas');surface.width=20;surface.height=20;const ctx=surface.getContext('2d');ctx.fillStyle=c;ctx.fillRect(0,0,20,20);return surface.toDataURL()};
@@ -138,22 +161,32 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    return [await sample([],true),await sample(gear,true),await sample(gear,false)];
   });
   assert.deepEqual(sleevePixels[0],[[0,255,0,255],[255,0,0,255],[0,0,255,255]]);assert.deepEqual(sleevePixels[1],[[255,165,0,255],[255,165,0,255],[0,0,255,255]]);assert.deepEqual(sleevePixels[2],[[255,165,0,255],[255,165,0,255],[255,165,0,255]]);report.checks.push('Real garment SVG pixels prove rear/body/front depth and front-only arm occlusion without rear-lining masking');
+  const headPixels=await page.evaluate(async()=>{
+   const api=window.KONPASU_SCENE25,svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='head-probe';svg.setAttribute('width',512);svg.setAttribute('height',768);
+   const color=c=>{const canvas=document.createElement('canvas');canvas.width=20;canvas.height=20;const ctx=canvas.getContext('2d');ctx.fillStyle=c;ctx.fillRect(0,0,20,20);return canvas.toDataURL()};
+   const hair=[{id:'hair-back',src:color('red'),placement:{x:18,y:18,width:16,height:16}},{id:'hair-front',src:color('blue'),placement:{x:25,y:25,width:4,height:4}}];
+   const gear=[['rear','head-back',90,'headTie','lime',{x:15,y:15,width:20,height:20}],['band','head-band',580,'head','orange',{x:20,y:20,width:10,height:10}],['bow','head-front',620,'headTie','magenta',{x:26,y:26,width:2,height:2}]].map(([partId,depthRole,z,anchor,c,placement])=>({partId,itemId:'synthetic',depthRole,z,anchor,src:color(c),spec:{depthRole,placement}}));
+   const sample=async(baseLayers)=>{api.render(svg,api.plan({baseLayers,equipment:gear,fitArtwork:s=>s.placement}));const image=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='data:image/svg+xml;base64,'+btoa(new XMLSerializer().serializeToString(svg))});const canvas=document.createElement('canvas');canvas.width=512;canvas.height=768;const ctx=canvas.getContext('2d');ctx.drawImage(image,0,0);return {pixels:[[16,16],[19,19],[22,22],[25,25],[27,27]].map(([x,y])=>Array.from(ctx.getImageData(x,y,1,1).data)),fragments:svg.querySelectorAll('[data-item-id]').length}};
+   return [await sample(hair),await sample([])];
+  });
+  assert.deepEqual(headPixels[0],{pixels:[[0,255,0,255],[255,0,0,255],[255,165,0,255],[0,0,255,255],[255,0,255,255]],fragments:3});assert.deepEqual(headPixels[1],{pixels:[[0,255,0,255],[0,255,0,255],[255,165,0,255],[255,165,0,255],[255,0,255,255]],fragments:3});report.checks.push('Actual SVG pixels prove rear tails, hair, under-fringe band and over-hair ornament interleave without deleting modules');
   await page.setViewportSize({width:390,height:844});await page.locator('[data-preview="fullset"]').click();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});report.checks.push('390px mobile layout');
   await page.locator('#style-reference').evaluate(element=>element.open=true);await page.waitForFunction(()=>document.querySelector('#style-reference-image').naturalWidth>0);report.checks.push('Original approved style reference remains available separately');
   await page.locator('#artbook-reference').evaluate(e=>e.open=true);await page.waitForFunction(()=>document.getElementById('reference').naturalWidth>0);
   await page.locator('#artbook-reference').evaluate(e=>e.open=false);await page.locator('#artbook-reference').evaluate(e=>e.open=true);
   assert.equal(requests.filter(p=>p.endsWith('/reference-board.webp')).length,1);assert.equal(requests.filter(p=>p.endsWith('/premium-art-bundle.js')).length,0);report.checks.push('Original artbook board loads once on demand without the large bundle');
+  await page.locator('#headwear-reference').evaluate(e=>e.open=true);await page.waitForFunction(()=>document.getElementById('headwear-reference-image').naturalWidth>0);await page.locator('#headwear-reference').evaluate(e=>e.open=false);await page.locator('#headwear-reference').evaluate(e=>e.open=true);assert.equal(requests.filter(p=>p.endsWith('/headwear-reference-board.webp')).length,1);report.checks.push('Verified focus artbook remains an optional byte-identical reference, loaded once without bundle');
   const retry=await context.newPage();retry.on('pageerror',e=>errors.push(e.message));let bodyAttempts=0;
   await retry.route(payloadRoute('./layers/body-broad-v04.png'),route=>++bodyAttempts===1?route.fulfill({status:503,body:'synthetic temporary failure'}):route.continue());
   await retry.goto(server.url+'design/avatar/index.html');await retry.waitForFunction(()=>document.body.dataset.artworkReady==='true');
   await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.getElementById('shape-status').textContent.includes('konnte'));
-  assert.equal(await retry.getAttribute('body','data-body-shape'),'form-a');assert.equal(await retry.locator('#scene > image[data-item-id]').count(),9);
+  assert.equal(await retry.getAttribute('body','data-body-shape'),'form-a');assert.equal(await retry.locator('#scene > image[data-item-id]').count(),12);
   await retry.locator('#body-shape').selectOption('form-b');await retry.waitForFunction(()=>document.body.dataset.bodyShape==='form-b'&&!document.body.dataset.shapeLoading);assert.equal(bodyAttempts,2);await retry.close();
   const race=await context.newPage();race.on('pageerror',e=>errors.push(e.message));await race.route(payloadRoute('./layers/body-broad-v04.png'),async route=>{await new Promise(resolve=>setTimeout(resolve,250));await route.continue()});
   await race.goto(server.url+'design/avatar/index.html');await race.waitForFunction(()=>document.body.dataset.artworkReady==='true');
   await race.locator('#body-shape').selectOption('form-b');await race.locator('[data-item="strength-1"]').uncheck();await race.locator('#body-shape').selectOption('form-a');
   await race.waitForFunction(()=>window.KONPASU_WORKSHOP_RESOURCES().loadedForms.includes('form-b')&&window.KONPASU_WORKSHOP_RESOURCES().pendingForms.length===0);
-  assert.equal(await race.getAttribute('body','data-body-shape'),'form-a');assert.equal(await race.locator('#scene > image[data-item-id]').count(),7);await race.close();
+  assert.equal(await race.getAttribute('body','data-body-shape'),'form-a');assert.equal(await race.locator('#scene > image[data-item-id]').count(),10);await race.close();
   report.checks.push('Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice');
   report.performance.sceneScriptTiming=await page.evaluate(()=>{
    const box=document.querySelector('[data-item="strength-1"]'),samples=[];
@@ -180,7 +213,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    report.deliveryComparison.retina3x=await compare(source,'retina-mobile.png','retina-original.png');
    const r=report.deliveryComparison.retina3x;assert.ok(r.meanAbsoluteError<=3);assert.ok(r.highDifferenceFraction<=.025);assert.ok(r.faceMAE<=5);assert.ok(r.goldMAE<=5);report.checks.push('390px at device scale factor 3 retains bounded face and gold-detail errors against original delivery');
   }finally{await retinaContext.close()}
-  for(const required of ['./layers/obi-v03.png','./equipment/chest-harness-back.png','./layers/kimono-back-a-v08.png']){
+  for(const required of ['./layers/obi-v03.png','./equipment/chest-harness-back.png','./layers/kimono-back-a-v08.png','./equipment/focus-headband-bow.png']){
    const failed=await context.newPage();
    const corrupted=Buffer.from(fs.readFileSync(path.join(root,'design/avatar'+payload(required))));corrupted[corrupted.length-1]^=1;
    await failed.route(payloadRoute(required),route=>route.fulfill({status:200,contentType:'image/webp',body:corrupted}));
@@ -190,7 +223,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'browser-results/a
    assert.equal(await failed.evaluate(()=>Array.from(document.querySelectorAll('.rig canvas')).every(c=>!c.getContext('2d').getImageData(0,0,c.width,c.height).data.some(v=>v!==0))),true);
    await failed.close();
   }
-  report.checks.push('Corrupted base, rear harness or rear sleeve layer fails visibly with no partial garment, body or reward');
+  report.checks.push('Corrupted base, harness, sleeve or headwear layer fails visibly with no partial garment, body or reward');
   assert.equal(await page.evaluate(()=>localStorage.length),0);assert.equal((await page.evaluate(()=>indexedDB.databases())).length,0);assert.deepEqual(errors,[]);report.checks.push('No storage writes or uncaught errors');report.status='passed';
  }catch(error){report.error=error.stack;process.exitCode=1}finally{if(context)await context.close();if(browser)await browser.close();if(server)await server.close();fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2))}
 })().catch(error=>{console.error(error);process.exitCode=1});
