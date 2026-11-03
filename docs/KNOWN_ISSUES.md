@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6, #7 und #8. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6, #7, #8 und #9. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -197,3 +197,20 @@ OUTFIT-10 im Kandidaten behoben: Ein Konflikt durfte keinen blinden Reload ausl�
 OUTFIT-11 UI behoben: Speichern/Rücknahme lagen nach langer Vorschau unterhalb der ersten Ansicht. Explizite Aktionen oben und beim Scrollen erreichbar; lange Zielnamen/niedrige Breiten enthalten, tatsächliche Screenshots gesichtet.
 
 OUTFIT-12 offen: aktuelle Grafik im neuen Dialog ist eine ausdrücklich gekennzeichnete Artbook-Anprobe. Hauptavatar, Home, Szenen, Begleiter, persönliche Darstellung, vollständige History/Favoriten und Verhalten späterer alter Equipaktionen müssen noch durch dieselbe neue Auswahlbasis laufen. Keine Behauptung einer abgeschlossenen neuen Rendererroute.
+
+
+## Etappe 3.4.2: Hauptavatar und verbleibende Grenzen
+
+OUTFIT-12 im Kandidaten behoben: gespeicherte Mehrfachauswahl war im Hauptavatar unsichtbar. Der persönliche SVG-Renderer zeigt nun alle frisch tragbaren Instanzen, auch bei gleichem Slot/Grafikmotiv; Home verwendet dieselbe Projektion. Favoriten/Inventar/Gesamtausrüstung sind abgestimmt, ruhende Auswahl bleibt erhalten. Alte Favoriten erben keinen heutigen Mehrfachlook. Nicht unterstützte künftige Formate dürfen auch über Favoriten nicht überschrieben werden.
+
+OUTFIT-13 im Kandidaten behoben: schneller Startup/Reload konnte Home vor dem Deferred-Avatarmodul rendern und beim Ersatzbild bleiben. Init wartet bei fehlendem Avatar während `loading`/`interactive` auf DOMContentLoaded. Historische Ansichten wählen einen damaligen Profilschnappschuss; fehlende historische Quellen übernehmen nicht die heutige Personalisierung.
+
+OUTFIT-14 offen: Artbook-Standfiguren besitzen keine vollständigen persönlichen Haar-/Mimik-/Körpervarianten. Hauptavatar verwendet daher vorhandene personalisierbare SVGs, Artbook-Grafiken bleiben Editor-Anprobe. A/B-Metadaten werden nicht als neue persönliche Hauptkörper behauptet. Automatische lückenlose Historyeinträge pro Editor-Save fehlen weiterhin; bestehende Schnappschüsse mit Mehrfachlook sind lesbar. Historische Zielkonfiguration, tatsächliches iPhone/VoiceOver/Alt-PWA-Upgrade und finale Premiumzeichnung bleiben offen. Details: AVATAR_MAIN_OUTFITS.md.
+
+
+OUTFIT-15 im Kandidaten behoben: allgemeines `.home-character-tile span` färbte neue Ausrüstungsebenen deckend grün; Caption auf direktes Kind begrenzt. Ein Hinweis im Flex-Zeilenlayout quetschte den Fallbackavatar; Szene stapelt nun Figur und Hinweis vertikal. Tatsächliche Screenshot-Sichtung führte zu Browserprüfungen für transparente Ebenen, erhaltene Avatarbreite und Hinweisposition.
+
+
+**388 Regressionen (22 neu), 12 neue Hauptavatar-Browsergruppen, 12 bestehende Editorgruppen, 13 Speichergruppen sowie 10 App-/26 Ateliergruppen erfolgreich** für `d4d2948033ca6e102c2928b398ca0055023e9bb5`: [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771908), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771935), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41629772026), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771846). Vier tatsächliche Browserbilder gesichtet und unverändert unter `design/avatar/review-main-avatar-v01/` archiviert; vollständiger Beleg `design/avatar/verification-main-avatar-v01.json`. Nur synthetische Daten, kein privates Browserprofil, kein Deployment. Der nachfolgende Archivcommit enthält ausschließlich Dokumentation und Belege.
+
+OUTFIT-12 ist für den vorhandenen persönlichen SVG-Hauptavatar behoben. Die neue Artbook-Hauptdarstellung und automatische vollständige Historisierung bleiben unter OUTFIT-14 offen; kein Versprechen einer umfassenden historischen oder physischen Geräteabnahme.

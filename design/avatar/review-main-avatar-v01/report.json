@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "Actual editor Save updates main Studio and Home with all saved identities, including two instances sharing slot/artwork",
+    "Real appearance, hair, expression, clothing, scene and companion controls remain visible with multi; evolved Shiba uses genuine completed step-day evidence",
+    "Normal reload renders complete personalized multi from IndexedDB without opening or decoding Artbook preview scripts",
+    "Unsaved order affects only try-on; Save changes actual main stacking/visibility while retaining hidden raw request",
+    "Paused or remapped goal changes fresh visibility without deleting requests or silently changing artwork",
+    "Missing required reward artwork shows full personalized base with notice, avoids partial outfit and retains raw selection",
+    "Multi favorite retains all instances and previews own look; old favorite never inherits current multi; applying either keeps companion fields synchronized",
+    "Inventory Equip explicitly toggles one multi instance without eviction and equipment page lists every saved identity",
+    "Clear switches to starter setup without deleting dormant multi; explicit clean editor Save reactivates retained look",
+    "Historical UI reads snapshot multi, personality, scene and companion at date; missing past never borrows current profile",
+    "Personalized main stays contained at 320/390/430px with correct English labels",
+    "Fresh offline Home/Studio and reload render saved multi and personalized bundled graphics through real worker/IndexedDB"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Fresh random-loopback contexts and synthetic profile only.",
+    "Personalized main body/hair/face and reward SVGs use existing artwork; Artbook standing prototypes remain a separate editor preview.",
+    "Artbook form A/B remains stored metadata; main body follows existing personal appearance and measurements.",
+    "Physical devices/VoiceOver/old-installed-PWA upgrade and premium art remain open."
+  ],
+  "pageErrors": []
+}

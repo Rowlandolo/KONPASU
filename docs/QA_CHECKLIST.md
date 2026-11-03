@@ -397,3 +397,21 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [x] 24 Grafiklieferdateien reproduziert, bisherige App-/Atelier- und Speicherprüfung erfolgreich; drei UI-Screenshots gesichtet/archiviert.
 - [ ] Neue Hauptavatarroute, persönliche Darstellung/Szenen/Begleiter/Favoriten/History und Legacy-Aktionssynchronisierung.
 - [ ] Physische Geräte/GPU/VoiceOver/Alt-PWA-Upgrade, finale Premiumgrafik und freigegebene Veröffentlichung.
+
+
+## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
+
+**388 Regressionen (22 neu), 12 neue Hauptavatar-Browsergruppen, 12 bestehende Editorgruppen, 13 Speichergruppen sowie 10 App-/26 Ateliergruppen erfolgreich** für `d4d2948033ca6e102c2928b398ca0055023e9bb5`: [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771908), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771935), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41629772026), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771846). Vier tatsächliche Browserbilder gesichtet und unverändert unter `design/avatar/review-main-avatar-v01/` archiviert; vollständiger Beleg `design/avatar/verification-main-avatar-v01.json`. Nur synthetische Daten, kein privates Browserprofil, kein Deployment. Der nachfolgende Archivcommit enthält ausschließlich Dokumentation und Belege.
+
+- [x] Tatsächlicher Editor-Save zeigt sämtliche tragbaren sichtbaren Identitäten in Hauptavatar und Home; gleicher Slot/Grafik ersetzt keine Auswahl.
+- [x] Persönlicher Körper, optionale Maße (Regression), Haare/Farbe, Mimik, Gewandfarbe, Szene und belegte Begleiterform bleiben sichtbar.
+- [x] Normales Neuladen und frischer Offline-Home-/Studio-Start durch tatsächlichen Worker/IndexedDB; keine Artbook-Vorschauöffnung erforderlich.
+- [x] Ordnung/Ausblenden erst nach Save am Hauptavatar; ruhende/remappte Wünsche roh erhalten, keine stille neue Zuordnung.
+- [x] Inventar schaltet nur eine Identität; Gesamtausrüstung/alte Favoriten pausieren ohne Löschen, Editor kann reaktivieren.
+- [x] Neue Favoriten zeigen eigene Mehrfachauswahl, alte erben keine aktuelle; Begleiter synchron, künftige Formate geschützt.
+- [x] Historische Quelle mit damaliger Personalisierung/Szene/Begleiter; fehlende Vergangenheit übernimmt keine heutige Auswahl.
+- [x] Fehlende Rewardgrafik zeigt vollständige persönliche Basis mit Hinweis; transparente Home-Layer und volle Fallbackbreite zusätzlich geprüft.
+- [x] DE/EN, 320/390/430px und vier tatsächliche Screenshots gesichtet; reine Projektion schreibt keine Nutzerdaten.
+- [ ] Neue Artbook-Hauptfigur mit vollständigen persönlichen Haar-/Mimik-/Körpervarianten und finaler Passform.
+- [ ] Automatische lückenlose historische Schnappschüsse jeder Editor-Speicherung samt eigenem Speichervergleich/Rückweg.
+- [ ] Historische Zielkonfiguration, physisches iPhone/GPU/VoiceOver, bestehende Alt-PWA-Upgrades und freigegebene Veröffentlichung.
