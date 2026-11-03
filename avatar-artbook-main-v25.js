@@ -13,9 +13,10 @@
   return '<div class="kp25-artbook-host'+(small?' compact':'')+'" id="'+id+'" data-artbook-host="true" data-artbook-state="waiting"><div data-artbook-fallback>'+fallback+'</div><div class="kp25-artbook-view" data-artbook-view hidden></div><p class="kp25-artbook-caption" data-artbook-caption hidden></p><div class="kp25-artbook-status" data-artbook-status hidden></div></div>';
  }
  function art(name){const value=root.KONPASU_2D_ART?.[name];if(typeof value!=='string'||!value.trim().startsWith('<svg'))throw Error('Missing scene/companion graphic');return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(value)}
+ function frame(scale){if(!Array.isArray(scale)||scale.length!==2||!scale.every(Number.isFinite)||scale[0]<.93||scale[0]>1.08||scale[1]<.94||scale[1]>1.08)throw Error('Invalid bounded avatar proportions');return 'translate(256 690) scale('+(.8*scale[0])+','+(.8*scale[1])+') translate(-256 -768)'}
  function decorate(svg,request,display,pet,stage){
   const doc=svg.ownerDocument,create=(tag,attrs={})=>{const n=doc.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n},p=request.profile,v=p.avatar2d||{},scene=SCENES.includes(v.scene)?v.scene:'garden';
-  const defs=[...svg.children].filter(n=>n.tagName.toLowerCase()==='defs'),figure=create('g',{'data-artbook-figure':'true',transform:'translate(256 730) scale('+(.86*request.scale[0])+','+(.86*request.scale[1])+') translate(-256 -768)'});for(const n of [...svg.children])if(!defs.includes(n))figure.append(n);
+  const defs=[...svg.children].filter(n=>n.tagName.toLowerCase()==='defs'),figure=create('g',{'data-artbook-figure':'true',transform:frame(request.scale)});for(const n of [...svg.children])if(!defs.includes(n))figure.append(n);
   const background=create('image',{href:art('background-'+scene),x:0,y:0,width:512,height:768,preserveAspectRatio:'xMidYMid slice','data-artbook-scene':scene});const companion=create('image',{href:art('companion-'+pet+'-'+stage),x:0,y:128,width:512,height:640,preserveAspectRatio:'xMidYMid meet','data-artbook-companion':pet,'data-artbook-stage':stage});
   svg.replaceChildren(...defs,background);const series=root.KONPASU2D.seriesFor?.(p,request.date);if(series&&v.effects!=='none')svg.append(create('image',{href:art(series),x:0,y:128,width:512,height:640,preserveAspectRatio:'xMidYMid meet','data-artbook-series':series}));svg.append(figure,companion);svg.dataset.artbookBody=display.body;
  }
@@ -42,5 +43,5 @@
   for(const [id,n] of live){const r=requests.get(id);if(!r||r.started)continue;r.element=n;if(observer)observer.observe(n);else void fill(n,r)}
  }
  document.addEventListener('click',async e=>{const b=e.target.closest('[data-artbook-action]');if(!b||b.disabled)return;e.preventDefault();e.stopImmediatePropagation();if(b.dataset.artbookAction==='retry'){const host=b.closest('[data-artbook-host]'),r=host&&requests.get(host.id);if(r){r.started=false;void fill(host,r)}return}if(b.dataset.artbookAction!=='svg'||switching)return;switching=true;b.disabled=true;try{const api=root.KONPASU_APPEARANCE_STORAGE25,result=await api.view('svg',api.source());if(result.ok)render();else notice(data.profile.lang==='en'?'View could not be saved. Your data is retained.':'Ansicht konnte nicht gespeichert werden. Deine Daten bleiben erhalten.')}finally{switching=false;if(b.isConnected)b.disabled=false}},true);
- root.KONPASU_ARTBOOK_MAIN25={markup,hydrate};
+ root.KONPASU_ARTBOOK_MAIN25={markup,hydrate,frame};
 })(typeof window!=='undefined'?window:globalThis);
