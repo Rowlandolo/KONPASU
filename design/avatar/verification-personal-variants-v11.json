@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.4.3a",
+  "testedSourceCommit": "dedbfedb4dbd6eb96f51a3d12b977f4fcfbc6a4a",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/10",
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "deployment": false,
+  "mainUnchanged": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "candidateVersion": "2.4.1-preview.4",
+  "candidateCache": "konpasu-offline-v241-outfit-preview4",
+  "scope": "Explicit personal Artbook try-on in real multi-outfit editor. Nine separate generated head/hair drawings, registered to existing two body forms with scoped hair/garment colour filters. No new personal appearance persistence or main-avatar replacement.",
+  "node": {
+    "status": "passed",
+    "total": 402,
+    "newTests": 14,
+    "workflowRun": 41633882613
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "appGroups": 10,
+    "atelierGroups": 26,
+    "workflowRun": 41633882613,
+    "consoleCaveat": "Existing baseline acceptance includes optional-resource/offline fetch messages and deliberate stale-tab conflict; no uncaught page errors."
+  },
+  "existingEditorBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41633882476
+  },
+  "existingStorageBrowser": {
+    "status": "passed",
+    "groups": 13,
+    "workflowRun": 41633882422
+  },
+  "existingMainAvatarBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41633882357
+  },
+  "personalBrowser": {
+    "status": "passed",
+    "groups": 11,
+    "workflowRun": 41633882331,
+    "artifactId": 13229267972,
+    "reportPath": "design/avatar/review-personal-variants-v11/report.json",
+    "checks": [
+      "Actual editor retains original Artbook route by default; personal atlas is not decoded until explicit opt-in",
+      "Explicit personal opt-in uses existing hair/colour/expression/accent without body inference, profile writes, draft changes or original body edits",
+      "Old head pixels are completely excluded above registered collar; face keeps skin colour, hair/garment filters are scoped and alpha-preserving",
+      "Actual variant dropdowns and A/B body control redraw registered layers while keeping profile unchanged",
+      "162 real rasterized combinations across two forms retain body/equipment geometry and unique IDs; three expressions and hair colours differ in actual pixels",
+      "Original-versus-delivery pixel comparison preserves every alpha value with bounded visible colour error",
+      "All 95 prototype article identities compose with new personal layers on both forms without profile or inventory writes",
+      "Switching off restores original artwork and masks; explicit outfit Save writes no try-on appearance or unrelated profile fields",
+      "Actual personal controls stay contained at 320/390/430px and clearly disclose try-on-only behaviour in DE/EN",
+      "Corrupt personal atlas fails before partial composition, keeps original preview/data and supports explicit successful retry",
+      "First personal opt-in on a fresh offline page and after reload uses critical cached atlas with genuine worker/IndexedDB"
+    ],
+    "fit": {
+      "variants": 162,
+      "baseGeometryStable": true,
+      "uniqueIds": true,
+      "headwear": 162,
+      "faceHashes": 3,
+      "hairHashes": 3,
+      "cards": [
+        "gallery-form-a-swept",
+        "gallery-form-a-long",
+        "gallery-form-a-tied",
+        "gallery-form-b-swept",
+        "gallery-form-b-long",
+        "gallery-form-b-tied"
+      ],
+      "expressionCards": 9
+    },
+    "deliveryQuality": {
+      "alphaMaxError": 0,
+      "visibleColourRMSE": 1.8027445330887488
+    },
+    "pageErrors": []
+  },
+  "deliveryBuild": {
+    "status": "passed-locally",
+    "command": "python3 scripts/build-personal-delivery.py",
+    "builder": "Pillow 12.3.0 / libwebp 1.6.0",
+    "originalUnmodified": true,
+    "deliveryBytes": 466178,
+    "atlasWidth": 1254,
+    "atlasHeight": 1254,
+    "sourceRGBAMiB": 5.9986724853515625
+  },
+  "archiveCommitOnlyDocsAndEvidence": true,
+  "visualReview": {
+    "bodyComparison": "Six full-figure real renderer studies: two bodies × three hairstyles, with the six PNG prototype article set.",
+    "expressionComparison": "Nine actual renderer head closeups: three expressions × three hairstyles with three-part headband.",
+    "findings": "No obvious floating head, collar gap or displaced start-set equipment in the inspected fixed-pose studies; headband remains in proper front/back hair depth. Not a universal final premium fit approval."
+  },
+  "limits": [
+    "One adult three-quarter pose and two explicit existing body forms. Complete personal body, face and skin range remains open.",
+    "Nine drawings and scoped colour treatments are prototypes; final hand-painted palettes, premium item artwork and universal fit are not certified.",
+    "162 appearance variants are checked on the six-PNG start set. All 95 article identities compose on each body; this is not exhaustive visual approval of every possible 95-item outfit and personal combination.",
+    "Personal controls are session-only try-on. No profile/ownership changes, persistent personal setting or new main-avatar route in this phase.",
+    "Physical iPhone, VoiceOver, installed-old-PWA upgrade, quota and GPU peak acceptance remain open."
+  ],
+  "screenshots": [
+    {
+      "path": "design/avatar/review-personal-variants-v11/fit-two-forms.png",
+      "bytes": 183275,
+      "sha256": "e7414bddeaecb374f723489f8ad6c2e08485b8b00cc9e114cbd0987cd8719e35",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-personal-variants-v11/expressions-headwear.png",
+      "bytes": 595260,
+      "sha256": "de6134fe5b853e44ef7f9ad063c5cfb5882228a38bf8ae026d9d29fdc1ffcd6d",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-personal-variants-v11/personal-editor.png",
+      "bytes": 118275,
+      "sha256": "65e7bc55f6c5e601c6ce8de0049d28bf5117731cfa0a23d60eb527e1e9078937",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-personal-variants-v11/personal-mobile-controls.png",
+      "bytes": 34527,
+      "sha256": "904a4f2fe1423b3b97bb30c77af7f49eddba69dfa8d3dae895e06fa6bedb8702",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-personal-variants-v11/personal-mobile.png",
+      "bytes": 69195,
+      "sha256": "91b1d3156e99909338555e41f70094dcf131df5b372ec5a08c57980db964bb05",
+      "visuallyInspected": true
+    }
+  ]
+}

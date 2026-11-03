@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6, #7, #8 und #9. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6, #7, #8, #9 und #10. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -214,3 +214,16 @@ OUTFIT-15 im Kandidaten behoben: allgemeines `.home-character-tile span` färbte
 **388 Regressionen (22 neu), 12 neue Hauptavatar-Browsergruppen, 12 bestehende Editorgruppen, 13 Speichergruppen sowie 10 App-/26 Ateliergruppen erfolgreich** für `d4d2948033ca6e102c2928b398ca0055023e9bb5`: [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771908), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771935), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41629772026), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41629771846). Vier tatsächliche Browserbilder gesichtet und unverändert unter `design/avatar/review-main-avatar-v01/` archiviert; vollständiger Beleg `design/avatar/verification-main-avatar-v01.json`. Nur synthetische Daten, kein privates Browserprofil, kein Deployment. Der nachfolgende Archivcommit enthält ausschließlich Dokumentation und Belege.
 
 OUTFIT-12 ist für den vorhandenen persönlichen SVG-Hauptavatar behoben. Die neue Artbook-Hauptdarstellung und automatische vollständige Historisierung bleiben unter OUTFIT-14 offen; kein Versprechen einer umfassenden historischen oder physischen Geräteabnahme.
+
+
+## Persönliche Artbook-Studie 3.4.3a
+
+OUTFIT-14 teilweise bearbeitet: drei neue Mimikzeichnungen und drei Frisuren mit Vorder-/Hinterhaar sind auf beiden bestehenden Formen registriert und im Editor anprobierbar. Die Hauptdarstellung verwendet weiterhin persönliche SVGs. Vollständige Körper-/Gesichts-/Hautbandbreite, finale Farbpaletten und automatische Historisierung bleiben offen.
+
+PERSONAL-01 im Kandidaten behoben: Gesicht war fest im Body eingezeichnet, sodass neue Mimik sonst über alten Augen/Mund läge. Im persönlichen Modus wird die alte Kopfregion oberhalb der Kragengrenze y=110 ausgespart und durch einen vollständigen registrierten Kopf ersetzt. Originalgrafiken bleiben unverändert; der Rückweg stellt sie wieder her.
+
+PERSONAL-02 im Kandidaten behoben: neue Einschaltfläche hatte zunächst nur 24px statt geforderter 44px Höhe. Reale Touchprüfung erkannte dies; 44px hergestellt und bestehende Editorprüfung erneut erfolgreich.
+
+PERSONAL-03 offen: Farbfilter sind Studien, keine final handgemalten Gewandpaletten. Persönliche Varianten bleiben bewusst lokale Anprobe; bestätigte dauerhafte Übernahme und Artbook-Hauptdarstellung benötigen eigenen Datenvergleich/Rückweg. Die 95er-Komposition und feste Anker sind keine Premium-Freigabe aller visuellen Überdeckungen.
+
+**402 Regressionen (14 neu), 11 neue persönliche Browsergruppen, 12 Hauptavatar-, 12 Editor-, 13 Speicher- sowie 10 App-/26 Ateliergruppen erfolgreich** für `dedbfedb4dbd6eb96f51a3d12b977f4fcfbc6a4a`: [Varianten/Passform](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882331), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882613), [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882357), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882476), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882422). Fünf tatsächlich im Browser erzeugte Bilder gesichtet und unverändert unter `design/avatar/review-personal-variants-v11/` archiviert; Vollbeleg `design/avatar/verification-personal-variants-v11.json`. Nur synthetische Daten, kein privates Browserprofil, kein Main-Merge/Deployment. Der folgende Archivcommit enthält ausschließlich Dokumentation und Belege.

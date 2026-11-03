@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checks": [
+    "Actual editor retains original Artbook route by default; personal atlas is not decoded until explicit opt-in",
+    "Explicit personal opt-in uses existing hair/colour/expression/accent without body inference, profile writes, draft changes or original body edits",
+    "Old head pixels are completely excluded above registered collar; face keeps skin colour, hair/garment filters are scoped and alpha-preserving",
+    "Actual variant dropdowns and A/B body control redraw registered layers while keeping profile unchanged",
+    "162 real rasterized combinations across two forms retain body/equipment geometry and unique IDs; three expressions and hair colours differ in actual pixels",
+    "Original-versus-delivery pixel comparison preserves every alpha value with bounded visible colour error",
+    "All 95 prototype article identities compose with new personal layers on both forms without profile or inventory writes",
+    "Switching off restores original artwork and masks; explicit outfit Save writes no try-on appearance or unrelated profile fields",
+    "Actual personal controls stay contained at 320/390/430px and clearly disclose try-on-only behaviour in DE/EN",
+    "Corrupt personal atlas fails before partial composition, keeps original preview/data and supports explicit successful retry",
+    "First personal opt-in on a fresh offline page and after reload uses critical cached atlas with genuine worker/IndexedDB"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "One registered adult three-quarter pose, two explicitly chosen existing body forms.",
+    "Colour filters and nine generated head/hair drawings are studies; complete gender/skin/premium asset range remains open.",
+    "Personal try-on does not replace main SVG or write appearance to a profile.",
+    "Physical iPhone, VoiceOver, installed old-PWA upgrade and GPU peak acceptance remain open."
+  ],
+  "fit": {
+    "variants": 162,
+    "baseGeometryStable": true,
+    "uniqueIds": true,
+    "headwear": 162,
+    "faceHashes": 3,
+    "hairHashes": 3,
+    "cards": [
+      "gallery-form-a-swept",
+      "gallery-form-a-long",
+      "gallery-form-a-tied",
+      "gallery-form-b-swept",
+      "gallery-form-b-long",
+      "gallery-form-b-tied"
+    ],
+    "expressionCards": 9
+  },
+  "deliveryQuality": {
+    "alphaMaxError": 0,
+    "visibleColourRMSE": 1.8027445330887488
+  },
+  "pageErrors": []
+}

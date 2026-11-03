@@ -31,3 +31,8 @@ Der Appstart wartet jetzt auf `DOMContentLoaded`, damit alle geordneten Deferred
 Echte Hauptavatarprüfung bedient Editor, Personalisierung, Szenen, Begleiter, Favoriten, Inventar, Reaktivierung, Zeitreise und Offline-Neustart. Frische Tiernachweise kommen aus tatsächlichen protokollierten synthetischen Zielmessungen, ohne Tier-/Rewardstubs. Screenshotprüfung führte zu zusätzlicher Absicherung der transparenten Home-Layer und der vollständigen Fallbackbreite.
 
 Als Nächstes 3.4.3: persönliche Varianten der neuen Artbook-Standfigur samt Passform und geprüftem Umschalten, während die bisherige SVG-Hauptdarstellung als Rückweg erhalten bleibt. Physische Geräte, VoiceOver, Alt-PWA-Upgrade und finale Artbookgrafiken bleiben eigene Abnahmen.
+
+
+## Fortschreibung 3.4.3a
+
+Die persönliche Artbook-Anprobe ist jetzt ausdrücklich im Mehrfacheditor einschaltbar. Drei Frisuren/Farben, drei Mimiken und drei Gewandfarben sind als Studie geprüft. Hauptavatar/Home bleiben auf der bestehenden persönlichen SVG-Darstellung; keine automatische Umschaltung. Neue Verträge, Prüfbelege und nächster Abschnitt: AVATAR_PERSONAL_VARIANTS.md.

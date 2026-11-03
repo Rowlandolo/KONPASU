@@ -415,3 +415,21 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [ ] Neue Artbook-Hauptfigur mit vollständigen persönlichen Haar-/Mimik-/Körpervarianten und finaler Passform.
 - [ ] Automatische lückenlose historische Schnappschüsse jeder Editor-Speicherung samt eigenem Speichervergleich/Rückweg.
 - [ ] Historische Zielkonfiguration, physisches iPhone/GPU/VoiceOver, bestehende Alt-PWA-Upgrades und freigegebene Veröffentlichung.
+
+
+## Abschluss Etappe 3.4.3a: persönliche Artbook-Anprobe
+
+**402 Regressionen (14 neu), 11 neue persönliche Browsergruppen, 12 Hauptavatar-, 12 Editor-, 13 Speicher- sowie 10 App-/26 Ateliergruppen erfolgreich** für `dedbfedb4dbd6eb96f51a3d12b977f4fcfbc6a4a`: [Varianten/Passform](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882331), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882613), [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882357), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882476), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882422). Fünf tatsächlich im Browser erzeugte Bilder gesichtet und unverändert unter `design/avatar/review-personal-variants-v11/` archiviert; Vollbeleg `design/avatar/verification-personal-variants-v11.json`. Nur synthetische Daten, kein privates Browserprofil, kein Main-Merge/Deployment. Der folgende Archivcommit enthält ausschließlich Dokumentation und Belege.
+
+- [x] Tatsächlicher Opt-in im Editor; Ausgangswerte aus bestehendem Profil, keine Körperform aus Geschlecht/Maßen abgeleitet.
+- [x] Neun SHA-geprüfte Kopf-/Haarzeichnungen, alte Gesichtspixel vollständig ausgespart, Haut ohne Haar-/Gewandfilter.
+- [x] 162 persönliche Kombinationen auf beiden Formen mit Startset gerendert; Körper-/Ausrüstungsgeometrie stabil, alle IDs eindeutig, Kopfteil-Tiefenordnung geprüft.
+- [x] Drei Gesichtsausdrücke und Haarfarben unterscheiden sich in tatsächlichen Pixeln; neun Kopfteil-/Mimikansichten und sechs Ganzkörperansichten gesichtet.
+- [x] Alle 95 Artikelidentitäten auf beiden Körpern komponiert, keine neue Freischaltung oder Profilspeicherung.
+- [x] Ausschalten stellt ursprüngliche Haare/Kopf/Gewandfilter wieder her; Outfit-Save übernimmt keine persönlichen Studienwerte.
+- [x] Original-/Delivery-Pixelvergleich Alphafehler 0, Farb-RMSE 1,802745; Original-PNG unverändert und Delivery lokal bytegleich reproduziert.
+- [x] Sichtbare DE/EN-/44px-Regler und 320/390/430px; kalte Offline-Erstaktivierung/Reload, Integritätsfehler und ausdrücklicher Retry.
+- [x] Bestehende App-/Atelier-/Editor-/Hauptavatar-/Speicherprüfungen weiterhin erfolgreich; fünf Originalbilder archiviert.
+- [ ] Vollständige persönliche Körper-/Gesichts-/Hautbandbreite und finale handgemalte Gewand-/Haarpaletten.
+- [ ] Bestätigte dauerhafte persönliche Übernahme mit Feldvergleich/Rückweg und neue Hauptavatarroute samt Szenen/Begleitern.
+- [ ] Universelle Premium-Passform aller Kombinationen, physisches iPhone/GPU/VoiceOver/Alt-PWA und Veröffentlichung.
