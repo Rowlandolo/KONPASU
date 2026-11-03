@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 02.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PR #3. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3 und #4. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -304,6 +304,23 @@ Nachweis: dde46f6de2c07a7b4bc7755e8a8ea6447827076a, [255 Regressionen, App-Chrom
 
 Nächste Integrationskriterien: alte Einzelauswahl/Favoriten/History verlustfrei in einer reinen Testprojektion abbilden; ruhend/verdeckt/gesperrte Vorschau getrennt halten; keine Besitzfreigabe aus Grafikverfügbarkeit. Fehlende neue Grafiken müssen bestehende Darstellung erhalten. Ein tatsächlicher Speicherschritt benötigt gesonderten Datenvertrag, synthetische Roundtrip-/Rollbackfälle und Offlineprüfung.
 
-## Alle übrigen 89 Artikel: Prototypabschnitt in Entwicklung
+## Abschluss: alle übrigen 89 Artikel als Vektor-Passformprototypen
 
-Nutzerauftrag vom 03.11.2026 priorisiert die vollständige Prototypisierung vor Etappe 3. Fünf Originaltafeln visuell geprüft, alle 95 stabilen IDs und Legacy-Voraussetzungen erhalten. Für die 89 weiteren Artikel 129 eigenständige Vektor-Passformmodule und explizite Registrierungen für beide Standfiguren erzeugt. Separate Werkstatt catalog.html mit Originalvergleich, Mehrfachauswahl, Sichtbarkeit und Reihenfolge vorbereitet. Keine fertigen Premiumgrafiken behauptet; zwei Mimiksets bleiben gesonderte Studien, Handobjekte werden in dieser Pose am Obi geführt. 15 neue reine Regressionen erfolgreich einschließlich aller 4.465 Paare auf beiden Formen; vollständiger CI-/Browserlauf und Sichtprüfung aller Familien noch offen. Detailverträge: ARTBOOK_95_PROTOTYPES.md / catalog-prototypes-v10.json. Keine App-, Daten-, Schema-, Freischalt- oder Service-Workeränderung.
+Nutzerauftrag vom 03.11.2026 vor Etappe 3 abgearbeitet: alle 95 Artbook-Abbildungen auf fünf Originaltafeln einzeln zugeordnet, stabile IDs und Legacy-Voraussetzungen erhalten. 89 neue Vektorstudien mit 134 eigenen transparenten SVG-Modulen ergänzen die sechs bisherigen PNG-Prototypartikel. Beide Standfiguren, unabhängige Auswahl/Sichtbarkeit/Reihenfolge und echte Frontstoffmasken im separaten `design/avatar/catalog.html`. Es handelt sich um Passform-/Funktionsprototypen; die 89 Premiumzeichnungen bleiben ein eigener Arbeitsschritt.
+
+280 Regressionen, bestehende App-/Atelier-Chromiumprüfung (26 Gruppen) und 13 zusätzliche Katalog-Browsergruppen erfolgreich für c4dcdff69d4c2536f2e11c1993dd7cbd7c46a9ca: [Kataloglauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41591939844), [bestehende Prüfungen](https://github.com/Rowlandolo/KONPASU/actions/runs/41591939822). Alle 4.465 Paare auf beiden Körpern im reinen Planer; 190 tatsächliche Einzelrenderings mit sichtbarer Pixeländerung (Minimum A 48 / B 61 Pixel bei 256×384). Alle 95 gemeinsam als Stressauswahl erhalten; keine Behauptung aller Paarungen als visuell abgenommen. Tatsächliche Außenstoffmasken verändern 563 Bildpixel und erhalten die Artikelgruppen.
+
+19 Familienvergleichsbilder mit Originaltafelbereichen und beiden Figuren sowie Mischoutfits, 95er-Stressfigur, mobile Ansicht und Detailvergleich gesichtet und unverändert unter `design/avatar/review-catalog-v10/` archiviert. Verschobene bestehende Karten besonders bei Sozial/Natur erkannt: neuer Vergleich nutzt explizite Viewports der bytegleichen Gesamttafel, mit tatsächlicher Pixelprüfung der Begrenzung. Legacykarten bleiben unangetastet. Koordinatenrundung beseitigt Node-/Chromium-Hashabweichungen bei Perlen/Fächern. Gewandmotive, Bandführung und sichtbarere Aurasockel nach Sichtprüfung verfeinert.
+
+Keine Live-, Daten-, Schema-, Besitz-, Rewardregel- oder Service-Workeränderung. Reales Gerät, PWA-Kaltstart/Upgrade, Mimikgrafiken, Griffposen, endgültige Schuhpassform und Premiumzeichnung bleiben offen. Vollbeleg und Grenzen: `design/avatar/verification-catalog-v10.json`; Lesefassung und Bedienung: `ARTBOOK_PROTOTYPE_REVIEW.md`; je Artikel vollständige Quelle, Module und beide Registrierungen: `ARTBOOK_95_PROTOTYPES.md`. Abschlusscommit enthält ausschließlich Dokumentation und Prüfbelege.
+
+- [x] Alle 95 stabilen IDs, alte Slots/Namen/Voraussetzungen byte-/strukturgleich referenziert; neue Darstellungsnamen keine Migration.
+- [x] Fünf ganze Originaltafeln und 95 Legacykarten bytegleich; Vergleiche nutzen die dokumentierten Originaltafel-Viewports. Clip-Pixel je Familie außen Alpha 0 / innen 255.
+- [x] Alle 134 SVG-Module reproduzierbar, eigenständig, ohne externe Quellen und mit geprüften Hashes; vollständiger frischer Generatorlauf ohne Git-Differenz.
+- [x] 4.465 Paarplanungen je Körper, 190 sichtbare Einzelrenderings, 95er-Stressauswahl, unabhängige Sichtbarkeit/Reihenfolge/Haarflächen und keine Slotverdrängung.
+- [x] Tatsächliche SVG-Pixel für äußere Kleidermasken; kaputte Referenz mit Retry und ungültiger Vektorhash ohne Teilfigur.
+- [x] 19 Familienbilder, zwei Mischoutfits, mobile Ansicht, Originaldetail und 95er-Stressfigur gesichtet; keinerlei Profilspeicherzugriff.
+- [x] Bereits geladenes Atelier ohne Netzwerk weiter bedienbar. Dies ist kein kalter PWA-Offlinestart.
+- [ ] Finale Premiumzeichnung/Detailpassform, richtige Mimiklayer/Griffposen und Schuhmasken.
+- [ ] Neue App-/Outfitpersistenz, Import/Export/Rollback und Offline-Precache.
+- [ ] Physische Geräte-/GPU-/Peak-/VoiceOver-/Alt-PWA-Abnahme und Veröffentlichung.

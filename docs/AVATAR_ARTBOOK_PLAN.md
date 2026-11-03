@@ -2,7 +2,7 @@
 
 Stand 02.11.2026. Verbindliche neue Nutzeranforderung: Artbooks als Stil- und Artikelreferenz, einzelne angepasste Module, gemeinsame Auswahl aller Belohnungsartikel ohne stilles Ablegen. Gilt zusätzlich zum vollständigen Masterbriefing. Entwicklung im separaten Branch, kein Live-Update dieses Prototyps.
 
-Aktueller Stand: sechs Prototypartikel mit zwölf Ausrüstungsfragmenten auf zwei Standfiguren; Etappe 2 für dieses Startset technisch abgeschlossen. 89 weitere Standardartikel und App-/Outfitintegration offen. Aktuelle Belege: verification-headwear-depth-v09.json und AVATAR_RELEASE_STEPS.md. Frühere Abschnitte dokumentieren die Entwicklung.
+Aktueller Stand: 95/95 Prototypartikel auf zwei Standfiguren. Sechs bisherige PNG-Artikel/zwölf Fragmente plus 89 neue Vektorstudien/134 Module; Etappe 2 für das Startset technisch abgeschlossen. Finale Premiumausarbeitung der Vektorstudien und App-/Outfitintegration offen. Aktuelle Belege: verification-headwear-depth-v09.json und AVATAR_RELEASE_STEPS.md. Frühere Abschnitte dokumentieren die Entwicklung.
 
 ## Was die Bestandsaufnahme tatsächlich zeigt
 
@@ -131,3 +131,14 @@ Erster Abschnitt von Etappe 2 abgeschlossen: echtes Vorder-/Hintergeschirr statt
 ## Abschluss Etappe 2: Fokus-Stirnband und Haarüberlagerung
 
 focus-1 ist laut Originaltafel das Fokus-Stirnband auf Stufe 1; Legacy Konzentrationsstein/main und Ein-Wochen-Nachweis unverändert. focus-2 zeigt eine Sanduhr. Bytegleiche Referenzen und Semantik: headwear-contract-v09.json. Drei separate PNGs: hintere Bänder 90, Band 580 unter Pony 600, Schleife 620. Beide Formen mit/ohne Haare und komplettem Sechserset gesichtet; keine Abwahl anderer Artikel. 262 Regressionen, App-Chromium und 26 Atelier-Prüfgruppen erfolgreich für 633e50984f581db846495e011b7766a29d6fb70c ([Lauf 41555922134](https://github.com/Rowlandolo/KONPASU/actions/runs/41555922134)). Vollbeleg samt archivierten Aufnahmen: design/avatar/verification-headwear-depth-v09.json. Etappe 2 für das Startset technisch abgeschlossen; Etappe 3 (App-/Outfitvertrag), weitere 89 Standardartikel und physische Abnahme offen. 0.82 MB Startgrafiken / 47.84 MiB Quell-RGBA; Live-App und Daten unverändert.
+
+
+## Abschluss: alle übrigen 89 Artikel als Vektor-Passformprototypen
+
+Nutzerauftrag vom 03.11.2026 vor Etappe 3 abgearbeitet: alle 95 Artbook-Abbildungen auf fünf Originaltafeln einzeln zugeordnet, stabile IDs und Legacy-Voraussetzungen erhalten. 89 neue Vektorstudien mit 134 eigenen transparenten SVG-Modulen ergänzen die sechs bisherigen PNG-Prototypartikel. Beide Standfiguren, unabhängige Auswahl/Sichtbarkeit/Reihenfolge und echte Frontstoffmasken im separaten `design/avatar/catalog.html`. Es handelt sich um Passform-/Funktionsprototypen; die 89 Premiumzeichnungen bleiben ein eigener Arbeitsschritt.
+
+280 Regressionen, bestehende App-/Atelier-Chromiumprüfung (26 Gruppen) und 13 zusätzliche Katalog-Browsergruppen erfolgreich für c4dcdff69d4c2536f2e11c1993dd7cbd7c46a9ca: [Kataloglauf](https://github.com/Rowlandolo/KONPASU/actions/runs/41591939844), [bestehende Prüfungen](https://github.com/Rowlandolo/KONPASU/actions/runs/41591939822). Alle 4.465 Paare auf beiden Körpern im reinen Planer; 190 tatsächliche Einzelrenderings mit sichtbarer Pixeländerung (Minimum A 48 / B 61 Pixel bei 256×384). Alle 95 gemeinsam als Stressauswahl erhalten; keine Behauptung aller Paarungen als visuell abgenommen. Tatsächliche Außenstoffmasken verändern 563 Bildpixel und erhalten die Artikelgruppen.
+
+19 Familienvergleichsbilder mit Originaltafelbereichen und beiden Figuren sowie Mischoutfits, 95er-Stressfigur, mobile Ansicht und Detailvergleich gesichtet und unverändert unter `design/avatar/review-catalog-v10/` archiviert. Verschobene bestehende Karten besonders bei Sozial/Natur erkannt: neuer Vergleich nutzt explizite Viewports der bytegleichen Gesamttafel, mit tatsächlicher Pixelprüfung der Begrenzung. Legacykarten bleiben unangetastet. Koordinatenrundung beseitigt Node-/Chromium-Hashabweichungen bei Perlen/Fächern. Gewandmotive, Bandführung und sichtbarere Aurasockel nach Sichtprüfung verfeinert.
+
+Keine Live-, Daten-, Schema-, Besitz-, Rewardregel- oder Service-Workeränderung. Reales Gerät, PWA-Kaltstart/Upgrade, Mimikgrafiken, Griffposen, endgültige Schuhpassform und Premiumzeichnung bleiben offen. Vollbeleg und Grenzen: `design/avatar/verification-catalog-v10.json`; Lesefassung und Bedienung: `ARTBOOK_PROTOTYPE_REVIEW.md`; je Artikel vollständige Quelle, Module und beide Registrierungen: `ARTBOOK_95_PROTOTYPES.md`. Abschlusscommit enthält ausschließlich Dokumentation und Prüfbelege.
