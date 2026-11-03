@@ -1,0 +1,33 @@
+# Etappe 3.4.3b: gespeicherte persönliche Werte und Artbook-Hauptansicht
+
+Stand 03.11.2026. Entwicklung `feature/artbook-main-settings` auf Entwurfs-PR #10. Kandidat 2.4.1-preview.5, eigener Cache `konpasu-offline-v241-outfit-preview5`. Kein Deployment.
+
+## Ausdrückliche Bedienung
+
+Im Mehrfacheditor lassen sich persönliche Anproben jetzt mit **Persönliche Einstellungen speichern** übernehmen. Die Aktion schreibt ausschließlich die tatsächlich geänderten Werte aus Frisur, Haarfarbe, Mimik und Gewandfarbe. Unberührte, auch künftige unbekannte Profilwerte bleiben erhalten. Sie übernimmt keine Artikel, Ziele, Trainings, Körpermaße oder Szenen. Outfitänderungen zuerst mit ihrer eigenen Aktion speichern oder zurücksetzen.
+
+Danach kann **Artbook als Hauptansicht verwenden** ausdrücklich aktiviert werden. Dafür muss ein bekanntes aktives Mehrfachoutfit gespeichert und die persönliche Grafik vollständig geprüft geladen sein. Die Figur erscheint auf Startseite und im Studio. Die gewählte Körperform kommt aus dem gespeicherten Outfit; keine Inferenz aus Geschlecht oder Maßen. **Bisherige Hauptansicht verwenden** schaltet zurück, ohne Outfit oder persönliche Angaben zu löschen. Der Rückweg ist auch im Outfit-Einstieg und im Hauptavatar-Fehlerzustand verfügbar.
+
+Die persönliche Rücknahme ist unabhängig von Outfit-Rücknahme und flüchtigem Undo. Es gibt genau einen letzten persönlichen/Darstellungs-Rücknahmeeintrag; eine weitere bestätigte persönliche oder Ansichtsaktion ersetzt ihn. Sie ändert nur die Felder dieser Operation, sofern sie seitdem noch exakt dem gespeicherten Ergebnis entsprechen. Spätere Notizen, Ziele, Trainings, Namen und andere Profiländerungen bleiben erhalten. Ungespeicherte Anprobe zuerst speichern oder zurücksetzen.
+
+## Speicherung und Konflikte
+
+`avatar-appearance-persistence-v25.js` ist eine reine Kandidaten-/Vergleichslogik. Persönliche Aktionen verändern nur angegebene bestehende Felder. Die ausdrückliche Ansichtswahl ergänzt `profile.avatarView25` (bekanntes Format v1 mit Renderer und Zeit-/Operationsbeleg). `appearanceRecovery25` enthält davor/danach ausschließlich der tatsächlich betroffenen Felder. Keine Schema-/DB-Versionsänderung, kein Seeding beim Lesen/Rendern und keine Migration älterer Profile.
+
+`avatar-appearance-store-v25.js` verwendet dieselbe App-Speicherqueue, IndexedDB-Revisionsprüfung bzw. Fallback-Web-Lock/Rohdatenvergleich. Vollständiger aktueller Profilquellenvergleich vor jeder Aktion. Vorab kopierte gewöhnliche Saves werden nach einer persönlichen Transaktion ausschließlich für ihre verwalteten Felder rebasiert, damit sie neue Werte/Receipt nicht entfernen oder rückgenommene wiederherstellen. Bei Fehler werden nur noch unverändert zu dieser Transaktion gehörende Felder zurückgesetzt; spätere andere Memoryänderungen bleiben bestehen, Disk und bestehender Schreibschutz bleiben maßgeblich.
+
+Konflikt erhält Anprobe und sperrt Speichern. Ausdrückliches **Neueste Daten laden · Entwurf behalten** nutzt denselben geprüften Refresh. Persönliche Werte werden dreiseitig verglichen: lokal unberührte Werte übernehmen den neuesten Stand; lokal geänderte bleiben erhalten. Unterschiedliche Änderungen am selben Feld bleiben gesperrt, bis dieses Feld ausdrücklich neu gewählt oder die Anprobe zurückgesetzt wird. Andere ungespeicherte Appdaten verhindern Refresh; bestehender JSON-Export bleibt erreichbar. Unbekannte künftige Ansichts-/Recoveryformate, einschließlich künftiger verschachtelter Ansichtsbelege, bleiben opak und werden nicht herunterkonvertiert.
+
+## Hauptdarstellung und Rückweg
+
+`avatar-artbook-main-v25.js` hält bis zur vollständig erfolgreichen asynchronen Komposition den kompletten persönlichen SVG-Avatar sichtbar. Erst nach geprüften Modellen, Grafiken und erneutem frischem Besitz-/Tragbarkeitsnachweis wird die neue Szene eingeblendet. Alte, abgetrennte oder inzwischen veränderte Renderanforderungen dürfen keine aktuelle Darstellung ersetzen. Sichtbare Haupt-/Favoritenansichten laden bedarfsweise; alte Favoriten erben keine heutige Mehrfachausrüstung.
+
+Alle sichtbaren gültigen gespeicherten Instanzen werden erhalten. Ruhende/unverdiente/remappte Wünsche bleiben roh gespeichert; reine Inventar-Anprobe erzeugt keinen Besitz. Effekte Aus blendet Aura-/Effektartikel aus, ohne die Auswahl zu löschen. Gemeinsame begrenzte Figurtransformation erhält Körper-/Kleidungs-/Ausrüstungsanker bei optionalen Maßen. Neun vorhandene SVG-Szenen und der tatsächlich verfügbare Begleiter samt belegter Form werden komponiert; aktuelle Serien nur mit bestehendem Nachweis, niemals als heutige Serie in historischen Ansichten.
+
+Fehlende/ungültige Grafik führt zur vollständigen bisherigen Darstellung mit Hinweis und ausdrücklichem Retry. Keine Auswahl wird wegen eines Ladefehlers verändert. Die drei neuen Runtime-Module und bisherigen geprüften Grafikabhängigkeiten sind kritisch precached. Kein zusätzliches neues Grafikpaket in dieser Phase.
+
+## Prüfstand und offene Grenzen
+
+435 lokale Regressionen erfolgreich (33 neu). Echte Browserprüfung für sichtbares Speichern/Rücknahme, Hauptansicht, Reload/Offline, Quellenkonflikte, dreiseitigen Abgleich, Backup/Restore und Put-Fehler vorbereitet. Ergebnisse und Originalbilder folgen nach tatsächlichem Lauf.
+
+Der Grafikstand bleibt ein Prototyp für eine Pose: zwei vorhandene Körperformen, neun persönliche Kopf-/Haarzeichnungen, sechs PNG-Artikel und 89 Vektorstudien. Finale Premiumzeichnung, vollständige persönliche Körper-/Gesichts-/Hautbandbreite und universelle optische Passform bleiben offen. Persönliche und Outfit-API-Aktionen schreiben weiterhin **keine automatischen lückenlosen Historien-Schnappschüsse**; vorhandene vollständige Schnappschüsse werden benutzt, fehlende Vergangenheit übernimmt keinen heutigen Look. Historische Zielkonfiguration und echte iPhone-/VoiceOver-/GPU-/Alt-PWA-Abnahme sind weitere Gates vor Veröffentlichung.

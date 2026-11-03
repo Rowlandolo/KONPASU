@@ -127,15 +127,7 @@ function profileForDate(d){
  return {...createState().profile,lang:data.profile.lang};
 }
 showProfileForDate=profileForDate;
-function graphic(view=data.profile,d=today(),small=false,previewId=null){
- if(d!==today()&&view===data.profile)view=profileForDate(d);
- // Visual-only composition: only resolved and currently wearable equipment enters the renderer.
- // Preview can show locked rewards, but never mutates inventory or unlocks.
- const gear={};
- for(const slot of SLOTS){const item=resolveSlot(slot,view,d);if(item)gear[slot]=item}
- const preview=previewId?itemForId(previewId,view):null;
- const pet=currentPet(view,d);
- const petName=PETS[pet]?.[view.lang==='en'?'en':'de']||pet;
+function seriesFor(view,d){
  const selection=view.avatar2d?.streakSelection;
  const streakGoal=selection&&getGoal(selection.goalId);
  let series=null;
@@ -147,6 +139,18 @@ function graphic(view=data.profile,d=today(),small=false,previewId=null){
    if(family)series=`series/${family}-${selection.level}`;
   }
  }
+ return series;
+}
+function graphic(view=data.profile,d=today(),small=false,previewId=null){
+ if(d!==today()&&view===data.profile)view=profileForDate(d);
+ // Visual-only composition: only resolved and currently wearable equipment enters the renderer.
+ // Preview can show locked rewards, but never mutates inventory or unlocks.
+ const gear={};
+ for(const slot of SLOTS){const item=resolveSlot(slot,view,d);if(item)gear[slot]=item}
+ const preview=previewId?itemForId(previewId,view):null;
+ const pet=currentPet(view,d);
+ const petName=PETS[pet]?.[view.lang==='en'?'en':'de']||pet;
+ const series=seriesFor(view,d);
  const display=window.KONPASU_OUTFIT_DISPLAY25?.resolve(view,{date:d,bindings:{slots:SLOTS,itemForId,itemState}});
  const composition={
   profile:{...view,lang:data.profile.lang},gear,...(display?.mode==='multi'?{multi:display.items}:{}),preview,pet,petName,petStage:companionStage(view,d),
@@ -154,7 +158,8 @@ function graphic(view=data.profile,d=today(),small=false,previewId=null){
  };
  let result=window.KONPASU_COMPOSER_V24?.render(composition),artFallback=false;
  if(!result&&display?.mode==='multi'){artFallback=true;result=window.KONPASU_COMPOSER_V24?.render({...composition,multi:[],gear:{},preview:null});if(result)result=result.replace('data-kp25-mode="multi"','data-kp25-mode="fallback"')}
- return (result||graphicBlueprint(view,d,small,previewId))+((artFallback||display?.notices.some(n=>n!=='legacy-selection-active'))&&!small?`<p class="kp25-main-note" role="status">${tr('Einige vorgemerkte Teile sind noch nicht darstellbar oder derzeit nicht tragbar. Deine Auswahl bleibt gespeichert.','Some remembered items cannot be shown or are currently unavailable. Your selection stays saved.')}</p>`:'');
+ const fallback=(result||graphicBlueprint(view,d,small,previewId))+((artFallback||display?.notices.some(n=>n!=='legacy-selection-active'))&&!small?`<p class="kp25-main-note" role="status">${tr('Einige vorgemerkte Teile sind noch nicht darstellbar oder derzeit nicht tragbar. Deine Auswahl bleibt gespeichert.','Some remembered items cannot be shown or are currently unavailable. Your selection stays saved.')}</p>`:'');
+ return window.KONPASU_ARTBOOK_MAIN25?.markup({view:{...view,lang:data.profile.lang},date:d,small,preview,scale:sizeScale(view),rank:currentRankAt(d).name,current:view===data.profile},fallback)||fallback;
 }
 
 function blueprintModulePanel(){
@@ -446,5 +451,5 @@ document.addEventListener('change',function(e){const el=e.target;if(!el.matches(
 },true);
 ensure();
 // Do not force a write on boot; a pre-existing profile is migrated in memory and saved at next edit.
-window.KONPASU2D={ITEMS,SLOTS,itemForId,itemState,resolveSlot,graphic,companionStage,currentPet,ensure};
+window.KONPASU2D={ITEMS,SLOTS,itemForId,itemState,resolveSlot,graphic,companionStage,currentPet,ensure,seriesFor};
 })();

@@ -1,6 +1,6 @@
 {
-  "version": "2.4.1-preview.4",
-  "release": "KONPASU 2.4.1 preview 4 \u2013 personal Artbook variant study",
+  "version": "2.4.1-preview.5",
+  "release": "KONPASU 2.4.1 preview 5 \u2013 saved personal settings and Artbook main avatar",
   "features": [
     "goal-calendar-v23.js",
     "training-v22.js",
@@ -16,7 +16,10 @@
     "avatar-outfit-preview-v25.js",
     "avatar-outfit-editor-v25.js",
     "avatar-outfit-display-v25.js",
-    "design/avatar/personal-variants-v11.js"
+    "design/avatar/personal-variants-v11.js",
+    "avatar-appearance-persistence-v25.js",
+    "avatar-appearance-store-v25.js",
+    "avatar-artbook-main-v25.js"
   ],
-  "cache": "konpasu-offline-v241-outfit-preview4"
+  "cache": "konpasu-offline-v241-outfit-preview5"
 }

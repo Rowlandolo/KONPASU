@@ -1,0 +1,38 @@
+name: Saved appearance and Artbook main avatar
+on:
+  pull_request:
+    paths:
+      - avatar-appearance*.js
+      - avatar-artbook-main-v25.js
+      - avatar-outfit*.js
+      - avatar-outfit-editor-v25.css
+      - avatar2d.js
+      - app.js
+      - app.css
+      - index.html
+      - sw.js
+      - version.json
+      - scripts/artbook-main-settings-browser-check.cjs
+      - tests/appearance-persistence.cjs
+      - tests/artbook-main.cjs
+      - .github/workflows/artbook-main-settings.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  artbook-main-settings-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/artbook-main-settings-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: artbook-main-settings-acceptance
+          path: browser-results/artbook-main-settings/
