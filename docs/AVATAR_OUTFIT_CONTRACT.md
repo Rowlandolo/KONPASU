@@ -53,7 +53,7 @@ Unterstützt werden endliche JSON-Werte ohne Zyklen, Accessors, sparse/erweitert
 
 ## Lieblingsoutfits
 
-Ein Favorit übernimmt ausschließlich seine Slotmap; `equipped` ist in seiner Vorschau leer. Ein absichtlich leerer Look darf keine aktuelle oder ältere Ausrüstung hineinmischen. Optionale Farb-/Szenen-/Begleiterwerte folgen der bisherigen Vorschau-Fallbackregel. Unbekannte Favoritenfelder bleiben vollständig erhalten. Negative, gebrochene oder nicht existierende Indizes werden abgewiesen. Unlesbare Favoriteneinträge werden als blockierte Quelle erhalten.
+Ein Favorit übernimmt ausschließlich seine Slotmap; `equipped` ist in seiner Vorschau leer. Ein absichtlich leerer Look darf keine aktuelle oder ältere Ausrüstung hineinmischen. Optionale Farb-/Szenen-/Begleiterwerte folgen der bisherigen Vorschau-Fallbackregel. Unbekannte Favoritenfelder bleiben vollständig erhalten. Alte Favoriten speichern keine vollständige eigene Frisur-/Mimik-/Effekt-/Zielfamilienhistorie; fehlende Werte werden entsprechend der bestehenden Vorschau aus dem aktuellen Profil gelesen und nicht als damals gespeicherte Information ausgegeben. Negative, gebrochene oder nicht existierende Indizes werden abgewiesen. Unlesbare Favoriteneinträge werden als blockierte Quelle erhalten.
 
 Diese Vorschau trägt nichts tatsächlich an und synchronisiert keine gespeicherten Begleiterfelder. Erst eine spätere ausdrücklich implementierte Aktion darf einen Look übernehmen; sie benötigt einen eigenen Vertrag und Rückweg.
 
