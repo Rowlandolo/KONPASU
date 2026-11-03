@@ -7,32 +7,32 @@
       "contract": "./base-layer-contract.json",
       "equipment": {
         "focus-headband-band": {
-          "x": 220,
+          "x": 221,
           "y": 32,
-          "width": 94,
-          "height": 34
+          "width": 65,
+          "height": 24
         },
         "focus-headband-bow": {
           "x": 211,
-          "y": 51,
+          "y": 45,
           "width": 32,
           "height": 25
         },
         "focus-headband-tails": {
           "x": 184,
-          "y": 56,
+          "y": 50,
           "width": 42,
           "height": 70
         }
       },
       "anchors": {
         "head": {
-          "x": 265,
-          "y": 53
+          "x": 254,
+          "y": 43
         },
         "headTie": {
           "x": 225,
-          "y": 61
+          "y": 55
         }
       }
     },
@@ -96,20 +96,20 @@
           "height": 206.08
         },
         "focus-headband-band": {
-          "x": 220,
+          "x": 221,
           "y": 32,
-          "width": 94,
-          "height": 34
+          "width": 65,
+          "height": 24
         },
         "focus-headband-bow": {
           "x": 211,
-          "y": 51,
+          "y": 45,
           "width": 32,
           "height": 25
         },
         "focus-headband-tails": {
           "x": 184,
-          "y": 56,
+          "y": 50,
           "width": 42,
           "height": 70
         }
@@ -144,12 +144,12 @@
           "y": 350
         },
         "head": {
-          "x": 265,
-          "y": 53
+          "x": 254,
+          "y": 43
         },
         "headTie": {
           "x": 225,
-          "y": 61
+          "y": 55
         }
       }
     }

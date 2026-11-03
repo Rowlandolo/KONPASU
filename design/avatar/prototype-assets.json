@@ -282,10 +282,10 @@
       "fitAlphaThreshold": 16,
       "transparentPixelsFraction": 0.747758,
       "placement": {
-        "x": 220,
+        "x": 221,
         "y": 32,
-        "width": 94,
-        "height": 34
+        "width": 65,
+        "height": 24
       },
       "sha256": "232ed5b1d01edbfe87d3b3ee5bfe04a49883b9a1e0424834c3067baeee3f0723",
       "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
@@ -318,7 +318,7 @@
       "transparentPixelsFraction": 0.642303,
       "placement": {
         "x": 211,
-        "y": 51,
+        "y": 45,
         "width": 32,
         "height": 25
       },
@@ -353,7 +353,7 @@
       "transparentPixelsFraction": 0.834032,
       "placement": {
         "x": 184,
-        "y": 56,
+        "y": 50,
         "width": 42,
         "height": 70
       },

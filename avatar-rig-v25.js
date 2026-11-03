@@ -2,7 +2,7 @@
 /* Development-only rig planner. Not loaded by the live app. No storage or reward mutation. */
 (function(root){
  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value)}return value};
- const RIG=freeze({id:'adult-three-quarter-v1',width:512,height:768,provisional:true,poseSource:'design/avatar/layers/body-v02.png',coordinateOrigin:'top-left',sideConvention:'viewer-left / viewer-right',anchors:{head:{x:265,y:53},headTie:{x:225,y:61},torso:{x:251,y:196},shoulderLeft:{x:187,y:139},shoulderRight:{x:319,y:150},forearmLeft:{x:153,y:330},forearmRight:{x:354.5,y:330},wristLeft:{x:152.5,y:348},wristRight:{x:363.5,y:350}}});
+ const RIG=freeze({id:'adult-three-quarter-v1',width:512,height:768,provisional:true,poseSource:'design/avatar/layers/body-v02.png',coordinateOrigin:'top-left',sideConvention:'viewer-left / viewer-right',anchors:{head:{x:254,y:43},headTie:{x:225,y:55},torso:{x:251,y:196},shoulderLeft:{x:187,y:139},shoulderRight:{x:319,y:150},forearmLeft:{x:153,y:330},forearmRight:{x:354.5,y:330},wristLeft:{x:152.5,y:348},wristRight:{x:363.5,y:350}}});
  const part=(id,anchor,z,depthRole='front',family='strength')=>({id,anchor,z,depthRole,asset:`assets/avatar-v25/${family}/${id}.png`,status:'prototype-review'});
  const CATALOG=freeze([
   {id:'strength-1',titleDe:'Handgelenkbänder',titleEn:'Wrist wraps',source:'assets/konpasu_body_motion_rewards.webp',reference:'reward-art/strength-1.webp',legacySlot:'arm',parts:[part('wrist-wrap-left','wristLeft',510),part('wrist-wrap-right','wristRight',511)]},
