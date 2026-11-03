@@ -61,6 +61,7 @@
  }
  function prepareRollback(state){
   const before=copy(state);validateExtension(before);const r=before[UNDO];if(!r)fail('no-outfit-recovery');if(r.version!==1)fail('unsupported-recovery-version');
+  if(before.profile?.[FIELD]&&selection(before.profile[FIELD]).supported!==true||r.after.version!==1)fail('unsupported-outfit-version');
   if(!same(before.profile?.[FIELD],r.after))fail('recovery-conflict');
   const candidate=copy(before);setField(candidate.profile,FIELD,r.before);delete candidate[UNDO];validateExtension(candidate);return {changed:true,candidate,comparison:comparison(before,candidate),diagnostics:[]};
  }
