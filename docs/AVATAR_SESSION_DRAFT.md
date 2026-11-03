@@ -12,7 +12,7 @@ Stand 03.11.2026. Aufbau auf dem verlustfreien Outfit-Leseadapter aus Entwurfs-P
 - Entfernen, Körperform A/B und Zurücksetzen als explizite Aktionen. Undo/Redo stellt genaue Reihenfolge, Instanzidentität, Sichtbarkeit, Herkunft und Körperform wieder her. Neue echte Aktion nach Undo verwirft den Redozweig; No-ops tun dies nicht.
 - DE/EN über ausdrückliche Textwörterbücher, kurze Hinweise, sichtbarer Leer-/Such-/Fehlerzustand und mindestens 44 px Touch-Ziele. Quellen bleiben optional unter Details sichtbar.
 
-Die Grafiken bleiben sechs PNG-Prototypartikel und 89 Vektorstudien. Kein Abschluss der Premiumzeichnung, Mimik-/Griffposen oder endgültigen Schuhpassform. Natürliche Überdeckung wird erklärt, nicht durch Löschen der Auswahl kaschiert.
+Die Vorschau verwendet die gewählte Atelier-Basisfigur. Historische Personalisierung, Szenen und der gesonderte Legacy-Begleiter bleiben vollständig in der Quelle erhalten; ihre Übernahme in den neuen Renderer gehört zur späteren Appintegration. Die Grafiken bleiben sechs PNG-Prototypartikel und 89 Vektorstudien. Kein Abschluss der Premiumzeichnung, Mimik-/Griffposen oder endgültigen Schuhpassform. Natürliche Überdeckung wird erklärt, nicht durch Löschen der Auswahl kaschiert.
 
 ## Reiner Entwurfsvertrag
 
@@ -20,7 +20,7 @@ Die Grafiken bleiben sechs PNG-Prototypartikel und 89 Vektorstudien. Kein Abschl
 
 Der Snapshot ist ausdrücklich `format: konpasu-session-outfit-draft`, `version: 1`, `sessionOnly: true`. Er ist kein unterstütztes Backup-, Restore-, Import- oder Profilspeicherformat. Alle zurückgegebenen Daten sind unabhängige JSON-Kopien. Der vollständige ursprüngliche Adapterstand bleibt unter `source` erhalten und wird durch keine Entwurfsaktion verändert.
 
-Eine Instanz besitzt eine sitzungsstabile `instanceId` (`draft-item-N`), unveränderte `itemId`, getrennte `artworkId`, `choiceId`, `origin`, ursprüngliche `evidence`, `visible` und `provenance`. Der ID-Zähler läuft monoton; verworfene IDs werden nicht an andere Artikel vergeben. Quellen und Katalogangebote haben getrennte Choice-IDs. Kataloganproben haben ausdrücklich unbekannten Besitz/Tragbarkeit; eine vorhandene Grafik erteilt keine Freischaltung.
+Eine Instanz besitzt eine sitzungsstabile `instanceId` (`draft-item-N`), unveränderte `itemId`, getrennte `artworkId`, `choiceId`, `origin`, ursprüngliche `evidence`, `visible` und `provenance`. Der ID-Zähler läuft monoton; verworfene IDs werden nicht an andere Artikel vergeben. Quellen und Katalogangebote haben intern getrennte Choice-IDs; die Oberfläche zeigt pro Artikelidentität nur ein Angebot, damit ein Standardartikel nicht doppelt erscheint. Kataloganproben haben ausdrücklich unbekannten Besitz/Tragbarkeit; eine vorhandene Grafik erteilt keine Freischaltung.
 
 Startauswahl: ausschließlich die bereits vom Altvertrag aufgelösten Artikel; abgeschaltete Effekte bleiben ausgeblendet. Ruhende höhere Wünsche, überlagerte Legacy-Einträge und unbekannte Rohwerte bleiben im vollständigen Original erhalten und werden nicht ungefragt zusätzlich aktiviert. Fehlende Historie/ungültige Favoriten sperren den Entwurf. Historische Beispiele behalten Datum und Schnappschuss; Anproben ändern diese Quelle nicht und schaffen keinen damaligen Besitz.
 

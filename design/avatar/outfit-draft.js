@@ -16,8 +16,8 @@
  function translate(){document.documentElement.lang=language;document.title=language==='de'?'KONPASU · Outfitentwurf':'KONPASU · Outfit draft';for(const n of document.querySelectorAll('[data-i18n]'))n.textContent=t(n.dataset.i18n);$('draft-scene').setAttribute('aria-label',t('sceneLabel'));for(const option of $('draft-case').options){const c=cases.find(c=>c.id===option.value);option.textContent=language==='de'?c.title:enCases[c.id]}}
  function button(text,action,instanceId,disabled=false){const b=node('button',text);b.type='button';b.dataset.action=action;b.dataset.instanceId=instanceId;b.disabled=disabled;return b}
  function choices(snapshot){
-  const query=$('draft-search').value.trim().toLocaleLowerCase(language),selected=new Set(snapshot.items.map(i=>i.itemId)),rows=[];
-  for(const c of snapshot.choices){if(![name(c),c.itemId,c.artworkId].some(s=>s.toLocaleLowerCase(language).includes(query)))continue;
+  const query=$('draft-search').value.trim().toLocaleLowerCase(language),selected=new Set(snapshot.items.map(i=>i.itemId)),offered=new Set(),rows=[];
+  for(const c of snapshot.choices){if(offered.has(c.itemId))continue;offered.add(c.itemId);if(![name(c),c.itemId,c.artworkId].some(s=>s.toLocaleLowerCase(language).includes(query)))continue;
    const row=node('article');row.className='choice';row.dataset.choiceId=c.choiceId;row.append(node('strong',name(c)));const identity=node('p',c.itemId);identity.className='identity';row.append(identity);const subtitle=node('p',t(c.origin==='source'?'sourceChoice':'tryChoice'));subtitle.className='muted';row.append(subtitle);const b=button(t(selected.has(c.itemId)?'added':'add'),'add','',snapshot.blocked||loading||selected.has(c.itemId));b.dataset.choiceId=c.choiceId;b.setAttribute('aria-label',t('add')+': '+name(c)+' · '+c.itemId);row.append(b);rows.push(row);
   }
   $('draft-choices').replaceChildren(...rows);$('draft-results').textContent=rows.length+' '+t('matches');
