@@ -45,13 +45,13 @@
   if(!Object.prototype.hasOwnProperty.call(PROPORTIONS,id))throw Error('Unknown proportion preset');
   return {...PROPORTIONS[id]};
  }
- async function decode(layer){
+ async function decode(layer,baseURL){
   layer=root.KONPASU_DELIVERY25?.resolve(layer)||{...layer,mime:'image/png'};
-  const key=layer.file+':'+layer.sha256;if(decodedCache.has(key))return decodedCache.get(key);
-  const pending=decodeFile(layer);decodedCache.set(key,pending);try{return await pending}catch(error){decodedCache.delete(key);throw error}
+  const key=(baseURL||'')+layer.file+':'+layer.sha256;if(decodedCache.has(key))return decodedCache.get(key);
+  const pending=decodeFile(layer,baseURL);decodedCache.set(key,pending);try{return await pending}catch(error){decodedCache.delete(key);throw error}
  }
- async function decodeFile(layer){
-  const response=await fetch(layer.file,{cache:'no-store'});
+ async function decodeFile(layer,baseURL){
+  const response=await fetch(baseURL?new URL(layer.file,baseURL).href:layer.file,{cache:'no-store'});
   if(!response.ok)throw Error('Base layer missing: '+layer.id);
   const bytes=await response.arrayBuffer();
   const digest=new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes));
@@ -61,10 +61,10 @@
   if(image.naturalWidth!==layer.width||image.naturalHeight!==layer.height)throw Error('Base dimensions mismatch: '+layer.id);
   return {image,src};
  }
- async function load(canvas,contract,frontCanvas){
+ async function load(canvas,contract,frontCanvas,{baseURL}={}){
   validate(contract);
   // No partial body is shown if any required file fails validation.
-  const decoded=await Promise.all(artwork(contract).map(async layer=>[layer.fragmentId,await decode(layer)])),images=new Map(decoded);
+  const decoded=await Promise.all(artwork(contract).map(async layer=>[layer.fragmentId,await decode(layer,baseURL)])),images=new Map(decoded);
   if(!frontCanvas||frontCanvas===canvas)throw Error('A separate front hair canvas is required');
   let active=[],raster=null,dirty=true;
   function draw(selected){

@@ -1,5 +1,5 @@
 'use strict';
-const KONPASU_RELEASE='2.4.1-preview.1';
+const KONPASU_RELEASE='2.4.1-preview.2';
 /* KONPASU 1.4 Goals and Training – offline app: no trackers, APIs, CDNs or remote dependencies. */
 const PRESETS=[
  ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
@@ -49,7 +49,7 @@ const ITEM_NAMES={strength:['Kote des Anfängers','Eisen-Kote','Samurai-Sode','K
 function createState(){const start=today();return {version:4,createdAt:new Date().toISOString(),profile:{lang:'de',coachTone:'balanced',name:'',gender:'neutral',accent:'navy',height:'',weight:'',chest:'',waist:'',hips:'',companion:'fox',equipped:{}},goals:PRESETS.map(([key,title,category,icon,target,period,targetValue,unit,direction])=>({id:key,key,title,category,icon,target,period,targetValue,unit,direction,active:['strength','water','reading'].includes(key),events:[{date:start,active:['strength','water','reading'].includes(key)}],versions:[{date:start,period,target,targetValue,unit,direction}]})),checks:[],measurements:[],exercises:[],plans:[],sessions:[],draft:null,avatarHistory:[],awards:[],coachDismissals:[],goalEdits:[],experiments:[],reflections:[]}}
 function migrate(data){if(!data||!Array.isArray(data.goals)||!Array.isArray(data.sessions)||!Array.isArray(data.checks)||!Array.isArray(data.exercises))throw Error('Keine gültige KONPASU-Sicherung.');const start=(data.createdAt||new Date().toISOString()).slice(0,10);const fromPreset=k=>PRESETS.find(x=>x[0]===k);const old=JSON.parse(JSON.stringify(data));old.version=4;old.measurements=Array.isArray(old.measurements)?old.measurements:[];old.awards=Array.isArray(old.awards)?old.awards:[];old.avatarHistory=Array.isArray(old.avatarHistory)?old.avatarHistory:[];old.coachDismissals=Array.isArray(old.coachDismissals)?old.coachDismissals:[];old.goalEdits=Array.isArray(old.goalEdits)?old.goalEdits:[];old.experiments=Array.isArray(old.experiments)?old.experiments:[];old.reflections=Array.isArray(old.reflections)?old.reflections:[];old.profile={...createState().profile,...old.profile};old.profile.equipped=old.profile.equipped||{};old.goals=old.goals.map(g=>{const p=fromPreset(g.key||g.id);const v=p?{period:p[5],target:p[4],targetValue:p[6],unit:p[7],direction:p[8]}:{period:g.period||'weekly',target:g.target||'',targetValue:null,unit:'',direction:'min'};return {...v,...g,events:g.events||[{date:start,active:!!g.active}],versions:g.versions||[{date:start,period:g.period||v.period,target:g.target||v.target,targetValue:v.targetValue,unit:v.unit,direction:v.direction}]}});if(data.version===2){old.checks=old.checks.map(c=>{const g=old.goals.find(x=>x.id===c.goalId);return g?.period==='weekly'?{...c,date:monday(c.date),originalDate:c.date}:c})}old.sessions=old.sessions.map(s=>({...s,items:(s.items||[]).map(i=>({...i,sets:i.sets||[]}))}));return old}
 let knownRevision=0,storageLocked=false,writeFaultNotified=false,storageReadFailed=false,knownFallbackRaw=null;
-let outfitMutationSerial25=0;
+let outfitMutationSerial25=0,knownMemoryBaseline25=null;
 let data=createState(),tab='today',day=today(),analysisDays=84,focusGoal=null,trainingView='plans',goalView='active',modal=null,db=null,saveQueue=Promise.resolve(),persistGood=true,backupReminder=false,toastTimeout=null,historyDate=today(),expandedCoach=false,restUntil=0,experimentExpanded=false;
 const getGoal=id=>data.goals.find(g=>g.id===id);
 const getEx=id=>data.exercises.find(e=>e.id===id);
@@ -64,8 +64,8 @@ function writeDB(v){return new Promise((resolve,reject)=>{
  req.onsuccess=()=>{try{const existing=req.result,revision=Number.isInteger(existing?._writeRevision)?existing._writeRevision:0;
   if(revision!==knownRevision){conflict=true;try{tx.abort()}catch{}return}
   store.put({...v,_writeRevision:knownRevision+1},'state')}catch(error){operationError=error;try{tx.abort()}catch{}}};
- tx.oncomplete=()=>{knownRevision++;resolve(true)};
- tx.onabort=()=>reject(operationError||new Error(conflict?'Datenkonflikt: Ein anderes KONPASU-Fenster hat neuere Änderungen gespeichert.':'Lokale Datenbank-Transaktion abgebrochen.'));
+ tx.oncomplete=()=>{knownRevision++;knownMemoryBaseline25=JSON.parse(JSON.stringify(v));resolve(true)};
+ tx.onabort=()=>{const error=operationError||new Error(conflict?'Datenkonflikt: Ein anderes KONPASU-Fenster hat neuere Änderungen gespeichert.':'Lokale Datenbank-Transaktion abgebrochen.');if(conflict)error.code='KONPASU_REVISION_CONFLICT';reject(error)};
  tx.onerror=()=>reject(tx.error||new Error('Lokale Datenbank konnte nicht schreiben.'));
  }catch(e){reject(e)}
 })}
@@ -75,10 +75,10 @@ function writeFallback(snapshot){
  if(!navigator.locks?.request)throw Error('Sicheres Speichern im Ersatzspeicher ist hier nicht verfügbar. Bitte ein JSON-Backup sichern und in einem aktuellen Browser erneut öffnen.');
  return navigator.locks.request('konpasu-fallback-v2-write',()=>{
   const current=localStorage.getItem('konpasu-fallback-v2');
-  if(current!==knownFallbackRaw)throw Error('Datenkonflikt: Ein anderes KONPASU-Fenster hat den Ersatzspeicher geändert. Bitte ungesicherte Änderungen als JSON exportieren und die App neu öffnen.');
+  if(current!==knownFallbackRaw){const error=Error('Datenkonflikt: Ein anderes KONPASU-Fenster hat den Ersatzspeicher geändert. Bitte ungesicherte Änderungen als JSON exportieren und die App neu öffnen.');error.code='KONPASU_REVISION_CONFLICT';throw error}
   const next=JSON.stringify(snapshot);
   localStorage.setItem('konpasu-fallback-v2',next);
-  knownFallbackRaw=next;
+  knownFallbackRaw=next;knownMemoryBaseline25=JSON.parse(next);
  });
 }
 function storageWriteFailed(e){persistGood=false;storageLocked=true;console.error('KONPASU save failed',e);
@@ -140,7 +140,7 @@ async function init(){
   // Persist newly verified awards, but do not rewrite an unchanged profile on boot.
   if(seeded||awardsChanged)await store();
  }
- render(); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview1')){sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview1','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
+ render();if(!storageLocked)knownMemoryBaseline25=JSON.parse(JSON.stringify(data)); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview2')){if(window.KONPASU_OUTFIT_EDITOR25?.hasUnsavedChanges()){notice(data.profile.lang==='en'?'Update ready. Save your outfit before reopening.':'Update bereit. Speichere deinen Outfitentwurf vor dem erneuten Öffnen.');return}sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview2','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
 function notice(s){document.querySelector('#toast')?.remove();const d=document.createElement('div');d.id='toast';d.className='toast';d.textContent=translateText(s);document.body.appendChild(d);clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>d.remove(),2700)}
 function activeAt(g,d){const list=[...(g.events||[])].sort((a,b)=>a.date.localeCompare(b.date));let result=false;for(const x of list){if(x.date<=d)result=!!x.active}return result}
 function configAt(g,d){const list=(g.versions||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));let conf={period:g.period,target:g.target,targetValue:g.targetValue,unit:g.unit,direction:g.direction};for(const v of list){if(v.date<=d)conf={...conf,...v}}return conf}

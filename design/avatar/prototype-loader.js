@@ -24,14 +24,14 @@
   });
  }
  const hex=bytes=>Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');
- async function load(manifest){
+ async function load(manifest,{baseURL}={}){
   if(!root.crypto?.subtle)throw Error('Die Werkstatt bitte über localhost oder HTTPS öffnen.');
   const next=new Map();
   for(const spec of manifest.assets){
    placement(spec);clippingPolygons(spec);
    if(!/^\.\/equipment\/[a-z0-9-]+\.png$/.test(spec.file))throw Error('Unsupported prototype path');
    const delivered=root.KONPASU_DELIVERY25?.resolve(spec)||{...spec,mime:'image/png'};
-   const response=await fetch(delivered.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
+   const response=await fetch(baseURL?new URL(delivered.file,baseURL).href:delivered.file,{cache:'no-store'});if(!response.ok)throw Error('Grafik fehlt: '+spec.partId);
    const bytes=await response.arrayBuffer(),view=new Uint8Array(bytes);
    if(view.length<24||(delivered.mime==='image/png'?hex(view.slice(0,8))!=='89504e470d0a1a0a':hex(view.slice(0,4))!=='52494646'||hex(view.slice(8,12))!=='57454250'))throw Error('Invalid PNG: '+spec.partId);
    if(hex(new Uint8Array(await root.crypto.subtle.digest('SHA-256',bytes)))!==delivered.sha256)throw Error('Artwork checksum mismatch: '+spec.partId);
