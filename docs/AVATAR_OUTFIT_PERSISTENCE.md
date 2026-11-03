@@ -14,7 +14,7 @@ Bekannte Formate werden bei Startup und tatsächlichem Backupimport auch innerha
 
 `prepareSave` akzeptiert ausschließlich einen heutigen expliziten Current-Entwurf, dessen Quellprofil strukturell noch dem aktuellen Profil entspricht. Historische und Favoritenvorschauen können nicht als aktuelles Profil gespeichert werden. Änderungen an anderen Datenbereichen sind zulässig, ihre Besitz-/Tragbarkeitsfolgen werden beim Speichern neu über die tatsächlichen bestehenden App-APIs ausgewertet. Mitgelieferte Entwurfsevidenz wird nicht als Besitzbeleg verwendet.
 
-Neue Artikel benötigen bestätigten Besitz; sichtbare neue Artikel zusätzlich bestätigte Tragbarkeit. Eine unverdiente Anprobe wird auch ausgeblendet nicht als Besitz gespeichert. Ein früher gespeicherter, inzwischen ruhender oder unbekannter Artikel bleibt bei unverändertem Wunsch erhalten. Die aktuelle Auflösung zeigt ihn nur bei erneut bestätigtem Besitz und Tragbarkeit an. Ein unbekannter Grafik-/Familienwechsel wird nicht stillschweigend umgedeutet. Eigene Ziele mit derselben Grafik behalten unterschiedliche Artikel-/Instanz-IDs. Neue Körperformen werden nie aus Körpermaßen abgeleitet.
+Neue Artikel benötigen bestätigten Besitz; sichtbare neue Artikel zusätzlich bestätigte Tragbarkeit. Eine unverdiente Anprobe wird auch ausgeblendet nicht als Besitz gespeichert. Ein früher gespeicherter, inzwischen ruhender oder unbekannter Artikel bleibt bei unverändertem Wunsch erhalten und darf ohne neue Besitzbehauptung ausgeblendet werden. Erneutes Einblenden benötigt wieder bestätigte Tragbarkeit und Besitz. Die aktuelle Auflösung zeigt ihn nur bei erneut bestätigtem Besitz und Tragbarkeit an. Ein unbekannter Grafik-/Familienwechsel wird nicht stillschweigend umgedeutet. Eigene Ziele mit derselben Grafik behalten unterschiedliche Artikel-/Instanz-IDs. Neue Körperformen werden nie aus Körpermaßen abgeleitet.
 
 ## Speicherpfad und Konflikte
 
@@ -32,7 +32,7 @@ Entwicklungskandidat **2.4.1-preview.1**, eigener Cache `konpasu-offline-v241-ou
 
 ## Prüfung und folgende Integration
 
-25 neue Node-Prüfungen; zuletzt insgesamt 349 lokal erfolgreich. Tatsächliche neue Browserabnahme läuft über `.github/workflows/outfit-storage.yml`; bis zu ihrem Abschluss keine Browser-/Geräteabnahme behaupten. Test ausschließlich mit synthetischen Daten in frischen Browserkontexten auf zufälligem Loopback-Origin, nie auf Pages oder einem privaten Browserprofil.
+26 neue Node-Prüfungen; zuletzt insgesamt 350 lokal erfolgreich. Tatsächliche neue Browserabnahme läuft über `.github/workflows/outfit-storage.yml`; bis zu ihrem Abschluss keine Browser-/Geräteabnahme behaupten. Test ausschließlich mit synthetischen Daten in frischen Browserkontexten auf zufälligem Loopback-Origin, nie auf Pages oder einem privaten Browserprofil.
 
 Die neue Browserprüfung verwendet echte Kalender-/Reward-APIs mit vier bestätigten abgeschlossenen Wochen zweier synthetischer eigener Ziele; keine Tier-/Evidenzstubs. Sie prüft echte IndexedDB, Startup/Reload, vorhandene UI für JSON-Backup/-Import, Offline-Kaltstart mit Worker, Konflikttabs, Queueüberlagerung, Rücknahme mit späteren Daten und erzwungenen Put-Fehler. Die zusätzlichen Ergebniskarten werden ausschließlich vom Testskript erzeugt und gehören nicht zur Appoberfläche.
 

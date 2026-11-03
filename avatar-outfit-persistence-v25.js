@@ -50,7 +50,7 @@
   if(!Array.isArray(draft.items)||draft.items.length>500)fail('invalid-draft-items');const diagnostics=[];
   for(const i of draft.items){
    const old=prior?.items.find(p=>p.instanceId===i.instanceId&&p.itemId===i.itemId&&p.artworkId===i.artworkId),item={...(old?copy(old):{}),instanceId:i.instanceId,itemId:i.itemId,artworkId:i.artworkId,visible:i.visible};
-   const evidence=evaluate(item,freeze(copy(before.profile)),date,bindings||{}),unchanged=old&&old.visible===i.visible;
+   const evidence=evaluate(item,freeze(copy(before.profile)),date,bindings||{}),unchanged=old&&(old.visible===i.visible||i.visible===false);
    if(evidence.owned!==true||i.visible&&evidence.allowed!==true){if(!unchanged)fail('selection-not-eligible');diagnostics.push({instanceId:i.instanceId,reason:evidence.reason,retained:true})}
    record.items.push(item);
   }
