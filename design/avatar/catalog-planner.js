@@ -10,6 +10,7 @@
   for(const item of data.items){
    if(!ID.test(item.id)||ids.has(item.id)||!families.has(item.family)||item.id!==item.family+'-'+item.tier||!Array.isArray(item.parts)||item.parts.length>8||![item.titleDe,item.titleEn,item.legacy?.titleDe].every(s=>typeof s==='string'&&s.length>0&&s.length<160))throw Error('Invalid catalogue article');ids.add(item.id);
    const ref=item.reference;if(!ref||ref.column!==item.tier||!Number.isInteger(ref.row)||ref.row<1||ref.row>5||item.legacy.successfulCompletedWeeks!==[1,4,12,26,52][item.tier-1])throw Error('Invalid reference or unchanged gate');
+   const cell=ref.boardCellViewBox;if(ref.comparisonSource!=='original-board-viewport'||!Array.isArray(cell)||cell.length!==4||!cell.every(Number.isFinite)||cell[0]<0||cell[1]<0||cell[2]<=0||cell[3]<=0||cell[0]+cell[2]>ref.board.width||cell[1]+cell[3]>ref.board.height)throw Error('Invalid original board viewport');
    for(const r of [ref.board,ref.card])if(!/^\.\/references-v10\/[a-z0-9_-]+\.webp$/.test(r.file)||!/^[a-f0-9]{64}$/.test(r.sha256)||!Number.isSafeInteger(r.bytes)||r.bytes<24||r.unaltered!==true)throw Error('Invalid original reference');
    if(item.parts.length)vectors++;
    for(const p of item.parts){
@@ -18,7 +19,7 @@
     if(p.occludedBy!==undefined&&(!Array.isArray(p.occludedBy)||p.occludedBy.some(x=>!['kimono','outer-front'].includes(x))))throw Error('Unknown vector occlusion');
    }
   }
-  if(vectors!==89||parts.size!==129)throw Error('Incomplete prototype coverage');
+  if(vectors!==89||parts.size!==134)throw Error('Incomplete prototype coverage');
   for(const family of families)for(let tier=1;tier<=5;tier++)if(!ids.has(family+'-'+tier))throw Error('Missing stable identity');
   return true;
  }

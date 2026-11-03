@@ -21,7 +21,7 @@
   const pouch=(seal=false,controller=false)=>path('M31 17Q50 27 69 17L79 76Q53 88 23 76Z',floral,gold)+path('M29 17Q37 7 50 13Q66 5 71 17','none',gold,2)+knot(51,20,.6)+tassel(78,55)+flower(43,44,.8)+(controller?path('M34 51Q31 39 40 38H59Q69 39 65 51L60 55L53 49H46L39 55Z',ivory,gold)+line(39,43,45,43,ink)+line(42,40,42,46,ink)+circle(58,43,1.3,ink):seal?circle(50,53,12,ivory)+rect(43,46,13,13,light,ink,1)+circle(50,53,14,'none','#ad5f52',1.8)+line(40,63,60,43,'#ad5f52',2):'');
   const bottle=(bamboo=false)=>path(bamboo?'M34 12L64 12L65 88L32 88Z':'M39 8H61V28Q79 36 77 64L72 86Q50 98 28 86L23 63Q20 36 39 28Z',bamboo?ink:shade,gold,1.4)+rect(35,7,30,11,ink,gold,2)+(bamboo?[31,56,81].map(y=>line(33,y,65,y,gold,2)).join(''):flower(50,57,1.4))+path('M31 19Q78 1 72 46','none',gold,1.8)+tassel(75,38);
   const gourd=(sealed=false)=>path('M38 13Q32 23 39 35Q10 48 23 75Q32 96 60 91Q89 83 78 54Q73 40 61 35Q70 14 56 10Z',ivory,gold,1.3)+rect(38,6,22,9,light,gold)+knot(48,36,.65)+flower(49,66,1.5)+tassel(80,63,ink)+(sealed?path('M36 10L62 22M35 15L59 27','none','#a55c53',2)+circle(79,87,4,gold):'');
-  const lantern=(paper=false)=>path('M49 13Q39-1 52 0Q64 0 57 13','none',ink,2)+(paper?e('ellipse',{cx:50,cy:47,rx:32,ry:34,fill:ivory,stroke:gold,'stroke-width':1.4})+[25,36,47,58,69].map(y=>path(`M21 ${y}Q50 ${y+5} 79 ${y}`,'none',gold,.5)).join(''):rect(25,25,50,55,ivory,gold,1)+path('M19 24L50 12L81 24ZM20 80H80L73 86H27Z',ink,gold)+[31,68].map(x=>line(x,27,x,78,gold,2)).join(''))+circle(50,49,14,light)+flower(50,49,1.2)+rect(32,13,36,7,ink,gold,1)+tassel(50,84,ink);
+  const lantern=(paper=false,motif='flower')=>path('M49 13Q39-1 52 0Q64 0 57 13','none',ink,2)+(paper?e('ellipse',{cx:50,cy:47,rx:32,ry:34,fill:ivory,stroke:gold,'stroke-width':1.4})+[25,36,47,58,69].map(y=>path(`M21 ${y}Q50 ${y+5} 79 ${y}`,'none',gold,.5)).join(''):rect(25,25,50,55,ivory,gold,1)+path('M19 24L50 12L81 24ZM20 80H80L73 86H27Z',ink,gold)+[31,68].map(x=>line(x,27,x,78,gold,2)).join(''))+circle(50,49,14,light)+(motif==='moon'?path('M55 35A16 16 0 1 0 61 62A13 13 0 0 1 55 35',gold,'none'):flower(50,49,1.2))+rect(32,13,36,7,ink,gold,1)+tassel(50,84,ink)+(motif==='memory'?path('M14 30Q24 8 77 17','none',ink,1)+flower(22,22,.7)+flower(69,15,.8):'');
   const book=()=>rect(18,10,63,82,ink,gold,2)+rect(23,13,55,75,floral,gold,1)+line(27,15,27,87,gold,1.2)+flower(53,42,1.7)+path('M18 61H81M62 89L62 99L68 95L73 99V89',ivory,gold)+knot(73,61,.55);
   const satchel=()=>path('M25 38Q19-4 59 8Q83 15 76 40','none',ink,7)+path('M25 38Q19-4 59 8Q83 15 76 40','none',gold,1)+rect(12,30,77,60,ink,gold,5)+path('M10 30H90L82 63Q50 76 17 62Z',floral,gold)+[29,71].map(x=>rect(x,57,8,22,ivory,gold,1)+rect(x+1,63,6,7,ink,gold,1)+tassel(x+4,78)).join('')+flower(50,47,1.1);
   const fan=(kind='lotus')=>path('M50 88L4 34Q50-8 96 34Z',floral,gold,1.6)+[4,15,27,39,51,63,75,87,96].map((x,i)=>line(50,88,x,34-Math.sin(i/8*Math.PI)*18,gold,.75)).join('')+(kind==='map'?path('M12 42L31 29L47 44L65 24L84 41L65 50L42 44Z',light,gold)+path('M58 47H77M61 47V62M73 47V62M58 52H77','none','#a45d4f',1.5):kind==='festival'?path('M27 47L36 38L45 47M30 47V61H43V47M25 61H48','none',gold,1.2)+[55,72].map(x=>[0,45,90,135].map(a=>line(x-7,31,x+7,31,ivory,.7).replace('></line>',` transform="rotate(${a} ${x} 31)"></line>`)).join('')).join(''):flower(50,44,1.7)+leaf(67,49,.65))+knot(50,88,.4)+tassel(60,88,ink);
@@ -29,7 +29,7 @@
   const halo=(kind='lotus')=>[39,45].map((r,i)=>e('ellipse',{cx:50,cy:50,rx:r,ry:r*.78,fill:'none',stroke:i?gold:light,'stroke-width':i?.65:2.2,'stroke-dasharray':i?'3 7':'none'})).join('')+path('M8 72Q82 92 95 33M9 66Q3 21 76 15','none',gold,1.4)+(kind==='moon'?circle(51,30,16,ivory,gold)+path('M10 70Q35 53 61 69T92 68','none',light,6):kind==='sakura'?[14,32,68,85].map((x,i)=>flower(x,30+i*13,.8)).join(''):kind==='grounded'?path('M33 69Q50 54 67 69L61 75H39ZM40 60L45 45H55L60 60L50 65Z',ink,gold)+circle(50,37,7,ink):[0,1,2,3,4].map(i=>path(`M50 79Q${11+i*15} ${45-i%2*20} ${50} ${48-i*2}Q${92-i*14} ${45-i%2*20} 50 79`,i===2?ivory:light,gold,.7)).join(''))+[13,29,73,89].map((x,i)=>path(`M${x} ${18+i*14}v5m-2-2.5h4`,'none',gold,.9)).join('');
   const wind=()=>path('M6 74C-3 20 100 11 92 43C85 73 19 87 17 60C12 42 69 28 77 48','none',light,5)+path('M9 73C1 28 93 5 94 35C100 73 20 93 16 64','none',gold,1)+leaf(23,48,.65)+leaf(81,62,.7);
   const garmentRear=()=>path('M24 4Q50-3 77 5L98 49L87 152L68 157L53 124L33 158L7 151L2 48Z',shade,gold,1.2)+path('M26 14Q14 70 13 145M75 14Q84 67 85 146','none',light,2)+[28,70].map(x=>leaf(x,124,.85)).join('');
-  const garmentFront=()=>path('M25 5L46 0L37 153L15 142L23 71L4 103L0 54ZM53 0L75 6L100 54L94 103L76 70L87 143L61 158Z',floral,gold,1.15)+path('M45 0L27 41L35 51M54 0L74 43L64 52','none',ivory,4)+path('M6 59L19 70M81 70L95 59','none',gold,1.5)+knot(50,62,.5);
+  const garmentFront=()=>path('M25 5L46 0L37 153L15 142L23 71L4 103L0 54Z',['forest','harvest','zen'].includes(theme)?ivory:floral,gold,1.15)+path('M53 0L75 6L100 54L94 103L76 70L87 143L61 158Z',floral,gold,1.15)+path('M45 0L27 41L35 51M54 0L74 43L64 52','none',ivory,4)+path('M6 59L19 70M81 70L95 59','none',gold,1.5)+knot(50,62,.5)+leaf(24,127,.65);
   let content='',viewBox=[100,100];
   switch(shape){
    case 'scarf-band':content=path('M7 25Q48 8 95 23L88 42Q49 27 12 45Z',floral,gold)+knot(78,34,.5);break;
@@ -40,6 +40,14 @@
    case 'sleeve':content=path('M18 6Q50 0 82 7L72 95L24 91Z',ivory,gold)+path('M21 13L79 14L76 30L22 28ZM26 74L74 77L72 95L24 91Z',floral,gold)+leaf(45,69,1.3);break;
    case 'garment-rear':viewBox=[100,160];content=garmentRear();break;
    case 'garment-front':viewBox=[100,160];content=garmentFront();break;
+   case 'garment-front-map':viewBox=[100,160];content=garmentFront()+path('M17 125L25 105L34 120M65 137L74 116L84 137','none',ink,1.3)+circle(70,107,8,ivory,gold)+path('M70 99L72 105L78 107L72 109L70 115L68 109L62 107L68 105Z',gold,'none');break;
+   case 'garment-front-mountain':viewBox=[100,160];content=garmentFront()+path('M15 136L25 105L37 135ZM62 145L75 110L85 137Z',light,gold)+path('M20 122L25 105L31 122M69 124L75 110L79 124',ivory,gold,.5);break;
+   case 'garment-front-wisteria':viewBox=[100,160];content=garmentFront()+[15,29,72,84].map((x,i)=>path(`M${x} ${42+i%2*25}q10 20 0 43`,'none',gold,.8)+[0,1,2,3,4].map(j=>e('ellipse',{cx:x+(j%2?3:-2),cy:54+i%2*25+j*6,rx:3,ry:4.4,fill:['#b5a0c4','#d6c5dd'][j%2],stroke:gold,'stroke-width':.35})).join('')).join('');break;
+   case 'garment-front-moon':viewBox=[100,160];content=garmentFront()+path('M25 92A14 14 0 1 0 33 116A11 11 0 0 1 25 92',gold,'none')+[65,79].map((x,i)=>path(`M${x} ${104+i*22}v10m-5-5h10`,'none',ivory,1)).join('');break;
+   case 'garment-front-wind':viewBox=[100,160];content=garmentFront()+path('M12 87Q38 66 27 117M65 105Q95 78 81 134','none',ivory,2.3)+path('M13 91Q35 80 27 113M64 109Q91 96 80 133','none',gold,.8);break;
+   case 'garment-front-sakura':viewBox=[100,160];content=garmentFront()+flower(24,103,1.15)+flower(76,122,1.3)+flower(65,72,.85)+path('M14 126L29 87M65 139L78 96','none',gold,.8);break;
+   case 'garment-front-zen':viewBox=[100,160];content=garmentFront()+path('M25 3L46 0L32 44L13 29ZM54 0L76 4L89 30L69 44Z',ivory,gold)+knot(51,48,.65);break;
+   case 'apron':viewBox=[100,150];content=path('M26 3H73L93 139Q51 151 8 139Z',ink,gold,1.5)+rect(20,82,62,42,floral,gold,3)+path('M31 30V69M25 30V42Q31 50 37 42V30M58 31Q45 42 58 48Q70 43 58 31V69','none',gold,2)+knot(50,6,.8);break;
    case 'breastplate':content=path('M18 11L37 3L50 13L65 3L83 12L77 87Q50 100 23 85Z',floral,gold,1.6)+[28,45,63,81].map(y=>path(`M23 ${y}Q50 ${y+6} 77 ${y}`,'none',gold,1.2)).join('')+flower(50,25,1.1);break;
    case 'sash-band':content=path('M3 32Q50 20 98 32L96 66Q50 78 5 64Z',floral,gold,1.5)+path('M6 38Q50 26 96 38M6 59Q50 71 96 59','none',ivory,2);break;
    case 'sash-bow':content=bow(50,32,1.1);break;
@@ -60,6 +68,8 @@
    case 'hairpin':content=path('M54 6A28 28 0 1 0 77 49A24 24 0 0 1 54 6',gold,ink,.8)+flower(42,48,1.5)+leaf(70,62,.8)+[0,1,2].map(i=>tassel(50+i*10,61+i*5,i%2?light:ivory)).join('');break;
    case 'pillow-charm':content=path('M16 25Q50 13 85 23L80 75Q50 88 14 75Z',floral,gold,1.8)+path('M55 34A15 15 0 1 0 65 55A13 13 0 0 1 55 34',ivory,gold)+path('M30 67Q20 53 35 53L32 42L37 48L42 40L42 55Q54 62 45 68Z',ivory,gold,.5)+knot(74,21,.65)+tassel(84,58);break;
    case 'lantern':content=lantern();break;
+   case 'lantern-moon':content=lantern(false,'moon');break;
+   case 'lantern-memory':content=lantern(false,'memory');break;
    case 'paper-lantern':content=lantern(true);break;
    case 'moon':content=halo('moon');break;
    case 'bento':content=rect(13,31,77,49,ink,gold,4)+path('M15 43L31 13L47 43ZM43 43L60 12L78 43Z',ivory,gold)+rect(25,34,12,11,ink,gold,1)+rect(55,34,12,11,ink,gold,1)+path('M15 43H88L83 60H18Z',floral,gold)+knot(49,62,.7);break;
@@ -72,10 +82,12 @@
    case 'map-fan':content=fan('map');break;
    case 'festival-fan':content=fan('festival');break;
    case 'lotus':content=halo();break;
+   case 'lotus-pedestal':viewBox=[100,50];content=[0,1,2,3,4].map(i=>path(`M50 46Q${5+i*16} ${15-i%2*13} 50 ${8-i%2*4}Q${95-i*16} ${15-i%2*13} 50 46`,i===2?ivory:light,gold,.7)).join('')+e('ellipse',{cx:50,cy:47,rx:42,ry:2,fill:'none',stroke:gold,'stroke-width':.8});break;
    case 'sakura':content=halo('sakura')+path('M10 75Q24 30 85 18','none',ink,1.5)+flower(25,51,1.1)+flower(61,23,1.2);break;
    case 'grounded':content=halo('grounded');break;
    case 'still-halo':content=halo().replace(/<path d="M50 79[^<]+<\/path>/g,'')+path('M50 10V90M10 50H90','none',gold,.5);break;
    case 'book-charm':content=rect(25,25,50,64,floral,gold,4)+path('M43 25Q18-6 51 4Q78 5 58 25','none',gold,2)+flower(49,52,1.2)+tassel(28,72,ink);break;
+   case 'phrasebook-charm':content=rect(25,25,50,64,floral,gold,4)+path('M43 25Q18-6 51 4Q78 5 58 25','none',gold,2)+flower(49,47,1.1)+[65,72,79].map(y=>path(`M29 ${y}q10-9 20 0t21 0`,'none',ivory,1)).join('')+tassel(28,72,ink);break;
    case 'scroll':content=scroll();break;
    case 'check-scroll':content=scroll(true);break;
    case 'book':content=book();break;
@@ -107,6 +119,7 @@
    case 'scene-lanterns':content=[19,49,79].map((x,i)=>line(x,0,x,27+i*13,gold,1)+rect(x-8,24+i*13,16,23,ivory,gold,3)+line(x,48+i*13,x,55+i*13,gold,1)).join('')+[14,84].map((x,i)=>flower(x,75-i*17,1.1)).join('');break;
    case 'harvest-crest':content=circle(50,50,39,ink,gold,2)+path('M42 82Q54 44 62 14','none',gold,2)+[25,37,49,61].map(y=>leaf(59-(y-25)/5,y,.6)).join('')+flower(29,72,1);break;
    case 'harvest-bowl':content=path('M14 46H87L75 78Q50 89 26 78Z',ivory,gold)+path('M19 44Q25 19 50 23Q76 18 82 44Z',light,gold)+[30,48,66].map(x=>circle(x,37,3,gold)).join('')+flower(50,66,.8);break;
+   case 'pumpkin':content=e('ellipse',{cx:50,cy:57,rx:39,ry:31,fill:'#cc8c4a',stroke:gold,'stroke-width':1.5})+[31,49,67].map(x=>e('ellipse',{cx:x,cy:57,rx:12,ry:30,fill:'none',stroke:'#875c32','stroke-width':1})).join('')+path('M47 26Q41 9 56 14L53 29Z',ink,gold)+leaf(68,24,.6);break;
    default:throw Error('Unknown prototype drawing '+shape);
   }
   const defs=e('defs',{},e('linearGradient',{id:prefix+'-shade',x1:0,y1:0,x2:1,y2:1},e('stop',{offset:0,'stop-color':light})+e('stop',{offset:.3,'stop-color':ink})+e('stop',{offset:.8,'stop-color':ink})+e('stop',{offset:1,'stop-color':light}))+e('pattern',{id:prefix+'-floral',width:32,height:42,patternUnits:'userSpaceOnUse'},rect(0,0,32,42,ink,'none',0)+leaf(12,31,.55)+flower(23,13,.45)));

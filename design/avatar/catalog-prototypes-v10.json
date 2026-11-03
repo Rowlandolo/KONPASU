@@ -3,7 +3,7 @@
   "scope": "isolated-development-prototypes-no-storage-or-unlock-changes",
   "source": "premium-art-bundle.js",
   "sourceBundleSHA256": "0fe0ec00b5f9458d296dede4b51531f81bfda5e74b7bc1d7e6c0bfae985150d6",
-  "sourceReview": "Five original boards visually inspected; row/column and all stable reward-card keys retained. Names describe artwork only, not live reward renames.",
+  "sourceReview": "Five original boards visually inspected; row/column and all stable reward-card keys retained. Some legacy card crops shift to neighbouring illustrations, especially social/nature. Original comparison uses declared viewports of the unchanged complete board, never a silently edited card. Names describe artwork only, not live reward renames.",
   "limits": [
     "Vector fit studies are not premium-final artwork.",
     "Two standing body forms in one pose.",
@@ -111,6 +111,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -118,14 +120,24 @@
           "file": "./references-v10/strength-1.webp",
           "bytes": 10388,
           "sha256": "92ac367218e17cb59036013c72ca5c78af2128ca74ceb51b054e3b0a855d0435",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          474,
+          835,
+          205,
+          238
+        ],
         "row": 4,
         "column": 1,
         "depiction": "Goldblüten und Quasten; zwei getrennte Handgelenkteile."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -160,6 +172,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -167,14 +181,24 @@
           "file": "./references-v10/strength-2.webp",
           "bytes": 12118,
           "sha256": "4bf01919be583b66e0a2d7ed5f9bd92223a694534bcb234673c0d00564469df5",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          662,
+          835,
+          205,
+          238
+        ],
         "row": 4,
         "column": 2,
         "depiction": "Dunkle Unterarmpanzer mit goldener Verschnürung."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -209,6 +233,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -216,14 +242,24 @@
           "file": "./references-v10/strength-3.webp",
           "bytes": 11308,
           "sha256": "eaf686d978ff1227c50c68795c9431374aa00b0fb4a6b16fbc22de1a597348a6",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          850,
+          835,
+          205,
+          238
+        ],
         "row": 4,
         "column": 3,
         "depiction": "Schwarze Kreuzriemen, Medaillon, Schnallen und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -258,6 +294,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -265,14 +303,24 @@
           "file": "./references-v10/strength-4.webp",
           "bytes": 13758,
           "sha256": "7c76bf1f4858b4a60d23bd0b153a6fe301e3724cff7872aa3fce734eebcaff25",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1038,
+          835,
+          205,
+          238
+        ],
         "row": 4,
         "column": 4,
         "depiction": "Zwei grün-goldene Schulterplatten; kein Kopfteil."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -307,6 +355,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -314,14 +364,24 @@
           "file": "./references-v10/strength-5.webp",
           "bytes": 15856,
           "sha256": "391eb68229c7a7c4cfd6d4bb9af13715aefea11d7b5d1628c5414b818a66cd46",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1226,
+          835,
+          205,
+          238
+        ],
         "row": 4,
         "column": 5,
         "depiction": "Dunkler Brustpanzer mit goldenen botanischen Beschlägen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -356,6 +416,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -363,14 +425,24 @@
           "file": "./references-v10/cardio-1.webp",
           "bytes": 12406,
           "sha256": "7dbe5de001b61a36ab6b3ddb9cb4eff4361399b65595785513c9083efef65fef",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          474,
+          94,
+          205,
+          238
+        ],
         "row": 1,
         "column": 1,
         "depiction": "Grün-ivoryfarbener Schal mit Goldblüten, zwei quastenbesetzten Enden."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -385,16 +457,16 @@
           "anchor": "torso",
           "fit": {
             "form-a": [
-              165,
-              104,
-              85,
-              163
+              115,
+              102,
+              150,
+              245
             ],
             "form-b": [
-              158.68,
-              104,
-              95.2,
-              182.56
+              102.68,
+              102,
+              168,
+              274.4
             ]
           },
           "category": "neck-rear",
@@ -469,6 +541,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -476,14 +550,24 @@
           "file": "./references-v10/cardio-2.webp",
           "bytes": 10200,
           "sha256": "9015aad80a703ad5f8de281a125b331443d79457ab0adf351859b206d51de0f3",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          662,
+          94,
+          205,
+          238
+        ],
         "row": 1,
         "column": 2,
         "depiction": "Dunkle hohe Tabi, grüne Schäfte und goldene Kreuzbänder."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -581,6 +665,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -588,14 +674,24 @@
           "file": "./references-v10/cardio-3.webp",
           "bytes": 11090,
           "sha256": "5f22e68fd331f5769f1ebb0bbee6879edef2709d617c148b9265a144cfb9c7e2",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          850,
+          94,
+          205,
+          238
+        ],
         "row": 1,
         "column": 3,
         "depiction": "Zwei grüne Unterarmwickel mit goldenen Schnüren."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -701,6 +797,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -708,14 +806,24 @@
           "file": "./references-v10/cardio-4.webp",
           "bytes": 13180,
           "sha256": "1132d921fd793db3fe2d9b975de2acb2db4a01a7635aaff9ca8b16bcfcdbf337",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1038,
+          94,
+          205,
+          238
+        ],
         "row": 1,
         "column": 4,
         "depiction": "Grün-ivoryfarbener Umhang, dunkler Innenstoff und Schulterknoten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -754,7 +862,7 @@
           "theme": "forest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-wind",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -775,8 +883,8 @@
           "occludes": "arm",
           "partId": "cardio-4-study-2",
           "file": "./vector-prototypes-v10/cardio-4-study-2.svg",
-          "sha256": "384b5eaec192074bfc53eaa2e57aa392fd1dbca05b9d92f144e2eb156b6dec5a",
-          "bytes": 2580,
+          "sha256": "e2ecce8d8f8da32c5f2b28495a3e2f6f7de27064ef6074be6b8f13af148acb2c",
+          "bytes": 3448,
           "viewBox": [
             100,
             160
@@ -815,6 +923,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -822,14 +932,24 @@
           "file": "./references-v10/cardio-5.webp",
           "bytes": 13836,
           "sha256": "c5439b19b9651006be036a2add21f0adfc5d8ede19a813ea5c343ed64ba08fca",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1226,
+          94,
+          205,
+          238
+        ],
         "row": 1,
         "column": 5,
         "depiction": "Dunkle Rüstung, freie Stoffbahnen und gold-grüne Windbögen; als Setmodule."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -870,7 +990,7 @@
           "theme": "forest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-wind",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -891,8 +1011,8 @@
           "occludes": "arm",
           "partId": "cardio-5-study-2",
           "file": "./vector-prototypes-v10/cardio-5-study-2.svg",
-          "sha256": "ef406dbc7ded194811c2721c8fdfaac9ac3122140493fe43572027ac4a25b9f5",
-          "bytes": 2580,
+          "sha256": "e2eca24b46ac9ee22a47d8ff5408a299c65f4e767fe8c7a630b0ac406f82fb9e",
+          "bytes": 3448,
           "viewBox": [
             100,
             160
@@ -989,6 +1109,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -996,14 +1118,24 @@
           "file": "./references-v10/steps-1.webp",
           "bytes": 10516,
           "sha256": "b8797502fe39a5747b6fd56c47f61edb8152fb37bedf9426563cc8e4667bbcbc",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          474,
+          341,
+          205,
+          238
+        ],
         "row": 2,
         "column": 1,
         "depiction": "Grüne Riemen, helle Sohle und goldene Blattakzente."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": false,
+      "displayNameDiffersFromLegacy": false,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1101,6 +1233,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1108,14 +1242,24 @@
           "file": "./references-v10/steps-2.webp",
           "bytes": 12230,
           "sha256": "54409a37b75a854d9a83ca2dd011fe3635d9f904e55b5390e7627527b63692e1",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          662,
+          341,
+          205,
+          238
+        ],
         "row": 2,
         "column": 2,
         "depiction": "Grün-ivoryfarbene Reisetasche mit braunem Trageriemen und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1215,6 +1359,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1222,14 +1368,24 @@
           "file": "./references-v10/steps-3.webp",
           "bytes": 9508,
           "sha256": "c4c1d4c522d76388842fd9b37bd465ba1ee6bede022e25264b34f0c1997faf1d",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          850,
+          341,
+          205,
+          238
+        ],
         "row": 2,
         "column": 3,
         "depiction": "Kleiner geflochtener Kegelhut als Anhänger mit Wisteria und Goldknoten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1299,6 +1455,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1306,14 +1464,24 @@
           "file": "./references-v10/steps-4.webp",
           "bytes": 13074,
           "sha256": "1d1be60a71af7ed5092006f4babbfec4ecae7e6f6528bc6d110b5fe69b8a5cfc",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1038,
+          341,
+          205,
+          238
+        ],
         "row": 2,
         "column": 4,
         "depiction": "Ivoryfarbene Jacke mit grünem Futter, Blättern und Goldkordel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1352,7 +1520,7 @@
           "theme": "forest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-map",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -1373,8 +1541,8 @@
           "occludes": "arm",
           "partId": "steps-4-study-2",
           "file": "./vector-prototypes-v10/steps-4-study-2.svg",
-          "sha256": "196fe665528ccfb2fcf4e33804e1b9359452ba5b6ef8d2504b4d58f0e78f271f",
-          "bytes": 2577,
+          "sha256": "ad231dc0e88b9da13b60050256bd306cd7e4a81078c4997fd00767cb2ad4203d",
+          "bytes": 3556,
           "viewBox": [
             100,
             160
@@ -1413,6 +1581,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1420,14 +1590,24 @@
           "file": "./references-v10/steps-5.webp",
           "bytes": 9968,
           "sha256": "978cd8328196af27cb47ab268ac2eb53b8975d08ff88166cdb5472e9d0be3558",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1226,
+          341,
+          205,
+          238
+        ],
         "row": 2,
         "column": 5,
         "depiction": "Grünes Standbanner, Kompassstern und frei laufende helle Bänder."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1526,6 +1706,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1533,14 +1715,24 @@
           "file": "./references-v10/mobility-1.webp",
           "bytes": 11364,
           "sha256": "eb16db235ee787af8418cb6efa248a37bee423c968132a92b62484c1c2d4c0ae",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          474,
+          588,
+          205,
+          238
+        ],
         "row": 3,
         "column": 1,
         "depiction": "Zwei grün-ivoryfarbene Stoffbänder mit Blattmuster und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1554,16 +1746,16 @@
           "anchor": "torso",
           "fit": {
             "form-a": [
-              137,
-              143,
-              64,
-              175
+              105,
+              141,
+              91,
+              205
             ],
             "form-b": [
-              127.32,
-              143,
-              71.68,
-              196
+              91.48,
+              141,
+              101.92,
+              229.6
             ]
           },
           "category": "ribbon-rear",
@@ -1583,16 +1775,16 @@
           "anchor": "torso",
           "fit": {
             "form-a": [
-              311,
-              143,
-              64,
-              175
+              334,
+              141,
+              91,
+              205
             ],
             "form-b": [
-              322.2,
-              143,
-              71.68,
-              196
+              347.96,
+              141,
+              101.92,
+              229.6
             ]
           },
           "category": "ribbon-rear",
@@ -1638,6 +1830,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1645,14 +1839,24 @@
           "file": "./references-v10/mobility-2.webp",
           "bytes": 11862,
           "sha256": "31e2712a0f1e55ae76b658987c7ac7a072d1d3b32bd912f1c2158b4c25d44e77",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          662,
+          588,
+          205,
+          238
+        ],
         "row": 3,
         "column": 2,
         "depiction": "Grüner Obi mit goldener Schleife und langen hellen Bändern."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1751,6 +1955,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1758,14 +1964,24 @@
           "file": "./references-v10/mobility-3.webp",
           "bytes": 10976,
           "sha256": "0b225ab9a84251d929be74e0aff9767e6585d9da2ed93b53a5116aa4aa09f3bc",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          850,
+          588,
+          205,
+          238
+        ],
         "row": 3,
         "column": 3,
         "depiction": "Zwei helle Ärmel mit grünen Abschlüssen und Blattmotiv."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1871,6 +2087,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1878,14 +2096,24 @@
           "file": "./references-v10/mobility-4.webp",
           "bytes": 13296,
           "sha256": "9fb259264dfd0d626d57924b45dc2cca52c3b39fa6d4466f782f12564866f7a9",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1038,
+          588,
+          205,
+          238
+        ],
         "row": 3,
         "column": 4,
         "depiction": "Luftiger ivory-grüner Haori mit Wisteria, offenem Vorderteil und Knoten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -1924,7 +2152,7 @@
           "theme": "forest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-wisteria",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -1945,8 +2173,8 @@
           "occludes": "arm",
           "partId": "mobility-4-study-2",
           "file": "./vector-prototypes-v10/mobility-4-study-2.svg",
-          "sha256": "8272e84430a57f3147474e337002cc51ecc77d21767bc70368297834108ce849",
-          "bytes": 2586,
+          "sha256": "9ac0e22d7dd9344a4b72ac2add48558cb50e7510b755e9147bc9a51c36d7e59f",
+          "bytes": 5732,
           "viewBox": [
             100,
             160
@@ -1985,6 +2213,8 @@
           "file": "./references-v10/konpasu_body_motion_rewards.webp",
           "bytes": 436058,
           "sha256": "e27c88fcba66bd6319b614e6c7cb496ec7ae95b05a361f180a3318381102db67",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -1992,14 +2222,24 @@
           "file": "./references-v10/mobility-5.webp",
           "bytes": 10092,
           "sha256": "aabc0aa88ad99263cb0cd9fb7373e0d2c16d45485e5e1d5189aef10e8c8ed472",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1226,
+          588,
+          205,
+          238
+        ],
         "row": 3,
         "column": 5,
         "depiction": "Langer grün-goldener Winddrache mit transparenten Spiralbändern."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2098,6 +2338,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2105,14 +2347,24 @@
           "file": "./references-v10/water-1.webp",
           "bytes": 9634,
           "sha256": "4f310fb23eb5aab288a82f2b8158291570d3b562f733e11950e3824b30873d5f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          522,
+          171,
+          181,
+          157
+        ],
         "row": 1,
         "column": 1,
         "depiction": "Grünes Bambusrohr mit Goldrand, Trageschnur und einer Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2182,6 +2434,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2189,14 +2443,24 @@
           "file": "./references-v10/water-2.webp",
           "bytes": 10554,
           "sha256": "50ce2b145b7743bc8c62140d7329cda108e5dc4425114b6d20a760d1dfe490e9",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          704,
+          171,
+          181,
+          157
+        ],
         "row": 1,
         "column": 2,
         "depiction": "Dunkle bauchige Flasche mit Goldblüten und Kordel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2266,6 +2530,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2273,14 +2539,24 @@
           "file": "./references-v10/water-3.webp",
           "bytes": 12244,
           "sha256": "cb47a67c18a81591d12e3c3177b73e2119b6e661fdbca8c4a2fb5c85c2c2c903",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          886,
+          171,
+          181,
+          157
+        ],
         "row": 1,
         "column": 3,
         "depiction": "Hellblauer facettierter Behälter in goldenem Tragenetz."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2350,6 +2626,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2357,14 +2635,24 @@
           "file": "./references-v10/water-4.webp",
           "bytes": 11484,
           "sha256": "1341ec1ee7d8812e4e2e9cad2381c1d76eaa9e94b784be838b6d7412a7f150c3",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1068,
+          171,
+          181,
+          157
+        ],
         "row": 1,
         "column": 4,
         "depiction": "Ivoryfarbene doppelte Kalebasse mit Goldblüten und grünem Anhänger."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2434,6 +2722,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2441,14 +2731,24 @@
           "file": "./references-v10/water-5.webp",
           "bytes": 12766,
           "sha256": "999db0f1af8450b88af8b4e2c5fa2ad67ec0a4949eb0374505749f5940887603",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1250,
+          171,
+          181,
+          157
+        ],
         "row": 1,
         "column": 5,
         "depiction": "Dunkles Goldgefäß mit grünem Drachen und transparentem Wasserbogen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2548,6 +2848,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2555,14 +2857,24 @@
           "file": "./references-v10/sleep-1.webp",
           "bytes": 10620,
           "sha256": "d9dee7ea7e636a4a02402a07e893c55c10d67e11d1d77e65c155121baf93e079",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          522,
+          334,
+          181,
+          157
+        ],
         "row": 2,
         "column": 1,
         "depiction": "Goldene Mondsichel, Kirschblüten und hängende Wisteria."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2661,6 +2973,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2668,14 +2982,24 @@
           "file": "./references-v10/sleep-2.webp",
           "bytes": 12194,
           "sha256": "e20968b5fef9fe82e6ac8349507c4e55cf22afa39ab46e5ba6f2f417c8fdd5f2",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          704,
+          334,
+          181,
+          157
+        ],
         "row": 2,
         "column": 2,
         "depiction": "Kleines navyfarbenes Kissen mit Mond, Hase und Goldkordel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2745,6 +3069,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2752,14 +3078,24 @@
           "file": "./references-v10/sleep-3.webp",
           "bytes": 12216,
           "sha256": "29a6fdf2a384264a2fce437f3774118be3f19dc99db7cbb1c8bd1f7576e6591a",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          886,
+          334,
+          181,
+          157
+        ],
         "row": 2,
         "column": 3,
         "depiction": "Navy-ivoryfarbener Haori mit goldenen Nachtblüten und offenem Revers."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2798,7 +3134,7 @@
           "theme": "night"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-moon",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -2819,8 +3155,8 @@
           "occludes": "arm",
           "partId": "sleep-3-study-2",
           "file": "./vector-prototypes-v10/sleep-3-study-2.svg",
-          "sha256": "4e6d58f72c74bb5ba49d07f83ceff0a01fcdc3073ec9aa4d64c444ecfe1d0f15",
-          "bytes": 2577,
+          "sha256": "2a8eebe3f674a89b31470f3505610edd7d168f6c0ea03d089f31dd00f96aafa5",
+          "bytes": 3576,
           "viewBox": [
             100,
             160
@@ -2859,6 +3195,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2866,14 +3204,24 @@
           "file": "./references-v10/sleep-4.webp",
           "bytes": 11492,
           "sha256": "24e6489249eeb988fb88e2868d91ad05ac58bce0849e246179950cf8ddc8967e",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1068,
+          334,
+          181,
+          157
+        ],
         "row": 2,
         "column": 4,
         "depiction": "Goldene Rahmenlaterne mit Mondmotiv und seitlicher Blütenranke."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2882,7 +3230,7 @@
       ],
       "parts": [
         {
-          "shape": "lantern",
+          "shape": "lantern-moon",
           "z": 414,
           "anchor": "hip-right",
           "fit": {
@@ -2903,8 +3251,8 @@
           "attachment": "Suspended from right Obi; not a hand-grip claim",
           "partId": "sleep-4-study-1",
           "file": "./vector-prototypes-v10/sleep-4-study-1.svg",
-          "sha256": "c6dff98934432fe7a122a3440dee5567204335225141959bdb5aedc5619de51e",
-          "bytes": 3562,
+          "sha256": "4d218b41ef30166c16bb270f338872532f83eb43d1ebc70cccb3d53bb0334f30",
+          "bytes": 2951,
           "viewBox": [
             100,
             100
@@ -2943,6 +3291,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -2950,14 +3300,24 @@
           "file": "./references-v10/sleep-5.webp",
           "bytes": 10654,
           "sha256": "d4ef6072f3588dc5676d1c063f7e5be5d715053bb704f8a4c9ff58919d2f37cc",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1250,
+          334,
+          181,
+          157
+        ],
         "row": 2,
         "column": 5,
         "depiction": "Goldener Vollmond, navyfarbener Nachthimmel, helle Wolkenbänder."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -2972,13 +3332,13 @@
           "fit": {
             "form-a": [
               34,
-              150,
+              -50,
               444,
               444
             ],
             "form-b": [
               34,
-              150,
+              -50,
               444,
               444
             ]
@@ -3026,6 +3386,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3033,14 +3395,24 @@
           "file": "./references-v10/nutrition-1.webp",
           "bytes": 14050,
           "sha256": "e9a32e76a33a4d7b6a6a3dca42c3c3d9eaca7c1dab5a4df377743f729643634f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          522,
+          498,
+          181,
+          157
+        ],
         "row": 3,
         "column": 1,
         "depiction": "Kleine dunkle Bentobox mit Reisbällchen und Goldschleife."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3110,6 +3482,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3117,14 +3491,24 @@
           "file": "./references-v10/nutrition-2.webp",
           "bytes": 12544,
           "sha256": "dd51428b604bd6ed7733d9e53a9f013859b11c3c314f93a84756db51f217df1f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          704,
+          498,
+          181,
+          157
+        ],
         "row": 3,
         "column": 2,
         "depiction": "Grüner Stoffbeutel mit Blattmotiv, hellem Hals und Kordel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3194,6 +3578,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3201,14 +3587,24 @@
           "file": "./references-v10/nutrition-3.webp",
           "bytes": 13406,
           "sha256": "9625d1d12dedc6d32f110043783cc5e2ae549ce5ffd7f76c2a795d7e6f6b7d6b",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          886,
+          498,
+          181,
+          157
+        ],
         "row": 3,
         "column": 3,
         "depiction": "Grün-ivoryfarbener Schärpengürtel mit Blütenknoten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3307,6 +3703,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3314,14 +3712,24 @@
           "file": "./references-v10/nutrition-4.webp",
           "bytes": 11668,
           "sha256": "6a6aaf42c45a47cf4a411a1a96baef837ff9574703ca6c6fc06b7ab4e800f044",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1068,
+          498,
+          181,
+          157
+        ],
         "row": 3,
         "column": 4,
         "depiction": "Helle offene Jacke und dunkelgrüne Schürze mit goldenen Besteckmotiven."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3361,7 +3769,7 @@
           "theme": "harvest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-map",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -3382,8 +3790,8 @@
           "occludes": "arm",
           "partId": "nutrition-4-study-2",
           "file": "./vector-prototypes-v10/nutrition-4-study-2.svg",
-          "sha256": "62d4d8e33755de76509cab659fc01bb6ee95d1c565cbb4dc9d0b868b14c7257b",
-          "bytes": 2589,
+          "sha256": "aee0d1628d245399a2a6001ab3c5b5bc245e617892aeb7c7209644a0b4d940e6",
+          "bytes": 3568,
           "viewBox": [
             100,
             160
@@ -3391,31 +3799,31 @@
           "theme": "harvest"
         },
         {
-          "shape": "garment-front",
+          "shape": "apron",
           "z": 367,
           "anchor": "torso",
           "fit": {
             "form-a": [
-              199,
-              192,
-              112,
-              205
+              206,
+              235,
+              100,
+              150
             ],
             "form-b": [
-              196.76,
-              192,
-              125.44,
-              229.6
+              204.6,
+              235,
+              112,
+              168
             ]
           },
           "category": "apron-front",
           "partId": "nutrition-4-study-3",
           "file": "./vector-prototypes-v10/nutrition-4-study-3.svg",
-          "sha256": "0a2252de00952fdc88d7d637e54ed62c3905310218185b16d26d08ba6da9c081",
-          "bytes": 2589,
+          "sha256": "90ca4ec78758f7d0cac77fb889ee6731d863354238098a74b1e36e7064bb9f06",
+          "bytes": 2531,
           "viewBox": [
             100,
-            160
+            150
           ],
           "theme": "harvest"
         }
@@ -3451,6 +3859,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3458,14 +3868,24 @@
           "file": "./references-v10/nutrition-5.webp",
           "bytes": 14754,
           "sha256": "0c547415ffa0be6300875c3c9999798837fbe7378317aa28e67fffc3bcc13eb9",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1250,
+          498,
+          181,
+          157
+        ],
         "row": 3,
         "column": 5,
         "depiction": "Goldenes Ernteemblem, Reisschalen und kleiner Kürbis als getrennte Module."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3532,6 +3952,35 @@
             100
           ],
           "theme": "harvest"
+        },
+        {
+          "shape": "pumpkin",
+          "z": 411,
+          "anchor": "hip-left",
+          "fit": {
+            "form-a": [
+              141,
+              321,
+              55,
+              52
+            ],
+            "form-b": [
+              129,
+              321,
+              55,
+              52
+            ]
+          },
+          "category": "accessory",
+          "partId": "nutrition-5-study-3",
+          "file": "./vector-prototypes-v10/nutrition-5-study-3.svg",
+          "sha256": "8e47d46971d3d65986fb46228836512046e0f1bae7bcb6ff4ece874ceee6a861",
+          "bytes": 2754,
+          "viewBox": [
+            100,
+            100
+          ],
+          "theme": "harvest"
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
@@ -3565,6 +4014,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3572,14 +4023,24 @@
           "file": "./references-v10/sugar-1.webp",
           "bytes": 12718,
           "sha256": "cfd15c6544ad14f45f3138aabd3638dba1905b2ddb9066d92c621cdc44c452f2",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          522,
+          663,
+          181,
+          157
+        ],
         "row": 4,
         "column": 1,
         "depiction": "Grünes Omamori mit Goldblüten, roter Kordel und durchgestrichenem Würfel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3649,6 +4110,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3656,14 +4119,24 @@
           "file": "./references-v10/sugar-2.webp",
           "bytes": 9124,
           "sha256": "ee0c92c890bb986b7c92cfaa34163e9d859e729b8ca940b46f2f5d22e86f9601",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          704,
+          663,
+          181,
+          157
+        ],
         "row": 4,
         "column": 2,
         "depiction": "Helle Perlen, einzelne grüne Perle, Goldknoten und kleines Blatt."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3736,6 +4209,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3743,14 +4218,24 @@
           "file": "./references-v10/sugar-3.webp",
           "bytes": 11060,
           "sha256": "4d60793aaef4344c06060c5274667b13cfa45f5a74665094a03dc201cfd592a1",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          886,
+          663,
+          181,
+          157
+        ],
         "row": 4,
         "column": 3,
         "depiction": "Drei freundliche Gesichtsausdrücke; Mimikstudie, keine neue Körperform."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3821,6 +4306,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3828,14 +4315,24 @@
           "file": "./references-v10/sugar-4.webp",
           "bytes": 12546,
           "sha256": "f583abd05e64d9758e58044e0aab1d829f1d1fbd0cec5bded2ccc46aa7402485",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1068,
+          663,
+          181,
+          157
+        ],
         "row": 4,
         "column": 4,
         "depiction": "Grüner Faltfächer mit hellen Lotusblüten und goldenen Rippen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -3905,6 +4402,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3912,23 +4411,34 @@
           "file": "./references-v10/sugar-5.webp",
           "bytes": 10030,
           "sha256": "9da4141061a297f1d77952ba039eabf894853deacf847927f6382d2f79343f60",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1250,
+          663,
+          181,
+          157
+        ],
         "row": 4,
         "column": 5,
         "depiction": "Heller Lotus in grün-goldener Strömung mit kleinen Lichtpartikeln."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
       "categories": [
-        "effect"
+        "effect",
+        "effect-pedestal"
       ],
       "parts": [
         {
-          "shape": "lotus",
+          "shape": "still-halo",
           "z": 60,
           "anchor": "effect",
           "fit": {
@@ -3948,11 +4458,40 @@
           "category": "effect",
           "partId": "sugar-5-study-1",
           "file": "./vector-prototypes-v10/sugar-5-study-1.svg",
-          "sha256": "5d27e97af18844e63f5954f9cafe88946ac4fd295f24b90af616adc7eb2ada01",
-          "bytes": 3415,
+          "sha256": "5a7a73964b18f8c9d68c7e7b1789d3fc98c1da9d350656bee91864421631a8d1",
+          "bytes": 2816,
           "viewBox": [
             100,
             100
+          ],
+          "theme": "lotus"
+        },
+        {
+          "shape": "lotus-pedestal",
+          "z": 285,
+          "anchor": "effect",
+          "fit": {
+            "form-a": [
+              126,
+              671,
+              260,
+              80
+            ],
+            "form-b": [
+              126,
+              671,
+              260,
+              80
+            ]
+          },
+          "category": "effect-pedestal",
+          "partId": "sugar-5-study-2",
+          "file": "./vector-prototypes-v10/sugar-5-study-2.svg",
+          "sha256": "f03ad11f3d6d6725e3fc398bc85cb31e2b93e9954bb0987771e15282e769e85d",
+          "bytes": 2585,
+          "viewBox": [
+            100,
+            50
           ],
           "theme": "lotus"
         }
@@ -3988,6 +4527,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -3995,14 +4536,24 @@
           "file": "./references-v10/alcohol-1.webp",
           "bytes": 11846,
           "sha256": "417f0585b23dc620babb251e74a9f3e95758cefab74fad5780c28a7d46294382",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          522,
+          827,
+          181,
+          157
+        ],
         "row": 5,
         "column": 1,
         "depiction": "Helle Kalebasse mit versiegeltem Hals, Goldschnur und kleiner Glocke."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4072,6 +4623,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4079,14 +4632,24 @@
           "file": "./references-v10/alcohol-2.webp",
           "bytes": 10486,
           "sha256": "e48d2b6410f3140698b3f563534ce1e6ba552e5d218426f272fa7ffdd8a17230",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          704,
+          827,
+          181,
+          157
+        ],
         "row": 5,
         "column": 2,
         "depiction": "Helle rechteckige Rahmenlaterne mit botanischem Motiv."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4156,6 +4719,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4163,14 +4728,24 @@
           "file": "./references-v10/alcohol-3.webp",
           "bytes": 10612,
           "sha256": "0056a41250653aa50994f4f082fdbf851c26f72d0c56d486e30ccb5e3797c53e",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          886,
+          827,
+          181,
+          157
+        ],
         "row": 5,
         "column": 3,
         "depiction": "Gelassene freundliche Mimikvarianten; keine Belohnungsumdeutung."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4241,6 +4816,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4248,14 +4825,24 @@
           "file": "./references-v10/alcohol-4.webp",
           "bytes": 12458,
           "sha256": "7e0d074555f49b40e05b5c9be980ab1286c7eb7b603b2e4c8aef545c71c4ddfb",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1068,
+          827,
+          181,
+          157
+        ],
         "row": 5,
         "column": 4,
         "depiction": "Hellblau-ivoryfarbener Obi, goldene Schleife und helle Bandenden."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4354,6 +4941,8 @@
           "file": "./references-v10/konpasu_health_nourishment_rewards_board.webp",
           "bytes": 471012,
           "sha256": "84be9a1e5ea76b7aa0d7a69bb38e4065d5e6900b566e9ec95a120eec0a80d91c",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4361,14 +4950,24 @@
           "file": "./references-v10/alcohol-5.webp",
           "bytes": 13506,
           "sha256": "1313ce6082af88304e5caef51cf39ee464bcbdc649d82b4ced5e02d6a99d9eac",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1250,
+          827,
+          181,
+          157
+        ],
         "row": 5,
         "column": 5,
         "depiction": "Ruhige japanische Feststraße, Torii, Kirschblüten und Laternen; Hintergrund."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4497,6 +5096,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4504,14 +5105,24 @@
           "file": "./references-v10/reading-1.webp",
           "bytes": 12338,
           "sha256": "36b63ff4cff10b97d1d614cc4bb3b9c6329faa10f4dc5597088bd5a19b23fde0",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          350,
+          101,
+          212,
+          236
+        ],
         "row": 1,
         "column": 1,
         "depiction": "Dunkelgrüner rechteckiger Buchanhänger mit Goldrand und Blüten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4581,6 +5192,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4588,14 +5201,24 @@
           "file": "./references-v10/reading-2.webp",
           "bytes": 11382,
           "sha256": "4fc4dcaea7d123eb22006745655ad9b793877a8a4e19939a4ade4fdb7072bd21",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          568,
+          101,
+          212,
+          236
+        ],
         "row": 1,
         "column": 2,
         "depiction": "Helle offene Schriftrolle mit dunklen Achsen, Goldbeschlägen und Landschaft."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4665,6 +5288,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4672,14 +5297,24 @@
           "file": "./references-v10/reading-3.webp",
           "bytes": 12890,
           "sha256": "84d3cdad422f7b82070a802bc5d24ec4e58a9f59c3c4b35fef141498ac3a597a",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          786,
+          101,
+          212,
+          236
+        ],
         "row": 1,
         "column": 3,
         "depiction": "Dunkle Tasche, Bücher, Schulterriemen und Blütenbeschläge."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4779,6 +5414,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4786,14 +5423,24 @@
           "file": "./references-v10/reading-4.webp",
           "bytes": 14056,
           "sha256": "2b89d3a8f346af9a941a9410ae2fd1f063f797dfa01eadc26a8ec6592f174ab5",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1004,
+          101,
+          212,
+          236
+        ],
         "row": 1,
         "column": 4,
         "depiction": "Großes navyfarbenes gebundenes Buch mit Goldblüten und Lesezeichen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4863,6 +5510,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4870,14 +5519,24 @@
           "file": "./references-v10/reading-5.webp",
           "bytes": 12936,
           "sha256": "e64185cc056707d817dc9d364222785ee455546a40396f8670a86df39e6d6f6f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1222,
+          101,
+          212,
+          236
+        ],
         "row": 1,
         "column": 5,
         "depiction": "Dunkler Rollenkasten, mehrere Schriftrollen und heller Archivbogen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4976,6 +5635,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -4983,14 +5644,24 @@
           "file": "./references-v10/languages-1.webp",
           "bytes": 11766,
           "sha256": "a7103578cc9510f2e87057111a81b607270617191407663824a1bba0501c9c9a",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          350,
+          340,
+          212,
+          236
+        ],
         "row": 2,
         "column": 1,
         "depiction": "Dunkler Buchanhänger mit Wellenmuster, Blüte und grüner Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -4999,7 +5670,7 @@
       ],
       "parts": [
         {
-          "shape": "book-charm",
+          "shape": "phrasebook-charm",
           "z": 410,
           "anchor": "hip-left",
           "fit": {
@@ -5020,8 +5691,8 @@
           "attachment": "Obi mount; neutral hands unchanged",
           "partId": "languages-1-study-1",
           "file": "./vector-prototypes-v10/languages-1-study-1.svg",
-          "sha256": "9ecc0d9a0f798e1b0d38650f2366cfebdffb3f30240f4cbd4a3ea834d451a064",
-          "bytes": 3044,
+          "sha256": "38007b22b8dc5a4f541c8087c51a749fb7c97cdf6a745b0632f54b8b3c69700a",
+          "bytes": 3440,
           "viewBox": [
             100,
             100
@@ -5060,6 +5731,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5067,14 +5740,24 @@
           "file": "./references-v10/languages-2.webp",
           "bytes": 7808,
           "sha256": "aa8d162f4347850887def86aa19d7742921ca282e3a4841ebec9f0faf9a7c225",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          568,
+          340,
+          212,
+          236
+        ],
         "row": 2,
         "column": 2,
         "depiction": "Langer dunkler Pinsel, helle Borsten, Goldquaste und kleines Tintenfass."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": false,
+      "displayNameDiffersFromLegacy": false,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5172,6 +5855,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5179,14 +5864,24 @@
           "file": "./references-v10/languages-3.webp",
           "bytes": 13394,
           "sha256": "374fb54d1c7014dedeca430c03a5d24c7df103236b9b6fa9640c4c4064215e90",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          786,
+          340,
+          212,
+          236
+        ],
         "row": 2,
         "column": 3,
         "depiction": "Grünes zylindrisches Etui mit Blütenschließe und Schriftanhängern."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5256,6 +5951,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5263,14 +5960,24 @@
           "file": "./references-v10/languages-4.webp",
           "bytes": 11462,
           "sha256": "d30b3740d5778f328dcc81d9773ef4e95161fc26399d4d55905947aec9e8c112",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1004,
+          340,
+          212,
+          236
+        ],
         "row": 2,
         "column": 4,
         "depiction": "Heller Faltfächer mit grüner Landschaft, Torii und dunkler Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5340,6 +6047,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5347,14 +6056,24 @@
           "file": "./references-v10/languages-5.webp",
           "bytes": 10960,
           "sha256": "a7249f0d3cc485ab2597dbf87a349c29dc760ca62d302d0ae4d83094b5d8dc37",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1222,
+          340,
+          212,
+          236
+        ],
         "row": 2,
         "column": 5,
         "depiction": "Navy-ivoryfarbene Feder, Juwelenknoten und goldener Phönixbogen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5454,6 +6173,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5461,14 +6182,24 @@
           "file": "./references-v10/learning-1.webp",
           "bytes": 11678,
           "sha256": "dad8f2b48452cdd34f60148ddb8c1d0b3ab7f68d645de3f76c4ccdc2b798f5ea",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          350,
+          582,
+          212,
+          236
+        ],
         "row": 3,
         "column": 1,
         "depiction": "Dunkle offene Tasche mit Pinseln, kleinen Werkzeugen und Goldverzierung."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5538,6 +6269,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5545,14 +6278,24 @@
           "file": "./references-v10/learning-2.webp",
           "bytes": 10364,
           "sha256": "aa29e934d9ef41553923e2dc3102e7f9f22290c9e65ad285181114276a1b12c8",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          568,
+          582,
+          212,
+          236
+        ],
         "row": 3,
         "column": 2,
         "depiction": "Helles aufgerolltes Maßband mit Strichmarken, Knoten und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5622,6 +6365,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5629,14 +6374,24 @@
           "file": "./references-v10/learning-3.webp",
           "bytes": 12900,
           "sha256": "f38974de98a9c229024e933776e7c16fea5e021e11ce83999d3462c17ac51494",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          786,
+          582,
+          212,
+          236
+        ],
         "row": 3,
         "column": 3,
         "depiction": "Grün-goldene Blütenbrosche mit gekreuztem Handwerkswerkzeug."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5705,6 +6460,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5712,14 +6469,24 @@
           "file": "./references-v10/learning-4.webp",
           "bytes": 11510,
           "sha256": "ffa4d543d2da97f74447bdd51ede5f66241e3312654e8afa8a7f6a72659b6e19",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1004,
+          582,
+          212,
+          236
+        ],
         "row": 3,
         "column": 4,
         "depiction": "Offene navyfarbene Werkzeugrolle mit einzeln sichtbaren Werkzeugen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5788,6 +6555,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5795,14 +6564,24 @@
           "file": "./references-v10/learning-5.webp",
           "bytes": 13446,
           "sha256": "94d189c952388f9b4e833a594814942cb736dbbd2f6e8920da5f0eae20be9883",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1222,
+          582,
+          212,
+          236
+        ],
         "row": 3,
         "column": 5,
         "depiction": "Dunkle tragbare Kiste mit goldenem Griff, Ecken und Blütenrelief."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -5871,6 +6650,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5878,14 +6659,24 @@
           "file": "./references-v10/focus-1.webp",
           "bytes": 8576,
           "sha256": "898889857900798a7b15834356cff4c6c946ed1c336fcfa7d4db8e4af4582cef",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          350,
+          824,
+          212,
+          236
+        ],
         "row": 4,
         "column": 1,
         "depiction": "Drei native PNGs: hintere Bänder, Band unter Pony und vordere Schleife."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "existing-six-article-png-prototype",
       "fidelity": "image-generated-canonical-png",
       "visualAcceptance": "prior-two-form-startset-review",
@@ -5920,6 +6711,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -5927,14 +6720,24 @@
           "file": "./references-v10/focus-2.webp",
           "bytes": 9564,
           "sha256": "19ea24002ee833456c56da7ab003417fed700e1fc8296b33632665f6727172f0",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          568,
+          824,
+          212,
+          236
+        ],
         "row": 4,
         "column": 2,
         "depiction": "Transparente Sanduhr in dunklem Goldgestell mit hellem Sand."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6004,6 +6807,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6011,14 +6816,24 @@
           "file": "./references-v10/focus-3.webp",
           "bytes": 8182,
           "sha256": "c943775326d43a02127048b30016295046cfadd52e294c1013482a3a16362af7",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          786,
+          824,
+          212,
+          236
+        ],
         "row": 4,
         "column": 3,
         "depiction": "Offene helle Planrolle mit Häkchen, Landschaft und seitlicher Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6088,6 +6903,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6095,14 +6912,24 @@
           "file": "./references-v10/focus-4.webp",
           "bytes": 10518,
           "sha256": "82cb110e7cd11a88540cadf49d7b6231910a006cf63a820bc31a92a8138603b2",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1004,
+          824,
+          212,
+          236
+        ],
         "row": 4,
         "column": 4,
         "depiction": "Goldenes Laternengehäuse, warmes Licht und hängende Blütenranke."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6172,6 +6999,8 @@
           "file": "./references-v10/konpasu_knowledge_productivity_rewards.webp",
           "bytes": 468962,
           "sha256": "fc6718b55d6100f33b6b91092c5ef5549180643f9b9a9e105d83f197a52eb2fa",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6179,19 +7008,30 @@
           "file": "./references-v10/focus-5.webp",
           "bytes": 8364,
           "sha256": "f46272ad1c65fe2154b1889cf58e25b63b53fa4cd2d19626c3941a067177d60f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1222,
+          824,
+          212,
+          236
+        ],
         "row": 4,
         "column": 5,
         "depiction": "Goldene klare Kreisbahnen über einer hellen Lotusblüte."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
       "categories": [
-        "effect"
+        "effect",
+        "effect-pedestal"
       ],
       "parts": [
         {
@@ -6220,6 +7060,35 @@
           "viewBox": [
             100,
             100
+          ],
+          "theme": "ink"
+        },
+        {
+          "shape": "lotus-pedestal",
+          "z": 285,
+          "anchor": "effect",
+          "fit": {
+            "form-a": [
+              126,
+              671,
+              260,
+              80
+            ],
+            "form-b": [
+              126,
+              671,
+              260,
+              80
+            ]
+          },
+          "category": "effect-pedestal",
+          "partId": "focus-5-study-2",
+          "file": "./vector-prototypes-v10/focus-5-study-2.svg",
+          "sha256": "eaa56f9a2664db3a2bc6d2c2cac8d7bbe3923df314427cbb21c6bd5251ed24f3",
+          "bytes": 2585,
+          "viewBox": [
+            100,
+            50
           ],
           "theme": "ink"
         }
@@ -6255,6 +7124,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6262,14 +7133,24 @@
           "file": "./references-v10/meditation-1.webp",
           "bytes": 9262,
           "sha256": "23dc6e6874ecd450b9c6d1f1a2e71613debf3b5d9d16289a97368170c944e8e4",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          640,
+          124,
+          157,
+          205
+        ],
         "row": 1,
         "column": 1,
         "depiction": "Grüne und goldene Perlen, Blütenknoten und zwei kleine Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6342,6 +7223,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6349,14 +7232,24 @@
           "file": "./references-v10/meditation-2.webp",
           "bytes": 10220,
           "sha256": "3b6235d78647f4266600a82457feae4db06687e530c4d925b71244941a9af607",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          800,
+          124,
+          157,
+          205
+        ],
         "row": 1,
         "column": 2,
         "depiction": "Grünes langes Omamori mit Blüten, Quaste und feinem Rauch."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6426,6 +7319,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6433,14 +7328,24 @@
           "file": "./references-v10/meditation-3.webp",
           "bytes": 9340,
           "sha256": "d66cabdd5c26310d8caf7d5b2877a4555f5a84a36b881b3e04cbe4a52f7a7a49",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          961,
+          124,
+          157,
+          205
+        ],
         "row": 1,
         "column": 3,
         "depiction": "Gerollte Tatamimatte mit grünem Rand und kleinem rundem Kissen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6509,6 +7414,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6516,14 +7423,24 @@
           "file": "./references-v10/meditation-4.webp",
           "bytes": 11156,
           "sha256": "f83cea4a7c5f7919d502cdec8d7d339d177ca3960c3775c4c43d114aa64ca572",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1122,
+          124,
+          157,
+          205
+        ],
         "row": 1,
         "column": 4,
         "depiction": "Heller Schulterkragen über dunkelgrünem Mantel und goldenem Knoten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6562,7 +7479,7 @@
           "theme": "zen"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-zen",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -6583,8 +7500,8 @@
           "occludes": "arm",
           "partId": "meditation-4-study-2",
           "file": "./vector-prototypes-v10/meditation-4-study-2.svg",
-          "sha256": "fca68aee286fbcd6e8c74031fc4fcf1979260363848109931f6d97501e679b2a",
-          "bytes": 2592,
+          "sha256": "0d65a5fd654c947954f23806771783a780a02925a20774d646feb6cd61e5d2fe",
+          "bytes": 3622,
           "viewBox": [
             100,
             160
@@ -6623,6 +7540,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6630,23 +7549,34 @@
           "file": "./references-v10/meditation-5.webp",
           "bytes": 10026,
           "sha256": "1e1f2a724c80faa65039cace92e9418d5c907e218b9259493c0a505ad159ee04",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1283,
+          124,
+          157,
+          205
+        ],
         "row": 1,
         "column": 5,
         "depiction": "Große warme Lotusblüte und frei umlaufende gold-grüne Bänder."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
       "categories": [
-        "effect"
+        "effect",
+        "effect-pedestal"
       ],
       "parts": [
         {
-          "shape": "lotus",
+          "shape": "still-halo",
           "z": 60,
           "anchor": "effect",
           "fit": {
@@ -6666,11 +7596,40 @@
           "category": "effect",
           "partId": "meditation-5-study-1",
           "file": "./vector-prototypes-v10/meditation-5-study-1.svg",
-          "sha256": "37c38d24f3e7c5d665d6342be939c3459cf5624c0862479c6ec532f12204bfe4",
-          "bytes": 3425,
+          "sha256": "8a6029629cf60974cd6af2c051628e698dde6066b7c5c9b6653bc627bff15344",
+          "bytes": 2826,
           "viewBox": [
             100,
             100
+          ],
+          "theme": "zen"
+        },
+        {
+          "shape": "lotus-pedestal",
+          "z": 285,
+          "anchor": "effect",
+          "fit": {
+            "form-a": [
+              126,
+              671,
+              260,
+              80
+            ],
+            "form-b": [
+              126,
+              671,
+              260,
+              80
+            ]
+          },
+          "category": "effect-pedestal",
+          "partId": "meditation-5-study-2",
+          "file": "./vector-prototypes-v10/meditation-5-study-2.svg",
+          "sha256": "bc8ddac095f1a7cf73578835ea759dc84a68bb2278acd5037978e41666deb6c2",
+          "bytes": 2595,
+          "viewBox": [
+            100,
+            50
           ],
           "theme": "zen"
         }
@@ -6706,6 +7665,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6713,14 +7674,24 @@
           "file": "./references-v10/journal-1.webp",
           "bytes": 11326,
           "sha256": "a479d0dc322de3093f06f03df87bff51acb7e19716387af83b066d5f43b98b6b",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          640,
+          344,
+          157,
+          205
+        ],
         "row": 2,
         "column": 1,
         "depiction": "Dunkles gebundenes Journal mit Goldranken und Bindekordel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6790,6 +7761,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6797,14 +7770,24 @@
           "file": "./references-v10/journal-2.webp",
           "bytes": 9768,
           "sha256": "a1dc8f0c62a973cca4326c5851ea8b5999d83bd85771ea1932fa10f3ae7e0895",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          800,
+          344,
+          157,
+          205
+        ],
         "row": 2,
         "column": 2,
         "depiction": "Flacher dunkler Tuschestein, heller Pinsel und Goldquaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6902,6 +7885,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6909,14 +7894,24 @@
           "file": "./references-v10/journal-3.webp",
           "bytes": 11918,
           "sha256": "52f498acc7236e4bbad165099743acd5948b588a9a7879687568453342fdced7",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          961,
+          344,
+          157,
+          205
+        ],
         "row": 2,
         "column": 3,
         "depiction": "Warme goldene Laterne mit Kirschblüten an Dach und Rahmen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -6925,7 +7920,7 @@
       ],
       "parts": [
         {
-          "shape": "lantern",
+          "shape": "lantern-memory",
           "z": 414,
           "anchor": "hip-right",
           "fit": {
@@ -6946,8 +7941,8 @@
           "attachment": "Suspended from right Obi; not a hand-grip claim",
           "partId": "journal-3-study-1",
           "file": "./vector-prototypes-v10/journal-3-study-1.svg",
-          "sha256": "ed08a6ef0cc6577c67e0840f237e3341b3ce5446d9b18a5e0fbf76ba9d6ca82d",
-          "bytes": 3566,
+          "sha256": "1720d70b459662acfcdb562bde9d05442677c658425ac249356519e287a1843c",
+          "bytes": 5226,
           "viewBox": [
             100,
             100
@@ -6986,6 +7981,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -6993,14 +7990,24 @@
           "file": "./references-v10/journal-4.webp",
           "bytes": 11652,
           "sha256": "be6c4b64e30a6ca928b86e4db6af453ab946038455dd29d8150eb8e346b43d06",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1122,
+          344,
+          157,
+          205
+        ],
         "row": 2,
         "column": 4,
         "depiction": "Ovaler goldener Handspiegel mit Landschaft und kleiner Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7070,6 +8077,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7077,14 +8086,24 @@
           "file": "./references-v10/journal-5.webp",
           "bytes": 11284,
           "sha256": "4990eae686d86bd8d5c555d9014ce51dd78aa735050847866d940cda2cddb53a",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1283,
+          344,
+          157,
+          205
+        ],
         "row": 2,
         "column": 5,
         "depiction": "Helle offene Rollenschleife mit mehreren Goldachsen und Kirschblüten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7153,6 +8172,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7160,14 +8181,24 @@
           "file": "./references-v10/social-1.webp",
           "bytes": 8860,
           "sha256": "854a0e5a02537451e8734f218f57e3f6d6c88a7af00dffeb9919c62b3f222c68",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          374,
+          171,
+          207,
+          239
+        ],
         "row": 1,
         "column": 1,
         "depiction": "Grüne und ivoryfarbene verschlungene Bänder mit Goldblüten und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7237,6 +8268,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7244,14 +8277,24 @@
           "file": "./references-v10/social-2.webp",
           "bytes": 15598,
           "sha256": "beb59f7296437ca5797dae89f24794d96eb5a1c12be25f4fdeb74619dbd5566a",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          581,
+          171,
+          207,
+          239
+        ],
         "row": 1,
         "column": 2,
         "depiction": "Zwei helle botanische Teetassen auf kleinem dunklem Tablett."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7320,6 +8363,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7327,14 +8372,24 @@
           "file": "./references-v10/social-3.webp",
           "bytes": 9736,
           "sha256": "420c6042752ed1edbd09bec85b8c4ef7d354252668f1993c2b1729c634418dc3",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          788,
+          171,
+          207,
+          239
+        ],
         "row": 1,
         "column": 3,
         "depiction": "Dunkler Fächer mit Feuerwerk, Pagode, Kirschblüten und Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7404,6 +8459,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7411,14 +8468,24 @@
           "file": "./references-v10/social-4.webp",
           "bytes": 10928,
           "sha256": "aa58a80489e349bc14b24f0fdb1dfabd30ea6f7b6d870cf33e67c3a1be3b0635",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          995,
+          171,
+          207,
+          239
+        ],
         "row": 1,
         "column": 4,
         "depiction": "Dunkelgrüner Festumhang mit ivoryfarbenen Revers und Goldblättern."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7457,7 +8524,7 @@
           "theme": "festival"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-sakura",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -7478,8 +8545,8 @@
           "occludes": "arm",
           "partId": "social-4-study-2",
           "file": "./vector-prototypes-v10/social-4-study-2.svg",
-          "sha256": "102b8df3e91c963995939495493078a9127ae76f16dfc91e846157ef5275b0a7",
-          "bytes": 2580,
+          "sha256": "efe7a885388c7f3666e42b3bc5f1eeea2698cbbdf4d6cc8fcc4546e887fb4a62",
+          "bytes": 5607,
           "viewBox": [
             100,
             160
@@ -7518,6 +8585,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7525,14 +8594,24 @@
           "file": "./references-v10/social-5.webp",
           "bytes": 16158,
           "sha256": "01f992c95bb1a475c3a973565da0ec850aa6c7bc4bbb837a476a586c99194f56",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1202,
+          171,
+          230,
+          239
+        ],
         "row": 1,
         "column": 5,
         "depiction": "Golden umrahmter Endlosknoten mit grünen Blättern und Kirschblüten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7601,6 +8680,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7608,14 +8689,24 @@
           "file": "./references-v10/nature-1.webp",
           "bytes": 12538,
           "sha256": "c1a98c7ba454af62911e55aeb5ae82574ebc543c9a7ff00ad74e5afc9e8a7811",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          374,
+          443,
+          207,
+          239
+        ],
         "row": 2,
         "column": 1,
         "depiction": "Zwei grüne Blätter in Goldfassung, helle Blüte und einzelne Perle."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7684,6 +8775,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7691,14 +8784,24 @@
           "file": "./references-v10/nature-2.webp",
           "bytes": 14428,
           "sha256": "fbac7d8ffe575c734bc9b733e063e954dbd4bd11c838f75eddc31ef684fa1329",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          581,
+          443,
+          207,
+          239
+        ],
         "row": 2,
         "column": 2,
         "depiction": "Grüne Schultertasche mit Blattmotiv, Goldschnallen und Quasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7798,6 +8901,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7805,14 +8910,24 @@
           "file": "./references-v10/nature-3.webp",
           "bytes": 11070,
           "sha256": "fcf152fc2367f2716dfe9a1d56f438696bddd2a4f2558edd07724b0f1e289064",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          788,
+          443,
+          207,
+          239
+        ],
         "row": 2,
         "column": 3,
         "depiction": "Grün-ivoryfarbener offener Haori mit Berglandschaft und botanischem Saum."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -7851,7 +8966,7 @@
           "theme": "forest"
         },
         {
-          "shape": "garment-front",
+          "shape": "garment-front-mountain",
           "z": 365,
           "anchor": "torso",
           "fit": {
@@ -7872,8 +8987,8 @@
           "occludes": "arm",
           "partId": "nature-3-study-2",
           "file": "./vector-prototypes-v10/nature-3-study-2.svg",
-          "sha256": "ab8d92a2ae870552e6d19b62a078416b5e4e3ba460ec631b3a4f213e7cb48153",
-          "bytes": 2580,
+          "sha256": "c3535cab481460acacb0e08804b28ffa9e13b21b99ad82736e0bbf3c031492fe",
+          "bytes": 3462,
           "viewBox": [
             100,
             160
@@ -7912,6 +9027,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -7919,14 +9036,24 @@
           "file": "./references-v10/nature-4.webp",
           "bytes": 11860,
           "sha256": "786d9b3e3e49fded6870db18c19d48ca4e1012bb62a83012982dc33e06e816c5",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          995,
+          443,
+          207,
+          239
+        ],
         "row": 2,
         "column": 4,
         "depiction": "Waldpfad mit Laterne, Torii und Schreindach; ruhiger Hintergrund."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8025,6 +9152,8 @@
           "file": "./references-v10/konpasu_social_nature_rewards.webp",
           "bytes": 468936,
           "sha256": "2a784716d0f923d5c014dd92480841e7b5967a5d86e56f0dba39bad0305cb02a",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8032,14 +9161,24 @@
           "file": "./references-v10/nature-5.webp",
           "bytes": 9924,
           "sha256": "e1221ccae86a0e72ec6621f66a62bab417413827f0587c023fa7932ae1d51351",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1202,
+          443,
+          230,
+          239
+        ],
         "row": 2,
         "column": 5,
         "depiction": "Kirschblütenzweig, Rosa-Blütenblätter und helle goldene Windbögen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8138,6 +9277,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8145,14 +9286,24 @@
           "file": "./references-v10/screen-1.webp",
           "bytes": 11744,
           "sha256": "542016106159f50b388d90a74471258196467701f87735a9873ea3ff12f69db4",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          640,
+          558,
+          157,
+          205
+        ],
         "row": 3,
         "column": 1,
         "depiction": "Goldene Taschenuhr mit botanischem Zifferblatt und Quaste."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8222,6 +9373,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8229,14 +9382,24 @@
           "file": "./references-v10/screen-2.webp",
           "bytes": 11658,
           "sha256": "0bdff146e1c88652375553fed1bcc3545b45db55b39965d56bc9f32d654cf01f",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          800,
+          558,
+          157,
+          205
+        ],
         "row": 3,
         "column": 2,
         "depiction": "Grün-ivoryfarbene Schleife mit rotem Verzichtssiegel."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8306,6 +9469,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8313,14 +9478,24 @@
           "file": "./references-v10/screen-3.webp",
           "bytes": 12780,
           "sha256": "d70ce6c38cd067d4945fcd4c9d1bc47ba6eeed3435ef8e9378ef50c3a8a24a1c",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          961,
+          558,
+          157,
+          205
+        ],
         "row": 3,
         "column": 3,
         "depiction": "Blauer Himmel, Bergkette, Wasser und Kirschblüten; Hintergrund."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8389,6 +9564,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8396,14 +9573,24 @@
           "file": "./references-v10/screen-4.webp",
           "bytes": 7494,
           "sha256": "39f9e0e943327c87ff2865404a86986f9661c861ef8a4b826fb609ce0084d3bd",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1122,
+          558,
+          157,
+          205
+        ],
         "row": 3,
         "column": 4,
         "depiction": "Helle runde Papierlaterne mit Ahornblättern und dunkler Kappe."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8473,6 +9660,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8480,14 +9669,24 @@
           "file": "./references-v10/screen-5.webp",
           "bytes": 8534,
           "sha256": "3283ed44f91b7a8c41595123a1312e3fc7c4ef62ea0ef635966c9c577c106f26",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1283,
+          558,
+          157,
+          205
+        ],
         "row": 3,
         "column": 5,
         "depiction": "Sanfter Sonnenuntergang, mehrere Berge und goldener atmosphärischer Bogen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8586,6 +9785,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8593,14 +9794,24 @@
           "file": "./references-v10/gaming-1.webp",
           "bytes": 11278,
           "sha256": "741442a7765c205024c72335d292c508ed52db9d6a2cf3cb6173c96262398f2c",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          640,
+          770,
+          157,
+          205
+        ],
         "row": 4,
         "column": 1,
         "depiction": "Runde grün-goldene Münze mit Torii, Wellen und Blütenrand."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8670,6 +9881,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8677,14 +9890,24 @@
           "file": "./references-v10/gaming-2.webp",
           "bytes": 11160,
           "sha256": "1fb735a85b3cb0cd9dc3feb7cdfe13987aa78c8337721f8945b00361b61b5d33",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          800,
+          770,
+          157,
+          205
+        ],
         "row": 4,
         "column": 2,
         "depiction": "Grünes Omamori mit hellem Controllerzeichen und Goldquasten."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8754,6 +9977,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8761,14 +9986,24 @@
           "file": "./references-v10/gaming-3.webp",
           "bytes": 12520,
           "sha256": "389ccd2c6e03b8b9da596faec29eec72be49115319b4c27fbab93b36983ac22e",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          961,
+          770,
+          157,
+          205
+        ],
         "row": 4,
         "column": 3,
         "depiction": "Grüner botanischer Obi, goldener Knoten und breite ivoryfarbene Bänder."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8867,6 +10102,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8874,14 +10111,24 @@
           "file": "./references-v10/gaming-4.webp",
           "bytes": 10680,
           "sha256": "4beaabea6d44dae45665783d492e5ebb63580f21d10a50028d7a680dccfb273b",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1122,
+          770,
+          157,
+          205
+        ],
         "row": 4,
         "column": 4,
         "depiction": "Dunkle Kanne, helle Tasse, Mochi und Dampf auf einem Tablett."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -8979,6 +10226,8 @@
           "file": "./references-v10/konpasu_mindfulness_reward_paths.webp",
           "bytes": 435052,
           "sha256": "0c00e5149f4eeb061c454439603b4026c539f71a515417762c2b80099e0d459d",
+          "width": 1448,
+          "height": 1086,
           "unaltered": true
         },
         "card": {
@@ -8986,14 +10235,24 @@
           "file": "./references-v10/gaming-5.webp",
           "bytes": 11188,
           "sha256": "f8bb37ab9a98a73969c0fb36a5819503146134d611806a384f62bbdaf03cb7d6",
+          "width": 300,
+          "height": 300,
           "unaltered": true
         },
+        "legacyCardStatus": "preserved-byte-identical-untrusted-derived-crop",
+        "comparisonSource": "original-board-viewport",
+        "boardCellViewBox": [
+          1283,
+          770,
+          157,
+          205
+        ],
         "row": 4,
         "column": 5,
         "depiction": "Ruhige sitzende Silhouette zwischen hellen Blüten und grün-goldenen Windbögen."
       },
       "semanticStatus": "board-depiction-reviewed-legacy-semantics-preserved",
-      "titleMismatch": true,
+      "displayNameDiffersFromLegacy": true,
       "prototypeStatus": "vector-fit-prototype",
       "fidelity": "code-drawn-vector-fit-study-not-premium-final",
       "visualAcceptance": "see-separate-catalogue-verification-v10",
@@ -9002,8 +10261,8 @@
       ],
       "parts": [
         {
-          "shape": "grounded",
-          "z": 61,
+          "shape": "wind",
+          "z": 60,
           "anchor": "effect",
           "fit": {
             "form-a": [
@@ -9022,7 +10281,36 @@
           "category": "effect",
           "partId": "gaming-5-study-1",
           "file": "./vector-prototypes-v10/gaming-5-study-1.svg",
-          "sha256": "c0712fe5926ebc14bdde47e4c5b4464e8922ff75e1ee2b4c821c315eb7dbbfe5",
+          "sha256": "1b08f5c889fc6a263941f13ef5fc9929c28551c35b516964ead7b5030f6d9ffd",
+          "bytes": 2983,
+          "viewBox": [
+            100,
+            100
+          ],
+          "theme": "zen"
+        },
+        {
+          "shape": "grounded",
+          "z": 61,
+          "anchor": "effect",
+          "fit": {
+            "form-a": [
+              29,
+              421,
+              155,
+              155
+            ],
+            "form-b": [
+              29,
+              421,
+              155,
+              155
+            ]
+          },
+          "category": "effect",
+          "partId": "gaming-5-study-2",
+          "file": "./vector-prototypes-v10/gaming-5-study-2.svg",
+          "sha256": "01474a975606aaab663b9e9b274f56bd6b07a6a1db2104728225aa175489278e",
           "bytes": 2946,
           "viewBox": [
             100,

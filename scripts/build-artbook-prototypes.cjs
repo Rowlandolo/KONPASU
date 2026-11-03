@@ -4,8 +4,10 @@ const {boards,families}=require('./artbook-prototype-definitions.cjs'),vectors=r
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'design/avatar'),legacy=require('../docs/REWARD_MAPPING.json'),original=new Map(legacy.map(x=>[x.id,x]));
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'premium-art-bundle.js'),'utf8'),context);
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const {webpSize}=require('./avatar-budget.cjs');
+const cells={motion:{x:[474,662,850,1038,1226],y:[94,341,588,835],w:205,h:238},health:{x:[522,704,886,1068,1250],y:[171,334,498,663,827],w:181,h:157},knowledge:{x:[350,568,786,1004,1222],y:[101,340,582,824],w:212,h:236},mind:{x:[640,800,961,1122,1283],y:[124,344,558,770],w:157,h:205},nature:{x:[374,581,788,995,1202],y:[171,443],w:207,h:239}};
 const destination=path.join(dir,'references-v10');fs.mkdirSync(destination,{recursive:true});
-const reference=key=>{const uri=context.window.KONPASU_PREMIUM_SRC(key);if(!uri)throw Error('Missing reference '+key);const bytes=Buffer.from(uri.slice(uri.indexOf(',')+1),'base64'),name=path.basename(key);fs.writeFileSync(path.join(destination,name),bytes);return {bundleKey:key,file:'./references-v10/'+name,bytes:bytes.length,sha256:hash(bytes),unaltered:true}};
+const reference=key=>{const uri=context.window.KONPASU_PREMIUM_SRC(key);if(!uri)throw Error('Missing reference '+key);const bytes=Buffer.from(uri.slice(uri.indexOf(',')+1),'base64'),name=path.basename(key);fs.writeFileSync(path.join(destination,name),bytes);return {bundleKey:key,file:'./references-v10/'+name,bytes:bytes.length,sha256:hash(bytes),...webpSize(bytes),unaltered:true}};
 const round=n=>Math.round(n*1000)/1000;
 function boxB(a,anchor){
  const [x,y,width,height]=a;
@@ -18,28 +20,29 @@ function boxB(a,anchor){
  if(anchor==='hip-right')return [x+12,y,width,height];
  return [255+(x-251)*1.12,y,width*1.12,height*1.12].map(round);
 }
-function modules(kind){
+function modules(kind,family){
  const m=(shape,z,anchor,box,extra={})=>({shape,z,anchor,fit:{'form-a':box,'form-b':boxB(box,anchor)},...extra});
  const effect=shape=>m(shape,60,'effect',[34,150,444,444],{category:'effect'});
  const prop=shape=>m(shape,410,'hip-left',[178,291,64,80],{category:'accessory',attachment:'Obi mount; neutral hands unchanged'});
  const arm=(shape='armwrap')=>[m(shape,498,'forearm-left',[135,290,36,57],{occludedBy:['kimono','outer-front'],category:'arm'}),m(shape,499,'forearm-right',[341,290,36,57],{occludedBy:['kimono','outer-front'],category:'arm'})];
- const garment=long=>[m('garment-rear',170,'torso',[long?118:133,113,long?266:236,long?425:335],{category:'outer-rear'}),m('garment-front',365,'torso',[long?126:137,116,long?250:228,long?400:324],{category:'outer-front',occludes:'arm'})];
+ const garment=long=>[m('garment-rear',170,'torso',[long?118:133,113,long?266:236,long?425:335],{category:'outer-rear'}),m('garment-front-'+({cardio:'wind',steps:'map',mobility:'wisteria',sleep:'moon',social:'sakura',meditation:'zen',nature:'mountain'}[family]||'map'),365,'torso',[long?126:137,116,long?250:228,long?400:324],{category:'outer-front',occludes:'arm'})];
  const sash=()=>[m('sash-band',352,'waist',[208,249,94,42],{category:'waist'}),m('sash-bow',375,'waist',[229,264,78,74],{category:'waist-front'})];
- const lantern=paper=>[m(paper?'paper-lantern':'lantern',414,'hip-right',[340,268,66,90],{category:'accessory',attachment:'Suspended from right Obi; not a hand-grip claim'})];
+ const lantern=paper=>[m(paper?'paper-lantern':family==='sleep'?'lantern-moon':family==='journal'?'lantern-memory':'lantern',414,'hip-right',[340,268,66,90],{category:'accessory',attachment:'Suspended from right Obi; not a hand-grip claim'})];
+ const lotusBase=()=>m('lotus-pedestal',285,'effect',[126,671,260,80],{category:'effect-pedestal'});
  switch(kind){
   case 'existing':return [];
-  case 'scarf':return [m('scarf-tail',145,'torso',[165,104,85,163],{category:'neck-rear'}),m('scarf-band',390,'torso',[221,102,76,49],{category:'neck-front'})];
+  case 'scarf':return [m('scarf-tail',145,'torso',[115,102,150,245],{category:'neck-rear'}),m('scarf-band',390,'torso',[221,102,76,49],{category:'neck-front'})];
   case 'boots':case 'sandals':return [m(kind==='boots'?'boot-left':'sandal-left',305,'feet',[145,667,77,75],{category:'feet'}),m(kind==='boots'?'boot-right':'sandal-right',306,'feet',[278,668,84,74],{category:'feet'})];
   case 'armwraps':return arm();
   case 'sleeves':return arm('sleeve');
   case 'cloak':return garment(true);
   case 'haori':return garment(false);
-  case 'apronHaori':return [...garment(false),m('garment-front',367,'torso',[199,192,112,205],{category:'apron-front'})];
+  case 'apronHaori':return [...garment(false),m('apron',367,'torso',[206,235,100,150],{category:'apron-front'})];
   case 'storm':return [...garment(true),m('breastplate',452,'torso',[212,149,91,136],{category:'torso-armor'}),effect('wind')];
   case 'satchel':return [m('strap',380,'torso',[204,128,93,171],{category:'strap'}),prop('satchel')];
   case 'hatCharm':return [prop('hat-charm')];
   case 'banner':return [m('banner',45,'scene',[46,129,150,290],{category:'scene-prop'}),effect('wind')];
-  case 'ribbons':return [m('ribbon',146,'torso',[137,143,64,175],{category:'ribbon-rear'}),m('ribbon',147,'torso',[311,143,64,175],{category:'ribbon-rear'})];
+  case 'ribbons':return [m('ribbon',146,'torso',[105,141,91,205],{category:'ribbon-rear'}),m('ribbon',147,'torso',[334,141,91,205],{category:'ribbon-rear'})];
   case 'sash':return sash();
   case 'dragonAura':return [effect('dragon'),m('wind',650,'effect',[55,459,390,205],{category:'effect-front'})];
   case 'bamboo':case 'bottle':case 'crystal':case 'gourd':return [prop(kind)];
@@ -49,18 +52,18 @@ function modules(kind){
   case 'pillowCharm':return [prop('pillow-charm')];
   case 'lantern':return lantern(false);
   case 'paperLantern':return lantern(true);
-  case 'moonAura':return [effect('moon')];
+  case 'moonAura':return [m('moon',60,'effect',[34,-50,444,444],{category:'effect'})];
   case 'bento':return [prop('bento')];
   case 'pouch':return [prop('pouch')];
-  case 'harvest':return [m('harvest-crest',65,'effect',[53,257,160,160],{category:'emblem'}),prop('harvest-bowl')];
+  case 'harvest':return [m('harvest-crest',65,'effect',[53,257,160,160],{category:'emblem'}),prop('harvest-bowl'),m('pumpkin',411,'hip-left',[141,321,55,52],{category:'accessory'})];
   case 'sealCharm':return [prop('seal-charm')];
   case 'bracelet':return [m('bracelet',516,'wrist-left',[137,334,31,31],{category:'arm',occludedBy:['kimono','outer-front']})];
   case 'smileStudy':return [m('smile-study',670,'face-study',[322,38,62,62],{category:'expression-study',attachment:'Separate expression study beside head, not a replacement face'})];
   case 'calmStudy':return [m('calm-study',671,'face-study',[322,38,62,62],{category:'expression-study',attachment:'Separate expression study beside head, not a replacement face'})];
   case 'fan':case 'mapFan':case 'festivalFan':return [prop({fan:'lotus-fan',mapFan:'map-fan',festivalFan:'festival-fan'}[kind])];
-  case 'lotusAura':return [effect('lotus')];
+  case 'lotusAura':return [effect('still-halo'),lotusBase()];
   case 'festivalScene':return [m('scene-mountains',10,'scene',[0,0,512,768],{category:'background'}),m('scene-torii',20,'scene',[10,180,220,400],{category:'background-architecture'}),m('scene-lanterns',30,'scene',[300,60,200,400],{category:'background-decoration'})];
-  case 'bookCharm':return [prop('book-charm')];
+  case 'bookCharm':return [prop(family==='languages'?'phrasebook-charm':'book-charm')];
   case 'scroll':return [prop('scroll')];
   case 'checkScroll':return [prop('check-scroll')];
   case 'book':return [prop('book')];
@@ -74,7 +77,7 @@ function modules(kind){
   case 'toolRoll':return [m('tool-roll',411,'hip-left',[152,290,90,80],{category:'accessory'})];
   case 'toolbox':return [m('toolbox',411,'hip-left',[144,285,99,88],{category:'accessory'})];
   case 'hourglass':return [prop('hourglass')];
-  case 'halo':return [effect('still-halo')];
+  case 'halo':return [effect('still-halo'),lotusBase()];
   case 'incenseCharm':return [prop('incense-charm')];
   case 'mat':return [m('mat',295,'scene',[35,651,125,95],{category:'ground-accessory'})];
   case 'mirror':return [prop('mirror')];
@@ -92,7 +95,7 @@ function modules(kind){
   case 'token':return [prop('token')];
   case 'controllerCharm':return [prop('controller-charm')];
   case 'teaSet':return [m('tea-pair',411,'hip-left',[143,309,96,66],{category:'accessory'}),m('teapot',412,'hip-left',[162,280,69,63],{category:'accessory'})];
-  case 'groundedAura':return [m('grounded',61,'effect',[34,150,444,444],{category:'effect'})];
+  case 'groundedAura':return [effect('wind'),m('grounded',61,'effect',[29,421,155,155],{category:'effect'})];
   default:throw Error('Missing article geometry '+kind);
  }
 }
@@ -101,7 +104,8 @@ for(const [family,label,board,row,theme,entries] of families){
  if(!reviewedBoards.has(board))reviewedBoards.set(board,reference('assets/'+boards[board]+'.webp'));
  entries.forEach(([titleDe,titleEn,kind,depiction],index)=>{
   const id=family+'-'+(index+1),old=original.get(id);if(!old)throw Error('Unknown stable ID '+id);
-  const referenceCard=reference('reward-art/'+id+'.webp'),parts=modules(kind).map((p,i)=>{
+  const cell=cells[board],boardCellViewBox=[cell.x[index],cell.y[row-1],board==='nature'&&index===4?230:cell.w,cell.h];
+  const referenceCard=reference('reward-art/'+id+'.webp'),parts=modules(kind,family).map((p,i)=>{
    const partId=id+'-study-'+(i+1),a=vectors.art(p.shape,theme,partId);
    const file='./vector-prototypes-v10/'+partId+'.svg',bytes=Buffer.from(vectors.svg(p.shape,theme,partId));
    fs.mkdirSync(path.join(dir,'vector-prototypes-v10'),{recursive:true});fs.writeFileSync(path.join(dir,file),bytes);
@@ -111,9 +115,9 @@ for(const [family,label,board,row,theme,entries] of families){
   const clothing=parts.some(p=>p.occludes==='arm'),study=categories.includes('expression-study');
   items.push({id,family,familyLabelDe:label,tier:index+1,titleDe,titleEn,kind,theme,
    legacy:{titleDe:old.title,slot:old.slot,successfulCompletedWeeks:old.successfulCompletedWeeks,goal:old.goal,wearabilityRule:old.wearabilityRule},
-   reference:{board:reviewedBoards.get(board),card:referenceCard,row,column:index+1,depiction},
+   reference:{board:reviewedBoards.get(board),card:referenceCard,legacyCardStatus:'preserved-byte-identical-untrusted-derived-crop',comparisonSource:'original-board-viewport',boardCellViewBox,row,column:index+1,depiction},
    semanticStatus:'board-depiction-reviewed-legacy-semantics-preserved',
-   titleMismatch:old.title!==titleDe,prototypeStatus:kind==='existing'?'existing-six-article-png-prototype':'vector-fit-prototype',
+   displayNameDiffersFromLegacy:old.title!==titleDe,prototypeStatus:kind==='existing'?'existing-six-article-png-prototype':'vector-fit-prototype',
    fidelity:kind==='existing'?'image-generated-canonical-png':'code-drawn-vector-fit-study-not-premium-final',
    visualAcceptance:kind==='existing'?'prior-two-form-startset-review':'see-separate-catalogue-verification-v10',
    categories,parts,
@@ -125,11 +129,11 @@ for(const [family,label,board,row,theme,entries] of families){
 if(items.length!==95||items.filter(i=>i.parts.length).length!==89)throw Error('Incomplete catalogue');
 const result={version:1,scope:'isolated-development-prototypes-no-storage-or-unlock-changes',source:'premium-art-bundle.js',
  sourceBundleSHA256:hash(fs.readFileSync(path.join(root,'premium-art-bundle.js'))),
- sourceReview:'Five original boards visually inspected; row/column and all stable reward-card keys retained. Names describe artwork only, not live reward renames.',
+ sourceReview:'Five original boards visually inspected; row/column and all stable reward-card keys retained. Some legacy card crops shift to neighbouring illustrations, especially social/nature. Original comparison uses declared viewports of the unchanged complete board, never a silently edited card. Names describe artwork only, not live reward renames.',
  limits:['Vector fit studies are not premium-final artwork.','Two standing body forms in one pose.','Expression sets remain visibly marked separate studies until proper face sources exist.','Source bitmap budget for the six-article atelier is unchanged; all-95 inline-vector DOM/GPU/peak cost needs physical measurement.'],
  families:families.map(([id,label])=>({id,label})),items};
 fs.writeFileSync(path.join(dir,'catalog-prototypes-v10.json'),JSON.stringify(result,null,2)+'\n');
-const escape=s=>s.replaceAll('|','/'),doc=['# Artbook-Katalog: 95 Artikel und 89 neue Passformprototypen','','Die Nutzeranweisung vom 03.11.2026 priorisiert alle übrigen Artikel vor der App-Anbindung. Diese Lieferung erstellt echte schaltbare Vektorstudien, keine 89 fertigen Premium-PNGs. Die vorhandenen sechs PNG-Prototypen bleiben erhalten. Alle Zuordnungen beruhen auf den fünf tatsächlichen Artbooktafeln; Live-Bezeichnungen, IDs und Rewardregeln bleiben unverändert.','','Interaktive Werkstatt: `design/avatar/catalog.html`. Maschinenlesbare Detailverträge samt Quell-/Grafikhashes und beiden Passformen: `catalog-prototypes-v10.json`. Jede neue Studie besitzt eigene transparente SVG-Dateien unter `vector-prototypes-v10/`; Referenzen sind bytegleiche Kopien aus dem bestehenden Bundle.','','Gemeinsame Auswahl aller 95 Artikel bleibt möglich. Deckende Kleidung und Hintergründe können einander verdecken; Sichtbarkeit und Reihenfolge sind ausdrücklich steuerbar. Hintergrund/Atmosphäre ist kein Besitzersatz und keine neue Begleitertierart. Mimikstudien sind als solche neben dem Kopf dargestellt, nicht als fertige neue Gesichtsanatomie ausgegeben. Handobjekte werden für diese feste Pose am Obi geführt; echte neue Griffposen sind noch nicht gezeichnet.',''];
-for(const f of result.families){doc.push('## '+f.label,'');for(const i of items.filter(i=>i.family===f.id)){doc.push('### '+i.id+' · '+i.titleDe,'',`Original: **${i.titleEn}**, Tafel ${i.reference.board.bundleKey}, Reihe ${i.reference.row}, Spalte ${i.reference.column}. ${i.reference.depiction}`,'',`Unveränderte Legacy-Zuordnung: ${i.legacy.titleDe}; Slot ${i.legacy.slot}; ${i.legacy.successfulCompletedWeeks} belegte abgeschlossene Woche(n). ${i.legacy.wearabilityRule}.`,'',`Prototyp: ${i.prototypeStatus}. ${i.fitNotes}`, '', '| Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |','|---|---|---|---|');for(const p of i.parts)doc.push(`| ${p.partId} | ${p.shape} / ${p.z} | ${p.fit['form-a'].join(', ')} | ${p.fit['form-b'].join(', ')} |`);if(!i.parts.length)doc.push('| Vorhandene PNG-Module | Siehe prototype-assets.json / avatar-rig-v25.js | Eigenes geprüftes Profil | Eigenes geprüftes Profil |');doc.push('',i.combinationNotes,'','Offen: '+i.remaining.join('; ')+'.','');}}
+const escape=s=>s.replaceAll('|','/'),doc=['# Artbook-Katalog: 95 Artikel und 89 neue Passformprototypen','','Die Nutzeranweisung vom 03.11.2026 priorisiert alle übrigen Artikel vor der App-Anbindung. Diese Lieferung erstellt echte schaltbare Vektorstudien, keine 89 fertigen Premium-PNGs. Die vorhandenen sechs PNG-Prototypen bleiben erhalten. Alle Zuordnungen beruhen auf den fünf tatsächlichen Artbooktafeln; Live-Bezeichnungen, IDs und Rewardregeln bleiben unverändert.','','Einige bisherige Artikelkarten sind verschobene Ausschnitte, besonders bei Sozial- und Naturbelohnungen. Der neue Originalvergleich zeigt deshalb einen ausdrücklich registrierten Viewport der bytegleichen Gesamttafel. Die Tafel wird nicht retuschiert oder in neue Karten umgerechnet; alte Karten bleiben als nicht autoritative Legacykopien erhalten.','','Interaktive Werkstatt: `design/avatar/catalog.html`. Maschinenlesbare Detailverträge samt Quell-/Grafikhashes und beiden Passformen: `catalog-prototypes-v10.json`. Jede neue Studie besitzt eigene transparente SVG-Dateien unter `vector-prototypes-v10/`; Referenzen sind bytegleiche Kopien aus dem bestehenden Bundle.','','Gemeinsame Auswahl aller 95 Artikel bleibt möglich. Deckende Kleidung und Hintergründe können einander verdecken; Sichtbarkeit und Reihenfolge sind ausdrücklich steuerbar. Hintergrund/Atmosphäre ist kein Besitzersatz und keine neue Begleitertierart. Mimikstudien sind als solche neben dem Kopf dargestellt, nicht als fertige neue Gesichtsanatomie ausgegeben. Handobjekte werden für diese feste Pose am Obi geführt; echte neue Griffposen sind noch nicht gezeichnet.',''];
+for(const f of result.families){doc.push('## '+f.label,'');for(const i of items.filter(i=>i.family===f.id)){doc.push('### '+i.id+' · '+i.titleDe,'',`Original: **${i.titleEn}**, Tafel ${i.reference.board.bundleKey}, Reihe ${i.reference.row}, Spalte ${i.reference.column}, Tafelviewport [${i.reference.boardCellViewBox.join(', ')}]. ${i.reference.depiction}`,'',`Unveränderte Legacy-Zuordnung: ${i.legacy.titleDe}; Slot ${i.legacy.slot}; ${i.legacy.successfulCompletedWeeks} belegte abgeschlossene Woche(n). ${i.legacy.wearabilityRule}.`,'',`Prototyp: ${i.prototypeStatus}. ${i.fitNotes}`, '', '| Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |','|---|---|---|---|');for(const p of i.parts)doc.push(`| ${p.partId} | ${p.shape} / ${p.z} | ${p.fit['form-a'].join(', ')} | ${p.fit['form-b'].join(', ')} |`);if(!i.parts.length)doc.push('| Vorhandene PNG-Module | Siehe prototype-assets.json / avatar-rig-v25.js | Eigenes geprüftes Profil | Eigenes geprüftes Profil |');doc.push('',i.combinationNotes,'','Offen: '+i.remaining.join('; ')+'.','');}}
 fs.writeFileSync(path.join(root,'docs/ARTBOOK_95_PROTOTYPES.md'),doc.join('\n')+'\n');
 console.log(JSON.stringify({articles:items.length,newVectorArticles:items.filter(i=>i.parts.length).length,newModules:items.reduce((n,i)=>n+i.parts.length,0),referenceBoards:reviewedBoards.size}));
