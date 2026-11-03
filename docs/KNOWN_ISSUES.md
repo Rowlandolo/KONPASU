@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4, #5, #6, #7, #8, #9 und #10. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in Entwurfs-PRs bis #11. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden; der aktuelle Nachtrag steht am Dokumentende.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -227,3 +227,18 @@ PERSONAL-02 im Kandidaten behoben: neue Einschaltfläche hatte zunächst nur 24p
 PERSONAL-03 offen: Farbfilter sind Studien, keine final handgemalten Gewandpaletten. Persönliche Varianten bleiben bewusst lokale Anprobe; bestätigte dauerhafte Übernahme und Artbook-Hauptdarstellung benötigen eigenen Datenvergleich/Rückweg. Die 95er-Komposition und feste Anker sind keine Premium-Freigabe aller visuellen Überdeckungen.
 
 **402 Regressionen (14 neu), 11 neue persönliche Browsergruppen, 12 Hauptavatar-, 12 Editor-, 13 Speicher- sowie 10 App-/26 Ateliergruppen erfolgreich** für `dedbfedb4dbd6eb96f51a3d12b977f4fcfbc6a4a`: [Varianten/Passform](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882331), [App/Regression](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882613), [Hauptavatar](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882357), [Editor](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882476), [Speicher](https://github.com/Rowlandolo/KONPASU/actions/runs/41633882422). Fünf tatsächlich im Browser erzeugte Bilder gesichtet und unverändert unter `design/avatar/review-personal-variants-v11/` archiviert; Vollbeleg `design/avatar/verification-personal-variants-v11.json`. Nur synthetische Daten, kein privates Browserprofil, kein Main-Merge/Deployment. Der folgende Archivcommit enthält ausschließlich Dokumentation und Belege.
+
+
+## Aktueller Nachtrag 3.4.3b: Speicherung und neue Hauptansicht
+
+PERSONAL-03 teilweise erledigt: bestätigtes Speichern und Artbook-Hauptansicht mit eigenem Feldvergleich/Rückweg sind in PR #11 implementiert und geprüft. Farbfilter bleiben Studien, vollständige Körper-/Gesichts-/Hautbandbreite und endgültige Premiumzeichnung sind offen. Frühere Aussagen zur ausschließlich flüchtigen persönlichen Anprobe beziehen sich auf 3.4.3a.
+
+PERSONAL-04 im Kandidaten behoben: vollständige Übernahme normalisierter Anproben könnte unberührte unbekannte Profilwerte überschreiben. Save überträgt nur tatsächlich geänderte bekannte Werte. Vollständiger Profilquellen-/Diskvergleich, opake künftige Formate und eigenes erwartetes Recovery-Token schützen Übernahme/Rücknahme; Dreiwegevergleich hält konkurrierende gleiche Felder bis zur ausdrücklichen Auswahl gesperrt. Echte Zweitab- und Put-Fehlerprüfung grün, spätere Notizen/Trainings bleiben erhalten.
+
+MAIN-01 im Kandidaten behoben: globale `.avatar-scene svg`-Regeln setzten verschachtelte Spritefenster auf feste Breite und `overflow:visible`; auf Home erschien der ganze Atlas. Alle drei Regeln auf direktes Haupt-SVG begrenzt. Tatsächliche Browserprüfung kontrolliert jede Clipbreite/overflow und archiviertes Home-Bild.
+
+MAIN-02 im Kandidaten behoben: 480×600-Szenenbild im 512×768-Hauptviewport ließ waagerechte Lücken, große Maßvarianten konnten Füße abschneiden. Eigenes verschachteltes Szenen-SVG füllt per slice; gemeinsame begrenzte Figurtransformation verankert Fußboden bei y=690. Vier tatsächliche Eckpixel Alpha 255, maximale bekannte Figurenbounds, 320/390/430px und echte Studio-/Homebilder geprüft. Keine Behauptung universeller Premium-Passform.
+
+OUTFIT-14 weiterhin teilweise offen: neue Standfigur mit persönlichen Varianten, Szenen, Begleitern, unabhängiger Artikelauswahl und SVG-Rückweg funktioniert als ausdrücklich gewählte Hauptansicht. Automatische vollständige Historien-Schnappschüsse bei jeder neuen API-Aktion fehlen noch (nächster Abschnitt 3.4.4); vorhandene Snapshots sind lesbar. Historische Zielkonfiguration und reale Geräte bleiben gesonderte Grenzen.
+
+Nachweis: 438 Regressionen, 15 neue Browsergruppen und alle bestehenden Integrationsprüfungen erfolgreich für `0f72f4713487fb014a03d637e4a3f1b4624435e9`. Fünf Originalbilder gesichtet, Belege in `design/avatar/verification-artbook-main-settings-v01.json`; Vertrag AVATAR_SAVED_APPEARANCE_MAIN.md. Nur synthetische Daten, keine Veröffentlichung.

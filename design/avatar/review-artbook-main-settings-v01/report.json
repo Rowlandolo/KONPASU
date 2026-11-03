@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checks": [
+    "Actual personal Save persists exactly four explicitly changed fields and independent recovery; outfit, goals, training and unknown data remain equal",
+    "Personal settings survive reload; actual Recovery restores prior fields while retaining later name, note, training and independent outfit receipt",
+    "Separate explicit Artbook activation shows checked modular figure in Studio and Home, all saved item identities, personal layers and hidden complete SVG fallback",
+    "Nine actual scene controls and genuine earned Shiba stage render on Artbook; optional measurements transform body, hair and all equipment together",
+    "Fresh evidence hides paused/remapped requests without deletion; unearned selected dragon falls back to actual available companion without changing raw choice",
+    "Locked inventory try-on is visual only and retains saved items; new multi favorite uses Artbook while old favorite never inherits current outfit",
+    "Historical Artbook route reads only its own saved snapshot/personality/scene/companion; missing past never borrows current preference",
+    "Main Artbook stays contained at 320/390/430px with actual English labels and complete phone composition",
+    "Corrupt main atlas retains complete personalized SVG; explicit retry performs no writes, and SVG switch plus separate view recovery preserve outfit/appearance",
+    "Fresh offline Home/Studio and reload hydrate saved Artbook appearance/outfit/scenes/companions through real worker and IndexedDB",
+    "Actual stale-tab personal Save is rejected; explicit refresh merges untouched remote hairstyle with locally changed colour instead of overwriting either",
+    "Concurrent edits to the same personal field remain blocked after refresh until user explicitly chooses a value or resets the trial",
+    "Unsaved unrelated profile/note changes block refresh without memory loss; after their ordinary save the kept personal draft can be safely rebased and committed",
+    "Actual full JSON backup and confirmed existing restore UI round-trip appearance, view preference, both recovery records, outfit and unknown profile fields",
+    "Actual IndexedDB put failure aborts personal commit, restores owned fields/receipt and disk, retains concurrent unrelated note and enters existing write protection"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Fresh synthetic profile on random loopback origin only.",
+    "Artbook imagery remains fixed-pose prototype artwork; complete skin/body/face range, final premium drawings and physical device approval remain open.",
+    "Appearance/view actions have one independent field-scoped recovery step; outfit recovery remains separate.",
+    "Automatic complete historical snapshots on every appearance/outfit Save remain a separate section."
+  ],
+  "backgroundAlpha": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "pageErrors": []
+}

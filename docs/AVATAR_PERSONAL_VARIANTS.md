@@ -1,6 +1,6 @@
 # Etappe 3.4.3a: persönliche Artbook-Varianten und Passformstudie
 
-Stand 03.11.2026. Kandidat 2.4.1-preview.4, Entwicklungsbranch `feature/artbook-personal-variants` auf Entwurfs-PR #9. Keine Veröffentlichung. Dieser Abschnitt erweitert die echte Editor-Anprobe; die persönliche SVG-Hauptdarstellung aus 3.4.2 bleibt aktiv.
+Historischer Abschluss 3.4.3a, Stand 03.11.2026. Kandidat 2.4.1-preview.4, Entwicklungsbranch `feature/artbook-personal-variants` in Entwurfs-PR #10 auf #9. Keine Veröffentlichung. Die folgenden Abschnitte beschreiben die damals reine Editor-Anprobe. **Aktueller Ausbau 3.4.3b in PR #11:** ausdrücklich gespeicherte persönliche Werte mit Rücknahme und wählbare Artbook-Hauptansicht sind implementiert und geprüft; maßgeblich ist AVATAR_SAVED_APPEARANCE_MAIN.md. Ohne ausdrückliches Speichern bleibt eine Änderung Anprobe.
 
 ## Lieferumfang und Bedienung
 

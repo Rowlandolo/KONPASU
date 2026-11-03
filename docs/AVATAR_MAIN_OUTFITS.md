@@ -2,6 +2,8 @@
 
 Stand 03.11.2026. Kandidat **2.4.1-preview.3**, Cache `konpasu-offline-v241-outfit-preview3`, Entwicklungsbranch `feature/main-avatar-outfits` auf `feature/outfit-editor-ui`. Kein Deployment.
 
+Aktueller Ausbau 3.4.3b in PR #11: die neue modulare Artbook-Figur kann ausdrücklich als Hauptansicht gewählt werden, mit gespeicherten persönlichen Werten, Szenen, Begleitern und erhaltenem SVG-Rückweg. Die folgenden Abschnitte dokumentieren die Basis 3.4.2; maßgeblicher aktueller Vertrag ist AVATAR_SAVED_APPEARANCE_MAIN.md. Automatische vollständige Historien-Schnappschüsse bleiben offen.
+
 ## Sichtbare Integration
 
 Startseite und Avatar-Studio verwenden denselben persönlichen SVG-Renderer. Ein ausdrücklich gespeichertes bekanntes `profile.outfit25` liefert jetzt jede aktuell tragbare sichtbare Instanz. Gleicher Slot oder gleiche Grafik verdrängen keine andere gespeicherte Identität. Innerhalb derselben Tiefenebene gilt die gespeicherte Reihenfolge; zwischen Ebenen bleibt die anatomische Tiefenordnung maßgeblich. Natürliche Überdeckung bleibt möglich und löscht keine Auswahl.

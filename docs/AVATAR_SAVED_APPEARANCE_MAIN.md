@@ -1,6 +1,6 @@
 # Etappe 3.4.3b: gespeicherte persönliche Werte und Artbook-Hauptansicht
 
-Stand 03.11.2026. Entwicklung `feature/artbook-main-settings` auf Entwurfs-PR #10. Kandidat 2.4.1-preview.5, eigener Cache `konpasu-offline-v241-outfit-preview5`. Kein Deployment.
+Stand 03.11.2026. Entwicklung `feature/artbook-main-settings` in Entwurfs-PR [#11](https://github.com/Rowlandolo/KONPASU/pull/11) auf #10. Kandidat 2.4.1-preview.5, eigener Cache `konpasu-offline-v241-outfit-preview5`. Kein Deployment.
 
 ## Ausdrückliche Bedienung
 
@@ -28,6 +28,10 @@ Fehlende/ungültige Grafik führt zur vollständigen bisherigen Darstellung mit 
 
 ## Prüfstand und offene Grenzen
 
-435 lokale Regressionen erfolgreich (33 neu). Echte Browserprüfung für sichtbares Speichern/Rücknahme, Hauptansicht, Reload/Offline, Quellenkonflikte, dreiseitigen Abgleich, Backup/Restore und Put-Fehler vorbereitet. Ergebnisse und Originalbilder folgen nach tatsächlichem Lauf.
+**438 Regressionen (36 neu) und 15 neue Chromium-Prüfgruppen erfolgreich** für `0f72f4713487fb014a03d637e4a3f1b4624435e9`: [Speichern und Hauptansicht](https://github.com/Rowlandolo/KONPASU/actions/runs/41643814087), [Regression/App/Atelier](https://github.com/Rowlandolo/KONPASU/actions/runs/41643814128). Bestehende 12 Editor-, 13 Speicher-, 12 SVG-Hauptavatar- und 11 persönliche Varianten-/Passformgruppen ebenfalls grün. Der Variantenlauf prüft erneut 162 persönliche Kombinationen und die Komposition aller 95 Artikel auf beiden Körpern. Vollbeleg `design/avatar/verification-artbook-main-settings-v01.json`.
+
+Die neuen Prüfungen bedienen die tatsächlichen Save-/Rücknahme-/Ansichtsschalter mit synthetischen Daten: echte IndexedDB, Wiederladen, kalter Offline-Neustart mit Worker, konkurrierende Tabs einschließlich gleichem persönlichen Feld, geschützter Refresh, vollständiger JSON-Export/Bestätigungsimport und echter abgefangener IndexedDB-Put-Fehler. Keine unaufgefangenen Seitenfehler. Ein ausstehender Grafikabruf wird nach Rückkehr erneut gegen aktuellen Besitz und Profilstand geprüft; Grafikfehler behalten die vollständige persönliche SVG-Figur.
+
+Fünf unveränderte tatsächliche Browserbilder gesichtet und unter `design/avatar/review-artbook-main-settings-v01/` archiviert. Bei der Sichtprüfung korrigiert: eine alte globale Home-SVG-Regel öffnete die verschachtelten Atlasfenster; sie gilt jetzt ausschließlich dem direkten Haupt-SVG. Hintergrund füllt den gesamten 512×768-Raum über einen eigenen SVG-Viewport (vier Eckpixel Alpha 255). Gemeinsame begrenzte Figurtransformation richtet Füße und vorhandene Begleiter am Szenenboden aus. Die Home-Karte reserviert Platz für ihren bestehenden Button. Das sind Prüfungen einer festen Pose, keine universelle optische Passformabnahme.
 
 Der Grafikstand bleibt ein Prototyp für eine Pose: zwei vorhandene Körperformen, neun persönliche Kopf-/Haarzeichnungen, sechs PNG-Artikel und 89 Vektorstudien. Finale Premiumzeichnung, vollständige persönliche Körper-/Gesichts-/Hautbandbreite und universelle optische Passform bleiben offen. Persönliche und Outfit-API-Aktionen schreiben weiterhin **keine automatischen lückenlosen Historien-Schnappschüsse**; vorhandene vollständige Schnappschüsse werden benutzt, fehlende Vergangenheit übernimmt keinen heutigen Look. Historische Zielkonfiguration und echte iPhone-/VoiceOver-/GPU-/Alt-PWA-Abnahme sind weitere Gates vor Veröffentlichung.

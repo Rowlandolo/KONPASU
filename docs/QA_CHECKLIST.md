@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4, #5, #6, #7 und #8. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat in Entwurfs-PRs bis #11 (Kandidat 2.4.1-preview.5). Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; der aktuelle Prüfstand steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -433,3 +433,25 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [ ] Vollständige persönliche Körper-/Gesichts-/Hautbandbreite und finale handgemalte Gewand-/Haarpaletten.
 - [ ] Bestätigte dauerhafte persönliche Übernahme mit Feldvergleich/Rückweg und neue Hauptavatarroute samt Szenen/Begleitern.
 - [ ] Universelle Premium-Passform aller Kombinationen, physisches iPhone/GPU/VoiceOver/Alt-PWA und Veröffentlichung.
+
+
+## Abschluss Etappe 3.4.3b: persönliche Save-/Rücknahme- und Hauptansichtprüfung
+
+438 Regressionen (36 neu), 15 neue Browsergruppen und bestehende App-/26 Atelier-/12 Editor-/13 Speicher-/12 SVG-Hauptavatar-/11 Variantenprüfungen erfolgreich für `0f72f4713487fb014a03d637e4a3f1b4624435e9`. [Neue Browserprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41643814087), [Regression/App](https://github.com/Rowlandolo/KONPASU/actions/runs/41643814128). Alle weiteren Run-/Job-IDs, SHA-256 der fünf gesichteten unveränderten Bilder und Grenzen: `design/avatar/verification-artbook-main-settings-v01.json`. Ausschließlich synthetische Daten, kein Deployment, keine unaufgefangenen Seitenfehler.
+
+- [x] Tatsächliches persönliches Save schreibt nur ausdrücklich geänderte Werte; unbekannte andere Profilwerte, Ziele, Trainings, Outfit und unabhängige Recovery bleiben erhalten.
+- [x] Save/Recovery überleben Reload. Rücknahme erhält spätere Namen/Notizen/Trainings, prüft erwartetes Token und unveränderte Zielfelder.
+- [x] Quellen-/Diskkonflikt sperrt Save, behält Anprobe; Dreiwegevergleich übernimmt unberührte Remoteänderungen und verlangt bei gleichem konkurrierendem Feld ausdrückliche neue Auswahl.
+- [x] Andere ungespeicherte Appdaten verhindern Refresh; späterer gewöhnlicher Save ermöglicht sicheren Abgleich ohne Entwurfsverlust.
+- [x] Opake künftige Formate/Recovery einschließlich verschachtelter künftiger Ansichtsbelege bleiben erhalten; veraltete Queue-Snapshots setzen persönliche Save-/Rücknahmefelder nicht zurück.
+- [x] Separate Artbook-Aktivierung braucht gespeichertes Outfit, saubere Anprobe und geprüfte Grafik; SVG-Rückweg und gezielte Ansichts-Rücknahme erhalten Outfit und Persönlichkeit.
+- [x] Tatsächliche Studio-/Home-Ansicht erhält gültige gespeicherte Identitäten, persönliche Ebenen, neun Szenen, echten verdienten Shiba und Maßtransformation aller Figurteile.
+- [x] Ruhende/remappte Artikel, gesperrte Begleiter und gesperrte Anprobe erzeugen weder Besitz noch automatische Profilbereinigung.
+- [x] Neuer Favorit verwendet eigene Artbook-Quelle, alter erbt kein heutiges Outfit; bestehender vollständiger historischer Look liest nur eigene Daten, fehlende Vergangenheit bleibt unabhängig.
+- [x] SHA-fehlerhafte Grafik behält komplette persönliche SVG-Figur, kein halbes Artbook; Retry schreibt nichts. Frischer kalter Offline-Neustart/Reload mit echtem Worker und IndexedDB bestanden.
+- [x] Echte Export-/Bestätigungsimport-UI erhält Ansicht, persönliche Werte, beide Rücknahmen, Outfit und unbekannte Felder.
+- [x] Echter IndexedDB-Put-Fehler setzt nur Transaktionsfelder zurück, erhält spätere fremde Memorynotiz und bisherigen Diskstand; bestehender Schreibschutz wird aktiv.
+- [x] 320/390/430px und DE/EN, geschlossene Home-Atlasfenster, deckende Hintergrund-Eckpixel, vollständige Figur/Begleiter und erreichbarer Home-Button in Originalbildern geprüft.
+- [ ] Automatische vollständige historische Schnappschüsse für alle neuen Save-/Rücknahmeaktionen plus letzte Inventar-/Favoriten-/Legacy-Integrationsabnahme (3.4.4).
+- [ ] Vollständige persönliche Körper-/Gesichts-/Hautbandbreite, endgültige Premiumfarben/-zeichnungen und universelle optische Passform.
+- [ ] Physisches iPhone/GPU/VoiceOver/Alt-PWA-Upgrade, Review/Freigabe und Veröffentlichung.

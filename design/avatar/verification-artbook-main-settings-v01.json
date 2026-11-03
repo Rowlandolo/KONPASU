@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.4.3b",
+  "testedSourceCommit": "0f72f4713487fb014a03d637e4a3f1b4624435e9",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/11",
+  "basePullRequest": 10,
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "deployment": false,
+  "mainUnchanged": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "candidateVersion": "2.4.1-preview.5",
+  "candidateCache": "konpasu-offline-v241-outfit-preview5",
+  "scope": "Explicit field-scoped personal appearance Save and durable independent recovery, three-way conflict resolution, and separately opted-in modular Artbook main view with existing scenes/earned companions in Studio and Home. Existing complete SVG remains the fallback; no new graphics, schema or migration.",
+  "node": {
+    "status": "passed",
+    "total": 438,
+    "newTests": 36,
+    "workflowRun": 41643814128,
+    "job": 125943777902
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "appGroups": 10,
+    "atelierGroups": 26,
+    "workflowRun": 41643814128,
+    "job": 125943777517,
+    "consoleCaveat": "Existing baseline acceptance includes optional-resource/offline fetch messages and deliberate stale-tab conflict; no uncaught page errors."
+  },
+  "existingEditorBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41643814084,
+    "job": 125943777212
+  },
+  "existingStorageBrowser": {
+    "status": "passed",
+    "groups": 13,
+    "workflowRun": 41643814297,
+    "job": 125943778424
+  },
+  "existingMainAvatarBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41643814314,
+    "job": 125943778126
+  },
+  "existingPersonalVariantsBrowser": {
+    "status": "passed",
+    "groups": 11,
+    "workflowRun": 41643814172,
+    "job": 125943777715,
+    "fit": {
+      "variants": 162,
+      "baseGeometryStable": true,
+      "uniqueIds": true,
+      "headwear": 162,
+      "faceHashes": 3,
+      "hairHashes": 3,
+      "cards": [
+        "gallery-form-a-swept",
+        "gallery-form-a-long",
+        "gallery-form-a-tied",
+        "gallery-form-b-swept",
+        "gallery-form-b-long",
+        "gallery-form-b-tied"
+      ],
+      "expressionCards": 9
+    },
+    "deliveryQuality": {
+      "alphaMaxError": 0,
+      "visibleColourRMSE": 1.8027445330887488
+    }
+  },
+  "savedAppearanceMainBrowser": {
+    "status": "passed",
+    "groups": 15,
+    "workflowRun": 41643814087,
+    "job": 125943777321,
+    "artifactId": 13232739389,
+    "artifactDigest": "sha256:bc45b8cbc94443fdde2757f47deb9cd58867f0f1c861b67979c6dd2b9e8c87df",
+    "reportPath": "design/avatar/review-artbook-main-settings-v01/report.json",
+    "checks": [
+      "Actual personal Save persists exactly four explicitly changed fields and independent recovery; outfit, goals, training and unknown data remain equal",
+      "Personal settings survive reload; actual Recovery restores prior fields while retaining later name, note, training and independent outfit receipt",
+      "Separate explicit Artbook activation shows checked modular figure in Studio and Home, all saved item identities, personal layers and hidden complete SVG fallback",
+      "Nine actual scene controls and genuine earned Shiba stage render on Artbook; optional measurements transform body, hair and all equipment together",
+      "Fresh evidence hides paused/remapped requests without deletion; unearned selected dragon falls back to actual available companion without changing raw choice",
+      "Locked inventory try-on is visual only and retains saved items; new multi favorite uses Artbook while old favorite never inherits current outfit",
+      "Historical Artbook route reads only its own saved snapshot/personality/scene/companion; missing past never borrows current preference",
+      "Main Artbook stays contained at 320/390/430px with actual English labels and complete phone composition",
+      "Corrupt main atlas retains complete personalized SVG; explicit retry performs no writes, and SVG switch plus separate view recovery preserve outfit/appearance",
+      "Fresh offline Home/Studio and reload hydrate saved Artbook appearance/outfit/scenes/companions through real worker and IndexedDB",
+      "Actual stale-tab personal Save is rejected; explicit refresh merges untouched remote hairstyle with locally changed colour instead of overwriting either",
+      "Concurrent edits to the same personal field remain blocked after refresh until user explicitly chooses a value or resets the trial",
+      "Unsaved unrelated profile/note changes block refresh without memory loss; after their ordinary save the kept personal draft can be safely rebased and committed",
+      "Actual full JSON backup and confirmed existing restore UI round-trip appearance, view preference, both recovery records, outfit and unknown profile fields",
+      "Actual IndexedDB put failure aborts personal commit, restores owned fields/receipt and disk, retains concurrent unrelated note and enters existing write protection"
+    ],
+    "backgroundAlpha": [
+      255,
+      255,
+      255,
+      255
+    ],
+    "pageErrors": []
+  },
+  "archiveCommitOnlyDocsAndEvidence": true,
+  "visualReview": {
+    "findings": "Inspected original Studio, Home, 320px mobile, conflict and fallback images. No exposed sprite atlas grid; complete fixed-pose figure, feet, scene and earned companion visible. Background fills main viewport. Home card reserves room for existing button and preserves figure aspect ratio.",
+    "fixes": [
+      "Restricted legacy .avatar-scene svg selectors to direct child SVG so nested sprite viewports keep clipping/width.",
+      "Nested 480x600 scene viewport fills 512x768 with xMidYMid slice; all four root corner alpha values are 255.",
+      "Common bounded body/hair/equipment transform aligns feet with existing scene floor and companion."
+    ]
+  },
+  "limits": [
+    "Fresh synthetic profile on random loopback origin only.",
+    "Artbook imagery remains fixed-pose prototype artwork; complete skin/body/face range, final premium drawings and physical device approval remain open.",
+    "Appearance/view actions have one independent field-scoped recovery step; outfit recovery remains separate.",
+    "Automatic complete historical snapshots on every appearance/outfit Save remain a separate section.",
+    "No automatic complete history snapshots from new outfit/appearance APIs yet. Existing full snapshots render independently; missing past never borrows current appearance.",
+    "One last appearance/view recovery step is independent of outfit recovery and session Undo/Redo, not a multi-step durable appearance history.",
+    "95 items are prototypes, including 89 vector studies. This acceptance is not visual certification of all possible combined outfits.",
+    "Physical iPhone, GPU peaks, VoiceOver and installed-old-PWA upgrade remain release gates."
+  ],
+  "screenshots": [
+    {
+      "path": "design/avatar/review-artbook-main-settings-v01/artbook-main.png",
+      "bytes": 108251,
+      "sha256": "54e71451cef078cde8a4978d663974e987bc57d9145ca59c76c8da5cdd37d8ed",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-artbook-main-settings-v01/artbook-home.png",
+      "bytes": 34659,
+      "sha256": "5475efb85e887513505324c9a14a2f29ec7b63c3425512ac7fbc82d5d3bf6ff1",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-artbook-main-settings-v01/artbook-mobile.png",
+      "bytes": 100229,
+      "sha256": "4bc528b4750514437bce78b8c9686e6c21853e8a23951760a62d937534ec8080",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-artbook-main-settings-v01/artbook-fallback.png",
+      "bytes": 90277,
+      "sha256": "3176755c19af7730fc6aa6abba43ba5cc7ff461a18059f1877b695ef27a9eb83",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-artbook-main-settings-v01/personal-conflict.png",
+      "bytes": 49967,
+      "sha256": "b8625fef564fdab9b04a07071890b6ef16f8ca202997901d76673dedfb673baf",
+      "visuallyInspected": true
+    }
+  ]
+}
