@@ -135,3 +135,7 @@ ART-15 im Katalog behoben: Math.sin/Math.cos kann letzte Binärstellen zwischen 
 ART-16 offen: 89 Studien verwenden bewusst Vektorgrafik statt finaler Premiumzeichnung. Zwei Mimiksets sind separate Studien neben dem Kopf; keine fertigen Gesichtslayer. Handobjekte hängen am Obi, neue Griffposen fehlen. Passformen sind Studien für zwei Körper/eine Pose; insbesondere Schuhsohle/-spitze und Maskierung der Grundschuhe benötigen Verfeinerung. Das ist keine Produktionsfreigabe dieser Grafiken.
 
 ART-17 offen: 95er-Kombination enthält 4.550 SVG-Knoten im CI-Lauf. Skriptmedian 1.9 ms / p95 3.6 ms ohne Paint sind keine Telefon-/GPU-/Spitzenspeicherzusage. Unveränderte 47.84-MiB-Quellbildrechnung betrifft das PNG-Startset, nicht alle zusätzlichen Vektor-Rastercaches. Reale Messung vor Produktintegration.
+
+## Etappe 3.1: reiner Outfit-Kompatibilitätsadapter in Prüfung
+
+Adapter und synthetische Prüfseite für aktuelle Auswahl, Favoriten und historische Schnappschüsse vorbereitet. Parallele Legacy-/Slotwerte, Ersatzteile, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben getrennt erhalten. Keine Liveeinbindung, Persistenz- oder Schemaänderung. 23 neue Adapterregressionen lokal erfolgreich; Gesamtprüfung 303 erfolgreich. Reale Browserabnahme steht noch aus. Datenvertrag und nächste Sitzungsschritte: AVATAR_OUTFIT_CONTRACT.md.

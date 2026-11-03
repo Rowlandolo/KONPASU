@@ -324,3 +324,7 @@ Keine Live-, Daten-, Schema-, Besitz-, Rewardregel- oder Service-Workeränderung
 - [ ] Finale Premiumzeichnung/Detailpassform, richtige Mimiklayer/Griffposen und Schuhmasken.
 - [ ] Neue App-/Outfitpersistenz, Import/Export/Rollback und Offline-Precache.
 - [ ] Physische Geräte-/GPU-/Peak-/VoiceOver-/Alt-PWA-Abnahme und Veröffentlichung.
+
+## Etappe 3.1: reiner Outfit-Kompatibilitätsadapter in Prüfung
+
+Adapter und synthetische Prüfseite für aktuelle Auswahl, Favoriten und historische Schnappschüsse vorbereitet. Parallele Legacy-/Slotwerte, Ersatzteile, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben getrennt erhalten. Keine Liveeinbindung, Persistenz- oder Schemaänderung. 23 neue Adapterregressionen lokal erfolgreich; Gesamtprüfung 303 erfolgreich. Reale Browserabnahme steht noch aus. Datenvertrag und nächste Sitzungsschritte: AVATAR_OUTFIT_CONTRACT.md.
