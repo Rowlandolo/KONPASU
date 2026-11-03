@@ -81,7 +81,10 @@
   document.getElementById('headwear-shape').textContent=models.get(active).profile.labelDe;
  }
  document.getElementById('headwear-layers').addEventListener('toggle',refreshHeadwearPreview);
- document.getElementById('headwear-reference').addEventListener('toggle',event=>{const img=document.getElementById('headwear-reference-image');if(event.target.open&&!img.getAttribute('src'))img.src='./headwear-reference-board.webp'});
+ const headwearReference=document.getElementById('headwear-reference-image'),headwearReferenceStatus=document.getElementById('headwear-reference-status');
+ headwearReference.addEventListener('load',()=>headwearReferenceStatus.textContent='');
+ headwearReference.addEventListener('error',()=>{headwearReference.removeAttribute('src');headwearReferenceStatus.textContent='Artbook konnte nicht geladen werden. Bitte schließen und erneut öffnen.'});
+ document.getElementById('headwear-reference').addEventListener('toggle',event=>{if(event.target.open&&!headwearReference.getAttribute('src')){headwearReferenceStatus.textContent='Artbook wird geladen …';headwearReference.loading='eager';headwearReference.src='./headwear-reference-board.webp'}});
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);
