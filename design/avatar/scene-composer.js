@@ -25,7 +25,7 @@
    checkPlacement(layer.placement);base.set(layer.id,layer);
    nodes.push({id:'base-'+fragmentId,baseId:layer.id,fragmentId,kind:'base',z:SURFACE_DEPTH[fragmentId],src:layer.src,placement:{...layer.placement},occludedBy:[],clipPolygons:[]});
   }
-  if(baseLayers.some(l=>l.id==='kimono'&&l.fragmentId!==undefined)&&(!surfaces.has('kimono')||!surfaces.has('kimono-back')))throw Error('Incomplete scene garment');
+  if((surfaces.has('kimono-back')||baseLayers.some(l=>l.id==='kimono'&&l.depthRole!==undefined))&&(!surfaces.has('kimono')||!surfaces.has('kimono-back')))throw Error('Incomplete scene garment');
   for(const part of equipment){
    if(!ID.test(part.partId)||seen.has(part.partId)||!Number.isFinite(part.z)||typeof fitArtwork!=='function')throw Error('Invalid equipment scene node');seen.add(part.partId);
    const depthRole=part.depthRole||'front';
