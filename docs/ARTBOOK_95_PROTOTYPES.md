@@ -778,7 +778,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### reading-1 · Buch-Anhänger
 
-Original: **Book Charm**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 1, Tafelviewport [350, 101, 212, 236]. Dunkelgrüner rechteckiger Buchanhänger mit Goldrand und Blüten.
+Original: **Book Charm**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 1, Tafelviewport [529, 101, 164, 236]. Dunkelgrüner rechteckiger Buchanhänger mit Goldrand und Blüten.
 
 Unveränderte Legacy-Zuordnung: Lesezeichen; Slot secondary; 1 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -794,7 +794,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### reading-2 · Leseschriftrolle
 
-Original: **Reading Scroll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 2, Tafelviewport [568, 101, 212, 236]. Helle offene Schriftrolle mit dunklen Achsen, Goldbeschlägen und Landschaft.
+Original: **Reading Scroll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 2, Tafelviewport [695, 101, 165, 236]. Helle offene Schriftrolle mit dunklen Achsen, Goldbeschlägen und Landschaft.
 
 Unveränderte Legacy-Zuordnung: Gebundenes Buch; Slot main; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -810,7 +810,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### reading-3 · Gelehrtentasche
 
-Original: **Scholar Satchel**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 3, Tafelviewport [786, 101, 212, 236]. Dunkle Tasche, Bücher, Schulterriemen und Blütenbeschläge.
+Original: **Scholar Satchel**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 3, Tafelviewport [862, 101, 166, 236]. Dunkle Tasche, Bücher, Schulterriemen und Blütenbeschläge.
 
 Unveränderte Legacy-Zuordnung: Große Schriftrolle; Slot main; 12 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -827,7 +827,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### reading-4 · Bibliothekskodex
 
-Original: **Library Codex**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 4, Tafelviewport [1004, 101, 212, 236]. Großes navyfarbenes gebundenes Buch mit Goldblüten und Lesezeichen.
+Original: **Library Codex**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 4, Tafelviewport [1030, 101, 178, 236]. Großes navyfarbenes gebundenes Buch mit Goldblüten und Lesezeichen.
 
 Unveränderte Legacy-Zuordnung: Bibliothekar-Haori; Slot mantle; 26 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -843,7 +843,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### reading-5 · Archiv-Schriftrollenset
 
-Original: **Grand Archive Scroll Set**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 5, Tafelviewport [1222, 101, 212, 236]. Dunkler Rollenkasten, mehrere Schriftrollen und heller Archivbogen.
+Original: **Grand Archive Scroll Set**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 1, Spalte 5, Tafelviewport [1210, 101, 225, 236]. Dunkler Rollenkasten, mehrere Schriftrollen und heller Archivbogen.
 
 Unveränderte Legacy-Zuordnung: Ewiges Archiv; Slot background; 52 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -862,7 +862,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### languages-1 · Sprachbuch-Anhänger
 
-Original: **Phrasebook Charm**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 1, Tafelviewport [350, 340, 212, 236]. Dunkler Buchanhänger mit Wellenmuster, Blüte und grüner Quaste.
+Original: **Phrasebook Charm**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 1, Tafelviewport [529, 340, 164, 236]. Dunkler Buchanhänger mit Wellenmuster, Blüte und grüner Quaste.
 
 Unveränderte Legacy-Zuordnung: Kanji-Anhänger; Slot secondary; 1 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -878,7 +878,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### languages-2 · Kalligrafiepinsel
 
-Original: **Calligraphy Brush**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 2, Tafelviewport [568, 340, 212, 236]. Langer dunkler Pinsel, helle Borsten, Goldquaste und kleines Tintenfass.
+Original: **Calligraphy Brush**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 2, Tafelviewport [695, 340, 165, 236]. Langer dunkler Pinsel, helle Borsten, Goldquaste und kleines Tintenfass.
 
 Unveränderte Legacy-Zuordnung: Kalligrafiepinsel; Slot main; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -895,7 +895,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### languages-3 · Mehrsprachiges Rollenetui
 
-Original: **Multilingual Scroll Case**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 3, Tafelviewport [786, 340, 212, 236]. Grünes zylindrisches Etui mit Blütenschließe und Schriftanhängern.
+Original: **Multilingual Scroll Case**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 3, Tafelviewport [862, 340, 166, 236]. Grünes zylindrisches Etui mit Blütenschließe und Schriftanhängern.
 
 Unveränderte Legacy-Zuordnung: Sprach-Schriftrolle; Slot main; 12 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -911,7 +911,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### languages-4 · Reisekarten-Fächer
 
-Original: **Travel Map Fan**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 4, Tafelviewport [1004, 340, 212, 236]. Heller Faltfächer mit grüner Landschaft, Torii und dunkler Quaste.
+Original: **Travel Map Fan**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 4, Tafelviewport [1030, 340, 178, 236]. Heller Faltfächer mit grüner Landschaft, Torii und dunkler Quaste.
 
 Unveränderte Legacy-Zuordnung: Schwebende Schriftzeichen; Slot aura; 26 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -927,7 +927,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### languages-5 · Phönixfeder der Sprachen
 
-Original: **Polyglot Phoenix Feather**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 5, Tafelviewport [1222, 340, 212, 236]. Navy-ivoryfarbene Feder, Juwelenknoten und goldener Phönixbogen.
+Original: **Polyglot Phoenix Feather**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 2, Spalte 5, Tafelviewport [1210, 340, 225, 236]. Navy-ivoryfarbene Feder, Juwelenknoten und goldener Phönixbogen.
 
 Unveränderte Legacy-Zuordnung: Flüsternde Schriftrolle; Slot main; 52 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -946,7 +946,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### learning-1 · Lehrlings-Werkzeugtasche
 
-Original: **Apprentice Toolkit**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 1, Tafelviewport [350, 582, 212, 236]. Dunkle offene Tasche mit Pinseln, kleinen Werkzeugen und Goldverzierung.
+Original: **Apprentice Toolkit**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 1, Tafelviewport [529, 582, 164, 236]. Dunkle offene Tasche mit Pinseln, kleinen Werkzeugen und Goldverzierung.
 
 Unveränderte Legacy-Zuordnung: Lernbeutel; Slot secondary; 1 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -962,7 +962,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### learning-2 · Handwerker-Maßband
 
-Original: **Artisan Measuring Cord**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 2, Tafelviewport [568, 582, 212, 236]. Helles aufgerolltes Maßband mit Strichmarken, Knoten und Quasten.
+Original: **Artisan Measuring Cord**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 2, Tafelviewport [695, 582, 165, 236]. Helles aufgerolltes Maßband mit Strichmarken, Knoten und Quasten.
 
 Unveränderte Legacy-Zuordnung: Gelehrten-Kopfbedeckung; Slot head; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -978,7 +978,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### learning-3 · Handwerksbrosche
 
-Original: **Craft Insignia Brooch**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 3, Tafelviewport [786, 582, 212, 236]. Grün-goldene Blütenbrosche mit gekreuztem Handwerkswerkzeug.
+Original: **Craft Insignia Brooch**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 3, Tafelviewport [862, 582, 166, 236]. Grün-goldene Blütenbrosche mit gekreuztem Handwerkswerkzeug.
 
 Unveränderte Legacy-Zuordnung: Gelehrten-Haori; Slot mantle; 12 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -994,7 +994,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### learning-4 · Meisterliche Werkzeugrolle
 
-Original: **Masterwork Tool Roll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 4, Tafelviewport [1004, 582, 212, 236]. Offene navyfarbene Werkzeugrolle mit einzeln sichtbaren Werkzeugen.
+Original: **Masterwork Tool Roll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 4, Tafelviewport [1030, 582, 178, 236]. Offene navyfarbene Werkzeugrolle mit einzeln sichtbaren Werkzeugen.
 
 Unveränderte Legacy-Zuordnung: Gewand des Weisen; Slot upper; 26 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1010,7 +1010,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### learning-5 · Gildenmeister-Werkzeugkiste
 
-Original: **Guildmaster Toolbox Relic**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 5, Tafelviewport [1222, 582, 212, 236]. Dunkle tragbare Kiste mit goldenem Griff, Ecken und Blütenrelief.
+Original: **Guildmaster Toolbox Relic**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 3, Spalte 5, Tafelviewport [1210, 582, 225, 236]. Dunkle tragbare Kiste mit goldenem Griff, Ecken und Blütenrelief.
 
 Unveränderte Legacy-Zuordnung: Himmlische Akademie; Slot background; 52 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1028,7 +1028,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### focus-1 · Fokus-Stirnband
 
-Original: **Focus Headband**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 1, Tafelviewport [350, 824, 212, 236]. Drei native PNGs: hintere Bänder, Band unter Pony und vordere Schleife.
+Original: **Focus Headband**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 1, Tafelviewport [529, 824, 164, 236]. Drei native PNGs: hintere Bänder, Band unter Pony und vordere Schleife.
 
 Unveränderte Legacy-Zuordnung: Konzentrationsstein; Slot main; 1 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1044,7 +1044,7 @@ Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### focus-2 · Sanduhr
 
-Original: **Sand Timer**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 2, Tafelviewport [568, 824, 212, 236]. Transparente Sanduhr in dunklem Goldgestell mit hellem Sand.
+Original: **Sand Timer**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 2, Tafelviewport [695, 824, 165, 236]. Transparente Sanduhr in dunklem Goldgestell mit hellem Sand.
 
 Unveränderte Legacy-Zuordnung: Hachimaki-Stirnband; Slot head; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1060,7 +1060,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### focus-3 · Arbeits-Schriftrolle
 
-Original: **Deep-Work Desk Scroll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 3, Tafelviewport [786, 824, 212, 236]. Offene helle Planrolle mit Häkchen, Landschaft und seitlicher Quaste.
+Original: **Deep-Work Desk Scroll**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 3, Tafelviewport [862, 824, 166, 236]. Offene helle Planrolle mit Häkchen, Landschaft und seitlicher Quaste.
 
 Unveränderte Legacy-Zuordnung: Zen-Zeitmesser; Slot main; 12 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1076,7 +1076,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### focus-4 · Konzentrationslaterne
 
-Original: **Concentration Lantern**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 4, Tafelviewport [1004, 824, 212, 236]. Goldenes Laternengehäuse, warmes Licht und hängende Blütenranke.
+Original: **Concentration Lantern**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 4, Tafelviewport [1030, 824, 178, 236]. Goldenes Laternengehäuse, warmes Licht und hängende Blütenranke.
 
 Unveränderte Legacy-Zuordnung: Ring der Konzentration; Slot secondary; 26 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
@@ -1092,7 +1092,7 @@ Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; 
 
 ### focus-5 · Stiller Geist
 
-Original: **Still-Mind Halo**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 5, Tafelviewport [1222, 824, 212, 236]. Goldene klare Kreisbahnen über einer hellen Lotusblüte.
+Original: **Still-Mind Halo**, Tafel assets/konpasu_knowledge_productivity_rewards.webp, Reihe 4, Spalte 5, Tafelviewport [1210, 824, 225, 236]. Goldene klare Kreisbahnen über einer hellen Lotusblüte.
 
 Unveränderte Legacy-Zuordnung: Raum der Stille; Slot background; 52 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 

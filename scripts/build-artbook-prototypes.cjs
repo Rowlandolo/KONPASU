@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),dir=path.join(root,'design/avatar'),lega
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'premium-art-bundle.js'),'utf8'),context);
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const {webpSize}=require('./avatar-budget.cjs');
-const cells={motion:{x:[474,662,850,1038,1226],y:[94,341,588,835],w:205,h:238},health:{x:[522,704,886,1068,1250],y:[171,334,498,663,827],w:181,h:157},knowledge:{x:[350,568,786,1004,1222],y:[101,340,582,824],w:212,h:236},mind:{x:[640,800,961,1122,1283],y:[124,344,558,770],w:157,h:205},nature:{x:[374,581,788,995,1202],y:[171,443],w:207,h:239}};
+const cells={motion:{x:[474,662,850,1038,1226],y:[94,341,588,835],w:205,h:238},health:{x:[522,704,886,1068,1250],y:[171,334,498,663,827],w:181,h:157},knowledge:{x:[529,695,862,1030,1210],y:[101,340,582,824],w:[164,165,166,178,225],h:236},mind:{x:[640,800,961,1122,1283],y:[124,344,558,770],w:157,h:205},nature:{x:[374,581,788,995,1202],y:[171,443],w:207,h:239}};
 const destination=path.join(dir,'references-v10');fs.mkdirSync(destination,{recursive:true});
 const reference=key=>{const uri=context.window.KONPASU_PREMIUM_SRC(key);if(!uri)throw Error('Missing reference '+key);const bytes=Buffer.from(uri.slice(uri.indexOf(',')+1),'base64'),name=path.basename(key);fs.writeFileSync(path.join(destination,name),bytes);return {bundleKey:key,file:'./references-v10/'+name,bytes:bytes.length,sha256:hash(bytes),...webpSize(bytes),unaltered:true}};
 const round=n=>Math.round(n*1000)/1000;
@@ -104,7 +104,7 @@ for(const [family,label,board,row,theme,entries] of families){
  if(!reviewedBoards.has(board))reviewedBoards.set(board,reference('assets/'+boards[board]+'.webp'));
  entries.forEach(([titleDe,titleEn,kind,depiction],index)=>{
   const id=family+'-'+(index+1),old=original.get(id);if(!old)throw Error('Unknown stable ID '+id);
-  const cell=cells[board],boardCellViewBox=[cell.x[index],cell.y[row-1],board==='nature'&&index===4?230:cell.w,cell.h];
+  const cell=cells[board],boardCellViewBox=[cell.x[index],cell.y[row-1],board==='nature'&&index===4?230:Array.isArray(cell.w)?cell.w[index]:cell.w,cell.h];
   const referenceCard=reference('reward-art/'+id+'.webp'),parts=modules(kind,family).map((p,i)=>{
    const partId=id+'-study-'+(i+1),a=vectors.art(p.shape,theme,partId);
    const file='./vector-prototypes-v10/'+partId+'.svg',bytes=Buffer.from(vectors.svg(p.shape,theme,partId));
