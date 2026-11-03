@@ -71,7 +71,7 @@ Ohne früheren Schnappschuss entsteht eine blockierte, neutrale Projektion. Der 
 
 `scripts/build-outfit-contract-cases.cjs` erzeugt die Browserdaten über die tatsächlichen bestehenden APIs im isolierten VM-Testharness. Aktuelle Tierwerte und Wochenstatus sind dabei bewusst kontrollierte synthetische Eingaben. Das beweist den Adaptervertrag, nicht die vollständige Richtigkeit aller Reward-/Kalenderberechnungen. Fixture und Generator sind reproduzierbar; keine persönlichen Exporte verwenden.
 
-Tests: `node tests/outfit-adapter.cjs`; Gesamtprüfung: `node scripts/check.cjs`. Reale Browserprüfung: `node scripts/outfit-browser-check.cjs` mit gepinntem Playwright/Chromium in GitHub Actions. Abschlussbelege werden in `design/avatar/verification-outfit-contract-v01.json` geführt.
+Tests: `node tests/outfit-adapter.cjs`; Gesamtprüfung: `node scripts/check.cjs`. Reale Browserprüfung: `node scripts/outfit-browser-check.cjs` mit gepinntem Playwright/Chromium in GitHub Actions. Abschlussbelege stehen in `design/avatar/verification-outfit-contract-v01.json`: 303 Regressionen, davon 23 neue, 26 bestehende Ateliergruppen sowie 12 neue Browsergruppen für Quellcommit `1d50304da6b818cf1181cb79fda02072755e8143` erfolgreich. Läufe [41605680366](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680366) und [41605680286](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680286). Sechs gesichtete Original-Screenshots und Browserbericht unter `design/avatar/review-outfit-contract-v01/`. Der folgende Nachweiscommit enthält nur Dokumentation und Belege.
 
 ## Nächster Abschnitt
 

@@ -1,6 +1,6 @@
 # KONPASU – Prüfkriterien und Release-Gate
 
-Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3 und #4. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
+Stand 03.11.2026: 2.4.0 ist veröffentlicht und in Chromium geprüft. Der neue Artbook-Avatar bleibt separat im Entwicklungsatelier / Entwurfs-PRs #3, #4 und #5. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme ist weiter offen. Historische Prüflisten stehen unter ihren damaligen Abschnitten; die aktuelle Basisprüfung steht am Dokumentende.
 
 ## Wiederholbare Automatik
 
@@ -325,6 +325,18 @@ Keine Live-, Daten-, Schema-, Besitz-, Rewardregel- oder Service-Workeränderung
 - [ ] Neue App-/Outfitpersistenz, Import/Export/Rollback und Offline-Precache.
 - [ ] Physische Geräte-/GPU-/Peak-/VoiceOver-/Alt-PWA-Abnahme und Veröffentlichung.
 
-## Etappe 3.1: reiner Outfit-Kompatibilitätsadapter in Prüfung
+## Abschluss Etappe 3.1: verlustfreier Outfit-Leseadapter
 
-Adapter und synthetische Prüfseite für aktuelle Auswahl, Favoriten und historische Schnappschüsse vorbereitet. Parallele Legacy-/Slotwerte, Ersatzteile, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben getrennt erhalten. Keine Liveeinbindung, Persistenz- oder Schemaänderung. 23 neue Adapterregressionen lokal erfolgreich; Gesamtprüfung 303 erfolgreich. Reale Browserabnahme steht noch aus. Datenvertrag und nächste Sitzungsschritte: AVATAR_OUTFIT_CONTRACT.md.
+`avatar-outfit-v25.js` projiziert aktuelle Auswahl, Favoriten und historische Schnappschüsse ohne Schreibzugriff. Parallele Legacy-/Slotwerte, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben mit ihrer Herkunft erhalten. Artikelidentität und Grafikschlüssel sind getrennt; Besitz/Tragbarkeit und tatsächliche Altauflösung stammen aus den bestehenden APIs. Leere Favoriten bleiben leer. Ohne historische Quelle entsteht eine neutrale blockierte Ansicht statt einer erfundenen heutigen Vergangenheit.
+
+303 Regressionen einschließlich 23 neuer Adapterfälle, bestehende App-/Atelier-Chromiumprüfung (26 Gruppen) und 12 neue Browsergruppen erfolgreich für **1d50304da6b818cf1181cb79fda02072755e8143**: [Regression und bestehender Browser](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680366), [synthetische Outfitprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680286). Acht UI-Fälle, exakte Quelltreue, 390-px-Layout, Textsicherheit, sichtbare Fehler und bedienbare bereits geladene Offlineansicht geprüft. Kein localStorage-/IndexedDB-Eintrag, keine Browserfehler. Sechs tatsächliche Browserbilder gesichtet und unverändert unter `design/avatar/review-outfit-contract-v01/` archiviert; Vollbeleg `design/avatar/verification-outfit-contract-v01.json`.
+
+Entwurfs-PR [#5](https://github.com/Rowlandolo/KONPASU/pull/5) baut auf #4 auf. Keine Live-, Profil-, Schema-, Rewardregel- oder Cacheänderung. Die synthetischen VM-Fälle verwenden kontrollierte Wochen-/Tierwerte; sie sind keine vollständige Reward-/Kalender- oder Geräteabnahme. Etappe 3 insgesamt ist weiterhin offen. Als Nächstes folgt ein geordneter Mehrfachentwurf mit eigenen Artikelinstanzen, Sichtbarkeit, Reihenfolge und Undo ausschließlich im Sitzungsspeicher. Persistenz, Import/Export/Rollback und Appintegration folgen mit eigenem Prüfvertrag. Details: AVATAR_OUTFIT_CONTRACT.md.
+
+- [x] 23 neue Adapterfälle mit realen Alt-APIs; vollständiger synthetischer Quellvergleich, eigene Zielidentität, Pausen, unbekannte Daten und fehlerhafte Leser.
+- [x] Acht Browserfälle für aktuell/Favorit/Historie; 12 Browsergruppen einschließlich 390 px, XSS-Text, kaputter Fixture und Warm-Offlinebetrieb.
+- [x] Leerer Favorit erbt keine Ausrüstung; fehlender historischer Schnappschuss erhält keine heutigen Teile.
+- [x] Keine Appinitialisierung, persönlichen Exporte, Profilimporte oder Speichereinträge; sechs Browserbilder gesichtet/archiviert.
+- [ ] Geordneter Mehrfachentwurf und Undo im Sitzungsspeicher.
+- [ ] Persistenter Mehrfachvertrag, Altprofilvergleich, Import/Export, Rollback, App- und PWA-Integration.
+- [ ] Reale Geräte-/VoiceOver-/Kaltstart-/Upgradeabnahme; finale Grafik und Veröffentlichung.

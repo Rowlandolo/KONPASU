@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3 und #4. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3, #4 und #5. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -136,6 +136,16 @@ ART-16 offen: 89 Studien verwenden bewusst Vektorgrafik statt finaler Premiumzei
 
 ART-17 offen: 95er-Kombination enthält 4.550 SVG-Knoten im CI-Lauf. Skriptmedian 1.9 ms / p95 3.6 ms ohne Paint sind keine Telefon-/GPU-/Spitzenspeicherzusage. Unveränderte 47.84-MiB-Quellbildrechnung betrifft das PNG-Startset, nicht alle zusätzlichen Vektor-Rastercaches. Reale Messung vor Produktintegration.
 
-## Etappe 3.1: reiner Outfit-Kompatibilitätsadapter in Prüfung
+## Abschluss Etappe 3.1: verlustfreier Outfit-Leseadapter
 
-Adapter und synthetische Prüfseite für aktuelle Auswahl, Favoriten und historische Schnappschüsse vorbereitet. Parallele Legacy-/Slotwerte, Ersatzteile, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben getrennt erhalten. Keine Liveeinbindung, Persistenz- oder Schemaänderung. 23 neue Adapterregressionen lokal erfolgreich; Gesamtprüfung 303 erfolgreich. Reale Browserabnahme steht noch aus. Datenvertrag und nächste Sitzungsschritte: AVATAR_OUTFIT_CONTRACT.md.
+`avatar-outfit-v25.js` projiziert aktuelle Auswahl, Favoriten und historische Schnappschüsse ohne Schreibzugriff. Parallele Legacy-/Slotwerte, ruhende/unbekannte Einträge, eigene Ziel-IDs und beide Begleiterfelder bleiben mit ihrer Herkunft erhalten. Artikelidentität und Grafikschlüssel sind getrennt; Besitz/Tragbarkeit und tatsächliche Altauflösung stammen aus den bestehenden APIs. Leere Favoriten bleiben leer. Ohne historische Quelle entsteht eine neutrale blockierte Ansicht statt einer erfundenen heutigen Vergangenheit.
+
+303 Regressionen einschließlich 23 neuer Adapterfälle, bestehende App-/Atelier-Chromiumprüfung (26 Gruppen) und 12 neue Browsergruppen erfolgreich für **1d50304da6b818cf1181cb79fda02072755e8143**: [Regression und bestehender Browser](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680366), [synthetische Outfitprüfung](https://github.com/Rowlandolo/KONPASU/actions/runs/41605680286). Acht UI-Fälle, exakte Quelltreue, 390-px-Layout, Textsicherheit, sichtbare Fehler und bedienbare bereits geladene Offlineansicht geprüft. Kein localStorage-/IndexedDB-Eintrag, keine Browserfehler. Sechs tatsächliche Browserbilder gesichtet und unverändert unter `design/avatar/review-outfit-contract-v01/` archiviert; Vollbeleg `design/avatar/verification-outfit-contract-v01.json`.
+
+Entwurfs-PR [#5](https://github.com/Rowlandolo/KONPASU/pull/5) baut auf #4 auf. Keine Live-, Profil-, Schema-, Rewardregel- oder Cacheänderung. Die synthetischen VM-Fälle verwenden kontrollierte Wochen-/Tierwerte; sie sind keine vollständige Reward-/Kalender- oder Geräteabnahme. Etappe 3 insgesamt ist weiterhin offen. Als Nächstes folgt ein geordneter Mehrfachentwurf mit eigenen Artikelinstanzen, Sichtbarkeit, Reihenfolge und Undo ausschließlich im Sitzungsspeicher. Persistenz, Import/Export/Rollback und Appintegration folgen mit eigenem Prüfvertrag. Details: AVATAR_OUTFIT_CONTRACT.md.
+
+OUTFIT-01 offen in der Live-App: `showProfileForDate` verwendet ohne früheren Schnappschuss noch das heutige Profil. Der neue reine Adapter blockiert diesen Fall neutral; die Livefunktion wurde nicht verändert. Spätere Integration muss historischen Leerzustand samt Regression ausdrücklich übernehmen.
+
+OUTFIT-02 Formatgrenze: alte Favoriten besitzen keine vollständige historische Haar-/Mimik-/Effekt-/Zielfamilienkopie. Adapter erhält Originalfavorit und Basisprofil getrennt; fehlende damalige Werte lassen sich nicht zuverlässig rekonstruieren. Keine nachträgliche Erfindung oder stille Migration.
+
+OUTFIT-03 im neuen Inspektor behoben: dreispaltige Statuskarten ließen bei 390 px die lange Quellprüfung überstehen. Mobile Zweispaltenansicht mit eigener voller Zeile sowie horizontal begrenzten lesbaren Tabellen; tatsächlicher Chromiumbeleg und Sichtprüfung vorhanden.
