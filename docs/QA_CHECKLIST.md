@@ -470,5 +470,5 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] JSON-Export/Bestätigungsimport, Reload, kalter Offline-Neustart, echte IndexedDB, Fallback-CAS und Zweitabkonflikte erhalten die Historie.
 - [x] Inventar, unabhängige Mehrfachartikel, Sichtbarkeit/Reihenfolge, Personalisierung, Hauptansicht, Szenen, Begleiter, Favoriten und bestehende historische Quellen gemeinsam geprüft.
 - [x] Kritischer Offline-Precache enthält den neuen Historienvertrag; Releaseversion 2.4.1 und eigener Cache `konpasu-offline-v241`.
-- [ ] Nach Main-Merge: exakten Pages-Commit, `version.json`, Kernressourcen und Liveansicht prüfen.
+- [x] Main-Merge `ee160643515cf89dbc5c1bde38245ea3210052e2`, Pages-Lauf 41648613896, öffentliches `version.json` und fünf Kernressourcen mit HTTP 200 sowie exakt lokalen SHA-256 bestätigt.
 - [ ] Physisches iPhone/GPU/VoiceOver und Upgrade einer bereits installierten alten PWA prüfen; Daten nicht löschen.

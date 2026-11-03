@@ -121,7 +121,14 @@
   "release": {
     "authorized": true,
     "externalBackupConfirmedEarlierInSession": true,
-    "deploymentPendingAtEvidenceCommit": true
+    "deploymentPendingAtEvidenceCommit": true,
+    "liveVerifiedAfterMerge": true,
+    "mainCommit": "ee160643515cf89dbc5c1bde38245ea3210052e2",
+    "pagesRun": 41648613896,
+    "pagesStatus": "success",
+    "publicVersion": "2.4.1",
+    "publicCache": "konpasu-offline-v241",
+    "publicCoreFilesHttp200AndSha256Matched": true
   },
   "limits": [
     "Snapshots start with explicit avatar commands in 2.4.1; missing earlier history is not reconstructed.",

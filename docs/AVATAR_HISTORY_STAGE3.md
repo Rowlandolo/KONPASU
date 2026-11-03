@@ -1,6 +1,6 @@
 # Abschluss Etappe 3: vollständige Avatar-Historie und Integration
 
-Stand 03.11.2026. Releasekandidat **KONPASU 2.4.1**, Cache `konpasu-offline-v241`, Entwurfs-PR [#12](https://github.com/Rowlandolo/KONPASU/pull/12) auf #11. Dieser Abschnitt schließt Etappe 3 technisch ab. Veröffentlichung ist vom Nutzer mit extern gesichertem JSON-Backup freigegeben; der Live-Nachweis wird nach dem kontrollierten Main-Merge ergänzt.
+Stand 03.11.2026. **KONPASU 2.4.1 ist live**, Cache `konpasu-offline-v241`, gemergter PR [#12](https://github.com/Rowlandolo/KONPASU/pull/12). Main-Commit `ee160643515cf89dbc5c1bde38245ea3210052e2`, erfolgreicher Pages-Lauf [41648613896](https://github.com/Rowlandolo/KONPASU/actions/runs/41648613896). Veröffentlichung erfolgte nach Nutzerfreigabe und extern gesichertem JSON-Backup.
 
 ## Historienvertrag
 
@@ -25,3 +25,7 @@ Vollbeleg mit allen Run-/Job-IDs: `design/avatar/verification-stage3-complete-v0
 ## Grenzen nach Etappe 3
 
 Etappe 3 bedeutet abgeschlossene Daten-/UI-Integration des modularen Avatars, nicht fertige Premiumgrafik oder vollständige App. Die 95 Artikel sind kombinierbar prototypisiert; 89 Vektorstudien benötigen weiterhin die finale Premiumausarbeitung in Etappe 4. Vollständige Körper-/Gesichts-/Hautbandbreite, echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer bereits installierten alten PWA bleiben eigene Abnahmen. Der spätere KI-Copilot gehört zum weiteren Produktplan.
+
+## Live-Nachweis
+
+GitHub Pages meldete für exakt den Main-Commit erfolgreichen Abschluss. Anschließend wurden `version.json`, `index.html`, `sw.js`, `avatar-history-v25.js`, `avatar-artbook-main-v25.js` und `avatar-appearance-store-v25.js` mit Cache-Busting öffentlich geladen. Alle antworteten HTTP 200 und waren SHA-256-bytegleich zu den geprüften Repositorydateien. `version.json` meldet 2.4.1 und `konpasu-offline-v241`; HTML bindet das Historienmodul ein, der Service Worker speichert es kritisch offline.
