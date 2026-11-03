@@ -1,0 +1,36 @@
+name: Artbook catalogue prototypes
+on:
+  pull_request:
+    paths:
+      - design/avatar/catalog*
+      - design/avatar/vector-prototypes-v10/**
+      - design/avatar/references-v10/**
+      - scripts/catalog-browser-check.cjs
+      - scripts/build-artbook-prototypes.cjs
+      - scripts/artbook-prototype-definitions.cjs
+      - tests/artbook-catalog.cjs
+      - .github/workflows/catalog-prototypes.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  catalogue-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check.cjs
+      - run: node scripts/build-artbook-prototypes.cjs
+      - name: Confirm generated assets reproduce exactly
+        run: git diff --exit-code -- design/avatar/catalog-prototypes-v10.json design/avatar/vector-prototypes-v10 design/avatar/references-v10 docs/ARTBOOK_95_PROTOTYPES.md
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/catalog-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: artbook-catalogue-acceptance
+          path: browser-results/catalog/

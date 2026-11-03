@@ -1,6 +1,6 @@
 {
   "status": "design-inventory-not-runtime",
-  "note": "Existing gates and IDs retained as reference, not a new unlock rule. Card thumbnails are not fitted wearable assets.",
+  "note": "Existing gates, legacy names and IDs retained. Six PNG prototypes plus 89 explicit vector fit studies; neither cards nor vector studies are premium-final wearable artwork.",
   "items": [
     {
       "id": "strength-1",
@@ -100,9 +100,11 @@
       "asset": "reward/cardio-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/cardio-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Windschal",
+      "prototypeContract": "catalog-prototypes-v10.json#cardio-1"
     },
     {
       "id": "cardio-2",
@@ -117,9 +119,11 @@
       "asset": "reward/cardio-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/cardio-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Wind-Tabi",
+      "prototypeContract": "catalog-prototypes-v10.json#cardio-2"
     },
     {
       "id": "cardio-3",
@@ -134,9 +138,11 @@
       "asset": "reward/cardio-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/cardio-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Tempo-Armbänder",
+      "prototypeContract": "catalog-prototypes-v10.json#cardio-3"
     },
     {
       "id": "cardio-4",
@@ -151,9 +157,11 @@
       "asset": "reward/cardio-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/cardio-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Sturmläufer-Umhang",
+      "prototypeContract": "catalog-prototypes-v10.json#cardio-4"
     },
     {
       "id": "cardio-5",
@@ -168,9 +176,11 @@
       "asset": "reward/cardio-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/cardio-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Sturmreiter-Rüstungsaura",
+      "prototypeContract": "catalog-prototypes-v10.json#cardio-5"
     },
     {
       "id": "steps-1",
@@ -185,9 +195,11 @@
       "asset": "reward/steps-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/steps-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Reisesandalen",
+      "prototypeContract": "catalog-prototypes-v10.json#steps-1"
     },
     {
       "id": "steps-2",
@@ -202,9 +214,11 @@
       "asset": "reward/steps-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/steps-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Wegtasche",
+      "prototypeContract": "catalog-prototypes-v10.json#steps-2"
     },
     {
       "id": "steps-3",
@@ -219,9 +233,11 @@
       "asset": "reward/steps-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/steps-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Pilgerhut-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#steps-3"
     },
     {
       "id": "steps-4",
@@ -236,9 +252,11 @@
       "asset": "reward/steps-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/steps-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Reise-Haori",
+      "prototypeContract": "catalog-prototypes-v10.json#steps-4"
     },
     {
       "id": "steps-5",
@@ -253,9 +271,11 @@
       "asset": "reward/steps-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/steps-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Wegfinder-Banner",
+      "prototypeContract": "catalog-prototypes-v10.json#steps-5"
     },
     {
       "id": "mobility-1",
@@ -270,9 +290,11 @@
       "asset": "reward/mobility-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/mobility-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Dehnbänder",
+      "prototypeContract": "catalog-prototypes-v10.json#mobility-1"
     },
     {
       "id": "mobility-2",
@@ -287,9 +309,11 @@
       "asset": "reward/mobility-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/mobility-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Fließender Obi",
+      "prototypeContract": "catalog-prototypes-v10.json#mobility-2"
     },
     {
       "id": "mobility-3",
@@ -304,9 +328,11 @@
       "asset": "reward/mobility-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/mobility-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Beweglichkeitsärmel",
+      "prototypeContract": "catalog-prototypes-v10.json#mobility-3"
     },
     {
       "id": "mobility-4",
@@ -321,9 +347,11 @@
       "asset": "reward/mobility-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/mobility-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Tänzer-Haori",
+      "prototypeContract": "catalog-prototypes-v10.json#mobility-4"
     },
     {
       "id": "mobility-5",
@@ -338,9 +366,11 @@
       "asset": "reward/mobility-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/mobility-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Schlangenwind-Aura",
+      "prototypeContract": "catalog-prototypes-v10.json#mobility-5"
     },
     {
       "id": "water-1",
@@ -355,9 +385,11 @@
       "asset": "reward/water-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/water-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Bambusflasche",
+      "prototypeContract": "catalog-prototypes-v10.json#water-1"
     },
     {
       "id": "water-2",
@@ -372,9 +404,11 @@
       "asset": "reward/water-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/water-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Lackflasche",
+      "prototypeContract": "catalog-prototypes-v10.json#water-2"
     },
     {
       "id": "water-3",
@@ -389,9 +423,11 @@
       "asset": "reward/water-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/water-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Kristallfeldflasche",
+      "prototypeContract": "catalog-prototypes-v10.json#water-3"
     },
     {
       "id": "water-4",
@@ -406,9 +442,11 @@
       "asset": "reward/water-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/water-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Zeremonielle Wasserkalebasse",
+      "prototypeContract": "catalog-prototypes-v10.json#water-4"
     },
     {
       "id": "water-5",
@@ -423,9 +461,11 @@
       "asset": "reward/water-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/water-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Quellendrachen-Gefäß",
+      "prototypeContract": "catalog-prototypes-v10.json#water-5"
     },
     {
       "id": "sleep-1",
@@ -440,9 +480,11 @@
       "asset": "reward/sleep-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sleep-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Mond-Haarnadel",
+      "prototypeContract": "catalog-prototypes-v10.json#sleep-1"
     },
     {
       "id": "sleep-2",
@@ -457,9 +499,11 @@
       "asset": "reward/sleep-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sleep-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Traumkissen-Talisman",
+      "prototypeContract": "catalog-prototypes-v10.json#sleep-2"
     },
     {
       "id": "sleep-3",
@@ -474,9 +518,11 @@
       "asset": "reward/sleep-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sleep-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Nacht-Haori",
+      "prototypeContract": "catalog-prototypes-v10.json#sleep-3"
     },
     {
       "id": "sleep-4",
@@ -491,9 +537,11 @@
       "asset": "reward/sleep-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sleep-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Mondlaterne",
+      "prototypeContract": "catalog-prototypes-v10.json#sleep-4"
     },
     {
       "id": "sleep-5",
@@ -508,9 +556,11 @@
       "asset": "reward/sleep-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sleep-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Mondruhe-Aura",
+      "prototypeContract": "catalog-prototypes-v10.json#sleep-5"
     },
     {
       "id": "nutrition-1",
@@ -525,9 +575,11 @@
       "asset": "reward/nutrition-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nutrition-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Bento-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#nutrition-1"
     },
     {
       "id": "nutrition-2",
@@ -542,9 +594,11 @@
       "asset": "reward/nutrition-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nutrition-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Kräuterbeutel",
+      "prototypeContract": "catalog-prototypes-v10.json#nutrition-2"
     },
     {
       "id": "nutrition-3",
@@ -559,9 +613,11 @@
       "asset": "reward/nutrition-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nutrition-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Vitalitäts-Obi",
+      "prototypeContract": "catalog-prototypes-v10.json#nutrition-3"
     },
     {
       "id": "nutrition-4",
@@ -576,9 +632,11 @@
       "asset": "reward/nutrition-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nutrition-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Kochgelehrten-Haori",
+      "prototypeContract": "catalog-prototypes-v10.json#nutrition-4"
     },
     {
       "id": "nutrition-5",
@@ -593,9 +651,11 @@
       "asset": "reward/nutrition-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nutrition-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Erntebankett-Emblemset",
+      "prototypeContract": "catalog-prototypes-v10.json#nutrition-5"
     },
     {
       "id": "sugar-1",
@@ -610,9 +670,11 @@
       "asset": "reward/sugar-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sugar-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Zucker-Siegel-Omamori",
+      "prototypeContract": "catalog-prototypes-v10.json#sugar-1"
     },
     {
       "id": "sugar-2",
@@ -627,9 +689,11 @@
       "asset": "reward/sugar-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sugar-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Reinheitsarmband",
+      "prototypeContract": "catalog-prototypes-v10.json#sugar-2"
     },
     {
       "id": "sugar-3",
@@ -644,9 +708,11 @@
       "asset": "reward/sugar-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sugar-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Helles Lächeln",
+      "prototypeContract": "catalog-prototypes-v10.json#sugar-3"
     },
     {
       "id": "sugar-4",
@@ -661,9 +727,11 @@
       "asset": "reward/sugar-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sugar-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Lotusfächer",
+      "prototypeContract": "catalog-prototypes-v10.json#sugar-4"
     },
     {
       "id": "sugar-5",
@@ -678,9 +746,11 @@
       "asset": "reward/sugar-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/sugar-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Klargeist-Aura",
+      "prototypeContract": "catalog-prototypes-v10.json#sugar-5"
     },
     {
       "id": "alcohol-1",
@@ -695,9 +765,11 @@
       "asset": "reward/alcohol-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/alcohol-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Versiegelter Sake-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#alcohol-1"
     },
     {
       "id": "alcohol-2",
@@ -712,9 +784,11 @@
       "asset": "reward/alcohol-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/alcohol-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Nüchternheitslaterne",
+      "prototypeContract": "catalog-prototypes-v10.json#alcohol-2"
     },
     {
       "id": "alcohol-3",
@@ -729,9 +803,11 @@
       "asset": "reward/alcohol-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/alcohol-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Heiter und gelassen",
+      "prototypeContract": "catalog-prototypes-v10.json#alcohol-3"
     },
     {
       "id": "alcohol-4",
@@ -746,9 +822,11 @@
       "asset": "reward/alcohol-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/alcohol-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Klarhimmel-Obi",
+      "prototypeContract": "catalog-prototypes-v10.json#alcohol-4"
     },
     {
       "id": "alcohol-5",
@@ -763,9 +841,11 @@
       "asset": "reward/alcohol-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/alcohol-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Klares Fest",
+      "prototypeContract": "catalog-prototypes-v10.json#alcohol-5"
     },
     {
       "id": "reading-1",
@@ -780,9 +860,11 @@
       "asset": "reward/reading-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/reading-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Buch-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#reading-1"
     },
     {
       "id": "reading-2",
@@ -797,9 +879,11 @@
       "asset": "reward/reading-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/reading-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Leseschriftrolle",
+      "prototypeContract": "catalog-prototypes-v10.json#reading-2"
     },
     {
       "id": "reading-3",
@@ -814,9 +898,11 @@
       "asset": "reward/reading-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/reading-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Gelehrtentasche",
+      "prototypeContract": "catalog-prototypes-v10.json#reading-3"
     },
     {
       "id": "reading-4",
@@ -831,9 +917,11 @@
       "asset": "reward/reading-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/reading-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Bibliothekskodex",
+      "prototypeContract": "catalog-prototypes-v10.json#reading-4"
     },
     {
       "id": "reading-5",
@@ -848,9 +936,11 @@
       "asset": "reward/reading-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/reading-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Archiv-Schriftrollenset",
+      "prototypeContract": "catalog-prototypes-v10.json#reading-5"
     },
     {
       "id": "languages-1",
@@ -865,9 +955,11 @@
       "asset": "reward/languages-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/languages-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Sprachbuch-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#languages-1"
     },
     {
       "id": "languages-2",
@@ -882,9 +974,11 @@
       "asset": "reward/languages-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/languages-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Kalligrafiepinsel",
+      "prototypeContract": "catalog-prototypes-v10.json#languages-2"
     },
     {
       "id": "languages-3",
@@ -899,9 +993,11 @@
       "asset": "reward/languages-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/languages-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Mehrsprachiges Rollenetui",
+      "prototypeContract": "catalog-prototypes-v10.json#languages-3"
     },
     {
       "id": "languages-4",
@@ -916,9 +1012,11 @@
       "asset": "reward/languages-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/languages-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Reisekarten-Fächer",
+      "prototypeContract": "catalog-prototypes-v10.json#languages-4"
     },
     {
       "id": "languages-5",
@@ -933,9 +1031,11 @@
       "asset": "reward/languages-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/languages-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Phönixfeder der Sprachen",
+      "prototypeContract": "catalog-prototypes-v10.json#languages-5"
     },
     {
       "id": "learning-1",
@@ -950,9 +1050,11 @@
       "asset": "reward/learning-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/learning-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Lehrlings-Werkzeugtasche",
+      "prototypeContract": "catalog-prototypes-v10.json#learning-1"
     },
     {
       "id": "learning-2",
@@ -967,9 +1069,11 @@
       "asset": "reward/learning-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/learning-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Handwerker-Maßband",
+      "prototypeContract": "catalog-prototypes-v10.json#learning-2"
     },
     {
       "id": "learning-3",
@@ -984,9 +1088,11 @@
       "asset": "reward/learning-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/learning-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Handwerksbrosche",
+      "prototypeContract": "catalog-prototypes-v10.json#learning-3"
     },
     {
       "id": "learning-4",
@@ -1001,9 +1107,11 @@
       "asset": "reward/learning-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/learning-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Meisterliche Werkzeugrolle",
+      "prototypeContract": "catalog-prototypes-v10.json#learning-4"
     },
     {
       "id": "learning-5",
@@ -1018,9 +1126,11 @@
       "asset": "reward/learning-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/learning-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Gildenmeister-Werkzeugkiste",
+      "prototypeContract": "catalog-prototypes-v10.json#learning-5"
     },
     {
       "id": "focus-1",
@@ -1055,9 +1165,11 @@
       "asset": "reward/focus-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/focus-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Sanduhr",
+      "prototypeContract": "catalog-prototypes-v10.json#focus-2"
     },
     {
       "id": "focus-3",
@@ -1072,9 +1184,11 @@
       "asset": "reward/focus-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/focus-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Arbeits-Schriftrolle",
+      "prototypeContract": "catalog-prototypes-v10.json#focus-3"
     },
     {
       "id": "focus-4",
@@ -1089,9 +1203,11 @@
       "asset": "reward/focus-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/focus-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Konzentrationslaterne",
+      "prototypeContract": "catalog-prototypes-v10.json#focus-4"
     },
     {
       "id": "focus-5",
@@ -1106,9 +1222,11 @@
       "asset": "reward/focus-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/focus-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Stiller Geist",
+      "prototypeContract": "catalog-prototypes-v10.json#focus-5"
     },
     {
       "id": "meditation-1",
@@ -1123,9 +1241,11 @@
       "asset": "reward/meditation-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/meditation-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Gebetsperlen-Armband",
+      "prototypeContract": "catalog-prototypes-v10.json#meditation-1"
     },
     {
       "id": "meditation-2",
@@ -1140,9 +1260,11 @@
       "asset": "reward/meditation-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/meditation-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Weihrauch-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#meditation-2"
     },
     {
       "id": "meditation-3",
@@ -1157,9 +1279,11 @@
       "asset": "reward/meditation-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/meditation-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Meditationsmatte",
+      "prototypeContract": "catalog-prototypes-v10.json#meditation-3"
     },
     {
       "id": "meditation-4",
@@ -1174,9 +1298,11 @@
       "asset": "reward/meditation-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/meditation-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Zen-Mönchsmantel",
+      "prototypeContract": "catalog-prototypes-v10.json#meditation-4"
     },
     {
       "id": "meditation-5",
@@ -1191,9 +1317,11 @@
       "asset": "reward/meditation-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/meditation-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Lotus-Aura",
+      "prototypeContract": "catalog-prototypes-v10.json#meditation-5"
     },
     {
       "id": "journal-1",
@@ -1208,9 +1336,11 @@
       "asset": "reward/journal-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/journal-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Lederjournal",
+      "prototypeContract": "catalog-prototypes-v10.json#journal-1"
     },
     {
       "id": "journal-2",
@@ -1225,9 +1355,11 @@
       "asset": "reward/journal-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/journal-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Tuschepinsel-Set",
+      "prototypeContract": "catalog-prototypes-v10.json#journal-2"
     },
     {
       "id": "journal-3",
@@ -1242,9 +1374,11 @@
       "asset": "reward/journal-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/journal-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Erinnerungslaterne",
+      "prototypeContract": "catalog-prototypes-v10.json#journal-3"
     },
     {
       "id": "journal-4",
@@ -1259,9 +1393,11 @@
       "asset": "reward/journal-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/journal-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Selbstreflexions-Spiegel",
+      "prototypeContract": "catalog-prototypes-v10.json#journal-4"
     },
     {
       "id": "journal-5",
@@ -1276,9 +1412,11 @@
       "asset": "reward/journal-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/journal-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Geschichtenhüter-Rollenkranz",
+      "prototypeContract": "catalog-prototypes-v10.json#journal-5"
     },
     {
       "id": "social-1",
@@ -1293,9 +1431,11 @@
       "asset": "reward/social-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/social-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Freundschaftsknoten",
+      "prototypeContract": "catalog-prototypes-v10.json#social-1"
     },
     {
       "id": "social-2",
@@ -1310,9 +1450,11 @@
       "asset": "reward/social-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/social-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Geteilte Teetassen",
+      "prototypeContract": "catalog-prototypes-v10.json#social-2"
     },
     {
       "id": "social-3",
@@ -1327,9 +1469,11 @@
       "asset": "reward/social-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/social-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Festfächer",
+      "prototypeContract": "catalog-prototypes-v10.json#social-3"
     },
     {
       "id": "social-4",
@@ -1344,9 +1488,11 @@
       "asset": "reward/social-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/social-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Verbundenheits-Umhang",
+      "prototypeContract": "catalog-prototypes-v10.json#social-4"
     },
     {
       "id": "social-5",
@@ -1361,9 +1507,11 @@
       "asset": "reward/social-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/social-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Band-Emblem",
+      "prototypeContract": "catalog-prototypes-v10.json#social-5"
     },
     {
       "id": "nature-1",
@@ -1378,9 +1526,11 @@
       "asset": "reward/nature-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nature-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Blattbrosche",
+      "prototypeContract": "catalog-prototypes-v10.json#nature-1"
     },
     {
       "id": "nature-2",
@@ -1395,9 +1545,11 @@
       "asset": "reward/nature-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nature-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Waldtasche",
+      "prototypeContract": "catalog-prototypes-v10.json#nature-2"
     },
     {
       "id": "nature-3",
@@ -1412,9 +1564,11 @@
       "asset": "reward/nature-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nature-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Berg-Haori",
+      "prototypeContract": "catalog-prototypes-v10.json#nature-3"
     },
     {
       "id": "nature-4",
@@ -1429,9 +1583,11 @@
       "asset": "reward/nature-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nature-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Schreinpfad",
+      "prototypeContract": "catalog-prototypes-v10.json#nature-4"
     },
     {
       "id": "nature-5",
@@ -1446,9 +1602,11 @@
       "asset": "reward/nature-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/nature-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Kirschblütenbrise",
+      "prototypeContract": "catalog-prototypes-v10.json#nature-5"
     },
     {
       "id": "screen-1",
@@ -1463,9 +1621,11 @@
       "asset": "reward/screen-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/screen-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Taschenuhr-Anhänger",
+      "prototypeContract": "catalog-prototypes-v10.json#screen-1"
     },
     {
       "id": "screen-2",
@@ -1480,9 +1640,11 @@
       "asset": "reward/screen-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/screen-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Offline-Schleife",
+      "prototypeContract": "catalog-prototypes-v10.json#screen-2"
     },
     {
       "id": "screen-3",
@@ -1497,9 +1659,11 @@
       "asset": "reward/screen-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/screen-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Weiter Horizont",
+      "prototypeContract": "catalog-prototypes-v10.json#screen-3"
     },
     {
       "id": "screen-4",
@@ -1514,9 +1678,11 @@
       "asset": "reward/screen-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/screen-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Abend-Papierlaterne",
+      "prototypeContract": "catalog-prototypes-v10.json#screen-4"
     },
     {
       "id": "screen-5",
@@ -1531,9 +1697,11 @@
       "asset": "reward/screen-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/screen-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Klarer Horizont",
+      "prototypeContract": "catalog-prototypes-v10.json#screen-5"
     },
     {
       "id": "gaming-1",
@@ -1548,9 +1716,11 @@
       "asset": "reward/gaming-1",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/gaming-1.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Disziplin-Münze",
+      "prototypeContract": "catalog-prototypes-v10.json#gaming-1"
     },
     {
       "id": "gaming-2",
@@ -1565,9 +1735,11 @@
       "asset": "reward/gaming-2",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/gaming-2.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Controller-Ruhesiegel",
+      "prototypeContract": "catalog-prototypes-v10.json#gaming-2"
     },
     {
       "id": "gaming-3",
@@ -1582,9 +1754,11 @@
       "asset": "reward/gaming-3",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/gaming-3.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Routine-Obi",
+      "prototypeContract": "catalog-prototypes-v10.json#gaming-3"
     },
     {
       "id": "gaming-4",
@@ -1599,9 +1773,11 @@
       "asset": "reward/gaming-4",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/gaming-4.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Abendliches Teeset",
+      "prototypeContract": "catalog-prototypes-v10.json#gaming-4"
     },
     {
       "id": "gaming-5",
@@ -1616,9 +1792,11 @@
       "asset": "reward/gaming-5",
       "wearabilityRule": "itemState + activeAt; gearTier recent documented weeks",
       "artbookReference": "reward-art/gaming-5.webp",
-      "fittedArtworkStatus": "not-produced",
-      "semanticMappingStatus": "review-required",
-      "equippableAssetStatus": "legacy-svg-only"
+      "fittedArtworkStatus": "vector-fit-prototype",
+      "semanticMappingStatus": "artbook-board-depiction-reviewed",
+      "equippableAssetStatus": "catalog-workshop-only",
+      "developmentTitleDe": "Geerdeter Fokus",
+      "prototypeContract": "catalog-prototypes-v10.json#gaming-5"
     }
   ]
 }
