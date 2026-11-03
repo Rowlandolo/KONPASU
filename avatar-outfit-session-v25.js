@@ -10,7 +10,7 @@
   function snapshot(){const storage=A.copyJSON(api.read());recoveryToken=storage.recoveryOperationId;return {draft:draft.snapshot(),dirty:dirty(),phase,busy,lastResult:lastResult?A.copyJSON(lastResult):null,storage}}
   function dispatch(action){if(busy)return snapshot();draft.dispatch(action);if(phase!=='conflict'){phase=dirty()?'dirty':'ready';lastResult=null;}return snapshot()}
   async function operation(kind){
-   if(busy)return snapshot();if(kind==='save'&&!dirty()&&api.read().present)return snapshot();if(kind==='rollback'&&(dirty()||!api.read().recoveryAvailable))return snapshot();
+   if(busy)return snapshot();if(kind==='save'&&!dirty()&&api.read().present&&api.read().enabled!==false)return snapshot();if(kind==='rollback'&&(dirty()||!api.read().recoveryAvailable))return snapshot();
    const expected=recoveryToken;busy=true;phase=kind==='refresh'?'loading':'saving';lastResult=null;
    try{
     const result=kind==='save'?await api.save(draft.snapshot()):kind==='rollback'?await api.rollback(expected):await api.refresh();lastResult=result;

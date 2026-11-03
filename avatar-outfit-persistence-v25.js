@@ -11,6 +11,7 @@
  function selection(value){
   if(!object(value)||value.format!==FORMAT||!Number.isSafeInteger(value.version)||value.version<1)fail('invalid-outfit-envelope');
   copy(value);if(value.version!==1)return {supported:false};
+  if(value.enabled!==undefined&&typeof value.enabled!=='boolean')fail('invalid-outfit-enabled');
   if(!['form-a','form-b'].includes(value.body)||!Array.isArray(value.items)||value.items.length>500||!A.dateValid(value.date)||!timestamp(value.savedAt)||!id(value.operationId))fail('invalid-outfit');
   const instances=new Set(),items=new Set();for(const i of value.items){if(!object(i)||!/^draft-item-[1-9]\d{0,12}$/.test(i.instanceId)||!id(i.itemId)||typeof i.artworkId!=='string'||!/^[a-z]+-[1-5]$/.test(i.artworkId)||typeof i.visible!=='boolean'||instances.has(i.instanceId)||items.has(i.itemId))fail('invalid-outfit-item');instances.add(i.instanceId);items.add(i.itemId)}
   return {supported:true};
@@ -37,7 +38,7 @@
   const status=selection(stored);if(!status.supported)return {present:true,supported:false,items:[],active:[],raw:copy(stored),renderer:'legacy-required'};
   if(!A.dateValid(date)||!bindings)fail('evaluation-context-required');
   const view=freeze(copy(profile)),items=stored.items.map(i=>{const evidence=evaluate(i,view,date,bindings);return {...copy(i),evidence,renderable:i.visible&&evidence.owned===true&&evidence.allowed===true}});
-  return {present:true,supported:true,body:stored.body,items,active:items.filter(i=>i.renderable),raw:copy(stored),renderer:'legacy-required'};
+  return {present:true,supported:true,enabled:stored.enabled!==false,body:stored.body,items,active:stored.enabled===false?[]:items.filter(i=>i.renderable),raw:copy(stored),renderer:'legacy-required'};
  }
  function prepareSave(state,draft,{date,savedAt,operationId,bindings}={}){
   const before=copy(state);validateExtension(before);
@@ -46,7 +47,7 @@
   A.recoverSource(draft.source);if(!same(draft.source.source.profile,before.profile))fail('source-conflict');
   const prior=before.profile[FIELD];if(prior&&selection(prior).supported!==true)fail('unsupported-outfit-version');
   if(before[UNDO]&&before[UNDO].version!==1)fail('unsupported-recovery-version');
-  const record={...(prior?copy(prior):{}),format:FORMAT,version:1,body:draft.body,items:[],date,savedAt,operationId};
+  const record={...(prior?copy(prior):{}),format:FORMAT,version:1,enabled:true,body:draft.body,items:[],date,savedAt,operationId};
   if(!Array.isArray(draft.items)||draft.items.length>500)fail('invalid-draft-items');const diagnostics=[];
   for(const i of draft.items){
    const old=prior?.items.find(p=>p.instanceId===i.instanceId&&p.itemId===i.itemId&&p.artworkId===i.artworkId),item={...(old?copy(old):{}),instanceId:i.instanceId,itemId:i.itemId,artworkId:i.artworkId,visible:i.visible};

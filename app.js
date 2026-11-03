@@ -1,5 +1,5 @@
 'use strict';
-const KONPASU_RELEASE='2.4.1-preview.2';
+const KONPASU_RELEASE='2.4.1-preview.3';
 /* KONPASU 1.4 Goals and Training – offline app: no trackers, APIs, CDNs or remote dependencies. */
 const PRESETS=[
  ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
@@ -140,7 +140,7 @@ async function init(){
   // Persist newly verified awards, but do not rewrite an unchanged profile on boot.
   if(seeded||awardsChanged)await store();
  }
- render();if(!storageLocked)knownMemoryBaseline25=JSON.parse(JSON.stringify(data)); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview2')){if(window.KONPASU_OUTFIT_EDITOR25?.hasUnsavedChanges()){notice(data.profile.lang==='en'?'Update ready. Save your outfit before reopening.':'Update bereit. Speichere deinen Outfitentwurf vor dem erneuten Öffnen.');return}sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview2','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
+ render();if(!storageLocked)knownMemoryBaseline25=JSON.parse(JSON.stringify(data)); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview3')){if(window.KONPASU_OUTFIT_EDITOR25?.hasUnsavedChanges()){notice(data.profile.lang==='en'?'Update ready. Save your outfit before reopening.':'Update bereit. Speichere deinen Outfitentwurf vor dem erneuten Öffnen.');return}sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview3','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
 function notice(s){document.querySelector('#toast')?.remove();const d=document.createElement('div');d.id='toast';d.className='toast';d.textContent=translateText(s);document.body.appendChild(d);clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>d.remove(),2700)}
 function activeAt(g,d){const list=[...(g.events||[])].sort((a,b)=>a.date.localeCompare(b.date));let result=false;for(const x of list){if(x.date<=d)result=!!x.active}return result}
 function configAt(g,d){const list=(g.versions||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));let conf={period:g.period,target:g.target,targetValue:g.targetValue,unit:g.unit,direction:g.direction};for(const v of list){if(v.date<=d)conf={...conf,...v}}return conf}
@@ -303,7 +303,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');
  else if(action==='delete-experiment'){confirmed('Experiment löschen?',()=>{data.experiments=data.experiments.filter(x=>x.id!==id)})}
  else if(action==='delete-reflection'){confirmed('Diesen privaten Reflexionseintrag wirklich löschen?',()=>{data.reflections=data.reflections.filter(x=>x.id!==id)})}
  else if(action==='finish-experiment'){const exp=data.experiments.find(x=>x.id===id);if(exp){exp.completedAt=new Date().toISOString();store();render()}}
- else if(action==='equip'){const g=getGoal(id),level=Number(b.dataset.level);if(!g||!g.active||level>gearTier(g).wearable)return notice('Diese Ausrüstung ist noch nicht tragbar.');data.profile.equipped[id]=level;data.avatarHistory.push({id:uid(),date:today(),savedAt:new Date().toISOString(),profile:JSON.parse(JSON.stringify(data.profile))});store();render();notice('Gegenstand ausgerüstet')}
+ else if(action==='equip'){const g=getGoal(id),level=Number(b.dataset.level);if(!g||!g.active||level>gearTier(g).wearable)return notice('Diese Ausrüstung ist noch nicht tragbar.');if(window.KONPASU_OUTFIT_DISPLAY25?.pause(data.profile))outfitMutationSerial25++;data.profile.equipped[id]=level;data.avatarHistory.push({id:uid(),date:today(),savedAt:new Date().toISOString(),profile:JSON.parse(JSON.stringify(data.profile))});store();render();notice('Gegenstand ausgerüstet')}
  else if(action==='avatar-today'){historyDate=today();render()}
  else if(action==='avatar-jump'){historyDate=b.dataset.date;render()}
  else if(action==='integrity-check'){const report=integrityReport();alert(report.summary)}
@@ -387,7 +387,7 @@ function validateImportedBackup(raw){
   const a=p.avatar2d;if(!record(a))fail('profile.avatar2d');
   for(const key of ['pet','scene','hairStyle','hairColor','expression','effects'])text(a,key,'avatar2d');
   if(a.slots!==undefined)stringMap(a.slots,'avatar2d.slots');if(a.customFamilies!==undefined)stringMap(a.customFamilies,'avatar2d.customFamilies');
-  for(const f of optionalArray(a,'favorites','avatar2d')){if(!record(f))fail('favorite');for(const key of ['name','accent','scene','pet'])text(f,key,'favorite');if(f.slots!==undefined)stringMap(f.slots,'favorite.slots')}
+  for(const f of optionalArray(a,'favorites','avatar2d')){if(!record(f))fail('favorite');for(const key of ['name','accent','scene','pet'])text(f,key,'favorite');if(f.slots!==undefined)stringMap(f.slots,'favorite.slots');if(f.outfit25!==undefined&&window.KONPASU_OUTFIT_PERSIST25)window.KONPASU_OUTFIT_PERSIST25.validateExtension({profile:{outfit25:f.outfit25}})}
   if(a.streakSelection!==undefined&&a.streakSelection!==null&&(!record(a.streakSelection)||!id(a.streakSelection.goalId)||!Number.isInteger(a.streakSelection.level)||a.streakSelection.level<1||a.streakSelection.level>4))fail('avatar2d.streakSelection');
  };
  if(raw.profile!==undefined)profile(raw.profile);

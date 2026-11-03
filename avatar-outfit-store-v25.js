@@ -46,6 +46,6 @@
   });saveQueue=pending.then(r=>r.ok);return pending;
  }
  root.KONPASU_OUTFIT_STORAGE25=Object.freeze({refresh,renderHost:()=>render(),save:draft=>commit({kind:'save',draft}),rollback:expectedOperationId=>commit({kind:'rollback',...(expectedOperationId===undefined?{}:{expectedOperationId})}),
-  read:()=>({...core.resolved(data.profile,{date:today(),bindings:bindings()}),recoveryAvailable:data[core.UNDO]?.version===1,recoveryOperationId:data[core.UNDO]?.operationId||null,storageLocked,revision:knownRevision}),
+  read:()=>({...core.resolved(data.profile,{date:today(),bindings:bindings()}),recoveryAvailable:data[core.UNDO]?.version===1&&core.same(data.profile?.[core.FIELD],data[core.UNDO].after),recoveryOperationId:data[core.UNDO]?.operationId||null,storageLocked,revision:knownRevision}),
   makeDraft:catalogue=>core.resume(data,{date:today(),bindings:bindings(),catalogue})});
 })(typeof window!=='undefined'?window:globalThis);

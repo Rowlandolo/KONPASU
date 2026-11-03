@@ -9,7 +9,7 @@ function app({disk=new Map(),lockManager=createLocks(),now}={}){
  const listeners={},context={console,URL,Intl,Date:Clock,JSON,Math,Promise,structuredClone,setInterval:()=>0,setTimeout:()=>0,clearTimeout(){},navigator:{locks:lockManager},location:{},alert(){},confirm:()=>true,prompt:()=> 'Test',localStorage:{setItem:(k,v)=>disk.set(k,v),getItem:k=>disk.has(k)?disk.get(k):null},document:{addEventListener:(type,fn,capture)=>{(listeners[type]??=[]).push({fn,capture:!!capture})},querySelector:()=>null,querySelectorAll:()=>[]}};
  context.window=context;vm.createContext(context);
  const run=source=>vm.runInContext(source,context);
- for(const file of ['avatar-outfit-v25.js','avatar-outfit-draft-v25.js','avatar-outfit-persistence-v25.js','app.js','avatar-outfit-store-v25.js','avatar-outfit-session-v25.js','features-v1.js','goal-modules.js','training-library.js','core-v15.js','avatar-art-bundle.js','avatar-composer-v24.js','avatar2d.js','training-v22.js','goal-calendar-v23.js']){
+ for(const file of ['avatar-outfit-v25.js','avatar-outfit-draft-v25.js','avatar-outfit-persistence-v25.js','avatar-outfit-display-v25.js','app.js','avatar-outfit-store-v25.js','avatar-outfit-session-v25.js','features-v1.js','goal-modules.js','training-library.js','core-v15.js','avatar-art-bundle.js','avatar-composer-v24.js','avatar2d.js','training-v22.js','goal-calendar-v23.js']){
   run(fs.readFileSync(path.join(root,file),'utf8').replace(/^(?:init|render)\(\);$/gm,''));
  }
  run("data=createState(); KONPASU2D.ensure(); render=()=>{}; notice=()=>{};");
