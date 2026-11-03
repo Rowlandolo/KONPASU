@@ -162,7 +162,7 @@ body{background:var(--bg)}input,select,textarea{background:#fffef9;color:var(--i
 /* KONPASU 1.8 visual improvements: Botanical Zen character studio */
 .kp2d-hero{position:relative;background:linear-gradient(145deg,#f5efdf 0%,#ebf0df 55%,#dce8db 100%);border:1px solid #9dac9760;box-shadow:0 12px 28px #2f554519}
 .kp2d-hero-data{align-self:center}
-.kp2d-scene{position:relative;display:flex;align-items:center;justify-content:center}
+.kp2d-scene{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .kp2d-hero-data h2{font-weight:700;letter-spacing:-.045em}
 .kp2d-metrics span{border:1px solid #c9d6be;box-shadow:0 1px 3px #23462e0a}
 .kp2d-stage{box-shadow:inset 0 0 0 1px #274f4432,0 8px 25px #415b4125;border:1px solid #98ab9870}
@@ -223,7 +223,7 @@ input::placeholder,textarea::placeholder{color:#627b68;opacity:1}.btn{border:1px
 .avatar-scene{height:300px;align-items:stretch;overflow:visible;z-index:1}
 .home-character-tile{display:block;position:relative;width:100%;height:100%;border:1px solid #d3c49e;background:#ede8d8;overflow:hidden;border-radius:18px;padding:0;box-shadow:0 12px 27px #42584320;cursor:pointer}
 .home-character-tile img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block}
-.home-character-tile span{position:absolute;bottom:10px;left:10px;right:10px;background:#163f32e8;color:#ffefc8;font-weight:800;border-radius:9px;padding:9px 12px;font-size:12px;letter-spacing:.06em}
+.home-character-tile>span{position:absolute;bottom:10px;left:10px;right:10px;background:#163f32e8;color:#ffefc8;font-weight:800;border-radius:9px;padding:9px 12px;font-size:12px;letter-spacing:.06em}
 .metric{background:#fffdf8;border-color:#ccd7c9}.metric .number{color:#254a36}.metric .label{color:#58705f;font-weight:650}
 .kicker,.eyebrow,.tag{color:#76612c}
 .kp2d-hero{border:1px solid #bfc6ae;background:linear-gradient(115deg,#f4f0e2,#e9efe4);box-shadow:0 12px 30px #243e2920}
