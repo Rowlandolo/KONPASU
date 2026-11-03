@@ -1,0 +1,23 @@
+# Etappe 3.4.3a: persönliche Artbook-Varianten und Passformstudie
+
+Stand 03.11.2026. Kandidat 2.4.1-preview.4, Entwicklungsbranch `feature/artbook-personal-variants` auf Entwurfs-PR #9. Keine Veröffentlichung. Dieser Abschnitt erweitert die echte Editor-Anprobe; die persönliche SVG-Hauptdarstellung aus 3.4.2 bleibt aktiv.
+
+## Lieferumfang und Bedienung
+
+Avatar → Outfits → Mehrfachoutfit bearbeiten → **Persönliche Varianten anzeigen**. Die ausgeschaltete Grundansicht bleibt die bisherige Artbook-Standfigur. Erst ausdrückliches Einschalten lädt und decodiert den geprüften persönlichen Atlas. Ausgangswerte kommen aus vorhandener Frisur, Haarfarbe, Mimik und Gewandfarbe. Drei Frisuren (locker/lang/gebunden), drei Haarfarben (schwarz/braun/silber), drei Gesichtsausdrücke (ruhig/freundlich/fokussiert) und drei Gewandfarben (nachtblau/waldgrün/weinrot) lassen sich in der Anprobe kombinieren. Beide vorhandenen Körperformen bleiben ausdrücklich frei wählbar. Keine Körper- oder Geschlechtsinferenz aus Maßen oder Profil.
+
+Die persönlichen Regler sind **nur Anprobe in dieser geöffneten App**. Sie ändern weder Profil noch Hauptavatar oder Besitz. Outfit-Speichern verwendet unverändert den bestehenden feldbegrenzten Speichervertrag für Artikel und Körperform; es übernimmt keine persönlichen Studienwerte. Schließen behält die Anprobe in der geöffneten App, Neuladen verwirft die persönlichen Studienwerte. Umschalten zur ursprünglichen Ansicht stellt deren Haare, Gesicht und Gewandfarben wieder her. Dauerhafte neue persönliche Konfiguration und Hauptavatar-Umschaltung sind ein weiterer geprüfter Abschnitt.
+
+## Grafik- und Registrierungsvertrag
+
+Ein neu generierter transparenter Atlas enthält neun separate Zeichnungen: drei vollständige haarlose Köpfe mit kurzem Hals sowie Vorder-/Hinterhaar für drei Frisuren. Die Original-PNG bleibt unverändert. Der Runtime-Atlas ist ein separat encodiertes WebP, 1.254 × 1.254 Pixel, 466.178 Bytes, rund 6 MiB rechnerisches RGBA. Beide Quellen sind SHA-256-belegt. `scripts/build-personal-delivery.py` reproduziert das Delivery-Encoding mit Pillow 12.3.0/libwebp 1.6.0, ohne das Original zu bearbeiten.
+
+`personal-variants-v11.json` registriert jede einzelne Atlasfläche auf dem bestehenden 512×768-Rig. SVG-Ausschnitte lesen den Atlas ohne herausgeschnittene neue PNG-Dateien. Der vorhandene Body wird oberhalb der registrierten Kragengrenze y=110 visuell ausgespart und durch einen vollständigen neuen Kopf ersetzt; dadurch liegt keine neue Mimik über alten Augen/Mund. Körper, Hände, Gewandflächen, Rüstungsgrafiken und deren Anker bleiben unveränderte Quellen. Haare werden am bisherigen Vorder-/Hinterhaarplatz eingesetzt; vorhandene Kopfteil-Referenzen behalten dieselben IDs. Gewand- und Haarfarben sind begrenzte SVG-Farbbehandlungen mit erhaltener Transparenz, keine endgültigen handgemalten Paletten.
+
+Alle neuen Runtime-Abhängigkeiten werden kritisch precached; das Original-PNG gehört nicht in den App-Precache. Integritäts-/Ladefehler lassen die ursprüngliche Editor-Anprobe und den gespeicherten Look erhalten und erlauben ausdrückliches erneutes Einschalten. Neue Grafik wird nur im persönlichen Modus decodiert.
+
+## Abnahme und Grenzen
+
+402 lokale Regressionen, darunter 14 neue Vertrags-/Kombinations-/Quellintegritätsprüfungen erfolgreich. Echte Chromiumprüfung der sichtbaren Regler, 162 Kombinationen, beider Körperformen, aller 95 Artikel, Umschaltung, Offline-Erstöffnung und beschädigter Quelle vorbereitet; Ergebnis und gesichtete Originalbilder folgen nach dem tatsächlichen Lauf.
+
+Neue Zeichnungen sind Prototypen für eine erwachsene Pose. Vollständige Bandbreite persönlicher Körper-/Gesichts-/Hautvarianten, hochwertige endgültige Farbpaletten, weitere Posen, universelle Premium-Passform und reale Geräte-/VoiceOver-/Alt-PWA-Abnahme bleiben offen. Keine Behauptung, dass diese Studie bereits alle persönlichen Identitäten oder einen fertigen Premiumavatar abdeckt.

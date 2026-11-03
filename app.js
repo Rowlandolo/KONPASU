@@ -1,5 +1,5 @@
 'use strict';
-const KONPASU_RELEASE='2.4.1-preview.3';
+const KONPASU_RELEASE='2.4.1-preview.4';
 /* KONPASU 1.4 Goals and Training – offline app: no trackers, APIs, CDNs or remote dependencies. */
 const PRESETS=[
  ['strength','Krafttraining','Sport','🏋️','3 Einheiten / Woche','weekly',3,'Einheiten','min'],
@@ -142,7 +142,7 @@ async function init(){
   // Persist newly verified awards, but do not rewrite an unchanged profile on boot.
   if(seeded||awardsChanged)await store();
  }
- render();if(!storageLocked)knownMemoryBaseline25=JSON.parse(JSON.stringify(data)); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview3')){if(window.KONPASU_OUTFIT_EDITOR25?.hasUnsavedChanges()){notice(data.profile.lang==='en'?'Update ready. Save your outfit before reopening.':'Update bereit. Speichere deinen Outfitentwurf vor dem erneuten Öffnen.');return}sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview3','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
+ render();if(!storageLocked)knownMemoryBaseline25=JSON.parse(JSON.stringify(data)); if('serviceWorker'in navigator&&(location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){try{const reg=await navigator.serviceWorker.register('./sw.js');reg.update().catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('konpasu-reloaded-v241-outfit-preview4')){if(window.KONPASU_OUTFIT_EDITOR25?.hasUnsavedChanges()){notice(data.profile.lang==='en'?'Update ready. Save your outfit before reopening.':'Update bereit. Speichere deinen Outfitentwurf vor dem erneuten Öffnen.');return}sessionStorage.setItem('konpasu-reloaded-v241-outfit-preview4','1');location.reload()}})}catch(e){console.warn('Offline cache',e)}} navigator.storage?.persist?.().catch(()=>{})}
 function notice(s){document.querySelector('#toast')?.remove();const d=document.createElement('div');d.id='toast';d.className='toast';d.textContent=translateText(s);document.body.appendChild(d);clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>d.remove(),2700)}
 function activeAt(g,d){const list=[...(g.events||[])].sort((a,b)=>a.date.localeCompare(b.date));let result=false;for(const x of list){if(x.date<=d)result=!!x.active}return result}
 function configAt(g,d){const list=(g.versions||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));let conf={period:g.period,target:g.target,targetValue:g.targetValue,unit:g.unit,direction:g.direction};for(const v of list){if(v.date<=d)conf={...conf,...v}}return conf}

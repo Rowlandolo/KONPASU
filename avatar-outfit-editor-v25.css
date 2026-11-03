@@ -4,3 +4,5 @@
 .kp25-editor .kp25-head>div{min-width:0;flex:1}.kp25-editor h4{overflow-wrap:anywhere}@media(max-width:480px){.kp25-editor .kp25-head{flex-wrap:wrap}.kp25-editor .kp25-head>div{flex-basis:100%}}
 
 .kp25-editor .kp25-savebar{position:sticky;top:0;z-index:2;margin:0 0 20px;box-shadow:0 4px 10px #2347410a}
+
+.kp25-editor .kp25-personal{margin-top:18px;padding-top:18px;border-top:1px solid #d5dfcf}.kp25-editor .kp25-personal-switch{display:flex;align-items:center;gap:12px;min-height:44px}.kp25-editor .kp25-personal-switch input{width:24px;min-height:24px;height:24px;flex-shrink:0}.kp25-editor #kp25-personal-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.kp25-editor .kp25-personal label{font-size:.88rem}
