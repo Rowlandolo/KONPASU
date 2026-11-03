@@ -1,22 +1,22 @@
 # KONPASU – Bestandsaufnahme und Entwicklungsstand
 
-Datum: 02.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständiges Masterbriefing. Dies ist eine Codebestandsaufnahme mit gezielten ausführbaren Regressionen, keine vollständige Produkt- oder Geräteabnahme.
+Datum: 03.11.2026. Verbindliche Produktquelle: PRODUCT_SPEC.md und vollständiges Masterbriefing. Dies ist eine Codebestandsaufnahme mit gezielten ausführbaren Regressionen, keine vollständige Produkt- oder Geräteabnahme.
 
 ## Verifizierte Basis und Arbeitsstand
 
 - Live: KONPASU 2.4.0 / konpasu-offline-v240, Runtime-Merge caf1aeada7954ab8b35004eb4186492b9b4bfc51 aus PR #1; Pages-Lauf 41486638959 und Live-Version bestätigt. Echte iPhone-/VoiceOver-/Alt-PWA-Abnahme bleibt offen.
 - Aktuelle Entwicklung: feature/avatar-artbook-foundation, Entwurfs-PR [#3](https://github.com/Rowlandolo/KONPASU/pull/3). Neuer Avatar ausschließlich im Entwicklungsatelier, keine neue Live-/Schema-/Cacheänderung.
-- Neu: zwei unabhängig gezeichnete Körperformen mit sieben Basisebenen, eigener Passform und fünf Krafttrainingartikeln/neun Rüstungsfragmenten. Das Geschirr besitzt eigene Vorder-/Rückgrafiken statt der alten Clippolygone; Körperwechsel erhält die Auswahl. Keine Speicherwrites.
-- 248 Regressionen sowie App- und Atelier-Chromiumlauf mit 21 Atelier-Prüfgruppen erfolgreich für 0a65c3c7d62943028fcd12e49a8021a91b195574. [Browsernachweis](https://github.com/Rowlandolo/KONPASU/actions/runs/41547850324); Belege in design/avatar/verification-harness-depth-v07.json.
+- Neu: zwei unabhängig gezeichnete Körperformen mit sieben logischen Basiswahlen und acht tatsächlichen Basisflächen, eigener Passform und fünf Krafttrainingartikeln/neun Rüstungsfragmenten. Geschirr und Gewand haben separate Vorder-/Hintergrafiken. Gewand bleibt eine vollständige Auswahl; Körperwechsel erhält alle Wahlen. Keine Speicherwrites.
+- 255 Regressionen sowie App- und Atelier-Chromiumlauf mit 23 Atelier-Prüfgruppen erfolgreich für dde46f6de2c07a7b4bc7755e8a8ea6447827076a. [Browsernachweis](https://github.com/Rowlandolo/KONPASU/actions/runs/41551201193); Belege in design/avatar/verification-sleeve-depth-v08.json.
 - Etappe 1 technisch abgeschlossen: 770,084 Bytes Startgrafiken statt 15,523,832 kanonischen PNG-Bytes (95.04 % weniger), 1,099,250 Bytes für beide Formen/Startset, 47.74 MiB rechnerisches Quell-RGBA. Original-PNGs bleiben unverändert; Inhalts-Hashes in den WebP-URLs vermeiden Revisionen unter derselben Dateiadresse. Beide Formen und 390 px bei 3× Pixeldichte gegen Originalmodus geprüft und gesichtet. Reale Telefon-/GPU-/Peakmessung bleibt in Etappe 5 offen, keine Produktionsfreigabe.
-- Etappe 2, Geschirrabschnitt geprüft: 760,882 Startbytes, 1,090,048 Bytes insgesamt, 47.94 MiB Quell-RGBA. Engere Rückriemenpassform auch ohne Gewand auf beiden Formen gesichtet und durch echte Alphapixel abgesichert. Als Nächstes innerhalb Etappe 2: Vorder-/Hinterärmel, anschließend Kopfteile. Weitere 90 Artikel und gespeicherte Mehrfach-Outfits bleiben offen. 6-Prozent-Breite bleibt zusätzlich ein geometrischer Test.
+- Etappe 2: Geschirr und Vorder-/Hinterärmel auf beiden Formen geprüft und gesichtet. 761,978 Startbytes, 1,100,998 Bytes insgesamt, 47.71 MiB Quell-RGBA. An allen acht Unterarm-/Handgelenkpunkten: Frontalpha 0, tatsächlicher Körper vor hinterer Ärmelalpha. Als Nächstes Kopfteil-/Haartiefen. Weitere 90 Artikel und gespeicherte Mehrfach-Outfits bleiben offen. 6-Prozent-Breite bleibt zusätzlich ein geometrischer Test.
 - Lokaler Gitverlauf bleibt eine eigene Snapshot-Baseline. Remoteänderungen erfolgen auf dem echten Upstream-Branch mit erwartetem Parent und SHA-geprüften Dateien, kein Push der synthetischen lokalen Historie.
 
 Die folgende Bestandsaufnahme und spätere Verlaufsabschnitte enthalten ältere Befunde. Maßgeblich für den aktuellen Lieferstand sind diese Übersicht und der jüngste Phasenabschluss.
 
 Etappe-2-Geschirrabschnitt abgeschlossen, siehe aktueller Abschluss am Dokumentende und AVATAR_DEPTH_CONTRACT.md. Der frühere Zwischenstand mit offenem Build/Browser ist damit ersetzt. Live-App und Daten unverändert.
 
-Ärmelabschnitt in Entwicklung: je Körperform zwei neue eigenständige Gewandgrafiken vorbereitet; sieben logische Wahlen bleiben erhalten, intern acht Basisflächen. V4-Vertrag verlangt vollständige Vorder-/Hintergruppe, v3 bleibt lesbar. Hinterfläche liegt hinter dem Körper, nur die Vorderfläche maskiert Armartikel. 27 gezielte Basis-/Szenentests erfolgreich; frischer Auslieferungsbuild und Browser-/Sichtprüfung dieses Stands noch offen. Keine Live-/Datenänderung.
+Ärmelabschnitt abgeschlossen; der Zwischenstand mit offenem Build/Browser ist durch den Phasenabschluss am Dokumentende ersetzt. V4 verlangt vollständige Gewandgruppen; v3-Verträge bleiben validier- und planbar, ihre Pixelquellen benötigen weiterhin eine passende explizite Deliveryzuordnung bzw. Originalmodus. Keine automatische Altquellen-/Profilmigration. Live-App und Daten unverändert.
 
 ## Ist–Soll
 
@@ -283,3 +283,15 @@ Beide Formen mit Geschirr allein, komplettem Set, ohne äußeres Gewand und mit 
 Aktuell 16 Startdateien mit 760,882 Bytes, 19 insgesamt mit 1,090,048 Bytes und 50,269,696 rechnerischen Quell-RGBA-Bytes (47.94 MiB). Numerische Produktionsziele weiter erfüllt; physische Telefon-/GPU-/Spitzenspeichermessung offen. 3×-Vergleich zum neuen Original: MAE 0.883/255, Gesicht 2.811, Gold 3.123, stärker abweichende Pixel 0.193 %. Keine Pixelgleichheit zum alten maskierten Geschirr behauptet.
 
 Nachweis und unveränderte Browseraufnahmen: design/avatar/verification-harness-depth-v07.json. Dauerhafter Tiefen-/Auswahlvertrag und nächste Ärmelkriterien: AVATAR_DEPTH_CONTRACT.md. Etappe 2 bleibt für Vorder-/Hinterärmel und Kopfteile aktiv. Live-App, Profil, Belohnungshistorie, Schema, Service Worker und main bleiben unverändert. Abschlussnachtrag enthält nur Nachweise/Dokumentation, keine getestete Runtime oder Geometrie.
+
+## Abschluss Etappe 2, Ärmel: gemeinsame Gewandwahl mit zwei Tiefenflächen
+
+Je Form zwei neue eigenständige transparente PNGs; vorherige Gewandgrafiken und übrige Quellbilder bytegleich erhalten. V4 gruppiert kimono-back und kimono unter der vorhandenen Gewandwahl. Sieben Schalter bleiben sieben, tatsächliche Basisflächen acht. Hintere Ärmelinnenflächen liegen auf Tiefe 180 hinter Körper/Armen (200), Frontgewand auf 320. Armmaske referenziert ausschließlich Frontstoff. Fehlende oder rollenwidrige Flächen scheitern vor einer Teilfigur; v3-Verträge bleiben planbar, ohne automatische Delivery-/Nutzerprofilmigration.
+
+255 Regressionen, bestehende App-Chromiumprüfung und 23 Atelier-Prüfgruppen erfolgreich für dde46f6de2c07a7b4bc7755e8a8ea6447827076a: https://github.com/Rowlandolo/KONPASU/actions/runs/41551201193. Je 128 logische Basiszustände und 32 Rewardauswahlen pro Körper; jeder Gewandzustand hat null oder zwei Flächen. Alle acht Unterarm-/Handgelenkanker: Frontalpha 0, Körperalpha 253; hintere Fläche dort absichtlich vorhanden. Reale SVG-Pixel beweisen Rücken-/Körper-/Frontordnung und Frontmaskierung der Armartikel. Ein schwach geglätteter Goldsaum am bisherigen Hand-Randmesspunkt wird mit <32 Alpha vom undurchsichtigen Rest unterschieden; andere Teile weiterhin <20, unabhängige Passform- und Qualitätsgrenzen unverändert.
+
+Grundoutfit und komplettes Set beider Formen, isoliertes Gewand, Einzelgrafikvorschauen sowie 3×-Mobil-/Originalaufnahme gesichtet. Keine schwebende Armrüstung oder Hände in isolierten Gewandbildern festgestellt. Aktuelle komplette Figur rekonstruiert deterministisch; Bodywechsel, Retry/Race, beschädigte Hinterärmeldatei ohne Teilfigur und null Speicherwrites geprüft. Kein vollständiger kartesischer Sichttest und keine universelle Poseabnahme behauptet.
+
+Laufzeitbasis jetzt 848×1272, hintere Innenflächen maximal 512 Pixel lange Kante bei Qualität 0.98. Dadurch bleiben trotz zwei zusätzlicher Quellen die unveränderten numerischen Ziele erfüllt: 17 Startdateien mit 761,978 Bytes, 21 insgesamt mit 1,100,998 Bytes, 50,022,912 Quell-RGBA-Bytes (47.71 MiB). Frischer Build 41551201181 liefert alle 21 Ausgaben plus Manifest bytegleich. 3×-Originalvergleich: Gesamt-MAE 0.916/255, Gesicht 2.875, Gold 3.133, stärker abweichende Pixel 0.211 %. Verlustraster und Quell-RGBA-Schätzung sind keine Geräte-/GPU-/Peakfreigabe.
+
+Nachweis: design/avatar/verification-sleeve-depth-v08.json; Vertrag und nächste Kopfteilkriterien: AVATAR_DEPTH_CONTRACT.md. Etappe 2 bleibt für Kopfteil-/Haartiefen offen. Live-App, persönliche Ziele/Trainings/Belohnungen, Schema, Service Worker und main unverändert. Abschlussnachtrag ergänzt nur Belege, Dokumentation und Registrierungsannotation, keine getestete Runtime oder Geometrie.

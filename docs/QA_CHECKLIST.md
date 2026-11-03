@@ -277,9 +277,12 @@ Aktueller Beleg: 0a65c3c7d62943028fcd12e49a8021a91b195574, [248 Regressionen, Ap
 - [x] Vier neue native PNGs, ursprüngliche Gewanddateien unverändert, eigene Quellen-/Hash-/Platzierungsangaben für beide Formen.
 - [x] Sieben logische Wahlen behalten; je ausgewähltem Gewand immer beide internen Flächen, vollständige Vertragsvalidierung und unveränderte Eingaben. 27 gezielte Basis-/Szenentests erfolgreich.
 - [x] Hinterärmel vor Hinterhaaren und hinter Körper; nur Frontgewand als Armverdeckungsfläche; keine neuen Besitz-/Speicherartikel.
-- [ ] Frischer Laufzeitbuild und vollständige Regressionen; 8-MB-/48-MiB-Grenzen weiterhin erfüllt.
-- [ ] Beide Formen im Browser, 256 logische Basis-/64 Rewardzustände und unveränderte Auswahl beim Wechsel.
-- [ ] Echte Front-/Hinterärmel-/Körper-/Armartikelpixel; offene Unterarmkanäle und körperrichtige Einzelgrafikvorschau.
-- [ ] Gesammelte Figur/Einzelgrafiken beider Formen sichten; Original-/Mobilevergleich bei 390 px und 3×.
-- [ ] Beschädigte Hinterfläche ohne halbes Gewand/Teilfigur; Lazy-Load-Retry/Race und unveränderte Offline-Appprüfungen.
+- [x] Frischer Laufzeitbuild und 255 vollständige Regressionen; 761,978 Startbytes / 50,022,912 Quell-RGBA-Bytes innerhalb der unveränderten Ziele.
+- [x] Beide Formen im Browser, 256 logische Basis-/64 Rewardzustände als getrennte Suiten und unveränderte Auswahl beim Wechsel. Je logischem Gewandzustand immer null oder zwei Flächen.
+- [x] Echte Front-/Hinterärmel-/Körper-/Armartikelpixel; acht offene Unterarm-/Handgelenkanker (Frontalpha 0, Körperalpha 253) und körperrichtige Einzelgrafikvorschau.
+- [x] Zusammengesetzte Figur/Einzelgrafiken beider Formen gesichtet; Original-/Mobilevergleich bei 390 px und 3× erfolgreich.
+- [x] Beschädigte Hinterfläche ohne halbes Gewand/Teilfigur; Lazy-Load-Retry/Race und unveränderte Offline-Appprüfungen erfolgreich.
+- [x] Zweiter gepinnter Build: alle 21 Ausgaben plus Manifest bytegleich. Vorherige Quell-PNGs unverändert erhalten.
 - [ ] Kopfteile, reale Geräte-/PWA-Abnahme und App-/Persistenzintegration.
+
+Nachweis: dde46f6de2c07a7b4bc7755e8a8ea6447827076a, [255 Regressionen, App-Chromium und 23 Atelier-Prüfgruppen](https://github.com/Rowlandolo/KONPASU/actions/runs/41551201193), [Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41551201181). Gewand-Einzelrandprobe erlaubt <32 Alpha für eine schwach geglättete Goldkante, andere Einzelteile weiterhin <20; Passform-/Bildqualitätstests bleiben separat unverändert. Archivierte Aufnahmen und Messgrenzen: design/avatar/verification-sleeve-depth-v08.json. Keine neue Liveversion.

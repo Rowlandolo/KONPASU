@@ -4,7 +4,7 @@
   "width": 512,
   "height": 768,
   "status": "seven-logical-parts-eight-surfaces-two-depth-kimono-prototype",
-  "registration": "sleeve-depth-v08-browser-review-pending",
+  "registration": "browser-reviewed-two-forms-sleeve-depth-v08",
   "layers": [
     {
       "id": "hair-back",
@@ -195,5 +195,6 @@
     "Kimono is one logical selection with two required graphics; no new ownership item.",
     "Rear sleeve surfaces lie behind actual body; only front cloth alpha occludes arm equipment.",
     "Numeric asset targets do not establish physical phone/GPU acceptance."
-  ]
+  ],
+  "reviewEvidence": "./verification-sleeve-depth-v08.json"
 }

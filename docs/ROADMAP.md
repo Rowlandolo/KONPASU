@@ -1,6 +1,6 @@
 # KONPASU – Roadmap
 
-Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; jede Stufe wird mit Belegen abgeschlossen.
+Stand 03.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; jede Stufe wird mit Belegen abgeschlossen.
 
 | Phase | Ziel / kleinste überprüfbare Lieferung | Stand |
 |---|---|---|
@@ -17,7 +17,7 @@ Stand 02.11.2026. Reihenfolge aus Masterbriefing §11. Kein Terminversprechen; j
 
 ## Nächster kleinster Schritt
 
-Aktuelle Entwicklungspriorität ist Etappe 2 aus AVATAR_RELEASE_STEPS.md: Vorder-/Hinterärmel und Anschluss an Armartikel auf beiden Formen. Das zweigeteilte Geschirr ist bereits geprüft und gesichtet, einschließlich engerer Rückriemenpassform ohne Gewand. Auswahl und stabile Artikel-IDs bleiben erhalten. Aktueller Stand: 0.76 MB Startgrafiken und 47.94 MiB Quell-RGBA, Originalvergleich beider Formen und 3× Pixeldichte bestanden. Reale Telefon-/GPU-/Peakmessungen bleiben als Freigabebedingung in Etappe 5. Danach folgen App-/Datenintegration, die übrigen 90 Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Eine erste Liveversion mit dem Startset kann vor allen 90 weiteren Grafiken erscheinen, sobald die zugehörigen Integrations-/Geräte-/Releasegates erfüllt sind und nicht übertragene Artikel erhalten bleiben.
+Aktuelle Entwicklungspriorität ist der verbleibende Kopfteil-/Haarabschnitt von Etappe 2 aus AVATAR_RELEASE_STEPS.md. Vorder-/Hintergeschirr und Vorder-/Hinterärmel sind für beide Standfiguren geprüft und gesichtet; Gewand bleibt eine gemeinsame Auswahl. Kopfteil zunächst anhand eines bestehenden Artbook-Artikels mit stabiler ID und unveränderten Voraussetzungen zuordnen, dann hintere/vordere Haar-/Kopfteilflächen und Kombinierbarkeit ausdrücklich prüfen. Aktuell 0.76 MB Startgrafiken / 47.71 MiB Quell-RGBA, Originalvergleich beider Formen und 3× bestanden. Reale Telefon-/GPU-/Peakmessungen bleiben Freigabebedingung in Etappe 5. Danach folgen App-/Datenintegration, weitere Artikel, Geräte-/Offlineabnahme und Veröffentlichung. Eine erste Liveversion mit dem Startset kann früher erscheinen, sobald zugehörige Integrations-/Geräte-/Releasegates erfüllt sind und nicht übertragene Artikel erhalten bleiben.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
@@ -99,4 +99,4 @@ Abschluss belegt: verification-delivery-v06.json, 245 Regressionen und 19 Atelie
 
 Erster Abschnitt von Etappe 2 abgeschlossen: zweigeteiltes Geschirr mit unverändertem Artikel-/Frontschlüssel, auf beiden Körpern mit und ohne Gewand gesichtet. 248 Regressionen und 21 Atelier-Prüfgruppen grün im Lauf 41547850324. Ein frischer Build reproduziert alle 19 Laufzeitdateien plus Manifest bytegleich (41547850475). Nachweise: verification-harness-depth-v07.json. Als Nächstes Ärmel-Vorder-/Hinterflächen unter erhaltener logischer Gewandauswahl; AVATAR_DEPTH_CONTRACT.md beschreibt konkrete Bedingungen.
 
-Ärmelabschnitt begonnen: vier neue körperbezogene PNGs, gruppierter Basisvertrag und getrennte Zeichenflächen vorbereitet. Nächster Prüfpunkt sind zusammengesetzte Figur, Ärmelöffnungen/Armartikel und Original-/Mobilevergleich; danach verbleibende Kopfteil-Tiefen planen. Besitz, sieben logische Wahlen und alle 95 Artikel-IDs bleiben erhalten.
+Ärmelabschnitt abgeschlossen: vier neue körperbezogene PNGs, gruppierter Basisvertrag und körperrichtige Vorschau; sieben logische Wahlen und alle 95 Artikel-IDs bleiben erhalten. 255 Regressionen und 23 Atelier-Prüfgruppen erfolgreich (41551201193); 21 Ausgaben plus Manifest bytegleich wiederholt (41551201181). Nachweis: verification-sleeve-depth-v08.json. Als Nächstes Kopfteil-/Haartiefen, danach geplanter App-/Datenvertrag aus Etappe 3; keine neue Live-/Storage-Migration in diesem Abschnitt.

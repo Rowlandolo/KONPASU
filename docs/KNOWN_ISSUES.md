@@ -1,6 +1,6 @@
 # KONPASU – Fehlerregister
 
-Stand 02.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
+Stand 03.11.2026. P0 = Releaseblocker, P1 = hoch, P2 = Produktlücke. Fehlerbehebungen der Basis wurden mit 2.4.0 veröffentlicht; die neue Artbook-Avatarentwicklung bleibt separat in PR #3. Ältere Tabellenbefunde und aktuelle Nachträge unterscheiden.
 
 | ID | Priorität | Reproduktion / Ursache | Stand und Beleg |
 |---|---|---|---|
@@ -105,4 +105,6 @@ ART-09 für das Geschirr im Zwei-Formen-Atelier behoben: zwei neu gezeichnete tr
 
 ART-10 im Atelier behoben: Zusätzliche Ansicht ohne Gewand zeigte Rückriemen bei Form A außerhalb des Oberarms. Rückseitenregistrierung um acht Rigpixel nach innen versetzt, Form-B-Gruppenregistrierung entsprechend nachgeführt. Reale Browser-Alphaprüfung unterhalb Schulterhöhe: Form A 1, Form B 3 Randpixel außerhalb der Körperalpha, maximal 4 erlaubt; kein sichtbarer hängender Riemen. Grenztest ist auf diese beiden Standfiguren begrenzt.
 
-ART-11 in Entwicklung: Ärmel-Vorder-/Hinterflächen als zwei vollständige Grafikgruppen für beide Formen vorbereitet. Der logische kimono-Schalter bleibt einer; fehlende oder falsch zugeordnete Flächen werden abgewiesen. Neue Rückfläche verdeckt keine Armrüstung mehr. Native Grafik-/Szenenprüfungen grün, finaler Build und Browser-/Sichtabnahme noch offen. Kopfteile und allgemeine Produktionsintegration bleiben offen.
+ART-11 für die beiden Standfiguren im Atelier behoben: je Form neue Vorder-/Hintergrafiken, ein logischer kimono-Schalter und atomare vollständige Gruppe. Hinterärmel liegen hinter dem Körper und maskieren Armartikel nicht. Beide Formen mit Grundoutfit/komplettem Set, isoliertem Gewand und Flächenvorschau gesichtet. Tatsächliche Körperalpha 253 und Frontalpha 0 an acht Unterarm-/Handgelenkpunkten; echte SVG-Pixel sichern die Reihenfolge samt Frontmaske ab. 255 Regressionen und 23 Atelier-Gruppen erfolgreich, verification-sleeve-depth-v08.json. Keine allgemeine Pose-/Geräte-/Produktionsfreigabe; Kopfteil-/Haartiefen bleiben offen.
+
+QA-Hinweis zur neuen Grafik: Ein bisheriger einzelner Hand-Messpunkt trifft nach Skalierung eine schwach geglättete Goldkante (etwa 22/255 Alpha). Gewand-Randprobe daher ausdrücklich <32, alle anderen isolierten Teile weiterhin <20; keine pauschale Erhöhung der Körper-/Passformtoleranzen. Separater tatsächlicher Unterarmtest verlangt weiterhin Frontalpha <32 und Körperalpha >240, aktuell an allen acht Stellen 0/253. Bildvergleich gegen die neuen kanonischen Quellen bleibt eigenständig begrenzt.
