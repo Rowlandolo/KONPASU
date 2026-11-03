@@ -3,9 +3,10 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{chromium}=require('playwright'),{serve}=require('./browser-check.cjs');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'design/avatar'),recipe=require('../design/avatar/delivery-recipe-v06.json');
 const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const base=require('../design/avatar/base-layers.js');
 (async()=>{
  const json=file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')),profiles=json('body-profiles-v04.json').profiles,sources=new Map();
- for(const profile of profiles)for(const layer of json(profile.contract).layers)sources.set(layer.file,{...layer,kind:'base'});
+ for(const profile of profiles)for(const layer of base.artwork(json(profile.contract)))sources.set(layer.file,{...layer,kind:'base'});
  for(const asset of json('prototype-assets.json').assets)sources.set(asset.file,{...asset,kind:'equipment'});
  const files=[...sources.keys()].map(f=>'design/avatar/'+f.replace('./',''));let server,browser;
  const output=path.join(dir,'runtime-v06');fs.mkdirSync(output,{recursive:true});
@@ -15,7 +16,8 @@ const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
   await page.goto(server.url+files[0]); // A same-origin image document permits isolated source loading.
   for(const source of sources.values()){
    const bytes=fs.readFileSync(path.join(dir,source.file));if(digest(bytes)!==source.sha256)throw Error('Canonical source mismatch: '+source.file);
-   const scale=source.kind==='base'?recipe.baseScale:Math.min(1,recipe.equipmentMaxEdges[path.basename(source.file,'.png')]/Math.max(source.width,source.height));
+   const nameKey=path.basename(source.file,'.png'),maxEdge=source.kind==='base'?recipe.baseMaxEdges?.[nameKey]:recipe.equipmentMaxEdges[nameKey];
+   const scale=source.kind==='base'&&maxEdge===undefined?recipe.baseScale:Math.min(1,maxEdge/Math.max(source.width,source.height));
    if(!Number.isFinite(scale)||scale<=0||scale>1)throw Error('Invalid delivery scale');
    const width=Math.max(1,Math.round(source.width*scale)),height=Math.max(1,Math.round(source.height*scale));
    const result=await page.evaluate(async({url,width,height,quality})=>{

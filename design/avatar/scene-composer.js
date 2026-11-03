@@ -2,6 +2,7 @@
 /* Pure scene planning plus SVG rendering. No storage, ownership or app mutations. */
 (function(root){
  const DEPTH=Object.freeze({'hair-back':100,body:200,shoes:300,kimono:320,hakama:330,obi:350,'hair-front':600});
+ const SURFACE_DEPTH=root.KONPASU_BASE_LAYERS25.SURFACE_DEPTH;
  const states=new WeakMap();
  const ID=/^[a-z0-9-]+$/;
  function checkPlacement(p){if(!p||![p.x,p.y,p.width,p.height].every(Number.isFinite)||p.width<=0||p.height<=0||p.width>2048||p.height>3072||Math.abs(p.x)>2048||Math.abs(p.y)>3072)throw Error('Invalid scene placement')}
@@ -15,12 +16,16 @@
  }
  function plan({baseLayers,equipment,profile={},fitArtwork,applyOcclusion=true}){
   if(!Array.isArray(baseLayers)||!Array.isArray(equipment)||baseLayers.length+equipment.length>128)throw Error('Invalid scene inputs');
-  const base=new Map(),nodes=[],seen=new Set();
+  const base=new Map(),surfaces=new Set(),nodes=[],seen=new Set();
   for(const layer of baseLayers){
-   if(!Object.prototype.hasOwnProperty.call(DEPTH,layer.id)||base.has(layer.id))throw Error('Invalid base scene ID');
+   const fragmentId=layer.fragmentId||layer.id;
+   if(!Object.prototype.hasOwnProperty.call(DEPTH,layer.id)||!(fragmentId===layer.id||layer.id==='kimono'&&fragmentId==='kimono-back')||surfaces.has(fragmentId))throw Error('Invalid base scene ID');
+   if(layer.depthRole!==undefined&&(layer.id!=='kimono'||layer.depthRole!==(fragmentId==='kimono-back'?'back':'front')))throw Error('Invalid base surface depth');
+   surfaces.add(fragmentId);
    checkPlacement(layer.placement);base.set(layer.id,layer);
-   nodes.push({id:'base-'+layer.id,baseId:layer.id,kind:'base',z:DEPTH[layer.id],src:layer.src,placement:{...layer.placement},occludedBy:[],clipPolygons:[]});
+   nodes.push({id:'base-'+fragmentId,baseId:layer.id,fragmentId,kind:'base',z:SURFACE_DEPTH[fragmentId],src:layer.src,placement:{...layer.placement},occludedBy:[],clipPolygons:[]});
   }
+  if(baseLayers.some(l=>l.id==='kimono'&&l.fragmentId!==undefined)&&(!surfaces.has('kimono')||!surfaces.has('kimono-back')))throw Error('Incomplete scene garment');
   for(const part of equipment){
    if(!ID.test(part.partId)||seen.has(part.partId)||!Number.isFinite(part.z)||typeof fitArtwork!=='function')throw Error('Invalid equipment scene node');seen.add(part.partId);
    const depthRole=part.depthRole||'front';
@@ -49,7 +54,7 @@
    live.add(part.id);set(img,'id',prefix+'-'+part.id);
    for(const [k,v] of Object.entries(part.placement))set(img,k,v);
    set(img,'href',part.src);set(img,'data-scene-id',part.id);
-   if(part.kind==='base')set(img,'data-base-id',part.baseId);else{set(img,'data-part-id',part.partId);set(img,'data-item-id',part.itemId);set(img,'data-depth-role',part.depthRole)}
+   if(part.kind==='base'){set(img,'data-base-id',part.baseId);set(img,'data-fragment-id',part.fragmentId)}else{set(img,'data-part-id',part.partId);set(img,'data-item-id',part.itemId);set(img,'data-depth-role',part.depthRole)}
    if(part.occludedBy.length){set(img,'mask','url(#'+prefix+'-mask-'+part.id+')');set(img,'data-occluded-by',part.occludedBy.join(','))}else{img.removeAttribute('mask');img.removeAttribute('data-occluded-by')}
    if(part.clipPolygons.length)set(img,'clip-path','url(#'+prefix+'-clip-'+part.id+')');else img.removeAttribute('clip-path');
    elements.push(img);

@@ -8,6 +8,7 @@ on:
       - design/avatar/prototype-assets.json
       - design/avatar/equipment/**
       - design/avatar/base-layer*contract.json
+      - design/avatar/base-layers.js
       - design/avatar/layers/**
 permissions:
   contents: read

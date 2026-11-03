@@ -271,3 +271,15 @@ Aktueller Abschluss: c99b943e70666452aeba9e9a95fe0f05f2c4ad34, [Browser/Regressi
 - [ ] Ärmel-Vorder-/Hinterflächen, weitere Kopfteile und physische Geräte-/Produktionsintegration.
 
 Aktueller Beleg: 0a65c3c7d62943028fcd12e49a8021a91b195574, [248 Regressionen, App-Chromium und 21 Atelier-Prüfgruppen](https://github.com/Rowlandolo/KONPASU/actions/runs/41547850324), [bytegleicher Rebuild](https://github.com/Rowlandolo/KONPASU/actions/runs/41547850475). Original-/Mobilevergleich verlustbegrenzt, keine Pixelidentität zum früheren maskierten Geschirr behauptet. Archivierte Ansichten, Prüfgrenzen und Messwerte: design/avatar/verification-harness-depth-v07.json. Keine neue Liveversion.
+
+## Etappe 2: Ärmel als gemeinsame Gewandgruppe
+
+- [x] Vier neue native PNGs, ursprüngliche Gewanddateien unverändert, eigene Quellen-/Hash-/Platzierungsangaben für beide Formen.
+- [x] Sieben logische Wahlen behalten; je ausgewähltem Gewand immer beide internen Flächen, vollständige Vertragsvalidierung und unveränderte Eingaben. 27 gezielte Basis-/Szenentests erfolgreich.
+- [x] Hinterärmel vor Hinterhaaren und hinter Körper; nur Frontgewand als Armverdeckungsfläche; keine neuen Besitz-/Speicherartikel.
+- [ ] Frischer Laufzeitbuild und vollständige Regressionen; 8-MB-/48-MiB-Grenzen weiterhin erfüllt.
+- [ ] Beide Formen im Browser, 256 logische Basis-/64 Rewardzustände und unveränderte Auswahl beim Wechsel.
+- [ ] Echte Front-/Hinterärmel-/Körper-/Armartikelpixel; offene Unterarmkanäle und körperrichtige Einzelgrafikvorschau.
+- [ ] Gesammelte Figur/Einzelgrafiken beider Formen sichten; Original-/Mobilevergleich bei 390 px und 3×.
+- [ ] Beschädigte Hinterfläche ohne halbes Gewand/Teilfigur; Lazy-Load-Retry/Race und unveränderte Offline-Appprüfungen.
+- [ ] Kopfteile, reale Geräte-/PWA-Abnahme und App-/Persistenzintegration.

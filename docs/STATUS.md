@@ -16,6 +16,8 @@ Die folgende Bestandsaufnahme und spätere Verlaufsabschnitte enthalten ältere 
 
 Etappe-2-Geschirrabschnitt abgeschlossen, siehe aktueller Abschluss am Dokumentende und AVATAR_DEPTH_CONTRACT.md. Der frühere Zwischenstand mit offenem Build/Browser ist damit ersetzt. Live-App und Daten unverändert.
 
+Ärmelabschnitt in Entwicklung: je Körperform zwei neue eigenständige Gewandgrafiken vorbereitet; sieben logische Wahlen bleiben erhalten, intern acht Basisflächen. V4-Vertrag verlangt vollständige Vorder-/Hintergruppe, v3 bleibt lesbar. Hinterfläche liegt hinter dem Körper, nur die Vorderfläche maskiert Armartikel. 27 gezielte Basis-/Szenentests erfolgreich; frischer Auslieferungsbuild und Browser-/Sichtprüfung dieses Stands noch offen. Keine Live-/Datenänderung.
+
 ## Ist–Soll
 
 | Bereich | Tatsächlich im Quellcode | Zum verbindlichen Ziel noch offen |

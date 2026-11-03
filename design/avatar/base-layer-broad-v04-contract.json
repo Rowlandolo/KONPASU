@@ -1,10 +1,10 @@
 {
-  "version": 3,
+  "version": 4,
   "rig": "adult-three-quarter-v1",
   "width": 512,
   "height": 768,
-  "status": "seven-independent-layers-one-pose-prototype",
-  "registration": "browser-reviewed-form-b-standing-pose",
+  "status": "seven-logical-parts-eight-surfaces-two-depth-kimono-prototype",
+  "registration": "sleeve-depth-v08-browser-review-pending",
   "layers": [
     {
       "id": "hair-back",
@@ -71,24 +71,60 @@
     },
     {
       "id": "kimono",
-      "file": "./layers/kimono-broad-v04.png",
-      "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498",
-      "width": 1024,
-      "height": 1536,
-      "transparentPixelsFraction": 0.737499,
-      "opaqueBounds": [
-        59,
-        233,
-        967,
-        1227
-      ],
-      "placement": {
-        "x": 65.66,
-        "y": 13.79,
-        "width": 378.88,
-        "height": 568.32
-      },
-      "origin": "independently image-generated broader form using approved v02/v03 references; PNG bytes unmodified"
+      "fragments": [
+        {
+          "id": "kimono-back",
+          "depthRole": "back",
+          "file": "./layers/kimono-back-b-v08.png",
+          "sha256": "b098c9495af6e02a1bcb197479a9c0d6464d8f4b2b4bad9800fdb2d16a00ef35",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.908694,
+          "opaqueBounds": [
+            0,
+            41,
+            1010,
+            1480
+          ],
+          "placement": {
+            "x": 65.66,
+            "y": 13.79,
+            "width": 378.88,
+            "height": 568.32
+          },
+          "origin": "image-generated separate back sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-broad-v04.png",
+            "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+          }
+        },
+        {
+          "id": "kimono",
+          "depthRole": "front",
+          "file": "./layers/kimono-front-b-v08.png",
+          "sha256": "067f6fd60f31f31f04b68c79e90e03fce319efd43c4ee665346ca7f60a5aadd5",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.740252,
+          "opaqueBounds": [
+            0,
+            47,
+            1003,
+            1536
+          ],
+          "placement": {
+            "x": 65.66,
+            "y": 13.79,
+            "width": 378.88,
+            "height": 568.32
+          },
+          "origin": "image-generated separate front sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-broad-v04.png",
+            "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+          }
+        }
+      ]
     },
     {
       "id": "hakama",
@@ -155,11 +191,10 @@
     }
   ],
   "limits": [
-    "Two independently drawn body forms share the standing pose.",
-    "Form B has individually registered garment, hakama, obi, shoes and equipment placements.",
-    "Alpha occlusion uses declared active surfaces, not inferred universal 3D geometry.",
-    "Rendering/file budget and production/persistence/device acceptance remain open."
+    "These two stand figures and one pose only; headwear depth and live/offline integration remain open.",
+    "Kimono is one logical selection with two required graphics; no new ownership item.",
+    "Rear sleeve surfaces lie behind actual body; only front cloth alpha occludes arm equipment.",
+    "Numeric asset targets do not establish physical phone/GPU acceptance."
   ],
-  "bodyForm": "form-b",
-  "reviewEvidence": "./verification-two-forms-v04.json"
+  "bodyForm": "form-b"
 }

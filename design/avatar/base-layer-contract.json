@@ -1,10 +1,10 @@
 {
-  "version": 3,
+  "version": 4,
   "rig": "adult-three-quarter-v1",
   "width": 512,
   "height": 768,
-  "status": "seven-independent-layers-one-pose-prototype",
-  "registration": "browser-reviewed-seven-layers-one-pose",
+  "status": "seven-logical-parts-eight-surfaces-two-depth-kimono-prototype",
+  "registration": "sleeve-depth-v08-browser-review-pending",
   "layers": [
     {
       "id": "hair-back",
@@ -71,24 +71,60 @@
     },
     {
       "id": "kimono",
-      "file": "./layers/kimono-v03.png",
-      "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434",
-      "width": 1024,
-      "height": 1536,
-      "transparentPixelsFraction": 0.70753,
-      "opaqueBounds": [
-        55,
-        233,
-        970,
-        1232
-      ],
-      "placement": {
-        "x": 88,
-        "y": 22.75,
-        "width": 335.872,
-        "height": 503.808
-      },
-      "origin": "image generation edit of kimono-v03 plus complete body and previous clothing references to clear forearm openings; PNG bytes unmodified; registered without stretching"
+      "fragments": [
+        {
+          "id": "kimono-back",
+          "depthRole": "back",
+          "file": "./layers/kimono-back-a-v08.png",
+          "sha256": "8f0859123166e654c6ff9551f81394191ccf1d2acf78d30152e2bb42cb6e78ba",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.916841,
+          "opaqueBounds": [
+            41,
+            315,
+            978,
+            1478
+          ],
+          "placement": {
+            "x": 88,
+            "y": 22.75,
+            "width": 335.872,
+            "height": 503.808
+          },
+          "origin": "image-generated separate back sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-v03.png",
+            "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434"
+          }
+        },
+        {
+          "id": "kimono",
+          "depthRole": "front",
+          "file": "./layers/kimono-front-a-v08.png",
+          "sha256": "05fcd93e82eedb84d40cfe56f1dc0a88f3d9eb0ce20fdfd2ce7a41b92fec9f4e",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.715692,
+          "opaqueBounds": [
+            23,
+            23,
+            1023,
+            1512
+          ],
+          "placement": {
+            "x": 88,
+            "y": 22.75,
+            "width": 335.872,
+            "height": 503.808
+          },
+          "origin": "image-generated separate front sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-v03.png",
+            "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434"
+          }
+        }
+      ]
     },
     {
       "id": "hakama",
@@ -155,10 +191,9 @@
     }
   ],
   "limits": [
-    "One drawn anatomy. The broader option is a shared scale.",
-    "Kimono sleeves are not yet split into front/back depth surfaces.",
-    "Hair front is above current equipment; future headwear needs explicit depth planning.",
-    "Production budget, further reward paths and persistent multi-item outfits remain open."
-  ],
-  "reviewEvidence": "./verification-seven-layers-v03.json"
+    "These two stand figures and one pose only; headwear depth and live/offline integration remain open.",
+    "Kimono is one logical selection with two required graphics; no new ownership item.",
+    "Rear sleeve surfaces lie behind actual body; only front cloth alpha occludes arm equipment.",
+    "Numeric asset targets do not establish physical phone/GPU acceptance."
+  ]
 }

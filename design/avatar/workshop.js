@@ -29,7 +29,7 @@
  function setSelection(ids){selected.clear();ids.forEach(id=>selected.add(id));controls.querySelectorAll('input').forEach(i=>i.checked=selected.has(i.dataset.item));refresh()}
  function refreshBase(){
   if(!ready)return;
-  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();refreshHarnessPreview();
+  baseRenderer=models.get(active).renderer;baseRenderer.draw(baseSelection());window.KONPASU_WORKSHOP_BASE=baseRenderer;refresh();refreshHarnessPreview();refreshSleevePreview();
   document.getElementById('base-limit').textContent=baseSelection().includes('body')?'Individuell gezeichnete Körperform. Kleidung und Ausrüstung behalten ihre Auswahl beim Wechsel.':'Körper ausgeblendet: Du siehst ausschließlich die gewählten Einzelgrafiken.';
  }
  function setBaseSelection(ids){document.querySelectorAll('[data-base-part]').forEach(i=>i.checked=ids.includes(i.dataset.basePart));refreshBase()}
@@ -67,6 +67,13 @@
   for(const [id,key] of [['harness-front-image','chest-harness'],['harness-back-image','chest-harness-back']])document.getElementById(id).src=art.specFor('assets/avatar-v25/strength/'+key+'.png').src;
  }
  document.getElementById('harness-layers').addEventListener('toggle',refreshHarnessPreview);
+ function refreshSleevePreview(){
+  if(!ready||!document.getElementById('sleeve-layers').open)return;
+  const surfaces=baseRenderer.describe(['kimono']);
+  for(const [id,key] of [['sleeve-front-image','kimono'],['sleeve-back-image','kimono-back']]){const image=document.getElementById(id),src=surfaces.find(s=>s.fragmentId===key).src;if(image.getAttribute('src')!==src)image.src=src}
+  document.getElementById('sleeve-shape').textContent=models.get(active).profile.labelDe;
+ }
+ document.getElementById('sleeve-layers').addEventListener('toggle',refreshSleevePreview);
  async function json(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw Error('Grafikmanifest fehlt: '+file);return response.json()}
  try{
   const [manifest,profiles]=await Promise.all([json('./prototype-assets.json'),json('./body-profiles-v04.json')]);

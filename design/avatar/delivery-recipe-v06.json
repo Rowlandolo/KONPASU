@@ -2,7 +2,7 @@
   "version": 1,
   "codec": "image/webp",
   "quality": 0.98,
-  "baseScale": 0.84375,
+  "baseScale": 0.828125,
   "equipmentMaxEdges": {
     "breastplate": 512,
     "shoulder-left": 512,
@@ -15,5 +15,9 @@
     "chest-harness-back": 256
   },
   "preserveFullFrame": true,
-  "originalsModified": false
+  "originalsModified": false,
+  "baseMaxEdges": {
+    "kimono-back-a-v08": 512,
+    "kimono-back-b-v08": 512
+  }
 }
