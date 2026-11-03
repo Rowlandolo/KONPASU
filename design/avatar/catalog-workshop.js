@@ -8,7 +8,7 @@
  async function json(file){const r=await fetch(file,{cache:'no-store'});if(!r.ok)throw Error('Werkstattdatei fehlt: '+file);return r.json()}
  async function model(id){
   if(models.has(id))return models.get(id);if(loading.has(id))return loading.get(id);
-  const profile=profiles.find(p=>p.id===id);if(!profile)throw Error('Unbekannte Körperform');
+  const profile=profiles.find(p=>p.id===id);if(!profile||!/^\.\/base-layer(-broad-v04)?-contract\.json$/.test(profile.contract))throw Error('Unbekannte Körperform oder Quelle');
   const pending=(async()=>{const contract=await json(profile.contract),renderer=await window.KONPASU_BASE_LAYERS25.load(document.createElement('canvas'),contract,document.createElement('canvas'));const m={profile,renderer};models.set(id,m);return m})();
   loading.set(id,pending);try{return await pending}finally{loading.delete(id)}
  }

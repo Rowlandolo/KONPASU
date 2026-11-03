@@ -2,7 +2,9 @@
 /* Original, code-drawn vector fit studies. Never a claim of finished premium artwork. */
 (function(root){
  const themes={forest:['#174f43','#f4edd8','#c7a350','#dbe6cf'],teal:['#145e67','#e9f4f1','#d1ae60','#a6dae0'],night:['#26364d','#f0eadc','#d4b56d','#becde2'],harvest:['#42654a','#f6eed9','#c79843','#ddbd7a'],lotus:['#48715e','#fff3e8','#c1a15c','#edc9d2'],sky:['#4a6c85','#f7f0e2','#c7a459','#bbd9e7'],ink:['#263446','#f0e8d6','#c5a05a','#bdcad3'],zen:['#395d49','#f3ecd9','#c3a25e','#c6d9b7'],festival:['#284e49','#f6eadb','#cda05a','#deb6b8']};
- const e=(tag,attrs,body='')=>'<'+tag+' '+Object.entries(attrs).map(([k,v])=>k+'="'+v+'"').join(' ')+'>'+body+'</'+tag+'>';
+ // Trigonometric geometry can differ in the last binary bit across JS engines.
+ // Canonical six-place numeric attributes keep source hashes identical in Node/Chromium.
+ const e=(tag,attrs,body='')=>'<'+tag+' '+Object.entries(attrs).map(([k,v])=>k+'="'+(typeof v==='number'?Number(v.toFixed(6)):v)+'"').join(' ')+'>'+body+'</'+tag+'>';
  const path=(d,fill,stroke='#9a783b',width=.9,extra={})=>e('path',{d,fill,stroke,'stroke-width':width,'stroke-linecap':'round','stroke-linejoin':'round',...extra});
  const circle=(cx,cy,r,fill,stroke='none',w=.8)=>e('circle',{cx,cy,r,fill,stroke,'stroke-width':w});
  const rect=(x,y,width,height,fill,stroke='#b99a56',rx=2)=>e('rect',{x,y,width,height,fill,stroke,'stroke-width':1,rx});
