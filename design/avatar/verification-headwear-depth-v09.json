@@ -1,0 +1,806 @@
+{
+  "status": "passed-startset-stage-two-headwear-depth-physical-and-app-integration-open",
+  "testedSourceCommit": "633e50984f581db846495e011b7766a29d6fb70c",
+  "workflowRun": 41555922134,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41555922134",
+  "rebuildWorkflowRun": 41555922095,
+  "rebuildWorkflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41555922095",
+  "automatedTests": 262,
+  "appChromium": "passed existing acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Twelve verified equipment delivery fragments loaded",
+      "Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings",
+      "Canonical base geometry with verified runtime bitmaps in one SVG scene",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all twelve equipment layers",
+      "Seven independently toggled actual compositions including full set",
+      "Real separate front/rear harness artwork: rear behind body, front above clothes, no pose clips, selection retained in isolated preview",
+      "All 64 selectable combinations",
+      "Both garment groups retain one selection and two real surfaces; actual forearm channels stay clear and shape-specific previews match",
+      "Both headwear fits retain all six items and three modules across eight independent hair states; face probes remain clear",
+      "Both actual rear sprites stay within the underbody below shoulders; no hanging external return strap",
+      "Both drawn body forms: 256 base selections, 128 reward selections and lossless shape switching",
+      "Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible",
+      "Actual SVG pixels confirm back/body/front ordering without clipping or fragment removal",
+      "Real garment SVG pixels prove rear/body/front depth and front-only arm occlusion without rear-lining masking",
+      "Actual SVG pixels prove rear tails, hair, under-fringe band and over-hair ornament interleave without deleting modules",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Original artbook board loads once on demand without the large bundle",
+      "Verified focus artbook remains an optional byte-identical reference, loaded once without bundle",
+      "Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice",
+      "Mobile delivery matches original framing with bounded full-figure, face, gold-detail and high-difference pixel errors",
+      "390px at device scale factor 3 retains bounded face and gold-detail errors against original delivery",
+      "Corrupted base, harness, sleeve or headwear layer fails visibly with no partial garment, body or reward",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed",
+    "performance": {
+      "startupAssetBytes": 819188,
+      "totalAssetBytes": 1155204,
+      "additionalBodyBytes": 336016,
+      "referenceBundleBytes": 6298236,
+      "optionalReferenceBytes": 436058,
+      "previousEagerStartupBytes": 31636177,
+      "startupBytesAvoided": 30816989,
+      "initialAssets": 20,
+      "totalAssets": 24,
+      "initialDecodedSourceRGBABytes": 36763776,
+      "decodedSourceRGBABytes": 50162944,
+      "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+      "mode": "mobile",
+      "canonical": {
+        "startupAssetBytes": 20537535,
+        "totalAssetBytes": 25337941,
+        "decodedSourceRGBABytes": 151000720
+      },
+      "observedStartupDeliveryRequests": 20,
+      "observedStartupRequestedDeliveryBytes": 819188,
+      "startupRasterSurfaces": 0,
+      "maskImageCopies": 0,
+      "stableBodyNode": true,
+      "sceneScriptTiming": {
+        "samples": 40,
+        "medianMs": 0.10000000000582077,
+        "p95Ms": 0.3000000000029104,
+        "maxMs": 0.39999999999417923,
+        "includesPaint": false
+      },
+      "renderStats": {
+        "created": 545,
+        "reused": 5301,
+        "attributeWrites": 5944,
+        "lastRenderMs": 0.19999999999708962,
+        "liveImages": 20
+      }
+    },
+    "sleeveFit": {
+      "form-a": {
+        "shape": "form-a",
+        "points": [
+          {
+            "id": "forearmLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "forearmRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 251
+          },
+          {
+            "id": "wristRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          }
+        ],
+        "order": [
+          "hair-back",
+          "kimono-back",
+          "body",
+          "shoes",
+          "kimono",
+          "hakama",
+          "obi",
+          "hair-front"
+        ]
+      },
+      "form-b": {
+        "shape": "form-b",
+        "points": [
+          {
+            "id": "forearmLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "forearmRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          }
+        ],
+        "order": [
+          "hair-back",
+          "kimono-back",
+          "body",
+          "shoes",
+          "kimono",
+          "hakama",
+          "obi",
+          "hair-front"
+        ]
+      }
+    },
+    "headwearFit": {
+      "form-a": {
+        "clearance": [
+          {
+            "partId": "focus-headband-band",
+            "faceProbeAlpha": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "partId": "focus-headband-bow",
+            "faceProbeAlpha": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hairStates": [
+          {
+            "front": true,
+            "back": true,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": true,
+            "back": false,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": false,
+            "back": true,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": false,
+            "back": false,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          }
+        ]
+      },
+      "form-b": {
+        "clearance": [
+          {
+            "partId": "focus-headband-band",
+            "faceProbeAlpha": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "partId": "focus-headband-bow",
+            "faceProbeAlpha": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hairStates": [
+          {
+            "front": true,
+            "back": true,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": true,
+            "back": false,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": false,
+            "back": true,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          },
+          {
+            "front": false,
+            "back": false,
+            "retainedFragments": 3,
+            "selectedItems": 6
+          }
+        ]
+      }
+    },
+    "harnessFit": {
+      "form-a": {
+        "shape": "form-a",
+        "opaqueRearPixels": 1999,
+        "outsideBelowShoulder": 1,
+        "scope": "512x768 actual delivered alpha; rear alpha >128 and body alpha <128 below rig y=190"
+      },
+      "form-b": {
+        "shape": "form-b",
+        "opaqueRearPixels": 2501,
+        "outsideBelowShoulder": 3,
+        "scope": "512x768 actual delivered alpha; rear alpha >128 and body alpha <128 below rig y=190"
+      }
+    },
+    "deliveryComparison": {
+      "formA": {
+        "meanAbsoluteError": 1.07781217750258,
+        "highDifferenceFraction": 0.0031607747138022897,
+        "faceMAE": 3.9199211045364892,
+        "goldMAE": 3.8901298701298703
+      },
+      "formB": {
+        "meanAbsoluteError": 1.1411164710682316,
+        "highDifferenceFraction": 0.002818777449780402,
+        "faceMAE": 3.8519132149901383,
+        "goldMAE": 4.10979797979798
+      },
+      "retina3x": {
+        "meanAbsoluteError": 0.9311066696276556,
+        "highDifferenceFraction": 0.0022629358205640683,
+        "faceMAE": 3.333851333851334,
+        "goldMAE": 3.1347299623437532
+      }
+    }
+  },
+  "assetInventory": {
+    "startupAssetBytes": 819188,
+    "totalAssetBytes": 1155204,
+    "additionalBodyBytes": 336016,
+    "referenceBundleBytes": 6298236,
+    "optionalReferenceBytes": 436058,
+    "previousEagerStartupBytes": 31636177,
+    "startupBytesAvoided": 30816989,
+    "initialAssets": 20,
+    "totalAssets": 24,
+    "initialDecodedSourceRGBABytes": 36763776,
+    "decodedSourceRGBABytes": 50162944,
+    "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+    "assets": [
+      {
+        "file": "./runtime-v06/hair-back-v03-bb081f9d5a29.webp",
+        "source": "./layers/hair-back-v03.png",
+        "bytes": 18470,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/kimono-back-a-v08-ff3ce1693557.webp",
+        "source": "./layers/kimono-back-a-v08.png",
+        "bytes": 13898,
+        "width": 341,
+        "height": 512,
+        "rgbaBytes": 698368
+      },
+      {
+        "file": "./runtime-v06/body-v02-e0ed4ff2b714.webp",
+        "source": "./layers/body-v02.png",
+        "bytes": 105532,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/shoes-v03-6161c892c17f.webp",
+        "source": "./layers/shoes-v03.png",
+        "bytes": 14374,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/kimono-front-a-v08-515053b6109d.webp",
+        "source": "./layers/kimono-front-a-v08.png",
+        "bytes": 158010,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/hakama-v03-d6fb687790fc.webp",
+        "source": "./layers/hakama-v03.png",
+        "bytes": 51374,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/obi-v03-0b5c400f2e92.webp",
+        "source": "./layers/obi-v03.png",
+        "bytes": 13850,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/hair-front-v03-61c7d54d59ea.webp",
+        "source": "./layers/hair-front-v03.png",
+        "bytes": 39654,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/kimono-back-b-v08-20c95c11079d.webp",
+        "source": "./layers/kimono-back-b-v08.png",
+        "bytes": 14790,
+        "width": 341,
+        "height": 512,
+        "rgbaBytes": 698368
+      },
+      {
+        "file": "./runtime-v06/body-broad-v04-0fb6a3267d81.webp",
+        "source": "./layers/body-broad-v04.png",
+        "bytes": 117468,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/kimono-front-b-v08-1ddeb734056e.webp",
+        "source": "./layers/kimono-front-b-v08.png",
+        "bytes": 153194,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/hakama-broad-v04-7e68adf47987.webp",
+        "source": "./layers/hakama-broad-v04.png",
+        "bytes": 50564,
+        "width": 840,
+        "height": 1260,
+        "rgbaBytes": 4233600
+      },
+      {
+        "file": "./runtime-v06/chest-harness-back-70eeac41b6a2.webp",
+        "source": "./equipment/chest-harness-back.png",
+        "bytes": 6906,
+        "width": 203,
+        "height": 256,
+        "rgbaBytes": 207872
+      },
+      {
+        "file": "./runtime-v06/chest-harness-front-a910df75bba9.webp",
+        "source": "./equipment/chest-harness-front.png",
+        "bytes": 76068,
+        "width": 603,
+        "height": 640,
+        "rgbaBytes": 1543680
+      },
+      {
+        "file": "./runtime-v06/shoulder-left-fc03b44048f0.webp",
+        "source": "./equipment/shoulder-left.png",
+        "bytes": 69732,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/shoulder-right-cec18341f17b.webp",
+        "source": "./equipment/shoulder-right.png",
+        "bytes": 51840,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+        "source": "./equipment/wrist-wrap-left.png",
+        "bytes": 7322,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-right-05b252d16626.webp",
+        "source": "./equipment/wrist-wrap-right.png",
+        "bytes": 7440,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/armguard-left-4b24e7a18d02.webp",
+        "source": "./equipment/armguard-left.png",
+        "bytes": 27368,
+        "width": 166,
+        "height": 448,
+        "rgbaBytes": 297472
+      },
+      {
+        "file": "./runtime-v06/armguard-right-60a08d589bc2.webp",
+        "source": "./equipment/armguard-right.png",
+        "bytes": 25786,
+        "width": 160,
+        "height": 448,
+        "rgbaBytes": 286720
+      },
+      {
+        "file": "./runtime-v06/breastplate-4bcabe678718.webp",
+        "source": "./equipment/breastplate.png",
+        "bytes": 70406,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/focus-headband-band-b425290a52ac.webp",
+        "source": "./equipment/focus-headband-band.png",
+        "bytes": 18716,
+        "width": 384,
+        "height": 192,
+        "rgbaBytes": 294912
+      },
+      {
+        "file": "./runtime-v06/focus-headband-bow-ab2617362672.webp",
+        "source": "./equipment/focus-headband-bow.png",
+        "bytes": 22048,
+        "width": 256,
+        "height": 256,
+        "rgbaBytes": 262144
+      },
+      {
+        "file": "./runtime-v06/focus-headband-tails-e82c46201766.webp",
+        "source": "./equipment/focus-headband-tails.png",
+        "bytes": 20394,
+        "width": 256,
+        "height": 384,
+        "rgbaBytes": 393216
+      }
+    ],
+    "mode": "mobile",
+    "canonical": {
+      "startupAssetBytes": 20537535,
+      "totalAssetBytes": 25337941,
+      "decodedSourceRGBABytes": 151000720
+    },
+    "prototypePassed": true,
+    "violations": [],
+    "productionTargetsPassed": true,
+    "physicalDeviceAccepted": false
+  },
+  "reproducedFiles": [
+    {
+      "file": "runtime-v06/armguard-left-4b24e7a18d02.webp",
+      "sha256": "4b24e7a18d02b80f43f7375610147aaeba828bf05891c258e61fffc66ba3b941",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/armguard-right-60a08d589bc2.webp",
+      "sha256": "60a08d589bc28bcf0c61dc27dbac3aa58303f243cd56d2bbafcfca8bfa464193",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/body-broad-v04-0fb6a3267d81.webp",
+      "sha256": "0fb6a3267d81e138caf6025afdd8c1a4fd26e1e2dece5eb418ed468f86023dab",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/body-v02-e0ed4ff2b714.webp",
+      "sha256": "e0ed4ff2b714c6daff8085403fc61f32cbc31574d4691ea8b8cb34ff9e66fc79",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/breastplate-4bcabe678718.webp",
+      "sha256": "4bcabe67871870283f344a7e5b7ce13c3ff3338729ecc6288141f3608cab696a",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/chest-harness-back-70eeac41b6a2.webp",
+      "sha256": "70eeac41b6a29cf85c57de07fb11988c342a5536edf228785e8e1c8494481e2b",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/chest-harness-front-a910df75bba9.webp",
+      "sha256": "a910df75bba972edd152861f9170503574169d93bfa2a66052e8d2f8bd385b2e",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/focus-headband-band-b425290a52ac.webp",
+      "sha256": "b425290a52acc641a33b35d4b572159c577206c79db8525093fa44b0d70b1771",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/focus-headband-bow-ab2617362672.webp",
+      "sha256": "ab26173626726e07f138ff222b759cacaf3cfd19fab8649601530dc44a7819b6",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/focus-headband-tails-e82c46201766.webp",
+      "sha256": "e82c4620176661ca640b1756a7a7c7ed900205c596290d0d1364d97fa495fcd9",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hair-back-v03-bb081f9d5a29.webp",
+      "sha256": "bb081f9d5a294f937674f1595d081326de0ab24e2feb24b8ada7bdbff8d73d47",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hair-front-v03-61c7d54d59ea.webp",
+      "sha256": "61c7d54d59ea586cdc2d42ec7166e24d4f48ea3f551470331eaad2a2f75c70c0",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hakama-broad-v04-7e68adf47987.webp",
+      "sha256": "7e68adf4798791808c2aa2bc870a4fc72c8124ff3c0c67f45705c68bf21d6bd8",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hakama-v03-d6fb687790fc.webp",
+      "sha256": "d6fb687790fc812979f3629ac636b894feea945d43a6b94fa0c223e7dfb5e584",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-back-a-v08-ff3ce1693557.webp",
+      "sha256": "ff3ce16935573b51ffada93ac02bb46fa7b39ba94adc4a67b43de2fe82966241",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-back-b-v08-20c95c11079d.webp",
+      "sha256": "20c95c11079d7ea4e68ebd02efe3469f38036ea13a4a3aecb81b3ec63356edb6",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-front-a-v08-515053b6109d.webp",
+      "sha256": "515053b6109d0acbc20872e37ad26afe39eb29249017225cac2bf87cc717981e",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-front-b-v08-1ddeb734056e.webp",
+      "sha256": "1ddeb734056ed6ff6e28493c3b04adae83335415cb2d267b770609d07b9d6533",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/obi-v03-0b5c400f2e92.webp",
+      "sha256": "0b5c400f2e925719d38b745f7e3925274df15d4577a87da4bb830450dadbda25",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoes-v03-6161c892c17f.webp",
+      "sha256": "6161c892c17f74973e0ece8e5f35ddb25cb6547b9be88360fc34ae16ec54dc84",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoulder-left-fc03b44048f0.webp",
+      "sha256": "fc03b44048f07a5f15a5edcf35e15565e1508bb2a0aef8ac41694b74b3d96fc1",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoulder-right-cec18341f17b.webp",
+      "sha256": "cec18341f17bba43744509ffce7510cb61dbe50c0f76123b7396caa85789ae56",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+      "sha256": "d34ac9bc8dcb1dbfc2c3ac740857ee381c9e6dbaea973497925bd8a00c532516",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/wrist-wrap-right-05b252d16626.webp",
+      "sha256": "05b252d16626227e2768f93c559551606393a231971dad6f2c7ebba19505333c",
+      "byteIdentical": true
+    },
+    {
+      "file": "delivery-assets-v06.json",
+      "sha256": "03dbb6b69f0228c6a2693f93c480c0fe683fbcee09d446cd1d99b56bda432143",
+      "byteIdentical": true
+    }
+  ],
+  "visualComparisons": [
+    {
+      "archivedFile": "review-headwear-fullset-a-v09.png",
+      "artifactPath": "artbook/headwear-form-a-haired.png",
+      "sha256": "35dc667a44c7774961aac51d57c026aca626d01600cd672cd4f9dca90f0472e5",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-fullset-b-v09.png",
+      "artifactPath": "artbook/headwear-form-b-haired.png",
+      "sha256": "b7bc21e83a2502e15c4713400db7e36701122ed4bc83f66e7519f19ae4f11d36",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-hairless-a-v09.png",
+      "artifactPath": "artbook/headwear-form-a-hairless.png",
+      "sha256": "278634531ef5be5bb9f0bb8ab5cb909594b5632ab38abfa349ed23be8cfe10e2",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-hairless-b-v09.png",
+      "artifactPath": "artbook/headwear-form-b-hairless.png",
+      "sha256": "262180e6a749646f57635f5c1d2578a0f334751378592949dc6aee176d53741c",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-parts-v09.png",
+      "artifactPath": "artbook/headwear-parts-form-a.png",
+      "sha256": "1550485a3c03a0f59536b98c321df39fa772325a5c71670c85df24b378957139",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-retina-mobile-v09.png",
+      "artifactPath": "artbook/retina-mobile.png",
+      "sha256": "02b253b35ef79fcc77c189e77accecdc98572e4ce5dbcf9c0c84ea8df51f829b",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-headwear-retina-original-v09.png",
+      "artifactPath": "artbook/retina-original.png",
+      "sha256": "2811a024ff3a4fce7a537b54a87529dcae8a395cd91e28db830aa8f2443dc09e",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    }
+  ],
+  "headwearContract": {
+    "itemId": "focus-1",
+    "legacyTitle": "Konzentrationsstein",
+    "legacySlot": "main",
+    "successfulCompletedWeeks": 1,
+    "confirmedArtbook": "Focus Headband, row 4 column 1, displayed 1W",
+    "mappingNote": "focus-2 depicts Sand Timer despite its legacy Hachimaki title; no live rename or gate/ownership migration.",
+    "depths": {
+      "head-back": 90,
+      "hair-back": 100,
+      "head-band": 580,
+      "hair-front": 600,
+      "head-front": 620
+    },
+    "allThreeRequired": true,
+    "incompleteItemPolicy": "all three pending; independent strength items remain drawable",
+    "hairChoicesPreserved": true,
+    "otherSelectedArticlesPreserved": true,
+    "nativeSourcesUnmodified": true,
+    "registration": "Explicit per-profile fit; shared hair coordinate space, two checked adult stand figures in one pose."
+  },
+  "newNativePNGs": [
+    {
+      "file": "./equipment/focus-headband-band.png",
+      "sha256": "232ed5b1d01edbfe87d3b3ee5bfe04a49883b9a1e0424834c3067baeee3f0723",
+      "width": 1774,
+      "height": 887,
+      "alphaBounds": [
+        0,
+        19,
+        1762,
+        887
+      ],
+      "fitBounds": [
+        127,
+        171,
+        1647,
+        717
+      ],
+      "fitAlphaThreshold": 16
+    },
+    {
+      "file": "./equipment/focus-headband-bow.png",
+      "sha256": "56a8422442c71079075adc35f79554e82c4005757f62a9320c201bc60c74d691",
+      "width": 1254,
+      "height": 1254,
+      "alphaBounds": [
+        0,
+        9,
+        1240,
+        1214
+      ],
+      "fitBounds": [
+        74,
+        212,
+        1180,
+        1045
+      ],
+      "fitAlphaThreshold": 16
+    },
+    {
+      "file": "./equipment/focus-headband-tails.png",
+      "sha256": "f8d82f9f95d1d0edc66024596fdf74db1abbbabcefafdf7a06094a73a0bdaade",
+      "width": 1024,
+      "height": 1536,
+      "alphaBounds": [
+        0,
+        5,
+        980,
+        1512
+      ],
+      "fitBounds": [
+        109,
+        173,
+        815,
+        1342
+      ],
+      "fitAlphaThreshold": 16
+    }
+  ],
+  "deliveryBuild": {
+    "baseDimensions": [
+      840,
+      1260
+    ],
+    "rearSleeveMaxEdge": 512,
+    "quality": 0.98,
+    "headwearFitBoundsVerified": true,
+    "maxAlphaErrorAgainstResampledSource": 0,
+    "maxVisibleColorRMSE": 8.118180106444186
+  },
+  "comparisonThresholds": {
+    "wholeFigureMAE": 3,
+    "faceMAE": 5,
+    "goldMAE": 5,
+    "highDifferenceChannelThreshold": 32,
+    "maxHighDifferencePixelFraction": 0.025,
+    "channelRange": [
+      0,
+      255
+    ]
+  },
+  "measurementLimits": [
+    "Six prototype articles and two stand figures in one pose; not all 95 articles, future headgear, new hairstyles or universal depth inference.",
+    "256 base and 128 reward states are separate suites, not exhaustive cartesian visual acceptance.",
+    "Alpha >16 fit bounds verified from actual native source pixels; full source and faint alpha pixels remain unchanged.",
+    "Delivery alpha equality refers to the resampled source, not the unscaled native PNG; bounded color loss is intentional.",
+    "RGBA is source width times height times four, excluding DOM, strings and browser/GPU overhead; no measured peak memory.",
+    "390px at 3x is CI emulation, not physical phone, VoiceOver or installed-PWA acceptance.",
+    "Scene timing excludes paint and provides no device frame-rate guarantee.",
+    "previousEagerStartupBytes/startupBytesAvoided reconstruct current canonical inventory plus bundle; not historic observed network traffic."
+  ],
+  "remaining": [
+    "Stage 3 lossless inventory/outfit/app contract with existing choices, favourites, history, gates, unsupported article fallback and rollback.",
+    "89 further standard articles, in 18 packages (17 times five and four last).",
+    "Physical phone/GPU/peak-memory/offline/old-PWA/VoiceOver and reviewed release."
+  ],
+  "provenance": "Three separate image-generated transparent PNGs, byte-identical embedded artbook references, reproducible software delivery build and unmodified real CI screenshots. No personal data. Closeout changes evidence, documentation and registration annotations only; tested runtime and geometry unchanged."
+}

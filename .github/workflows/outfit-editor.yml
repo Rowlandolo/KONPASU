@@ -1,0 +1,37 @@
+name: Outfit editor UI
+on:
+  pull_request:
+    paths:
+      - avatar-outfit*.js
+      - avatar-outfit-editor-v25.css
+      - avatar2d.js
+      - app.js
+      - index.html
+      - sw.js
+      - version.json
+      - design/avatar/base-layers.js
+      - design/avatar/prototype-loader.js
+      - scripts/outfit-editor-browser-check.cjs
+      - tests/outfit-editor.cjs
+      - tests/support/outfit-browser-fixture.cjs
+      - .github/workflows/outfit-editor.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  outfit-editor-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/outfit-editor-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: outfit-editor-acceptance
+          path: browser-results/outfit-editor/

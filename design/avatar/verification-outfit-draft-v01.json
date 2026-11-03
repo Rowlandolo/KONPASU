@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.2",
+  "testedSourceCommit": "7b90e8a535e52d64b8f2767ef2954f1526b591e2",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/6",
+  "syntheticOnly": true,
+  "sessionOnly": true,
+  "personalProfileAccess": false,
+  "persistence": false,
+  "schemaChange": false,
+  "deployment": false,
+  "node": {
+    "status": "passed",
+    "total": 324,
+    "newTests": 21,
+    "workflowRun": 41608823151
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "atelierGroups": 26,
+    "workflowRun": 41608823151
+  },
+  "editorBrowser": {
+    "status": "passed",
+    "groups": 16,
+    "workflowRun": 41608823134,
+    "artifactId": 13216549878,
+    "checks": [
+      "Separate synthetic editor starts with actual legacy resolutions, no profile import/app startup/reference prefetch",
+      "Actual add/hide/move/remove/body controls preserve exact intermediate states through complete Undo/Redo and keep keyboard focus",
+      "Reset itself is undoable and restores stable IDs, hidden state and order",
+      "Two custom goals sharing PNG artwork render separate fitted instances with unique SVG IDs and independent visibility",
+      "Equal-depth vector surfaces change actual SVG stacking order while both articles remain selected",
+      "Search and empty results work; all 95 items coexist as 134 vector and 12 PNG modules without displaced IDs",
+      "Switching examples preserves each independent in-memory draft and undo history",
+      "Unknown data stays in unchanged source; missing history and unreadable favorite are visibly blocked without current-profile substitution",
+      "Historical draft retains its actual source date and historical equipment",
+      "DE/EN labels and accessible names; 320/390/430px layouts contain content and retain 44px touch targets",
+      "Already-loaded editor adds, switches loaded body forms, changes examples and performs Undo/Redo offline",
+      "Reload discards the session draft and starts from synthetic source without restoring hidden persistent state",
+      "Invalid fixture fails before editing and retry reloads only the workshop",
+      "Untrusted source labels and unknown IDs remain text without HTML execution",
+      "Invalid vector hash blocks the editor before any partial outfit; retry succeeds without clearing storage",
+      "No localStorage, sessionStorage, IndexedDB or uncaught errors"
+    ],
+    "storage": {
+      "local": 0,
+      "session": 0,
+      "databases": 0
+    },
+    "uncaughtErrors": []
+  },
+  "screenshots": [
+    {
+      "path": "design/avatar/review-outfit-draft-v01/custom-shared-artwork.png",
+      "bytes": 456381,
+      "sha256": "5c963ee13bcfebb03837313c22aa8b7d9354ac051656be8621ebd85905dee6d3",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-draft-v01/mobile-390.png",
+      "bytes": 335383,
+      "sha256": "53d4e65b47eafebb737652476a12939c2280a01f8525b3f9a8a78c5e6966537d",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-draft-v01/ordered-draft.png",
+      "bytes": 473916,
+      "sha256": "18e4ac61e8256ff7f9044a5b302402513836ac3a67a6466d0b53f36364192f6a",
+      "visuallyInspected": true
+    }
+  ],
+  "sourcePreservation": [
+    "Full adapter projection and raw source are independent and unchanged",
+    "Start only actually resolved equipment; disabled effect remains hidden",
+    "Unknown, resting and shadowed original entries are retained without automatic activation",
+    "Custom goal identities remain separate from shared artwork keys",
+    "Missing history or unreadable favorite blocks editing and hides the SVG preview",
+    "Empty favorite stays empty until explicit add; current profile is never substituted"
+  ],
+  "editing": [
+    "Independent add/remove/visibility/order per stable instance",
+    "Undo/Redo restores exact intermediate states and Reset is undoable",
+    "New branch of editing clears Redo; no-op actions retain it",
+    "Failed synchronous render acceptance rolls back state and Undo/Redo",
+    "Case switching retains each session draft; reload discards all drafts",
+    "Both body forms with explicit profile match and retained fitted masks",
+    "All 95 IDs remain present as 134 vector and 12 PNG modules",
+    "Equal-depth SVG stacking actually changes; fixed anatomical depth roles stay authoritative",
+    "DE/EN, 320/390/430px, 44px controls and keyboard focus",
+    "No HTML execution for unsafe text; invalid fixture/vector hash fails before editing"
+  ],
+  "limits": [
+    "Session-memory draft only: no persistence, profile application or app integration.",
+    "PNG/vector studies preserve fixed anatomical depth; order only resolves equal-depth surfaces.",
+    "Warm offline editing is not cold PWA/upgrade or physical-device acceptance.",
+    "500-instance explicit development guard, not a product slot limit; no silent Undo history truncation.",
+    "Existing source appearance, scenes and separate legacy companion remain in source; their rendering is a later integration step.",
+    "89 vector studies remain prototypes; premium art, grip poses, expressions and final shoe fitting remain open.",
+    "No save/apply/import/export/rollback implementation yet. Next stage requires its own versioned additive data contract and existing storage conflict protections."
+  ],
+  "unchangedMainCommit": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "unchangedLiveVersion": "2.4.0 / konpasu-offline-v240",
+  "archiveNote": "Following archive commit changes only documentation and checked original browser evidence; source above is the exact executed runtime."
+}

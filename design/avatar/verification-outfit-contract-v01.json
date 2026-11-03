@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "scope": "Stage 3.1 read-only outfit compatibility projection; not a persisted outfit schema or production avatar integration",
+  "testedSourceCommit": "1d50304da6b818cf1181cb79fda02072755e8143",
+  "branch": "feature/outfit-compatibility-adapter",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/5",
+  "runtimeIntegration": false,
+  "profileWrites": false,
+  "schemaChange": false,
+  "deployment": false,
+  "syntheticOnly": true,
+  "node": {
+    "status": "passed",
+    "total": 303,
+    "newAdapterTests": 23,
+    "workflowRun": 41605680366
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "atelierCheckGroups": 26,
+    "workflowRun": 41605680366,
+    "browserJob": 125814780012
+  },
+  "inspectorBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41605680286,
+    "job": 125814779609,
+    "artifactId": 13216596772,
+    "report": "design/avatar/review-outfit-contract-v01/report.json",
+    "checks": [
+      "Synthetic-only page loads eight cases without app startup, personal profile import or save actions",
+      "All eight real UI selections retain their exact synthetic input and expected current/favorite/history resolution",
+      "Resting raw selection, lower eligible replacement and effect Off are distinct in the visible tables",
+      "Empty favorite stays empty and never inherits current or legacy gear",
+      "Two custom goal identities remain separate despite the same artwork family/tier",
+      "Historical snapshot uses its evaluation date; missing snapshot never displays today’s equipment as past",
+      "Unknown IDs and future slot data remain visible as unresolved rather than being dropped",
+      "Already-loaded read-only inspection works without network for every case",
+      "390px layout keeps tables contained and case control at least 44px high",
+      "Labels and unknown raw IDs render as text without HTML execution",
+      "Invalid fixture fails visibly without partial results and can be reloaded without clearing data",
+      "No localStorage entries, IndexedDB databases or uncaught errors"
+    ],
+    "cases": [
+      {
+        "id": "parallel-selection",
+        "requested": 4,
+        "resolved": 3,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "empty-favorite",
+        "requested": 0,
+        "resolved": 0,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "resting-favorite",
+        "requested": 1,
+        "resolved": 1,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "custom-identities",
+        "requested": 2,
+        "resolved": 1,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "unknown-selection",
+        "requested": 5,
+        "resolved": 2,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "past-outfit",
+        "requested": 1,
+        "resolved": 1,
+        "blocked": false,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "missing-history",
+        "requested": 0,
+        "resolved": 0,
+        "blocked": true,
+        "sourceUnchanged": true
+      },
+      {
+        "id": "invalid-favorite",
+        "requested": 0,
+        "resolved": 0,
+        "blocked": true,
+        "sourceUnchanged": true
+      }
+    ],
+    "storage": {
+      "local": 0,
+      "db": 0
+    },
+    "uncaughtErrors": []
+  },
+  "screenshots": [
+    {
+      "path": "design/avatar/review-outfit-contract-v01/custom-identities.png",
+      "bytes": 181033,
+      "sha256": "2145a12a5b0b6d1b2d1cd8a4bfb08bdcb0d96ed960bdebe673cd6c9faab163dd",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-contract-v01/historical-selection.png",
+      "bytes": 168952,
+      "sha256": "82e3012fc14744cebe5f8d8173c0669da27459fd49726910e1d2900a9114d009",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-contract-v01/missing-history.png",
+      "bytes": 140834,
+      "sha256": "911f86c8b2639fabc724bc1e82762cf4471e58f3ae1bb1cf3839ad487e6b18fb",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-contract-v01/mobile-390.png",
+      "bytes": 174792,
+      "sha256": "f5414d2af8cb013dba4814ed6f6e7828ca2e066995298b0d44bebfae1a1d8ece",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-contract-v01/parallel-selection.png",
+      "bytes": 198000,
+      "sha256": "5f15167c1ca369ac1fc2d3b5eb6fd2b26d03a1cb87073fef3b62af5baa44c7cf",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-contract-v01/unknown-selection.png",
+      "bytes": 232466,
+      "sha256": "d32c3540a24b8d84ebb25cd44b3b76f8f81d78fc84d7b05a8d47cc1194003b30",
+      "visuallyInspected": true
+    }
+  ],
+  "preserved": [
+    "Independent original source profile and fields, including unknown entries",
+    "Parallel legacy equipped and avatar2d slot selections with provenance",
+    "Custom goal identity separate from shared artwork key",
+    "Owned and allowed evidence from existing read-only APIs",
+    "Empty favorite remains empty; original favorite metadata and base profile retained",
+    "Historical source record retained; no current-profile fallback when absent",
+    "Both companion fields and requested/resolved identity retained",
+    "No body-form inference from personal measurements or gender"
+  ],
+  "limits": [
+    "Finite JSON inputs only: maximum 200000 nodes / 64 nesting levels; invalid values fail explicitly.",
+    "Synthetic VM tier and goal-week inputs are controlled; adapter parity is not exhaustive reward/calendar certification.",
+    "Existing live showProfileForDate current-profile fallback is documented, not changed here.",
+    "Old favorite records do not contain a complete historical appearance or custom-family snapshot; absent fields are not invented.",
+    "Offline check covers an already loaded inspector; cold PWA start/upgrade and physical-device acceptance remain open.",
+    "No ordered multi-selection draft or Undo editor yet; next stage is session-memory editing.",
+    "No new renderer routing, persistence migration, import/export/rollback, premium art completion or deployment in this stage."
+  ],
+  "unchangedLiveMainCommit": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "unchangedLiveVersion": "2.4.0 / konpasu-offline-v240",
+  "evidenceCommitNote": "This proof and screenshots are archived after the tested source; the archive commit changes documentation and evidence only."
+}

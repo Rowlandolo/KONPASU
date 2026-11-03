@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "id": "form-a",
+      "labelDe": "Form A",
+      "contract": "./base-layer-contract.json",
+      "equipment": {
+        "focus-headband-band": {
+          "x": 221,
+          "y": 32,
+          "width": 65,
+          "height": 24
+        },
+        "focus-headband-bow": {
+          "x": 211,
+          "y": 45,
+          "width": 32,
+          "height": 25
+        },
+        "focus-headband-tails": {
+          "x": 184,
+          "y": 50,
+          "width": 42,
+          "height": 70
+        }
+      },
+      "anchors": {
+        "head": {
+          "x": 254,
+          "y": 43
+        },
+        "headTie": {
+          "x": 225,
+          "y": 55
+        }
+      }
+    },
+    {
+      "id": "form-b",
+      "labelDe": "Form B · breiter gezeichnet",
+      "contract": "./base-layer-broad-v04-contract.json",
+      "equipment": {
+        "shoulder-left": {
+          "x": 125.5,
+          "y": 128,
+          "width": 96,
+          "height": 114
+        },
+        "shoulder-right": {
+          "x": 312.5,
+          "y": 139,
+          "width": 78,
+          "height": 96
+        },
+        "chest-harness": {
+          "x": 173.46,
+          "y": 126,
+          "width": 178.08,
+          "height": 212.8
+        },
+        "breastplate": {
+          "x": 201.75,
+          "y": 151,
+          "width": 115.5,
+          "height": 121
+        },
+        "armguard-left": {
+          "x": 122.95,
+          "y": 308,
+          "width": 34.1,
+          "height": 44
+        },
+        "armguard-right": {
+          "x": 351.05,
+          "y": 308,
+          "width": 31.9,
+          "height": 44
+        },
+        "wrist-wrap-left": {
+          "x": 124.05,
+          "y": 337,
+          "width": 31.9,
+          "height": 22
+        },
+        "wrist-wrap-right": {
+          "x": 357.55,
+          "y": 339,
+          "width": 31.9,
+          "height": 22
+        },
+        "chest-harness-back": {
+          "x": 191.38,
+          "y": 130.48,
+          "width": 144.48,
+          "height": 206.08
+        },
+        "focus-headband-band": {
+          "x": 221,
+          "y": 32,
+          "width": 65,
+          "height": 24
+        },
+        "focus-headband-bow": {
+          "x": 211,
+          "y": 45,
+          "width": 32,
+          "height": 25
+        },
+        "focus-headband-tails": {
+          "x": 184,
+          "y": 50,
+          "width": 42,
+          "height": 70
+        }
+      },
+      "anchors": {
+        "torso": {
+          "x": 255,
+          "y": 196
+        },
+        "shoulderLeft": {
+          "x": 167.5,
+          "y": 139
+        },
+        "shoulderRight": {
+          "x": 337.5,
+          "y": 150
+        },
+        "forearmLeft": {
+          "x": 140,
+          "y": 330
+        },
+        "forearmRight": {
+          "x": 367,
+          "y": 330
+        },
+        "wristLeft": {
+          "x": 140,
+          "y": 348
+        },
+        "wristRight": {
+          "x": 373.5,
+          "y": 350
+        },
+        "head": {
+          "x": 254,
+          "y": 43
+        },
+        "headTie": {
+          "x": 225,
+          "y": 55
+        }
+      }
+    }
+  ]
+}

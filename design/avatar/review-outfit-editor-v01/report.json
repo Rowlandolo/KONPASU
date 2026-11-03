@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    "Actual Avatar → Outfits entry opens checked modular preview lazily without writing profile or database",
+    "Real add/hide/order/body controls retain separate custom identities; closing/reopening keeps unsaved draft without autosave",
+    "Visible Save writes only owned fields, shows saved status, resets dirty baseline and enables separate durable recovery",
+    "Reload reopens exact saved editor; actual Recovery button restores preceding look without changing legacy/history/training data",
+    "Unearned try-on stays visible as preview but Save rejects it with actionable status and retains entire draft",
+    "Real second-tab revision conflict retains draft, disables Save and displays explicit reload-with-draft/JSON-backup actions",
+    "Explicit Load latest data safely clears stale-tab protection, rebases kept selection and allows a new actual UI save",
+    "Unsaved non-outfit changes block refresh without data loss; visible JSON backup contains them and saved app changes can then be reloaded",
+    "DE/EN editor text, native modal focus, 320/390/430px containment and 44px touch controls",
+    "Fresh offline page opens all checked preview graphics, saves via visible controls, reloads and recovers through actual worker/IndexedDB",
+    "Actual custom goal labels remain text and cannot execute markup inside editor",
+    "Corrupt preview integrity fails visibly before editing; Retry restores checked preview without writes or clearing data"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Fresh random-loopback browser profile and synthetic goals only; never visits deployed Pages or personal storage.",
+    "Editor Artbook preview uses prototype standing figures; main legacy avatar/personalisation/scenes/companion rendering remains active.",
+    "Physical iPhone/VoiceOver/installed-old-PWA upgrade and final premium art remain open."
+  ],
+  "pageErrors": []
+}

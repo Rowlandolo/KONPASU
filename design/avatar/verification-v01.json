@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Three verified PNG fragments loaded",
+    "Four independently toggled actual compositions",
+    "All 32 selectable combinations",
+    "390px mobile layout",
+    "No storage writes or uncaught errors"
+  ],
+  "status": "passed",
+  "testedCommit": "836160db7587283774d17dd1d272ab029e7526f0",
+  "run": "https://github.com/Rowlandolo/KONPASU/actions/runs/41492495604",
+  "screenshot": "review-combined-v01.png",
+  "review": "Actual Chromium screenshot inspected; independent layers visible together. Back-strap occlusion, body variants and production fitting remain open."
+}

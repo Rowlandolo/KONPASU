@@ -1,0 +1,642 @@
+{
+  "status": "passed-two-form-sleeve-depth-review-headwear-and-physical-review-open",
+  "testedSourceCommit": "dde46f6de2c07a7b4bc7755e8a8ea6447827076a",
+  "workflowRun": 41551201193,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41551201193",
+  "rebuildWorkflowRun": 41551201181,
+  "rebuildWorkflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41551201181",
+  "automatedTests": 255,
+  "appChromium": "passed existing acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Nine verified equipment delivery fragments loaded",
+      "Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings",
+      "Canonical base geometry with verified runtime bitmaps in one SVG scene",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all nine equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Real separate front/rear harness artwork: rear behind body, front above clothes, no pose clips, selection retained in isolated preview",
+      "All 32 selectable combinations",
+      "Both garment groups retain one selection and two real surfaces; actual forearm channels stay clear and shape-specific previews match",
+      "Both actual rear sprites stay within the underbody below shoulders; no hanging external return strap",
+      "Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching",
+      "Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible",
+      "Actual SVG pixels confirm back/body/front ordering without clipping or fragment removal",
+      "Real garment SVG pixels prove rear/body/front depth and front-only arm occlusion without rear-lining masking",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Original artbook board loads once on demand without the large bundle",
+      "Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice",
+      "Mobile delivery matches original framing with bounded full-figure, face, gold-detail and high-difference pixel errors",
+      "390px at device scale factor 3 retains bounded face and gold-detail errors against original delivery",
+      "Corrupted base, rear harness or rear sleeve layer fails visibly with no partial garment, body or reward",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed",
+    "performance": {
+      "startupAssetBytes": 761978,
+      "totalAssetBytes": 1100998,
+      "additionalBodyBytes": 339020,
+      "referenceBundleBytes": 6298236,
+      "optionalReferenceBytes": 436058,
+      "previousEagerStartupBytes": 27706060,
+      "startupBytesAvoided": 26944082,
+      "initialAssets": 17,
+      "totalAssets": 21,
+      "initialDecodedSourceRGBABytes": 36380672,
+      "decodedSourceRGBABytes": 50022912,
+      "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+      "mode": "mobile",
+      "canonical": {
+        "startupAssetBytes": 16607418,
+        "totalAssetBytes": 21407824,
+        "decodedSourceRGBABytes": 132125048
+      },
+      "observedStartupDeliveryRequests": 17,
+      "observedStartupRequestedDeliveryBytes": 761978,
+      "startupRasterSurfaces": 0,
+      "maskImageCopies": 0,
+      "stableBodyNode": true,
+      "sceneScriptTiming": {
+        "samples": 40,
+        "medianMs": 0.10000000000582077,
+        "p95Ms": 0.20000000001164153,
+        "maxMs": 0.39999999999417923,
+        "includesPaint": false
+      },
+      "renderStats": {
+        "created": 371,
+        "reused": 3122,
+        "attributeWrites": 4002,
+        "lastRenderMs": 0.10000000000582077,
+        "liveImages": 17
+      }
+    },
+    "sleeveFit": {
+      "form-a": {
+        "shape": "form-a",
+        "points": [
+          {
+            "id": "forearmLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "forearmRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 251
+          },
+          {
+            "id": "wristRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          }
+        ],
+        "order": [
+          "hair-back",
+          "kimono-back",
+          "body",
+          "shoes",
+          "kimono",
+          "hakama",
+          "obi",
+          "hair-front"
+        ]
+      },
+      "form-b": {
+        "shape": "form-b",
+        "points": [
+          {
+            "id": "forearmLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "forearmRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristLeft",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          },
+          {
+            "id": "wristRight",
+            "bodyAlpha": 253,
+            "frontAlpha": 0,
+            "rearAlpha": 253
+          }
+        ],
+        "order": [
+          "hair-back",
+          "kimono-back",
+          "body",
+          "shoes",
+          "kimono",
+          "hakama",
+          "obi",
+          "hair-front"
+        ]
+      }
+    },
+    "harnessFit": {
+      "form-a": {
+        "shape": "form-a",
+        "opaqueRearPixels": 1999,
+        "outsideBelowShoulder": 1,
+        "scope": "512x768 actual delivered alpha; rear alpha >128 and body alpha <128 below rig y=190"
+      },
+      "form-b": {
+        "shape": "form-b",
+        "opaqueRearPixels": 2501,
+        "outsideBelowShoulder": 3,
+        "scope": "512x768 actual delivered alpha; rear alpha >128 and body alpha <128 below rig y=190"
+      }
+    },
+    "deliveryComparison": {
+      "formA": {
+        "meanAbsoluteError": 1.0790661674706603,
+        "highDifferenceFraction": 0.0031319749442004466,
+        "faceMAE": 3.6751084812623276,
+        "goldMAE": 3.9042135642135642
+      },
+      "formB": {
+        "meanAbsoluteError": 1.1308085535315717,
+        "highDifferenceFraction": 0.0028151774785801715,
+        "faceMAE": 3.6560157790927024,
+        "goldMAE": 4.090937950937951
+      },
+      "retina3x": {
+        "meanAbsoluteError": 0.9161739087521898,
+        "highDifferenceFraction": 0.0021111851358353692,
+        "faceMAE": 2.874854312354312,
+        "goldMAE": 3.1329345504211514
+      }
+    }
+  },
+  "assetInventory": {
+    "startupAssetBytes": 761978,
+    "totalAssetBytes": 1100998,
+    "additionalBodyBytes": 339020,
+    "referenceBundleBytes": 6298236,
+    "optionalReferenceBytes": 436058,
+    "previousEagerStartupBytes": 27706060,
+    "startupBytesAvoided": 26944082,
+    "initialAssets": 17,
+    "totalAssets": 21,
+    "initialDecodedSourceRGBABytes": 36380672,
+    "decodedSourceRGBABytes": 50022912,
+    "estimateScope": "Source width × height × 4; not measured browser/GPU peak memory",
+    "assets": [
+      {
+        "file": "./runtime-v06/hair-back-v03-48fc1ccad2d9.webp",
+        "source": "./layers/hair-back-v03.png",
+        "bytes": 18680,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/kimono-back-a-v08-ff3ce1693557.webp",
+        "source": "./layers/kimono-back-a-v08.png",
+        "bytes": 13898,
+        "width": 341,
+        "height": 512,
+        "rgbaBytes": 698368
+      },
+      {
+        "file": "./runtime-v06/body-v02-0aee20d37fb8.webp",
+        "source": "./layers/body-v02.png",
+        "bytes": 106390,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/shoes-v03-d6eedfc3f64c.webp",
+        "source": "./layers/shoes-v03.png",
+        "bytes": 14126,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/kimono-front-a-v08-32d18a6857a5.webp",
+        "source": "./layers/kimono-front-a-v08.png",
+        "bytes": 159852,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/hakama-v03-31a3b842735a.webp",
+        "source": "./layers/hakama-v03.png",
+        "bytes": 52116,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/obi-v03-a8a09b498d88.webp",
+        "source": "./layers/obi-v03.png",
+        "bytes": 14010,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/hair-front-v03-73ddd4ebf2da.webp",
+        "source": "./layers/hair-front-v03.png",
+        "bytes": 40038,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/kimono-back-b-v08-20c95c11079d.webp",
+        "source": "./layers/kimono-back-b-v08.png",
+        "bytes": 14790,
+        "width": 341,
+        "height": 512,
+        "rgbaBytes": 698368
+      },
+      {
+        "file": "./runtime-v06/body-broad-v04-1a849cb922f0.webp",
+        "source": "./layers/body-broad-v04.png",
+        "bytes": 118606,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/kimono-front-b-v08-78eb9ad3ac90.webp",
+        "source": "./layers/kimono-front-b-v08.png",
+        "bytes": 154964,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/hakama-broad-v04-f035cf3a7c54.webp",
+        "source": "./layers/hakama-broad-v04.png",
+        "bytes": 50660,
+        "width": 848,
+        "height": 1272,
+        "rgbaBytes": 4314624
+      },
+      {
+        "file": "./runtime-v06/chest-harness-back-70eeac41b6a2.webp",
+        "source": "./equipment/chest-harness-back.png",
+        "bytes": 6906,
+        "width": 203,
+        "height": 256,
+        "rgbaBytes": 207872
+      },
+      {
+        "file": "./runtime-v06/chest-harness-front-a910df75bba9.webp",
+        "source": "./equipment/chest-harness-front.png",
+        "bytes": 76068,
+        "width": 603,
+        "height": 640,
+        "rgbaBytes": 1543680
+      },
+      {
+        "file": "./runtime-v06/shoulder-left-fc03b44048f0.webp",
+        "source": "./equipment/shoulder-left.png",
+        "bytes": 69732,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/shoulder-right-cec18341f17b.webp",
+        "source": "./equipment/shoulder-right.png",
+        "bytes": 51840,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+        "source": "./equipment/wrist-wrap-left.png",
+        "bytes": 7322,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/wrist-wrap-right-05b252d16626.webp",
+        "source": "./equipment/wrist-wrap-right.png",
+        "bytes": 7440,
+        "width": 192,
+        "height": 175,
+        "rgbaBytes": 134400
+      },
+      {
+        "file": "./runtime-v06/armguard-left-4b24e7a18d02.webp",
+        "source": "./equipment/armguard-left.png",
+        "bytes": 27368,
+        "width": 166,
+        "height": 448,
+        "rgbaBytes": 297472
+      },
+      {
+        "file": "./runtime-v06/armguard-right-60a08d589bc2.webp",
+        "source": "./equipment/armguard-right.png",
+        "bytes": 25786,
+        "width": 160,
+        "height": 448,
+        "rgbaBytes": 286720
+      },
+      {
+        "file": "./runtime-v06/breastplate-4bcabe678718.webp",
+        "source": "./equipment/breastplate.png",
+        "bytes": 70406,
+        "width": 512,
+        "height": 468,
+        "rgbaBytes": 958464
+      }
+    ],
+    "mode": "mobile",
+    "canonical": {
+      "startupAssetBytes": 16607418,
+      "totalAssetBytes": 21407824,
+      "decodedSourceRGBABytes": 132125048
+    },
+    "prototypePassed": true,
+    "violations": [],
+    "productionTargetsPassed": true,
+    "physicalDeviceAccepted": false
+  },
+  "reproducedFiles": [
+    {
+      "file": "delivery-assets-v06.json",
+      "sha256": "12049c5388b1f5d283c2fbf746a7f6385b392665643421234ac2df8a64fdb0a1",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hair-back-v03-48fc1ccad2d9.webp",
+      "sha256": "48fc1ccad2d9550538addede4f070375d8c82f48fd9749ccc19672baf156f60d",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-back-a-v08-ff3ce1693557.webp",
+      "sha256": "ff3ce16935573b51ffada93ac02bb46fa7b39ba94adc4a67b43de2fe82966241",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/body-v02-0aee20d37fb8.webp",
+      "sha256": "0aee20d37fb81ce2c7ebc2274312f63078c2523a1eca43131e50e7e3b7ea4d40",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoes-v03-d6eedfc3f64c.webp",
+      "sha256": "d6eedfc3f64c7f17744c829361e0c1edf25da9c919a441d97deac3917d6832c8",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-front-a-v08-32d18a6857a5.webp",
+      "sha256": "32d18a6857a579ed295a149b2f455e4dee701ca16ce88ac15ac84c4325c85c6a",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hakama-v03-31a3b842735a.webp",
+      "sha256": "31a3b842735aec12f3cddcd238e5b9e7bc3a20f0143db751270f4de38411b424",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/obi-v03-a8a09b498d88.webp",
+      "sha256": "a8a09b498d8830bd3b2b12a875762ae871670716fec8c3ea36944df3cd7b6718",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hair-front-v03-73ddd4ebf2da.webp",
+      "sha256": "73ddd4ebf2da5f0a303701f9dd722f6832557b7d82574704632f310523831cbc",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-back-b-v08-20c95c11079d.webp",
+      "sha256": "20c95c11079d7ea4e68ebd02efe3469f38036ea13a4a3aecb81b3ec63356edb6",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/body-broad-v04-1a849cb922f0.webp",
+      "sha256": "1a849cb922f0fb55deb05cee1623ebf8e51d9e2afc6d1f9c6865eaf64d0898fa",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/kimono-front-b-v08-78eb9ad3ac90.webp",
+      "sha256": "78eb9ad3ac9002634110818c4ed26edc1bab3b0e68e78c7c99e2cdd052ea5d0a",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/hakama-broad-v04-f035cf3a7c54.webp",
+      "sha256": "f035cf3a7c54b27e69acf7b2c979170ad24a069faa5dec5e288a4467bdb6942c",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/chest-harness-back-70eeac41b6a2.webp",
+      "sha256": "70eeac41b6a29cf85c57de07fb11988c342a5536edf228785e8e1c8494481e2b",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/chest-harness-front-a910df75bba9.webp",
+      "sha256": "a910df75bba972edd152861f9170503574169d93bfa2a66052e8d2f8bd385b2e",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoulder-left-fc03b44048f0.webp",
+      "sha256": "fc03b44048f07a5f15a5edcf35e15565e1508bb2a0aef8ac41694b74b3d96fc1",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/shoulder-right-cec18341f17b.webp",
+      "sha256": "cec18341f17bba43744509ffce7510cb61dbe50c0f76123b7396caa85789ae56",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/wrist-wrap-left-d34ac9bc8dcb.webp",
+      "sha256": "d34ac9bc8dcb1dbfc2c3ac740857ee381c9e6dbaea973497925bd8a00c532516",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/wrist-wrap-right-05b252d16626.webp",
+      "sha256": "05b252d16626227e2768f93c559551606393a231971dad6f2c7ebba19505333c",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/armguard-left-4b24e7a18d02.webp",
+      "sha256": "4b24e7a18d02b80f43f7375610147aaeba828bf05891c258e61fffc66ba3b941",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/armguard-right-60a08d589bc2.webp",
+      "sha256": "60a08d589bc28bcf0c61dc27dbac3aa58303f243cd56d2bbafcfca8bfa464193",
+      "byteIdentical": true
+    },
+    {
+      "file": "runtime-v06/breastplate-4bcabe678718.webp",
+      "sha256": "4bcabe67871870283f344a7e5b7ce13c3ff3338729ecc6288141f3608cab696a",
+      "byteIdentical": true
+    }
+  ],
+  "visualComparisons": [
+    {
+      "archivedFile": "review-sleeve-fullset-a-v08.png",
+      "artifactPath": "artbook/fullset.png",
+      "sha256": "391403b953644089d5cb2d8d19c75cec596d1af42e15312e844930652ad09a05",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-fullset-b-v08.png",
+      "artifactPath": "artbook/form-b-fullset.png",
+      "sha256": "1b9894af6fe9f0d363fa0107d3bb6964f9f6b8ad4810ba2e4e970fb5392bb90c",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-surfaces-a-v08.png",
+      "artifactPath": "artbook/sleeve-layers-form-a.png",
+      "sha256": "b3e22d1563bf3b2ef823c05bbe9670f7fc34c9c3dc828458d85655c8e9c82f9c",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-surfaces-b-v08.png",
+      "artifactPath": "artbook/sleeve-layers-form-b.png",
+      "sha256": "a917ffff06851012ef8da9dc1e0c40d5c19f75fffb8a3f6ab792b39283cde0c7",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-garment-only-v08.png",
+      "artifactPath": "artbook/base-parts-8.png",
+      "sha256": "180f523a016f82a3527241431f42757eba1b84e4128c5d9fa67ce9254e2ad166",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-retina-mobile-v08.png",
+      "artifactPath": "artbook/retina-mobile.png",
+      "sha256": "01a70acacbae192537dbb884763e294273b7f490157c7795da54fa4efbf61a7a",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    },
+    {
+      "archivedFile": "review-sleeve-retina-original-v08.png",
+      "artifactPath": "artbook/retina-original.png",
+      "sha256": "ab58ed6bb02d95699697dce033f4c34c72deb0883c64fc563c12a56039db436b",
+      "unmodifiedBrowserScreenshot": true,
+      "visuallyInspected": true
+    }
+  ],
+  "garmentContract": {
+    "logicalId": "kimono",
+    "logicalChoices": 7,
+    "renderedBaseSurfaces": 8,
+    "requiredFragments": [
+      "kimono-back",
+      "kimono"
+    ],
+    "rearDepth": 180,
+    "bodyDepth": 200,
+    "frontDepth": 320,
+    "armOcclusionSurface": "kimono front only",
+    "incompleteGroupPolicy": "reject before partial figure",
+    "legacyV3": "validate and plan; matching explicit delivery mapping or original mode required; no silent source fallback",
+    "existingNativePNGsModified": false
+  },
+  "newNativePNGs": [
+    {
+      "file": "./layers/kimono-back-a-v08.png",
+      "sha256": "8f0859123166e654c6ff9551f81394191ccf1d2acf78d30152e2bb42cb6e78ba",
+      "sourceReference": {
+        "file": "./layers/kimono-v03.png",
+        "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434"
+      }
+    },
+    {
+      "file": "./layers/kimono-front-a-v08.png",
+      "sha256": "05fcd93e82eedb84d40cfe56f1dc0a88f3d9eb0ce20fdfd2ce7a41b92fec9f4e",
+      "sourceReference": {
+        "file": "./layers/kimono-v03.png",
+        "sha256": "115b7d192979ab137ff0481cb1aa03423afce3b235286f3af48758754708f434"
+      }
+    },
+    {
+      "file": "./layers/kimono-back-b-v08.png",
+      "sha256": "b098c9495af6e02a1bcb197479a9c0d6464d8f4b2b4bad9800fdb2d16a00ef35",
+      "sourceReference": {
+        "file": "./layers/kimono-broad-v04.png",
+        "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+      }
+    },
+    {
+      "file": "./layers/kimono-front-b-v08.png",
+      "sha256": "067f6fd60f31f31f04b68c79e90e03fce319efd43c4ee665346ca7f60a5aadd5",
+      "sourceReference": {
+        "file": "./layers/kimono-broad-v04.png",
+        "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+      }
+    }
+  ],
+  "deliveryBuild": {
+    "baseDimensions": [
+      848,
+      1272
+    ],
+    "rearSleeveMaxEdge": 512,
+    "quality": 0.98,
+    "maxAlphaErrorAgainstResampledSource": 0,
+    "maxVisibleColorRMSE": 8.118180106444186
+  },
+  "comparisonThresholds": {
+    "wholeFigureMAE": 3,
+    "faceMAE": 5,
+    "goldMAE": 5,
+    "highDifferenceChannelThreshold": 32,
+    "maxHighDifferencePixelFraction": 0.025,
+    "channelRange": [
+      0,
+      255
+    ]
+  },
+  "alphaThresholds": {
+    "frontForearmMaxExclusive": 32,
+    "bodyForearmMinExclusive": 240,
+    "isolatedGarmentRimMaxExclusive": 32,
+    "otherIsolatedPartsMaxExclusive": 20,
+    "note": "Faint resampled gold rim intersects one historical isolated garment point; scoped antialiasing tolerance, separate anatomy and quality tests unchanged."
+  },
+  "measurementLimits": [
+    "Two stand figures in one pose, not arbitrary anatomy, motion or universal depth inference.",
+    "New independently generated garment surfaces; original comparison uses these new sources, not identity to old single-surface artwork.",
+    "Alpha equality in the delivery build is to the resampled source, not the unscaled native PNG.",
+    "256 base and 64 reward states are separate suites, not exhaustive cartesian visual acceptance.",
+    "Source RGBA excludes DOM, strings, browser/GPU overhead; not measured peak memory.",
+    "390px at 3x is CI emulation; no physical phone/VoiceOver acceptance.",
+    "Scene scripting timing excludes paint and is not device frame-rate evidence.",
+    "Legacy previousEagerStartupBytes/startupBytesAvoided reconstruct eager loading using current canonical inventory plus reference bundle; not observed historic network traffic."
+  ],
+  "remaining": [
+    "Stage 2 headwear/hair depth using a verified existing artbook identity.",
+    "Stage 3 live inventory/outfit/data/offline integration with preserved old choices and rollback.",
+    "Further 90 reward artworks; physical phone/GPU/peak-memory/PWA acceptance and reviewed release."
+  ],
+  "provenance": "Four separate image-generated garment/sleeve PNGs; archived original sources unchanged. Reproducible software delivery build and unmodified CI screenshots; no personal data. Follow-up contains evidence, documentation and registration annotations only; tested runtime and geometry unchanged."
+}

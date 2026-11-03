@@ -117,14 +117,17 @@ function graphicBlueprint(view=data.profile,d=today(),small=false,previewId=null
    ${previewText}
  </div>`;
 }
-function graphic(view=data.profile,d=today(),small=false,previewId=null){
- // Visual-only composition: only resolved and currently wearable equipment enters the renderer.
- // Preview can show locked rewards, but never mutates inventory or unlocks.
- const gear={};
- for(const slot of SLOTS){const item=resolveSlot(slot,view,d);if(item)gear[slot]=item}
- const preview=previewId?itemForId(previewId,view):null;
- const pet=currentPet(view,d);
- const petName=PETS[pet]?.[view.lang==='en'?'en':'de']||pet;
+function profileForDate(d){
+ if(d===today())return data.profile;
+ if(window.KONPASU_OUTFIT25?.dateValid(d)&&d<today()){
+  const records=(data.avatarHistory||[]).map((r,index)=>({r,index})).filter(x=>window.KONPASU_OUTFIT25.dateValid(x.r.date)&&x.r.date<=d&&x.r.profile&&typeof x.r.profile==='object');
+  records.sort((a,b)=>(b.r.date+String(b.r.savedAt)).localeCompare(a.r.date+String(a.r.savedAt))||b.index-a.index);
+  if(records.length)return records[0].r.profile;
+ }
+ return {...createState().profile,lang:data.profile.lang};
+}
+showProfileForDate=profileForDate;
+function seriesFor(view,d){
  const selection=view.avatar2d?.streakSelection;
  const streakGoal=selection&&getGoal(selection.goalId);
  let series=null;
@@ -136,19 +139,35 @@ function graphic(view=data.profile,d=today(),small=false,previewId=null){
    if(family)series=`series/${family}-${selection.level}`;
   }
  }
- const result=window.KONPASU_COMPOSER_V24?.render({
-  profile:view,gear,preview,pet,petName,petStage:companionStage(view,d),
+ return series;
+}
+function graphic(view=data.profile,d=today(),small=false,previewId=null){
+ if(d!==today()&&view===data.profile)view=profileForDate(d);
+ // Visual-only composition: only resolved and currently wearable equipment enters the renderer.
+ // Preview can show locked rewards, but never mutates inventory or unlocks.
+ const gear={};
+ for(const slot of SLOTS){const item=resolveSlot(slot,view,d);if(item)gear[slot]=item}
+ const preview=previewId?itemForId(previewId,view):null;
+ const pet=currentPet(view,d);
+ const petName=PETS[pet]?.[view.lang==='en'?'en':'de']||pet;
+ const series=seriesFor(view,d);
+ const display=window.KONPASU_OUTFIT_DISPLAY25?.resolve(view,{date:d,bindings:{slots:SLOTS,itemForId,itemState}});
+ const composition={
+  profile:{...view,lang:data.profile.lang},gear,...(display?.mode==='multi'?{multi:display.items}:{}),preview,pet,petName,petStage:companionStage(view,d),
   rank:currentRankAt(d).name,scale:sizeScale(view),small,series
- });
- return result||graphicBlueprint(view,d,small,previewId);
+ };
+ let result=window.KONPASU_COMPOSER_V24?.render(composition),artFallback=false;
+ if(!result&&display?.mode==='multi'){artFallback=true;result=window.KONPASU_COMPOSER_V24?.render({...composition,multi:[],gear:{},preview:null});if(result)result=result.replace('data-kp25-mode="multi"','data-kp25-mode="fallback"')}
+ const fallback=(result||graphicBlueprint(view,d,small,previewId))+((artFallback||display?.notices.some(n=>n!=='legacy-selection-active'))&&!small?`<p class="kp25-main-note" role="status">${tr('Einige vorgemerkte Teile sind noch nicht darstellbar oder derzeit nicht tragbar. Deine Auswahl bleibt gespeichert.','Some remembered items cannot be shown or are currently unavailable. Your selection stays saved.')}</p>`:'');
+ return window.KONPASU_ARTBOOK_MAIN25?.markup({view:{...view,lang:data.profile.lang},date:d,small,preview,scale:sizeScale(view),rank:currentRankAt(d).name,current:view===data.profile},fallback)||fallback;
 }
 
 function blueprintModulePanel(){
  return `<section class="kp2d-blueprint-panel"><div class="kp2d-blueprint-head"><div><h3>${tr('Avatar-Blueprint','Avatar blueprint')}</h3><p class="hint">${tr('Der Avatar basiert nun direkt auf deinem neuen Anime-Blueprint. Die Tafeln unten dienen als visuelle Referenz für Haare, Mimik, Kleidungs- und Belohnungsmodule.','The avatar now directly uses your new anime blueprint. The boards below serve as the visual reference for hair, expressions, clothing and reward modules.')}</p></div><a class="kp2d-blueprint-link" href="${BLUEPRINT.full}" target="_blank" rel="noopener">${tr('Ganzes Blueprint öffnen','Open full blueprint')}</a></div><div class="kp2d-blueprint-grid"><figure><img src="${BLUEPRINT.heads}" alt="${tr('Frisurenmodule','Hairstyle modules')}" loading="lazy"><figcaption>${tr('Frisuren & Silhouetten','Hairstyles & silhouettes')}</figcaption></figure><figure><img src="${BLUEPRINT.expressions}" alt="${tr('Mimikmodule','Expression modules')}" loading="lazy"><figcaption>${tr('Mimik & Gesichter','Expressions & faces')}</figcaption></figure><figure class="wide"><img src="${BLUEPRINT.board}" alt="${tr('Belohnungsmodule','Reward modules')}" loading="lazy"><figcaption>${tr('Ausrüstungs- und Belohnungsmodule','Equipment & reward modules')}</figcaption></figure><figure><img src="${BLUEPRINT.companion}" alt="${tr('Begleitermodule','Companion modules')}" loading="lazy"><figcaption>${tr('Begleiter-Entwicklung','Companion evolution')}</figcaption></figure><figure><img src="${BLUEPRINT.backgrounds}" alt="${tr('Hintergrundmodule','Background modules')}" loading="lazy"><figcaption>${tr('Hintergründe','Backgrounds')}</figcaption></figure><figure><img src="${BLUEPRINT.auras}" alt="${tr('Auramodule','Aura modules')}" loading="lazy"><figcaption>${tr('Auren & Effekte','Auras & effects')}</figcaption></figure></div></section>`;
 }
-function configurator(){const p=data.profile,v=p.avatar2d;
- return `<div class="kp2d-controls"><h3>${tr('Charakter gestalten','Customize character')}</h3><div class="kp2d-ctrl-grid">
- <label>${tr('Darstellung','Appearance')}<select data-kp2d-select="gender"><option value="neutral" ${p.gender==='neutral'?'selected':''}>${tr('Androgyn / individuell','Androgynous / custom')}</option><option value="masculine" ${p.gender==='masculine'?'selected':''}>${tr('Männlich','Masculine')}</option><option value="feminine" ${p.gender==='feminine'?'selected':''}>${tr('Weiblich','Feminine')}</option></select></label>
+function configurator(){const p=data.profile,v=p.avatar2d,artbook=window.KONPASU_APPEARANCE25?.status(p,today()).renderer==='artbook';
+ return `<div class="kp2d-controls"><h3>${tr('Charakter gestalten','Customize character')}</h3>${artbook?`<p class="hint">${tr('Artbook-Körperform und persönliche Einstellungen mit Rücknahme findest du im Mehrfacheditor.','Choose the Artbook body form and save personal settings with recovery in the multi-item editor.')}</p><button type="button" class="kp2d-button secondary" data-outfit-action="open">${tr('Artbook gestalten','Customize Artbook avatar')}</button>`:''}<div class="kp2d-ctrl-grid">
+ <label>${artbook?tr('Darstellung (bisheriger Avatar)','Appearance (previous avatar)'):tr('Darstellung','Appearance')}<select data-kp2d-select="gender"><option value="neutral" ${p.gender==='neutral'?'selected':''}>${tr('Androgyn / individuell','Androgynous / custom')}</option><option value="masculine" ${p.gender==='masculine'?'selected':''}>${tr('Männlich','Masculine')}</option><option value="feminine" ${p.gender==='feminine'?'selected':''}>${tr('Weiblich','Feminine')}</option></select></label>
  <label>${tr('Frisur','Hairstyle')}<select data-kp2d-select="hairStyle">${[['swept','Kurz / gestuft','Short'],['long','Lang','Long'],['tied','Gebunden','Tied']].map(([k,de,en])=>`<option value="${k}" ${v.hairStyle===k?'selected':''}>${tr(de,en)}</option>`).join('')}</select></label>
  <label>${tr('Haarfarbe','Hair colour')}<select data-kp2d-select="hairColor">${[['black','Schwarz','Black'],['brown','Braun','Brown'],['silver','Silber','Silver']].map(([k,de,en])=>`<option value="${k}" ${v.hairColor===k?'selected':''}>${tr(de,en)}</option>`).join('')}</select></label>
  <label>${tr('Mimik','Expression')}<select data-kp2d-select="expression">${[['calm','Ruhig','Calm'],['happy','Freundlich','Happy'],['focused','Fokussiert','Focused']].map(([k,de,en])=>`<option value="${k}" ${v.expression===k?'selected':''}>${tr(de,en)}</option>`).join('')}</select></label>
@@ -157,7 +176,7 @@ function configurator(){const p=data.profile,v=p.avatar2d;
  </div>${blueprintModulePanel()}<h4>${tr('Szene','Scene')}</h4>${KPBackgroundControls(v)}<p class="hint">${tr('Körpermaße kannst du wie bisher im Charakterprofil hinterlegen. Die 2D-Figur passt ihre Proportionen nur leicht und stilisiert an.','Body measurements can still be entered in your profile. The 2D avatar adjusts proportions only slightly and in a stylized way.')}</p>${mkButton('Körpermaße bearbeiten','Edit body measurements','old-editor','','kp2d-button secondary')}</div>`;
 }
 function rewardStatus(item,state){
- const worn=resolveSlot(item.slot)?.id===item.id;
+ const multi=data.profile.outfit25;const worn=multi&&multi.enabled!==false&&multi.version===1?multi.items.some(i=>i.itemId===item.id&&i.artworkId===item.family+'-'+item.tier&&i.visible)&&state.owned&&state.allowed:resolveSlot(item.slot)?.id===item.id;
  return {key:worn?'equipped':state.allowed?'available':state.owned?'resting':'locked',
   label:worn?tr('Angelegt','Equipped'):state.allowed?tr('Tragbar','Available'):state.owned?tr('Ruht','Resting'):tr('Noch gesperrt','Locked')};
 }
@@ -240,6 +259,11 @@ function slotOverview(slot){
  return {slot,requested,remembered,visible,state,reason};
 }
 function equipment(){
+ const model=window.KONPASU_OUTFIT_DISPLAY25?.resolve(data.profile,{date:today(),bindings:{slots:SLOTS,itemForId,itemState}});
+ if(model?.mode==='multi'){
+  const items=data.profile.outfit25.items,active=new Map(model.items.map(i=>[i.id,i])),off=data.profile.avatar2d.effects==='none';
+  return `<section class="kp-rewards kp-equipment"><h3>${tr('Dein gespeichertes Mehrfachoutfit','Your saved multi-item outfit')}</h3><p>${tr('Alle Artikel bleiben einzeln ausgewählt. Deckende Flächen können sich natürlich überlagern.','All items remain independently selected. Opaque surfaces can naturally overlap.')}</p><div class="kp-slot-grid">${items.map(i=>{const actual=itemForId(i.itemId),shown=active.has(i.itemId)&&!(off&&['aura','effects'].includes(actual?.slot));return `<article class="kp-slot-card" data-equipment-item="${esc(i.itemId)}"><h4>${esc(actual?.title||i.itemId)}</h4><p>${esc(i.itemId)} · ${shown?tr('Aktiv','Active'):!i.visible?tr('Ausgeblendet','Hidden'):tr('Vorgemerkt · derzeit nicht sichtbar','Remembered · not visible now')}</p></article>`}).join('')||`<p>${tr('Nur Grundausstattung ausgewählt.','Starter setup only.')}</p>`}</div><button type="button" class="kp-reward-button primary" data-outfit-action="open">${tr('Mehrfachoutfit bearbeiten','Edit multi-item outfit')}</button></section>`;
+ }
  const rows=SLOTS.map(slotOverview),count=rows.filter(row=>row.visible).length,pending=rows.filter(row=>row.remembered&&(!row.requested||row.requested.id!==row.visible?.id)).length;
  const labels={base:tr('Grundausstattung','Starter setup'),equipped:tr('Aktiv','Active'),replacement:tr('Ersatz sichtbar','Replacement visible'),resting:tr('Ruht','Resting'),unavailable:tr('Vorgemerkt','Remembered'),hidden:tr('Ausgeblendet','Hidden')};
  const defaults={background:tr('Deine gewählte Szene','Your selected scene'),body:tr('Deine Körperdarstellung','Your body appearance'),hair:tr('Deine Frisur','Your hairstyle'),face:tr('Deine Mimik','Your expression'),upper:tr('Dein Grundgewand','Your starter garment'),lower:tr('Grundausstattung','Starter equipment'),feet:tr('Grundschuhe','Starter footwear'),obi:tr('Grundgürtel','Starter belt'),mantle:tr('Dein Grundmantel','Your starter mantle'),arm:tr('Grundärmel','Starter sleeves'),head:tr('Kein zusätzliches Kopfteil','No extra headpiece'),main:tr('Kein Hauptaccessoire','No main accessory'),secondary:tr('Kein Nebenaccessoire','No secondary accessory'),aura:tr('Keine sichtbare Aura','No visible aura'),effects:tr('Kein sichtbarer Zusatzeffekt','No visible extra effect'),companion:tr(PETS[currentPet()].de,PETS[currentPet()].en)};
@@ -267,7 +291,7 @@ function favoriteAt(raw){
  return favorite&&typeof favorite==='object'?{index,favorite}:null;
 }
 function favoriteView(favorite){
- return {...data.profile,equipped:{},accent:favorite.accent||data.profile.accent,avatar2d:{...data.profile.avatar2d,slots:{...favorite.slots},scene:favorite.scene||data.profile.avatar2d.scene,pet:favorite.pet||data.profile.avatar2d.pet}};
+ return {...(window.KONPASU_OUTFIT_DISPLAY25?.favoriteProfile(data.profile,favorite)||data.profile),equipped:{},accent:favorite.accent||data.profile.accent,avatar2d:{...data.profile.avatar2d,slots:{...favorite.slots},scene:favorite.scene||data.profile.avatar2d.scene,pet:favorite.pet||data.profile.avatar2d.pet}};
 }
 function outfitSelection(){
  const slots={...data.profile.avatar2d.slots};
@@ -278,13 +302,15 @@ function outfitSelection(){
 }
 function outfits(){
  const favorites=data.profile.avatar2d.favorites;
- return `<section class="kp-rewards kp-outfits"><header class="kp-reward-header"><div><span class="kp-reward-eyebrow">${tr('DEIN STIL BLEIBT DEINER','YOUR STYLE STAYS YOURS')}</span><h3>${tr('Deine Lieblings-Outfits','Your favorite outfits')}</h3><p>${tr('Bewahre Ausrüstung, Gewandfarbe, Szene und Begleiter. Die Vorschau zeigt, was heute tatsächlich getragen werden kann.','Keep equipment, garment colour, scene and companion. The preview shows what can actually be worn today.')}</p></div><dl class="kp-reward-counts"><div><dt>${tr('Gespeicherte Looks','Saved looks')}</dt><dd>${favorites.length}</dd></div></dl></header><div class="kp-outfit-tools">${mkButton('Aktuellen Look speichern','Save current look','save-favorite','','kp-reward-button primary')}${mkButton('Beste verfügbare Ausrüstung','Best available equipment','best','','kp-reward-button secondary')}${mkButton('Grundausstattung anlegen','Use starter outfit','clear','','kp-reward-button secondary')}</div>
+ return `${window.KONPASU_OUTFIT_EDITOR25?.launcher()||''}<section class="kp-rewards kp-outfits"><header class="kp-reward-header"><div><span class="kp-reward-eyebrow">${tr('DEIN STIL BLEIBT DEINER','YOUR STYLE STAYS YOURS')}</span><h3>${tr('Deine Lieblings-Outfits','Your favorite outfits')}</h3><p>${tr('Bewahre Ausrüstung, Gewandfarbe, Szene und Begleiter. Die Vorschau zeigt, was heute tatsächlich getragen werden kann.','Keep equipment, garment colour, scene and companion. The preview shows what can actually be worn today.')}</p></div><dl class="kp-reward-counts"><div><dt>${tr('Gespeicherte Looks','Saved looks')}</dt><dd>${favorites.length}</dd></div></dl></header><div class="kp-outfit-tools">${mkButton('Aktuellen Look speichern','Save current look','save-favorite','','kp-reward-button primary')}${mkButton('Beste verfügbare Ausrüstung','Best available equipment','best','','kp-reward-button secondary')}${mkButton('Grundausstattung anlegen','Use starter outfit','clear','','kp-reward-button secondary')}</div>
  <div class="kp-outfit-grid">${favorites.map((favorite,i)=>{
  if(!favorite||typeof favorite!=='object')return '';
- const view=favoriteView(favorite),entries=Object.entries(view.avatar2d.slots).filter(([,id])=>id);
- const wearable=entries.filter(([slot,id])=>{const item=itemForId(id,view);return item?.slot===slot&&itemState(item).allowed}).length;
- const visible=currentPet(view),selected=Object.keys(data.profile.equipped||{}).length===0&&same(Object.entries(data.profile.avatar2d.slots).sort(),Object.entries(view.avatar2d.slots).sort())&&view.accent===data.profile.accent&&view.avatar2d.scene===data.profile.avatar2d.scene&&view.avatar2d.pet===data.profile.avatar2d.pet;
- return `<article class="kp-outfit-card" data-outfit-index="${i}"><div class="kp-outfit-figure">${graphic(view,today(),true)}</div><div class="kp-reward-content"><span class="kp-reward-state">${selected?tr('Aktuelle Auswahl','Current selection'):tr('Gespeicherter Look','Saved look')}</span><h4>${esc(favorite.name||`Outfit ${i+1}`)}</h4><p class="kp-reward-goal">${entries.length} ${tr('gespeicherte Teile','saved parts')} · ${wearable} ${tr('davon tragbar','of them wearable')}</p>${wearable<entries.length?`<p class="kp-outfit-note">${entries.length-wearable} ${tr('vorgemerkt – passende Ersatzteile können sichtbar sein.','remembered – suitable fallback parts may be visible.')}</p>`:''}<p class="kp-reward-goal">${tr('Sichtbarer Begleiter:','Visible companion:')} ${esc(tr(PETS[visible].de,PETS[visible].en))}</p><div class="kp-reward-actions">${mkButton('Anziehen','Wear','use-favorite',`data-index="${i}"`,'kp-reward-button primary')}${mkButton('Umbenennen','Rename','rename-favorite',`data-index="${i}"`,'kp-reward-button secondary')}${mkButton('Löschen','Delete','del-favorite',`data-index="${i}"`,'kp-reward-button secondary')}</div></div></article>`;
+ const view=favoriteView(favorite),entries=favorite.outfit25?.version===1?favorite.outfit25.items.map(i=>[itemForId(i.itemId,view)?.slot||'unknown',i.itemId]):Object.entries(view.avatar2d.slots).filter(([,id])=>id);
+ const multiModel=favorite.outfit25?.version===1?window.KONPASU_OUTFIT_PERSIST25.resolved(view,{date:today(),bindings:{slots:SLOTS,itemForId,itemState}}):null;
+ const wearable=multiModel?multiModel.items.filter(i=>i.evidence.owned===true&&i.evidence.allowed===true).length:entries.filter(([slot,id])=>{const item=itemForId(id,view);return item?.slot===slot&&itemState(item).allowed}).length;
+ const multiMatches=favorite.outfit25?same([favorite.outfit25.body,favorite.outfit25.items],[data.profile.outfit25?.body,data.profile.outfit25?.items])&&data.profile.outfit25?.enabled!==false:!data.profile.outfit25||data.profile.outfit25.enabled===false;
+ const visible=currentPet(view),selected=multiMatches&&Object.keys(data.profile.equipped||{}).length===0&&same(Object.entries(data.profile.avatar2d.slots).sort(),Object.entries(view.avatar2d.slots).sort())&&view.accent===data.profile.accent&&view.avatar2d.scene===data.profile.avatar2d.scene&&view.avatar2d.pet===data.profile.avatar2d.pet;
+ return `<article class="kp-outfit-card" data-outfit-index="${i}"><div class="kp-outfit-figure">${graphic(view,today(),true)}</div><div class="kp-reward-content"><span class="kp-reward-state">${selected?tr('Aktuelle Auswahl','Current selection'):tr('Gespeicherter Look','Saved look')}</span><h4>${esc(favorite.name||`Outfit ${i+1}`)}</h4><p class="kp-reward-goal">${entries.length} ${tr('gespeicherte Teile','saved parts')} · ${wearable} ${tr('davon tragbar','of them wearable')}</p>${wearable<entries.length?`<p class="kp-outfit-note">${entries.length-wearable} ${multiModel?tr('vorgemerkt – gespeicherte Auswahl bleibt erhalten.','remembered – saved selection is retained.'):tr('vorgemerkt – passende Ersatzteile können sichtbar sein.','remembered – suitable fallback parts may be visible.')}</p>`:''}<p class="kp-reward-goal">${tr('Sichtbarer Begleiter:','Visible companion:')} ${esc(tr(PETS[visible].de,PETS[visible].en))}</p><div class="kp-reward-actions">${mkButton('Anziehen','Wear','use-favorite',`data-index="${i}"`,'kp-reward-button primary')}${mkButton('Umbenennen','Rename','rename-favorite',`data-index="${i}"`,'kp-reward-button secondary')}${mkButton('Löschen','Delete','del-favorite',`data-index="${i}"`,'kp-reward-button secondary')}</div></div></article>`;
  }).join('')||`<div class="kp-reward-empty"><h4>${tr('Platz für deinen ersten Lieblingslook.','Room for your first favorite look.')}</h4><p>${tr('Speichere deine aktuelle Auswahl. Ruhende Teile bleiben vorgemerkt; es wird nichts freigeschaltet.','Save your current selection. Resting parts stay remembered; nothing is unlocked.')}</p></div>`}</div><p class="kp-reward-footnote">${tr('Die Vorschau verändert keine Daten. Erst Anziehen übernimmt den Look; Löschen entfernt nur dieses Outfit nach Bestätigung.','Preview changes no data. Wear applies the look; Delete removes only that outfit after confirmation.')}</p></section>`;
 }
 function safeAwardDate(raw){
@@ -321,7 +347,7 @@ return `<h3>${tr('Echte Erfolgsserien','Verified streak rewards')}</h3><p class=
 function rankAndHistory(){const d=historicalDate||historyDate||today(),rank=currentRankAt(d),html=`<div class="kp2d-history"><label>${tr('Zeitpunkt auswählen','Choose date')} <input id="kp2d-history-date" type="date" max="${today()}" value="${esc(d)}"></label><b>${esc(rank.name)}</b><p class="hint">${tr('Historische Werte beruhen auf damals dokumentierten Wochen und gespeicherten Profiländerungen. Nachträge können die berechnete Historie verändern.','Historic results use the weeks recorded for that period and saved avatar changes. Late entries may alter calculated history.')}</p><div class="kp2d-history-buttons">${(Array.from(new Map((data.avatarHistory||[]).slice().reverse().map(x=>[x.date,x])).values())).filter(x=>x.date!==today()).slice(0,12).map(x=>mkButton(formatDate(x.date),formatDate(x.date),'jump',`data-value="${esc(x.date)}"`,'kp2d-option')).join('')}</div>${mkButton('Heute anzeigen','Show today','jump',`data-value="${today()}"`,'kp2d-button secondary')}</div>`;
  return html;
 }
-function studio(){ensure();const date=historicalDate||historyDate||today(),history=(data.avatarHistory||[]).filter(h=>h.date<=date).sort((a,b)=>(b.date+b.savedAt).localeCompare(a.date+a.savedAt)),view=date===today()?data.profile:history[0]?.profile||createState().profile,rank=currentRankAt(date);
+function studio(){ensure();const date=historicalDate||historyDate||today(),view=profileForDate(date),rank=currentRankAt(date);
  const tabs=[['wardrobe','Inventar','Inventory'],['equipment','Ausrüstung','Equipment'],['artbook','Artbook','Artbook'],['customize','Gestaltung','Customize'],['pets','Begleiter','Companions'],['outfits','Outfits','Outfits'],['series','Serien','Streaks'],['trophy','Ruhmeshalle','Hall of fame'],['history','Zeitreise','Time travel']];
  return `<div class="kp2d-studio"><div class="kp2d-feature"><div><span>✦ KONPASU · BOTANICAL ZEN</span><strong>${tr('Dein Weg zur Legende','Your path to legend')}</strong><p>${tr('Eine Reise aus kleinen Erfolgen. Der Avatar folgt jetzt deinem hochwertigen Anime-Blueprint.','A journey built on small victories. The avatar now follows your premium anime blueprint.')}</p></div><img src="${BLUEPRINT.full}" alt="" loading="lazy"></div><div class="kp2d-hero"><div class="kp2d-scene">${graphic(view,date,false,studioTab==='wardrobe'&&date===today()?tryOnItemId:null)}${tryOnItemId&&studioTab==='wardrobe'&&date===today()?`<div class="kp2d-try-on-ribbon">${tr('Vorschau · nicht angelegt','Preview · not equipped')}</div>`:''}</div><div class="kp2d-hero-data"><span class="kp2d-eyebrow">✦ KONPASU · SAMURAI-ATELIER</span><h2>${esc(rank.name)}</h2><p>${tr('Blueprint-inspirierter Anime-Samurai','Blueprint-inspired anime samurai')}</p><div class="kp2d-metrics"><span>${rank.successful??0} ${tr('Erfolgswochen','successful weeks')}</span><span>${(data.awards||[]).length} ${tr('Embleme','badges')}</span></div><p class="kp2d-note">${tr('Jeder Avatar besitzt dauerhaft eine vollständige Grundausstattung.','Every avatar always retains a complete starter outfit.')}</p></div></div>
  <nav class="kp2d-studio-nav" aria-label="${tr('Charakterbereiche','Character sections')}">${tabs.map(([k,de,en])=>mkButton(de,en,'tab',`data-value="${k}" aria-pressed="${studioTab===k}"`,'kp2d-tab '+(studioTab===k?'current':''))).join('')}</div>
@@ -359,7 +385,9 @@ document.addEventListener('click',function(e){const b=e.target.closest('[data-kp
  if(action==='scene'){v.scene=value;recordProfile();return}
  if(action==='equip'){
   tryOnItemId=null;
-  const item=itemForId(b.dataset.id);if(!item||!itemState(item).allowed){notify(tr('Noch nicht tragbar','Not yet available'));return}
+  const item=itemForId(b.dataset.id);if(!item||!itemState(item).owned||!itemState(item).allowed){notify(tr('Noch nicht tragbar','Not yet available'));return}
+  try{if(window.KONPASU_OUTFIT_DISPLAY25?.toggle(profile,item,{date:today(),savedAt:new Date().toISOString(),operationId:uid()})){outfitMutationSerial25++;recordProfile();return}}catch{notify(tr('Diese Auswahl konnte nicht übernommen werden. Dein Look bleibt erhalten.','This selection could not be applied. Your look is retained.'));return}
+  if(window.KONPASU_OUTFIT_DISPLAY25?.pause(profile))outfitMutationSerial25++;
   if(resolveSlot(item.slot)?.id===item.id)delete v.slots[item.slot];else v.slots[item.slot]=item.id;
   // preserve legacy equips only if the selected legacy item conflicts with this slot
   for(const k of Object.keys(profile.equipped||{})){const legacy=itemForId(`${k}-${profile.equipped[k]}`);if(legacy?.slot===item.slot)delete profile.equipped[k]}
@@ -375,11 +403,12 @@ document.addEventListener('click',function(e){const b=e.target.closest('[data-kp
  if(action==='save-favorite'){
   const name=prompt(tr('Name für das Outfit','Outfit name'),tr('Mein Lieblingslook','My favorite look'));
   if(name===null)return;if(!name.trim())return notify(tr('Bitte einen Namen eingeben','Please enter a name'));
-  v.favorites.push({id:uid(),name:name.trim().slice(0,60),slots:outfitSelection(),accent:profile.accent,scene:v.scene,pet:v.pet});recordProfile();return;
+  v.favorites.push({...(profile.outfit25?.enabled!==false&&profile.outfit25?{outfit25:JSON.parse(JSON.stringify(profile.outfit25))}:{}),id:uid(),name:name.trim().slice(0,60),slots:outfitSelection(),accent:profile.accent,scene:v.scene,pet:v.pet});recordProfile();return;
  }
  if(action==='use-favorite'){
   const entry=favoriteAt(b.dataset.index);if(!entry)return;const fav=entry.favorite;
-  tryOnItemId=null;v.slots={...fav.slots};profile.equipped={};profile.accent=fav.accent||profile.accent;v.scene=fav.scene||v.scene;v.pet=fav.pet||v.pet;profile.companion=v.pet;recordProfile();return;
+  if(fav.outfit25){try{if(!window.KONPASU_OUTFIT_PERSIST25.selection(fav.outfit25).supported||profile.outfit25&&!window.KONPASU_OUTFIT_PERSIST25.selection(profile.outfit25).supported)throw Error('unsupported-outfit')}catch{notify(tr('Dieser Mehrfachlook benötigt eine neuere App-Version. Deine Auswahl bleibt erhalten.','This multi-item look needs a newer app version. Your selection is retained.'));return}}
+  tryOnItemId=null;if(fav.outfit25){profile.outfit25=JSON.parse(JSON.stringify(fav.outfit25));profile.outfit25.enabled=true;outfitMutationSerial25++}else if(window.KONPASU_OUTFIT_DISPLAY25?.pause(profile))outfitMutationSerial25++;v.slots={...fav.slots};profile.equipped={};profile.accent=fav.accent||profile.accent;v.scene=fav.scene||v.scene;v.pet=fav.pet||v.pet;profile.companion=v.pet;recordProfile();return;
  }
  if(action==='rename-favorite'){
   const entry=favoriteAt(b.dataset.index);if(!entry)return;
@@ -392,9 +421,9 @@ document.addEventListener('click',function(e){const b=e.target.closest('[data-kp
   if(!confirm(tr('Outfit wirklich entfernen?','Delete this outfit?')))return;
   v.favorites.splice(entry.index,1);recordProfile();return;
  }
- if(action==='clear'){tryOnItemId=null;v.slots={};v.streakSelection=null;profile.equipped={};recordProfile();return}
+ if(action==='clear'){if(window.KONPASU_OUTFIT_DISPLAY25?.pause(profile))outfitMutationSerial25++;tryOnItemId=null;v.slots={};v.streakSelection=null;profile.equipped={};recordProfile();return}
  if(action==='best'){
-  tryOnItemId=null;
+  if(window.KONPASU_OUTFIT_DISPLAY25?.pause(profile))outfitMutationSerial25++;tryOnItemId=null;
   // Recompute entirely from items that remain eligible; do not preserve stale locked gear.
   const next={};
   for(const goal of data.goals.filter(g=>g.active))for(let i=1;i<=5;i++){
@@ -422,5 +451,5 @@ document.addEventListener('change',function(e){const el=e.target;if(!el.matches(
 },true);
 ensure();
 // Do not force a write on boot; a pre-existing profile is migrated in memory and saved at next edit.
-window.KONPASU2D={ITEMS,SLOTS,itemForId,itemState,resolveSlot,graphic,companionStage,currentPet,ensure};
+window.KONPASU2D={ITEMS,SLOTS,itemForId,itemState,resolveSlot,graphic,companionStage,currentPet,ensure,seriesFor};
 })();

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "Existing real app reward/calendar APIs verify two synthetic custom goals from four completed weekly measurements; no reward API stubs",
+    "Real IndexedDB save changes only outfit/recovery fields; stable custom IDs, shared artwork, body/order/visibility and legacy data retained",
+    "Reload through normal app initialization restores exact selection and recovery from real IndexedDB without seeding or migrating old fields",
+    "Actual JSON backup button exports new outfit/recovery and original application data",
+    "Actual backup import rejects damaged outfit structure before replacing any state",
+    "Confirmed actual backup import preserves new fields and unrelated synthetic records",
+    "Stale draft profile is rejected without modifying memory/disk or locking valid storage",
+    "Unowned catalogue try-on cannot be saved using the real reward evidence",
+    "Ordinary snapshot queued before outfit commit is rebased only for owned fields and cannot erase saved outfit",
+    "Fresh offline page loads via real worker, reopens draft, saves, reloads and durably rolls back using real IndexedDB",
+    "Real IndexedDB revision CAS rejects stale tab; winner remains on disk and failed outfit change rolls back in loser memory",
+    "Durable field-scoped rollback after later notes/checks preserves all later unrelated data and consumes exactly one recovery step",
+    "Actual IndexedDB put failure aborts transaction, rolls back outfit memory and leaves original disk state unchanged"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Random loopback origin and fresh browser context: never uses a deployed app or personal browser profile.",
+    "Backend/API contract only: existing legacy avatar renderer remains active; editor-to-profile UI integration is next.",
+    "Real Chromium IndexedDB/worker/offline checks are not physical iPhone/VoiceOver/old-installed-PWA acceptance."
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.3",
+  "testedSourceCommit": "b6e0d96c0d331360ab77a4a15e0ada309af9bfcb",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/7",
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "deployment": false,
+  "scope": "Additive persistent outfit backend/API using existing app queue and storage; editor/renderer UI integration follows separately.",
+  "candidateVersion": "2.4.1-preview.1",
+  "candidateCache": "konpasu-offline-v241-outfit-preview1",
+  "node": {
+    "status": "passed",
+    "total": 350,
+    "newTests": 26,
+    "workflowRun": 41619181636
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "atelierGroups": 26,
+    "workflowRun": 41619181636
+  },
+  "sessionEditor": {
+    "status": "passed",
+    "browserGroups": 16,
+    "workflowRun": 41619181657
+  },
+  "storageBrowser": {
+    "status": "passed",
+    "groups": 13,
+    "workflowRun": 41619181638,
+    "artifactId": 13222911271,
+    "checks": [
+      "Existing real app reward/calendar APIs verify two synthetic custom goals from four completed weekly measurements; no reward API stubs",
+      "Real IndexedDB save changes only outfit/recovery fields; stable custom IDs, shared artwork, body/order/visibility and legacy data retained",
+      "Reload through normal app initialization restores exact selection and recovery from real IndexedDB without seeding or migrating old fields",
+      "Actual JSON backup button exports new outfit/recovery and original application data",
+      "Actual backup import rejects damaged outfit structure before replacing any state",
+      "Confirmed actual backup import preserves new fields and unrelated synthetic records",
+      "Stale draft profile is rejected without modifying memory/disk or locking valid storage",
+      "Unowned catalogue try-on cannot be saved using the real reward evidence",
+      "Ordinary snapshot queued before outfit commit is rebased only for owned fields and cannot erase saved outfit",
+      "Fresh offline page loads via real worker, reopens draft, saves, reloads and durably rolls back using real IndexedDB",
+      "Real IndexedDB revision CAS rejects stale tab; winner remains on disk and failed outfit change rolls back in loser memory",
+      "Durable field-scoped rollback after later notes/checks preserves all later unrelated data and consumes exactly one recovery step",
+      "Actual IndexedDB put failure aborts transaction, rolls back outfit memory and leaves original disk state unchanged"
+    ],
+    "pageErrors": []
+  },
+  "screenshots": [
+    {
+      "path": "design/avatar/review-outfit-storage-v01/persisted-after-reload.png",
+      "bytes": 83381,
+      "sha256": "aa5dc0e8f2f176e0c99e5f5de362166278f9e1184a02c9404a7c635c60054d08",
+      "visuallyInspected": true
+    }
+  ],
+  "allowedDataChanges": [
+    "/profile/outfit25",
+    "/outfitRecovery25"
+  ],
+  "storageRules": [
+    "No auto-seeding/migration of old profiles or silent rewriting of legacy equipment, favorites/history, unknown data or goals/training",
+    "Exact current source profile required; actual fresh owned/allowed checks, never trusted preview evidence",
+    "Existing saved unresolved/resting requests retained but not rendered without fresh evidence; hiding retained entries allowed",
+    "Single durable field-scoped recovery survives reload and is consumed after rollback; does not rewind later notes/checks/workouts",
+    "Existing IndexedDB transaction revision CAS; fallback same Web Lock and exact previous raw record",
+    "Same app saveQueue; ordinary queued snapshots rebase only outfit-owned fields after outfit mutations",
+    "Write failure rolls back only owned memory fields, keeps disk original and locks further writes",
+    "Unknown future versions remain opaque and cannot be downgraded via editing or mixed-version recovery",
+    "Actual JSON backup/import validates current and historical extension; no new field on legacy validation/migration",
+    "Four explicit synthetic weekly measurements per custom goal exercise actual calendar/reward APIs, no browser tier/evidence stubs"
+  ],
+  "limits": [
+    "Random loopback origin and fresh browser context: never uses a deployed app or personal browser profile.",
+    "Backend/API contract only: existing legacy avatar renderer remains active; editor-to-profile UI integration is next.",
+    "Real Chromium IndexedDB/worker/offline checks are not physical iPhone/VoiceOver/old-installed-PWA acceptance.",
+    "Snapshot adapter has explicit 200000-value / 64-depth copy guard and 500-instance preview guard; failures do not truncate data.",
+    "Only one durable recovery step; full editor Undo/Redo remains session-only.",
+    "Stored request still requires legacy renderer; no final premium art, old-app UI semantics synchronization or complete new renderer integration yet."
+  ],
+  "unchangedLiveMainCommit": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "liveVersion": "2.4.0 / konpasu-offline-v240",
+  "archiveNote": "Following commit archives only documentation and original browser evidence. Exact executed runtime is the testedSourceCommit above."
+}

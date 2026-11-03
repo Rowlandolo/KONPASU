@@ -55,7 +55,12 @@
     const visual={...equipped};
     const hasPreview=!!(preview&&SLOT_SET.has(preview.slot)&&gearLayer(preview,preview.slot));
     if(hasPreview)visual[preview.slot]=preview; // preview only: never store/equip.
-    const reward=slot=>gearLayer(visual[slot],slot);
+    const multi=Array.isArray(opt.multi)?opt.multi:null,seenInstances=new Set();
+    if(multi){
+      if(multi.length>500)return null;
+      for(const i of multi){if(!i||!SLOT_SET.has(i.slot)||i.allowed!==true||typeof i.id!=='string'||!/^draft-item-[1-9]\d{0,12}$/.test(i.instanceId)||seenInstances.has(i.instanceId)||!gearLayer(i,i.slot))return null;seenInstances.add(i.instanceId)}
+    }
+    const reward=slot=>multi?multi.filter(i=>i.slot===slot).map(i=>'<span class="kp25-gear" data-kp25-instance="'+esc(i.instanceId)+'" data-kp25-item="'+esc(i.id)+'" data-kp25-slot="'+esc(slot)+'">'+gearLayer(i,slot)+'</span>').join('')+(hasPreview&&preview.slot===slot&&!multi.some(i=>i.id===preview.id)?'<span class="kp25-gear kp25-visual-preview" data-kp25-preview="true">'+gearLayer(preview,slot)+'</span>':''):gearLayer(visual[slot],slot);
     const bg=layer('background-'+scene)+reward('background');
     const series=typeof opt.series==='string'&&/^series\/[a-z]+-[1-4]$/.test(opt.series)?layer(opt.series):'';
     const aura=effects==='none'?'':reward('aura')+series;
@@ -77,13 +82,13 @@
     const y=Array.isArray(opt.scale)&&Number.isFinite(opt.scale[1])?Math.max(.94,Math.min(1.08,opt.scale[1])):1;
     const small=!!opt.small;
     const lang=profile.lang==='en'?'en':'de';
-    const count=Object.keys(equipped).length;
+    const count=multi?multi.filter(i=>effects!=='none'||!['aura','effects'].includes(i.slot)).length:Object.keys(equipped).length;
     const title=lang==='en'?'Layered avatar':'Avatar mit Ebenen';
     const previewLabel=lang==='en'?'Preview only – not equipped':'Nur Vorschau – nicht angelegt';
     const gearLabel=lang==='en'?'equipped parts':'getragene Teile';
     const companionLabel=lang==='en'?'Companion':'Begleiter';
     const stageClass='kp2d-stage kp24-stage'+(small?' compact':'')+(hasPreview?' kp2d-try-on':'');
-    return '<div class="'+stageClass+'" role="img" aria-label="'+esc(title)+'">'+
+    return '<div class="'+stageClass+'" data-kp25-mode="'+(multi?'multi':'legacy')+'" role="img" aria-label="'+esc(title)+'">'+
       '<div class="kp24-background">'+bg+'</div>'+
       '<div class="kp24-aura '+(effects==='subtle'?'soft':'')+'">'+aura+'</div>'+
       '<div class="kp24-figure" style="transform:scale('+x+','+y+')">'+figure+'</div>'+

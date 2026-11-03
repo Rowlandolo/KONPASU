@@ -1,0 +1,33 @@
+name: Personal Artbook variants and fit
+on:
+  pull_request:
+    paths:
+      - design/avatar/personal-*
+      - design/avatar/runtime-v06/personal-*
+      - avatar-outfit-preview-v25.js
+      - avatar-outfit-editor-v25.js
+      - avatar-outfit-editor-v25.css
+      - sw.js
+      - scripts/personal-variants-browser-check.cjs
+      - tests/personal-variants.cjs
+      - .github/workflows/personal-variants.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  personal-variants-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/personal-variants-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: personal-variants-acceptance
+          path: browser-results/personal-variants/

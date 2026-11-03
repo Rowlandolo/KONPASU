@@ -1,0 +1,77 @@
+{
+  "status": "passed-one-pose-development-review",
+  "testedSourceCommit": "6a8775a71b297c0c1616146e7d61ad13e9f5c675",
+  "workflowRun": 41509862640,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41509862640",
+  "automatedTests": 222,
+  "appBrowser": "passed; existing Chromium acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Eight verified PNG fragments loaded",
+      "Three independently verified base PNG layers loaded",
+      "All eight base visibility combinations",
+      "Visibility changes reconstruct the identical full composition without accumulated pixels",
+      "Shared 6 percent proportion variation retains all eight equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Reversible rear-strap occlusion without deselection",
+      "All 32 selectable combinations",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed"
+  },
+  "visualReview": {
+    "completeUnderbodyWithoutOutfit": true,
+    "isolatedHairAndClothesWithoutFaceOrHandRemnants": true,
+    "hairRegisteredAfterBrowserCorrection": true,
+    "armguardsAndWrapsRefittedToNewWrists": true,
+    "fullSetAndSharedWidthVariationReviewed": true,
+    "productionAcceptance": false
+  },
+  "screenshots": [
+    {
+      "file": "review-body-underlay-v02.png",
+      "sha256": "13fe8e849d13136a6542d693549bd1d817e38f8765c30b3f3050e877a643e2dc",
+      "sourceArtifactPath": "artbook/base-parts-1.png"
+    },
+    {
+      "file": "review-body-with-hair-v02.png",
+      "sha256": "b9327f83a973bf00f1895362357e689fdd93eb4840aadd992c0d54a16a910720",
+      "sourceArtifactPath": "artbook/base-parts-3.png"
+    },
+    {
+      "file": "review-base-composed-v02.png",
+      "sha256": "3014fdd24cde40faf78a2b2f1b3a39f6de2a0e285b28419d547ab7910be13efa",
+      "sourceArtifactPath": "artbook/base.png"
+    },
+    {
+      "file": "review-full-set-v02.png",
+      "sha256": "d6f3a505749fb8d204329baba3b0b77ca48873bc3b6b2266478ae65a12173248",
+      "sourceArtifactPath": "artbook/fullset.png"
+    },
+    {
+      "file": "review-body-proportion-v02.png",
+      "sha256": "b1fac8f716fdf47e3afadc969f9d309c0267c96a4d7bf5d05c6f9c032bb5163f",
+      "sourceArtifactPath": "artbook/fullset-broader.png"
+    }
+  ],
+  "provenance": "Unmodified PNG screenshots downloaded from the named GitHub Actions artifact; synthetic fresh browser profile. No personal data.",
+  "remaining": [
+    "Base outfit still combines kimono, obi, hakama and shoes.",
+    "Hair front/back depth separation remains open.",
+    "One drawn anatomy only; broader is a shared geometry test.",
+    "95 total reward articles, only 5 have fitted prototype artwork.",
+    "PNG budget and production SVG/delivery strategy, offline integration, persistent multi-item outfits and actual iPhone acceptance remain open."
+  ],
+  "sizeBudget": {
+    "basePNGsBytes": 3446943,
+    "equipmentPNGsBytes": 9379782,
+    "productionBudgetAccepted": false
+  },
+  "earlierReview": {
+    "firstIndependentLayersRun": 41508201173,
+    "finding": "Hair fitted; arm parts still used old wrist positions, corrected in final source.",
+    "hairRefinementRun": 41509156865
+  }
+}

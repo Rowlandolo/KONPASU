@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Eight verified PNG fragments loaded",
+    "Five independently toggled actual compositions including full set",
+    "Reversible rear-strap occlusion without deselection",
+    "All 32 selectable combinations",
+    "390px mobile layout",
+    "No storage writes or uncaught errors"
+  ],
+  "status": "passed",
+  "testedCommit": "437a240c2bf9fc4c2d2b56f38703fd23a42c6a91",
+  "run": "https://github.com/Rowlandolo/KONPASU/actions/runs/41495775682",
+  "screenshots": [
+    "review-full-set-v01.png",
+    "review-harness-masked-v01.png"
+  ],
+  "review": "Actual Chromium full-set image inspected after wrist/forearm refinement. All five items are represented together. Prototype for one pose only; production masks, body variants and mobile asset budget remain open."
+}

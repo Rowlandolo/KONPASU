@@ -25,3 +25,7 @@ Offline ist Pflicht, kostenloser Betrieb ohne laufende Serverkosten für die heu
 
 ## Release und Datenerhalt
 Keine unaufgeforderte Schema-/Storage-Migration. JSON-Backup außerhalb der App vor jedem Live-Update. Bestehende PWA und Browserdaten behalten. Nur geprüfte PRs nach Nutzerfreigabe; Pages-Erfolg für exakt neuen Commit und Live-Version prüfen, danach Gerätetest. Details und Akzeptanzkriterien: QA_CHECKLIST.md; Phasen: ROADMAP.md.
+
+## Präzisierung: Artbook und kombinierbare Artikel
+
+Neue Nutzeranforderung: Artbooks verbindlich als gestalterische Artikelreferenz übertragen, Einzelmodule körpergerecht anpassen und alle ausgewählten Belohnungen ohne automatisches Verdrängen kombinierbar halten. Natürliche Überdeckung transparent darstellen, statt Auswahl still zu löschen. Ungefähr 30 Kategorien sind keine Grenze für die Anzahl angelegter Artikel. Konkreter Vertrag und Grenzen: AVATAR_ARTBOOK_PLAN.md; Gesamtziel einschließlich KI-Copilot: PROFESSIONAL_APP_PLAN.md.

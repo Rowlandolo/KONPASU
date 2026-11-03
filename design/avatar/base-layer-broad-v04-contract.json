@@ -1,0 +1,201 @@
+{
+  "version": 4,
+  "rig": "adult-three-quarter-v1",
+  "width": 512,
+  "height": 768,
+  "status": "seven-logical-parts-eight-surfaces-two-depth-kimono-prototype",
+  "registration": "browser-reviewed-two-forms-sleeve-depth-v08",
+  "layers": [
+    {
+      "id": "hair-back",
+      "file": "./layers/hair-back-v03.png",
+      "sha256": "2e1d8792eb675934c3c9d1b8a932e70ca53931178d1d7d6a89ef97fcb780118e",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.985954,
+      "opaqueBounds": [
+        283,
+        188,
+        470,
+        373
+      ],
+      "placement": {
+        "x": 67.5,
+        "y": -2,
+        "width": 368.64,
+        "height": 552.96
+      },
+      "origin": "image generation edit of hair-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "body",
+      "file": "./layers/body-broad-v04.png",
+      "sha256": "79f3b1ca34212c094fac0988fa04f9bfbcfdc1de063c5dfbbb37294b193caa03",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.732977,
+      "opaqueBounds": [
+        251,
+        40,
+        787,
+        1525
+      ],
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 768
+      },
+      "origin": "independently image-generated broader form using approved v02/v03 references; PNG bytes unmodified"
+    },
+    {
+      "id": "shoes",
+      "file": "./layers/shoes-v03.png",
+      "sha256": "49a7176b329c223ec7520db492cecc46ec86890a6b20cc099f7473ec37a83bc9",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.98494,
+      "opaqueBounds": [
+        299,
+        1401,
+        739,
+        1532
+      ],
+      "placement": {
+        "x": -7.68,
+        "y": -21.75,
+        "width": 527.36,
+        "height": 791.04
+      },
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "kimono",
+      "fragments": [
+        {
+          "id": "kimono-back",
+          "depthRole": "back",
+          "file": "./layers/kimono-back-b-v08.png",
+          "sha256": "b098c9495af6e02a1bcb197479a9c0d6464d8f4b2b4bad9800fdb2d16a00ef35",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.908694,
+          "opaqueBounds": [
+            0,
+            41,
+            1010,
+            1480
+          ],
+          "placement": {
+            "x": 65.66,
+            "y": 13.79,
+            "width": 378.88,
+            "height": 568.32
+          },
+          "origin": "image-generated separate back sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-broad-v04.png",
+            "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+          }
+        },
+        {
+          "id": "kimono",
+          "depthRole": "front",
+          "file": "./layers/kimono-front-b-v08.png",
+          "sha256": "067f6fd60f31f31f04b68c79e90e03fce319efd43c4ee665346ca7f60a5aadd5",
+          "width": 1024,
+          "height": 1536,
+          "transparentPixelsFraction": 0.740252,
+          "opaqueBounds": [
+            0,
+            47,
+            1003,
+            1536
+          ],
+          "placement": {
+            "x": 65.66,
+            "y": 13.79,
+            "width": 378.88,
+            "height": 568.32
+          },
+          "origin": "image-generated separate front sleeve/garment surface from archived matching kimono; PNG bytes unmodified",
+          "sourceReference": {
+            "file": "./layers/kimono-broad-v04.png",
+            "sha256": "6893a048f9dce31edf5e51033f15b673b8873b556e6d25fdd518c1169f1a2498"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hakama",
+      "file": "./layers/hakama-broad-v04.png",
+      "sha256": "4210201de2e5226b5da23cea4e18b262b41fed011ba08a1ba6d588e545eeecda",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.77291,
+      "opaqueBounds": [
+        216,
+        587,
+        808,
+        1423
+      ],
+      "placement": {
+        "x": -18.066985645933016,
+        "y": -51.71351674641147,
+        "width": 548.133971291866,
+        "height": 822.200956937799
+      },
+      "origin": "independently image-generated broader form using approved v02/v03 references; PNG bytes unmodified"
+    },
+    {
+      "id": "obi",
+      "file": "./layers/obi-v03.png",
+      "sha256": "8ba56385aa0d1155818404dd07df56be84b28955ea5dd3a29a829f834202cffc",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.984522,
+      "opaqueBounds": [
+        437,
+        505,
+        635,
+        716
+      ],
+      "placement": {
+        "x": -48.15,
+        "y": -47.25,
+        "width": 604.16,
+        "height": 906.24
+      },
+      "origin": "image generation edit of clothes-v02.png; independent completed layer; PNG bytes unmodified"
+    },
+    {
+      "id": "hair-front",
+      "file": "./layers/hair-front-v03.png",
+      "sha256": "87298570aa222a4da90452339393acccb4f6ba2df3166cf7b50858f5c1949aa1",
+      "width": 1024,
+      "height": 1536,
+      "transparentPixelsFraction": 0.966857,
+      "opaqueBounds": [
+        331,
+        9,
+        686,
+        287
+      ],
+      "placement": {
+        "x": 67.5,
+        "y": -2,
+        "width": 368.64,
+        "height": 552.96
+      },
+      "origin": "image generation edit of hair-v02.png; independent completed layer; PNG bytes unmodified"
+    }
+  ],
+  "limits": [
+    "These two stand figures and one pose only; headwear depth and live/offline integration remain open.",
+    "Kimono is one logical selection with two required graphics; no new ownership item.",
+    "Rear sleeve surfaces lie behind actual body; only front cloth alpha occludes arm equipment.",
+    "Numeric asset targets do not establish physical phone/GPU acceptance."
+  ],
+  "bodyForm": "form-b",
+  "reviewEvidence": "./verification-sleeve-depth-v08.json"
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "scope": "development atelier six selected articles, twelve reward fragments and eight base surfaces; source RGBA excludes GPU, DOM, strings and browser overhead",
+  "prototype": {
+    "startupAssetBytes": 16000000,
+    "totalAssetBytes": 20000000,
+    "decodedSourceRGBABytes": 134217728,
+    "maxSceneImages": 20,
+    "maxMaskImageCopies": 0,
+    "maxStartupRasterSurfaces": 0
+  },
+  "productionTargets": {
+    "startupAssetBytes": 8000000,
+    "decodedSourceRGBABytes": 50331648,
+    "requirePhysicalDeviceReview": true
+  },
+  "timings": "Record real browser timings. No hardware-independent timing guarantee or invented iPhone result."
+}

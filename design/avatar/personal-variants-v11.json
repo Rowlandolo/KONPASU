@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "rig": "adult-three-quarter-v1",
+  "status": "personal-variant-study",
+  "source": {
+    "file": "./personal-atlas-v11.png",
+    "sha256": "5b2a16d1d66e320b6d91ce3bed663181f7bb0def1b17ead972f12403b7c760cd",
+    "bytes": 1359198,
+    "width": 1254,
+    "height": 1254,
+    "origin": "Image generation edit using approved body-v02 and independent front/back hair references; PNG unmodified"
+  },
+  "delivery": {
+    "file": "./runtime-v06/personal-atlas-v11.webp",
+    "sha256": "587cad618cd7b8c471d144c5102625b19bd847a613dc4b30efb635c15aecb1d0",
+    "bytes": 466178,
+    "width": 1254,
+    "height": 1254,
+    "mime": "image/webp",
+    "quality": 98,
+    "method": 6,
+    "alphaPreserved": true
+  },
+  "bodyHeadCutY": 110,
+  "cells": {
+    "face-calm": {
+      "viewBox": [
+        105,
+        41,
+        213,
+        298
+      ],
+      "placement": {
+        "x": 221,
+        "y": 20,
+        "width": 66,
+        "height": 92.338028
+      }
+    },
+    "face-happy": {
+      "viewBox": [
+        520,
+        41,
+        212,
+        298
+      ],
+      "placement": {
+        "x": 221,
+        "y": 20,
+        "width": 66,
+        "height": 92.773585
+      }
+    },
+    "face-focused": {
+      "viewBox": [
+        935,
+        41,
+        212,
+        299
+      ],
+      "placement": {
+        "x": 221,
+        "y": 20,
+        "width": 66,
+        "height": 93.084906
+      }
+    },
+    "hair-front-swept": {
+      "viewBox": [
+        54,
+        404,
+        358,
+        302
+      ],
+      "placement": {
+        "x": 186,
+        "y": 0,
+        "width": 128,
+        "height": 107.977654
+      }
+    },
+    "hair-front-long": {
+      "viewBox": [
+        482,
+        406,
+        289,
+        412
+      ],
+      "placement": {
+        "x": 197,
+        "y": 0,
+        "width": 108,
+        "height": 153.965398
+      }
+    },
+    "hair-front-tied": {
+      "viewBox": [
+        920,
+        411,
+        248,
+        327
+      ],
+      "placement": {
+        "x": 205,
+        "y": 2,
+        "width": 98,
+        "height": 129.217742
+      }
+    },
+    "hair-back-swept": {
+      "viewBox": [
+        82,
+        845,
+        292,
+        275
+      ],
+      "placement": {
+        "x": 200,
+        "y": 2,
+        "width": 101,
+        "height": 95.119863
+      }
+    },
+    "hair-back-long": {
+      "viewBox": [
+        480,
+        841,
+        298,
+        402
+      ],
+      "placement": {
+        "x": 196,
+        "y": 3,
+        "width": 123,
+        "height": 165.926174
+      }
+    },
+    "hair-back-tied": {
+      "viewBox": [
+        934,
+        842,
+        228,
+        391
+      ],
+      "placement": {
+        "x": 202,
+        "y": 3,
+        "width": 93,
+        "height": 159.486842
+      }
+    }
+  },
+  "limits": [
+    "One adult three-quarter pose; same explicit two body forms. No gender or body form inferred from personal data.",
+    "Nine atlas drawings are prototypes; personal main SVG remains available.",
+    "Colour treatments are runtime studies, not final hand-painted garment palettes.",
+    "No profile or inventory writes; variant controls are try-on only."
+  ]
+}

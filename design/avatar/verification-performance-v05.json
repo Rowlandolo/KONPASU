@@ -1,0 +1,236 @@
+{
+  "status": "passed-prototype-performance-review-production-targets-open",
+  "testedSourceCommit": "e05b0c3f5228b10a83ef270fcac1b28045f1bf8a",
+  "workflowRun": 41533841108,
+  "workflowURL": "https://github.com/Rowlandolo/KONPASU/actions/runs/41533841108",
+  "automatedTests": 236,
+  "appChromium": "passed existing acceptance suite",
+  "atelierBrowserReport": {
+    "checks": [
+      "Eight verified PNG fragments loaded",
+      "Startup omits unrequested body/artbook; lazy raster and shared mask surfaces stay within prototype ceilings",
+      "Verified base PNGs in one depth-ordered SVG scene",
+      "All 128 independent base selections through real UI toggles",
+      "Three quick presets and deterministic reconstruction without accumulated pixels",
+      "Shared 6 percent proportion variation retains all eight equipment layers",
+      "Five independently toggled actual compositions including full set",
+      "Reversible rear-strap occlusion without deselection",
+      "All 32 selectable combinations",
+      "Both drawn body forms: 256 base selections, 64 reward selections and lossless shape switching",
+      "Real SVG pixels prove active alpha occlusion; hidden selection retained and reversible",
+      "390px mobile layout",
+      "Original approved style reference remains available separately",
+      "Original artbook board loads once on demand without the large bundle",
+      "Failed lazy body load preserves outfit and retries; late background response cannot override the newest shape choice",
+      "Corrupted required layer fails visibly with no partial body or equipment",
+      "No storage writes or uncaught errors"
+    ],
+    "status": "passed",
+    "performance": {
+      "startupAssetBytes": 15523832,
+      "totalAssetBytes": 19284852,
+      "additionalBodyBytes": 3761020,
+      "referenceBundleBytes": 6298236,
+      "optionalReferenceBytes": 436058,
+      "previousEagerStartupBytes": 25583088,
+      "startupBytesAvoided": 10059256,
+      "initialAssets": 15,
+      "totalAssets": 18,
+      "initialDecodedSourceRGBABytes": 94372356,
+      "decodedSourceRGBABytes": 113246724,
+      "estimateScope": "Source width \u00d7 height \u00d7 4; not measured browser/GPU peak memory",
+      "observedStartupPNGRequests": 15,
+      "observedStartupRequestedPNGBytes": 15523832,
+      "startupRasterSurfaces": 0,
+      "maskImageCopies": 0,
+      "stableBodyNode": true,
+      "sceneScriptTiming": {
+        "samples": 40,
+        "medianMs": 6.5,
+        "p95Ms": 8.10000000000582,
+        "maxMs": 13.200000000011642,
+        "includesPaint": false
+      },
+      "renderStats": {
+        "created": 334,
+        "reused": 2610,
+        "attributeWrites": 3309,
+        "lastRenderMs": 6.5,
+        "liveImages": 15
+      }
+    }
+  },
+  "assetInventory": {
+    "startupAssetBytes": 15523832,
+    "totalAssetBytes": 19284852,
+    "additionalBodyBytes": 3761020,
+    "referenceBundleBytes": 6298236,
+    "optionalReferenceBytes": 436058,
+    "previousEagerStartupBytes": 25583088,
+    "startupBytesAvoided": 10059256,
+    "initialAssets": 15,
+    "totalAssets": 18,
+    "initialDecodedSourceRGBABytes": 94372356,
+    "decodedSourceRGBABytes": 113246724,
+    "estimateScope": "Source width \u00d7 height \u00d7 4; not measured browser/GPU peak memory",
+    "assets": [
+      {
+        "file": "./layers/hair-back-v03.png",
+        "bytes": 557325,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/body-v02.png",
+        "bytes": 1306258,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/shoes-v03.png",
+        "bytes": 546879,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/kimono-v03.png",
+        "bytes": 1470343,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/hakama-v03.png",
+        "bytes": 988553,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/obi-v03.png",
+        "bytes": 583904,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/hair-front-v03.png",
+        "bytes": 690788,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/body-broad-v04.png",
+        "bytes": 1367553,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/kimono-broad-v04.png",
+        "bytes": 1440209,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./layers/hakama-broad-v04.png",
+        "bytes": 953258,
+        "width": 1024,
+        "height": 1536,
+        "rgbaBytes": 6291456
+      },
+      {
+        "file": "./equipment/chest-harness.png",
+        "bytes": 1056575,
+        "width": 1218,
+        "height": 1292,
+        "rgbaBytes": 6294624
+      },
+      {
+        "file": "./equipment/shoulder-left.png",
+        "bytes": 1432222,
+        "width": 1312,
+        "height": 1199,
+        "rgbaBytes": 6292352
+      },
+      {
+        "file": "./equipment/shoulder-right.png",
+        "bytes": 1061229,
+        "width": 1312,
+        "height": 1199,
+        "rgbaBytes": 6292352
+      },
+      {
+        "file": "./equipment/wrist-wrap-left.png",
+        "bytes": 641605,
+        "width": 1312,
+        "height": 1199,
+        "rgbaBytes": 6292352
+      },
+      {
+        "file": "./equipment/wrist-wrap-right.png",
+        "bytes": 663828,
+        "width": 1312,
+        "height": 1199,
+        "rgbaBytes": 6292352
+      },
+      {
+        "file": "./equipment/armguard-left.png",
+        "bytes": 1619926,
+        "width": 763,
+        "height": 2061,
+        "rgbaBytes": 6290172
+      },
+      {
+        "file": "./equipment/armguard-right.png",
+        "bytes": 1383419,
+        "width": 749,
+        "height": 2098,
+        "rgbaBytes": 6285608
+      },
+      {
+        "file": "./equipment/breastplate.png",
+        "bytes": 1520978,
+        "width": 1312,
+        "height": 1199,
+        "rgbaBytes": 6292352
+      }
+    ],
+    "prototypePassed": true,
+    "violations": [],
+    "productionTargetsPassed": false,
+    "physicalDeviceAccepted": false
+  },
+  "startupReductionPercent": 39.32,
+  "visualComparisons": [
+    {
+      "archivedFile": "review-form-a-scene-v04.png",
+      "currentArtifactPath": "artbook/fullset.png",
+      "sha256": "f837e583d5954f18af735f472803fdce3cc52f85e24fe983f01a114f71d089cc",
+      "byteIdentical": true
+    },
+    {
+      "archivedFile": "review-form-b-scene-v04.png",
+      "currentArtifactPath": "artbook/form-b-fullset.png",
+      "sha256": "d28ea2e6a10094956c533a798a3542680354163f263ffec68f798ffce6d56e92",
+      "byteIdentical": true
+    }
+  ],
+  "measurementLimits": [
+    "Baseline is reconstructed from source-file sizes, not measured historic HTTP packets.",
+    "Observed initial PNG requests validated against file bytes; not total app traffic.",
+    "Source RGBA is an estimate excluding DOM, strings, GPU and browser overhead.",
+    "Scene timing is synchronous renderer scripting on the CI machine; excludes painting and physical device performance."
+  ],
+  "remaining": [
+    "Production targets of 8 MB startup PNGs and 48 MiB source RGBA are not met.",
+    "Physical phone/browser frame-time and peak-memory review remain open.",
+    "Six-step plan: docs/AVATAR_RELEASE_STEPS.md; stage 1 still in progress."
+  ],
+  "provenance": "No existing avatar PNG was edited. Optional reference WebP is byte-identical to the original bundle board. Current browser screenshots are byte-identical to the archived v04 images; no personal data."
+}

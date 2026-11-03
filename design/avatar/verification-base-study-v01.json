@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "Eight verified PNG fragments loaded",
+    "Decoded base pixels reconstruct exactly with all three regions",
+    "All eight base visibility combinations",
+    "Shared 6 percent proportion variation retains all eight equipment layers",
+    "Five independently toggled actual compositions including full set",
+    "Reversible rear-strap occlusion without deselection",
+    "All 32 selectable combinations",
+    "390px mobile layout",
+    "No storage writes or uncaught errors"
+  ],
+  "status": "passed",
+  "testedCommit": "0eaa849dfe4cfef9b08f201a6e4f6563d39239de",
+  "run": "https://github.com/Rowlandolo/KONPASU/actions/runs/41498104081",
+  "screenshots": [
+    "review-base-proportion-v01.png",
+    "review-visible-body-study-v01.png"
+  ],
+  "visualProductionAcceptance": false,
+  "visualFindings": [
+    "Composite reconstruction and shared proportion transform work.",
+    "Isolated regions retain imperfect hair/skin/garment boundaries; they are not finished production cutouts.",
+    "Underlying anatomy is absent from the source image and cannot be recovered by masking."
+  ],
+  "nextStep": "Separate modestly clothed underbody illustration, then actual pose registration and clean independent hair/garment assets."
+}

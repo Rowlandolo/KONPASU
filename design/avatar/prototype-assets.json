@@ -1,0 +1,365 @@
+{
+  "version": 4,
+  "rig": "adult-three-quarter-v1",
+  "status": "development-prototype-not-production",
+  "assets": [
+    {
+      "partId": "chest-harness-back",
+      "itemId": "strength-3",
+      "logicalAsset": "assets/avatar-v25/strength/chest-harness-back.png",
+      "file": "./equipment/chest-harness-back.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "torso",
+      "status": "prototype-review",
+      "width": 1117,
+      "height": 1409,
+      "alphaBounds": [
+        145,
+        39,
+        1087,
+        1384
+      ],
+      "transparentPixelsFraction": 0.9201,
+      "placement": {
+        "x": 195,
+        "y": 130,
+        "width": 129,
+        "height": 184
+      },
+      "sha256": "1495a498c111974689d3b8649be413083323d70db10336ad0a3976c6b0d8b05d",
+      "origin": "image-generated front/rear redraw from archived chest-harness.png; not raster-cut or mask-extracted; full original file preserved",
+      "masksStatus": "separate-rear-artwork-behind-body-no-pose-clip",
+      "depthRole": "back",
+      "sourceReference": {
+        "file": "./equipment/chest-harness.png",
+        "sha256": "bc5b8d92d6dfba22d3413b77c258871002729dfcddd00ad29d56a58996265265"
+      }
+    },
+    {
+      "partId": "chest-harness",
+      "itemId": "strength-3",
+      "logicalAsset": "assets/avatar-v25/strength/chest-harness.png",
+      "file": "./equipment/chest-harness-front.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "torso",
+      "status": "prototype-review",
+      "width": 1218,
+      "height": 1292,
+      "alphaBounds": [
+        25,
+        37,
+        1166,
+        1260
+      ],
+      "transparentPixelsFraction": 0.8129,
+      "placement": {
+        "x": 179,
+        "y": 126,
+        "width": 159,
+        "height": 190
+      },
+      "sha256": "28b3889b54eb8575d477d218def57da9fec29ce02319d36e06e611b69e3a7b38",
+      "origin": "image-generated front/rear redraw from archived chest-harness.png; not raster-cut or mask-extracted; full original file preserved",
+      "masksStatus": "separate-front-artwork-no-pose-clip",
+      "depthRole": "front",
+      "sourceReference": {
+        "file": "./equipment/chest-harness.png",
+        "sha256": "bc5b8d92d6dfba22d3413b77c258871002729dfcddd00ad29d56a58996265265"
+      }
+    },
+    {
+      "partId": "shoulder-left",
+      "itemId": "strength-4",
+      "logicalAsset": "assets/avatar-v25/strength/shoulder-left.png",
+      "file": "./equipment/shoulder-left.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "shoulderLeft",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        0,
+        31,
+        1280,
+        1183
+      ],
+      "transparentPixelsFraction": 0.6346,
+      "placement": {
+        "x": 145,
+        "y": 128,
+        "width": 96,
+        "height": 114
+      },
+      "sha256": "623b98ba0c0250cff4b797af65b8f663324a6022567a1fee05a43ce6848fdf47",
+      "origin": "image-generated from existing user-supplied artbook and approved base direction; not extracted artbook pixels",
+      "masksStatus": "not-produced"
+    },
+    {
+      "partId": "shoulder-right",
+      "itemId": "strength-4",
+      "logicalAsset": "assets/avatar-v25/strength/shoulder-right.png",
+      "file": "./equipment/shoulder-right.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "shoulderRight",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        0,
+        17,
+        1296,
+        1199
+      ],
+      "transparentPixelsFraction": 0.7118,
+      "placement": {
+        "x": 294,
+        "y": 139,
+        "width": 78,
+        "height": 96
+      },
+      "sha256": "5bfb7b91eec125906996668762987049dc0635ca35fa6fc0b4b7316c08a95971",
+      "origin": "image-generated from existing user-supplied artbook and approved base direction; not extracted artbook pixels",
+      "masksStatus": "not-produced"
+    },
+    {
+      "partId": "wrist-wrap-left",
+      "itemId": "strength-1",
+      "logicalAsset": "assets/avatar-v25/strength/wrist-wrap-left.png",
+      "file": "./equipment/wrist-wrap-left.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "wristLeft",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        49,
+        52,
+        1212,
+        1175
+      ],
+      "transparentPixelsFraction": 0.8452,
+      "placement": {
+        "x": 138,
+        "y": 338,
+        "width": 29,
+        "height": 20
+      },
+      "sha256": "3478785494d2c3352cf37c97d2f6ab4a80b08ddb7afadd04e057da6b40a23d24",
+      "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
+      "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "wrist-wrap-right",
+      "itemId": "strength-1",
+      "logicalAsset": "assets/avatar-v25/strength/wrist-wrap-right.png",
+      "file": "./equipment/wrist-wrap-right.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "wristRight",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        0,
+        32,
+        1236,
+        1140
+      ],
+      "transparentPixelsFraction": 0.8386,
+      "placement": {
+        "x": 349,
+        "y": 340,
+        "width": 29,
+        "height": 20
+      },
+      "sha256": "ea9b40f3785d5695139d2b68b7f8ff3f0b106a81f462c5507a3ab76bad5c8e27",
+      "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
+      "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "armguard-left",
+      "itemId": "strength-2",
+      "logicalAsset": "assets/avatar-v25/strength/armguard-left.png",
+      "file": "./equipment/armguard-left.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "forearmLeft",
+      "status": "prototype-review",
+      "width": 763,
+      "height": 2061,
+      "alphaBounds": [
+        66,
+        17,
+        733,
+        1985
+      ],
+      "transparentPixelsFraction": 0.5435,
+      "placement": {
+        "x": 137,
+        "y": 309,
+        "width": 31,
+        "height": 40
+      },
+      "sha256": "4b84c53c126436b245c343f94377f0c278c9025a91622e3ba264bb9823dd3af7",
+      "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
+      "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "armguard-right",
+      "itemId": "strength-2",
+      "logicalAsset": "assets/avatar-v25/strength/armguard-right.png",
+      "file": "./equipment/armguard-right.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "forearmRight",
+      "status": "prototype-review",
+      "width": 749,
+      "height": 2098,
+      "alphaBounds": [
+        58,
+        31,
+        733,
+        1850
+      ],
+      "transparentPixelsFraction": 0.6139,
+      "placement": {
+        "x": 340,
+        "y": 310,
+        "width": 29,
+        "height": 40
+      },
+      "sha256": "d977b937eb336288cf7f56b620aee3560536c2cc35cdd3276bb566091b690637",
+      "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
+      "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "breastplate",
+      "itemId": "strength-5",
+      "logicalAsset": "assets/avatar-v25/strength/breastplate.png",
+      "file": "./equipment/breastplate.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "torso",
+      "status": "prototype-review",
+      "width": 1312,
+      "height": 1199,
+      "alphaBounds": [
+        65,
+        30,
+        1248,
+        1152
+      ],
+      "transparentPixelsFraction": 0.5967,
+      "placement": {
+        "x": 203,
+        "y": 151,
+        "width": 105,
+        "height": 110
+      },
+      "sha256": "6b0bfd2b0047f8ebb238b5a4daf5b86a743829437518de64885d6a59ae0c65e5",
+      "origin": "image-generated from approved base, existing prototype and user artbook references; not extracted artbook pixels",
+      "masksStatus": "not-required-for-initial-pose-overlay; variants pending"
+    },
+    {
+      "partId": "focus-headband-band",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-band.png",
+      "file": "./equipment/focus-headband-band.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "head",
+      "depthRole": "head-band",
+      "status": "prototype-review",
+      "width": 1774,
+      "height": 887,
+      "alphaBounds": [
+        0,
+        19,
+        1762,
+        887
+      ],
+      "fitBounds": [
+        127,
+        171,
+        1647,
+        717
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.747758,
+      "placement": {
+        "x": 221,
+        "y": 32,
+        "width": 65,
+        "height": 24
+      },
+      "sha256": "232ed5b1d01edbfe87d3b3ee5bfe04a49883b9a1e0424834c3067baeee3f0723",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
+    },
+    {
+      "partId": "focus-headband-bow",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-bow.png",
+      "file": "./equipment/focus-headband-bow.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "headTie",
+      "depthRole": "head-front",
+      "status": "prototype-review",
+      "width": 1254,
+      "height": 1254,
+      "alphaBounds": [
+        0,
+        9,
+        1240,
+        1214
+      ],
+      "fitBounds": [
+        74,
+        212,
+        1180,
+        1045
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.642303,
+      "placement": {
+        "x": 211,
+        "y": 45,
+        "width": 32,
+        "height": 25
+      },
+      "sha256": "56a8422442c71079075adc35f79554e82c4005757f62a9320c201bc60c74d691",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
+    },
+    {
+      "partId": "focus-headband-tails",
+      "itemId": "focus-1",
+      "logicalAsset": "assets/avatar-v25/focus/focus-headband-tails.png",
+      "file": "./equipment/focus-headband-tails.png",
+      "rig": "adult-three-quarter-v1",
+      "anchor": "headTie",
+      "depthRole": "head-back",
+      "status": "prototype-review",
+      "width": 1024,
+      "height": 1536,
+      "alphaBounds": [
+        0,
+        5,
+        980,
+        1512
+      ],
+      "fitBounds": [
+        109,
+        173,
+        815,
+        1342
+      ],
+      "fitAlphaThreshold": 16,
+      "transparentPixelsFraction": 0.834032,
+      "placement": {
+        "x": 184,
+        "y": 50,
+        "width": 42,
+        "height": 70
+      },
+      "sha256": "f8d82f9f95d1d0edc66024596fdf74db1abbbabcefafdf7a06094a73a0bdaade",
+      "origin": "image-generated fitted module from original focus-1 headband card and knowledge/productivity board; native PNG unmodified",
+      "masksStatus": "actual head/hair depth; no pose clip or deleted hair selection"
+    }
+  ]
+}

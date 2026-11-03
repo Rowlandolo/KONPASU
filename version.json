@@ -1,13 +1,26 @@
 {
-  "version": "2.4.0",
-  "release": "KONPASU 2.4.0 – layered 2D avatar preview",
+  "version": "2.4.1",
+  "release": "KONPASU 2.4.1 \u2013 modular Artbook avatar and complete avatar history",
   "features": [
     "goal-calendar-v23.js",
     "training-v22.js",
     "avatar2d.js",
     "avatar-composer-v24.js",
     "avatar-art-bundle.js",
-    "premium-art-bundle.js"
+    "premium-art-bundle.js",
+    "avatar-outfit-v25.js",
+    "avatar-outfit-persistence-v25.js",
+    "avatar-outfit-store-v25.js",
+    "avatar-outfit-draft-v25.js",
+    "avatar-outfit-session-v25.js",
+    "avatar-outfit-preview-v25.js",
+    "avatar-outfit-editor-v25.js",
+    "avatar-outfit-display-v25.js",
+    "design/avatar/personal-variants-v11.js",
+    "avatar-appearance-persistence-v25.js",
+    "avatar-appearance-store-v25.js",
+    "avatar-artbook-main-v25.js",
+    "avatar-history-v25.js"
   ],
-  "cache": "konpasu-offline-v240"
+  "cache": "konpasu-offline-v241"
 }

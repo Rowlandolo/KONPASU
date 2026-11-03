@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.4.2",
+  "testedSourceCommit": "d4d2948033ca6e102c2928b398ca0055023e9bb5",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/9",
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "deployment": false,
+  "mainUnchanged": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "candidateVersion": "2.4.1-preview.3",
+  "candidateCache": "konpasu-offline-v241-outfit-preview3",
+  "scope": "Saved multi-item requests on existing personalized SVG main avatar and Home, with fresh ownership/wearability, personality/scenes/companions, favorites/history, deliberate legacy switch and field recovery protection.",
+  "node": {
+    "status": "passed",
+    "total": 388,
+    "newTests": 22,
+    "workflowRun": 41629771935
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "appGroups": 10,
+    "atelierGroups": 26,
+    "workflowRun": 41629771935,
+    "consoleCaveat": "Existing acceptance reports optional-resource 404/offline fetch messages and the deliberately induced stale-tab conflict; no uncaught page errors."
+  },
+  "existingStorageBrowser": {
+    "status": "passed",
+    "groups": 13,
+    "workflowRun": 41629771846
+  },
+  "existingEditorBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41629772026
+  },
+  "mainBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41629771908,
+    "artifactId": 13228070557,
+    "reportPath": "design/avatar/review-main-avatar-v01/report.json",
+    "addedVisualAssertions": [
+      "Home gear wrapper has transparent background and no caption padding",
+      "Fallback avatar retains full width with notice below"
+    ],
+    "pageErrors": [],
+    "checks": [
+      "Actual editor Save updates main Studio and Home with all saved identities, including two instances sharing slot/artwork",
+      "Real appearance, hair, expression, clothing, scene and companion controls remain visible with multi; evolved Shiba uses genuine completed step-day evidence",
+      "Normal reload renders complete personalized multi from IndexedDB without opening or decoding Artbook preview scripts",
+      "Unsaved order affects only try-on; Save changes actual main stacking/visibility while retaining hidden raw request",
+      "Paused or remapped goal changes fresh visibility without deleting requests or silently changing artwork",
+      "Missing required reward artwork shows full personalized base with notice, avoids partial outfit and retains raw selection",
+      "Multi favorite retains all instances and previews own look; old favorite never inherits current multi; applying either keeps companion fields synchronized",
+      "Inventory Equip explicitly toggles one multi instance without eviction and equipment page lists every saved identity",
+      "Clear switches to starter setup without deleting dormant multi; explicit clean editor Save reactivates retained look",
+      "Historical UI reads snapshot multi, personality, scene and companion at date; missing past never borrows current profile",
+      "Personalized main stays contained at 320/390/430px with correct English labels",
+      "Fresh offline Home/Studio and reload render saved multi and personalized bundled graphics through real worker/IndexedDB"
+    ]
+  },
+  "archiveCommitOnlyDocsAndEvidence": true,
+  "limits": [
+    "Existing personalized SVG body/hair/face and reward artwork remain the main route. Artbook standing prototypes are editor preview; full personal Artbook variants and final premium artwork remain open.",
+    "Form A/B stays stored metadata for Artbook editor, while main follows existing personal appearance and optional measurements.",
+    "Editor Save does not append an automatic historic snapshot. Existing snapshots containing outfit25 render correctly; complete historization remains separate work.",
+    "Fixed slot depths determine cross-slot stacking. Stored order determines ordering within a depth; naturally opaque items may occlude others without deletion.",
+    "Physical iPhone, VoiceOver, installed-old-PWA upgrade, quota/GPU acceptance and complete historic goal configuration remain open."
+  ],
+  "screenshots": [
+    {
+      "path": "design/avatar/review-main-avatar-v01/personalized-home.png",
+      "bytes": 35999,
+      "sha256": "e1392b1d6d78ff83a1d8d5eecb0bc502197655062fee8aeef356eb64290a6582",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-main-avatar-v01/personalized-main.png",
+      "bytes": 67254,
+      "sha256": "1df55148aeb41c3c1f179c7d1c96fe84522f2c93b1d88f80e45aadfda890c9ea",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-main-avatar-v01/missing-art-fallback.png",
+      "bytes": 85839,
+      "sha256": "702bc42b0feecc2e1f0b7e08705bd105ad8092df00bbf47c28db3375585e7491",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-main-avatar-v01/mobile-main.png",
+      "bytes": 63734,
+      "sha256": "ccb800788feda54084d582c68029213ca06c6977c5db112c27dffbddfce60e96",
+      "visuallyInspected": true
+    }
+  ]
+}

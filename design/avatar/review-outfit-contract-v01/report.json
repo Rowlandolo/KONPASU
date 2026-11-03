@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "checks": [
+    "Synthetic-only page loads eight cases without app startup, personal profile import or save actions",
+    "All eight real UI selections retain their exact synthetic input and expected current/favorite/history resolution",
+    "Resting raw selection, lower eligible replacement and effect Off are distinct in the visible tables",
+    "Empty favorite stays empty and never inherits current or legacy gear",
+    "Two custom goal identities remain separate despite the same artwork family/tier",
+    "Historical snapshot uses its evaluation date; missing snapshot never displays today’s equipment as past",
+    "Unknown IDs and future slot data remain visible as unresolved rather than being dropped",
+    "Already-loaded read-only inspection works without network for every case",
+    "390px layout keeps tables contained and case control at least 44px high",
+    "Labels and unknown raw IDs render as text without HTML execution",
+    "Invalid fixture fails visibly without partial results and can be reloaded without clearing data",
+    "No localStorage entries, IndexedDB databases or uncaught errors"
+  ],
+  "cases": [
+    {
+      "id": "parallel-selection",
+      "requested": 4,
+      "resolved": 3,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "empty-favorite",
+      "requested": 0,
+      "resolved": 0,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "resting-favorite",
+      "requested": 1,
+      "resolved": 1,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "custom-identities",
+      "requested": 2,
+      "resolved": 1,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "unknown-selection",
+      "requested": 5,
+      "resolved": 2,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "past-outfit",
+      "requested": 1,
+      "resolved": 1,
+      "blocked": false,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "missing-history",
+      "requested": 0,
+      "resolved": 0,
+      "blocked": true,
+      "sourceUnchanged": true
+    },
+    {
+      "id": "invalid-favorite",
+      "requested": 0,
+      "resolved": 0,
+      "blocked": true,
+      "sourceUnchanged": true
+    }
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Synthetic inspection fixtures use existing APIs in an isolated VM with controlled goal-week/tier inputs.",
+    "Read-only projection is not a storage migration or live avatar integration.",
+    "Warm offline inspection is not cold PWA/upgrade or physical-device acceptance."
+  ],
+  "storage": {
+    "local": 0,
+    "db": 0
+  },
+  "uncaughtErrors": []
+}

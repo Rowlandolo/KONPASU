@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3.4.1",
+  "testedSourceCommit": "cb18dd1142783b34331eed1d9566448f79c9c056",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/8",
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "deployment": false,
+  "candidateVersion": "2.4.1-preview.2",
+  "candidateCache": "konpasu-offline-v241-outfit-preview2",
+  "scope": "Actual in-app Avatar → Outfits → multi-outfit editor with checked prototype try-on and explicit persistent Save/conflict resolution/durable Recovery. Main legacy avatar route remains active.",
+  "node": {
+    "status": "passed",
+    "total": 366,
+    "newTests": 16,
+    "workflowRun": 41623795811
+  },
+  "existingAppAndAtelier": {
+    "status": "passed",
+    "atelierGroups": 26,
+    "workflowRun": 41623795811
+  },
+  "existingStorageBrowser": {
+    "status": "passed",
+    "groups": 13,
+    "workflowRun": 41623795918
+  },
+  "deliveryBuild": {
+    "status": "passed",
+    "webpFiles": 24,
+    "workflowRun": 41623795888
+  },
+  "editorBrowser": {
+    "status": "passed",
+    "groups": 12,
+    "workflowRun": 41623795808,
+    "artifactId": 13224043942,
+    "checks": [
+      "Actual Avatar → Outfits entry opens checked modular preview lazily without writing profile or database",
+      "Real add/hide/order/body controls retain separate custom identities; closing/reopening keeps unsaved draft without autosave",
+      "Visible Save writes only owned fields, shows saved status, resets dirty baseline and enables separate durable recovery",
+      "Reload reopens exact saved editor; actual Recovery button restores preceding look without changing legacy/history/training data",
+      "Unearned try-on stays visible as preview but Save rejects it with actionable status and retains entire draft",
+      "Real second-tab revision conflict retains draft, disables Save and displays explicit reload-with-draft/JSON-backup actions",
+      "Explicit Load latest data safely clears stale-tab protection, rebases kept selection and allows a new actual UI save",
+      "Unsaved non-outfit changes block refresh without data loss; visible JSON backup contains them and saved app changes can then be reloaded",
+      "DE/EN editor text, native modal focus, 320/390/430px containment and 44px touch controls",
+      "Fresh offline page opens all checked preview graphics, saves via visible controls, reloads and recovers through actual worker/IndexedDB",
+      "Actual custom goal labels remain text and cannot execute markup inside editor",
+      "Corrupt preview integrity fails visibly before editing; Retry restores checked preview without writes or clearing data"
+    ],
+    "pageErrors": []
+  },
+  "screenshots": [
+    {
+      "path": "design/avatar/review-outfit-editor-v01/conflict-editor.png",
+      "bytes": 220221,
+      "sha256": "d7e753b7cbb4cdeac64bda48db8457c5494a6b1610c93d8df68a41cb913eb0f9",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-editor-v01/mobile-editor.png",
+      "bytes": 79075,
+      "sha256": "eb8263ed7f5283e4e6ec4696ef49fa3812427e1740125ab4dbd1cd7983c64b4b",
+      "visuallyInspected": true
+    },
+    {
+      "path": "design/avatar/review-outfit-editor-v01/saved-editor.png",
+      "bytes": 236124,
+      "sha256": "4edb0def2e500f0a92ede447d0cabc98bb6e6bae4a4517507418fe5061d6f0b4",
+      "visuallyInspected": true
+    }
+  ],
+  "uiRules": [
+    "Open/preview/close never write profile or database; dirty draft is retained in the open app",
+    "Save and durable Recovery are distinct explicit controls, kept visible while scrolling",
+    "First unchanged legacy selection may be explicitly saved; clean saved selection is a no-op",
+    "Actual Save success rebuilds baseline from current committed source",
+    "Unearned try-on is rejected with actionable status; original draft is retained",
+    "Real two-tab revision conflict disables Save and retains draft",
+    "Load latest reads existing storage under queue and preserves draft selection via explicit rebase",
+    "Unrelated unsaved app data or mutation during read blocks refresh without changing memory/disk",
+    "Current ordinary write/startup memory baseline protects local changes; only revision metadata and empty dailyGoalChecks lazy default are neutralized",
+    "Visible full-app JSON backup uses the existing export path",
+    "Dirty draft blocks durable Recovery; the displayed recovery operation is checked",
+    "DE/EN, native dialog/focus, 320/390/430px and 44px touch controls",
+    "Fresh offline app loads checked preview resources and performs UI save/reload/recovery",
+    "Unsafe goal names render as text; corrupt hash fails visibly with Retry and no writes"
+  ],
+  "limits": [
+    "Fresh random-loopback browser profile and synthetic goals only; never visits deployed Pages or personal storage.",
+    "Editor Artbook preview uses prototype standing figures; main legacy avatar/personalisation/scenes/companion rendering remains active.",
+    "Physical iPhone/VoiceOver/installed-old-PWA upgrade and final premium art remain open.",
+    "Separate old synthetic atelier remains session-only; actual app editor uses the shared current profile API.",
+    "Main avatar/home route, scenes, companions, full appearance/history/favorite and legacy-action synchronization are not integrated into the new figure in this step.",
+    "Prototype graphics remain six PNG items and 89 vector studies; no premium illustration completion.",
+    "Unsaved draft is memory-only; closing retains it within the running app, reloading may discard it. Beforeunload/worker reload guards are not guaranteed mobile crash recovery.",
+    "If unrelated app changes cannot be saved, refresh refuses replacement and offers existing full-app backup; no automatic personal-data overwrite.",
+    "Critical preview precache adds assets; physical storage/GPU/performance/VoiceOver and old-installed-PWA upgrade remain separate gates."
+  ],
+  "unchangedMainCommit": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "liveVersion": "2.4.0 / konpasu-offline-v240",
+  "archiveNote": "Subsequent archive commit changes only documentation and original browser evidence. Exact executed runtime is testedSourceCommit."
+}

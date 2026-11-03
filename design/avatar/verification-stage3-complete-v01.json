@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "stage": "3-complete",
+  "testedSourceCommit": "0749e4527c6fd1a847f373af0476dc0c42f13cd6",
+  "pullRequest": "https://github.com/Rowlandolo/KONPASU/pull/12",
+  "candidateVersion": "2.4.1",
+  "candidateCache": "konpasu-offline-v241",
+  "syntheticOnly": true,
+  "personalProfileAccess": false,
+  "mainBeforeRelease": "19c78523ae530ea4933ffefa1511d98625fec69b",
+  "node": {
+    "status": "passed",
+    "total": 445,
+    "workflowRun": 41647511797,
+    "job": 125956635097
+  },
+  "browserRuns": [
+    {
+      "name": "App and atelier",
+      "status": "passed",
+      "workflowRun": 41647511797,
+      "job": 125956634341,
+      "groups": "10 app + 26 atelier"
+    },
+    {
+      "name": "Outfit editor",
+      "status": "passed",
+      "workflowRun": 41647512019,
+      "job": 125956634213,
+      "groups": 12
+    },
+    {
+      "name": "Outfit storage",
+      "status": "passed",
+      "workflowRun": 41647511814,
+      "job": 125956634477,
+      "groups": 13
+    },
+    {
+      "name": "SVG main avatar",
+      "status": "passed",
+      "workflowRun": 41647511941,
+      "job": 125956634359,
+      "groups": 12
+    },
+    {
+      "name": "Personal variants",
+      "status": "passed",
+      "workflowRun": 41647511833,
+      "job": 125956633966,
+      "groups": 11
+    },
+    {
+      "name": "Artbook main, appearance and history",
+      "status": "passed",
+      "workflowRun": 41647512035,
+      "job": 125956635245,
+      "groups": 15
+    }
+  ],
+  "historyContract": {
+    "format": "konpasu-avatar-snapshot",
+    "version": 1,
+    "completeProfile": true,
+    "commands": [
+      "outfit-save",
+      "outfit-rollback",
+      "appearance-save",
+      "appearance-rollback",
+      "view-save",
+      "view-rollback"
+    ],
+    "noSnapshotFor": [
+      "no-op",
+      "source conflict",
+      "revision conflict",
+      "invalid input",
+      "failed storage write"
+    ],
+    "legacySparseHistoryAccepted": true,
+    "missingPastNotInvented": true,
+    "sameTimestampLatestWins": true
+  },
+  "artbookBrowser": {
+    "status": "passed",
+    "checks": [
+      "Actual personal Save persists exactly four explicitly changed fields plus one complete profile snapshot; outfit, goals, training and unknown data remain equal",
+      "Personal settings survive reload; Recovery appends its complete resulting profile while retaining later name, note, training and independent outfit receipt",
+      "Separate explicit Artbook activation shows checked modular figure in Studio and Home, all saved item identities, personal layers and hidden complete SVG fallback",
+      "Nine actual scene controls and genuine earned Shiba stage render on Artbook; optional measurements transform body, hair and all equipment together",
+      "Fresh evidence hides paused/remapped requests without deletion; unearned selected dragon falls back to actual available companion without changing raw choice",
+      "Locked inventory try-on is visual only and retains saved items; new multi favorite uses Artbook while old favorite never inherits current outfit",
+      "Historical Artbook route reads only its own saved snapshot/personality/scene/companion; missing past never borrows current preference",
+      "Main Artbook stays contained at 320/390/430px with actual English labels and complete phone composition",
+      "Corrupt main atlas retains complete personalized SVG; explicit retry performs no writes, and SVG switch plus separate view recovery preserve outfit/appearance",
+      "Fresh offline Home/Studio and reload hydrate saved Artbook appearance/outfit/scenes/companions through real worker and IndexedDB",
+      "Actual stale-tab personal Save is rejected; explicit refresh merges untouched remote hairstyle with locally changed colour instead of overwriting either",
+      "Concurrent edits to the same personal field remain blocked after refresh until user explicitly chooses a value or resets the trial",
+      "Unsaved unrelated profile/note changes block refresh without memory loss; after their ordinary save the kept personal draft can be safely rebased and committed",
+      "Actual full JSON backup and confirmed existing restore UI round-trip appearance, view preference, both recovery records, outfit and unknown profile fields",
+      "Actual IndexedDB put failure aborts personal commit, restores owned fields/receipt and disk, retains concurrent unrelated note and enters existing write protection"
+    ],
+    "syntheticOnly": true,
+    "limits": [
+      "Fresh synthetic profile on random loopback origin only.",
+      "Artbook imagery remains fixed-pose prototype artwork; complete skin/body/face range, final premium drawings and physical device approval remain open.",
+      "Appearance/view actions have one independent field-scoped recovery step; outfit recovery remains separate.",
+      "Complete snapshots cover explicit avatar commands from this version onward; they do not invent missing history before installation."
+    ],
+    "backgroundAlpha": [
+      255,
+      255,
+      255,
+      255
+    ],
+    "pageErrors": [],
+    "artifactId": 13234014757,
+    "artifactDigest": "sha256:a0a229cb0aa354de9bfc19a46f1a68f1c9771ba319fab5f62c0c2fa668f285a8"
+  },
+  "release": {
+    "authorized": true,
+    "externalBackupConfirmedEarlierInSession": true,
+    "deploymentPendingAtEvidenceCommit": true
+  },
+  "limits": [
+    "Snapshots start with explicit avatar commands in 2.4.1; missing earlier history is not reconstructed.",
+    "Physical iPhone, VoiceOver, GPU peak and installed-old-PWA upgrade remain post-deployment device checks.",
+    "The Artbook artwork remains fixed-pose prototype quality; 89 vector studies still need premium final artwork."
+  ],
+  "archiveCommitOnlyDocsAndEvidence": true
+}

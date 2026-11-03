@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    "Separate synthetic editor starts with actual legacy resolutions, no profile import/app startup/reference prefetch",
+    "Actual add/hide/move/remove/body controls preserve exact intermediate states through complete Undo/Redo and keep keyboard focus",
+    "Reset itself is undoable and restores stable IDs, hidden state and order",
+    "Two custom goals sharing PNG artwork render separate fitted instances with unique SVG IDs and independent visibility",
+    "Equal-depth vector surfaces change actual SVG stacking order while both articles remain selected",
+    "Search and empty results work; all 95 items coexist as 134 vector and 12 PNG modules without displaced IDs",
+    "Switching examples preserves each independent in-memory draft and undo history",
+    "Unknown data stays in unchanged source; missing history and unreadable favorite are visibly blocked without current-profile substitution",
+    "Historical draft retains its actual source date and historical equipment",
+    "DE/EN labels and accessible names; 320/390/430px layouts contain content and retain 44px touch targets",
+    "Already-loaded editor adds, switches loaded body forms, changes examples and performs Undo/Redo offline",
+    "Reload discards the session draft and starts from synthetic source without restoring hidden persistent state",
+    "Invalid fixture fails before editing and retry reloads only the workshop",
+    "Untrusted source labels and unknown IDs remain text without HTML execution",
+    "Invalid vector hash blocks the editor before any partial outfit; retry succeeds without clearing storage",
+    "No localStorage, sessionStorage, IndexedDB or uncaught errors"
+  ],
+  "syntheticOnly": true,
+  "limits": [
+    "Session-memory draft only: no persistence, profile application or app integration.",
+    "PNG/vector studies preserve fixed anatomical depth; order only resolves equal-depth surfaces.",
+    "Warm offline editing is not cold PWA/upgrade or physical-device acceptance."
+  ],
+  "storage": {
+    "local": 0,
+    "session": 0,
+    "databases": 0
+  },
+  "uncaughtErrors": []
+}
