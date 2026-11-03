@@ -292,8 +292,14 @@ Nachweis: dde46f6de2c07a7b4bc7755e8a8ea6447827076a, [255 Regressionen, App-Chrom
 - [x] Quellboard/Karte bytegleich archiviert, tatsächliche Stufe-1-Abbildung und unveränderte ID/Voraussetzung dokumentiert; keine Gleichsetzung von Legacy-Slot und Körperposition.
 - [x] Drei neue native PNGs mit getrennten Rollen; sichtbare Registrierungsgrenzen nur für neue Grafiken definiert, native Dateien unverändert.
 - [x] Sieben gezielte Tests: Referenzbytes, gültige Grenzen, vollständige Gruppe, acht unabhängige Haarzustände beider Formen, Tiefenrollen, bestehende Freischaltsperre und gemeinsame Haarregistrierung.
-- [ ] Frischer Build prüft tatsächliche Alpha>16-Grenzen, Ausgabehashes, Maße und unveränderte Budgets.
-- [ ] Vollständige Regressionen, 256 Basis-/128 Rewardzustände im Browser, kein Entfernen anderer ausgewählter Artikel oder Haare.
-- [ ] Reale SVG-Pixel für Hinterbänder, Haare, Stirnband und Schleife; Gesichtsproben frei, beide Figuren mit/ohne Haare sichten.
-- [ ] Original-/Mobilevergleich beider Formen und 390 px/3×; kaputte Kopfteilgrafik ohne Teilfigur, Retry/Race/Offline-App weiter erfolgreich.
+- [x] Frischer Build prüft tatsächliche Alpha>16-Grenzen, Ausgabehashes, Maße und unveränderte Budgets.
+- [x] Vollständige Regressionen, 256 Basis-/128 Rewardzustände im Browser, kein Entfernen anderer ausgewählter Artikel oder Haare.
+- [x] Reale SVG-Pixel für Hinterbänder, Haare, Stirnband und Schleife; Gesichtsproben frei, beide Figuren mit/ohne Haare sichten.
+- [x] Original-/Mobilevergleich beider Formen und 390 px/3×; kaputte Kopfteilgrafik ohne Teilfigur, Retry/Race/Offline-App weiter erfolgreich.
 - [ ] Physische Geräte-/PWA-Abnahme, universelle weitere Kopfartikel und App-/Datenintegration.
+
+## Abschluss Etappe 2: Fokus-Stirnband und Haarüberlagerung
+
+262 Regressionen, App-Chromium und 26 Atelier-Prüfgruppen erfolgreich für 633e50984f581db846495e011b7766a29d6fb70c ([Lauf 41555922134](https://github.com/Rowlandolo/KONPASU/actions/runs/41555922134)). Vollbeleg samt archivierten Aufnahmen: design/avatar/verification-headwear-depth-v09.json. 256 Basis- und 128 Rewardzustände getrennt geprüft; kein vollständiger kartesischer Sichttest. Alle Kopf-Gesichtsproben Alpha 0; echte SVG-Pixel prüfen Tiefenreihenfolge. Frischer Build 41555922095 reproduziert 24 WebPs plus Manifest bytegleich. Beide Figuren und 390 px/3× gegen Originalmodus gesichtet. Startdateien 819,188 Bytes / Quell-RGBA 50,162,944 Bytes (47.84 MiB); unveränderte Ziele erfüllt. Physische Telefon-/GPU-/Peakmessung bleibt offen.
+
+Nächste Integrationskriterien: alte Einzelauswahl/Favoriten/History verlustfrei in einer reinen Testprojektion abbilden; ruhend/verdeckt/gesperrte Vorschau getrennt halten; keine Besitzfreigabe aus Grafikverfügbarkeit. Fehlende neue Grafiken müssen bestehende Darstellung erhalten. Ein tatsächlicher Speicherschritt benötigt gesonderten Datenvertrag, synthetische Roundtrip-/Rollbackfälle und Offlineprüfung.

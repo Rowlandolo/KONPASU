@@ -1,7 +1,7 @@
 {
   "version": 1,
   "itemId": "focus-1",
-  "status": "prototype-implementation-browser-review-pending",
+  "status": "passed-two-form-atelier-depth-review-app-and-physical-acceptance-open",
   "legacy": {
     "titleDe": "Konzentrationsstein",
     "slot": "main",
@@ -50,10 +50,11 @@
       "z": 90
     }
   ],
-  "registration": "Both body forms share the exact current hair placement; explicit head placements per profile are initially identical and require separate browser/visual acceptance.",
+  "registration": "Explicit identical head placements in both profiles use the shared current hair space. Independently browser-tested and visually inspected with and without both hair layers; limited to these two stand figures and pose.",
   "limits": [
     "This headband and these two stand figures in one pose; not all future headgear or hairstyles.",
     "No hair or selected reward is removed by equipping a headband.",
     "Six fitted prototype articles, 89 remaining; live app and data unchanged."
-  ]
+  ],
+  "verification": "./verification-headwear-depth-v09.json"
 }

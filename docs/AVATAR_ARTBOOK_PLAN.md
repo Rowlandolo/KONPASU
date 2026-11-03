@@ -2,6 +2,8 @@
 
 Stand 02.11.2026. Verbindliche neue Nutzeranforderung: Artbooks als Stil- und Artikelreferenz, einzelne angepasste Module, gemeinsame Auswahl aller Belohnungsartikel ohne stilles Ablegen. Gilt zusätzlich zum vollständigen Masterbriefing. Entwicklung im separaten Branch, kein Live-Update dieses Prototyps.
 
+Aktueller Stand: sechs Prototypartikel mit zwölf Ausrüstungsfragmenten auf zwei Standfiguren; Etappe 2 für dieses Startset technisch abgeschlossen. 89 weitere Standardartikel und App-/Outfitintegration offen. Aktuelle Belege: verification-headwear-depth-v09.json und AVATAR_RELEASE_STEPS.md. Frühere Abschnitte dokumentieren die Entwicklung.
+
 ## Was die Bestandsaufnahme tatsächlich zeigt
 
 - Neun fertige Artbook-/Referenztafeln, 95 daraus abgeleitete WebP-Artikelkarten im Premiumbundle. Die Karten enthalten Hintergründe und Rahmen, sind teilweise angeschnitten und haben keine für den Körper passenden transparenten Silhouetten. Sie sind Inventarillustrationen, keine fertigen Anziehebenen.
@@ -125,3 +127,7 @@ Erster Abschnitt von Etappe 2 abgeschlossen: echtes Vorder-/Hintergeschirr statt
 Ärmelabschnitt abgeschlossen: vier neue PNGs für zwei körperbezogene Gewandgruppen. Logische Wahl kimono bleibt einer von sieben Schaltern, tatsächliche Basisflächen nun acht. Hinterärmel 180 → Körper 200 → Frontgewand 320; Armartikel werden ausschließlich durch Frontstoff maskiert. Beide Formen mit Grundoutfit/komplettem Set sowie Einzelgrafiken gesichtet. Alle acht Unterarm-/Handgelenkanker Frontalpha 0 bei vorhandener Körperalpha 253. Keine Änderungen an Besitz, Voraussetzungen, 95 IDs oder Profil-/Offlinebasis.
 
 255 Regressionen, App-Chromium und 23 Atelier-Gruppen erfolgreich (41551201193), Original-/Mobilevergleich beider Formen und 3× innerhalb Grenzen; 21 Ausgaben plus Manifest bytegleich reproduziert (41551201181). 0.76 MB Startgrafiken / 47.71 MiB Quell-RGBA, physische Gerätefreigabe offen. Nachweis verification-sleeve-depth-v08.json. Als Nächstes tatsächliche Kopfteil-/Haartiefen anhand eines bestehenden Artbook-Artikels; Legacy-Slotnamen nicht mit bestätigter Körperposition verwechseln. Erst danach geplanter App-/Datenvertrag.
+
+## Abschluss Etappe 2: Fokus-Stirnband und Haarüberlagerung
+
+focus-1 ist laut Originaltafel das Fokus-Stirnband auf Stufe 1; Legacy Konzentrationsstein/main und Ein-Wochen-Nachweis unverändert. focus-2 zeigt eine Sanduhr. Bytegleiche Referenzen und Semantik: headwear-contract-v09.json. Drei separate PNGs: hintere Bänder 90, Band 580 unter Pony 600, Schleife 620. Beide Formen mit/ohne Haare und komplettem Sechserset gesichtet; keine Abwahl anderer Artikel. 262 Regressionen, App-Chromium und 26 Atelier-Prüfgruppen erfolgreich für 633e50984f581db846495e011b7766a29d6fb70c ([Lauf 41555922134](https://github.com/Rowlandolo/KONPASU/actions/runs/41555922134)). Vollbeleg samt archivierten Aufnahmen: design/avatar/verification-headwear-depth-v09.json. Etappe 2 für das Startset technisch abgeschlossen; Etappe 3 (App-/Outfitvertrag), weitere 89 Standardartikel und physische Abnahme offen. 0.82 MB Startgrafiken / 47.84 MiB Quell-RGBA; Live-App und Daten unverändert.

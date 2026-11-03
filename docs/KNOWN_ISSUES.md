@@ -109,4 +109,11 @@ ART-11 für die beiden Standfiguren im Atelier behoben: je Form neue Vorder-/Hin
 
 QA-Hinweis zur neuen Grafik: Ein bisheriger einzelner Hand-Messpunkt trifft nach Skalierung eine schwach geglättete Goldkante (etwa 22/255 Alpha). Gewand-Randprobe daher ausdrücklich <32, alle anderen isolierten Teile weiterhin <20; keine pauschale Erhöhung der Körper-/Passformtoleranzen. Separater tatsächlicher Unterarmtest verlangt weiterhin Frontalpha <32 und Körperalpha >240, aktuell an allen acht Stellen 0/253. Bildvergleich gegen die neuen kanonischen Quellen bleibt eigenständig begrenzt.
 
-ART-12 in Entwicklung: Legacy-Namen/-Slots passen nicht durchgehend zu Artbook-Abbildungen. Fokus-Stirnband ist focus-1 (Legacy Konzentrationsstein/main), focus-2 ist bildlich Sand Timer trotz Legacy Hachimaki. Quellboard und Karte bytegleich archiviert, semantische Entscheidung in headwear-contract-v09.json. Drei tatsächliche Kopfteilgrafiken und Tiefenrollen vorbereitet; finaler Build/Browser/Sichtprüfung offen. Keine Live-Umbenennung, Voraussetzungs- oder Besitzmigration.
+ART-12 für das Zwei-Formen-Startset im Atelier behoben: Artbook-Stirnband focus-1 semantisch belegt, drei transparente Tiefenmodule mit eigener Referenz und Registrierung. Legacytitel/-slot, Voraussetzungen und Besitz unverändert. Sechs Artikel bleiben gemeinsam auswählbar, Haare unabhängig; 262 Regressionen/26 Atelier-Gruppen erfolgreich. Belege verification-headwear-depth-v09.json. Weitere 89 Artikel und App-/Datenintegration offen.
+
+ART-13 im Atelier behoben: Die neue optionale Referenz blieb nach Öffnen außerhalb des Sichtbereichs browserseitig lazy. Explizit geöffnete Referenz fordert jetzt eager an, meldet Ladefehler und lässt sich erneut öffnen. Einmalige Anforderung ohne Bundle im Browser geprüft.
+
+
+## Abschluss Etappe 2: Fokus-Stirnband und Haarüberlagerung
+
+Etappe 2 für das Startset technisch abgeschlossen. Kopfteil-/Haartiefen auf beiden Standfiguren gesichtet; alle acht Haarzustände erhalten drei Kopfmodule und sechs Artikelauswahlen. Beschädigte Kopfteilgrafik führt zu keiner Teilfigur. 262 Regressionen, App-Chromium und 26 Atelier-Prüfgruppen erfolgreich für 633e50984f581db846495e011b7766a29d6fb70c ([Lauf 41555922134](https://github.com/Rowlandolo/KONPASU/actions/runs/41555922134)). Vollbeleg samt archivierten Aufnahmen: design/avatar/verification-headwear-depth-v09.json. Weitere 89 Artikel, App-/Outfitintegration und physische Geräte-/Offlineabnahme bleiben offen. Live-App und Daten unverändert.
