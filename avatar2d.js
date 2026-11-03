@@ -121,7 +121,7 @@ function profileForDate(d){
  if(d===today())return data.profile;
  if(window.KONPASU_OUTFIT25?.dateValid(d)&&d<today()){
   const records=(data.avatarHistory||[]).map((r,index)=>({r,index})).filter(x=>window.KONPASU_OUTFIT25.dateValid(x.r.date)&&x.r.date<=d&&x.r.profile&&typeof x.r.profile==='object');
-  records.sort((a,b)=>(b.r.date+String(b.r.savedAt)).localeCompare(a.r.date+String(a.r.savedAt))||a.index-b.index);
+  records.sort((a,b)=>(b.r.date+String(b.r.savedAt)).localeCompare(a.r.date+String(a.r.savedAt))||b.index-a.index);
   if(records.length)return records[0].r.profile;
  }
  return {...createState().profile,lang:data.profile.lang};

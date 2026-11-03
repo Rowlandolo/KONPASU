@@ -1,7 +1,7 @@
 'use strict';
 /* Uses the app's existing queue, IndexedDB revision check and fallback Web Lock. No second store. */
 (function(root){
- const core=root.KONPASU_OUTFIT_PERSIST25,A=root.KONPASU_OUTFIT25;
+ const core=root.KONPASU_OUTFIT_PERSIST25,A=root.KONPASU_OUTFIT25,H=root.KONPASU_AVATAR_HISTORY25;
  function bindings(){const api=root.KONPASU2D;if(!api)throw Error('Avatar reader unavailable');return {slots:api.SLOTS,itemForId:(id,p)=>api.itemForId(id,p),itemState:(item,d)=>api.itemState(item,d),resolveSlot:(slot,p,d)=>api.resolveSlot(slot,p,d),currentPet:(p,d)=>api.currentPet(p,d),companionStage:(p,d)=>api.companionStage(p,d)}}
  const resultError=(error,code)=>({ok:false,code:code||error.code||'invalid-outfit-change',message:error.message,conflict:error.code==='KONPASU_REVISION_CONFLICT'});
  function commit(command){
@@ -12,18 +12,20 @@
    try{
     before=A.copyJSON(data);
     if(input.kind==='rollback'&&input.expectedOperationId!==undefined&&data[core.UNDO]?.operationId!==input.expectedOperationId){const e=Error('Recovery target changed');e.code='recovery-conflict';throw e}
-    prepared=input.kind==='save'?core.prepareSave(data,input.draft,{date:today(),savedAt:new Date().toISOString(),operationId:uid(),bindings:bindings()}):input.kind==='rollback'?core.prepareRollback(data):(()=>{throw Error('Unknown outfit command')})();
+    const date=today(),savedAt=new Date().toISOString(),operationId=uid();
+    prepared=input.kind==='save'?core.prepareSave(data,input.draft,{date,savedAt,operationId,bindings:bindings()}):input.kind==='rollback'?core.prepareRollback(data):(()=>{throw Error('Unknown outfit command')})();
+    if(prepared.changed)H.append(prepared.candidate,{date,savedAt,id:uid(),operationId,kind:input.kind==='save'?'outfit-save':'outfit-rollback'});
     validateImportedBackup(prepared.candidate);
     if(!prepared.changed)return {ok:true,changed:false,revision:knownRevision,comparison:prepared.comparison,diagnostics:prepared.diagnostics};
    }catch(error){return resultError(error)}
-   core.replaceFields(data,prepared.candidate);outfitMutationSerial25++;
+   core.replaceFields(data,prepared.candidate);H.replace(data,prepared.candidate);outfitMutationSerial25++;avatarHistoryMutationSerial25++;
    try{
     if(db)await writeDB(prepared.candidate);else await writeFallback(prepared.candidate);
     persistGood=true;return {ok:true,changed:true,revision:knownRevision,comparison:prepared.comparison,diagnostics:prepared.diagnostics};
    }catch(error){
     // Revert only this operation's fields; keep unrelated in-memory edits made while the write was pending.
     if(core.same(data.profile?.[core.FIELD],prepared.candidate.profile[core.FIELD])&&core.same(data[core.UNDO],prepared.candidate[core.UNDO]))core.replaceFields(data,before);
-    outfitMutationSerial25++;storageWriteFailed(error);return resultError(error,'storage-write-failed');
+    H.restore(data,before,prepared.candidate);outfitMutationSerial25++;avatarHistoryMutationSerial25++;storageWriteFailed(error);return resultError(error,'storage-write-failed');
    }
   });
   // Keep store()'s historical boolean saveQueue contract even though outfit callers receive a detailed result.
