@@ -2,7 +2,7 @@
 
 Offline nutzbarer Ziel- und Trainingsbegleiter mit modularer 2D-Figur, Belohnungssammlung und lokalen Nutzerdaten.
 
-Aktueller Releasekandidat: **2.4.1**, Stand 03.11.2026. Etappe 3 des modularen Artbook-Avatars ist technisch abgeschlossen: Mehrfachoutfits, persönliche Werte, Hauptansicht, Szenen/Begleiter, Rücknahmen und vollständige Avatar-Schnappschüsse. 445 Regressionen und sieben Browser-Workflows bestanden. Veröffentlichung ist freigegeben; echter iPhone-/VoiceOver-/Alt-PWA-Gerätetest bleibt offen.
+Aktuell live: **2.4.1**, Stand 03.11.2026. Etappe 3 des modularen Artbook-Avatars ist technisch abgeschlossen: Mehrfachoutfits, persönliche Werte, Hauptansicht, Szenen/Begleiter, Rücknahmen und vollständige Avatar-Schnappschüsse. 445 Regressionen und sieben Browser-Workflows bestanden; Pages und öffentliche Kernressourcen sind bestätigt. Echter iPhone-/VoiceOver-/Alt-PWA-Gerätetest bleibt offen.
 
 ## Hochladen und ansehen
 
