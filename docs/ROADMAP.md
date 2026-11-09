@@ -49,7 +49,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.12 umgesetzt:** `mobility-2` (Fließender Obi) besitzt einen getrennten Taillengürtel und einen seitlichen Blütenknoten mit Stoffbahnen und Quasten. Die ersten beiden Beweglichkeitsartikel bestehen gemeinsam als vier Module; Cardio, Schritte und beide Artikel bestehen den Übergang als 25 Module.
 
-**Als Nächstes:** Paket 4.13 mit `mobility-3` (Beweglichkeitsärmel). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.13 umgesetzt:** `mobility-3` (Beweglichkeitsärmel) besitzt getrennte asymmetrische Unterarmmodule mit eigenen Passformen und bestehender Kimono-/Außenkleidungsmaskierung. Die ersten drei Beweglichkeitsartikel bestehen als sechs Module; gemeinsam mit Cardio und Schritte bleiben 27 Module erhalten.
+
+**Als Nächstes:** Paket 4.14 mit `mobility-4` (Tänzer-Haori). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

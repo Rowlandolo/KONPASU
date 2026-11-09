@@ -1,19 +1,20 @@
 {
   "version": 13,
   "date": "2026-11-09",
-  "scope": "stage-4-mobility-1-and-2-premium-candidates",
+  "scope": "stage-4-mobility-1-through-3-premium-candidates",
   "status": "passed-development-atelier",
   "articles": {
     "candidates": [
       "mobility-1",
-      "mobility-2"
+      "mobility-2",
+      "mobility-3"
     ],
-    "candidateModules": 4,
-    "transitionModules": 25,
-    "remainingVectorStudies": 77
+    "candidateModules": 6,
+    "transitionModules": 27,
+    "remainingVectorStudies": 76
   },
   "catalogueBrowser": {
-    "checks": 24,
+    "checks": 26,
     "articles": 95,
     "bodyForms": 2,
     "singleRenderChecks": 190,
@@ -25,6 +26,10 @@
     "mobility2ChangedPixels": {
       "form-a": 5593,
       "form-b": 6610
+    },
+    "mobility3ChangedPixels": {
+      "form-a": 1842,
+      "form-b": 2231
     },
     "storageWrites": 0,
     "uncaughtErrors": []
@@ -38,7 +43,11 @@
     "mobility-1-2-premium-form-b.png": "c1ab63fe84f9b13e165ca3d078fa68f4b659369baf94426b5abd4fecef090a22",
     "cardio-steps-mobility-1-2-form-a.png": "9f57ee998c5751a9a883e09719ecc1f7db739a5183893e73812fea026c433be8",
     "cardio-steps-mobility-1-2-form-b.png": "e50943aa16fd7bbcb8a75d48fcd73b95e2bb573f2e7cd2c1295f9e767deed3b7",
-    "family-mobility.png": "0e8ee388e6197ab8a9df45c167578df59e7f90a90c141ecb4bb687fbdf4dd8a5"
+    "mobility-1-3-premium-form-a.png": "bc101aa4855a79759c60ffddc1a036eb9b1daad80862689837750eafe156ffb1",
+    "mobility-1-3-premium-form-b.png": "2b2c736d30b9a3e435dcdecc538204a784d118547a3bf0b16f88033f85b629e5",
+    "cardio-steps-mobility-1-3-form-a.png": "0875f9dbfa11058d938ad42e4270dd3ea1a344fbb6ef266b7eb214ded069fa46",
+    "cardio-steps-mobility-1-3-form-b.png": "81b0c8c55dd58134b0de024279c64aefdebb4a2b3815f1a73f6947697db82970",
+    "family-mobility.png": "a4f34d62def118ba376e8816dc4c30d9d35dd12079104f88fd228676f1ac86ff"
   },
   "accepted": [
     "Both Stretch Ribbon candidates render as separate modules on both registered body forms.",
@@ -46,6 +55,8 @@
     "Cardio, Steps and Stretch Ribbons coexist as twenty-three independent modules.",
     "Stretch Ribbons and Flowing Sash coexist as four independent modules on both registered body forms.",
     "Cardio, Steps and the first two Mobility candidates coexist as twenty-five independent modules.",
+    "The first three Mobility candidates coexist as six independent modules on both registered body forms.",
+    "Mobility Sleeves remain selected under real outer-front masks in the twenty-seven-module transition composition.",
     "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
     "No profile, ownership, goal, training, reward or browser-storage write occurs."
   ],

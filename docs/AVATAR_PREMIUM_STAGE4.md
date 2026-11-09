@@ -75,3 +75,7 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 ## Paket 4.12 · Fließender Obi (`mobility-2`)
 
 `mobility-2-band.png` bildet den breiten waldgrünen Taillengürtel mit gestaffelten Seidenfalten, matten Goldkanten und feinem Blattzweig. `mobility-2-bow.png` enthält den seitlichen elfenbein-grünen Blütenknoten, zwei asymmetrische lange Stoffbahnen und zwei Goldquasten. Gürtel und Vorderteil besitzen getrennte Tiefen und eigene Passformen für beide Körperformen; Tasche, Rüstung und Außenkleidung dürfen den Gürtel natürlich überdecken, ohne Schleife oder Auswahl zu entfernen.
+
+## Paket 4.13 · Beweglichkeitsärmel (`mobility-3`)
+
+`mobility-3-left.png` und `mobility-3-right.png` sind getrennte, asymmetrische Unterarmärmel aus elfenbeinfarbener Seide mit waldgrünen Manschetten, Goldkanten, Blütenschließen, Kordeln, Quasten und individuellen Blattzweigen. Beide folgen den vorhandenen Unterarmankern mit eigenen Passformen für Körperform A und B. Die bestehende Armmaske lässt Hände frei und verdeckt die Ärmel ausschließlich unter tatsächlichen Kimono- oder Außenkleidungsflächen.

@@ -2533,7 +2533,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-3-left.png",
+            "bytes": 282690,
+            "sha256": "db99a055c73cf579e73e27b09727eb060eb366011552db8054bbfcbedf32c6c6",
+            "width": 451,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                108,
+                252,
+                76,
+                132
+              ],
+              "form-b": [
+                92,
+                248,
+                84,
+                146
+              ]
+            }
+          }
         },
         {
           "shape": "sleeve",
@@ -2566,17 +2587,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-3-right.png",
+            "bytes": 286687,
+            "sha256": "bee351b3f9be4f14f51dad0831da51367dec0528bb508a0fd6889a3f57984779",
+            "width": 404,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                328,
+                252,
+                72,
+                132
+              ],
+              "form-b": [
+                344,
+                248,
+                80,
+                146
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-4",
