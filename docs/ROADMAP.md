@@ -23,7 +23,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Etappe 4 begonnen:** `cardio-1` (Windschal) liegt als erster Premiumkandidat mit getrennten Vorder-/Rückebenen, Hashbindung und Passform für beide Körperformen vor. 36 Testdateien, 190 Einzelrenderings und der 95er-Mehrfachoutfitlauf sind grün. Details: AVATAR_PREMIUM_STAGE4.md.
 
-**Als Nächstes:** `cardio-2` (Wind-Tabi) als zweites Premium-Paket mit gesonderter Sohlen-, Zehen- und Gewandüberdeckungsprüfung. Danach folgen Tempo-Armbänder, Umhang und Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
+**Paket 4.2 umgesetzt:** `cardio-2` (Wind-Tabi) besitzt zwei asymmetrische Premiumkandidaten für die feste Standpose. Sohlen, geteilte Zehen und Überdeckung durch Hakama/Grundschuhe werden auf beiden Körperformen geprüft.
+
+**Als Nächstes:** `cardio-3` (Tempo-Armbänder), danach Umhang und Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

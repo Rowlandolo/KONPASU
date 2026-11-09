@@ -623,7 +623,18 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-2-left.png",
+            "sha256": "35c961d0aa8d3ab523bbaa271fc825e0077d4e6c853a9547ee2d37b038c1b8dc",
+            "bytes": 125193,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [90, 565, 220, 220],
+              "form-b": [90, 565, 220, 220]
+            }
+          }
         },
         {
           "shape": "boot-right",
@@ -652,17 +663,27 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-2-right.png",
+            "sha256": "051165238dc3f8bb8e6f1ce427d8abd7cd581b24d78b83827b755032252126a6",
+            "bytes": 179033,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [245, 620, 140, 140],
+              "form-b": [245, 620, 140, 140]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-3",

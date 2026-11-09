@@ -19,6 +19,10 @@ Beide Module besitzen eigene Passformboxen für Form A und B. Der Katalog prüft
 - Mischansichten Form A und B visuell geprüft; Vorderband, Goldornamentik und andere Ausrüstung bleiben sichtbar und kombinierbar.
 - Keine Profil-, Ziel-, Training-, Rewardregel-, Datenbank- oder Liveänderung.
 
+## Paket 4.2 · Wind-Tabi (`cardio-2`)
+
+Die hohen Tabi sind keine gespiegelten Kopien. `cardio-2-left.png` folgt dem kompakten frontalen Fuß, `cardio-2-right.png` dem längeren nach außen gedrehten Fuß. Beide besitzen getrennte Ebenen mit dunklem geteiltem Zehenbereich, grünem Schaft, gekreuzten Goldbändern und botanischem Knöchelschutz. Die Schäfte beginnen unter dem Hakama; Sohlen und Zehenspitzen bleiben für die Passformprüfung sichtbar.
+
 ## Offene Freigaben
 
-Der Windschal ist ein **Premiumkandidat**, noch keine endgültig freigegebene Grafik. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-2` (Wind-Tabi) mit gesonderter Sohlen-, Zehen- und Gewandüberdeckungsprüfung.
+Windschal und Wind-Tabi sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-3` (Tempo-Armbänder).
