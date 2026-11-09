@@ -37,7 +37,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.7 umgesetzt:** `steps-2` (Wegtasche) besitzt einen getrennten Körperriemen und einen detailreichen Taschenkörper mit Kartenklappe, Blattmedaillon, Quaste und Glyzinienanhänger.
 
-**Als Nächstes:** Paket 4.8 mit `steps-3` (Pilgerhut-Anhänger). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.8 umgesetzt:** `steps-3` (Pilgerhut-Anhänger) liegt als geschlossenes Premium-Zubehörmodul mit Ring, Knoten, Flechthut, Blütenmedaillon, Quasten und Glyzinien vor.
+
+**Als Nächstes:** Paket 4.9 mit `steps-4` (Reise-Haori). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

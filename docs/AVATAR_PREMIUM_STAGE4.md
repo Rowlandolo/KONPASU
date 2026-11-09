@@ -51,3 +51,7 @@ Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Ko
 ## Paket 4.7 · Wegtasche (`steps-2`)
 
 `steps-2-strap.png` bildet ausschließlich den langen braunen Körperriemen mit Naht, Goldschnalle und Anschlussring. `steps-2-bag.png` enthält den dunkelgrünen Taschenkörper, die elfenbeinfarbene Kartenklappe, Blattmedaillon, zwei Frontschnallen, Goldquaste, kurzen Griff und violetten Glyzinienanhänger. Beide Ebenen besitzen eigene Passformen für Form A und B; Brustpanzer und Außenkleidung dürfen den Riemen natürlich überdecken, ohne die Tasche oder ihre Auswahl zu entfernen.
+
+## Paket 4.8 · Pilgerhut-Anhänger (`steps-3`)
+
+`steps-3-charm.png` bewahrt den vollständigen kleinen Anhänger als eine zusammenhängende Ebene: goldener Aufhängering und Knoten, geflochtener Kegelhut mit dunkler Unterseite, Blütenmedaillon, grüne Blätter, zwei Goldquasten und ein violetter Glyzinienzweig. Das Modul hängt am Obi beziehungsweise neben der Wegtasche; die neutrale Handpose bleibt erhalten.
