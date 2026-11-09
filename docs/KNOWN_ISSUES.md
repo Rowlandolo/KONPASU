@@ -251,8 +251,10 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.16
+## Etappe 4 · Stand nach Paket 4.17
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
 `water-1` besitzt nun eine hashgebundene Premium-Bambusflasche mit eigener Passform für beide registrierten Körperformen. Der 32-Modul-Übergang mit Cardio, Schritte und Beweglichkeit besteht, 73 Katalogartikel bleiben Vektorstudien. Offen bleiben universelle Posen und Kombinationen, App-/Kalt-Offlineintegration, physische Geräte, VoiceOver sowie GPU-/Speicherspitzen; die Atelierabnahme ist keine Produktionsfreigabe.
+
+`water-2` ergänzt eine getrennte Premium-Lackflasche. Beide Wasserartikel bleiben im gemeinsamen Rendering sichtbar; der Übergang mit Cardio, Schritte und Beweglichkeit besteht als 33 Module auf beiden registrierten Körperformen. 72 Artikel bleiben Vektorstudien. Universelle Posen und Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

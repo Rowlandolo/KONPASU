@@ -94,6 +94,12 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 
 Die Einzelansicht und der Übergang mit den vollständigen Familien Cardio, Schritte und Beweglichkeit bestehen auf beiden Körperformen. Alle sechzehn Premiumartikel bleiben als 32 Module gleichzeitig ausgewählt; es gibt keine Slotverdrängung und keine Speicheränderung. Der hashgebundene Bild- und Prüfbeleg liegt in `design/avatar/verification-premium-water-v14.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v14/`. 73 Artikel bleiben Vektorstudien.
 
+## Paket 4.17 · Lackflasche (`water-2`)
+
+`water-2-bottle.png` bildet die bauchige dunkle Lackflasche der Artbookkarte mit rotem Halsrand, doppelt gelegter Goldkordel, großer Seitenschlaufe, heller Quaste und elfenbeingoldenem Blütenzweig ab. Das transparente Einzelmodul besitzt eine eigene, gegenüber der Bambusflasche nach außen versetzte Registrierung für Form A und B.
+
+Beide Wasserartikel bleiben als zwei getrennte Module gleichzeitig sichtbar und sortierbar. Zusammen mit den vollständigen Familien Cardio, Schritte und Beweglichkeit bestehen sie den 33-Modul-Übergang auf beiden Körperformen. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v15.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v15/`. 72 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
