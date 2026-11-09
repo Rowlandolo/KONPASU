@@ -71,3 +71,7 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 ## Paket 4.11 · Dehnbänder (`mobility-1`)
 
 `mobility-1-left.png` und `mobility-1-right.png` bilden zwei getrennte, asymmetrische Seidenbänder mit waldgrünen und elfenbeinfarbenen Flächen, matten Goldkanten, Ahorn- und Blütenmotiven sowie eigenen Knoten und Quasten. Beide Module verlaufen als offene S-Kurven hinter Armen und Gewand. Eigene Premiumpassformen für Körperform A und B halten Schulter-, Hand- und Saumbereiche frei; beide Bänder bleiben unabhängig sichtbar und sortierbar.
+
+## Paket 4.12 · Fließender Obi (`mobility-2`)
+
+`mobility-2-band.png` bildet den breiten waldgrünen Taillengürtel mit gestaffelten Seidenfalten, matten Goldkanten und feinem Blattzweig. `mobility-2-bow.png` enthält den seitlichen elfenbein-grünen Blütenknoten, zwei asymmetrische lange Stoffbahnen und zwei Goldquasten. Gürtel und Vorderteil besitzen getrennte Tiefen und eigene Passformen für beide Körperformen; Tasche, Rüstung und Außenkleidung dürfen den Gürtel natürlich überdecken, ohne Schleife oder Auswahl zu entfernen.

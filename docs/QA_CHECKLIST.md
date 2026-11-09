@@ -385,6 +385,15 @@ Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-ou
 - [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
 - [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
 
+## Etappe 4 · Paket 4.12
+
+- [x] Obi-Gürtel und Blütenknoten/Stoffbahnen sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, Einzelrendering, natürliche Taillenüberdeckung und sichtbare Pixeländerung geprüft.
+- [x] `mobility-1` und `mobility-2` bleiben gemeinsam als vier Module sichtbar.
+- [x] Cardio, Schritte und beide Beweglichkeitsartikel bleiben gemeinsam als 25 Module erhalten.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
 ## Abschluss Etappe 3.4.1: sichtbarer Editor mit Speichern, Konflikt und Rücknahme
 
 Entwurfs-PR [#8](https://github.com/Rowlandolo/KONPASU/pull/8) auf #7 ergänzt den tatsächlichen Einstieg **Avatar → Outfits → Mehrfachoutfit bearbeiten**. Native Dialogbedienung mit Artbook-Anprobe, Artikelwahl/Suche, unabhängiger Sichtbarkeit/Reihenfolge, Körperform, Undo/Redo/Reset und ausdrücklichem Speichern. Separate dauerhafte Rücknahme ist bei ungespeicherten Entwurfsänderungen gesperrt. Schließen behält den Entwurf in der laufenden App. Vorhandene Ausrüstung, Favoriten, History, Ziele/Trainings und übrige Daten bleiben erhalten.

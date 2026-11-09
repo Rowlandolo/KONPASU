@@ -253,4 +253,4 @@ Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6
 
 ## Etappe 4 · Stand nach Paket 4.11
 
-`mobility-1` besitzt zwei hashgebundene Premiumkandidaten und besteht Einzel- sowie 23-Modul-Übergangsrendering auf beiden registrierten Körperformen. 78 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
+`mobility-1` und `mobility-2` besitzen je zwei hashgebundene Premiumkandidaten. Beide Artikel bestehen gemeinsam als vier Module sowie im 25-Modul-Übergangsrendering auf beiden registrierten Körperformen. 77 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
