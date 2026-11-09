@@ -79,3 +79,7 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 ## Paket 4.13 · Beweglichkeitsärmel (`mobility-3`)
 
 `mobility-3-left.png` und `mobility-3-right.png` sind getrennte, asymmetrische Unterarmärmel aus elfenbeinfarbener Seide mit waldgrünen Manschetten, Goldkanten, Blütenschließen, Kordeln, Quasten und individuellen Blattzweigen. Beide folgen den vorhandenen Unterarmankern mit eigenen Passformen für Körperform A und B. Die bestehende Armmaske lässt Hände frei und verdeckt die Ärmel ausschließlich unter tatsächlichen Kimono- oder Außenkleidungsflächen.
+
+## Paket 4.14 · Tänzer-Haori (`mobility-4`)
+
+`mobility-4-rear.png` enthält das dunkelgrün-anthrazitfarbene Futter, offene Rückenbahnen, Goldlinien und seitlich fließende Glyzinien hinter der Figur. `mobility-4-front.png` bildet die elfenbeinfarbene Außenlage mit sehr weiten Ärmeln, offenen Lapellen, Schulterknoten, Goldkordel und violetten Glyzinien. Hals, Körpermitte, Ärmelöffnungen und untere Mitte bleiben transparent. Beide Ebenen besitzen eigene Passformen für Körperform A und B; nur tatsächliche Vorderflächen maskieren Armartikel.

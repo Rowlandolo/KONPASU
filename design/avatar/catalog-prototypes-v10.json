@@ -2703,7 +2703,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-4-rear.png",
+            "bytes": 615245,
+            "sha256": "1f4b65bc86a0b9038584cb59248f00b2e1ba6a108b33eac5bfb1f2865ca0d0d9",
+            "width": 759,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                34,
+                78,
+                444,
+                500
+              ],
+              "form-b": [
+                5,
+                68,
+                502,
+                565
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-wisteria",
@@ -2733,17 +2754,37 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-4-front.png",
+            "bytes": 734095,
+            "sha256": "bb1d35ec2dbf3f7be9ba2dfe026a7eed6ccf1e475e969ef5e3435cb8e2835387",
+            "width": 778,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                30,
+                78,
+                452,
+                500
+              ],
+              "form-b": [
+                0,
+                68,
+                512,
+                565
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-5",
