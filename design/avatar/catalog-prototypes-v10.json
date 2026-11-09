@@ -2198,7 +2198,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-1-left.png",
+            "bytes": 162317,
+            "sha256": "596a79dea29d7a0cb019cde2725ec2f828f58635d629bf8a6f7fafa68beae2ef",
+            "width": 209,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                58,
+                132,
+                148,
+                438
+              ],
+              "form-b": [
+                46,
+                126,
+                160,
+                452
+              ]
+            }
+          }
         },
         {
           "shape": "ribbon",
@@ -2227,17 +2248,37 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-1-right.png",
+            "bytes": 172000,
+            "sha256": "1212823fb401986e5e75ee6ba91d6de23925b88df1e0aed63d9e3fe158e0fbba",
+            "width": 221,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                306,
+                132,
+                148,
+                438
+              ],
+              "form-b": [
+                306,
+                126,
+                160,
+                452
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-2",

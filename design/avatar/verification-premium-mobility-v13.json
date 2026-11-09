@@ -1,0 +1,45 @@
+{
+  "version": 13,
+  "date": "2026-11-09",
+  "scope": "stage-4-mobility-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidate": "mobility-1",
+    "candidateModules": 2,
+    "transitionModules": 23,
+    "remainingVectorStudies": 78
+  },
+  "catalogueBrowser": {
+    "checks": 22,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "mobility1ChangedPixels": {
+      "form-a": 7185,
+      "form-b": 5984
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "mobility-1-premium-form-a.png": "faf9578b1b9f7c58f71dbca7e4e8024417548c1f3a2a65bb7e6a18416a3fc8bf",
+    "mobility-1-premium-form-b.png": "90e3294a4a2eb577d51c1cc745a3aaea0b4b7c723ce9c612e6aaca34f8407dbe",
+    "cardio-steps-mobility-1-form-a.png": "b97f0dc781130c6f651741d09eb034cf55aaad91740e0c60638c6d7cba165dfd",
+    "cardio-steps-mobility-1-form-b.png": "87fe1aaea29f9c31f7e7a4d4a0980c725c1ac12cffb879256acfe9dd9d31be47",
+    "family-mobility.png": "15876e81e4ed649118b98126597e6a84dc016f343debd52d3b3fbd0e8509415c"
+  },
+  "accepted": [
+    "Both Stretch Ribbon candidates render as separate modules on both registered body forms.",
+    "The ribbons remain behind hands and garments without removing either selected identity.",
+    "Cardio, Steps and Stretch Ribbons coexist as twenty-three independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "Premium candidates remain review artwork until physical-device approval."
+  ]
+}

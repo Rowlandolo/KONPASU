@@ -250,3 +250,7 @@ OUTFIT-14 hinsichtlich automatischer Historisierung behoben: Alle erfolgreichen 
 HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und identischer UTC-Speicherzeit konnten den älteren Eintrag wählen. Zeitreise sortiert bei Gleichstand nun nach Einfügereihenfolge, der zuletzt gespeicherte Zustand gewinnt. Regression vorhanden.
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
+
+## Etappe 4 · Stand nach Paket 4.11
+
+`mobility-1` besitzt zwei hashgebundene Premiumkandidaten und besteht Einzel- sowie 23-Modul-Übergangsrendering auf beiden registrierten Körperformen. 78 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.

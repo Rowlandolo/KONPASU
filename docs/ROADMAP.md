@@ -45,7 +45,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Schritte-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Neun-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, Cardio-Übergang, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
 
-**Als Nächstes:** Paket 4.11 mit `mobility-1` (Dehnbänder). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.11 umgesetzt:** `mobility-1` (Dehnbänder) besitzt zwei getrennte asymmetrische Seidenbandmodule mit eigenen Passformen für beide Körperformen. Der Einzeltest und der Übergang mit Cardio und Schritte als 23 Module sind abgenommen.
+
+**Als Nächstes:** Paket 4.12 mit `mobility-2` (Fließender Obi). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

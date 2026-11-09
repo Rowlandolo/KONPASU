@@ -67,3 +67,7 @@ Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Ko
 ## Schritte-Familienabnahme
 
 Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-Komposition, Körperform A/B, Maskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit der vollständigen Cardio-Serie, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
+
+## Paket 4.11 · Dehnbänder (`mobility-1`)
+
+`mobility-1-left.png` und `mobility-1-right.png` bilden zwei getrennte, asymmetrische Seidenbänder mit waldgrünen und elfenbeinfarbenen Flächen, matten Goldkanten, Ahorn- und Blütenmotiven sowie eigenen Knoten und Quasten. Beide Module verlaufen als offene S-Kurven hinter Armen und Gewand. Eigene Premiumpassformen für Körperform A und B halten Schulter-, Hand- und Saumbereiche frei; beide Bänder bleiben unabhängig sichtbar und sortierbar.

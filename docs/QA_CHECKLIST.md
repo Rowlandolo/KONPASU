@@ -377,6 +377,14 @@ Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-ou
 - [ ] Produktive Editor-/Rendererbedienung, Personalisierung/Szenen/Begleiter und Legacy-Rückweg samt allen UI-/Offlinefällen.
 - [ ] Physische Geräte, VoiceOver, Alt-PWA-Upgrade und freigegebene Veröffentlichung.
 
+## Etappe 4 · Paket 4.11
+
+- [x] Beide Dehnbänder sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, Einzelrendering, unabhängige Modulidentitäten und sichtbare Pixeländerung geprüft.
+- [x] Cardio, Schritte und `mobility-1` bleiben gemeinsam als 23 Module ausgewählt und sichtbar.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
 ## Abschluss Etappe 3.4.1: sichtbarer Editor mit Speichern, Konflikt und Rücknahme
 
 Entwurfs-PR [#8](https://github.com/Rowlandolo/KONPASU/pull/8) auf #7 ergänzt den tatsächlichen Einstieg **Avatar → Outfits → Mehrfachoutfit bearbeiten**. Native Dialogbedienung mit Artbook-Anprobe, Artikelwahl/Suche, unabhängiger Sichtbarkeit/Reihenfolge, Körperform, Undo/Redo/Reset und ausdrücklichem Speichern. Separate dauerhafte Rücknahme ist bei ungespeicherten Entwurfsänderungen gesperrt. Schließen behält den Entwurf in der laufenden App. Vorhandene Ausrüstung, Favoriten, History, Ziele/Trainings und übrige Daten bleiben erhalten.
