@@ -2,7 +2,7 @@
 (async function(){
  const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
  const startset=window.KONPASU_AVATAR_RIG25.CATALOG.map(i=>i.id),selected=new Set(startset),hidden=new Set(),baseSelection=new Set(window.KONPASU_BASE_LAYERS25.PARTS),models=new Map(),loading=new Map(),referenceCache=new Map();
- let api,profiles,body='form-a',order=[],ready=false,request=0,detailId=null,detailRequest=0,cardURL=null,boardURL=null,currentPlan=null;
+ let api,profiles,body='form-a',order=[],ready=false,request=0,detailId=null,detailRequest=0,cardURL=null,boardURL=null,currentPlan=null;const rasterAssets=new Map();
  const art=window.KONPASU_PROTOTYPE_ART,scene=window.KONPASU_SCENE25,vectors=window.KONPASU_CATALOG_VECTORS;
  const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
  async function json(file){const r=await fetch(file,{cache:'no-store'});if(!r.ok)throw Error('Werkstattdatei fehlt: '+file);return r.json()}
@@ -72,7 +72,7 @@
  }
  async function raster(){
   await Promise.all([...$('catalog-scene').querySelectorAll('image')].map(img=>img.decode?.().catch(()=>{})||Promise.resolve()));
-  const s=$('catalog-scene').cloneNode(true);for(const img of s.querySelectorAll('image')){const href=img.getAttribute('href');if(href&&!/^(?:data:|blob:|https?:)/.test(href))img.setAttribute('href',new URL(href,location.href).href)}s.setAttribute('xmlns','http://www.w3.org/2000/svg');s.setAttribute('width',256);s.setAttribute('height',384);s.setAttribute('style','background:#f1f3e9');
+  const s=$('catalog-scene').cloneNode(true),images=[...s.querySelectorAll('image')];await Promise.all(images.map(async img=>{const href=img.getAttribute('href');if(!href||/^(?:data:|blob:)/.test(href))return;const url=new URL(href,location.href).href;if(!rasterAssets.has(url))rasterAssets.set(url,(async()=>{const r=await fetch(url);if(!r.ok)throw Error('Rastermodul fehlt');const blob=await r.blob();return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob)})})());img.setAttribute('href',await rasterAssets.get(url))}));s.setAttribute('xmlns','http://www.w3.org/2000/svg');s.setAttribute('width',256);s.setAttribute('height',384);s.setAttribute('style','background:#f1f3e9');
   const uri=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(s)],{type:'image/svg+xml'}));
   try{const img=new Image();img.src=uri;await img.decode();const c=document.createElement('canvas');c.width=256;c.height=384;const ctx=c.getContext('2d');ctx.drawImage(img,0,0);return c.toDataURL('image/png')}finally{URL.revokeObjectURL(uri)}
  }

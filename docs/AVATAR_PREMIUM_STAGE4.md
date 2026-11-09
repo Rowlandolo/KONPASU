@@ -23,6 +23,10 @@ Beide Module besitzen eigene Passformboxen für Form A und B. Der Katalog prüft
 
 Die hohen Tabi sind keine gespiegelten Kopien. `cardio-2-left.png` folgt dem kompakten frontalen Fuß, `cardio-2-right.png` dem längeren nach außen gedrehten Fuß. Beide besitzen getrennte Ebenen mit dunklem geteiltem Zehenbereich, grünem Schaft, gekreuzten Goldbändern und botanischem Knöchelschutz. Die Schäfte beginnen unter dem Hakama; Sohlen und Zehenspitzen bleiben für die Passformprüfung sichtbar.
 
+## Paket 4.3 · Tempo-Armbänder (`cardio-3`)
+
+`cardio-3-left.png` und `cardio-3-right.png` folgen den entgegengesetzten Unterarmwinkeln der festen Standpose. Die grünen Stoffwickel besitzen goldene Randbänder, gekreuzte Schnüre und eigene botanische Details. Beide bleiben getrennte Ebenen. Bestehende Kimono- und Außenkleidungsmasken verdecken die oberen Bereiche anatomisch, ohne den Artikel oder seine Auswahl zu entfernen.
+
 ## Offene Freigaben
 
-Windschal und Wind-Tabi sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-3` (Tempo-Armbänder).
+Windschal, Wind-Tabi und Tempo-Armbänder sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-4` (Sturmläufer-Umhang).

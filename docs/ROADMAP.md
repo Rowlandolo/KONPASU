@@ -25,7 +25,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.2 umgesetzt:** `cardio-2` (Wind-Tabi) besitzt zwei asymmetrische Premiumkandidaten für die feste Standpose. Sohlen, geteilte Zehen und Überdeckung durch Hakama/Grundschuhe werden auf beiden Körperformen geprüft.
 
-**Als Nächstes:** `cardio-3` (Tempo-Armbänder), danach Umhang und Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
+**Paket 4.3 umgesetzt:** `cardio-3` (Tempo-Armbänder) besitzt getrennte, posegerechte Premiumkandidaten für beide Unterarme. Kimono- und Außenkleidungsmasken bleiben aktiv.
+
+**Als Nächstes:** `cardio-4` (Sturmläufer-Umhang), danach die Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

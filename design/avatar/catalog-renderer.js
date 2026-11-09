@@ -16,7 +16,7 @@
    vectorElements.push({node:part,element:g});
   }
   const occluding=vectorElements.filter(x=>x.node.occludes==='arm').map(x=>x.element.id),all=[...baseScene.nodes.map(n=>({node:n,element:doc.getElementById(svg.id+'-'+n.id)})),...vectorElements];
-  const isArm=n=>n.kind==='vector'?n.occludedBy?.includes('outer-front'):/^(wrist-wrap|armguard)-/.test(n.partId||'');
+  const isArm=n=>['vector','premium'].includes(n.kind)?n.occludedBy?.includes('outer-front'):/^(wrist-wrap|armguard)-/.test(n.partId||'');
   for(const entry of all){
    const sources=[];
    if(applyOcclusion&&isArm(entry.node))sources.push(...occluding);
