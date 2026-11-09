@@ -29,7 +29,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.4 umgesetzt:** `cardio-4` (Sturmläufer-Umhang) besitzt getrennte Vorder-/Rückflächen. Nur die tatsächliche Vorderfläche maskiert Armartikel; Körpermitte, Obi und Hakama bleiben durch die offene Silhouette kombinierbar.
 
-**Als Nächstes:** `cardio-5` (Sturmreiter-Rüstungsaura) und danach die vollständige Cardio-Familienabnahme. App-/Offlineintegration erfolgt erst nach dieser Abnahme.
+**Paket 4.5 umgesetzt:** `cardio-5` (Sturmreiter-Rüstungsaura) besitzt vier getrennte Premiumkandidaten: Aura, Rückengewand, offenes Vordergewand und Brustpanzer. Damit sind alle fünf Cardio-Artikel als zwölf unabhängig kombinierbare Module vorhanden.
+
+**Als Nächstes:** vollständige Cardio-Familienabnahme auf beiden Körperformen, danach das erste Premiumgrafikpaket der Schritte-Serie. App-/Offlineintegration erfolgt erst nach dieser Abnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

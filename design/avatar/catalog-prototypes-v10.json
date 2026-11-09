@@ -1071,7 +1071,18 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-rear.png",
+            "sha256": "ddc2447727d25435cee04bea3fa13ee1020366726aa9935909747a2fbdab198a",
+            "bytes": 471113,
+            "width": 507,
+            "height": 768,
+            "fit": {
+              "form-a": [65, 80, 380, 570],
+              "form-b": [36, 70, 440, 660]
+            }
+          }
         },
         {
           "shape": "garment-front-wind",
@@ -1101,7 +1112,18 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-front.png",
+            "sha256": "10c26799de1f7e2a8a5a643293a631d9fd1233ea8388f55e1472b65e82305b33",
+            "bytes": 408703,
+            "width": 499,
+            "height": 768,
+            "fit": {
+              "form-a": [65, 80, 380, 570],
+              "form-b": [36, 70, 440, 660]
+            }
+          }
         },
         {
           "shape": "breastplate",
@@ -1130,7 +1152,18 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-breastplate.png",
+            "sha256": "3950d3b4f2e905e3f8e2870cd16ff8821d9b5f73a556b98b52a463fa0583463a",
+            "bytes": 193607,
+            "width": 418,
+            "height": 512,
+            "fit": {
+              "form-a": [178, 116, 160, 196],
+              "form-b": [171, 112, 174, 213]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -1159,17 +1192,27 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-aura.png",
+            "sha256": "c80dca0bdb828c0e0abb3bc40072b48e710a3c8daa56a57a4d7921f784fd1809",
+            "bytes": 414013,
+            "width": 768,
+            "height": 768,
+            "fit": {
+              "form-a": [20, 118, 472, 472],
+              "form-b": [20, 118, 472, 472]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-1",

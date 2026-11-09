@@ -17,6 +17,7 @@ Beide Module besitzen eigene Passformboxen für Form A und B. Der Katalog prüft
 - Katalogbrowser: 190 sichtbare Einzelrenderings, 95 Artikel gemeinsam, beide Körperformen und 19 Familienvergleichsseiten erfolgreich.
 - Mehrfachoutfit-Browser: alle 95 Artikel, unabhängige Instanzen, Sichtbarkeit, Reihenfolge, Undo/Redo und Warm-Offlinebetrieb erfolgreich.
 - Mischansichten Form A und B visuell geprüft; Vorderband, Goldornamentik und andere Ausrüstung bleiben sichtbar und kombinierbar.
+- Die vollständige Cardio-Serie wird zusätzlich gemeinsam als zwölf unabhängige Module auf Form A und B gerendert.
 - Keine Profil-, Ziel-, Training-, Rewardregel-, Datenbank- oder Liveänderung.
 
 ## Paket 4.2 · Wind-Tabi (`cardio-2`)
@@ -31,6 +32,10 @@ Die hohen Tabi sind keine gespiegelten Kopien. `cardio-2-left.png` folgt dem kom
 
 `cardio-4-rear.png` bildet den langen dunklen Umhangkörper hinter Figur und Armen. `cardio-4-front.png` enthält ausschließlich Schulterkragen, Goldknoten, Quasten und die offenen seitlichen Vorderbahnen. Die transparente Körpermitte erhält Kimono, Obi und Hakama. Nur die sichtbaren Vorderbahnen wirken als Armmaske; Schal, Armbänder und Schuhe bleiben eigene Artikelinstanzen.
 
+## Paket 4.5 · Sturmreiter-Rüstungsaura (`cardio-5`)
+
+Der legendäre Cardio-Abschluss besteht aus vier unabhängigen transparenten Modulen. `cardio-5-aura.png` liegt hinter der Figur und hält die Körpermitte frei. `cardio-5-rear.png` trägt dunkle Rückbahnen und helle Windstoffe. `cardio-5-front.png` ergänzt Schulterpanzer, Hüftverschluss und offene Seitenbahnen; nur seine tatsächlichen Pixel maskieren Armartikel. `cardio-5-breastplate.png` bleibt als eigene vordere Rüstung separat sichtbar und sortierbar. So können alle vier Bestandteile einzeln mit den übrigen 94 Artikeln kombiniert werden.
+
 ## Offene Freigaben
 
-Die ersten vier Cardio-Artikel sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-5` (Sturmreiter-Rüstungsaura).
+Alle fünf Cardio-Artikel sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben die gemeinsame Familienabnahme, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket beginnt nach der Cardio-Abnahme mit der Schritte-Serie.
