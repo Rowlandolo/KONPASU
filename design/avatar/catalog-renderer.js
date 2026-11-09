@@ -10,7 +10,7 @@
   const vectorElements=[];
   for(const part of plan.nodes){
    let g=cache.vectors.get(part.id);
-   if(!g){g=create('g');const nested=create('svg'),drawing=root.KONPASU_CATALOG_VECTORS.art(part.shape,part.theme,prefix+'-'+part.partId);nested.setAttribute('viewBox','0 0 '+drawing.viewBox.join(' '));nested.setAttribute('width','100%');nested.setAttribute('height','100%');nested.setAttribute('preserveAspectRatio','xMidYMid meet');nested.innerHTML=drawing.markup;g.append(nested);cache.vectors.set(part.id,g)}
+   if(!g){g=create('g');const nested=create(part.kind==='premium'?'image':'svg');if(part.kind==='premium'){nested.setAttribute('href',part.premium.file);nested.setAttribute('preserveAspectRatio','xMidYMid meet')}else{const drawing=root.KONPASU_CATALOG_VECTORS.art(part.shape,part.theme,prefix+'-'+part.partId);nested.setAttribute('viewBox','0 0 '+drawing.viewBox.join(' '));nested.setAttribute('width','100%');nested.setAttribute('height','100%');nested.setAttribute('preserveAspectRatio','xMidYMid meet');nested.innerHTML=drawing.markup}g.append(nested);cache.vectors.set(part.id,g)}
    g.id=prefix+'-'+part.partId;g.dataset.itemId=part.itemId;g.dataset.studyModule=part.partId;g.dataset.category=part.category;
    const nested=g.firstElementChild;for(const [k,v] of Object.entries(part.placement))nested.setAttribute(k,v);
    vectorElements.push({node:part,element:g});

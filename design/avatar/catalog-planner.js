@@ -17,6 +17,7 @@
     if(!PART.test(p.partId)||!p.partId.startsWith(item.id+'-study-')||parts.has(p.partId)||!/^\.\/vector-prototypes-v10\/[a-z0-9-]+\.svg$/.test(p.file)||!/^[a-f0-9]{64}$/.test(p.sha256)||!/^[a-z-]{1,40}$/.test(p.shape)||!/^[a-z-]{1,40}$/.test(p.category)||!/^[a-z-]{1,40}$/.test(p.anchor)||!['forest','teal','night','harvest','lotus','sky','ink','zen','festival'].includes(p.theme)||!Number.isFinite(p.z)||p.z<0||p.z>700||!Array.isArray(p.viewBox)||p.viewBox.length!==2||!p.viewBox.every(n=>Number.isFinite(n)&&n>0&&n<=200))throw Error('Invalid vector module');parts.add(p.partId);
     for(const shape of ['form-a','form-b']){const b=p.fit?.[shape];if(!Array.isArray(b)||b.length!==4||!b.every(Number.isFinite)||b[2]<=0||b[3]<=0||b[0]<-64||b[1]<-64||b[0]+b[2]>576||b[1]+b[3]>832)throw Error('Invalid per-body fit')}
     if(p.occludedBy!==undefined&&(!Array.isArray(p.occludedBy)||p.occludedBy.some(x=>!['kimono','outer-front'].includes(x))))throw Error('Unknown vector occlusion');
+    if(p.premium!==undefined){const a=p.premium;if(!/^\.\/premium-v12\/[a-z0-9-]+\.png$/.test(a.file)||!/^[a-f0-9]{64}$/.test(a.sha256)||!Number.isSafeInteger(a.bytes)||a.bytes<24||![a.width,a.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096))throw Error('Invalid premium module');for(const shape of ['form-a','form-b']){const b=a.fit?.[shape];if(!Array.isArray(b)||b.length!==4||!b.every(Number.isFinite)||b[2]<=0||b[3]<=0||b[0]<-64||b[1]<-64||b[0]+b[2]>576||b[1]+b[3]>832)throw Error('Invalid premium fit')}}
    }
   }
   if(vectors!==89||parts.size!==134)throw Error('Incomplete prototype coverage');
@@ -34,7 +35,7 @@
     const item=byId.get(id);if(!item){issues.push({id,reason:'unknown-item'});continue}
     if(isAllowed&&isAllowed(id)!==true){issues.push({id,reason:'not-allowed'});continue}
     selected.push(id);if(hidden.has(id))continue;
-    for(const part of item.parts){const [x,y,width,height]=part.fit[body];nodes.push({...part,id:'vector-'+part.partId,itemId:id,kind:'vector',theme:item.theme,placement:{x,y,width,height},priority:priority.get(id)??catalogue.items.findIndex(x=>x.id===id)})}
+    for(const part of item.parts){const source=part.premium||part,[x,y,width,height]=source.fit[body];nodes.push({...part,id:'vector-'+part.partId,itemId:id,kind:part.premium?'premium':'vector',theme:item.theme,placement:{x,y,width,height},priority:priority.get(id)??catalogue.items.findIndex(x=>x.id===id)})}
    }
    return {previewOnly:true,body,selectedIds:selected.sort(),hiddenIds:selected.filter(id=>hidden.has(id)).sort(),pngIds:selected.filter(id=>!byId.get(id).parts.length&&!hidden.has(id)).sort(),
     nodes:nodes.sort((a,b)=>a.z-b.z||a.priority-b.priority||a.id.localeCompare(b.id)),issues};

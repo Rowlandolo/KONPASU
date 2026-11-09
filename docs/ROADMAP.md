@@ -21,7 +21,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Etappe 3.4.4 und damit Etappe 3 technisch abgeschlossen:** Outfit-, persönliche und Ansichtsaktionen samt Rücknahmen erzeugen genau einen vollständigen resultierenden Profilschnappschuss. No-op, Konflikt und Schreibfehler erzeugen keinen; alte sparsame Historie bleibt unverändert und fehlende Vergangenheit wird nicht erfunden. 445 Regressionen und sämtliche sieben Browser-Workflows grün. Vertrag: AVATAR_HISTORY_STAGE3.md; Vollbeleg: `design/avatar/verification-stage3-complete-v01.json`.
 
-**Als Nächstes Etappe 4:** die 89 Vektorstudien schrittweise zu finalen Premiumzeichnungen ausarbeiten und ihre optische Passform in priorisierten Kombinationsfamilien abnehmen. Die technische 95er-Kombinierbarkeit, Besitz-/Tragbarkeitslogik, Speicherung, Zeitreise und Rückwege sind Grundlage dieses Grafikabschnitts.
+**Etappe 4 begonnen:** `cardio-1` (Windschal) liegt als erster Premiumkandidat mit getrennten Vorder-/Rückebenen, Hashbindung und Passform für beide Körperformen vor. 36 Testdateien, 190 Einzelrenderings und der 95er-Mehrfachoutfitlauf sind grün. Details: AVATAR_PREMIUM_STAGE4.md.
+
+**Als Nächstes:** `cardio-2` (Wind-Tabi) als zweites Premium-Paket mit gesonderter Sohlen-, Zehen- und Gewandüberdeckungsprüfung. Danach folgen Tempo-Armbänder, Umhang und Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

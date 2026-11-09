@@ -478,7 +478,18 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-1-rear.png",
+            "sha256": "ea4773ea7211f06e94dbac0b9208954628e6dc63bd0889bf2ccaa371f774b1da",
+            "bytes": 160844,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [100, 74, 300, 300],
+              "form-b": [86, 68, 335, 335]
+            }
+          }
         },
         {
           "shape": "scarf-band",
@@ -507,17 +518,27 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-1-front.png",
+            "sha256": "98727f700b2f94e9c2e7f89de7666c5f76a2707af43c50c79f6ab901ec90b7b3",
+            "bytes": 170680,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [188, 48, 145, 145],
+              "form-b": [182, 43, 160, 160]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-2",
