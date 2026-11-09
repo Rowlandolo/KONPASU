@@ -1583,7 +1583,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-2-strap.png",
+            "sha256": "608a9eaa1f7d59d3aa4a4f88bf589f6846edbb4260f904198d9b6fd2eaa68a39",
+            "bytes": 83209,
+            "width": 479,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                145,
+                95,
+                220,
+                353
+              ],
+              "form-b": [
+                130,
+                90,
+                245,
+                393
+              ]
+            }
+          }
         },
         {
           "shape": "satchel",
@@ -1613,17 +1634,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-2-bag.png",
+            "sha256": "c6c1e40a47e5f64b27450c82aba5bea1be3d87648e8dfd149f97e834ddd646a7",
+            "bytes": 292762,
+            "width": 571,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                112,
+                260,
+                180,
+                161
+              ],
+              "form-b": [
+                97,
+                260,
+                195,
+                175
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-3",

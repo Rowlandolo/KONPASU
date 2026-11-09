@@ -47,3 +47,7 @@ Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Ko
 ## Paket 4.6 · Reisesandalen (`steps-1`)
 
 `steps-1-left.png` und `steps-1-right.png` sind getrennte, asymmetrische Premiumkandidaten für die beiden festen Fußwinkel. Beide übernehmen die helle Sohle, dunkle Laufkante, tiefgrüne Zehenriemen und goldenen Blattornamente der Artbookkarte. Die Module besitzen eigene Passformboxen und bleiben unabhängig von allen Cardio-Schuhen sowie den übrigen Artikeln auswählbar.
+
+## Paket 4.7 · Wegtasche (`steps-2`)
+
+`steps-2-strap.png` bildet ausschließlich den langen braunen Körperriemen mit Naht, Goldschnalle und Anschlussring. `steps-2-bag.png` enthält den dunkelgrünen Taschenkörper, die elfenbeinfarbene Kartenklappe, Blattmedaillon, zwei Frontschnallen, Goldquaste, kurzen Griff und violetten Glyzinienanhänger. Beide Ebenen besitzen eigene Passformen für Form A und B; Brustpanzer und Außenkleidung dürfen den Riemen natürlich überdecken, ohne die Tasche oder ihre Auswahl zu entfernen.
