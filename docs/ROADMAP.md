@@ -71,7 +71,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.21 umgesetzt:** `sleep-1` (Mond-Haarnadel) besitzt getrennte hintere Goldstifte und eine vordere Mondsichel mit Kirschblüten und Glyzinie. Die korrigierte seitliche Kopfpassform hält das Gesicht frei und besteht mit Cardio, Schritte, Beweglichkeit und Wasser als 39 Module auf beiden Körperformen.
 
-**Als Nächstes:** Paket 4.22 mit `sleep-2`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.22 umgesetzt:** `sleep-2` (Traumkissen-Talisman) besitzt ein dunkelblaues, gold eingefasstes Kissenmodul mit Mondhasen, Blüten, Wellenstickerei und Tragekordel. Die Kordel sitzt auf beiden Körperformen an der rechten Hand; beide Schlafartikel bestehen gemeinsam als drei Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 40 Module.
+
+**Als Nächstes:** Paket 4.23 mit `sleep-3`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

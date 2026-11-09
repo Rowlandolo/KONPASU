@@ -126,6 +126,12 @@ Alle fünf Wasser-Kandidaten bestehen Einzelrendering, gemeinsame Sechs-Modul-Ko
 
 Beide Tiefenmodule bestehen Einzelrendering auf Form A und B sowie den 39-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v19.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v19/`. 68 Artikel bleiben Vektorstudien.
 
+## Paket 4.22 · Traumkissen-Talisman (`sleep-2`)
+
+`sleep-2-pillow.png` bildet ein dunkelblaues, gold eingefasstes Kissentäschchen mit weißem Mondhasen, Blüten, Wellenstickerei und goldener Tragekordel ab. Die eigene Passform je Körperform setzt die Kordel unmittelbar an die rechte Hand und hält Kissen, Finger, Hakama und vorhandene Hüftaccessoires voneinander getrennt.
+
+Der Talisman besteht Einzelrendering und die gemeinsame Drei-Modul-Komposition mit der Mond-Haarnadel auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 40 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v20.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v20/`. 67 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

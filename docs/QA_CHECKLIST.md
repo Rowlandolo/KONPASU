@@ -513,6 +513,17 @@ Beleg: `design/avatar/verification-premium-water-v18.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sleep-v19.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v19/`.
 
+## Etappe 4 · Paket 4.22 Traumkissen-Talisman
+
+- [x] `sleep-2` gegen die Artbookkarte geprüft: dunkelblaues Kissen, Goldfassung und -kordel, weißer Mondhase, Blüten und Wellenstickerei.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Kordel an der rechten Hand registriert; Finger, Kissen, Hakama und vorhandene Hüftaccessoires bleiben getrennt lesbar.
+- [x] Beide Schlafartikel gemeinsam als drei Module und im 40-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v20.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v20/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

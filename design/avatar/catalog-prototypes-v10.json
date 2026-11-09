@@ -3833,17 +3833,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-2-pillow.png",
+            "bytes": 580974,
+            "sha256": "30ce1fe1773e21638e44b1e1a6276bc4138605fde76fdb722516f4723618d9c9",
+            "width": 768,
+            "height": 685,
+            "fit": {
+              "form-a": [
+                320,
+                395,
+                105,
+                93.7
+              ],
+              "form-b": [
+                330,
+                395,
+                105,
+                93.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-3",

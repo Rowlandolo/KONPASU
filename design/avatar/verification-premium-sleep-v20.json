@@ -1,0 +1,43 @@
+{
+  "version": 20,
+  "date": "2026-11-09",
+  "scope": "stage-4-sleep-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sleep-1", "sleep-2"],
+    "candidateModules": 3,
+    "transitionModules": 40,
+    "remainingVectorStudies": 67
+  },
+  "catalogueBrowser": {
+    "checks": 45,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sleep2ChangedPixels": {"form-a": 1132, "form-b": 1132},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sleep-1-2-premium-form-a.png": "4e7763f2b6088c3b0be8ceb44ad0a0ca54bdbd5c1e0cf6ed9956ec2e850ffc2a",
+    "sleep-1-2-premium-form-b.png": "17cc7125ed73131237eb2d208bee230a536b03e7b80d44fa0eaa8cfacff2aaf0",
+    "cardio-steps-mobility-water-and-sleep-1-2-form-a.png": "d5662fcdfed585a273a2b6726e74a7b42a659c5d075e765276b29bb21479dc9d",
+    "cardio-steps-mobility-water-and-sleep-1-2-form-b.png": "2c7a0a016d55f7514c62703e807ceb3bbe4aa15d29366ddc10df338b966c66ee",
+    "family-sleep.png": "ec48da9129fb459135f53c2e679e487d9c7b281ccc5f053b0f47eb34109c8876"
+  },
+  "accepted": [
+    "The Dream Charm Pillow Talisman follows the source motif with a dark blue pillow, gold piping and cord, white moon rabbit, flowers and wave embroidery.",
+    "The cord registers at the right hand while pillow, fingers, hakama and existing hip accessories remain separately readable on both body forms.",
+    "Moon Hairpin and Dream Charm Pillow coexist as three independent premium modules.",
+    "Both Sleep candidates preserve complete Cardio, Steps, Mobility and Water families as forty independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}
