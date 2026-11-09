@@ -466,6 +466,18 @@ Beleg: `design/avatar/verification-premium-water-v14.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-water-v15.json`; archivierte Ansichten: `design/avatar/review-premium-water-v15/`.
 
+## Etappe 4 · Paket 4.18 Kristallfeldflasche
+
+- [x] `water-3` gegen die Artbookkarte geprüft: hellblauer Facettenkörper, Kristallverschluss, Goldnetz, Kordelschlaufe und helle Quaste.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene Passform auf Form A und B; dritte versetzte Position erhält alle vollständigen Silhouetten und neutrale Hände.
+- [x] Erste drei Wasserartikel gemeinsam als drei unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 34-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v16.json`; archivierte Ansichten: `design/avatar/review-premium-water-v16/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

@@ -3268,17 +3268,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-3-crystal.png",
+            "bytes": 582358,
+            "sha256": "76bed523a9b327a2066a51027d027e17a3689fcce6874e05ab4a7a740ad106dd",
+            "width": 768,
+            "height": 685,
+            "fit": {
+              "form-a": [
+                232,
+                292,
+                124,
+                110.6
+              ],
+              "form-b": [
+                242,
+                292,
+                124,
+                110.6
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-4",

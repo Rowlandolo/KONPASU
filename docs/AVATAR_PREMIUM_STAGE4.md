@@ -100,6 +100,12 @@ Die Einzelansicht und der Übergang mit den vollständigen Familien Cardio, Schr
 
 Beide Wasserartikel bleiben als zwei getrennte Module gleichzeitig sichtbar und sortierbar. Zusammen mit den vollständigen Familien Cardio, Schritte und Beweglichkeit bestehen sie den 33-Modul-Übergang auf beiden Körperformen. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v15.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v15/`. 72 Artikel bleiben Vektorstudien.
 
+## Paket 4.18 · Kristallfeldflasche (`water-3`)
+
+`water-3-crystal.png` übernimmt den hellblauen facettierten Kristallkörper, den kurzen Kristallverschluss, das goldene Tragenetz, die Kordelschlaufe und die silbrig helle Quaste der Artbookkarte. Die getrennte Passform auf der gegenüberliegenden Hüftseite hält alle drei Wasserbehälter gleichzeitig lesbar.
+
+Die ersten drei Wasserartikel bestehen die gemeinsame Drei-Modul-Komposition und zusammen mit Cardio, Schritte und Beweglichkeit den 34-Modul-Übergang auf Form A und B. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v16.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v16/`. 71 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

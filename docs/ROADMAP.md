@@ -61,7 +61,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.17 umgesetzt:** `water-2` (Lackflasche) besitzt eine dunkle bauchige Lackfläche, roten Halsrand, Goldkordel, helle Quaste und elfenbeingoldene Blüten. Beide Wasserartikel bleiben als getrennte Module auf beiden Körperformen lesbar und bestehen mit Cardio, Schritte und Beweglichkeit den 33-Modul-Übergang.
 
-**Als Nächstes:** Paket 4.18 mit `water-3`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.18 umgesetzt:** `water-3` (Kristallfeldflasche) besitzt einen facettierten hellblauen Körper, Kristallverschluss, goldenes Tragenetz und helle Quaste. Die ersten drei Wasserartikel bestehen gemeinsam als drei Module und mit Cardio, Schritte und Beweglichkeit als 34 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.19 mit `water-4`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
