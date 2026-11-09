@@ -1,0 +1,43 @@
+{
+  "version": 19,
+  "date": "2026-11-09",
+  "scope": "stage-4-sleep-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sleep-1"],
+    "candidateModules": 2,
+    "transitionModules": 39,
+    "remainingVectorStudies": 68
+  },
+  "catalogueBrowser": {
+    "checks": 43,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sleep1ChangedPixels": {"form-a": 391, "form-b": 391},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sleep-1-premium-form-a.png": "a4ab9b26740f1aa8b32de2ddff000c48819fa8884c9ca6833c70ae72ba238dc7",
+    "sleep-1-premium-form-b.png": "65af715b3bf7d26367bc745cf814da54b48da206483f0201cadfee049de1c44e",
+    "cardio-steps-mobility-water-and-sleep-1-form-a.png": "078a34c16fc1e123a53507bf1e93ca248f81d27ad5d4f20b542562008ac006ce",
+    "cardio-steps-mobility-water-and-sleep-1-form-b.png": "c1046c5e006b456c4c2c41f3573fd65252ad9c4f1bb837d49047aacbe80ce647",
+    "family-sleep.png": "35b4f686649d211b2ada0e0b7cbc8b1616dc367da8b1ccb97b5e58ced8d0e16e"
+  },
+  "accepted": [
+    "The Moon Hairpin follows the source motif with a gold crescent, star points, cherry blossoms and hanging violet wisteria.",
+    "Rear stems and front ornament remain separate depth modules on both registered body forms.",
+    "The corrected outer-hair registration leaves eyes, face and expression unobstructed.",
+    "Moon Hairpin preserves complete Cardio, Steps, Mobility and Water families as thirty-nine independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

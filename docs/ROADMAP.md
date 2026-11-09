@@ -69,7 +69,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Wasser-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen gemeinsam als sechs Module auf beiden Körperformen einschließlich Sichtbarkeit, Reihenfolge, 37-Modul-Übergang mit Cardio, Schritte und Beweglichkeit, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
 
-**Als Nächstes:** Paket 4.21 mit `sleep-1`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.21 umgesetzt:** `sleep-1` (Mond-Haarnadel) besitzt getrennte hintere Goldstifte und eine vordere Mondsichel mit Kirschblüten und Glyzinie. Die korrigierte seitliche Kopfpassform hält das Gesicht frei und besteht mit Cardio, Schritte, Beweglichkeit und Wasser als 39 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.22 mit `sleep-2`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

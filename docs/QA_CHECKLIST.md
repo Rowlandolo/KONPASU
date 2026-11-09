@@ -502,6 +502,17 @@ Beleg: `design/avatar/verification-premium-water-v17.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-water-v18.json`; archivierte Ansichten: `design/avatar/review-premium-water-v18/`.
 
+## Etappe 4 · Paket 4.21 Mond-Haarnadel
+
+- [x] `sleep-1` gegen die Artbookkarte geprüft: Goldmond, Sternpunkte, Kirschblüten und hängende violette Glyzinie.
+- [x] Goldstifte als hintere und sichtbarer Schmuck als vordere transparente, hashgebundene Haarebene umgesetzt.
+- [x] Erste Sichtprüfung erkannte Gesichtsüberdeckung; korrigierte seitliche Passform hält Augen, Gesicht und Mimik auf Form A und B frei.
+- [x] Einzelrendering und 39-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Frisuren/Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v19.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v19/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

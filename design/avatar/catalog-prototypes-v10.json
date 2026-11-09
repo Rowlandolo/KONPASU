@@ -3667,7 +3667,28 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-1-stem.png",
+            "bytes": 82304,
+            "sha256": "b82882c5f5648654325931e829afe73413b1954f9f2e94f2842c4b35d819735d",
+            "width": 768,
+            "height": 385,
+            "fit": {
+              "form-a": [
+                231,
+                40,
+                120,
+                60.2
+              ],
+              "form-b": [
+                231,
+                40,
+                120,
+                60.2
+              ]
+            }
+          }
         },
         {
           "shape": "hairpin",
@@ -3696,17 +3717,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-1-ornament.png",
+            "bytes": 219446,
+            "sha256": "34d2b80c2b8d295b6afeee5eecb63a25422a92fbaa02ec880af2056fad4d5b9d",
+            "width": 494,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                285,
+                24,
+                68,
+                105.7
+              ],
+              "form-b": [
+                285,
+                24,
+                68,
+                105.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-2",

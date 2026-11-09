@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.20
+## Etappe 4 · Stand nach Paket 4.21
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -264,3 +264,5 @@ Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule un
 `water-4` ergänzt eine getrennte zeremonielle Premium-Wasserkalebasse. Die ersten vier Wasserartikel bleiben gemeinsam vollständig sichtbar; der Übergang mit Cardio, Schritte und Beweglichkeit besteht als 35 Module auf beiden registrierten Körperformen. 70 Artikel bleiben Vektorstudien. Universelle Posen und Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 Die vollständige Wasser-Serie besitzt sechs hashgebundene Premiummodule und besteht gemeinsam sowie im 37-Modul-Übergangsrendering mit Cardio, Schritte und Beweglichkeit auf beiden registrierten Körperformen. 69 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; universelle Kombinationen, App-/Kalt-Offlineintegration, physische Geräte, VoiceOver sowie GPU-/Speicherspitzen bleiben offen.
+
+`sleep-1` besitzt zwei hashgebundene Premiumebenen für Stifte und sichtbaren Mond-/Blütenschmuck. Die seitliche Passform hält das Gesicht auf beiden registrierten Körperformen frei; der 39-Modul-Übergang mit Cardio, Schritte, Beweglichkeit und Wasser besteht. 68 Artikel bleiben Vektorstudien. Weitere Frisuren, Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

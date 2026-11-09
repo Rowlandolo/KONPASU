@@ -120,6 +120,12 @@ Die ersten vier Wasserartikel bestehen die gemeinsame Vier-Modul-Komposition und
 
 Alle fünf Wasser-Kandidaten bestehen Einzelrendering, gemeinsame Sechs-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, 37-Modul-Übergang mit den vollständigen Familien Cardio, Schritte und Beweglichkeit, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-water-v18.json`, sieben gehashte Ansichten in `design/avatar/review-premium-water-v18/`. 69 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
 
+## Paket 4.21 · Mond-Haarnadel (`sleep-1`)
+
+`sleep-1-stem.png` enthält zwei schmale goldene Stifte als hintere Haarebene. `sleep-1-ornament.png` bildet die sichtbare goldene Mondsichel mit Sternpunkten, rosafarbenen und elfenbeinfarbenen Kirschblüten, jadefarbenen Blättern und hängender violetter Glyzinie ab. Die korrigierte seitliche Registrierung hält Augen, Gesicht und Mimik frei.
+
+Beide Tiefenmodule bestehen Einzelrendering auf Form A und B sowie den 39-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v19.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v19/`. 68 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
