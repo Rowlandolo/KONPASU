@@ -1,21 +1,22 @@
 {
   "version": 13,
   "date": "2026-11-09",
-  "scope": "stage-4-mobility-1-through-4-premium-candidates",
+  "scope": "stage-4-complete-mobility-family-acceptance",
   "status": "passed-development-atelier",
   "articles": {
     "candidates": [
       "mobility-1",
       "mobility-2",
       "mobility-3",
-      "mobility-4"
+      "mobility-4",
+      "mobility-5"
     ],
-    "candidateModules": 8,
-    "transitionModules": 29,
-    "remainingVectorStudies": 75
+    "candidateModules": 10,
+    "transitionModules": 31,
+    "remainingVectorStudies": 74
   },
   "catalogueBrowser": {
-    "checks": 28,
+    "checks": 30,
     "articles": 95,
     "bodyForms": 2,
     "singleRenderChecks": 190,
@@ -35,6 +36,10 @@
     "mobility4ChangedPixels": {
       "form-a": 28914,
       "form-b": 36700
+    },
+    "mobility5ChangedPixels": {
+      "form-a": 11167,
+      "form-b": 10587
     },
     "storageWrites": 0,
     "uncaughtErrors": []
@@ -56,7 +61,11 @@
     "mobility-1-4-premium-form-b.png": "2867bf26f45b7915117843f3db017b9e656d5a0a97370d57940237d08ff8153f",
     "cardio-steps-mobility-1-4-form-a.png": "980f5810a7ad8a08477926929b9d510c04988bb22d5bf40a15a744b715613d1a",
     "cardio-steps-mobility-1-4-form-b.png": "f44ed433f11b489f8b1f7b3d19901b24b1ea83bdce950a2c1fa941b64ab6d3ae",
-    "family-mobility.png": "dcd689db1b52eab73c3cfe28cce80d6df096fd4ad4ff2484f00c57b7fad9edcd"
+    "mobility-premium-complete-form-a.png": "23fa22aec46ece0058f165be2f42c83d63b2584c981b7044cb84b643ef327b2c",
+    "mobility-premium-complete-form-b.png": "cc010df3ef62b462f2ed00206b5c08483584ef89cacb8d2c27089d01d7f6951a",
+    "cardio-steps-mobility-complete-form-a.png": "fc2a0147bdeaac63f5d385a63b82e6fb926ac1e6d59681c3984ad2984e4681f7",
+    "cardio-steps-mobility-complete-form-b.png": "801b430ef387ed39acca68e079ec0231d8d239bfff525deae84a51fbd97b5b7a",
+    "family-mobility.png": "617aa745fef3892bceda66aed2002a8726454050c90cbd84c8504a14337b9a20"
   },
   "accepted": [
     "Both Stretch Ribbon candidates render as separate modules on both registered body forms.",
@@ -68,6 +77,8 @@
     "Mobility Sleeves remain selected under real outer-front masks in the twenty-seven-module transition composition.",
     "The first four Mobility candidates coexist as eight independent modules on both registered body forms.",
     "Dancer Haori keeps its centre and sleeve openings transparent while preserving all twenty-nine selected modules.",
+    "All five Mobility candidates coexist as ten independent modules on both registered body forms.",
+    "Complete Cardio, Steps and Mobility families coexist as thirty-one independent modules.",
     "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
     "No profile, ownership, goal, training, reward or browser-storage write occurs."
   ],

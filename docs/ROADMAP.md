@@ -53,7 +53,11 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.14 umgesetzt:** `mobility-4` (Tänzer-Haori) besitzt getrennte Vorder-/Rückebenen mit offenem Zentrum, weiten Ärmelöffnungen, Schulterknoten und Glyzinien. Die ersten vier Beweglichkeitsartikel bestehen als acht Module; gemeinsam mit Cardio und Schritte bleiben 29 Module erhalten.
 
-**Als Nächstes:** Paket 4.15 mit `mobility-5` (Schlangenwind-Aura), danach die vollständige Beweglichkeits-Familienabnahme. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.15 umgesetzt:** `mobility-5` (Schlangenwind-Aura) besitzt getrennte Drachen- und Windebenen mit offenen Zentren.
+
+**Beweglichkeits-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Zehn-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, Übergang mit Cardio und Schritte als 31 Module, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Als Nächstes:** Paket 4.16 mit `water-1`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

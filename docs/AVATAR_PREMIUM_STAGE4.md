@@ -83,3 +83,11 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 ## Paket 4.14 · Tänzer-Haori (`mobility-4`)
 
 `mobility-4-rear.png` enthält das dunkelgrün-anthrazitfarbene Futter, offene Rückenbahnen, Goldlinien und seitlich fließende Glyzinien hinter der Figur. `mobility-4-front.png` bildet die elfenbeinfarbene Außenlage mit sehr weiten Ärmeln, offenen Lapellen, Schulterknoten, Goldkordel und violetten Glyzinien. Hals, Körpermitte, Ärmelöffnungen und untere Mitte bleiben transparent. Beide Ebenen besitzen eigene Passformen für Körperform A und B; nur tatsächliche Vorderflächen maskieren Armartikel.
+
+## Paket 4.15 · Schlangenwind-Aura (`mobility-5`)
+
+`mobility-5-dragon.png` bildet einen jade-elfenbeinfarbenen, blattgeschmückten Winddrachen in offener Kurve hinter der Figur. `mobility-5-wind.png` enthält eine getrennte offene Windellipse aus elfenbeinfarbenen, jadefarbenen und goldenen Bögen mit Blättern und violetten Blütenblättern vor dem Unterkörper. Beide Effektmodule besitzen große transparente Zentren und bleiben unabhängig sortierbar.
+
+## Beweglichkeits-Familienabnahme
+
+Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

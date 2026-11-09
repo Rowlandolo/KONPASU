@@ -2870,7 +2870,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-5-dragon.png",
+            "bytes": 266812,
+            "sha256": "bd9e2e82e92c2841036053ac105d9775297695033aee9c1b39d8dfae9d091a99",
+            "width": 768,
+            "height": 427,
+            "fit": {
+              "form-a": [
+                10,
+                82,
+                492,
+                300
+              ],
+              "form-b": [
+                10,
+                82,
+                492,
+                300
+              ]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -2899,17 +2920,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-5-wind.png",
+            "bytes": 119393,
+            "sha256": "7f9ad51ed3d6934eceb9e8885a289936368704921a6c3794918ceac6fec1601e",
+            "width": 768,
+            "height": 348,
+            "fit": {
+              "form-a": [
+                20,
+                390,
+                472,
+                250
+              ],
+              "form-b": [
+                20,
+                405,
+                472,
+                250
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-1",
