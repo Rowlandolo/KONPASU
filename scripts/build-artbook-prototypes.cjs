@@ -2,6 +2,9 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const {boards,families}=require('./artbook-prototype-definitions.cjs'),vectors=require('../design/avatar/catalog-vectors.js');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'design/avatar'),legacy=require('../docs/REWARD_MAPPING.json'),original=new Map(legacy.map(x=>[x.id,x]));
+const cataloguePath=path.join(dir,'catalog-prototypes-v10.json');
+const priorCatalogue=fs.existsSync(cataloguePath)?JSON.parse(fs.readFileSync(cataloguePath,'utf8')):{items:[]};
+const premiumCandidates=new Map(priorCatalogue.items.filter(item=>item.premiumStatus).map(item=>[item.id,item]));
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'premium-art-bundle.js'),'utf8'),context);
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const {webpSize}=require('./avatar-budget.cjs');
@@ -127,12 +130,19 @@ for(const [family,label,board,row,theme,entries] of families){
  });
 }
 if(items.length!==95||items.filter(i=>i.parts.length).length!==89)throw Error('Incomplete catalogue');
+for(const item of items){
+ const prior=premiumCandidates.get(item.id);if(!prior)continue;
+ const priorParts=new Map(prior.parts.map(part=>[part.partId,part]));
+ for(const part of item.parts){const premium=priorParts.get(part.partId)?.premium;if(!premium)throw Error('Incomplete premium candidate '+item.id+': '+part.partId);part.premium=premium}
+ item.remaining=prior.remaining.filter(entry=>entry!=='Premiumzeichnung statt Vektorstudie'&&entry!=='Individuelle finale Detailpassform');
+ item.premiumStatus=prior.premiumStatus;
+}
 const result={version:1,scope:'isolated-development-prototypes-no-storage-or-unlock-changes',source:'premium-art-bundle.js',
  sourceBundleSHA256:hash(fs.readFileSync(path.join(root,'premium-art-bundle.js'))),
  sourceReview:'Five original boards visually inspected; row/column and all stable reward-card keys retained. Some legacy card crops shift to neighbouring illustrations, especially social/nature. Original comparison uses declared viewports of the unchanged complete board, never a silently edited card. Names describe artwork only, not live reward renames.',
  limits:['Vector fit studies are not premium-final artwork.','Two standing body forms in one pose.','Expression sets remain visibly marked separate studies until proper face sources exist.','Source bitmap budget for the six-article atelier is unchanged; all-95 inline-vector DOM/GPU/peak cost needs physical measurement.'],
  families:families.map(([id,label])=>({id,label})),items};
-fs.writeFileSync(path.join(dir,'catalog-prototypes-v10.json'),JSON.stringify(result,null,2)+'\n');
+fs.writeFileSync(cataloguePath,JSON.stringify(result,null,2)+'\n');
 const escape=s=>s.replaceAll('|','/'),doc=['# Artbook-Katalog: 95 Artikel und 89 neue Passformprototypen','','Die Nutzeranweisung vom 03.11.2026 priorisiert alle übrigen Artikel vor der App-Anbindung. Diese Lieferung erstellt echte schaltbare Vektorstudien, keine 89 fertigen Premium-PNGs. Die vorhandenen sechs PNG-Prototypen bleiben erhalten. Alle Zuordnungen beruhen auf den fünf tatsächlichen Artbooktafeln; Live-Bezeichnungen, IDs und Rewardregeln bleiben unverändert.','','Einige bisherige Artikelkarten sind verschobene Ausschnitte, besonders bei Sozial- und Naturbelohnungen. Der neue Originalvergleich zeigt deshalb einen ausdrücklich registrierten Viewport der bytegleichen Gesamttafel. Die Tafel wird nicht retuschiert oder in neue Karten umgerechnet; alte Karten bleiben als nicht autoritative Legacykopien erhalten.','','Interaktive Werkstatt: `design/avatar/catalog.html`. Maschinenlesbare Detailverträge samt Quell-/Grafikhashes und beiden Passformen: `catalog-prototypes-v10.json`. Jede neue Studie besitzt eigene transparente SVG-Dateien unter `vector-prototypes-v10/`; Referenzen sind bytegleiche Kopien aus dem bestehenden Bundle.','','Gemeinsame Auswahl aller 95 Artikel bleibt möglich. Deckende Kleidung und Hintergründe können einander verdecken; Sichtbarkeit und Reihenfolge sind ausdrücklich steuerbar. Hintergrund/Atmosphäre ist kein Besitzersatz und keine neue Begleitertierart. Mimikstudien sind als solche neben dem Kopf dargestellt, nicht als fertige neue Gesichtsanatomie ausgegeben. Handobjekte werden für diese feste Pose am Obi geführt; echte neue Griffposen sind noch nicht gezeichnet.',''];
 for(const f of result.families){doc.push('## '+f.label,'');for(const i of items.filter(i=>i.family===f.id)){doc.push('### '+i.id+' · '+i.titleDe,'',`Original: **${i.titleEn}**, Tafel ${i.reference.board.bundleKey}, Reihe ${i.reference.row}, Spalte ${i.reference.column}, Tafelviewport [${i.reference.boardCellViewBox.join(', ')}]. ${i.reference.depiction}`,'',`Unveränderte Legacy-Zuordnung: ${i.legacy.titleDe}; Slot ${i.legacy.slot}; ${i.legacy.successfulCompletedWeeks} belegte abgeschlossene Woche(n). ${i.legacy.wearabilityRule}.`,'',`Prototyp: ${i.prototypeStatus}. ${i.fitNotes}`, '', '| Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |','|---|---|---|---|');for(const p of i.parts)doc.push(`| ${p.partId} | ${p.shape} / ${p.z} | ${p.fit['form-a'].join(', ')} | ${p.fit['form-b'].join(', ')} |`);if(!i.parts.length)doc.push('| Vorhandene PNG-Module | Siehe prototype-assets.json / avatar-rig-v25.js | Eigenes geprüftes Profil | Eigenes geprüftes Profil |');doc.push('',i.combinationNotes,'','Offen: '+i.remaining.join('; ')+'.','');}}
 fs.writeFileSync(path.join(root,'docs/ARTBOOK_95_PROTOTYPES.md'),doc.join('\n')+'\n');

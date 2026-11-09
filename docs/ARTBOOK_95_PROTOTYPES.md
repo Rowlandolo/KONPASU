@@ -107,7 +107,7 @@ Prototyp: vector-fit-prototype. Explizite Registrierung für beide vorhandenen S
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### cardio-2 · Wind-Tabi
 
@@ -124,7 +124,7 @@ Prototyp: vector-fit-prototype. Explizite Registrierung für beide vorhandenen S
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### cardio-3 · Tempo-Armbänder
 
@@ -141,7 +141,7 @@ Prototyp: vector-fit-prototype. Explizite Registrierung für beide vorhandenen S
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### cardio-4 · Sturmläufer-Umhang
 
@@ -158,7 +158,7 @@ Prototyp: vector-fit-prototype. Eigene Vorder-/Hinterteile; Frontstoff verdeckt 
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### cardio-5 · Sturmreiter-Rüstungsaura
 
@@ -177,7 +177,7 @@ Prototyp: vector-fit-prototype. Eigene Vorder-/Hinterteile; Frontstoff verdeckt 
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ## Schritte
 
