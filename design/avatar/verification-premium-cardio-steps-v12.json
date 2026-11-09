@@ -1,7 +1,7 @@
 {
   "version": 12,
   "date": "2026-11-09",
-  "scope": "stage-4-cardio-family-acceptance-and-steps-1-premium-candidate",
+  "scope": "stage-4-cardio-and-steps-family-acceptance",
   "status": "passed-development-atelier",
   "articles": {
     "acceptedCardioCandidates": [
@@ -15,14 +15,15 @@
       "steps-1",
       "steps-2",
       "steps-3",
-      "steps-4"
+      "steps-4",
+      "steps-5"
     ],
     "cardioModules": 12,
-    "transitionModules": 19,
-    "remainingVectorStudies": 80
+    "transitionModules": 21,
+    "remainingVectorStudies": 79
   },
   "catalogueBrowser": {
-    "checks": 18,
+    "checks": 20,
     "articles": 95,
     "bodyForms": 2,
     "singleRenderChecks": 190,
@@ -47,10 +48,18 @@
       "form-a": 19511,
       "form-b": 24583
     },
+    "steps5ChangedPixels": {
+      "form-a": 12950,
+      "form-b": 11189
+    },
     "storageWrites": 0,
     "uncaughtErrors": []
   },
   "reviewImages": {
+    "cardio-and-steps-complete-form-a.png": "974693115195f12ead0f2bb27e146a9bd772024714680908a49cea3fd22d71ef",
+    "cardio-and-steps-complete-form-b.png": "0e419ecfed5ba8300d2b243c479bd4bccd181f30086e24eb12d4ece188a440e6",
+    "steps-premium-combined-form-a.png": "02cdc6e559ba45621c7c559a653dd965921ad281e6c0826073d2214e524ae61c",
+    "steps-premium-combined-form-b.png": "3fd175c29275bef268271e79d8598803fc01fc24cd115d52a93c85f025dc32e6",
     "cardio-and-steps-1-4-form-a.png": "3f2dff2901cd5f36311f9198a02a1243db30dbacfc03ee191faa20e048aa955d",
     "cardio-and-steps-1-4-form-b.png": "81aac313e694a2ed9efd86ab1ca7a7b93257d895c2628a2321d98db47da2cb29",
     "cardio-and-steps-1-3-form-a.png": "3d1264c93043fd67fa39028122d0730305d47771feab6703b6739864c29f9162",
@@ -62,7 +71,7 @@
     "cardio-premium-combined-form-a.png": "433bc30300c4c0c364570403898a30529592e13262f184f90715928f236ea2d7",
     "cardio-premium-combined-form-b.png": "2008aa2eb152251a6ddffc8522252158440bfcae43eb41858809d58aa9f6f948",
     "family-cardio.png": "ba9a60eed37c362448584c8bacf504b14c7118bce3c6d873ecf13df0cfe81ce3",
-    "family-steps.png": "02c9f9a45e1c9251995ecf917a26a112d5efb2dbc920b670cf42e52e418ffa2a"
+    "family-steps.png": "480fab51752a24382115400fd40e72583899d5bf936ff866b4a6d213f5362ff3"
   },
   "accepted": [
     "Every Cardio candidate renders individually on both registered body forms.",
@@ -71,6 +80,8 @@
     "Route Satchel strap and bag coexist with the complete Cardio family and Travel Sandals as sixteen retained modules.",
     "Pilgrim Hat Charm remains readable alone and beside the Route Satchel in the seventeen-module transition composition.",
     "Journey Haori keeps its centre and sleeve openings transparent while preserving all nineteen selected modules.",
+    "All five Steps candidates coexist as nine independent modules on both registered body forms.",
+    "The complete Cardio and Steps families coexist as twenty-one independent modules on both registered body forms.",
     "Sandals are below Wind Tabi in anatomical depth, avoiding a floating foreground shoe.",
     "Visibility, ordering, outer-front arm masking, warm offline interaction and the 95-article stress selection pass.",
     "No profile, ownership, goal, training, reward or browser-storage write occurs."

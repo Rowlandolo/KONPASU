@@ -2033,7 +2033,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-5-banner.png",
+            "sha256": "cba36d7cdde0c100515f292d1c227dbd0f5af864f4c39aa63007f006d9f92389",
+            "bytes": 197594,
+            "width": 263,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                18,
+                80,
+                190,
+                555
+              ],
+              "form-b": [
+                18,
+                80,
+                190,
+                555
+              ]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -2062,17 +2083,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-5-wind.png",
+            "sha256": "c4ea270366faeb5e505e0da08ac0024f463432314da388de9c020463a61551d5",
+            "bytes": 363649,
+            "width": 768,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                20,
+                108,
+                472,
+                472
+              ],
+              "form-b": [
+                20,
+                108,
+                472,
+                472
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-1",

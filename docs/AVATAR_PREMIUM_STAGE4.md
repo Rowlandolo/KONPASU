@@ -59,3 +59,11 @@ Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Ko
 ## Paket 4.9 · Reise-Haori (`steps-4`)
 
 `steps-4-rear.png` enthält Rückenstoff, dunkelgrünes Futter und seitliche Stoffbahnen hinter Körper und Armen. `steps-4-front.png` bildet die weiten elfenbeinfarbenen Ärmel, offenen Lapelle, goldene Kordelschließe sowie grün-goldene Landschafts- und Blattmotive. Hals, Körpermitte und Ärmelöffnungen bleiben transparent. Vorder- und Rückenteil besitzen eigene Passformen für beide Körperformen; nur tatsächliche Vorderpixel wirken als Armmaske.
+
+## Paket 4.10 · Wegfinder-Banner (`steps-5`)
+
+`steps-5-banner.png` bildet die braun-goldene Standstange und das dunkelgrüne Banner mit Kompassstern, Kartenbahnen und geteiltem Saum hinter der Figur. `steps-5-wind.png` enthält ausschließlich frei laufende grün-elfenbeinfarbene Bänder, Goldbögen, Routenmarken und Blätter mit großer transparenter Mitte. Banner und Atmosphäre bleiben getrennt sichtbar und sortierbar.
+
+## Schritte-Familienabnahme
+
+Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-Komposition, Körperform A/B, Maskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit der vollständigen Cardio-Serie, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
