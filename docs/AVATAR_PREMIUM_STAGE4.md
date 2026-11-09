@@ -27,6 +27,10 @@ Die hohen Tabi sind keine gespiegelten Kopien. `cardio-2-left.png` folgt dem kom
 
 `cardio-3-left.png` und `cardio-3-right.png` folgen den entgegengesetzten Unterarmwinkeln der festen Standpose. Die grünen Stoffwickel besitzen goldene Randbänder, gekreuzte Schnüre und eigene botanische Details. Beide bleiben getrennte Ebenen. Bestehende Kimono- und Außenkleidungsmasken verdecken die oberen Bereiche anatomisch, ohne den Artikel oder seine Auswahl zu entfernen.
 
+## Paket 4.4 · Sturmläufer-Umhang (`cardio-4`)
+
+`cardio-4-rear.png` bildet den langen dunklen Umhangkörper hinter Figur und Armen. `cardio-4-front.png` enthält ausschließlich Schulterkragen, Goldknoten, Quasten und die offenen seitlichen Vorderbahnen. Die transparente Körpermitte erhält Kimono, Obi und Hakama. Nur die sichtbaren Vorderbahnen wirken als Armmaske; Schal, Armbänder und Schuhe bleiben eigene Artikelinstanzen.
+
 ## Offene Freigaben
 
-Windschal, Wind-Tabi und Tempo-Armbänder sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-4` (Sturmläufer-Umhang).
+Die ersten vier Cardio-Artikel sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket bearbeitet `cardio-5` (Sturmreiter-Rüstungsaura).

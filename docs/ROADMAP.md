@@ -27,7 +27,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.3 umgesetzt:** `cardio-3` (Tempo-Armbänder) besitzt getrennte, posegerechte Premiumkandidaten für beide Unterarme. Kimono- und Außenkleidungsmasken bleiben aktiv.
 
-**Als Nächstes:** `cardio-4` (Sturmläufer-Umhang), danach die Rüstungsaura. App-/Offlineintegration erfolgt erst nach Familienabnahme.
+**Paket 4.4 umgesetzt:** `cardio-4` (Sturmläufer-Umhang) besitzt getrennte Vorder-/Rückflächen. Nur die tatsächliche Vorderfläche maskiert Armartikel; Körpermitte, Obi und Hakama bleiben durch die offene Silhouette kombinierbar.
+
+**Als Nächstes:** `cardio-5` (Sturmreiter-Rüstungsaura) und danach die vollständige Cardio-Familienabnahme. App-/Offlineintegration erfolgt erst nach dieser Abnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

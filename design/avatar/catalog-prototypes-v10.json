@@ -922,7 +922,18 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-4-rear.png",
+            "sha256": "cae8092185ebf0e3ceb8e38d8b0a76e1497fd685939f81037a3eb2dab879dc9e",
+            "bytes": 307081,
+            "width": 513,
+            "height": 768,
+            "fit": {
+              "form-a": [65, 80, 380, 570],
+              "form-b": [36, 70, 440, 660]
+            }
+          }
         },
         {
           "shape": "garment-front-wind",
@@ -952,17 +963,27 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-4-front.png",
+            "sha256": "6ed0f547b0ec5118c369704ce6aa01edd2681518ccbc67c1dc2365bfbf884900",
+            "bytes": 284984,
+            "width": 513,
+            "height": 768,
+            "fit": {
+              "form-a": [65, 80, 380, 570],
+              "form-b": [36, 70, 440, 660]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-5",
