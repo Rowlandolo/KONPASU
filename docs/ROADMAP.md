@@ -39,7 +39,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.8 umgesetzt:** `steps-3` (Pilgerhut-Anhänger) liegt als geschlossenes Premium-Zubehörmodul mit Ring, Knoten, Flechthut, Blütenmedaillon, Quasten und Glyzinien vor.
 
-**Als Nächstes:** Paket 4.9 mit `steps-4` (Reise-Haori). App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.9 umgesetzt:** `steps-4` (Reise-Haori) besitzt getrennte Vorder-/Rückebenen mit offenem Zentrum, weiten Ärmeln, dunkelgrünem Futter, Goldkordel und Landschaftsmotiven.
+
+**Als Nächstes:** Paket 4.10 mit `steps-5` (Wegfinder-Banner), danach die vollständige Schritte-Familienabnahme. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

@@ -55,3 +55,7 @@ Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Ko
 ## Paket 4.8 · Pilgerhut-Anhänger (`steps-3`)
 
 `steps-3-charm.png` bewahrt den vollständigen kleinen Anhänger als eine zusammenhängende Ebene: goldener Aufhängering und Knoten, geflochtener Kegelhut mit dunkler Unterseite, Blütenmedaillon, grüne Blätter, zwei Goldquasten und ein violetter Glyzinienzweig. Das Modul hängt am Obi beziehungsweise neben der Wegtasche; die neutrale Handpose bleibt erhalten.
+
+## Paket 4.9 · Reise-Haori (`steps-4`)
+
+`steps-4-rear.png` enthält Rückenstoff, dunkelgrünes Futter und seitliche Stoffbahnen hinter Körper und Armen. `steps-4-front.png` bildet die weiten elfenbeinfarbenen Ärmel, offenen Lapelle, goldene Kordelschließe sowie grün-goldene Landschafts- und Blattmotive. Hals, Körpermitte und Ärmelöffnungen bleiben transparent. Vorder- und Rückenteil besitzen eigene Passformen für beide Körperformen; nur tatsächliche Vorderpixel wirken als Armmaske.

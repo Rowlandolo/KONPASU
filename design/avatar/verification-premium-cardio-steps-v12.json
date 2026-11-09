@@ -14,14 +14,15 @@
     "stepsCandidates": [
       "steps-1",
       "steps-2",
-      "steps-3"
+      "steps-3",
+      "steps-4"
     ],
     "cardioModules": 12,
-    "transitionModules": 17,
-    "remainingVectorStudies": 81
+    "transitionModules": 19,
+    "remainingVectorStudies": 80
   },
   "catalogueBrowser": {
-    "checks": 17,
+    "checks": 18,
     "articles": 95,
     "bodyForms": 2,
     "singleRenderChecks": 190,
@@ -42,10 +43,16 @@
       "form-a": 699,
       "form-b": 703
     },
+    "steps4ChangedPixels": {
+      "form-a": 19511,
+      "form-b": 24583
+    },
     "storageWrites": 0,
     "uncaughtErrors": []
   },
   "reviewImages": {
+    "cardio-and-steps-1-4-form-a.png": "3f2dff2901cd5f36311f9198a02a1243db30dbacfc03ee191faa20e048aa955d",
+    "cardio-and-steps-1-4-form-b.png": "81aac313e694a2ed9efd86ab1ca7a7b93257d895c2628a2321d98db47da2cb29",
     "cardio-and-steps-1-3-form-a.png": "3d1264c93043fd67fa39028122d0730305d47771feab6703b6739864c29f9162",
     "cardio-and-steps-1-3-form-b.png": "7dfdd476bce41f1818364a0d7466305e4171ce7c9c46b1afa6d62b7e967c9cdb",
     "cardio-and-steps-1-2-form-a.png": "d3acc690a8b145df9a3f4ae9305b0bdfbeadedca10b2dcf48622449b57a06900",
@@ -55,7 +62,7 @@
     "cardio-premium-combined-form-a.png": "433bc30300c4c0c364570403898a30529592e13262f184f90715928f236ea2d7",
     "cardio-premium-combined-form-b.png": "2008aa2eb152251a6ddffc8522252158440bfcae43eb41858809d58aa9f6f948",
     "family-cardio.png": "ba9a60eed37c362448584c8bacf504b14c7118bce3c6d873ecf13df0cfe81ce3",
-    "family-steps.png": "ec8feac8ccfd033d0e8edc523782992124ec55aaaf8036b66b325b9d09cd9878"
+    "family-steps.png": "02c9f9a45e1c9251995ecf917a26a112d5efb2dbc920b670cf42e52e418ffa2a"
   },
   "accepted": [
     "Every Cardio candidate renders individually on both registered body forms.",
@@ -63,6 +70,7 @@
     "Travel Sandals coexist with the Cardio family as two additional retained modules.",
     "Route Satchel strap and bag coexist with the complete Cardio family and Travel Sandals as sixteen retained modules.",
     "Pilgrim Hat Charm remains readable alone and beside the Route Satchel in the seventeen-module transition composition.",
+    "Journey Haori keeps its centre and sleeve openings transparent while preserving all nineteen selected modules.",
     "Sandals are below Wind Tabi in anatomical depth, avoiding a floating foreground shoe.",
     "Visibility, ordering, outer-front arm masking, warm offline interaction and the 95-article stress selection pass.",
     "No profile, ownership, goal, training, reward or browser-storage write occurs."

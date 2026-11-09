@@ -1866,7 +1866,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-4-rear.png",
+            "sha256": "0109291143fb622c38be225a215ceacb89b11ba56e2941b3068504574b79851f",
+            "bytes": 537972,
+            "width": 722,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                85,
+                412,
+                438
+              ],
+              "form-b": [
+                25,
+                75,
+                462,
+                492
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-map",
@@ -1896,17 +1917,37 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-4-front.png",
+            "sha256": "a61023933da1c069b7786b06be7ab2cb2b2ab54eca224269b72670d082509b51",
+            "bytes": 558331,
+            "width": 716,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                85,
+                412,
+                442
+              ],
+              "form-b": [
+                25,
+                75,
+                462,
+                496
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-5",
