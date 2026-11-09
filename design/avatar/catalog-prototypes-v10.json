@@ -3384,17 +3384,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-4-gourd.png",
+            "bytes": 350556,
+            "sha256": "65de55e52bad423566672d19edbf226b3bdbed33a231cb66640a828eb79bbad8",
+            "width": 498,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                350,
+                270,
+                95,
+                146.5
+              ],
+              "form-b": [
+                360,
+                270,
+                95,
+                146.5
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-5",

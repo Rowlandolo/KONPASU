@@ -478,6 +478,18 @@ Beleg: `design/avatar/verification-premium-water-v15.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-water-v16.json`; archivierte Ansichten: `design/avatar/review-premium-water-v16/`.
 
+## Etappe 4 · Paket 4.19 Zeremonielle Wasserkalebasse
+
+- [x] `water-4` gegen die Artbookkarte geprüft: elfenbeinfarbene Doppelkalebasse, Goldblüten, Goldkordel, goldene Quaste und grüner Anhänger.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene äußere Passform auf Form A und B; vollständige Kalebasse, beide Quasten und neutrale Hände erhalten.
+- [x] Erste vier Wasserartikel gemeinsam als vier unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 35-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v17.json`; archivierte Ansichten: `design/avatar/review-premium-water-v17/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

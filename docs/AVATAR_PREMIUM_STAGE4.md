@@ -106,6 +106,12 @@ Beide Wasserartikel bleiben als zwei getrennte Module gleichzeitig sichtbar und 
 
 Die ersten drei Wasserartikel bestehen die gemeinsame Drei-Modul-Komposition und zusammen mit Cardio, Schritte und Beweglichkeit den 34-Modul-Übergang auf Form A und B. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v16.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v16/`. 71 Artikel bleiben Vektorstudien.
 
+## Paket 4.19 · Zeremonielle Wasserkalebasse (`water-4`)
+
+`water-4-gourd.png` bildet die elfenbeinfarbene Doppelkalebasse mit goldenen Blütenzweigen, geflochtener Goldkordel, Zierknoten, goldener Seitenquaste sowie grünem Anhänger und langer grüner Quaste ab. Die äußere Gegenposition besitzt eigene Passformwerte für Form A und B und hält alle vier Wasserartikel vollständig sichtbar.
+
+Die ersten vier Wasserartikel bestehen die gemeinsame Vier-Modul-Komposition und zusammen mit Cardio, Schritte und Beweglichkeit den 35-Modul-Übergang auf beiden Körperformen. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v17.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v17/`. 70 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
