@@ -3036,17 +3036,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-1-flask.png",
+            "bytes": 304157,
+            "sha256": "50b9ad1d54e770b8325989cd467d235f468ab7fa25cc743a58755672ba0674b1",
+            "width": 537,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                142,
+                255,
+                110,
+                157
+              ],
+              "form-b": [
+                130,
+                255,
+                110,
+                157
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-2",

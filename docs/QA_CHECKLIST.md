@@ -443,6 +443,17 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [ ] Neue Hauptavatarroute, persönliche Darstellung/Szenen/Begleiter/Favoriten/History und Legacy-Aktionssynchronisierung.
 - [ ] Physische Geräte/GPU/VoiceOver/Alt-PWA-Upgrade, finale Premiumgrafik und freigegebene Veröffentlichung.
 
+## Etappe 4 · Paket 4.16 Bambusflasche
+
+- [x] `water-1` gegen das Original-Artbookmotiv geprüft: grünes Bambusrohr, Goldfassungen, Trageschnur und Quaste.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene Passform auf Form A und B; vollständige Silhouette innerhalb der Bühne, neutrale Hände unverändert.
+- [x] Einzelrendering und 32-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v14.json`; archivierte Ansichten: `design/avatar/review-premium-water-v14/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

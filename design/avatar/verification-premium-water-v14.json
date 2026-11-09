@@ -1,0 +1,46 @@
+{
+  "version": 14,
+  "date": "2026-11-09",
+  "scope": "stage-4-water-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["water-1"],
+    "candidateModules": 1,
+    "transitionModules": 32,
+    "remainingVectorStudies": 73
+  },
+  "catalogueBrowser": {
+    "checks": 32,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "water1ChangedPixels": {
+      "form-a": 1413,
+      "form-b": 1411
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "water-1-premium-form-a.png": "9f251f0c3d539effb227890e09631cd62e629f916fa4810aa6e4a91857053d84",
+    "water-1-premium-form-b.png": "52a5e37bdb83db43881049b8f3c5cdfd6c81dbae83285ff95d2d8ec50efd4895",
+    "cardio-steps-mobility-and-water-1-form-a.png": "0e87769970bc89c17647bcc811ae6a524e282d3dc09fc58f7490d24a0090a485",
+    "cardio-steps-mobility-and-water-1-form-b.png": "5205f58cb41182d06644814f4660b5e9b2f81813a3250b260717ee7d34c8dbbb",
+    "family-water.png": "d7a7a931ab0092a460cd00ba7c091a6b14b1e1ed93b824cad282b373e61e739d"
+  },
+  "accepted": [
+    "The Bamboo Flask follows the source motif with green bamboo, gold bands, carrying cord and tassel.",
+    "The flask is one transparent, independently selectable and sortable hip module on both registered body forms.",
+    "Neutral hands remain unchanged and the complete flask silhouette stays inside both fitted viewports.",
+    "Bamboo Flask, complete Cardio, complete Steps and complete Mobility coexist as thirty-two independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

@@ -88,6 +88,12 @@ Alle fünf Schritte-Kandidaten bestehen Einzelrendering, gemeinsame Neun-Modul-K
 
 `mobility-5-dragon.png` bildet einen jade-elfenbeinfarbenen, blattgeschmückten Winddrachen in offener Kurve hinter der Figur. `mobility-5-wind.png` enthält eine getrennte offene Windellipse aus elfenbeinfarbenen, jadefarbenen und goldenen Bögen mit Blättern und violetten Blütenblättern vor dem Unterkörper. Beide Effektmodule besitzen große transparente Zentren und bleiben unabhängig sortierbar.
 
+## Paket 4.16 · Bambusflasche (`water-1`)
+
+`water-1-flask.png` übernimmt das Artbookmotiv als dunkelgrünes Bambusrohr mit drei warmgoldenen Fassungen, geflochtener Trageschnur, Zierknoten und heller Quaste. Das transparente Einzelmodul sitzt am linken Obi, lässt beide Hände frei und besitzt getrennte Passformwerte für Form A und B.
+
+Die Einzelansicht und der Übergang mit den vollständigen Familien Cardio, Schritte und Beweglichkeit bestehen auf beiden Körperformen. Alle sechzehn Premiumartikel bleiben als 32 Module gleichzeitig ausgewählt; es gibt keine Slotverdrängung und keine Speicheränderung. Der hashgebundene Bild- und Prüfbeleg liegt in `design/avatar/verification-premium-water-v14.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v14/`. 73 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

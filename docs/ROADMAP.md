@@ -57,7 +57,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Beweglichkeits-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Zehn-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, Übergang mit Cardio und Schritte als 31 Module, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
 
-**Als Nächstes:** Paket 4.16 mit `water-1`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.16 umgesetzt:** `water-1` (Bambusflasche) liegt als transparentes Premium-Zubehör mit Bambusrohr, Goldfassungen, Trageschnur und Quaste vor. Die Flasche sitzt auf beiden Körperformen am linken Obi und erhält die vollständigen Cardio-, Schritte- und Beweglichkeitsfamilien im 32-Modul-Übergang.
+
+**Als Nächstes:** Paket 4.17 mit `water-2`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
