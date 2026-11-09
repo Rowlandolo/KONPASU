@@ -1,0 +1,45 @@
+{
+  "version": 18,
+  "date": "2026-11-09",
+  "scope": "stage-4-complete-water-family-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["water-1", "water-2", "water-3", "water-4", "water-5"],
+    "candidateModules": 6,
+    "transitionModules": 37,
+    "remainingVectorStudies": 69
+  },
+  "catalogueBrowser": {
+    "checks": 41,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "water5ChangedPixels": {"form-a": 8943, "form-b": 8137},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "water-5-premium-form-a.png": "977bd5df4aadf6ca311f4eaa992b57978f68ba0ba2fff92f022abc96e43d9894",
+    "water-5-premium-form-b.png": "84f0c6dd466a27d4379026daf8b5bfb3ec9e07bc528b85ce343d77d9ab9510c9",
+    "water-premium-complete-form-a.png": "85e827bb6052d5b381260f408a9e13110d902c41fc19f02880b9145d4cefcf5a",
+    "water-premium-complete-form-b.png": "142b1d6e0962a936390676a1823d39de3a6d72ecc362cf6de5ed4082ef139ff0",
+    "cardio-steps-mobility-water-complete-form-a.png": "792c8f79e150ae4a1b9ea36aa645869fda580b6fcf554e8f2657cbb0aa86d23a",
+    "cardio-steps-mobility-water-complete-form-b.png": "e327f176f4930d57bd4d394b3be5cd6af99760f84acf83a0433b203521cdb470",
+    "family-water.png": "04f23da8632e9abe4b55d88136d4bbbe47ca9228c6deeae01962c7b7027ff785"
+  },
+  "accepted": [
+    "The Legendary Spring-Dragon Vessel follows the source motif with a dark gold vessel, jade dragon and transparent water arc.",
+    "Its vessel and open dragon-water effect remain two independent modules on both registered body forms.",
+    "All five Water candidates coexist as six independently selectable and sortable modules without slot replacement.",
+    "Complete Cardio, Steps, Mobility and Water families coexist as thirty-seven independent modules on both body forms.",
+    "Visibility, ordering, clothing masks, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "Premium candidates remain review artwork until physical-device approval."
+  ]
+}

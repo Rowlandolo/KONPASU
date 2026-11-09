@@ -490,6 +490,18 @@ Beleg: `design/avatar/verification-premium-water-v16.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-water-v17.json`; archivierte Ansichten: `design/avatar/review-premium-water-v17/`.
 
+## Etappe 4 · Paket 4.20 und Wasser-Familienabnahme
+
+- [x] `water-5` gegen die Artbookkarte geprüft: dunkles Goldgefäß, jadefarbener Drachenkopf und transparenter Wasserbogen.
+- [x] Gefäß und offener Drachen-/Wassereffekt als zwei getrennte transparente, hashgebundene Module umgesetzt.
+- [x] Einzelrendering auf Form A und B; offene Effektmitte erhält Figur, Haare und Kleidung.
+- [x] Alle fünf Wasserartikel gemeinsam als sechs unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 37-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v18.json`; archivierte Ansichten: `design/avatar/review-premium-water-v18/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

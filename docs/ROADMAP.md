@@ -65,7 +65,11 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.19 umgesetzt:** `water-4` (Zeremonielle Wasserkalebasse) besitzt eine elfenbeinfarbene Doppelform, Goldblüten, geflochtene Kordel sowie goldene und grüne Quasten. Die ersten vier Wasserartikel bestehen gemeinsam als vier Module und mit Cardio, Schritte und Beweglichkeit als 35 Module auf beiden Körperformen.
 
-**Als Nächstes:** Paket 4.20 mit `water-5` und anschließender Wasser-Familienabnahme. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.20 umgesetzt:** `water-5` (Quellendrachen-Gefäß) besitzt ein getrenntes dunkles Goldgefäß und einen offenen jadefarbenen Drachen-/Wasserbogeneffekt.
+
+**Wasser-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen gemeinsam als sechs Module auf beiden Körperformen einschließlich Sichtbarkeit, Reihenfolge, 37-Modul-Übergang mit Cardio, Schritte und Beweglichkeit, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Als Nächstes:** Paket 4.21 mit `sleep-1`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

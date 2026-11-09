@@ -112,6 +112,14 @@ Die ersten drei Wasserartikel bestehen die gemeinsame Drei-Modul-Komposition und
 
 Die ersten vier Wasserartikel bestehen die gemeinsame Vier-Modul-Komposition und zusammen mit Cardio, Schritte und Beweglichkeit den 35-Modul-Übergang auf beiden Körperformen. Der Prüfbeleg liegt in `design/avatar/verification-premium-water-v17.json`, die fünf archivierten Ansichten in `design/avatar/review-premium-water-v17/`. 70 Artikel bleiben Vektorstudien.
 
+## Paket 4.20 · Quellendrachen-Gefäß (`water-5`)
+
+`water-5-vessel.png` bildet das dunkle Lackgefäß mit warmgoldenen Metallflächen, geometrischen Bändern, elfenbeinfarbenen Blüten und jadefarbenen Blättern ab. `water-5-dragon-water.png` kombiniert einen jade-elfenbeinfarbenen Drachenkopf mit Goldhörnern und einen offenen, transparenten Cyan-Wasserbogen samt einzelnen Blütenblättern. Das Gefäß bleibt ein vorderes Zubehörmodul; der offene Effekt rahmt die Figur von hinten.
+
+## Wasser-Familienabnahme
+
+Alle fünf Wasser-Kandidaten bestehen Einzelrendering, gemeinsame Sechs-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, 37-Modul-Übergang mit den vollständigen Familien Cardio, Schritte und Beweglichkeit, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-water-v18.json`, sieben gehashte Ansichten in `design/avatar/review-premium-water-v18/`. 69 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

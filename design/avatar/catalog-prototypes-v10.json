@@ -3501,7 +3501,28 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-5-vessel.png",
+            "bytes": 438842,
+            "sha256": "9461952f3d40f321960f5c87ee3e1be9a0e580c8cdd1914623449fce9841fffe",
+            "width": 768,
+            "height": 677,
+            "fit": {
+              "form-a": [
+                205,
+                405,
+                110,
+                97
+              ],
+              "form-b": [
+                205,
+                405,
+                110,
+                97
+              ]
+            }
+          }
         },
         {
           "shape": "dragon",
@@ -3530,17 +3551,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-5-dragon-water.png",
+            "bytes": 407183,
+            "sha256": "43d146a8de81236e90096f1da5f5baac80f3b6c34886631ef5e8a1803ac42fab",
+            "width": 768,
+            "height": 520,
+            "fit": {
+              "form-a": [
+                5,
+                105,
+                502,
+                340
+              ],
+              "form-b": [
+                5,
+                105,
+                502,
+                340
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-1",
