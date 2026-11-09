@@ -35,7 +35,7 @@ function modules(kind,family){
  switch(kind){
   case 'existing':return [];
   case 'scarf':return [m('scarf-tail',145,'torso',[115,102,150,245],{category:'neck-rear'}),m('scarf-band',390,'torso',[221,102,76,49],{category:'neck-front'})];
-  case 'boots':case 'sandals':return [m(kind==='boots'?'boot-left':'sandal-left',305,'feet',[145,667,77,75],{category:'feet'}),m(kind==='boots'?'boot-right':'sandal-right',306,'feet',[278,668,84,74],{category:'feet'})];
+  case 'boots':case 'sandals':return [m(kind==='boots'?'boot-left':'sandal-left',kind==='boots'?305:303,'feet',[145,667,77,75],{category:'feet'}),m(kind==='boots'?'boot-right':'sandal-right',kind==='boots'?306:304,'feet',[278,668,84,74],{category:'feet'})];
   case 'armwraps':return arm();
   case 'sleeves':return arm('sleeve');
   case 'cloak':return garment(true);

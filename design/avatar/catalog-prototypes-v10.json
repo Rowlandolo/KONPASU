@@ -1392,7 +1392,7 @@
       "parts": [
         {
           "shape": "sandal-left",
-          "z": 305,
+          "z": 303,
           "anchor": "feet",
           "fit": {
             "form-a": [
@@ -1417,11 +1417,32 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-1-left.png",
+            "sha256": "d868edb265b330290e4153237570e942631f032bc12b64ed93b61b1b5d964bed",
+            "bytes": 210760,
+            "width": 512,
+            "height": 450,
+            "fit": {
+              "form-a": [
+                127,
+                650,
+                110,
+                97
+              ],
+              "form-b": [
+                127,
+                650,
+                110,
+                97
+              ]
+            }
+          }
         },
         {
           "shape": "sandal-right",
-          "z": 306,
+          "z": 304,
           "anchor": "feet",
           "fit": {
             "form-a": [
@@ -1446,17 +1467,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-1-right.png",
+            "sha256": "dd50aa5e987cd5ef7c2a3b45283356660232ee906ae3484e918fd8d5aad0217e",
+            "bytes": 141801,
+            "width": 512,
+            "height": 346,
+            "fit": {
+              "form-a": [
+                265,
+                655,
+                110,
+                74
+              ],
+              "form-b": [
+                265,
+                655,
+                110,
+                74
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-2",

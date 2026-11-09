@@ -39,3 +39,11 @@ Der legendäre Cardio-Abschluss besteht aus vier unabhängigen transparenten Mod
 ## Offene Freigaben
 
 Alle fünf Cardio-Artikel sind **Premiumkandidaten**, noch keine endgültig freigegebenen Grafiken. Offen bleiben die gemeinsame Familienabnahme, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade. Erst danach folgt die App-/Offlineintegration. Das nächste Grafikpaket beginnt nach der Cardio-Abnahme mit der Schritte-Serie.
+
+## Cardio-Familienabnahme
+
+Die fünf Cardio-Kandidaten bestehen Einzelrendering, gemeinsame Zwölf-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, 95-Artikel-Stressauswahl sowie den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier. Physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben das spätere Freigabegate.
+
+## Paket 4.6 · Reisesandalen (`steps-1`)
+
+`steps-1-left.png` und `steps-1-right.png` sind getrennte, asymmetrische Premiumkandidaten für die beiden festen Fußwinkel. Beide übernehmen die helle Sohle, dunkle Laufkante, tiefgrüne Zehenriemen und goldenen Blattornamente der Artbookkarte. Die Module besitzen eigene Passformboxen und bleiben unabhängig von allen Cardio-Schuhen sowie den übrigen Artikeln auswählbar.

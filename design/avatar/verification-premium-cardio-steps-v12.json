@@ -1,0 +1,58 @@
+{
+  "version": 12,
+  "date": "2026-11-09",
+  "scope": "stage-4-cardio-family-acceptance-and-steps-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "acceptedCardioCandidates": [
+      "cardio-1",
+      "cardio-2",
+      "cardio-3",
+      "cardio-4",
+      "cardio-5"
+    ],
+    "newCandidate": "steps-1",
+    "cardioModules": 12,
+    "transitionModules": 14,
+    "remainingVectorStudies": 83
+  },
+  "catalogueBrowser": {
+    "checks": 15,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "cardio5ChangedPixels": {
+      "form-a": 28554,
+      "form-b": 37032
+    },
+    "steps1ChangedPixels": {
+      "form-a": 763,
+      "form-b": 772
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "cardio-and-steps-1-form-a.png": "8189d7a946e1a09a9f0f0d7838a32f5130d72e24ff29b4b1baeb0fdf619b503b",
+    "cardio-and-steps-1-form-b.png": "5a4850479d44f66eabfc61f3a9ebb5c190645d194e3b69734f015500952a9099",
+    "cardio-premium-combined-form-a.png": "433bc30300c4c0c364570403898a30529592e13262f184f90715928f236ea2d7",
+    "cardio-premium-combined-form-b.png": "2008aa2eb152251a6ddffc8522252158440bfcae43eb41858809d58aa9f6f948",
+    "family-cardio.png": "ba9a60eed37c362448584c8bacf504b14c7118bce3c6d873ecf13df0cfe81ce3",
+    "family-steps.png": "0b568430eb988dad408ce4ee1bb84b096ac5b882c2d32db97e6ee519f9b258a9"
+  },
+  "accepted": [
+    "Every Cardio candidate renders individually on both registered body forms.",
+    "All five Cardio candidates coexist as twelve independent modules.",
+    "Travel Sandals coexist with the Cardio family as two additional retained modules.",
+    "Sandals are below Wind Tabi in anatomical depth, avoiding a floating foreground shoe.",
+    "Visibility, ordering, outer-front arm masking, warm offline interaction and the 95-article stress selection pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "Premium candidates remain review artwork until physical-device approval."
+  ]
+}

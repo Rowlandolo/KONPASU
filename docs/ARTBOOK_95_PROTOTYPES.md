@@ -191,12 +191,12 @@ Prototyp: vector-fit-prototype. Explizite Registrierung für beide vorhandenen S
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
-| steps-1-study-1 | sandal-left / 305 | 145, 667, 77, 75 | 145, 667, 77, 75 |
-| steps-1-study-2 | sandal-right / 306 | 278, 668, 84, 74 | 278, 668, 84, 74 |
+| steps-1-study-1 | sandal-left / 303 | 145, 667, 77, 75 | 145, 667, 77, 75 |
+| steps-1-study-2 | sandal-right / 304 | 278, 668, 84, 74 | 278, 668, 84, 74 |
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### steps-2 · Wegtasche
 
