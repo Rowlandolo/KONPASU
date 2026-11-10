@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.30
+## Etappe 4 · Stand nach Paket 4.31
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -284,3 +284,5 @@ Die vollständige Schlaf-Serie besitzt sieben hashgebundene Premiummodule. Die M
 `nutrition-4` ergänzt drei hashgebundene Premiumebenen für Rückengewand, Vordergewand und Kochschürze. Der zunächst zu hohe Kragen wurde vor Abnahme entfernt; die tiefe Öffnung hält Gesicht, Hals und Körpermitte auf beiden registrierten Körperformen frei. Die ersten vier Ernährungsartikel bestehen als sieben Module und im 51-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf. 60 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 Die vollständige Ernährungsserie besitzt zehn hashgebundene Premiummodule. Reisährenemblem, tragbare Reisschale und Kürbisanhänger bleiben getrennt; das vor Abnahme versetzte Emblem ist hinter der rechten Schulter auf beiden registrierten Körperformen sichtbar. Alle fünf Ernährungsartikel bestehen gemeinsam sowie im 54-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf. 59 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration, physische Geräte, VoiceOver sowie GPU-/Speicherspitzen bleiben offen.
+
+`sugar-1` ergänzt ein hashgebundenes Premium-Omamorimodul. Die erste Registrierung wirkte vom Outfit gelöst und wurde vor Abnahme näher an die rechte Hüftseite verschoben; Hände bleiben neutral und das Siegel bleibt neben bestehenden Accessoires lesbar. Der 55-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung besteht. 58 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

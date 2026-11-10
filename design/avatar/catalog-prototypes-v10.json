@@ -5180,17 +5180,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-1-omamori.png",
+            "bytes": 504890,
+            "sha256": "dee92a9a344a3cb62f4260d2ca53d7ade1fb930799ecbdad8ce69af8796ff474",
+            "width": 568,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                348,
+                278,
+                82,
+                110.9
+              ],
+              "form-b": [
+                360,
+                278,
+                82,
+                110.9
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-2",

@@ -184,6 +184,12 @@ Die ersten vier Ernährungsartikel bestehen gemeinsam als sieben unabhängige Mo
 
 Alle fünf Ernährungskandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 54-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit, Wasser und Schlaf, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-nutrition-v28.json`, fünf gehashte Ansichten in `design/avatar/review-premium-nutrition-v28/`. 59 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
 
+## Paket 4.31 · Zucker-Siegel-Omamori (`sugar-1`)
+
+`sugar-1-omamori.png` bildet ein dunkelgrünes Seiden-Omamori mit Goldfassung, Blüten- und Blattstickerei, roter Tragekordel, Quasten und einem textfreien, diagonal gesperrten Zuckerkristallsiegel ab. Die erste Registrierung wirkte zu weit vom Outfit gelöst und wurde vor Abnahme näher an die rechte Hüftseite verschoben; beide Hände bleiben neutral.
+
+Das Einzelmodul besteht auf Form A und B sowie im 55-Modul-Übergang mit den sechs vollständigen Premiumfamilien. Der Prüfbeleg liegt in `design/avatar/verification-premium-sugar-v29.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sugar-v29/`. 58 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

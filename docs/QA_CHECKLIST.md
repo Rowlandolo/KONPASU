@@ -623,6 +623,18 @@ Beleg: `design/avatar/verification-premium-nutrition-v27.json`; archivierte Ansi
 
 Beleg: `design/avatar/verification-premium-nutrition-v28.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v28/`.
 
+## Etappe 4 · Paket 4.31 Zucker-Siegel-Omamori
+
+- [x] `sugar-1` gegen die Artbookkarte geprüft: dunkelgrünes Omamori, Gold-/Blütenornament, rote Kordel und diagonal gesperrtes Zuckersiegel.
+- [x] Textfreies, markenneutrales Zuckerkristallsymbol ohne erfundene Produkt- oder Gesundheitsangabe umgesetzt.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Zunächst gelöste Position näher an die rechte Hüftseite verschoben; beide Hände bleiben neutral.
+- [x] Einzelrendering und 55-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v29.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v29/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

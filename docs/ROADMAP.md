@@ -89,7 +89,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.30 und Ernährungs-Familienabnahme umgesetzt:** `nutrition-5` ergänzt getrennte Ebenen für Reisährenemblem, tragbare Reisschale und Kürbisanhänger. Das Emblem sitzt sichtbar im rechten Hintergrund. Alle fünf Ernährungsartikel bestehen gemeinsam als zehn Module; die sechs vollständigen Premiumfamilien bleiben gemeinsam als 54 Module auf beiden Körperformen aktiv.
 
-**Als Nächstes:** Paket 4.31 mit `sugar-1`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.31 umgesetzt:** `sugar-1` (Zucker-Siegel-Omamori) besitzt dunkelgrüne Seide, Gold-/Blütenornament, rote Kordel und ein textfreies gesperrtes Zuckerkristallsiegel. Die korrigierte Registrierung sitzt an der rechten Hüftseite; der Kandidat besteht mit den sechs vollständigen Premiumfamilien als 55 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.32 mit `sugar-2`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
