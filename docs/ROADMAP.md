@@ -85,7 +85,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.28 umgesetzt:** `nutrition-3` (Vitalitäts-Obi) besitzt getrennte Gürtel- und Blütenknotenebenen mit waldgrün-elfenbeinfarbener Seide, Blatt-/Blütenmotiven, Goldkanten, Jadeperlen und Quasten. Die ersten drei Ernährungsartikel bestehen gemeinsam als vier Module und mit den fünf vollständigen Premiumfamilien als 48 Module auf beiden Körperformen.
 
-**Als Nächstes:** Paket 4.29 mit `nutrition-4`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.29 umgesetzt:** `nutrition-4` (Kochgelehrten-Haori) besitzt getrennte Rück-, Vorder- und Schürzenebenen mit offenem elfenbeinfarbenem Gewand, grünem Futter, Ernte-/Kräutermotiven und goldenen Kochutensilien. Die korrigierte tiefe Halsöffnung hält das Gesicht frei. Die ersten vier Ernährungsartikel bestehen gemeinsam als sieben Module und mit den fünf vollständigen Premiumfamilien als 51 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.30 mit `nutrition-5` und anschließend die Ernährungs-Familienabnahme. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

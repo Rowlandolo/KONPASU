@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.28
+## Etappe 4 · Stand nach Paket 4.29
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -280,3 +280,5 @@ Die vollständige Schlaf-Serie besitzt sieben hashgebundene Premiummodule. Die M
 `nutrition-2` ergänzt ein hashgebundenes Premium-Kräuterbeutelmodul. Der Beutel sitzt auf beiden registrierten Körperformen links außen neben dem Bento; Hand, Obi und beide Ernährungsartikel bleiben getrennt lesbar. Der 46-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf besteht. 62 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `nutrition-3` ergänzt zwei hashgebundene Premiumebenen für Gürtel und vorderen Blütenknoten. Die Taille schließt auf beiden registrierten Körperformen; Kräuterbeutel und Bento bleiben gleichzeitig sichtbar. Die ersten drei Ernährungsartikel bestehen als vier Module und im 48-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf. 61 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+`nutrition-4` ergänzt drei hashgebundene Premiumebenen für Rückengewand, Vordergewand und Kochschürze. Der zunächst zu hohe Kragen wurde vor Abnahme entfernt; die tiefe Öffnung hält Gesicht, Hals und Körpermitte auf beiden registrierten Körperformen frei. Die ersten vier Ernährungsartikel bestehen als sieben Module und im 51-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf. 60 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

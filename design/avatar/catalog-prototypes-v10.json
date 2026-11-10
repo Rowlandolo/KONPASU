@@ -4746,7 +4746,28 @@
             100,
             160
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-rear.png",
+            "bytes": 498919,
+            "sha256": "d8eb7732b78c7c8c2b63336654fbbcfa3d59a4e720ade8b8b8a6a961079bb294",
+            "width": 771,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                42,
+                84,
+                428,
+                436
+              ],
+              "form-b": [
+                15,
+                74,
+                482,
+                491
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-map",
@@ -4776,7 +4797,28 @@
             100,
             160
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-front.png",
+            "bytes": 492705,
+            "sha256": "98d005c44e2c64c1f16bf5c9ccf7691f2b06f1fd4f45888c8c548bfc9e73f773",
+            "width": 722,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                48,
+                84,
+                416,
+                445
+              ],
+              "form-b": [
+                22,
+                74,
+                468,
+                501
+              ]
+            }
+          }
         },
         {
           "shape": "apron",
@@ -4805,17 +4847,37 @@
             100,
             150
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-apron.png",
+            "bytes": 679120,
+            "sha256": "7ee8d8b152258d1d495e402ac63d61be3107bcc0392e334aa26198f2b220bf69",
+            "width": 749,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                193,
+                228,
+                126,
+                145
+              ],
+              "form-b": [
+                190,
+                228,
+                136,
+                157
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-5",

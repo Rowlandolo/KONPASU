@@ -170,6 +170,12 @@ Die ersten beiden Ernährungsartikel bestehen gemeinsam als zwei unabhängige Mo
 
 Die ersten drei Ernährungsartikel bestehen gemeinsam als vier unabhängige Module auf Form A und B sowie im 48-Modul-Übergang mit den fünf vollständigen Premiumfamilien. Kräuterbeutel und Bento-Anhänger bleiben neben dem Obi sichtbar. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v26.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v26/`. 61 Artikel bleiben Vektorstudien.
 
+## Paket 4.29 · Kochgelehrten-Haori (`nutrition-4`)
+
+`nutrition-4-rear.png`, `nutrition-4-front.png` und `nutrition-4-apron.png` bilden ein offenes elfenbeinfarbenes Außengewand mit waldgrünem Futter, antikgoldenen Ernte-/Kräutermotiven sowie eine dunkelgrüne Kochschürze mit goldenen Besteckmotiven ab. Die erste Kragenfassung reichte in das Gesicht und wurde vor Abnahme durch einen tief geöffneten, transparenten Nackenbereich ersetzt. Gesicht, Hals, Körpermitte und Hände bleiben auf beiden Formen frei; nur tatsächlicher Vorderstoff maskiert Armartikel.
+
+Die ersten vier Ernährungsartikel bestehen gemeinsam als sieben unabhängige Module auf Form A und B sowie im 51-Modul-Übergang mit den fünf vollständigen Premiumfamilien. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v27.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v27/`. 60 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

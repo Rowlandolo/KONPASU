@@ -597,6 +597,19 @@ Beleg: `design/avatar/verification-premium-nutrition-v25.json`; archivierte Ansi
 
 Beleg: `design/avatar/verification-premium-nutrition-v26.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v26/`.
 
+## Etappe 4 · Paket 4.29 Kochgelehrten-Haori
+
+- [x] `nutrition-4` gegen die Artbookkarte geprüft: offene helle Jacke, grünes Futter, Ernte-/Kräutermotive und dunkelgrüne Schürze mit goldenen Kochutensilien.
+- [x] Drei transparente, hashgebundene Module für Rückengewand, Vordergewand und Schürze mit eigener Passform für Form A und B umgesetzt.
+- [x] Zu hohen Erstkragen verworfen; korrigierte tiefe Halsöffnung hält Gesicht, Kinn und Hals vollständig frei.
+- [x] Offene Mitte erhält Grundkleidung und Obi; Hände bleiben frei und nur tatsächlicher Vorderstoff maskiert Armartikel.
+- [x] Erste vier Ernährungsartikel gemeinsam als sieben unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 51-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand, 59 Kataloggruppen und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v27.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v27/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

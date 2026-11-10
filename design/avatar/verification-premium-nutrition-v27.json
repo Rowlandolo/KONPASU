@@ -1,0 +1,43 @@
+{
+  "version": 27,
+  "date": "2026-11-10",
+  "scope": "stage-4-nutrition-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["nutrition-1", "nutrition-2", "nutrition-3", "nutrition-4"],
+    "candidateModules": 7,
+    "transitionModules": 51,
+    "remainingVectorStudies": 60
+  },
+  "catalogueBrowser": {
+    "checks": 59,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "nutrition4ChangedPixels": {"form-a": 23685, "form-b": 29852},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "nutrition-1-4-premium-form-a.png": "946d802f1d7fe96f6b7f288094ac839ff4088f09f2d0990742818eb1e4030826",
+    "nutrition-1-4-premium-form-b.png": "99d01573cfb73581df1bc3db114e1442098575ff360f223cbeef03df8f765ebc",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-4-form-a.png": "3ef6f9eacd383d682382c5dfbb2a0af50f8fe628195e6526f440f503ea4bc2a7",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-4-form-b.png": "74aafe7ed5b43a128f1f3996a90c2fd69a2b8cc1f62039997f2cc6c60328e8e4",
+    "family-nutrition.png": "cc9ae1d3b1ff109b2c57f36a460ab8781533faddc9c5eb8044a232b334a061b8"
+  },
+  "accepted": [
+    "The Chef Scholar Apron-Haori follows the source motif with an open ivory outer garment, forest-green lining, gold harvest and herb ornament, and a dark cooking apron with utensil motifs.",
+    "Separate rear, front and apron modules preserve anatomical depth while the corrected open neckline keeps face, chin and neck clear on both registered body forms.",
+    "The first four Nutrition candidates remain selected and separately readable as seven independent modules.",
+    "The candidates preserve complete Cardio, Steps, Mobility, Water and Sleep families as fifty-one independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}
