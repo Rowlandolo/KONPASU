@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.32 Reinheitsarmband (`sugar-2`)
+
+`sugar-2-bracelet.png` folgt der Artbookkarte als helles, leicht leuchtendes Perlenband mit einzelner Jadeperle, goldenem Endlosknoten, Quaste und Blattornament. Das transparente Einzelmodul besitzt eigene Passformen für Form A und B und folgt jeweils dem linken Handgelenk. Vorhandene Kimono- und Außenkleidungsmasken verdecken es nur dort, wo tatsächliche Ärmelpixel liegen; Auswahl und Kombination bleiben erhalten.
+
+Zucker-Siegel-Omamori und Reinheitsarmband bestehen gemeinsam als zwei unabhängige Module. Der Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung rendert 56 Module auf beiden Körperformen. 65 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-sugar-v30.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v30/`. 57 Artikel bleiben Vektorstudien.
+
 ## Paket 4.1 · Windschal (`cardio-1`)
 
 Der erste Premiumkandidat folgt der belegten Artbookkarte: tiefgrüne und elfenbeinfarbene Seide, goldene Kante, botanische Ornamente und zwei Quasten. Das Modell besteht aus zwei unabhängigen transparenten Rastermodulen:

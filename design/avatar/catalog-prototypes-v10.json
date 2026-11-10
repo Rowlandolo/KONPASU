@@ -5299,17 +5299,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-2-bracelet.png",
+            "bytes": 267819,
+            "sha256": "41acaf350da8f9b9958837680220de2b42275525f8245249362996fa93753220",
+            "width": 768,
+            "height": 521,
+            "fit": {
+              "form-a": [
+                124,
+                328,
+                48,
+                32.6
+              ],
+              "form-b": [
+                110,
+                328,
+                53,
+                36
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-3",
