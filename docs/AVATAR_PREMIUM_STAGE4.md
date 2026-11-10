@@ -152,6 +152,12 @@ Das Einzelmodul besteht die gemeinsame Sechs-Modul-Komposition mit den ersten vi
 
 Alle fünf Schlaf-Kandidaten bestehen Einzelrendering, gemeinsame Sieben-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 44-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-sleep-v23.json`, fünf gehashte Ansichten in `design/avatar/review-premium-sleep-v23/`. 64 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
 
+## Paket 4.26 · Bento-Anhänger (`nutrition-1`)
+
+`nutrition-1-bento.png` bildet ein kleines mitternachtsblaues, gold eingefasstes Bento-Täschchen mit geflochtener Aufhängeschlaufe, Schleife, Blütenmotiven, heller Quaste, klassischem Nori-Onigiri und einem zurückhaltend gestalteten Hasen-Reisbällchen ab. Die eigene Registrierung je Körperform setzt die Schlaufe an die linke Obi-Kante; beide Hände bleiben unverändert.
+
+Das Einzelmodul besteht auf Form A und B sowie im 45-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit, Wasser und Schlaf. Neben Bambus- und Lackflasche bleibt der Anhänger als eigener Artikel lesbar. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v24.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v24/`. 63 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

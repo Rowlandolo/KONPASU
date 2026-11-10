@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.25 und Schlaf-Familienabnahme
+## Etappe 4 · Stand nach Paket 4.26
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -274,3 +274,5 @@ Die vollständige Wasser-Serie besitzt sechs hashgebundene Premiummodule und bes
 `sleep-4` ergänzt ein hashgebundenes Premium-Laternenmodul. Die erste Registrierung wirkte am Haori-Ärmel befestigt und wurde vor Abnahme an die rechte Obi-Kante verschoben. Laterne, Traumkissen und weitere Hüftartikel bleiben auf beiden Körperformen getrennt lesbar; die ersten vier Schlafartikel bestehen als sechs Module und den 43-Modul-Übergang. 65 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 Die vollständige Schlaf-Serie besitzt sieben hashgebundene Premiummodule. Die Mondruhe-Aura rahmt die persönliche Figur mit Vollmond, offenem Nachthimmel, Wolken und Blüten; die fremde Meditationssilhouette der Kartenillustration ist bewusst ausgeschlossen. Alle fünf Schlafartikel bestehen gemeinsam sowie im 44-Modul-Übergang mit Cardio, Schritte, Beweglichkeit und Wasser auf beiden registrierten Körperformen. 64 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration, physische Geräte, VoiceOver sowie GPU-/Speicherspitzen bleiben offen.
+
+`nutrition-1` ergänzt ein hashgebundenes Premium-Bentomodul. Die Schlaufe sitzt auf beiden registrierten Körperformen an der linken Obi-Kante; Hände bleiben neutral und das Bento bleibt neben bestehenden Flaschen und Hüftartikeln lesbar. Der 45-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser und Schlaf besteht. 63 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

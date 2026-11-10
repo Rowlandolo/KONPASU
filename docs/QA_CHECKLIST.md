@@ -561,6 +561,18 @@ Beleg: `design/avatar/verification-premium-sleep-v22.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sleep-v23.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v23/`.
 
+## Etappe 4 · Paket 4.26 Bento-Anhänger
+
+- [x] `nutrition-1` gegen die Artbookkarte geprüft: mitternachtsblaues Bento-Täschchen, Goldfassung und -schlaufe, Blüten, helle Quaste, Nori-Onigiri und Hasen-Reisbällchen.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Schlaufe an der linken Obi-Kante registriert; beide Hände bleiben neutral.
+- [x] Bento bleibt neben Bambus-/Lackflasche und weiteren Hüftartikeln als eigener Artikel lesbar.
+- [x] Einzelrendering und 45-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v24.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v24/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 
