@@ -101,7 +101,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.36 umgesetzt:** `alcohol-1` (Versiegelter Sake-Anhänger) besitzt elfenbeinfarbene Keramik mit blaugrauer Botanik, versiegelten Stopfen, Goldschnur, Knoten, Glocke, Quaste und ein textfreies gekreuztes Gefäßsymbol. Nach zwei Passformkorrekturen beginnt die Schlaufe auf beiden Körperformen an der linken Obi-Kante; Hand und Unterarm bleiben frei. Der Kandidat besteht mit den sieben vollständigen Premiumfamilien als 61 Module.
 
-**Als Nächstes:** Paket 4.37 mit `alcohol-2`.
+**Paket 4.37 umgesetzt:** `alcohol-2` (Nüchternheitslaterne) besitzt einen mitternachtsblau-goldenen Rahmen, warmes Elfenbeinpapier, einen salbeigrünen Zweig, Goldkette und blaue Seidenquaste. Die korrigierte Registrierung hängt auf beiden Körperformen an der rechten Obi-Kante und lässt Hand sowie Unterarm frei. Beide Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 62 Module.
+
+**Als Nächstes:** Paket 4.38 mit `alcohol-3`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

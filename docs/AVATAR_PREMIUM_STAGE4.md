@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.37 Nüchternheitslaterne (`alcohol-2`)
+
+`alcohol-2-sober-lantern.png` folgt der Artbookkarte als rechteckige Rahmenlaterne mit mitternachtsblauem Lack, warmgoldenen Kanten und Pfosten, warm leuchtendem Elfenbeinpapier sowie einem salbeigrünen botanischen Zweig. Eine kurze Goldkette endet in einer entsättigt blauen Seidenquaste. Das Modul besitzt eigene Passformen für Form A und B.
+
+Die erste Registrierung lag optisch am rechten Unterarm. Die korrigierten Passformen hängen den Ring an die rechte Obi-Kante und lassen Hand und Unterarm frei. Beide Alkoholbalance-Kandidaten bestehen gemeinsam als zwei Module und mit sieben vollständigen Premiumfamilien als 62 Module. 75 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-alcohol-v35.json`; Ansichten: `design/avatar/review-premium-alcohol-v35/`. 52 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.36 Versiegelter Sake-Anhänger (`alcohol-1`)
 
 `alcohol-1-sealed-gourd.png` übernimmt das Artbookmotiv als elfenbeinfarbenes Doppelgefäß mit blaugrauen Wolken-, Bambus- und Blütenmotiven, versiegeltem Stopfen, warmgoldenen Halsringen, geflochtener Schnur, Zierknoten, Glocke und Elfenbeinquaste. Ein abstraktes gekreuztes Gefäßsymbol kennzeichnet den versiegelten Zustand ohne erfundene Schrift, Produktmarke oder Gesundheitsbehauptung.

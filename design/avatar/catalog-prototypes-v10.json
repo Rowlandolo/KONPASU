@@ -5930,17 +5930,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-2-sober-lantern.png",
+            "bytes": 382581,
+            "sha256": "21e1617bc0cc2ab0a168d8763f5d4e694d68bfdbeb7c66df49c7e396e861f460",
+            "width": 768,
+            "height": 702,
+            "fit": {
+              "form-a": [
+                282,
+                278,
+                82,
+                74.953125
+              ],
+              "form-b": [
+                294,
+                278,
+                82,
+                74.953125
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-3",

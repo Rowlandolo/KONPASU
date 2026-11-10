@@ -695,6 +695,18 @@ Beleg: `design/avatar/verification-premium-sugar-v33.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-alcohol-v34.json`; archivierte Ansichten: `design/avatar/review-premium-alcohol-v34/`.
 
+## Etappe 4 · Paket 4.37 Nüchternheitslaterne
+
+- [x] `alcohol-2` gegen die Artbookkarte geprüft: helle rechteckige Rahmenlaterne mit botanischem Motiv.
+- [x] Transparentes, hashgebundenes Premiummodul mit mitternachtsblau-goldenem Rahmen, Elfenbeinpapier, Zweig, Kette und blauer Quaste umgesetzt.
+- [x] Unterarmnahe Erstregistrierung korrigiert; Ring beginnt am rechten Obi, Hand und Unterarm bleiben frei.
+- [x] `alcohol-1` und `alcohol-2` gemeinsam als zwei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 62-Modul-Übergang mit sieben vollständigen Premiumfamilien auf beiden Körperformen.
+- [x] 75 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-alcohol-v35.json`; archivierte Ansichten: `design/avatar/review-premium-alcohol-v35/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 
