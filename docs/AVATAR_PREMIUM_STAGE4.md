@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.42 Leseschriftrolle (`reading-2`)
+
+`reading-2-scroll.png` bildet eine kleine offene Schriftrolle aus warmem Elfenbeinpapier, dunkelgrünen Lackachsen, antikgoldenen Beschlägen und einer blau-grauen Berg-, Nebel-, Kiefern- und Mondlandschaft ab. Sie enthält keine erfundene Schrift; das rote Siegel bleibt eine abstrakte, zeichenfreie Farbmarke.
+
+Die erste Registrierung verdeckte linke Hand und Buch-Anhänger. Die korrigierten körperformspezifischen Passformen hängen die Rolle an die freie rechte Obi-Kante, gegenüber `reading-1`; beide Hände und beide Lesen-Artikel bleiben vollständig sichtbar. Die ersten zwei Lesen-Kandidaten bestehen als zwei unabhängige Module und mit acht vollständigen Premiumfamilien als 70 Module. 85 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-reading-v40.json`; Ansichten: `design/avatar/review-premium-reading-v40/`. 47 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.41 Buch-Anhänger (`reading-1`)
 
 `reading-1-book-charm.png` überträgt die Artbookvorlage als dunkelgrünen Miniatur-Buchanhänger mit antikgoldener Kanten- und Eckfassung, großer heller Kirschblüte, kleinen Goldblüten, geflochtener Trageschlaufe, Zierknoten, Perle und Elfenbeinquaste. Das Modul enthält keine erfundene Schrift und erhebt keinen Anspruch auf ein lesbares geöffnetes Buch.

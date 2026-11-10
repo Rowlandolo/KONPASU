@@ -1,0 +1,50 @@
+{
+  "version": 40,
+  "date": "2026-11-10",
+  "scope": "stage-4-reading-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": [
+      "reading-1",
+      "reading-2"
+    ],
+    "candidateModules": 2,
+    "transitionModules": 70,
+    "remainingVectorStudies": 47
+  },
+  "catalogueBrowser": {
+    "checks": 85,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "reading2ChangedPixels": {
+      "form-a": 431,
+      "form-b": 432
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "reading-1-2-premium-form-a.png": "c4d3090bea5c417d00687d504308ff38c9e3169876c3b8359bedc6d54353ffe8",
+    "reading-1-2-premium-form-b.png": "79533d131a48799c202eaff9251fafe6b1469832a0afbfceea764751a138fff6",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-form-a.png": "d6ef8548b56da3b10bdc9ece959aaa3fb6f3ec2b6a00476ef04cad249ed3fd08",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-form-b.png": "1388fb4c3b030bfab8a8cda976abba430ca03d778b6a4ce04f505f51fa848ec8",
+    "family-reading.png": "e140273fb8536bece7171c193e3876fed0edd2ad6cb1f5f337b45faeca63065f"
+  },
+  "accepted": [
+    "The Reading Scroll follows the source with ivory paper, dark green lacquer rods, antique-gold fittings and a blue-gray mountain landscape.",
+    "It contains no invented writing; the only seal is an abstract character-free colour mark.",
+    "After visual correction its body-specific registration suspends it from the right obi, opposite the Book Charm, while retaining neutral unobscured hands on both body forms.",
+    "The first two Reading candidates coexist as two independently controllable modules.",
+    "They preserve eight complete premium families as seventy independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The present honest obi suspension does not claim a new grip pose or readable written content.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

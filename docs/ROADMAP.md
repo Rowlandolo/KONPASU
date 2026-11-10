@@ -111,7 +111,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.41 umgesetzt:** `reading-1` (Buch-Anhänger) ergänzt einen dunkelgrünen Miniaturbuchkörper mit Goldfassung, heller Kirschblüte, geflochtener Schlaufe und Elfenbeinquaste. Die Schlaufe beginnt auf beiden Körperformen an der linken Obi-Kante; der Kandidat besteht mit den acht vollständigen Premiumfamilien als 69 Module.
 
-**Als Nächstes:** Paket 4.42 mit `reading-2`.
+**Paket 4.42 umgesetzt:** `reading-2` (Leseschriftrolle) ergänzt Elfenbeinpapier, dunkelgrüne Lackachsen, Goldbeschläge und eine textfreie blau-graue Berglandschaft. Nach Passformkorrektur hängt sie auf beiden Körperformen an der rechten Obi-Kante gegenüber dem Buch-Anhänger; beide Hände bleiben frei. Die ersten zwei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 70 Module.
+
+**Als Nächstes:** Paket 4.43 mit `reading-3`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

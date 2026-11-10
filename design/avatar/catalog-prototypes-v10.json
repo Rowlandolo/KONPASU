@@ -6662,17 +6662,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-2-scroll.png",
+            "bytes": 620470,
+            "sha256": "f639dcdd29339c4de372b0c23369b9a5d3e651449ba59ee4ca5a1378e39333b8",
+            "width": 759,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                274,
+                275,
+                62,
+                62.7
+              ],
+              "form-b": [
+                276,
+                275,
+                62,
+                62.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-3",

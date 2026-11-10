@@ -829,3 +829,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
 - [x] 83 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.42 Leseschriftrolle
+
+- [x] `reading-2` gegen die Artbookkarte geprüft: Elfenbeinpapier, dunkle Achsen, Goldbeschläge und blau-graue Landschaft.
+- [x] Transparentes Premiummodul ohne erfundene Schrift oder Zeichen hashgebunden umgesetzt.
+- [x] Erste linke Registrierung wegen Hand-/Buchüberdeckung verworfen; korrigierte Passform hängt rechts am Obi.
+- [x] Buch-Anhänger und Schriftrolle bleiben auf Form A und B gleichzeitig vollständig sichtbar, beide Hände neutral.
+- [x] Erste zwei Lesen-Kandidaten als zwei unabhängige Module sowie 70-Modul-Übergang mit acht vollständigen Premiumfamilien geprüft.
+- [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
+- [x] 85 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
