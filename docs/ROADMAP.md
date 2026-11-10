@@ -103,7 +103,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.37 umgesetzt:** `alcohol-2` (Nüchternheitslaterne) besitzt einen mitternachtsblau-goldenen Rahmen, warmes Elfenbeinpapier, einen salbeigrünen Zweig, Goldkette und blaue Seidenquaste. Die korrigierte Registrierung hängt auf beiden Körperformen an der rechten Obi-Kante und lässt Hand sowie Unterarm frei. Beide Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 62 Module.
 
-**Als Nächstes:** Paket 4.38 mit `alcohol-3`.
+**Paket 4.38 umgesetzt:** `alcohol-3` (Heiter und gelassen) ergänzt eine verbundene Dreier-Mimikstudie derselben erwachsenen Figur. Sie bleibt als eigenständiges Sammelmodul links neben dem Kopf sichtbar und verändert die persönliche Avatar-Mimik nicht. Die ersten drei Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 63 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.39 mit `alcohol-4`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

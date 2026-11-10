@@ -1,0 +1,51 @@
+{
+  "version": 36,
+  "date": "2026-11-10",
+  "scope": "stage-4-alcohol-3-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": [
+      "alcohol-1",
+      "alcohol-2",
+      "alcohol-3"
+    ],
+    "candidateModules": 3,
+    "transitionModules": 63,
+    "remainingVectorStudies": 51
+  },
+  "catalogueBrowser": {
+    "checks": 77,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "alcohol3ChangedPixels": {
+      "form-a": 1842,
+      "form-b": 1842
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "alcohol-1-2-3-premium-form-a.png": "8a68f5ddfad2940dc85a920466bd330d99bec02a1f7409eb5355fdbe9a02bd47",
+    "alcohol-1-2-3-premium-form-b.png": "23701f9614954c2fea0bb0feec40f31f45d60523dc9115652fa43bcfaf3e4951",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-3-form-a.png": "a5c3b67442554b576890e366404d15087c62965d2ec288a327dd4799bfca590b",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-3-form-b.png": "6b50488e2150486a3e5d1aada353fc0ccb9de3d13064c2b385bac018c587b596",
+    "family-alcohol.png": "7a4cb78cff37484c34dce025a3e3d88a0bd45d4dcbc92447db741d63b201b807"
+  },
+  "accepted": [
+    "The Cheerful Calm Face-Expression Set follows the source as a connected three-expression study of the same calm adult character.",
+    "Its body-specific registration keeps the complete study visible to the left of the head and distinct from the Sugar expression study on the right.",
+    "The study is an independent collectible module and does not replace or override the avatar face.",
+    "The first three Alcohol candidates coexist as three independently controllable modules on both body forms.",
+    "They preserve seven complete premium families as sixty-three independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "This separate expression study does not claim a full replacement face anatomy or animated expressions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

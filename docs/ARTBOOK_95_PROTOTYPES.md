@@ -737,7 +737,7 @@ Prototyp: vector-fit-prototype. Mimikstudie neben dem Kopf; kein ungetestetes Ü
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme; Neue vollständige Mimikgrafiken für beide Figuren.
+Offen: App-/Offlineintegration; Physische Geräteabnahme; Neue vollständige Mimikgrafiken für beide Figuren.
 
 ### alcohol-4 · Klarhimmel-Obi
 

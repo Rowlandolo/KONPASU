@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.37
+## Etappe 4 · Stand nach Paket 4.38
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -298,3 +298,6 @@ Die vollständige Zuckerbalance-Serie besitzt sechs hashgebundene Premiummodule.
 `alcohol-1` ergänzt ein hashgebundenes Premium-Kalebassenmodul. Zwei erste Registrierungen wirkten am linken Unterarm befestigt; die korrigierte Schlaufe beginnt an der linken Obi-Kante und hält Hand sowie Unterarm frei. Das textfreie gekreuzte Gefäßsymbol vermeidet erfundene Schrift und Marken. Der 61-Modul-Übergang mit sieben vollständigen Familien besteht. 53 Artikel bleiben Vektorstudien. Eine spätere Griffpose, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `alcohol-2` ergänzt ein hashgebundenes Premium-Laternenmodul. Die erste Registrierung wirkte am rechten Unterarm befestigt; der korrigierte Ring beginnt an der rechten Obi-Kante, Laternenkörper und Quaste hängen über dem Hakama, Hand und Unterarm bleiben frei. Beide Alkoholbalance-Artikel bestehen den 62-Modul-Übergang. 52 Artikel bleiben Vektorstudien. Eine spätere Griffpose, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+
+`alcohol-3` ergänzt eine hashgebundene Premium-Dreierstudie ruhiger Gesichtsausdrücke. Sie sitzt vollständig links neben dem Kopf und bleibt von der Zucker-Mimikstudie rechts getrennt. Der Artikel ist derzeit ein separates Sammelmodul und keine austauschbare Gesichtsanatomie; persönliche Mimik und gespeicherte Profildaten bleiben unverändert. Die drei Alkoholbalance-Artikel bestehen den 63-Modul-Übergang. 51 Artikel bleiben Vektorstudien. Animierte bzw. echte Austauschmimik, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

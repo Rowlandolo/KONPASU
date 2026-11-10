@@ -781,3 +781,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Kritischer Offline-Precache enthält den neuen Historienvertrag; Releaseversion 2.4.1 und eigener Cache `konpasu-offline-v241`.
 - [x] Main-Merge `ee160643515cf89dbc5c1bde38245ea3210052e2`, Pages-Lauf 41648613896, öffentliches `version.json` und fünf Kernressourcen mit HTTP 200 sowie exakt lokalen SHA-256 bestätigt.
 - [ ] Physisches iPhone/GPU/VoiceOver und Upgrade einer bereits installierten alten PWA prüfen; Daten nicht löschen.
+
+
+## Etappe 4 · Paket 4.38 Heiter und gelassen
+
+- [x] `alcohol-3` gegen die Artbookkarte geprüft: drei ruhige, freundliche Ausdrücke derselben erwachsenen Figur.
+- [x] Zusammenhängende Dreierstudie, elfenbein-goldene Rahmen und blaue Wolkenakzente als transparentes Premiummodul umgesetzt und hashgebunden.
+- [x] Körperformspezifische Registrierung hält die Studie links neben dem Kopf vollständig sichtbar und von der Zucker-Mimikstudie rechts getrennt.
+- [x] Das Modul bleibt eine unabhängige Sammelstudie und überschreibt weder Avatar-Gesicht noch persönliche Mimik.
+- [x] `alcohol-1` bis `alcohol-3` gemeinsam als drei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 63-Modul-Übergang, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 77 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Austauschbare/animierte Gesichtsanatomie, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

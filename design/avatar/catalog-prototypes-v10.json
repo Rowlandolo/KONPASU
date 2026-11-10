@@ -6046,18 +6046,38 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-3-calm-study.png",
+            "bytes": 437610,
+            "sha256": "c19530c1f37438e18070eeeb0e9b1a2ad0a5344c4aa9cf81fc23048891138a18",
+            "width": 768,
+            "height": 307,
+            "fit": {
+              "form-a": [
+                18,
+                42,
+                150,
+                59.9609375
+              ],
+              "form-b": [
+                12,
+                42,
+                150,
+                59.9609375
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Mimikstudie neben dem Kopf; kein ungetestetes Überschreiben des vorhandenen Gesichts.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme",
         "Neue vollständige Mimikgrafiken für beide Figuren"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-4",
