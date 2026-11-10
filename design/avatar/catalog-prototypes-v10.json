@@ -1658,7 +1658,7 @@
           }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "App-/Offlineintegration",
@@ -6778,7 +6778,28 @@
             100,
             180
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-3-strap.png",
+            "bytes": 113601,
+            "sha256": "cde4ca08417b8d47c85f7644ffd077736187b36b954024e4177839a5a6f8b85f",
+            "width": 467,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                145,
+                95,
+                220,
+                361.8
+              ],
+              "form-b": [
+                130,
+                90,
+                245,
+                403
+              ]
+            }
+          }
         },
         {
           "shape": "satchel",
@@ -6808,17 +6829,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-3-satchel.png",
+            "bytes": 466650,
+            "sha256": "afaf14788515a1771961c38b39788a103e28b0bef09237c654f1768736146f6b",
+            "width": 768,
+            "height": 525,
+            "fit": {
+              "form-a": [
+                105,
+                282,
+                180,
+                123
+              ],
+              "form-b": [
+                90,
+                282,
+                195,
+                133.3
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-4",
@@ -10298,7 +10339,7 @@
           "theme": "forest"
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "Premiumzeichnung statt Vektorstudie",

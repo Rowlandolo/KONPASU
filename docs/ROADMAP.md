@@ -113,7 +113,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.42 umgesetzt:** `reading-2` (Leseschriftrolle) ergänzt Elfenbeinpapier, dunkelgrüne Lackachsen, Goldbeschläge und eine textfreie blau-graue Berglandschaft. Nach Passformkorrektur hängt sie auf beiden Körperformen an der rechten Obi-Kante gegenüber dem Buch-Anhänger; beide Hände bleiben frei. Die ersten zwei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 70 Module.
 
-**Als Nächstes:** Paket 4.43 mit `reading-3`.
+**Paket 4.43 umgesetzt:** `reading-3` (Gelehrtentasche) ergänzt einen mitternachtsblauen Schultergurt und eine getrennte dunkelblaue Tasche mit Elfenbeinpaspel, Goldbeschlägen, Blütenornamenten, Quaste und zeichenfreien Büchern. Eigene Passformen verbinden beide Module auf Form A und B; die ersten drei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 72 Module.
+
+**Als Nächstes:** Paket 4.44 mit `reading-4`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

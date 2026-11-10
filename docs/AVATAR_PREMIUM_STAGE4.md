@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.43 Gelehrtentasche (`reading-3`)
+
+`reading-3-strap.png` bildet den diagonal geführten mitternachtsblauen Ledergurt mit Elfenbeinnaht, antikgoldener Schnalle und Ringen ab. `reading-3-satchel.png` ergänzt getrennt die dunkelblaue Tasche mit heller Paspel, Goldbeschlägen, Blütenornamenten, Quaste und mehreren zeichenfreien Büchern. Die Trennung erhält eine kontrollierte Tiefenordnung und unabhängige Sichtbarkeit.
+
+Die körperformspezifischen Passformen verbinden Gurt und Tasche auf beiden Standfiguren und lassen die neutralen Hände bestehen. Die ersten drei Lesen-Kandidaten bestehen als vier unabhängige Module und mit acht vollständigen Premiumfamilien als 72 Module. 87 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-reading-v41.json`; Ansichten: `design/avatar/review-premium-reading-v41/`. 46 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.42 Leseschriftrolle (`reading-2`)
 
 `reading-2-scroll.png` bildet eine kleine offene Schriftrolle aus warmem Elfenbeinpapier, dunkelgrünen Lackachsen, antikgoldenen Beschlägen und einer blau-grauen Berg-, Nebel-, Kiefern- und Mondlandschaft ab. Sie enthält keine erfundene Schrift; das rote Siegel bleibt eine abstrakte, zeichenfreie Farbmarke.

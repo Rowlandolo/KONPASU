@@ -841,3 +841,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
 - [x] 85 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.43 Gelehrtentasche
+
+- [x] `reading-3` gegen die Artbookkarte geprüft: dunkle Gelehrtentasche, Schultergurt, helle Bücher, Goldbeschläge, Blütenornamente und Quaste.
+- [x] Schultergurt und Tasche als zwei getrennte transparente, hashgebundene Premiummodule ohne erfundene Schrift umgesetzt.
+- [x] Körperformspezifische Passformen verbinden Gurt und Tasche auf Form A und B; beide neutralen Hände bleiben erhalten.
+- [x] Die ersten drei Lesen-Kandidaten gemeinsam als vier unabhängige Module auf beiden Körperformen geprüft.
+- [x] 72-Modul-Übergang mit acht vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 87 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griffpose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
