@@ -5532,17 +5532,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-4-lotus-fan.png",
+            "bytes": 334543,
+            "sha256": "26476d322d7b5d10a68b6a51fc88593c0f0f92af0ea3d5a1d71a42bb35157aa3",
+            "width": 768,
+            "height": 384,
+            "fit": {
+              "form-a": [
+                152,
+                286,
+                96,
+                48
+              ],
+              "form-b": [
+                140,
+                286,
+                96,
+                48
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-5",

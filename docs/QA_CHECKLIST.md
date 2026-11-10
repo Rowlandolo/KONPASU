@@ -660,6 +660,18 @@ Beleg: `design/avatar/verification-premium-sugar-v30.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sugar-v31.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v31/`.
 
+## Etappe 4 · Paket 4.34 Lotusfächer
+
+- [x] `sugar-4` gegen die Artbookkarte geprüft: tiefgrüne Fächerseide, helle Lotusblüten und Goldrippen.
+- [x] Transparentes, hashgebundenes Premiummodul mit botanischer Goldzeichnung, Jadeperle und Elfenbeinquaste umgesetzt.
+- [x] Eigene Passform am linken Obi für Form A und B; neutrale Hände und ehrliche fehlende Griffpose erhalten.
+- [x] `sugar-1` bis `sugar-4` gemeinsam als vier unabhängige Module auf beiden Körperformen geprüft.
+- [x] 58-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 69 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v32.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v32/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

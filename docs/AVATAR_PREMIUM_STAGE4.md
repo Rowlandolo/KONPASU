@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.34 Lotusfächer (`sugar-4`)
+
+`sugar-4-lotus-fan.png` folgt dem Artbookmotiv mit tiefgrüner Fächerseide, warmgoldener Außenkante und Rippen, drei elfenbein-roséfarbenen Lotusblüten, feinen Stielen, Blättern und Samenkapseln sowie einer kurzen Jade-/Elfenbeinquaste. Das transparente Einzelmodul besitzt eigene Passformen für Form A und B. Es sitzt ehrlich am linken Obi und verändert die neutralen Hände nicht.
+
+Die ersten vier Zuckerbalance-Kandidaten bestehen gemeinsam als vier unabhängige Module und mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung als 58 Module. 69 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-sugar-v32.json`; Ansichten: `design/avatar/review-premium-sugar-v32/`. 55 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.33 Helles Lächeln (`sugar-3`)
 
 `sugar-3-smile-study.png` übernimmt das Referenzmotiv als drei gerahmte Nahporträts derselben erwachsenen Figur: geschlossene lächelnde Augen, warme Wangen, offenes natürliches Lächeln und leicht unterschiedliche Kopfstellungen. Elfenbeinfarbene Goldrahmen, Jadeblätter und helle Blüten verbinden die drei Ansichten. Das Modul bleibt eine separate Mimikstudie neben dem Kopf; es behauptet keine noch nicht vorhandenen vollständigen Ersatzgesichter.
