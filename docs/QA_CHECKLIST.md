@@ -865,3 +865,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
 - [x] 89 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griff-/Lesepose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.45 Archiv-Schriftrollenset und Lesen-Familienabnahme
+
+- [x] `reading-5` gegen die Artbookkarte geprüft: dunkler Rollenkasten, mehrere Schriftrollen und heller offener Archivbogen mit Regalen.
+- [x] Offener Archivrahmen und geschlossenes Rollenset als zwei getrennte transparente, hashgebundene Premiummodule ohne erfundene Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hält die Rahmenmitte frei und das Rollenset unterhalb der Hüftartikel vollständig sichtbar.
+- [x] Alle fünf Lesen-Kandidaten gemeinsam als sieben unabhängige Module auf beiden Körperformen geprüft.
+- [x] Neun vollständige Premiumfamilien gemeinsam als 75 Module auf beiden Körperformen geprüft.
+- [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
+- [x] 91 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Öffnungs-/Leseposen, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

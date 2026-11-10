@@ -847,7 +847,7 @@ Original: **Grand Archive Scroll Set**, Tafel assets/konpasu_knowledge_productiv
 
 Unveränderte Legacy-Zuordnung: Ewiges Archiv; Slot background; 52 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Offener Archivrahmen hinter der Figur und geschlossenes Rollenset im Vordergrund; keine lesbare Schrift oder ungetestete Griffpose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
@@ -856,7 +856,7 @@ Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ## Sprachen
 

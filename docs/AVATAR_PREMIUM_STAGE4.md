@@ -2,6 +2,14 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.45 Archiv-Schriftrollenset (`reading-5`)
+
+`reading-5-archive-frame.png` bildet einen offenen dunkelblau-waldgrün-elfenbeinfarbenen Archivbogen mit antikgoldener Fassung, seitlichen Bücherregalen, warmen Laternen und Kirschblüten hinter der Figur ab. Seine große transparente Mitte hält Avatar und Outfit frei. `reading-5-scroll-set.png` ergänzt im Vordergrund einen dunklen Lackkasten und mehrere geschlossene Elfenbeinschriftrollen mit grünen und blauen Seidenwicklungen, Goldbeschlägen, Kordel, Blüte und Quaste. Bücher und Rollen enthalten keine erfundene Schrift.
+
+## Lesen-Familienabnahme
+
+Alle fünf Lesen-Kandidaten bestehen Einzelrendering, gemeinsame Sieben-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 75-Modul-Übergang mit den acht früheren vollständigen Premiumfamilien, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. 91 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, warmer Offlinezustand und null Speicherwrites bestehen. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-reading-v43.json`, fünf gehashte Ansichten in `design/avatar/review-premium-reading-v43/`. 44 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
+
 ## Aktueller Stand · Paket 4.44 Bibliothekskodex (`reading-4`)
 
 `reading-4-library-codex.png` überträgt die Artbookvorlage als geschlossenes mitternachtsblaues Buch mit antikgoldenen Rückenbändern, Eckbeschlägen und Schließen, floraler Goldzeichnung, heller Blüte, dunkelgrünem Lesezeichen und Elfenbeinquaste. Der Einband enthält keine Buchstaben, Wörter, Logos oder lesbare Schrift.

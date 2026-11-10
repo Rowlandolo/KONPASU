@@ -7061,7 +7061,28 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-5-scroll-set.png",
+            "bytes": 680411,
+            "sha256": "1d54d478e383a2bbfa1897f2b8f94630fa682caf33c2b5557b276726488194cb",
+            "width": 768,
+            "height": 531,
+            "fit": {
+              "form-a": [
+                160,
+                410,
+                190,
+                131.4
+              ],
+              "form-b": [
+                160,
+                415,
+                190,
+                131.4
+              ]
+            }
+          }
         },
         {
           "shape": "scene-torii",
@@ -7090,17 +7111,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-5-archive-frame.png",
+            "bytes": 778401,
+            "sha256": "6962aa8222c4400c3592f7a7eefe0c9986c62c5fcbee34fccedf448f1b2263c5",
+            "width": 1024,
+            "height": 674,
+            "fit": {
+              "form-a": [
+                0,
+                20,
+                512,
+                337
+              ],
+              "form-b": [
+                0,
+                20,
+                512,
+                337
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Offener Archivrahmen hinter der Figur und geschlossenes Rollenset im Vordergrund; keine lesbare Schrift oder ungetestete Griffpose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "languages-1",
