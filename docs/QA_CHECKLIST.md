@@ -585,6 +585,18 @@ Beleg: `design/avatar/verification-premium-nutrition-v24.json`; archivierte Ansi
 
 Beleg: `design/avatar/verification-premium-nutrition-v25.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v25/`.
 
+## Etappe 4 · Paket 4.28 Vitalitäts-Obi
+
+- [x] `nutrition-3` gegen die Artbookkarte geprüft: waldgrün-elfenbeinfarbene Seide, Blatt-/Blütenmotive, Goldkanten, Blütenknoten und helle Quasten.
+- [x] Zwei transparente, hashgebundene Module für Taillengürtel und vorderen Knoten mit eigener Passform für Form A und B umgesetzt.
+- [x] Gürtel schließt die Taille; Knoten, Stoffbahnen und Quasten bleiben vor dem Gürtel lesbar und beide Hände frei.
+- [x] Bento-Anhänger, Kräuterbeutel und Vitalitäts-Obi gemeinsam als vier unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 48-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v26.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v26/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

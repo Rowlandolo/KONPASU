@@ -4579,7 +4579,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-3-band.png",
+            "bytes": 335863,
+            "sha256": "d9d2f5bf7d1cc66699c85bbc32059b6c4b30d6be6eb8d61b5b1009e74593ce67",
+            "width": 768,
+            "height": 385,
+            "fit": {
+              "form-a": [
+                165,
+                240,
+                182,
+                91.2
+              ],
+              "form-b": [
+                153,
+                238,
+                206,
+                103.3
+              ]
+            }
+          }
         },
         {
           "shape": "sash-bow",
@@ -4608,17 +4629,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-3-bow.png",
+            "bytes": 669420,
+            "sha256": "f4b2c2bc592ecc2ef8b6be868fe9260924952e7379f481c91b803e2ef6c43a45",
+            "width": 829,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                240,
+                255,
+                142,
+                131.6
+              ],
+              "form-b": [
+                242,
+                253,
+                152,
+                140.8
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-4",

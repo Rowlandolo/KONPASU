@@ -164,6 +164,12 @@ Das Einzelmodul besteht auf Form A und B sowie im 45-Modul-Übergang mit den vol
 
 Die ersten beiden Ernährungsartikel bestehen gemeinsam als zwei unabhängige Module auf Form A und B sowie im 46-Modul-Übergang mit den fünf vollständigen Premiumfamilien. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v25.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v25/`. 62 Artikel bleiben Vektorstudien.
 
+## Paket 4.28 · Vitalitäts-Obi (`nutrition-3`)
+
+`nutrition-3-band.png` und `nutrition-3-bow.png` bilden einen waldgrün-elfenbeinfarbenen Seidenobi mit Blatt- und Blütenmotiven, antikgoldenen Kanten, mehrlagigem Blütenknoten, Jadeperlen und hellen Quasten ab. Gürtel und Zierteil bleiben getrennte Tiefenebenen; die körperformspezifische Registrierung schließt die Taille und hält beide Hände frei.
+
+Die ersten drei Ernährungsartikel bestehen gemeinsam als vier unabhängige Module auf Form A und B sowie im 48-Modul-Übergang mit den fünf vollständigen Premiumfamilien. Kräuterbeutel und Bento-Anhänger bleiben neben dem Obi sichtbar. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v26.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v26/`. 61 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
