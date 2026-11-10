@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.43
+## Etappe 4 · Stand nach Paket 4.44
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -315,3 +315,5 @@ Die vollständige Zuckerbalance-Serie besitzt sechs hashgebundene Premiummodule.
 `reading-2` ergänzt ein hashgebundenes Premium-Schriftrollenmodul ohne erfundene Schrift. Eine erste linke Registrierung überdeckte Hand und Buch-Anhänger; die korrigierte Rolle hängt rechts am Obi und hält beide Hände sowie beide Lesen-Artikel sichtbar. Die beiden Lesen-Kandidaten bestehen den 70-Modul-Übergang. 47 Artikel bleiben Vektorstudien. Eine echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `reading-3` ergänzt einen hashgebundenen Schultergurt und eine getrennte Gelehrtentasche mit zeichenfreien Büchern. Körperformspezifische Passformen verbinden beide Module; alle drei Lesen-Kandidaten bestehen als vier Module den 72-Modul-Übergang. 46 Artikel bleiben Vektorstudien. Natürliche Überdeckung in frei sortierten Mehrfachkombinationen, echte Griffposen, lesbarer Buchinhalt, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+`reading-4` ergänzt einen hashgebundenen, textfreien Bibliothekskodex mit Goldbeschlägen, Blütenornamenten, Lesezeichen und Quaste. Der vollständige Kodex bleibt rechts auf beiden Formen sichtbar; die ersten vier Lesen-Kandidaten bestehen als fünf Module den 73-Modul-Übergang. 45 Artikel bleiben Vektorstudien. Die seitliche Registrierung beansprucht keine neu gezeichnete Griffpose oder lesbaren Buchinhalt; andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

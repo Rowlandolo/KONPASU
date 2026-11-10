@@ -853,3 +853,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
 - [x] 87 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griffpose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.44 Bibliothekskodex
+
+- [x] `reading-4` gegen die Artbookkarte geprüft: großes geschlossenes navyfarbenes Buch mit Goldbeschlägen, floraler Zeichnung, heller Blüte und Lesezeichen.
+- [x] Transparentes, hashgebundenes Premiummodul ohne Buchstaben, Wörter, Logos oder lesbare Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hält den vollständigen Kodex rechts sichtbar und verändert die neutralen Hände nicht.
+- [x] Die ersten vier Lesen-Kandidaten gemeinsam als fünf unabhängige Module auf beiden Körperformen geprüft.
+- [x] 73-Modul-Übergang mit acht vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 89 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Lesepose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

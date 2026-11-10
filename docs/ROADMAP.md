@@ -115,7 +115,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.43 umgesetzt:** `reading-3` (Gelehrtentasche) ergänzt einen mitternachtsblauen Schultergurt und eine getrennte dunkelblaue Tasche mit Elfenbeinpaspel, Goldbeschlägen, Blütenornamenten, Quaste und zeichenfreien Büchern. Eigene Passformen verbinden beide Module auf Form A und B; die ersten drei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 72 Module.
 
-**Als Nächstes:** Paket 4.44 mit `reading-4`.
+**Paket 4.44 umgesetzt:** `reading-4` (Bibliothekskodex) ergänzt ein geschlossenes mitternachtsblaues Buch mit Goldbeschlägen, floraler Goldzeichnung, heller Blüte, dunkelgrünem Lesezeichen und Elfenbeinquaste. Der textfreie Kodex bleibt auf beiden Körperformen rechts vollständig sichtbar; die ersten vier Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 73 Module.
+
+**Als Nächstes:** Paket 4.45 mit `reading-5` und anschließend die vollständige Lesen-Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.44 Bibliothekskodex (`reading-4`)
+
+`reading-4-library-codex.png` überträgt die Artbookvorlage als geschlossenes mitternachtsblaues Buch mit antikgoldenen Rückenbändern, Eckbeschlägen und Schließen, floraler Goldzeichnung, heller Blüte, dunkelgrünem Lesezeichen und Elfenbeinquaste. Der Einband enthält keine Buchstaben, Wörter, Logos oder lesbare Schrift.
+
+Die körperformspezifische Registrierung hält den vollständigen Kodex rechts neben dem Hakama und verändert die neutralen Hände nicht. Die ersten vier Lesen-Kandidaten bestehen als fünf unabhängige Module und mit acht vollständigen Premiumfamilien als 73 Module. 89 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-reading-v42.json`; Ansichten: `design/avatar/review-premium-reading-v42/`. 45 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.43 Gelehrtentasche (`reading-3`)
 
 `reading-3-strap.png` bildet den diagonal geführten mitternachtsblauen Ledergurt mit Elfenbeinnaht, antikgoldener Schnalle und Ringen ab. `reading-3-satchel.png` ergänzt getrennt die dunkelblaue Tasche mit heller Paspel, Goldbeschlägen, Blütenornamenten, Quaste und mehreren zeichenfreien Büchern. Die Trennung erhält eine kontrollierte Tiefenordnung und unabhängige Sichtbarkeit.

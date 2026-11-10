@@ -6945,17 +6945,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-4-library-codex.png",
+            "bytes": 701074,
+            "sha256": "c5ba563c09965e27beaeb18224d27e6a76ae6914250c80b5fbe6576bcf27ac9d",
+            "width": 768,
+            "height": 715,
+            "fit": {
+              "form-a": [
+                300,
+                350,
+                125,
+                116.4
+              ],
+              "form-b": [
+                302,
+                350,
+                125,
+                116.4
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-5",
@@ -9199,7 +9219,7 @@
           "theme": "ink"
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "Premiumzeichnung statt Vektorstudie",

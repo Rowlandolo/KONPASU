@@ -831,7 +831,7 @@ Original: **Library Codex**, Tafel assets/konpasu_knowledge_productivity_rewards
 
 Unveränderte Legacy-Zuordnung: Bibliothekar-Haori; Slot mantle; 26 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
@@ -839,7 +839,7 @@ Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### reading-5 · Archiv-Schriftrollenset
 
@@ -1199,7 +1199,7 @@ Original: **Leather Journal**, Tafel assets/konpasu_mindfulness_reward_paths.web
 
 Unveränderte Legacy-Zuordnung: Tintenfläschchen; Slot secondary; 1 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
