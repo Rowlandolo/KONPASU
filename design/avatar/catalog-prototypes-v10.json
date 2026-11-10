@@ -4963,7 +4963,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-crest.png",
+            "bytes": 950251,
+            "sha256": "8ba82e4b92952b70bd92321d946e6c0320e02adb46a7efb4080dfa716430812e",
+            "width": 747,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                286,
+                112,
+                190,
+                195.4
+              ],
+              "form-b": [
+                292,
+                108,
+                196,
+                201.5
+              ]
+            }
+          }
         },
         {
           "shape": "harvest-bowl",
@@ -4993,7 +5014,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-bowl.png",
+            "bytes": 246361,
+            "sha256": "4985efd4d9b847128f55eab4d4a16d78e5965f6ccd0234acba2452042fbba1aa",
+            "width": 676,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                330,
+                288,
+                72,
+                81.8
+              ],
+              "form-b": [
+                342,
+                288,
+                72,
+                81.8
+              ]
+            }
+          }
         },
         {
           "shape": "pumpkin",
@@ -5022,17 +5064,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-pumpkin.png",
+            "bytes": 419770,
+            "sha256": "48b3a48052e262d92375169f5fe8f9093cd554f39ad85ad39f673cf087df6c80",
+            "width": 743,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                122,
+                318,
+                72,
+                74.4
+              ],
+              "form-b": [
+                110,
+                318,
+                72,
+                74.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-1",

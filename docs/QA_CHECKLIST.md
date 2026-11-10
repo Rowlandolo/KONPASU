@@ -610,6 +610,19 @@ Beleg: `design/avatar/verification-premium-nutrition-v26.json`; archivierte Ansi
 
 Beleg: `design/avatar/verification-premium-nutrition-v27.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v27/`.
 
+## Etappe 4 · Paket 4.30 und Ernährungs-Familienabnahme
+
+- [x] `nutrition-5` gegen die Artbookkarte geprüft: dunkelgrün-goldenes Reisährenemblem, Blüten und orangefarbener Kürbis; vertragliche Reisschale als getrenntes tragbares Modul erhalten.
+- [x] Drei transparente, hashgebundene Module für Emblem, Reisschale und Kürbis mit eigener Passform für Form A und B umgesetzt.
+- [x] Zunächst verdecktes Emblem in den freien rechten Hintergrund versetzt; Goldring und Reisähren bleiben klar lesbar.
+- [x] Reisschale und Kürbis bleiben getrennte Obi-Accessoires; Hände und vorherige Ernährungsartikel bleiben frei.
+- [x] Alle fünf Ernährungsartikel gemeinsam als zehn unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 54-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v28.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v28/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

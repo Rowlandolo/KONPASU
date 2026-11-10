@@ -176,6 +176,14 @@ Die ersten drei Ernährungsartikel bestehen gemeinsam als vier unabhängige Modu
 
 Die ersten vier Ernährungsartikel bestehen gemeinsam als sieben unabhängige Module auf Form A und B sowie im 51-Modul-Übergang mit den fünf vollständigen Premiumfamilien. Der Prüfbeleg liegt in `design/avatar/verification-premium-nutrition-v27.json`, fünf archivierte Ansichten in `design/avatar/review-premium-nutrition-v27/`. 60 Artikel bleiben Vektorstudien.
 
+## Paket 4.30 · Erntebankett-Emblemset (`nutrition-5`)
+
+`nutrition-5-crest.png`, `nutrition-5-bowl.png` und `nutrition-5-pumpkin.png` bilden ein dunkelgrün-goldenes Reisährenemblem mit Blüten, eine tragbare zeremonielle Reisschale und einen orangefarbenen Kürbisanhänger ab. Das zunächst zu stark verdeckte Emblem wurde vor Abnahme in den freien rechten Hintergrund versetzt; Gesicht, Figur und Accessoires bleiben frei.
+
+## Ernährungs-Familienabnahme
+
+Alle fünf Ernährungskandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 54-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit, Wasser und Schlaf, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-nutrition-v28.json`, fünf gehashte Ansichten in `design/avatar/review-premium-nutrition-v28/`. 59 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
