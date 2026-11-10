@@ -1,0 +1,43 @@
+{
+  "version": 32,
+  "date": "2026-11-10",
+  "scope": "stage-4-sugar-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sugar-1", "sugar-2", "sugar-3", "sugar-4"],
+    "candidateModules": 4,
+    "transitionModules": 58,
+    "remainingVectorStudies": 55
+  },
+  "catalogueBrowser": {
+    "checks": 69,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sugar4ChangedPixels": {"form-a": 552, "form-b": 541},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sugar-1-2-3-4-premium-form-a.png": "92a6fd925a1af78f1ab6158a4705adf92d873cf888fd97ca420cc0d0e3c4c09b",
+    "sugar-1-2-3-4-premium-form-b.png": "e8e40ebd08ec50cbe8cc9166cdb66920bafa8cb7580e6867455f7babeea8292f",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-3-4-form-a.png": "efff3c0cc5f1b833bba6b35858ebcd25e904ce70ea09df05cd1ede8510121c22",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-3-4-form-b.png": "11b1b96de0af4eaf086997ae7a45c8e9a52f510137157d50f41cc29c0e3d33ff",
+    "family-sugar.png": "14eba6b345f4702236d30981ab1ed0da993ab36ae1366187ae90d29ad5b48fd0"
+  },
+  "accepted": [
+    "The Lotus Fan follows the source motif with forest-green silk, ivory-blush lotus blossoms, gold ribs, botanical linework and a short jade-and-ivory tassel.",
+    "Its body-specific registration mounts it at the left obi while retaining neutral hands on both registered body forms.",
+    "The first four Sugar candidates coexist independently and preserve the six complete premium families as fifty-eight modules.",
+    "The fan remains readable beside existing waist accessories in the complete transition.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "A future grip pose may replace the present honest obi mount.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

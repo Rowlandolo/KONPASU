@@ -1,0 +1,43 @@
+{
+  "version": 30,
+  "date": "2026-11-10",
+  "scope": "stage-4-sugar-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sugar-1", "sugar-2"],
+    "candidateModules": 2,
+    "transitionModules": 56,
+    "remainingVectorStudies": 57
+  },
+  "catalogueBrowser": {
+    "checks": 65,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sugar2ChangedPixels": {"form-a": 122, "form-b": 127},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sugar-1-2-premium-form-a.png": "12e85a7277656adb5fb64107aa420f08ee7bee7564aa0b7fdd9c03dd754759d1",
+    "sugar-1-2-premium-form-b.png": "5b48b4eb384638c5ee30d244b33d0badbcb60a5916569e8c99e48fd7a0c354c2",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-form-a.png": "6a5e827f4a0630f0a63c8e199cbe60b56b176266c98e157fae141ced92b969e3",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-form-b.png": "1ed736e4d6e3bf1b170366e2599203720a23c5289601d7714a0a4a468fb46398",
+    "family-sugar.png": "f3c9d5508e10003406a8622b1df01e96f1082030eb62da9a0d2fa9a4e1c1a9fe"
+  },
+  "accepted": [
+    "The Purity Bracelet follows the source motif with pale luminous pearls, one jade-green bead, a gold endless knot, tassel and leaf ornament.",
+    "Its body-specific registration follows the left wrist on both registered body forms.",
+    "Actual kimono and outer-front pixels naturally occlude the bracelet without removing its selection.",
+    "The first two Sugar candidates coexist as two independent modules and preserve the six complete premium families as fifty-six modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

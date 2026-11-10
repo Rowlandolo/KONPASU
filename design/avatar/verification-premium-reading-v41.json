@@ -1,0 +1,48 @@
+{
+  "version": 41,
+  "date": "2026-11-10",
+  "scope": "stage-4-reading-3-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["reading-1", "reading-2", "reading-3"],
+    "candidateModules": 4,
+    "transitionModules": 72,
+    "remainingVectorStudies": 46
+  },
+  "catalogueBrowser": {
+    "checks": 87,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "reading3ChangedPixels": {
+      "form-a": 4308,
+      "form-b": 5052
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "reading-1-2-3-premium-form-a.png": "2d882809a8ee017e8f3634c85b71c3e36a8c551d841849832ae7e9bc1364f1df",
+    "reading-1-2-3-premium-form-b.png": "d9dcfd960c7071b891d527d44f58bf61323489e19d681f3e6dbc4ba7b5e29658",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-3-form-a.png": "cfb2217efb10c655e886f93fbf388f9e10249da0474bad3e257ed0216508c0d9",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-3-form-b.png": "3196cc5b26a188cdf68993fa3064f29c0bb543d06643b6c199b7d8e39b89f7de",
+    "family-reading.png": "61b7c03ddd5431c48f62ec887fb8d3393b770f8556f6aea1153b04fac10c34f6"
+  },
+  "accepted": [
+    "The Scholar Satchel follows the source as a dark navy leather bag with ivory piping, antique-gold fittings, floral ornaments, tassel and character-free books.",
+    "Its shoulder strap and bag are separate independently controllable modules with explicit depth order.",
+    "Body-specific registration connects strap and bag on both standing forms while retaining the neutral hands.",
+    "The first three Reading candidates coexist as four independently controllable modules.",
+    "They preserve eight complete premium families as seventy-two independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "The blank books do not claim readable content or a new grip pose.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

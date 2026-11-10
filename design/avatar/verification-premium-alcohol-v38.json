@@ -1,0 +1,53 @@
+{
+  "version": 38,
+  "date": "2026-11-10",
+  "scope": "stage-4-alcohol-5-premium-candidate-and-family-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": [
+      "alcohol-1",
+      "alcohol-2",
+      "alcohol-3",
+      "alcohol-4",
+      "alcohol-5"
+    ],
+    "candidateModules": 8,
+    "transitionModules": 68,
+    "remainingVectorStudies": 49
+  },
+  "catalogueBrowser": {
+    "checks": 81,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "alcohol5ChangedPixels": {
+      "form-a": 64628,
+      "form-b": 58496
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "alcohol-complete-premium-form-a.png": "60e5aaed864c3ac8651bc625161bacc1b813986bea0b72bece623babc6bd19b9",
+    "alcohol-complete-premium-form-b.png": "87cf2dff0b6fa252b8886cb1ef3f3e7bded7b06bf14efe8b99394be6984dc7f0",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-complete-form-a.png": "509d266b3a4cac0fd547138beafa3ed5e5925651fa6de4ff4003c43f7cb82f78",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-complete-form-b.png": "ab2b1d5d197702e14fa7c0d34f1a4cf9cd9c8797308ae5b384ef7ae1e0241a5a",
+    "family-alcohol.png": "ba42c8b42a538c540c4b86a50e4eca67c4c23e2a55eb8f9945c51285e5b75de2"
+  },
+  "accepted": [
+    "The Lucid Festival follows the source as a calm Japanese festival street with clear sky, distant mountains, torii, cherry blossoms and warm paper lanterns.",
+    "Landscape, torii and side-street decorations remain three independently controllable depth modules.",
+    "The central path and gate aperture keep both personal standing figures fully readable; no foreign person, text, ownership or scene substitution is introduced.",
+    "All five Alcohol candidates coexist as eight independently controllable modules on both body forms.",
+    "They preserve the seven earlier complete premium families as sixty-eight independent modules; natural opaque overlap follows the stored depth order.",
+    "Independent visibility and ordering, the 95-article stress selection, multi-outfit workflow and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Other selected scene and effect surfaces may naturally cover one another while every identity and selection remains retained.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium family remains review artwork until physical-device approval."
+  ]
+}

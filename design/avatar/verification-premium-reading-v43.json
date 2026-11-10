@@ -1,0 +1,49 @@
+{
+  "version": 43,
+  "date": "2026-11-10",
+  "scope": "stage-4-reading-5-premium-candidate-and-family-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["reading-1", "reading-2", "reading-3", "reading-4", "reading-5"],
+    "candidateModules": 7,
+    "transitionModules": 75,
+    "completePremiumFamilies": 9,
+    "remainingVectorStudies": 44
+  },
+  "catalogueBrowser": {
+    "checks": 91,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "reading5ChangedPixels": {
+      "form-a": 23234,
+      "form-b": 23014
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "reading-complete-premium-form-a.png": "fdb6a47ebc9f89b1ddf97d47fd8037135497abe5385726afa5ced87d61beff52",
+    "reading-complete-premium-form-b.png": "ca5b2672d3912e935543af3888f5b9b57c2f66477bdd9513da6dfa43b7c5460f",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-complete-form-a.png": "9edc278be902ba84896a7ad013c1ae10c1300eb3f3d236f3fe04924b87ed3fa7",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-complete-form-b.png": "f1e9dd6baf3a78d80fe8aee9dc5676e86ea13537f6e1cda19587075ffa0eda55",
+    "family-reading.png": "9c67ca16cc70eebf57a387f61ca17bfd80a165251079785c9e3302ae028a14ca"
+  },
+  "accepted": [
+    "The Grand Archive Scroll Set follows the source as a dark lacquer case, several closed ivory scrolls, gold fittings, cords, blossom and tassel without readable writing.",
+    "A separate navy, forest-green, ivory and gold archive portal frames the figure with side bookshelves, lanterns and blossoms while its centre remains transparent.",
+    "Body-specific registration keeps the complete foreground scroll set visible below the hip accessories and preserves the open archive centre on both standing forms.",
+    "All five Reading candidates coexist as seven independently controllable modules.",
+    "Nine complete premium families coexist as seventy-five independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The foreground set does not claim newly drawn grip, opening or reading poses, and all books and scrolls remain character-free.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidates remain review artwork until physical-device approval."
+  ]
+}

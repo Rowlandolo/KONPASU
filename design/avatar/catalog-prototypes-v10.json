@@ -478,7 +478,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-1-rear.png",
+            "sha256": "ea4773ea7211f06e94dbac0b9208954628e6dc63bd0889bf2ccaa371f774b1da",
+            "bytes": 160844,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                100,
+                74,
+                300,
+                300
+              ],
+              "form-b": [
+                86,
+                68,
+                335,
+                335
+              ]
+            }
+          }
         },
         {
           "shape": "scarf-band",
@@ -507,17 +528,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-1-front.png",
+            "sha256": "98727f700b2f94e9c2e7f89de7666c5f76a2707af43c50c79f6ab901ec90b7b3",
+            "bytes": 170680,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                188,
+                48,
+                145,
+                145
+              ],
+              "form-b": [
+                182,
+                43,
+                160,
+                160
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-2",
@@ -602,7 +643,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-2-left.png",
+            "sha256": "35c961d0aa8d3ab523bbaa271fc825e0077d4e6c853a9547ee2d37b038c1b8dc",
+            "bytes": 125193,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                90,
+                565,
+                220,
+                220
+              ],
+              "form-b": [
+                90,
+                565,
+                220,
+                220
+              ]
+            }
+          }
         },
         {
           "shape": "boot-right",
@@ -631,17 +693,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-2-right.png",
+            "sha256": "051165238dc3f8bb8e6f1ce427d8abd7cd581b24d78b83827b755032252126a6",
+            "bytes": 179033,
+            "width": 512,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                245,
+                620,
+                140,
+                140
+              ],
+              "form-b": [
+                245,
+                620,
+                140,
+                140
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-3",
@@ -730,7 +812,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-3-left.png",
+            "sha256": "6432eed82d5a96c14ac682a898fc8da7ebdbd393788e2462b4c5d75acf64aaa9",
+            "bytes": 167809,
+            "width": 521,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                105,
+                275,
+                100,
+                100
+              ],
+              "form-b": [
+                92,
+                275,
+                110,
+                110
+              ]
+            }
+          }
         },
         {
           "shape": "armwrap",
@@ -763,17 +866,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-3-right.png",
+            "sha256": "bd095cca0af649ff38feb6e755ce515e698f05b7472239bd063fd7117dd8b113",
+            "bytes": 186826,
+            "width": 547,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                307,
+                275,
+                100,
+                100
+              ],
+              "form-b": [
+                319,
+                275,
+                110,
+                110
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-4",
@@ -859,7 +982,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-4-rear.png",
+            "sha256": "cae8092185ebf0e3ceb8e38d8b0a76e1497fd685939f81037a3eb2dab879dc9e",
+            "bytes": 307081,
+            "width": 513,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                65,
+                80,
+                380,
+                570
+              ],
+              "form-b": [
+                36,
+                70,
+                440,
+                660
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-wind",
@@ -889,17 +1033,37 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-4-front.png",
+            "sha256": "6ed0f547b0ec5118c369704ce6aa01edd2681518ccbc67c1dc2365bfbf884900",
+            "bytes": 284984,
+            "width": 513,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                65,
+                80,
+                380,
+                570
+              ],
+              "form-b": [
+                36,
+                70,
+                440,
+                660
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "cardio-5",
@@ -987,7 +1151,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-rear.png",
+            "sha256": "ddc2447727d25435cee04bea3fa13ee1020366726aa9935909747a2fbdab198a",
+            "bytes": 471113,
+            "width": 507,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                65,
+                80,
+                380,
+                570
+              ],
+              "form-b": [
+                36,
+                70,
+                440,
+                660
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-wind",
@@ -1017,7 +1202,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-front.png",
+            "sha256": "10c26799de1f7e2a8a5a643293a631d9fd1233ea8388f55e1472b65e82305b33",
+            "bytes": 408703,
+            "width": 499,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                65,
+                80,
+                380,
+                570
+              ],
+              "form-b": [
+                36,
+                70,
+                440,
+                660
+              ]
+            }
+          }
         },
         {
           "shape": "breastplate",
@@ -1046,7 +1252,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-breastplate.png",
+            "sha256": "3950d3b4f2e905e3f8e2870cd16ff8821d9b5f73a556b98b52a463fa0583463a",
+            "bytes": 193607,
+            "width": 418,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                178,
+                116,
+                160,
+                196
+              ],
+              "form-b": [
+                171,
+                112,
+                174,
+                213
+              ]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -1075,17 +1302,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/cardio-5-aura.png",
+            "sha256": "c80dca0bdb828c0e0abb3bc40072b48e710a3c8daa56a57a4d7921f784fd1809",
+            "bytes": 414013,
+            "width": 768,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                20,
+                118,
+                472,
+                472
+              ],
+              "form-b": [
+                20,
+                118,
+                472,
+                472
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-1",
@@ -1145,7 +1392,7 @@
       "parts": [
         {
           "shape": "sandal-left",
-          "z": 305,
+          "z": 303,
           "anchor": "feet",
           "fit": {
             "form-a": [
@@ -1170,11 +1417,32 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-1-left.png",
+            "sha256": "d868edb265b330290e4153237570e942631f032bc12b64ed93b61b1b5d964bed",
+            "bytes": 210760,
+            "width": 512,
+            "height": 450,
+            "fit": {
+              "form-a": [
+                127,
+                650,
+                110,
+                97
+              ],
+              "form-b": [
+                127,
+                650,
+                110,
+                97
+              ]
+            }
+          }
         },
         {
           "shape": "sandal-right",
-          "z": 306,
+          "z": 304,
           "anchor": "feet",
           "fit": {
             "form-a": [
@@ -1199,17 +1467,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-1-right.png",
+            "sha256": "dd50aa5e987cd5ef7c2a3b45283356660232ee906ae3484e918fd8d5aad0217e",
+            "bytes": 141801,
+            "width": 512,
+            "height": 346,
+            "fit": {
+              "form-a": [
+                265,
+                655,
+                110,
+                74
+              ],
+              "form-b": [
+                265,
+                655,
+                110,
+                74
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-2",
@@ -1295,7 +1583,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-2-strap.png",
+            "sha256": "608a9eaa1f7d59d3aa4a4f88bf589f6846edbb4260f904198d9b6fd2eaa68a39",
+            "bytes": 83209,
+            "width": 479,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                145,
+                95,
+                220,
+                353
+              ],
+              "form-b": [
+                130,
+                90,
+                245,
+                393
+              ]
+            }
+          }
         },
         {
           "shape": "satchel",
@@ -1325,17 +1634,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-2-bag.png",
+            "sha256": "c6c1e40a47e5f64b27450c82aba5bea1be3d87648e8dfd149f97e834ddd646a7",
+            "bytes": 292762,
+            "width": 571,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                112,
+                260,
+                180,
+                161
+              ],
+              "form-b": [
+                97,
+                260,
+                195,
+                175
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-3",
@@ -1421,17 +1750,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-3-charm.png",
+            "sha256": "94e5ab3447d691a2572773968269109cb2666dbe9e162cedd6e48cd33e4e9a0b",
+            "bytes": 192273,
+            "width": 524,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                225,
+                275,
+                105,
+                103
+              ],
+              "form-b": [
+                215,
+                275,
+                105,
+                103
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-4",
@@ -1517,7 +1866,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-4-rear.png",
+            "sha256": "0109291143fb622c38be225a215ceacb89b11ba56e2941b3068504574b79851f",
+            "bytes": 537972,
+            "width": 722,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                85,
+                412,
+                438
+              ],
+              "form-b": [
+                25,
+                75,
+                462,
+                492
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-map",
@@ -1547,17 +1917,37 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-4-front.png",
+            "sha256": "a61023933da1c069b7786b06be7ab2cb2b2ab54eca224269b72670d082509b51",
+            "bytes": 558331,
+            "width": 716,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                85,
+                412,
+                442
+              ],
+              "form-b": [
+                25,
+                75,
+                462,
+                496
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "steps-5",
@@ -1643,7 +2033,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-5-banner.png",
+            "sha256": "cba36d7cdde0c100515f292d1c227dbd0f5af864f4c39aa63007f006d9f92389",
+            "bytes": 197594,
+            "width": 263,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                18,
+                80,
+                190,
+                555
+              ],
+              "form-b": [
+                18,
+                80,
+                190,
+                555
+              ]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -1672,17 +2083,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/steps-5-wind.png",
+            "sha256": "c4ea270366faeb5e505e0da08ac0024f463432314da388de9c020463a61551d5",
+            "bytes": 363649,
+            "width": 768,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                20,
+                108,
+                472,
+                472
+              ],
+              "form-b": [
+                20,
+                108,
+                472,
+                472
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-1",
@@ -1767,7 +2198,28 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-1-left.png",
+            "bytes": 162317,
+            "sha256": "596a79dea29d7a0cb019cde2725ec2f828f58635d629bf8a6f7fafa68beae2ef",
+            "width": 209,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                58,
+                132,
+                148,
+                438
+              ],
+              "form-b": [
+                46,
+                126,
+                160,
+                452
+              ]
+            }
+          }
         },
         {
           "shape": "ribbon",
@@ -1796,17 +2248,37 @@
             100,
             180
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-1-right.png",
+            "bytes": 172000,
+            "sha256": "1212823fb401986e5e75ee6ba91d6de23925b88df1e0aed63d9e3fe158e0fbba",
+            "width": 221,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                306,
+                132,
+                148,
+                438
+              ],
+              "form-b": [
+                306,
+                126,
+                160,
+                452
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-2",
@@ -1892,7 +2364,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-2-band.png",
+            "bytes": 391868,
+            "sha256": "ba13e3b6698ad9dd2c448ea229ed48f78ad6c8365f0d1dd4678ab75986e4b491",
+            "width": 768,
+            "height": 306,
+            "fit": {
+              "form-a": [
+                165,
+                238,
+                182,
+                72
+              ],
+              "form-b": [
+                153,
+                236,
+                206,
+                82
+              ]
+            }
+          }
         },
         {
           "shape": "sash-bow",
@@ -1921,17 +2414,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-2-bow.png",
+            "bytes": 563865,
+            "sha256": "afd47e76e9b4e0f587e7912f70374f014ebbc99345a84dcefefa95b6f204915c",
+            "width": 519,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                252,
+                244,
+                126,
+                204
+              ],
+              "form-b": [
+                256,
+                244,
+                136,
+                218
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-3",
@@ -2020,7 +2533,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-3-left.png",
+            "bytes": 282690,
+            "sha256": "db99a055c73cf579e73e27b09727eb060eb366011552db8054bbfcbedf32c6c6",
+            "width": 451,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                108,
+                252,
+                76,
+                132
+              ],
+              "form-b": [
+                92,
+                248,
+                84,
+                146
+              ]
+            }
+          }
         },
         {
           "shape": "sleeve",
@@ -2053,17 +2587,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-3-right.png",
+            "bytes": 286687,
+            "sha256": "bee351b3f9be4f14f51dad0831da51367dec0528bb508a0fd6889a3f57984779",
+            "width": 404,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                328,
+                252,
+                72,
+                132
+              ],
+              "form-b": [
+                344,
+                248,
+                80,
+                146
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-4",
@@ -2149,7 +2703,28 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-4-rear.png",
+            "bytes": 615245,
+            "sha256": "1f4b65bc86a0b9038584cb59248f00b2e1ba6a108b33eac5bfb1f2865ca0d0d9",
+            "width": 759,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                34,
+                78,
+                444,
+                500
+              ],
+              "form-b": [
+                5,
+                68,
+                502,
+                565
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-wisteria",
@@ -2179,17 +2754,37 @@
             100,
             160
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-4-front.png",
+            "bytes": 734095,
+            "sha256": "bb1d35ec2dbf3f7be9ba2dfe026a7eed6ccf1e475e969ef5e3435cb8e2835387",
+            "width": 778,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                30,
+                78,
+                452,
+                500
+              ],
+              "form-b": [
+                0,
+                68,
+                512,
+                565
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "mobility-5",
@@ -2275,7 +2870,28 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-5-dragon.png",
+            "bytes": 266812,
+            "sha256": "bd9e2e82e92c2841036053ac105d9775297695033aee9c1b39d8dfae9d091a99",
+            "width": 768,
+            "height": 427,
+            "fit": {
+              "form-a": [
+                10,
+                82,
+                492,
+                300
+              ],
+              "form-b": [
+                10,
+                82,
+                492,
+                300
+              ]
+            }
+          }
         },
         {
           "shape": "wind",
@@ -2304,17 +2920,37 @@
             100,
             100
           ],
-          "theme": "forest"
+          "theme": "forest",
+          "premium": {
+            "file": "./premium-v12/mobility-5-wind.png",
+            "bytes": 119393,
+            "sha256": "7f9ad51ed3d6934eceb9e8885a289936368704921a6c3794918ceac6fec1601e",
+            "width": 768,
+            "height": 348,
+            "fit": {
+              "form-a": [
+                20,
+                390,
+                472,
+                250
+              ],
+              "form-b": [
+                20,
+                405,
+                472,
+                250
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-1",
@@ -2400,17 +3036,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-1-flask.png",
+            "bytes": 304157,
+            "sha256": "50b9ad1d54e770b8325989cd467d235f468ab7fa25cc743a58755672ba0674b1",
+            "width": 537,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                142,
+                255,
+                110,
+                157
+              ],
+              "form-b": [
+                130,
+                255,
+                110,
+                157
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-2",
@@ -2496,17 +3152,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-2-bottle.png",
+            "bytes": 358703,
+            "sha256": "37f822d8e867082033f2f54c82fab3146d60de1d50e04ea5fe4ddfc5c1ac3984",
+            "width": 768,
+            "height": 712,
+            "fit": {
+              "form-a": [
+                82,
+                292,
+                120,
+                111.25
+              ],
+              "form-b": [
+                70,
+                292,
+                120,
+                111.25
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-3",
@@ -2592,17 +3268,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-3-crystal.png",
+            "bytes": 582358,
+            "sha256": "76bed523a9b327a2066a51027d027e17a3689fcce6874e05ab4a7a740ad106dd",
+            "width": 768,
+            "height": 685,
+            "fit": {
+              "form-a": [
+                232,
+                292,
+                124,
+                110.6
+              ],
+              "form-b": [
+                242,
+                292,
+                124,
+                110.6
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-4",
@@ -2688,17 +3384,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-4-gourd.png",
+            "bytes": 350556,
+            "sha256": "65de55e52bad423566672d19edbf226b3bdbed33a231cb66640a828eb79bbad8",
+            "width": 498,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                350,
+                270,
+                95,
+                146.5
+              ],
+              "form-b": [
+                360,
+                270,
+                95,
+                146.5
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "water-5",
@@ -2785,7 +3501,28 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-5-vessel.png",
+            "bytes": 438842,
+            "sha256": "9461952f3d40f321960f5c87ee3e1be9a0e580c8cdd1914623449fce9841fffe",
+            "width": 768,
+            "height": 677,
+            "fit": {
+              "form-a": [
+                205,
+                405,
+                110,
+                97
+              ],
+              "form-b": [
+                205,
+                405,
+                110,
+                97
+              ]
+            }
+          }
         },
         {
           "shape": "dragon",
@@ -2814,17 +3551,37 @@
             100,
             100
           ],
-          "theme": "teal"
+          "theme": "teal",
+          "premium": {
+            "file": "./premium-v12/water-5-dragon-water.png",
+            "bytes": 407183,
+            "sha256": "43d146a8de81236e90096f1da5f5baac80f3b6c34886631ef5e8a1803ac42fab",
+            "width": 768,
+            "height": 520,
+            "fit": {
+              "form-a": [
+                5,
+                105,
+                502,
+                340
+              ],
+              "form-b": [
+                5,
+                105,
+                502,
+                340
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-1",
@@ -2910,7 +3667,28 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-1-stem.png",
+            "bytes": 82304,
+            "sha256": "b82882c5f5648654325931e829afe73413b1954f9f2e94f2842c4b35d819735d",
+            "width": 768,
+            "height": 385,
+            "fit": {
+              "form-a": [
+                231,
+                40,
+                120,
+                60.2
+              ],
+              "form-b": [
+                231,
+                40,
+                120,
+                60.2
+              ]
+            }
+          }
         },
         {
           "shape": "hairpin",
@@ -2939,17 +3717,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-1-ornament.png",
+            "bytes": 219446,
+            "sha256": "34d2b80c2b8d295b6afeee5eecb63a25422a92fbaa02ec880af2056fad4d5b9d",
+            "width": 494,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                285,
+                24,
+                68,
+                105.7
+              ],
+              "form-b": [
+                285,
+                24,
+                68,
+                105.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-2",
@@ -3035,17 +3833,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-2-pillow.png",
+            "bytes": 580974,
+            "sha256": "30ce1fe1773e21638e44b1e1a6276bc4138605fde76fdb722516f4723618d9c9",
+            "width": 768,
+            "height": 685,
+            "fit": {
+              "form-a": [
+                320,
+                395,
+                105,
+                93.7
+              ],
+              "form-b": [
+                330,
+                395,
+                105,
+                93.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-3",
@@ -3131,7 +3949,28 @@
             100,
             160
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-3-rear.png",
+            "bytes": 536155,
+            "sha256": "10620c3f6e1b2a11bbca90b88b7333c57f99fcde1b5d2175dd8e20acf9b8e010",
+            "width": 775,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                88,
+                412,
+                408.6
+              ],
+              "form-b": [
+                25,
+                78,
+                462,
+                457.8
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-moon",
@@ -3161,17 +4000,37 @@
             100,
             160
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-3-front.png",
+            "bytes": 316346,
+            "sha256": "c85f24197abc482f2bd75835ae118fdfaf12cc8b5e4c1a5d2d2219f6218ed815",
+            "width": 848,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                35,
+                88,
+                442,
+                400.3
+              ],
+              "form-b": [
+                8,
+                78,
+                496,
+                449.2
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-4",
@@ -3257,17 +4116,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-4-lantern.png",
+            "bytes": 289971,
+            "sha256": "95da2d56bcc1009d96158167fc4b8af4a43ceca7420896f2539d3bd41c382d3f",
+            "width": 493,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                300,
+                260,
+                80,
+                124.6
+              ],
+              "form-b": [
+                310,
+                260,
+                80,
+                124.6
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-5",
@@ -3352,17 +4231,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-5-aura.png",
+            "bytes": 814017,
+            "sha256": "4bebce97725c226bfc991e1c0426c98a498e6e8bc898e27278f035e13233be02",
+            "width": 702,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                -44,
+                20,
+                600,
+                656.4
+              ],
+              "form-b": [
+                -44,
+                20,
+                600,
+                656.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-1",
@@ -3448,17 +4347,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-1-bento.png",
+            "bytes": 530623,
+            "sha256": "646edcdeda4f6e2fd402bbaa286681494011a75aac25b0ae5f1c12b47532d220",
+            "width": 777,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                165,
+                295,
+                95,
+                93.9
+              ],
+              "form-b": [
+                153,
+                295,
+                95,
+                93.9
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-2",
@@ -3544,17 +4463,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-2-satchel.png",
+            "bytes": 799721,
+            "sha256": "deb922151249f810e256970bd2f5f9d6667619a277695180f91a41106c1b54b8",
+            "width": 777,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                90,
+                300,
+                100,
+                98.8
+              ],
+              "form-b": [
+                78,
+                300,
+                100,
+                98.8
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-3",
@@ -3640,7 +4579,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-3-band.png",
+            "bytes": 335863,
+            "sha256": "d9d2f5bf7d1cc66699c85bbc32059b6c4b30d6be6eb8d61b5b1009e74593ce67",
+            "width": 768,
+            "height": 385,
+            "fit": {
+              "form-a": [
+                165,
+                240,
+                182,
+                91.2
+              ],
+              "form-b": [
+                153,
+                238,
+                206,
+                103.3
+              ]
+            }
+          }
         },
         {
           "shape": "sash-bow",
@@ -3669,17 +4629,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-3-bow.png",
+            "bytes": 669420,
+            "sha256": "f4b2c2bc592ecc2ef8b6be868fe9260924952e7379f481c91b803e2ef6c43a45",
+            "width": 829,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                240,
+                255,
+                142,
+                131.6
+              ],
+              "form-b": [
+                242,
+                253,
+                152,
+                140.8
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-4",
@@ -3766,7 +4746,28 @@
             100,
             160
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-rear.png",
+            "bytes": 498919,
+            "sha256": "d8eb7732b78c7c8c2b63336654fbbcfa3d59a4e720ade8b8b8a6a961079bb294",
+            "width": 771,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                42,
+                84,
+                428,
+                436
+              ],
+              "form-b": [
+                15,
+                74,
+                482,
+                491
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-map",
@@ -3796,7 +4797,28 @@
             100,
             160
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-front.png",
+            "bytes": 492705,
+            "sha256": "98d005c44e2c64c1f16bf5c9ccf7691f2b06f1fd4f45888c8c548bfc9e73f773",
+            "width": 722,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                48,
+                84,
+                416,
+                445
+              ],
+              "form-b": [
+                22,
+                74,
+                468,
+                501
+              ]
+            }
+          }
         },
         {
           "shape": "apron",
@@ -3825,17 +4847,37 @@
             100,
             150
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-4-apron.png",
+            "bytes": 679120,
+            "sha256": "7ee8d8b152258d1d495e402ac63d61be3107bcc0392e334aa26198f2b220bf69",
+            "width": 749,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                193,
+                228,
+                126,
+                145
+              ],
+              "form-b": [
+                190,
+                228,
+                136,
+                157
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-5",
@@ -3921,7 +4963,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-crest.png",
+            "bytes": 950251,
+            "sha256": "8ba82e4b92952b70bd92321d946e6c0320e02adb46a7efb4080dfa716430812e",
+            "width": 747,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                286,
+                112,
+                190,
+                195.4
+              ],
+              "form-b": [
+                292,
+                108,
+                196,
+                201.5
+              ]
+            }
+          }
         },
         {
           "shape": "harvest-bowl",
@@ -3951,7 +5014,28 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-bowl.png",
+            "bytes": 246361,
+            "sha256": "4985efd4d9b847128f55eab4d4a16d78e5965f6ccd0234acba2452042fbba1aa",
+            "width": 676,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                330,
+                288,
+                72,
+                81.8
+              ],
+              "form-b": [
+                342,
+                288,
+                72,
+                81.8
+              ]
+            }
+          }
         },
         {
           "shape": "pumpkin",
@@ -3980,17 +5064,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-5-pumpkin.png",
+            "bytes": 419770,
+            "sha256": "48b3a48052e262d92375169f5fe8f9093cd554f39ad85ad39f673cf087df6c80",
+            "width": 743,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                122,
+                318,
+                72,
+                74.4
+              ],
+              "form-b": [
+                110,
+                318,
+                72,
+                74.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-1",
@@ -4076,17 +5180,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-1-omamori.png",
+            "bytes": 504890,
+            "sha256": "dee92a9a344a3cb62f4260d2ca53d7ade1fb930799ecbdad8ce69af8796ff474",
+            "width": 568,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                348,
+                278,
+                82,
+                110.9
+              ],
+              "form-b": [
+                360,
+                278,
+                82,
+                110.9
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-2",
@@ -4175,17 +5299,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-2-bracelet.png",
+            "bytes": 267819,
+            "sha256": "41acaf350da8f9b9958837680220de2b42275525f8245249362996fa93753220",
+            "width": 768,
+            "height": 521,
+            "fit": {
+              "form-a": [
+                124,
+                328,
+                48,
+                32.6
+              ],
+              "form-b": [
+                110,
+                328,
+                53,
+                36
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-3",
@@ -4271,18 +5415,38 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-3-smile-study.png",
+            "bytes": 373750,
+            "sha256": "24fe0e75179e8c88372bdc85f8c8cb80c9649e3e009cd9694347b5786a95a74a",
+            "width": 768,
+            "height": 288,
+            "fit": {
+              "form-a": [
+                270,
+                34,
+                150,
+                56.25
+              ],
+              "form-b": [
+                265,
+                36,
+                150,
+                56.25
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Mimikstudie neben dem Kopf; kein ungetestetes Überschreiben des vorhandenen Gesichts.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme",
         "Neue vollständige Mimikgrafiken für beide Figuren"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-4",
@@ -4368,17 +5532,37 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-4-lotus-fan.png",
+            "bytes": 334543,
+            "sha256": "26476d322d7b5d10a68b6a51fc88593c0f0f92af0ea3d5a1d71a42bb35157aa3",
+            "width": 768,
+            "height": 384,
+            "fit": {
+              "form-a": [
+                152,
+                286,
+                96,
+                48
+              ],
+              "form-b": [
+                140,
+                286,
+                96,
+                48
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-5",
@@ -4464,7 +5648,28 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-5-aura.png",
+            "bytes": 700043,
+            "sha256": "f7c65085227662ceaac8c8c927d9ac067e46c1bae02dfc959c6e9a4c0215feb8",
+            "width": 768,
+            "height": 702,
+            "fit": {
+              "form-a": [
+                20,
+                125,
+                472,
+                431.5
+              ],
+              "form-b": [
+                20,
+                125,
+                472,
+                431.5
+              ]
+            }
+          }
         },
         {
           "shape": "lotus-pedestal",
@@ -4493,17 +5698,37 @@
             100,
             50
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-5-pedestal.png",
+            "bytes": 239877,
+            "sha256": "834c5b702470e7ccd6cd146f13a8d684c9434e9a48a37e4bccf9e964819d3faa",
+            "width": 768,
+            "height": 384,
+            "fit": {
+              "form-a": [
+                106,
+                620,
+                300,
+                150
+              ],
+              "form-b": [
+                106,
+                620,
+                300,
+                150
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-1",
@@ -4589,17 +5814,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-1-sealed-gourd.png",
+            "bytes": 708796,
+            "sha256": "3b73209bcab5cfba5f4df7b1e37ee67bdab62219e6bb1f357e967b4970064a7e",
+            "width": 768,
+            "height": 816,
+            "fit": {
+              "form-a": [
+                172,
+                270,
+                62,
+                65.875
+              ],
+              "form-b": [
+                160,
+                270,
+                62,
+                65.875
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-2",
@@ -4685,17 +5930,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-2-sober-lantern.png",
+            "bytes": 382581,
+            "sha256": "21e1617bc0cc2ab0a168d8763f5d4e694d68bfdbeb7c66df49c7e396e861f460",
+            "width": 768,
+            "height": 702,
+            "fit": {
+              "form-a": [
+                282,
+                278,
+                82,
+                74.953125
+              ],
+              "form-b": [
+                294,
+                278,
+                82,
+                74.953125
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-3",
@@ -4781,18 +6046,38 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-3-calm-study.png",
+            "bytes": 437610,
+            "sha256": "c19530c1f37438e18070eeeb0e9b1a2ad0a5344c4aa9cf81fc23048891138a18",
+            "width": 768,
+            "height": 307,
+            "fit": {
+              "form-a": [
+                18,
+                42,
+                150,
+                59.9609375
+              ],
+              "form-b": [
+                12,
+                42,
+                150,
+                59.9609375
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Mimikstudie neben dem Kopf; kein ungetestetes Überschreiben des vorhandenen Gesichts.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme",
         "Neue vollständige Mimikgrafiken für beide Figuren"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-4",
@@ -4878,7 +6163,28 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-4-band.png",
+            "bytes": 326661,
+            "sha256": "cefe4d0ea7fe18d771a8e0b30abc493160031ed367df37318ac16445eaf444ee",
+            "width": 768,
+            "height": 387,
+            "fit": {
+              "form-a": [
+                165,
+                239,
+                182,
+                91.7
+              ],
+              "form-b": [
+                153,
+                237,
+                206,
+                103.8
+              ]
+            }
+          }
         },
         {
           "shape": "sash-bow",
@@ -4907,17 +6213,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-4-bow.png",
+            "bytes": 602543,
+            "sha256": "eed2841eac65061dd1dea1276f9efbea6a0da78ef99a80eac91c8294b9b119f9",
+            "width": 563,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                239,
+                250,
+                145,
+                197.9
+              ],
+              "form-b": [
+                241,
+                248,
+                155,
+                211.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-5",
@@ -5004,7 +6330,28 @@
             100,
             150
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-landscape.png",
+            "bytes": 666952,
+            "sha256": "cb7c36f41527fcc7370b51527fa63771e9d49e01766b68dc6d30e1fb490052e9",
+            "width": 512,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                0,
+                0,
+                512,
+                768
+              ],
+              "form-b": [
+                0,
+                0,
+                512,
+                768
+              ]
+            }
+          }
         },
         {
           "shape": "scene-torii",
@@ -5033,7 +6380,28 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-torii.png",
+            "bytes": 473786,
+            "sha256": "f2ca187b38ca74a31aaa635067ef20b6d98098020c665272374f6156a6708aa8",
+            "width": 664,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                35,
+                72,
+                442,
+                511.2
+              ],
+              "form-b": [
+                35,
+                72,
+                442,
+                511.2
+              ]
+            }
+          }
         },
         {
           "shape": "scene-lanterns",
@@ -5062,17 +6430,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-lantern-street.png",
+            "bytes": 369133,
+            "sha256": "72af0f6fcd350c0c6da315079e7b548e1431c301be696862f21773696629049c",
+            "width": 512,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                0,
+                0,
+                512,
+                768
+              ],
+              "form-b": [
+                0,
+                0,
+                512,
+                768
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-1",
@@ -5158,17 +6546,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-1-book-charm.png",
+            "bytes": 256616,
+            "sha256": "06be739dca777d4066cb3dc9c43ac2b9129c800c24820c5c76bb947c54249e02",
+            "width": 496,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                165,
+                272,
+                72,
+                111.5
+              ],
+              "form-b": [
+                151,
+                272,
+                72,
+                111.5
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-2",
@@ -5254,17 +6662,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-2-scroll.png",
+            "bytes": 620470,
+            "sha256": "f639dcdd29339c4de372b0c23369b9a5d3e651449ba59ee4ca5a1378e39333b8",
+            "width": 759,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                274,
+                275,
+                62,
+                62.7
+              ],
+              "form-b": [
+                276,
+                275,
+                62,
+                62.7
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-3",
@@ -5350,7 +6778,28 @@
             100,
             180
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-3-strap.png",
+            "bytes": 113601,
+            "sha256": "cde4ca08417b8d47c85f7644ffd077736187b36b954024e4177839a5a6f8b85f",
+            "width": 467,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                145,
+                95,
+                220,
+                361.8
+              ],
+              "form-b": [
+                130,
+                90,
+                245,
+                403
+              ]
+            }
+          }
         },
         {
           "shape": "satchel",
@@ -5380,17 +6829,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-3-satchel.png",
+            "bytes": 466650,
+            "sha256": "afaf14788515a1771961c38b39788a103e28b0bef09237c654f1768736146f6b",
+            "width": 768,
+            "height": 525,
+            "fit": {
+              "form-a": [
+                105,
+                282,
+                180,
+                123
+              ],
+              "form-b": [
+                90,
+                282,
+                195,
+                133.3
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-4",
@@ -5476,17 +6945,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-4-library-codex.png",
+            "bytes": 701074,
+            "sha256": "c5ba563c09965e27beaeb18224d27e6a76ae6914250c80b5fbe6576bcf27ac9d",
+            "width": 768,
+            "height": 715,
+            "fit": {
+              "form-a": [
+                300,
+                350,
+                125,
+                116.4
+              ],
+              "form-b": [
+                302,
+                350,
+                125,
+                116.4
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-5",
@@ -5572,7 +7061,28 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-5-scroll-set.png",
+            "bytes": 680411,
+            "sha256": "1d54d478e383a2bbfa1897f2b8f94630fa682caf33c2b5557b276726488194cb",
+            "width": 768,
+            "height": 531,
+            "fit": {
+              "form-a": [
+                160,
+                410,
+                190,
+                131.4
+              ],
+              "form-b": [
+                160,
+                415,
+                190,
+                131.4
+              ]
+            }
+          }
         },
         {
           "shape": "scene-torii",
@@ -5601,17 +7111,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-5-archive-frame.png",
+            "bytes": 778401,
+            "sha256": "6962aa8222c4400c3592f7a7eefe0c9986c62c5fcbee34fccedf448f1b2263c5",
+            "width": 1024,
+            "height": 674,
+            "fit": {
+              "form-a": [
+                0,
+                20,
+                512,
+                337
+              ],
+              "form-b": [
+                0,
+                20,
+                512,
+                337
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Offener Archivrahmen hinter der Figur und geschlossenes Rollenset im Vordergrund; keine lesbare Schrift oder ungetestete Griffpose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "languages-1",
@@ -7730,7 +9260,7 @@
           "theme": "ink"
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Der geschlossene Kodex ist seitlich registriert; keine ungetestete Griff- oder Lesepose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "Premiumzeichnung statt Vektorstudie",
@@ -8870,7 +10400,7 @@
           "theme": "forest"
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Schultergurt und Tasche sind für diese Standpose gemeinsam registriert; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "Premiumzeichnung statt Vektorstudie",

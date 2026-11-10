@@ -377,6 +377,51 @@ Kandidat **2.4.1-preview.1** hat einen getrennten Cache `konpasu-offline-v241-ou
 - [ ] Produktive Editor-/Rendererbedienung, Personalisierung/Szenen/Begleiter und Legacy-Rückweg samt allen UI-/Offlinefällen.
 - [ ] Physische Geräte, VoiceOver, Alt-PWA-Upgrade und freigegebene Veröffentlichung.
 
+## Etappe 4 · Paket 4.11
+
+- [x] Beide Dehnbänder sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, Einzelrendering, unabhängige Modulidentitäten und sichtbare Pixeländerung geprüft.
+- [x] Cardio, Schritte und `mobility-1` bleiben gemeinsam als 23 Module ausgewählt und sichtbar.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
+## Etappe 4 · Paket 4.12
+
+- [x] Obi-Gürtel und Blütenknoten/Stoffbahnen sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, Einzelrendering, natürliche Taillenüberdeckung und sichtbare Pixeländerung geprüft.
+- [x] `mobility-1` und `mobility-2` bleiben gemeinsam als vier Module sichtbar.
+- [x] Cardio, Schritte und beide Beweglichkeitsartikel bleiben gemeinsam als 25 Module erhalten.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
+## Etappe 4 · Paket 4.13
+
+- [x] Linker und rechter Beweglichkeitsärmel sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, freie Hände, Unterarmpassform und sichtbare Pixeländerung geprüft.
+- [x] Kimono-/Außenkleidungsmaskierung verdeckt nur tatsächliche Vorderflächen und erhält die Auswahl.
+- [x] Die ersten drei Beweglichkeitsartikel bleiben gemeinsam als sechs Module sichtbar.
+- [x] Cardio, Schritte und die ersten drei Beweglichkeitsartikel bleiben gemeinsam als 27 Module erhalten.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
+## Etappe 4 · Paket 4.14
+
+- [x] Vorder- und Rückebene des Tänzer-Haori sind getrennte, hashgebundene transparente PNG-Module.
+- [x] Körperform A/B, offenes Zentrum, Hals, Ärmelöffnungen und sichtbare Pixeländerung geprüft.
+- [x] Vorderflächenmaskierung verdeckt nur tatsächliche Armflächen und erhält alle ausgewählten Artikel.
+- [x] Die ersten vier Beweglichkeitsartikel bleiben gemeinsam als acht Module sichtbar.
+- [x] Cardio, Schritte und die ersten vier Beweglichkeitsartikel bleiben gemeinsam als 29 Module erhalten.
+- [x] 95-Artikel-Stressauswahl, Warm-Offline-Katalog und speicherfreie Vorschau bleiben erfolgreich.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
+## Etappe 4 · Paket 4.15 und Beweglichkeits-Familie
+
+- [x] Drachen- und Windebene sind getrennte, hashgebundene transparente PNG-Module mit offenen Zentren.
+- [x] Alle fünf Beweglichkeitsartikel bleiben gemeinsam als zehn Module auf Körperform A/B sichtbar.
+- [x] Cardio, Schritte und Beweglichkeit bleiben gemeinsam als 31 Module erhalten.
+- [x] Maskierung, Sichtbarkeit, Reihenfolge, 95-Artikel-Stressauswahl, Warm-Offline-Katalog und Mehrfachoutfitlauf bestanden.
+- [ ] Physische iPhone-/Android-, VoiceOver-, GPU-/Speicher- und kalte PWA-/Upgrade-Abnahme.
+
 ## Abschluss Etappe 3.4.1: sichtbarer Editor mit Speichern, Konflikt und Rücknahme
 
 Entwurfs-PR [#8](https://github.com/Rowlandolo/KONPASU/pull/8) auf #7 ergänzt den tatsächlichen Einstieg **Avatar → Outfits → Mehrfachoutfit bearbeiten**. Native Dialogbedienung mit Artbook-Anprobe, Artikelwahl/Suche, unabhängiger Sichtbarkeit/Reihenfolge, Körperform, Undo/Redo/Reset und ausdrücklichem Speichern. Separate dauerhafte Rücknahme ist bei ungespeicherten Entwurfsänderungen gesperrt. Schließen behält den Entwurf in der laufenden App. Vorhandene Ausrüstung, Favoriten, History, Ziele/Trainings und übrige Daten bleiben erhalten.
@@ -397,6 +442,270 @@ Kandidat **2.4.1-preview.2** mit getrenntem Cache `konpasu-offline-v241-outfit-p
 - [x] 24 Grafiklieferdateien reproduziert, bisherige App-/Atelier- und Speicherprüfung erfolgreich; drei UI-Screenshots gesichtet/archiviert.
 - [ ] Neue Hauptavatarroute, persönliche Darstellung/Szenen/Begleiter/Favoriten/History und Legacy-Aktionssynchronisierung.
 - [ ] Physische Geräte/GPU/VoiceOver/Alt-PWA-Upgrade, finale Premiumgrafik und freigegebene Veröffentlichung.
+
+## Etappe 4 · Paket 4.16 Bambusflasche
+
+- [x] `water-1` gegen das Original-Artbookmotiv geprüft: grünes Bambusrohr, Goldfassungen, Trageschnur und Quaste.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene Passform auf Form A und B; vollständige Silhouette innerhalb der Bühne, neutrale Hände unverändert.
+- [x] Einzelrendering und 32-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v14.json`; archivierte Ansichten: `design/avatar/review-premium-water-v14/`.
+
+## Etappe 4 · Paket 4.17 Lackflasche
+
+- [x] `water-2` gegen die Artbookkarte geprüft: dunkler Lackkörper, roter Halsrand, Goldkordel, Seitenschlaufe, Quaste und helle Goldblüten.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene versetzte Passform auf Form A und B; vollständige Silhouette und neutrale Hände erhalten.
+- [x] Bambus- und Lackflasche gemeinsam als zwei unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 33-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v15.json`; archivierte Ansichten: `design/avatar/review-premium-water-v15/`.
+
+## Etappe 4 · Paket 4.18 Kristallfeldflasche
+
+- [x] `water-3` gegen die Artbookkarte geprüft: hellblauer Facettenkörper, Kristallverschluss, Goldnetz, Kordelschlaufe und helle Quaste.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene Passform auf Form A und B; dritte versetzte Position erhält alle vollständigen Silhouetten und neutrale Hände.
+- [x] Erste drei Wasserartikel gemeinsam als drei unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 34-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v16.json`; archivierte Ansichten: `design/avatar/review-premium-water-v16/`.
+
+## Etappe 4 · Paket 4.19 Zeremonielle Wasserkalebasse
+
+- [x] `water-4` gegen die Artbookkarte geprüft: elfenbeinfarbene Doppelkalebasse, Goldblüten, Goldkordel, goldene Quaste und grüner Anhänger.
+- [x] Transparentes Einzelmodul mit SHA-256, Bytezahl und realen PNG-Maßen gebunden.
+- [x] Eigene äußere Passform auf Form A und B; vollständige Kalebasse, beide Quasten und neutrale Hände erhalten.
+- [x] Erste vier Wasserartikel gemeinsam als vier unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 35-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v17.json`; archivierte Ansichten: `design/avatar/review-premium-water-v17/`.
+
+## Etappe 4 · Paket 4.20 und Wasser-Familienabnahme
+
+- [x] `water-5` gegen die Artbookkarte geprüft: dunkles Goldgefäß, jadefarbener Drachenkopf und transparenter Wasserbogen.
+- [x] Gefäß und offener Drachen-/Wassereffekt als zwei getrennte transparente, hashgebundene Module umgesetzt.
+- [x] Einzelrendering auf Form A und B; offene Effektmitte erhält Figur, Haare und Kleidung.
+- [x] Alle fünf Wasserartikel gemeinsam als sechs unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 37-Modul-Übergang mit vollständigem Cardio, Schritte und Beweglichkeit auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-water-v18.json`; archivierte Ansichten: `design/avatar/review-premium-water-v18/`.
+
+## Etappe 4 · Paket 4.21 Mond-Haarnadel
+
+- [x] `sleep-1` gegen die Artbookkarte geprüft: Goldmond, Sternpunkte, Kirschblüten und hängende violette Glyzinie.
+- [x] Goldstifte als hintere und sichtbarer Schmuck als vordere transparente, hashgebundene Haarebene umgesetzt.
+- [x] Erste Sichtprüfung erkannte Gesichtsüberdeckung; korrigierte seitliche Passform hält Augen, Gesicht und Mimik auf Form A und B frei.
+- [x] Einzelrendering und 39-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Frisuren/Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v19.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v19/`.
+
+## Etappe 4 · Paket 4.22 Traumkissen-Talisman
+
+- [x] `sleep-2` gegen die Artbookkarte geprüft: dunkelblaues Kissen, Goldfassung und -kordel, weißer Mondhase, Blüten und Wellenstickerei.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Kordel an der rechten Hand registriert; Finger, Kissen, Hakama und vorhandene Hüftaccessoires bleiben getrennt lesbar.
+- [x] Beide Schlafartikel gemeinsam als drei Module und im 40-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v20.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v20/`.
+
+## Etappe 4 · Paket 4.23 Nacht-Haori
+
+- [x] `sleep-3` gegen die Artbookkarte geprüft: mitternachtsblauer Haori, elfenbeinfarbenes offenes Revers, Goldkanten, Nachtblüten, Wolken und Sternpunkte.
+- [x] Rückensilhouette und sparsame Vorderflächen als zwei transparente, hashgebundene Tiefenmodule umgesetzt.
+- [x] Eigene Passform für Form A und B; Gesicht, Kimono, Obi, Hände und Hakama bleiben durch die offene Mitte sichtbar.
+- [x] Tatsächliche Vorderflächen maskieren Armartikel; 1.105 veränderte Maskenpixel im realen Browserrendering bestätigt.
+- [x] Die ersten drei Schlafartikel gemeinsam als fünf Module und im 42-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v21.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v21/`.
+
+## Etappe 4 · Paket 4.24 Mondlaterne
+
+- [x] `sleep-4` gegen die Artbookkarte geprüft: antikgoldener sechseckiger Rahmen, warmes Elfenbeinlicht, Mondsichel, Sternöffnungen und seitliche Blütenranke.
+- [x] Transparentes, hashgebundenes Einzelmodul mit Zierknauf, dunkelblauer Quaste und eigener Passform für Form A und B umgesetzt.
+- [x] Erste Sichtprüfung erkannte eine scheinbare Ärmelaufhängung; korrigierte Registrierung sitzt an der rechten Obi-Kante und erhebt keinen Handgriffanspruch.
+- [x] Laterne, Traumkissen und vorhandene Hüftartikel bleiben auf beiden Formen getrennt lesbar.
+- [x] Die ersten vier Schlafartikel gemeinsam als sechs Module und im 43-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v22.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v22/`.
+
+## Etappe 4 · Paket 4.25 und Schlaf-Familienabnahme
+
+- [x] `sleep-5` gegen die Artbookkarte geprüft: warmer Vollmond, mitternachtsblauer Nachthimmelbogen, Sterne, helle Wolken-/Windbänder und Kirschblüten.
+- [x] Fremde Meditationssilhouette bewusst ausgeschlossen; persönliche KONPASU-Figur bleibt einzige zentrale Figur.
+- [x] Transparentes, hashgebundenes Hintergrundmodul mit identischer stabiler Registrierung auf Form A und B umgesetzt.
+- [x] Große offene Mitte erhält Gesicht, Mimik, Körper, Kleidung, Ausrüstung und Füße auf beiden Formen.
+- [x] Alle fünf Schlafartikel gemeinsam als sieben unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 44-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v23.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v23/`.
+
+## Etappe 4 · Paket 4.26 Bento-Anhänger
+
+- [x] `nutrition-1` gegen die Artbookkarte geprüft: mitternachtsblaues Bento-Täschchen, Goldfassung und -schlaufe, Blüten, helle Quaste, Nori-Onigiri und Hasen-Reisbällchen.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Schlaufe an der linken Obi-Kante registriert; beide Hände bleiben neutral.
+- [x] Bento bleibt neben Bambus-/Lackflasche und weiteren Hüftartikeln als eigener Artikel lesbar.
+- [x] Einzelrendering und 45-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v24.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v24/`.
+
+## Etappe 4 · Paket 4.27 Kräuterbeutel
+
+- [x] `nutrition-2` gegen die Artbookkarte geprüft: waldgrüne Seide, elfenbeinfarbener Zugverschluss, Goldkordel, Quasten, Jadeperle und botanische Stickerei.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Links außen neben `nutrition-1` registriert; Hand, Obi, Kräuterbeutel und Bento bleiben getrennt lesbar.
+- [x] Beide Ernährungsartikel gemeinsam als zwei unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 46-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v25.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v25/`.
+
+## Etappe 4 · Paket 4.28 Vitalitäts-Obi
+
+- [x] `nutrition-3` gegen die Artbookkarte geprüft: waldgrün-elfenbeinfarbene Seide, Blatt-/Blütenmotive, Goldkanten, Blütenknoten und helle Quasten.
+- [x] Zwei transparente, hashgebundene Module für Taillengürtel und vorderen Knoten mit eigener Passform für Form A und B umgesetzt.
+- [x] Gürtel schließt die Taille; Knoten, Stoffbahnen und Quasten bleiben vor dem Gürtel lesbar und beide Hände frei.
+- [x] Bento-Anhänger, Kräuterbeutel und Vitalitäts-Obi gemeinsam als vier unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 48-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v26.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v26/`.
+
+## Etappe 4 · Paket 4.29 Kochgelehrten-Haori
+
+- [x] `nutrition-4` gegen die Artbookkarte geprüft: offene helle Jacke, grünes Futter, Ernte-/Kräutermotive und dunkelgrüne Schürze mit goldenen Kochutensilien.
+- [x] Drei transparente, hashgebundene Module für Rückengewand, Vordergewand und Schürze mit eigener Passform für Form A und B umgesetzt.
+- [x] Zu hohen Erstkragen verworfen; korrigierte tiefe Halsöffnung hält Gesicht, Kinn und Hals vollständig frei.
+- [x] Offene Mitte erhält Grundkleidung und Obi; Hände bleiben frei und nur tatsächlicher Vorderstoff maskiert Armartikel.
+- [x] Erste vier Ernährungsartikel gemeinsam als sieben unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 51-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, warmer Offlinezustand, 59 Kataloggruppen und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v27.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v27/`.
+
+## Etappe 4 · Paket 4.30 und Ernährungs-Familienabnahme
+
+- [x] `nutrition-5` gegen die Artbookkarte geprüft: dunkelgrün-goldenes Reisährenemblem, Blüten und orangefarbener Kürbis; vertragliche Reisschale als getrenntes tragbares Modul erhalten.
+- [x] Drei transparente, hashgebundene Module für Emblem, Reisschale und Kürbis mit eigener Passform für Form A und B umgesetzt.
+- [x] Zunächst verdecktes Emblem in den freien rechten Hintergrund versetzt; Goldring und Reisähren bleiben klar lesbar.
+- [x] Reisschale und Kürbis bleiben getrennte Obi-Accessoires; Hände und vorherige Ernährungsartikel bleiben frei.
+- [x] Alle fünf Ernährungsartikel gemeinsam als zehn unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 54-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v28.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v28/`.
+
+## Etappe 4 · Paket 4.31 Zucker-Siegel-Omamori
+
+- [x] `sugar-1` gegen die Artbookkarte geprüft: dunkelgrünes Omamori, Gold-/Blütenornament, rote Kordel und diagonal gesperrtes Zuckersiegel.
+- [x] Textfreies, markenneutrales Zuckerkristallsymbol ohne erfundene Produkt- oder Gesundheitsangabe umgesetzt.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Zunächst gelöste Position näher an die rechte Hüftseite verschoben; beide Hände bleiben neutral.
+- [x] Einzelrendering und 55-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v29.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v29/`.
+
+## Etappe 4 · Paket 4.32 Reinheitsarmband
+
+- [x] `sugar-2` gegen die Artbookkarte geprüft: helle Perlen, einzelne Jadeperle, Goldknoten, Quaste und Blattornament.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform am linken Handgelenk für Form A und B umgesetzt.
+- [x] Anatomische Verdeckung durch tatsächliche Kimono-/Außenkleidungspixel geprüft; der Artikel bleibt ausgewählt.
+- [x] `sugar-1` und `sugar-2` gemeinsam als zwei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 56-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 65 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v30.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v30/`.
+
+## Etappe 4 · Paket 4.33 Helles Lächeln
+
+- [x] `sugar-3` gegen die Artbookkarte geprüft: drei freundliche erwachsene Gesichter, geschlossene lächelnde Augen und variierte Kopfstellungen.
+- [x] Transparentes, hashgebundenes Premium-Triptychon mit Elfenbein-/Goldrahmen, Jadeblättern und Blüten umgesetzt.
+- [x] Erste auf Form B abgeschnittene Registrierung korrigiert; alle drei Porträts bleiben auf beiden Körperformen vollständig sichtbar.
+- [x] Ehrliche Mimikstudie neben dem Kopf; kein ungeprüftes Überschreiben der bestehenden Gesichtsanatomie.
+- [x] `sugar-1` bis `sugar-3` gemeinsam als drei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 57-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 67 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Vollständige austauschbare Gesichtslayer, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v31.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v31/`.
+
+## Etappe 4 · Paket 4.34 Lotusfächer
+
+- [x] `sugar-4` gegen die Artbookkarte geprüft: tiefgrüne Fächerseide, helle Lotusblüten und Goldrippen.
+- [x] Transparentes, hashgebundenes Premiummodul mit botanischer Goldzeichnung, Jadeperle und Elfenbeinquaste umgesetzt.
+- [x] Eigene Passform am linken Obi für Form A und B; neutrale Hände und ehrliche fehlende Griffpose erhalten.
+- [x] `sugar-1` bis `sugar-4` gemeinsam als vier unabhängige Module auf beiden Körperformen geprüft.
+- [x] 58-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung auf beiden Körperformen.
+- [x] 69 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v32.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v32/`.
+
+## Etappe 4 · Paket 4.35 und Zuckerbalance-Familienabnahme
+
+- [x] `sugar-5` gegen die Artbookkarte geprüft: offene jadegrüne Strömung, Goldbögen, Lichtpartikel und helle Lotusblüten.
+- [x] Hintergrundwirbel und flaches Lotus-Podest als zwei transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Große transparente Mitte, freie Figur und Podestregistrierung unter den Füßen auf Form A und B geprüft.
+- [x] Alle fünf Zuckerbalance-Kandidaten gemeinsam als sechs unabhängige Module auf beiden Körperformen geprüft.
+- [x] Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance gemeinsam als 60 Module auf beiden Körperformen geprüft.
+- [x] 71 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Vollständige Gesichtslayer für `sugar-3`, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v33.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v33/`.
+
+## Etappe 4 · Paket 4.36 Versiegelter Sake-Anhänger
+
+- [x] `alcohol-1` gegen die Artbookkarte geprüft: helles Doppelgefäß, versiegelter Hals, Goldschnur und Glocke.
+- [x] Transparentes, hashgebundenes Premiummodul mit botanischer Keramik, Knoten, Quaste und textfreiem Sperrsymbol umgesetzt.
+- [x] Zwei unterarmnahe Registrierungen korrigiert; Schlaufe beginnt am linken Obi, Hand und Unterarm bleiben frei.
+- [x] Einzelrendering und 61-Modul-Übergang mit sieben vollständigen Premiumfamilien auf beiden Körperformen.
+- [x] 73 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-alcohol-v34.json`; archivierte Ansichten: `design/avatar/review-premium-alcohol-v34/`.
+
+## Etappe 4 · Paket 4.37 Nüchternheitslaterne
+
+- [x] `alcohol-2` gegen die Artbookkarte geprüft: helle rechteckige Rahmenlaterne mit botanischem Motiv.
+- [x] Transparentes, hashgebundenes Premiummodul mit mitternachtsblau-goldenem Rahmen, Elfenbeinpapier, Zweig, Kette und blauer Quaste umgesetzt.
+- [x] Unterarmnahe Erstregistrierung korrigiert; Ring beginnt am rechten Obi, Hand und Unterarm bleiben frei.
+- [x] `alcohol-1` und `alcohol-2` gemeinsam als zwei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 62-Modul-Übergang mit sieben vollständigen Premiumfamilien auf beiden Körperformen.
+- [x] 75 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-alcohol-v35.json`; archivierte Ansichten: `design/avatar/review-premium-alcohol-v35/`.
 
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
@@ -472,3 +781,99 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Kritischer Offline-Precache enthält den neuen Historienvertrag; Releaseversion 2.4.1 und eigener Cache `konpasu-offline-v241`.
 - [x] Main-Merge `ee160643515cf89dbc5c1bde38245ea3210052e2`, Pages-Lauf 41648613896, öffentliches `version.json` und fünf Kernressourcen mit HTTP 200 sowie exakt lokalen SHA-256 bestätigt.
 - [ ] Physisches iPhone/GPU/VoiceOver und Upgrade einer bereits installierten alten PWA prüfen; Daten nicht löschen.
+
+
+## Etappe 4 · Paket 4.38 Heiter und gelassen
+
+- [x] `alcohol-3` gegen die Artbookkarte geprüft: drei ruhige, freundliche Ausdrücke derselben erwachsenen Figur.
+- [x] Zusammenhängende Dreierstudie, elfenbein-goldene Rahmen und blaue Wolkenakzente als transparentes Premiummodul umgesetzt und hashgebunden.
+- [x] Körperformspezifische Registrierung hält die Studie links neben dem Kopf vollständig sichtbar und von der Zucker-Mimikstudie rechts getrennt.
+- [x] Das Modul bleibt eine unabhängige Sammelstudie und überschreibt weder Avatar-Gesicht noch persönliche Mimik.
+- [x] `alcohol-1` bis `alcohol-3` gemeinsam als drei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 63-Modul-Übergang, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 77 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Austauschbare/animierte Gesichtsanatomie, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.39 Klarhimmel-Obi
+
+- [x] `alcohol-4` gegen die Artbookkarte geprüft: hellblau-elfenbeinfarbener Obi, dunkelblaue Faltenkanten, Goldschleife und helle Bandenden.
+- [x] Körpernaher Gürtel und vordere Schleife als zwei getrennte transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Wolken-/Blütenmotive, antikgoldene Paspel, Goldkordel und Elfenbeinquasten erhalten.
+- [x] Eigene Passformen schließen die Taille auf Form A und B; Schleife und Enden bleiben vollständig im Bild, Hände und Gesicht unverändert.
+- [x] `alcohol-1` bis `alcohol-4` gemeinsam als fünf unabhängige Module auf beiden Körperformen geprüft.
+- [x] 65-Modul-Übergang, natürliche Tiefenüberlagerung, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 79 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.40 Klares Fest und Alkoholbalance-Familienabnahme
+
+- [x] `alcohol-5` gegen die Artbookkarte geprüft: klare Berglandschaft, ruhige Feststraße, Torii, Kirschblüten und warme Laternen.
+- [x] Landschaft, Torii und seitliche Markt-/Laternenstraße als drei getrennte transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Zentrale Toröffnung und Weg halten die persönliche Figur auf Form A und B vollständig lesbar; keine fremde Figur oder erfundene Schrift.
+- [x] Alle fünf Alkoholbalance-Kandidaten gemeinsam als acht unabhängige Module auf beiden Körperformen geprüft.
+- [x] Vollständiger 68-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance bestanden.
+- [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
+- [x] 81 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.41 Buch-Anhänger
+
+- [x] `reading-1` gegen die Artbookkarte geprüft: dunkelgrüner Miniaturbuchkörper, Goldfassung, helle Kirschblüte, Schlaufe und Quaste.
+- [x] Transparentes Premiummodul ohne erfundene Schrift hashgebunden umgesetzt.
+- [x] Körperformspezifische Registrierung beginnt am linken Obi; Buch und Quaste bleiben vollständig sichtbar, beide Hände neutral.
+- [x] Keine ungetestete Griffpose und kein Anspruch auf ein geöffnetes lesbares Buch.
+- [x] Einzelmodul auf Form A und B sowie 69-Modul-Übergang mit acht vollständigen Premiumfamilien geprüft.
+- [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
+- [x] 83 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.42 Leseschriftrolle
+
+- [x] `reading-2` gegen die Artbookkarte geprüft: Elfenbeinpapier, dunkle Achsen, Goldbeschläge und blau-graue Landschaft.
+- [x] Transparentes Premiummodul ohne erfundene Schrift oder Zeichen hashgebunden umgesetzt.
+- [x] Erste linke Registrierung wegen Hand-/Buchüberdeckung verworfen; korrigierte Passform hängt rechts am Obi.
+- [x] Buch-Anhänger und Schriftrolle bleiben auf Form A und B gleichzeitig vollständig sichtbar, beide Hände neutral.
+- [x] Erste zwei Lesen-Kandidaten als zwei unabhängige Module sowie 70-Modul-Übergang mit acht vollständigen Premiumfamilien geprüft.
+- [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
+- [x] 85 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.43 Gelehrtentasche
+
+- [x] `reading-3` gegen die Artbookkarte geprüft: dunkle Gelehrtentasche, Schultergurt, helle Bücher, Goldbeschläge, Blütenornamente und Quaste.
+- [x] Schultergurt und Tasche als zwei getrennte transparente, hashgebundene Premiummodule ohne erfundene Schrift umgesetzt.
+- [x] Körperformspezifische Passformen verbinden Gurt und Tasche auf Form A und B; beide neutralen Hände bleiben erhalten.
+- [x] Die ersten drei Lesen-Kandidaten gemeinsam als vier unabhängige Module auf beiden Körperformen geprüft.
+- [x] 72-Modul-Übergang mit acht vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 87 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griffpose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.44 Bibliothekskodex
+
+- [x] `reading-4` gegen die Artbookkarte geprüft: großes geschlossenes navyfarbenes Buch mit Goldbeschlägen, floraler Zeichnung, heller Blüte und Lesezeichen.
+- [x] Transparentes, hashgebundenes Premiummodul ohne Buchstaben, Wörter, Logos oder lesbare Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hält den vollständigen Kodex rechts sichtbar und verändert die neutralen Hände nicht.
+- [x] Die ersten vier Lesen-Kandidaten gemeinsam als fünf unabhängige Module auf beiden Körperformen geprüft.
+- [x] 73-Modul-Übergang mit acht vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 89 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Lesepose, lesbarer Buchinhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.45 Archiv-Schriftrollenset und Lesen-Familienabnahme
+
+- [x] `reading-5` gegen die Artbookkarte geprüft: dunkler Rollenkasten, mehrere Schriftrollen und heller offener Archivbogen mit Regalen.
+- [x] Offener Archivrahmen und geschlossenes Rollenset als zwei getrennte transparente, hashgebundene Premiummodule ohne erfundene Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hält die Rahmenmitte frei und das Rollenset unterhalb der Hüftartikel vollständig sichtbar.
+- [x] Alle fünf Lesen-Kandidaten gemeinsam als sieben unabhängige Module auf beiden Körperformen geprüft.
+- [x] Neun vollständige Premiumfamilien gemeinsam als 75 Module auf beiden Körperformen geprüft.
+- [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
+- [x] 91 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Öffnungs-/Leseposen, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

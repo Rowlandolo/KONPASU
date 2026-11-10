@@ -21,7 +21,105 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Etappe 3.4.4 und damit Etappe 3 technisch abgeschlossen:** Outfit-, persönliche und Ansichtsaktionen samt Rücknahmen erzeugen genau einen vollständigen resultierenden Profilschnappschuss. No-op, Konflikt und Schreibfehler erzeugen keinen; alte sparsame Historie bleibt unverändert und fehlende Vergangenheit wird nicht erfunden. 445 Regressionen und sämtliche sieben Browser-Workflows grün. Vertrag: AVATAR_HISTORY_STAGE3.md; Vollbeleg: `design/avatar/verification-stage3-complete-v01.json`.
 
-**Als Nächstes Etappe 4:** die 89 Vektorstudien schrittweise zu finalen Premiumzeichnungen ausarbeiten und ihre optische Passform in priorisierten Kombinationsfamilien abnehmen. Die technische 95er-Kombinierbarkeit, Besitz-/Tragbarkeitslogik, Speicherung, Zeitreise und Rückwege sind Grundlage dieses Grafikabschnitts.
+**Etappe 4 begonnen:** `cardio-1` (Windschal) liegt als erster Premiumkandidat mit getrennten Vorder-/Rückebenen, Hashbindung und Passform für beide Körperformen vor. 36 Testdateien, 190 Einzelrenderings und der 95er-Mehrfachoutfitlauf sind grün. Details: AVATAR_PREMIUM_STAGE4.md.
+
+**Paket 4.2 umgesetzt:** `cardio-2` (Wind-Tabi) besitzt zwei asymmetrische Premiumkandidaten für die feste Standpose. Sohlen, geteilte Zehen und Überdeckung durch Hakama/Grundschuhe werden auf beiden Körperformen geprüft.
+
+**Paket 4.3 umgesetzt:** `cardio-3` (Tempo-Armbänder) besitzt getrennte, posegerechte Premiumkandidaten für beide Unterarme. Kimono- und Außenkleidungsmasken bleiben aktiv.
+
+**Paket 4.4 umgesetzt:** `cardio-4` (Sturmläufer-Umhang) besitzt getrennte Vorder-/Rückflächen. Nur die tatsächliche Vorderfläche maskiert Armartikel; Körpermitte, Obi und Hakama bleiben durch die offene Silhouette kombinierbar.
+
+**Paket 4.5 umgesetzt:** `cardio-5` (Sturmreiter-Rüstungsaura) besitzt vier getrennte Premiumkandidaten: Aura, Rückengewand, offenes Vordergewand und Brustpanzer. Damit sind alle fünf Cardio-Artikel als zwölf unabhängig kombinierbare Module vorhanden.
+
+**Cardio-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Zwölf-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Paket 4.6 umgesetzt:** `steps-1` (Reisesandalen) besitzt zwei asymmetrische Premiumkandidaten mit getrennten Passformen für die feste Standpose.
+
+**Paket 4.7 umgesetzt:** `steps-2` (Wegtasche) besitzt einen getrennten Körperriemen und einen detailreichen Taschenkörper mit Kartenklappe, Blattmedaillon, Quaste und Glyzinienanhänger.
+
+**Paket 4.8 umgesetzt:** `steps-3` (Pilgerhut-Anhänger) liegt als geschlossenes Premium-Zubehörmodul mit Ring, Knoten, Flechthut, Blütenmedaillon, Quasten und Glyzinien vor.
+
+**Paket 4.9 umgesetzt:** `steps-4` (Reise-Haori) besitzt getrennte Vorder-/Rückebenen mit offenem Zentrum, weiten Ärmeln, dunkelgrünem Futter, Goldkordel und Landschaftsmotiven.
+
+**Paket 4.10 umgesetzt:** `steps-5` (Wegfinder-Banner) besitzt ein getrenntes Standbanner und einen offenen Windband-/Blättereffekt.
+
+**Schritte-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Neun-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, Cardio-Übergang, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Paket 4.11 umgesetzt:** `mobility-1` (Dehnbänder) besitzt zwei getrennte asymmetrische Seidenbandmodule mit eigenen Passformen für beide Körperformen. Der Einzeltest und der Übergang mit Cardio und Schritte als 23 Module sind abgenommen.
+
+**Paket 4.12 umgesetzt:** `mobility-2` (Fließender Obi) besitzt einen getrennten Taillengürtel und einen seitlichen Blütenknoten mit Stoffbahnen und Quasten. Die ersten beiden Beweglichkeitsartikel bestehen gemeinsam als vier Module; Cardio, Schritte und beide Artikel bestehen den Übergang als 25 Module.
+
+**Paket 4.13 umgesetzt:** `mobility-3` (Beweglichkeitsärmel) besitzt getrennte asymmetrische Unterarmmodule mit eigenen Passformen und bestehender Kimono-/Außenkleidungsmaskierung. Die ersten drei Beweglichkeitsartikel bestehen als sechs Module; gemeinsam mit Cardio und Schritte bleiben 27 Module erhalten.
+
+**Paket 4.14 umgesetzt:** `mobility-4` (Tänzer-Haori) besitzt getrennte Vorder-/Rückebenen mit offenem Zentrum, weiten Ärmelöffnungen, Schulterknoten und Glyzinien. Die ersten vier Beweglichkeitsartikel bestehen als acht Module; gemeinsam mit Cardio und Schritte bleiben 29 Module erhalten.
+
+**Paket 4.15 umgesetzt:** `mobility-5` (Schlangenwind-Aura) besitzt getrennte Drachen- und Windebenen mit offenen Zentren.
+
+**Beweglichkeits-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen Einzel- und gemeinsame Zehn-Modul-Komposition auf beiden Körperformen einschließlich Maskierung, Sichtbarkeit, Reihenfolge, Übergang mit Cardio und Schritte als 31 Module, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Paket 4.16 umgesetzt:** `water-1` (Bambusflasche) liegt als transparentes Premium-Zubehör mit Bambusrohr, Goldfassungen, Trageschnur und Quaste vor. Die Flasche sitzt auf beiden Körperformen am linken Obi und erhält die vollständigen Cardio-, Schritte- und Beweglichkeitsfamilien im 32-Modul-Übergang.
+
+**Paket 4.17 umgesetzt:** `water-2` (Lackflasche) besitzt eine dunkle bauchige Lackfläche, roten Halsrand, Goldkordel, helle Quaste und elfenbeingoldene Blüten. Beide Wasserartikel bleiben als getrennte Module auf beiden Körperformen lesbar und bestehen mit Cardio, Schritte und Beweglichkeit den 33-Modul-Übergang.
+
+**Paket 4.18 umgesetzt:** `water-3` (Kristallfeldflasche) besitzt einen facettierten hellblauen Körper, Kristallverschluss, goldenes Tragenetz und helle Quaste. Die ersten drei Wasserartikel bestehen gemeinsam als drei Module und mit Cardio, Schritte und Beweglichkeit als 34 Module auf beiden Körperformen.
+
+**Paket 4.19 umgesetzt:** `water-4` (Zeremonielle Wasserkalebasse) besitzt eine elfenbeinfarbene Doppelform, Goldblüten, geflochtene Kordel sowie goldene und grüne Quasten. Die ersten vier Wasserartikel bestehen gemeinsam als vier Module und mit Cardio, Schritte und Beweglichkeit als 35 Module auf beiden Körperformen.
+
+**Paket 4.20 umgesetzt:** `water-5` (Quellendrachen-Gefäß) besitzt ein getrenntes dunkles Goldgefäß und einen offenen jadefarbenen Drachen-/Wasserbogeneffekt.
+
+**Wasser-Familienabnahme abgeschlossen:** alle fünf Kandidaten bestehen gemeinsam als sechs Module auf beiden Körperformen einschließlich Sichtbarkeit, Reihenfolge, 37-Modul-Übergang mit Cardio, Schritte und Beweglichkeit, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf.
+
+**Paket 4.21 umgesetzt:** `sleep-1` (Mond-Haarnadel) besitzt getrennte hintere Goldstifte und eine vordere Mondsichel mit Kirschblüten und Glyzinie. Die korrigierte seitliche Kopfpassform hält das Gesicht frei und besteht mit Cardio, Schritte, Beweglichkeit und Wasser als 39 Module auf beiden Körperformen.
+
+**Paket 4.22 umgesetzt:** `sleep-2` (Traumkissen-Talisman) besitzt ein dunkelblaues, gold eingefasstes Kissenmodul mit Mondhasen, Blüten, Wellenstickerei und Tragekordel. Die Kordel sitzt auf beiden Körperformen an der rechten Hand; beide Schlafartikel bestehen gemeinsam als drei Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 40 Module.
+
+**Paket 4.23 umgesetzt:** `sleep-3` (Nacht-Haori) besitzt getrennte Vorder-/Rückebenen mit mitternachtsblauem Stoff, elfenbeinfarbenem offenem Revers, Goldkanten sowie Nachtblüten-, Wolken- und Sternmotiven. Die ersten drei Schlafartikel bestehen gemeinsam als fünf Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 42 Module.
+
+**Paket 4.24 umgesetzt:** `sleep-4` (Mondlaterne) besitzt ein antikgoldenes, warm leuchtendes Laternenmodul mit Mondsichel, Sternöffnungen, Blütenranke und Quaste. Die korrigierte Registrierung hängt an der rechten Obi-Kante; die ersten vier Schlafartikel bestehen gemeinsam als sechs Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 43 Module.
+
+**Paket 4.25 und Schlaf-Familienabnahme umgesetzt:** `sleep-5` (Mondruhe-Aura) besitzt einen offenen Vollmond-, Nachthimmel-, Wolken- und Blütenrahmen ohne fremde Meditationssilhouette. Alle fünf Schlafartikel bestehen gemeinsam als sieben Module; Cardio, Schritte, Beweglichkeit, Wasser und Schlaf bleiben gemeinsam als 44 Module auf beiden Körperformen aktiv.
+
+**Paket 4.26 umgesetzt:** `nutrition-1` (Bento-Anhänger) besitzt ein mitternachtsblaues, gold eingefasstes Bento-Täschchen mit Onigiri, Hasen-Reisbällchen, Blüten, Quaste und Aufhängeschlaufe an der linken Obi-Kante. Der Kandidat besteht mit den fünf vollständigen Premiumfamilien als 45 Module auf beiden Körperformen.
+
+**Paket 4.27 umgesetzt:** `nutrition-2` (Kräuterbeutel) besitzt waldgrüne Seide, elfenbeinfarbenen Zugverschluss, Goldkordel, Quasten, Jadeperle und botanische Stickerei. Beide Ernährungsartikel bleiben gemeinsam lesbar und bestehen mit den fünf vollständigen Premiumfamilien als 46 Module auf beiden Körperformen.
+
+**Paket 4.28 umgesetzt:** `nutrition-3` (Vitalitäts-Obi) besitzt getrennte Gürtel- und Blütenknotenebenen mit waldgrün-elfenbeinfarbener Seide, Blatt-/Blütenmotiven, Goldkanten, Jadeperlen und Quasten. Die ersten drei Ernährungsartikel bestehen gemeinsam als vier Module und mit den fünf vollständigen Premiumfamilien als 48 Module auf beiden Körperformen.
+
+**Paket 4.29 umgesetzt:** `nutrition-4` (Kochgelehrten-Haori) besitzt getrennte Rück-, Vorder- und Schürzenebenen mit offenem elfenbeinfarbenem Gewand, grünem Futter, Ernte-/Kräutermotiven und goldenen Kochutensilien. Die korrigierte tiefe Halsöffnung hält das Gesicht frei. Die ersten vier Ernährungsartikel bestehen gemeinsam als sieben Module und mit den fünf vollständigen Premiumfamilien als 51 Module auf beiden Körperformen.
+
+**Paket 4.30 und Ernährungs-Familienabnahme umgesetzt:** `nutrition-5` ergänzt getrennte Ebenen für Reisährenemblem, tragbare Reisschale und Kürbisanhänger. Das Emblem sitzt sichtbar im rechten Hintergrund. Alle fünf Ernährungsartikel bestehen gemeinsam als zehn Module; die sechs vollständigen Premiumfamilien bleiben gemeinsam als 54 Module auf beiden Körperformen aktiv.
+
+**Paket 4.31 umgesetzt:** `sugar-1` (Zucker-Siegel-Omamori) besitzt dunkelgrüne Seide, Gold-/Blütenornament, rote Kordel und ein textfreies gesperrtes Zuckerkristallsiegel. Die korrigierte Registrierung sitzt an der rechten Hüftseite; der Kandidat besteht mit den sechs vollständigen Premiumfamilien als 55 Module auf beiden Körperformen.
+
+**Paket 4.32 umgesetzt:** `sugar-2` (Reinheitsarmband) besitzt helle Perlen, eine Jadeperle, Goldknoten, Quaste und Blattornament. Das Armband folgt auf beiden Körperformen dem linken Handgelenk und wird durch tatsächliche Ärmelpixel natürlich verdeckt. Beide Zuckerbalance-Kandidaten bestehen mit den sechs vollständigen Premiumfamilien als 56 Module.
+
+**Paket 4.33 umgesetzt:** `sugar-3` (Helles Lächeln) folgt der Artbookreferenz als kompaktes Triptychon aus drei freundlichen erwachsenen Mimikporträts. Die korrigierte Registrierung hält alle drei Ansichten auf beiden Körperformen vollständig sichtbar. Der Kandidat bleibt ehrlich eine separate Studie neben dem Kopf und überschreibt keine ungeprüfte Gesichtsanatomie. Die ersten drei Zuckerbalance-Kandidaten bestehen mit den sechs vollständigen Premiumfamilien als 57 Module.
+
+**Paket 4.34 umgesetzt:** `sugar-4` (Lotusfächer) besitzt tiefgrüne Seide, elfenbein-roséfarbene Lotusblüten, Goldrippen, botanische Linien und eine kurze Jade-/Elfenbeinquaste. Eigene Passformen befestigen ihn auf beiden Körperformen am linken Obi, ohne eine nicht vorhandene Griffpose zu behaupten. Die ersten vier Zuckerbalance-Kandidaten bestehen mit den sechs vollständigen Premiumfamilien als 58 Module.
+
+**Paket 4.35 und Zuckerbalance-Familienabnahme umgesetzt:** `sugar-5` (Klargeist-Aura) besitzt einen offenen jade-/türkisfarbenen Strömungsring mit elfenbeinfarbenem Schaum, Goldbögen, Lichtpartikeln und Lotusblüten sowie ein getrenntes flaches Lotus-Podest. Alle fünf Zuckerbalance-Kandidaten bestehen gemeinsam als sechs Module; die sieben vollständigen Premiumfamilien bleiben gemeinsam als 60 Module auf beiden Körperformen aktiv.
+
+**Paket 4.36 umgesetzt:** `alcohol-1` (Versiegelter Sake-Anhänger) besitzt elfenbeinfarbene Keramik mit blaugrauer Botanik, versiegelten Stopfen, Goldschnur, Knoten, Glocke, Quaste und ein textfreies gekreuztes Gefäßsymbol. Nach zwei Passformkorrekturen beginnt die Schlaufe auf beiden Körperformen an der linken Obi-Kante; Hand und Unterarm bleiben frei. Der Kandidat besteht mit den sieben vollständigen Premiumfamilien als 61 Module.
+
+**Paket 4.37 umgesetzt:** `alcohol-2` (Nüchternheitslaterne) besitzt einen mitternachtsblau-goldenen Rahmen, warmes Elfenbeinpapier, einen salbeigrünen Zweig, Goldkette und blaue Seidenquaste. Die korrigierte Registrierung hängt auf beiden Körperformen an der rechten Obi-Kante und lässt Hand sowie Unterarm frei. Beide Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 62 Module.
+
+**Paket 4.38 umgesetzt:** `alcohol-3` (Heiter und gelassen) ergänzt eine verbundene Dreier-Mimikstudie derselben erwachsenen Figur. Sie bleibt als eigenständiges Sammelmodul links neben dem Kopf sichtbar und verändert die persönliche Avatar-Mimik nicht. Die ersten drei Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 63 Module auf beiden Körperformen.
+
+**Paket 4.39 umgesetzt:** `alcohol-4` (Klarhimmel-Obi) ergänzt einen körpernahen hellblau-elfenbeinfarbenen Seidengürtel und eine getrennte mehrlagige Schleife mit dunkelblauen Kanten, Goldkordel, Wolken-/Blütenmotiven, hellen Bandenden und Quasten. Die ersten vier Alkoholbalance-Kandidaten bestehen als fünf Module; mit den sieben vollständigen Premiumfamilien bleiben 65 Module auf beiden Körperformen aktiv.
+
+**Paket 4.40 und Alkoholbalance-Familienabnahme umgesetzt:** `alcohol-5` (Klares Fest) ergänzt drei getrennte Hintergrundebenen mit klarem Bergpanorama, rot-navy-goldenem Torii, Kirschblüten, seitlichen Marktständen und warmen Papierlaternen. Alle fünf Alkoholbalance-Kandidaten bestehen gemeinsam als acht Module; acht vollständige Premiumfamilien bleiben gemeinsam als 68 Module auf beiden Körperformen aktiv.
+
+**Paket 4.41 umgesetzt:** `reading-1` (Buch-Anhänger) ergänzt einen dunkelgrünen Miniaturbuchkörper mit Goldfassung, heller Kirschblüte, geflochtener Schlaufe und Elfenbeinquaste. Die Schlaufe beginnt auf beiden Körperformen an der linken Obi-Kante; der Kandidat besteht mit den acht vollständigen Premiumfamilien als 69 Module.
+
+**Paket 4.42 umgesetzt:** `reading-2` (Leseschriftrolle) ergänzt Elfenbeinpapier, dunkelgrüne Lackachsen, Goldbeschläge und eine textfreie blau-graue Berglandschaft. Nach Passformkorrektur hängt sie auf beiden Körperformen an der rechten Obi-Kante gegenüber dem Buch-Anhänger; beide Hände bleiben frei. Die ersten zwei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 70 Module.
+
+**Paket 4.43 umgesetzt:** `reading-3` (Gelehrtentasche) ergänzt einen mitternachtsblauen Schultergurt und eine getrennte dunkelblaue Tasche mit Elfenbeinpaspel, Goldbeschlägen, Blütenornamenten, Quaste und zeichenfreien Büchern. Eigene Passformen verbinden beide Module auf Form A und B; die ersten drei Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 72 Module.
+
+**Paket 4.44 umgesetzt:** `reading-4` (Bibliothekskodex) ergänzt ein geschlossenes mitternachtsblaues Buch mit Goldbeschlägen, floraler Goldzeichnung, heller Blüte, dunkelgrünem Lesezeichen und Elfenbeinquaste. Der textfreie Kodex bleibt auf beiden Körperformen rechts vollständig sichtbar; die ersten vier Lesen-Kandidaten bestehen mit den acht vollständigen Premiumfamilien als 73 Module.
+
+**Paket 4.45 und Lesen-Familienabnahme umgesetzt:** `reading-5` (Archiv-Schriftrollenset) ergänzt einen offenen Archivbogen mit seitlichen Regalen sowie ein getrenntes geschlossenes Rollenset. Alle fünf Lesen-Kandidaten bestehen als sieben Module; neun vollständige Premiumfamilien bestehen gemeinsam als 75 Module.
+
+**Als Nächstes:** Paket 4.46 mit `languages-1`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
