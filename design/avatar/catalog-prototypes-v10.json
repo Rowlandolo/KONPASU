@@ -6163,7 +6163,28 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-4-band.png",
+            "bytes": 326661,
+            "sha256": "cefe4d0ea7fe18d771a8e0b30abc493160031ed367df37318ac16445eaf444ee",
+            "width": 768,
+            "height": 387,
+            "fit": {
+              "form-a": [
+                165,
+                239,
+                182,
+                91.7
+              ],
+              "form-b": [
+                153,
+                237,
+                206,
+                103.8
+              ]
+            }
+          }
         },
         {
           "shape": "sash-bow",
@@ -6192,17 +6213,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-4-bow.png",
+            "bytes": 602543,
+            "sha256": "eed2841eac65061dd1dea1276f9efbea6a0da78ef99a80eac91c8294b9b119f9",
+            "width": 563,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                239,
+                250,
+                145,
+                197.9
+              ],
+              "form-b": [
+                241,
+                248,
+                155,
+                211.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Explizite Registrierung für beide vorhandenen Standfiguren und eine Pose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-5",

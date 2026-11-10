@@ -105,7 +105,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.38 umgesetzt:** `alcohol-3` (Heiter und gelassen) ergänzt eine verbundene Dreier-Mimikstudie derselben erwachsenen Figur. Sie bleibt als eigenständiges Sammelmodul links neben dem Kopf sichtbar und verändert die persönliche Avatar-Mimik nicht. Die ersten drei Alkoholbalance-Kandidaten bestehen mit den sieben vollständigen Premiumfamilien als 63 Module auf beiden Körperformen.
 
-**Als Nächstes:** Paket 4.39 mit `alcohol-4`.
+**Paket 4.39 umgesetzt:** `alcohol-4` (Klarhimmel-Obi) ergänzt einen körpernahen hellblau-elfenbeinfarbenen Seidengürtel und eine getrennte mehrlagige Schleife mit dunkelblauen Kanten, Goldkordel, Wolken-/Blütenmotiven, hellen Bandenden und Quasten. Die ersten vier Alkoholbalance-Kandidaten bestehen als fünf Module; mit den sieben vollständigen Premiumfamilien bleiben 65 Module auf beiden Körperformen aktiv.
+
+**Als Nächstes:** Paket 4.40 mit `alcohol-5` und anschließend die vollständige Alkoholbalance-Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

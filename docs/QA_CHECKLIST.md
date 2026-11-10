@@ -793,3 +793,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] 63-Modul-Übergang, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
 - [x] 77 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Austauschbare/animierte Gesichtsanatomie, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.39 Klarhimmel-Obi
+
+- [x] `alcohol-4` gegen die Artbookkarte geprüft: hellblau-elfenbeinfarbener Obi, dunkelblaue Faltenkanten, Goldschleife und helle Bandenden.
+- [x] Körpernaher Gürtel und vordere Schleife als zwei getrennte transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Wolken-/Blütenmotive, antikgoldene Paspel, Goldkordel und Elfenbeinquasten erhalten.
+- [x] Eigene Passformen schließen die Taille auf Form A und B; Schleife und Enden bleiben vollständig im Bild, Hände und Gesicht unverändert.
+- [x] `alcohol-1` bis `alcohol-4` gemeinsam als fünf unabhängige Module auf beiden Körperformen geprüft.
+- [x] 65-Modul-Übergang, natürliche Tiefenüberlagerung, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 79 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

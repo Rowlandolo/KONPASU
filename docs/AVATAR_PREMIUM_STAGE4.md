@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.39 Klarhimmel-Obi (`alcohol-4`)
+
+`alcohol-4-band.png` bildet den körpernahen hellblau-elfenbeinfarbenen Seidengürtel mit dunkelblauen Faltenkanten, antikgoldener Paspel, Wolken und kleinen Blüten ab. `alcohol-4-bow.png` ergänzt die vordere mehrlagige Schleife mit Goldkordel, hellen Bandenden und Elfenbeinquasten. Die Trennung erhält eine kontrollierte Tiefenordnung und unabhängige Vorderflächen.
+
+Die eigenen Passformen schließen die Taille beider Körperformen und halten Schleife und Bandenden vollständig sichtbar, ohne Gesicht oder Hände zu verändern. Alle vier Alkoholbalance-Kandidaten bestehen als fünf unabhängige Module und mit sieben vollständigen Premiumfamilien als 65 Module. 79 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-alcohol-v37.json`; Ansichten: `design/avatar/review-premium-alcohol-v37/`. 50 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.38 Heiter und gelassen (`alcohol-3`)
 
 `alcohol-3-calm-study.png` überträgt die Artbookvorlage als zusammenhängende Dreierstudie derselben erwachsenen Figur mit ruhigen, freundlichen Gesichtsausdrücken. Elfenbein-goldene Rahmen und kleine blaue Wolkenakzente verbinden die drei Varianten. Das Modul bleibt bewusst eine sammelbare Mimikstudie neben der Figur; es ersetzt weder das persönliche Gesicht noch dessen gespeicherte Mimik.

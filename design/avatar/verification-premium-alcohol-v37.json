@@ -1,0 +1,52 @@
+{
+  "version": 37,
+  "date": "2026-11-10",
+  "scope": "stage-4-alcohol-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": [
+      "alcohol-1",
+      "alcohol-2",
+      "alcohol-3",
+      "alcohol-4"
+    ],
+    "candidateModules": 5,
+    "transitionModules": 65,
+    "remainingVectorStudies": 50
+  },
+  "catalogueBrowser": {
+    "checks": 79,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "alcohol4ChangedPixels": {
+      "form-a": 4944,
+      "form-b": 5784
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "alcohol-1-2-3-4-premium-form-a.png": "29be54e40fa62dcc014d74ebe09aac357290060ee8b73ba1ab2415c274583d4f",
+    "alcohol-1-2-3-4-premium-form-b.png": "20c21356e68580a2360462617666b8ba45b5d2a035b7cec7d495db1f30984574",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-3-4-form-a.png": "6e8ae9df419f88ce1ad407d4108c8e6c3bdbb36d930bc3b6196617c7e64f9472",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-3-4-form-b.png": "8d63c203a5d4b66089a687fd45b17aa8ae62e132b7c88cfb132e71ee0565f544",
+    "family-alcohol.png": "af4619f5c207c3f6444cf15be7d32a43c86af3fc835e52c0ba4308c2d8b197a2"
+  },
+  "accepted": [
+    "The Clear-Sky Sash follows the source with a pale blue and ivory silk waist band, navy folded edges, antique-gold piping, cloud and blossom motifs.",
+    "The separate front bow adds layered blue, ivory and navy loops, gold cord, pale ribbon tails and ivory tassels.",
+    "Body-specific registrations close the waist and retain the complete bow and tails without changing hands or face.",
+    "The first four Alcohol candidates coexist as five independently controllable modules on both body forms.",
+    "They preserve seven complete premium families as sixty-five independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Opaque waist garments and later foreground accessories may naturally cover sash surfaces while all selections remain retained.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}
