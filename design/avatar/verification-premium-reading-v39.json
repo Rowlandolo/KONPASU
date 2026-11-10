@@ -1,0 +1,48 @@
+{
+  "version": 39,
+  "date": "2026-11-10",
+  "scope": "stage-4-reading-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": [
+      "reading-1"
+    ],
+    "candidateModules": 1,
+    "transitionModules": 69,
+    "remainingVectorStudies": 48
+  },
+  "catalogueBrowser": {
+    "checks": 83,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "reading1ChangedPixels": {
+      "form-a": 518,
+      "form-b": 506
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "reading-1-premium-form-a.png": "aeb7f463866a63f4653d49355a60c844f75fb6a68064ff57219fa3c921d1364b",
+    "reading-1-premium-form-b.png": "c9770b2ce8a7cf991ae9370f732c31a4ea0682c40ac20718c7927335bc85737d",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-form-a.png": "686c99419063848f96afd0537d049a230aaebe5e43845e009a5bca53d3d607d2",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-form-b.png": "5f8c55ff64fad7d70f61f51a1fd70985a79445f4a283ece39c856d3c09950789",
+    "family-reading.png": "68f8511eb825cc6c43aa6862f25593de0ec1b3f889bfdd29da567f6c03f29095"
+  },
+  "accepted": [
+    "The Book Charm follows the source as a small deep-green rectangular book with antique-gold edging, cherry blossom, braided loop and ivory tassel.",
+    "Its body-specific registration suspends the loop from the left obi while retaining neutral hands on both body forms.",
+    "The first Reading candidate remains one independently controllable module.",
+    "It preserves eight complete premium families as sixty-nine independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The present honest obi suspension does not claim a new grip pose or an open readable book.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

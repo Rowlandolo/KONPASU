@@ -109,7 +109,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.40 und Alkoholbalance-Familienabnahme umgesetzt:** `alcohol-5` (Klares Fest) ergänzt drei getrennte Hintergrundebenen mit klarem Bergpanorama, rot-navy-goldenem Torii, Kirschblüten, seitlichen Marktständen und warmen Papierlaternen. Alle fünf Alkoholbalance-Kandidaten bestehen gemeinsam als acht Module; acht vollständige Premiumfamilien bleiben gemeinsam als 68 Module auf beiden Körperformen aktiv.
 
-**Als Nächstes:** Paket 4.41 mit `reading-1`.
+**Paket 4.41 umgesetzt:** `reading-1` (Buch-Anhänger) ergänzt einen dunkelgrünen Miniaturbuchkörper mit Goldfassung, heller Kirschblüte, geflochtener Schlaufe und Elfenbeinquaste. Die Schlaufe beginnt auf beiden Körperformen an der linken Obi-Kante; der Kandidat besteht mit den acht vollständigen Premiumfamilien als 69 Module.
+
+**Als Nächstes:** Paket 4.42 mit `reading-2`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

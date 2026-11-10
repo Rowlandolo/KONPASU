@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.41 Buch-Anhänger (`reading-1`)
+
+`reading-1-book-charm.png` überträgt die Artbookvorlage als dunkelgrünen Miniatur-Buchanhänger mit antikgoldener Kanten- und Eckfassung, großer heller Kirschblüte, kleinen Goldblüten, geflochtener Trageschlaufe, Zierknoten, Perle und Elfenbeinquaste. Das Modul enthält keine erfundene Schrift und erhebt keinen Anspruch auf ein lesbares geöffnetes Buch.
+
+Die körperformspezifische Registrierung beginnt an der linken Obi-Kante; Buch und Quaste hängen frei neben dem Hakama, beide Hände bleiben neutral. Der erste Lesen-Kandidat besteht als ein unabhängiges Modul und mit acht vollständigen Premiumfamilien als 69 Module. 83 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-reading-v39.json`; Ansichten: `design/avatar/review-premium-reading-v39/`. 48 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.40 Klares Fest (`alcohol-5`)
 
 `alcohol-5-landscape.png` bildet den klaren Himmel, ferne blaue Berge, Nebel und den ruhigen Weg ab. `alcohol-5-torii.png` ergänzt ein rot-navy-goldenes Torii mit Kirschblüten, `alcohol-5-lantern-street.png` die seitlichen Marktstände, Papierlaternen und Blütenzweige. Die zentrale Öffnung hält die persönliche Figur vollständig lesbar; keine fremde Figur oder erfundene Schrift wurde übernommen.

@@ -6546,17 +6546,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/reading-1-book-charm.png",
+            "bytes": 256616,
+            "sha256": "06be739dca777d4066cb3dc9c43ac2b9129c800c24820c5c76bb947c54249e02",
+            "width": 496,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                165,
+                272,
+                72,
+                111.5
+              ],
+              "form-b": [
+                151,
+                272,
+                72,
+                111.5
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-2",

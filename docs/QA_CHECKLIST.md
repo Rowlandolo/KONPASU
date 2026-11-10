@@ -817,3 +817,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
 - [x] 81 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.41 Buch-Anhänger
+
+- [x] `reading-1` gegen die Artbookkarte geprüft: dunkelgrüner Miniaturbuchkörper, Goldfassung, helle Kirschblüte, Schlaufe und Quaste.
+- [x] Transparentes Premiummodul ohne erfundene Schrift hashgebunden umgesetzt.
+- [x] Körperformspezifische Registrierung beginnt am linken Obi; Buch und Quaste bleiben vollständig sichtbar, beide Hände neutral.
+- [x] Keine ungetestete Griffpose und kein Anspruch auf ein geöffnetes lesbares Buch.
+- [x] Einzelmodul auf Form A und B sowie 69-Modul-Übergang mit acht vollständigen Premiumfamilien geprüft.
+- [x] 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
+- [x] 83 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
