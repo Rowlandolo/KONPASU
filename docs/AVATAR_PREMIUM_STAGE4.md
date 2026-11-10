@@ -138,6 +138,12 @@ Der Talisman besteht Einzelrendering und die gemeinsame Drei-Modul-Komposition m
 
 Beide Ebenen bestehen Einzelrendering und die gemeinsame Fünf-Modul-Komposition mit Mond-Haarnadel und Traumkissen auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 42 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v21.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v21/`. 66 Artikel bleiben Vektorstudien.
 
+## Paket 4.24 · Mondlaterne (`sleep-4`)
+
+`sleep-4-lantern.png` bildet eine sechseckige antikgoldene Rahmenlaterne mit warmem Elfenbeinlicht, zentraler Mondsichel, Sternöffnungen, Kirschblüten, Glyzinie, Zierknauf und dunkelblauer Quaste ab. Nach der ersten Sichtprüfung wurde die Registrierung vom weiten Ärmel nach innen an die rechte Obi-Kante korrigiert. Die Laterne erhebt keinen Handgriffanspruch und bleibt von Traumkissen und vorhandenen Hüftartikeln getrennt lesbar.
+
+Das Einzelmodul besteht die gemeinsame Sechs-Modul-Komposition mit den ersten vier Schlafartikeln auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 43 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v22.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v22/`. 65 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

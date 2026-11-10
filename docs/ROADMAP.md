@@ -75,7 +75,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.23 umgesetzt:** `sleep-3` (Nacht-Haori) besitzt getrennte Vorder-/Rückebenen mit mitternachtsblauem Stoff, elfenbeinfarbenem offenem Revers, Goldkanten sowie Nachtblüten-, Wolken- und Sternmotiven. Die ersten drei Schlafartikel bestehen gemeinsam als fünf Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 42 Module.
 
-**Als Nächstes:** Paket 4.24 mit `sleep-4`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.24 umgesetzt:** `sleep-4` (Mondlaterne) besitzt ein antikgoldenes, warm leuchtendes Laternenmodul mit Mondsichel, Sternöffnungen, Blütenranke und Quaste. Die korrigierte Registrierung hängt an der rechten Obi-Kante; die ersten vier Schlafartikel bestehen gemeinsam als sechs Module und mit Cardio, Schritte, Beweglichkeit und Wasser als 43 Module.
+
+**Als Nächstes:** Paket 4.25 mit `sleep-5` und anschließend die vollständige Schlaf-Familienabnahme. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

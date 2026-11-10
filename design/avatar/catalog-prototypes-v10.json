@@ -4116,17 +4116,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-4-lantern.png",
+            "bytes": 289971,
+            "sha256": "95da2d56bcc1009d96158167fc4b8af4a43ceca7420896f2539d3bd41c382d3f",
+            "width": 493,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                300,
+                260,
+                80,
+                124.6
+              ],
+              "form-b": [
+                310,
+                260,
+                80,
+                124.6
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-5",

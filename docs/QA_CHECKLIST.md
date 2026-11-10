@@ -536,6 +536,18 @@ Beleg: `design/avatar/verification-premium-sleep-v20.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sleep-v21.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v21/`.
 
+## Etappe 4 · Paket 4.24 Mondlaterne
+
+- [x] `sleep-4` gegen die Artbookkarte geprüft: antikgoldener sechseckiger Rahmen, warmes Elfenbeinlicht, Mondsichel, Sternöffnungen und seitliche Blütenranke.
+- [x] Transparentes, hashgebundenes Einzelmodul mit Zierknauf, dunkelblauer Quaste und eigener Passform für Form A und B umgesetzt.
+- [x] Erste Sichtprüfung erkannte eine scheinbare Ärmelaufhängung; korrigierte Registrierung sitzt an der rechten Obi-Kante und erhebt keinen Handgriffanspruch.
+- [x] Laterne, Traumkissen und vorhandene Hüftartikel bleiben auf beiden Formen getrennt lesbar.
+- [x] Die ersten vier Schlafartikel gemeinsam als sechs Module und im 43-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v22.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v22/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 
