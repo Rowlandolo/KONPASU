@@ -4231,17 +4231,37 @@
             100,
             100
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-5-aura.png",
+            "bytes": 814017,
+            "sha256": "4bebce97725c226bfc991e1c0426c98a498e6e8bc898e27278f035e13233be02",
+            "width": 702,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                -44,
+                20,
+                600,
+                656.4
+              ],
+              "form-b": [
+                -44,
+                20,
+                600,
+                656.4
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-1",

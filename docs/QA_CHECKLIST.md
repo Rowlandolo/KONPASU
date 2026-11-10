@@ -548,6 +548,19 @@ Beleg: `design/avatar/verification-premium-sleep-v21.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sleep-v22.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v22/`.
 
+## Etappe 4 · Paket 4.25 und Schlaf-Familienabnahme
+
+- [x] `sleep-5` gegen die Artbookkarte geprüft: warmer Vollmond, mitternachtsblauer Nachthimmelbogen, Sterne, helle Wolken-/Windbänder und Kirschblüten.
+- [x] Fremde Meditationssilhouette bewusst ausgeschlossen; persönliche KONPASU-Figur bleibt einzige zentrale Figur.
+- [x] Transparentes, hashgebundenes Hintergrundmodul mit identischer stabiler Registrierung auf Form A und B umgesetzt.
+- [x] Große offene Mitte erhält Gesicht, Mimik, Körper, Kleidung, Ausrüstung und Füße auf beiden Formen.
+- [x] Alle fünf Schlafartikel gemeinsam als sieben unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] 44-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser auf beiden Körperformen.
+- [x] 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, Mehrfachoutfit, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v23.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v23/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

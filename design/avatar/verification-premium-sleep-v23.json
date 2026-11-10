@@ -1,0 +1,43 @@
+{
+  "version": 23,
+  "date": "2026-11-10",
+  "scope": "stage-4-sleep-5-and-family-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sleep-1", "sleep-2", "sleep-3", "sleep-4", "sleep-5"],
+    "candidateModules": 7,
+    "transitionModules": 44,
+    "remainingVectorStudies": 64
+  },
+  "catalogueBrowser": {
+    "checks": 51,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sleep5ChangedPixels": {"form-a": 20827, "form-b": 20273},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sleep-premium-complete-form-a.png": "dcefd1a262f5e8ad6bc4f36a3d6ed7e9b68b4ede7729788099349a1821ec3de1",
+    "sleep-premium-complete-form-b.png": "360389975c0ad32ae5be583caff9a6c449b2b6969631f8de1fe59f24b52390ca",
+    "cardio-steps-mobility-water-sleep-complete-form-a.png": "945b4b9dd04d52aea55ab2d9f1423e97ac36b9597f4c68f06c49e761616a7565",
+    "cardio-steps-mobility-water-sleep-complete-form-b.png": "efef8e56c76bb72ac90a804c08042d13e6a8f701b4e4ca9e185afaaacee1d4cf",
+    "family-sleep.png": "bf7f2ab3b0fc15aaa98ef825c54d5486e2efb50090a86c6fb5857e120ad4046a"
+  },
+  "accepted": [
+    "The Moonlit Serenity Aura follows the source motif with a warm full moon, midnight sky arc, ivory cloud and wind ribbons, cherry blossoms, petals and restrained stars.",
+    "The card's separate meditation silhouette is intentionally excluded so the personal KONPASU avatar remains the sole central figure.",
+    "The open transparent centre leaves face, expression, body, clothing, equipment and feet unobstructed on both registered body forms.",
+    "All five Sleep premium candidates coexist as seven independent modules with valid depth, visibility and ordering.",
+    "Complete Cardio, Steps, Mobility, Water and Sleep families coexist as forty-four independent modules.",
+    "The 95-article stress selection and warm offline interaction pass without profile, ownership, goal, training, reward or browser-storage writes."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium family remains review artwork until physical-device approval."
+  ]
+}

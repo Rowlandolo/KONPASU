@@ -144,6 +144,14 @@ Beide Ebenen bestehen Einzelrendering und die gemeinsame Fünf-Modul-Komposition
 
 Das Einzelmodul besteht die gemeinsame Sechs-Modul-Komposition mit den ersten vier Schlafartikeln auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 43 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v22.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v22/`. 65 Artikel bleiben Vektorstudien.
 
+## Paket 4.25 · Mondruhe-Aura (`sleep-5`)
+
+`sleep-5-aura.png` bildet einen warmen elfenbeingoldenen Vollmond, einen offenen mitternachtsblauen Nachthimmelbogen, Sterne, helle Wolken- und Windbänder, Kirschblütenzweige und einzelne Blütenblätter ab. Die Meditationssilhouette der Kartenillustration wurde bewusst nicht übernommen: Die persönliche KONPASU-Figur bleibt die einzige zentrale Figur. Die große transparente Mitte hält Gesicht, Mimik, Körper, Kleidung, Ausrüstung und Füße frei.
+
+## Schlaf-Familienabnahme
+
+Alle fünf Schlaf-Kandidaten bestehen Einzelrendering, gemeinsame Sieben-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 44-Modul-Übergang mit den vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-sleep-v23.json`, fünf gehashte Ansichten in `design/avatar/review-premium-sleep-v23/`. 64 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.
