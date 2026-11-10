@@ -2,6 +2,14 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.40 Klares Fest (`alcohol-5`)
+
+`alcohol-5-landscape.png` bildet den klaren Himmel, ferne blaue Berge, Nebel und den ruhigen Weg ab. `alcohol-5-torii.png` ergänzt ein rot-navy-goldenes Torii mit Kirschblüten, `alcohol-5-lantern-street.png` die seitlichen Marktstände, Papierlaternen und Blütenzweige. Die zentrale Öffnung hält die persönliche Figur vollständig lesbar; keine fremde Figur oder erfundene Schrift wurde übernommen.
+
+## Alkoholbalance-Familienabnahme
+
+Alle fünf Alkoholbalance-Kandidaten bestehen Einzelrendering, gemeinsame Acht-Modul-Komposition, beide Körperformen, unabhängige Sichtbarkeit und Reihenfolge, den 68-Modul-Übergang mit den sieben vollständigen Familien Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf. Der maschinenlesbare Beleg liegt in `design/avatar/verification-premium-alcohol-v38.json`, fünf gehashte Ansichten in `design/avatar/review-premium-alcohol-v38/`. 49 Artikel bleiben Vektorstudien. Physische Geräte, VoiceOver, GPU-/Speicherspitzen, kalter PWA-Start und Alt-PWA-Upgrade bleiben spätere Freigabegates.
+
 ## Aktueller Stand · Paket 4.39 Klarhimmel-Obi (`alcohol-4`)
 
 `alcohol-4-band.png` bildet den körpernahen hellblau-elfenbeinfarbenen Seidengürtel mit dunkelblauen Faltenkanten, antikgoldener Paspel, Wolken und kleinen Blüten ab. `alcohol-4-bow.png` ergänzt die vordere mehrlagige Schleife mit Goldkordel, hellen Bandenden und Elfenbeinquasten. Die Trennung erhält eine kontrollierte Tiefenordnung und unabhängige Vorderflächen.

@@ -805,3 +805,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] 65-Modul-Übergang, natürliche Tiefenüberlagerung, 95-Artikel-Stressauswahl, Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
 - [x] 79 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.40 Klares Fest und Alkoholbalance-Familienabnahme
+
+- [x] `alcohol-5` gegen die Artbookkarte geprüft: klare Berglandschaft, ruhige Feststraße, Torii, Kirschblüten und warme Laternen.
+- [x] Landschaft, Torii und seitliche Markt-/Laternenstraße als drei getrennte transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Zentrale Toröffnung und Weg halten die persönliche Figur auf Form A und B vollständig lesbar; keine fremde Figur oder erfundene Schrift.
+- [x] Alle fünf Alkoholbalance-Kandidaten gemeinsam als acht unabhängige Module auf beiden Körperformen geprüft.
+- [x] Vollständiger 68-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance bestanden.
+- [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
+- [x] 81 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

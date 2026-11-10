@@ -6330,7 +6330,28 @@
             100,
             150
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-landscape.png",
+            "bytes": 666952,
+            "sha256": "cb7c36f41527fcc7370b51527fa63771e9d49e01766b68dc6d30e1fb490052e9",
+            "width": 512,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                0,
+                0,
+                512,
+                768
+              ],
+              "form-b": [
+                0,
+                0,
+                512,
+                768
+              ]
+            }
+          }
         },
         {
           "shape": "scene-torii",
@@ -6359,7 +6380,28 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-torii.png",
+            "bytes": 473786,
+            "sha256": "f2ca187b38ca74a31aaa635067ef20b6d98098020c665272374f6156a6708aa8",
+            "width": 664,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                35,
+                72,
+                442,
+                511.2
+              ],
+              "form-b": [
+                35,
+                72,
+                442,
+                511.2
+              ]
+            }
+          }
         },
         {
           "shape": "scene-lanterns",
@@ -6388,17 +6430,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-5-lantern-street.png",
+            "bytes": 369133,
+            "sha256": "72af0f6fcd350c0c6da315079e7b548e1431c301be696862f21773696629049c",
+            "width": 512,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                0,
+                0,
+                512,
+                768
+              ],
+              "form-b": [
+                0,
+                0,
+                512,
+                768
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "reading-1",
