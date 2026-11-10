@@ -5415,18 +5415,38 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-3-smile-study.png",
+            "bytes": 373750,
+            "sha256": "24fe0e75179e8c88372bdc85f8c8cb80c9649e3e009cd9694347b5786a95a74a",
+            "width": 768,
+            "height": 288,
+            "fit": {
+              "form-a": [
+                270,
+                34,
+                150,
+                56.25
+              ],
+              "form-b": [
+                265,
+                36,
+                150,
+                56.25
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Mimikstudie neben dem Kopf; kein ungetestetes Überschreiben des vorhandenen Gesichts.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme",
         "Neue vollständige Mimikgrafiken für beide Figuren"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sugar-4",

@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.33 Helles Lächeln (`sugar-3`)
+
+`sugar-3-smile-study.png` übernimmt das Referenzmotiv als drei gerahmte Nahporträts derselben erwachsenen Figur: geschlossene lächelnde Augen, warme Wangen, offenes natürliches Lächeln und leicht unterschiedliche Kopfstellungen. Elfenbeinfarbene Goldrahmen, Jadeblätter und helle Blüten verbinden die drei Ansichten. Das Modul bleibt eine separate Mimikstudie neben dem Kopf; es behauptet keine noch nicht vorhandenen vollständigen Ersatzgesichter.
+
+Die erste Registrierung lief auf Form B aus der Bühne. Die korrigierten Passformen halten alle drei Porträts auf Form A und B vollständig sichtbar. Die ersten drei Zuckerbalance-Kandidaten bestehen gemeinsam als drei unabhängige Module und mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung als 57 Module. 67 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-sugar-v31.json`; Ansichten: `design/avatar/review-premium-sugar-v31/`. 56 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.32 Reinheitsarmband (`sugar-2`)
 
 `sugar-2-bracelet.png` folgt der Artbookkarte als helles, leicht leuchtendes Perlenband mit einzelner Jadeperle, goldenem Endlosknoten, Quaste und Blattornament. Das transparente Einzelmodul besitzt eigene Passformen für Form A und B und folgt jeweils dem linken Handgelenk. Vorhandene Kimono- und Außenkleidungsmasken verdecken es nur dort, wo tatsächliche Ärmelpixel liegen; Auswahl und Kombination bleiben erhalten.

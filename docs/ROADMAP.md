@@ -93,7 +93,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.32 umgesetzt:** `sugar-2` (Reinheitsarmband) besitzt helle Perlen, eine Jadeperle, Goldknoten, Quaste und Blattornament. Das Armband folgt auf beiden Körperformen dem linken Handgelenk und wird durch tatsächliche Ärmelpixel natürlich verdeckt. Beide Zuckerbalance-Kandidaten bestehen mit den sechs vollständigen Premiumfamilien als 56 Module.
 
-**Als Nächstes:** Paket 4.33 mit `sugar-3`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.33 umgesetzt:** `sugar-3` (Helles Lächeln) folgt der Artbookreferenz als kompaktes Triptychon aus drei freundlichen erwachsenen Mimikporträts. Die korrigierte Registrierung hält alle drei Ansichten auf beiden Körperformen vollständig sichtbar. Der Kandidat bleibt ehrlich eine separate Studie neben dem Kopf und überschreibt keine ungeprüfte Gesichtsanatomie. Die ersten drei Zuckerbalance-Kandidaten bestehen mit den sechs vollständigen Premiumfamilien als 57 Module.
+
+**Als Nächstes:** Paket 4.34 mit `sugar-4`. App-/Offlineintegration, vollständige austauschbare Gesichtslayer und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
