@@ -3949,7 +3949,28 @@
             100,
             160
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-3-rear.png",
+            "bytes": 536155,
+            "sha256": "10620c3f6e1b2a11bbca90b88b7333c57f99fcde1b5d2175dd8e20acf9b8e010",
+            "width": 775,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                50,
+                88,
+                412,
+                408.6
+              ],
+              "form-b": [
+                25,
+                78,
+                462,
+                457.8
+              ]
+            }
+          }
         },
         {
           "shape": "garment-front-moon",
@@ -3979,17 +4000,37 @@
             100,
             160
           ],
-          "theme": "night"
+          "theme": "night",
+          "premium": {
+            "file": "./premium-v12/sleep-3-front.png",
+            "bytes": 316346,
+            "sha256": "c85f24197abc482f2bd75835ae118fdfaf12cc8b5e4c1a5d2d2219f6218ed815",
+            "width": 848,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                35,
+                88,
+                442,
+                400.3
+              ],
+              "form-b": [
+                8,
+                78,
+                496,
+                449.2
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Vorder-/Hinterteile; Frontstoff verdeckt Armartikel über tatsächliche Vektorflächen.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "sleep-4",

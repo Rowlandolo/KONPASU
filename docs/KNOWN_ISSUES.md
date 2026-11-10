@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.22
+## Etappe 4 · Stand nach Paket 4.23
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -268,3 +268,5 @@ Die vollständige Wasser-Serie besitzt sechs hashgebundene Premiummodule und bes
 `sleep-1` besitzt zwei hashgebundene Premiumebenen für Stifte und sichtbaren Mond-/Blütenschmuck. Die seitliche Passform hält das Gesicht auf beiden registrierten Körperformen frei; der 39-Modul-Übergang mit Cardio, Schritte, Beweglichkeit und Wasser besteht. 68 Artikel bleiben Vektorstudien. Weitere Frisuren, Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `sleep-2` ergänzt ein hashgebundenes Premium-Kissenmodul. Die Tragekordel sitzt auf beiden registrierten Körperformen an der rechten Hand; Mond-Haarnadel und Traumkissen bleiben gemeinsam als drei Module sichtbar und bestehen den 40-Modul-Übergang mit Cardio, Schritte, Beweglichkeit und Wasser. 67 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+`sleep-3` ergänzt getrennte hashgebundene Vorder-/Rückebenen für den Nacht-Haori. Die offene Mitte erhält Gesicht, Kimono, Obi, Hände und Hakama; nur tatsächlicher Vorderstoff maskiert Armartikel. Die ersten drei Schlafartikel bleiben gemeinsam als fünf Module sichtbar und bestehen den 42-Modul-Übergang mit Cardio, Schritte, Beweglichkeit und Wasser. 66 Artikel bleiben Vektorstudien. Andere Posen, universelle Kombinationen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

@@ -132,6 +132,12 @@ Beide Tiefenmodule bestehen Einzelrendering auf Form A und B sowie den 39-Modul-
 
 Der Talisman besteht Einzelrendering und die gemeinsame Drei-Modul-Komposition mit der Mond-Haarnadel auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 40 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v20.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v20/`. 67 Artikel bleiben Vektorstudien.
 
+## Paket 4.23 · Nacht-Haori (`sleep-3`)
+
+`sleep-3-rear.png` bildet die lange mitternachtsblaue Rückensilhouette mit weiten Ärmeln, elfenbeinfarbenem Futter, Goldkanten sowie Nachtblüten-, Wolken- und Sternmotiven ab. `sleep-3-front.png` enthält nur die offenen elfenbeinfarbenen Revers, schmalen vorderen Stoffbahnen und sichtbaren Ärmelaufschläge. Dadurch bleiben Gesicht, Kimono, Obi, Hände und Hakama frei; nur tatsächlicher Vorderstoff maskiert Armartikel.
+
+Beide Ebenen bestehen Einzelrendering und die gemeinsame Fünf-Modul-Komposition mit Mond-Haarnadel und Traumkissen auf Form A und B. Im Übergang bleiben die vollständigen Familien Cardio, Schritte, Beweglichkeit und Wasser als insgesamt 42 unabhängige Module erhalten. Der Prüfbeleg liegt in `design/avatar/verification-premium-sleep-v21.json`, fünf archivierte Ansichten in `design/avatar/review-premium-sleep-v21/`. 66 Artikel bleiben Vektorstudien.
+
 ## Beweglichkeits-Familienabnahme
 
 Alle fünf Beweglichkeits-Kandidaten bestehen Einzelrendering, gemeinsame Zehn-Modul-Komposition, Körperform A/B, Vorderflächenmaskierung, unabhängige Sichtbarkeit und Reihenfolge, den Übergang mit den vollständigen Cardio- und Schritte-Serien, die 95-Artikel-Stressauswahl und den Mehrfachoutfitlauf. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; physische Geräte, VoiceOver, GPU-/Speicherspitzen und kalter PWA-/Upgrade-Start bleiben spätere Freigabegates.

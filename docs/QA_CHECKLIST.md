@@ -524,6 +524,18 @@ Beleg: `design/avatar/verification-premium-sleep-v19.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sleep-v20.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v20/`.
 
+## Etappe 4 · Paket 4.23 Nacht-Haori
+
+- [x] `sleep-3` gegen die Artbookkarte geprüft: mitternachtsblauer Haori, elfenbeinfarbenes offenes Revers, Goldkanten, Nachtblüten, Wolken und Sternpunkte.
+- [x] Rückensilhouette und sparsame Vorderflächen als zwei transparente, hashgebundene Tiefenmodule umgesetzt.
+- [x] Eigene Passform für Form A und B; Gesicht, Kimono, Obi, Hände und Hakama bleiben durch die offene Mitte sichtbar.
+- [x] Tatsächliche Vorderflächen maskieren Armartikel; 1.105 veränderte Maskenpixel im realen Browserrendering bestätigt.
+- [x] Die ersten drei Schlafartikel gemeinsam als fünf Module und im 42-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit und Wasser gerendert.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sleep-v21.json`; archivierte Ansichten: `design/avatar/review-premium-sleep-v21/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 
