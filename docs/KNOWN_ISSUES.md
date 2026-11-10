@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.34
+## Etappe 4 · Stand nach Paket 4.35 und Zuckerbalance-Familienabnahme
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -292,3 +292,5 @@ Die vollständige Ernährungsserie besitzt zehn hashgebundene Premiummodule. Rei
 `sugar-3` ergänzt ein hashgebundenes Premium-Triptychon mit drei erwachsenen Lächelstudien. Die erste Passform lief auf Form B aus der sichtbaren Bühne; die korrigierte Registrierung zeigt alle drei Porträts auf beiden Formen vollständig neben dem Kopf. Sie ersetzt das Basisgesicht bewusst noch nicht, da vollständige kompatible Gesichtslayer für beide Figuren fehlen. Drei Zuckerbalance-Artikel bestehen den 57-Modul-Übergang. 56 Artikel bleiben Vektorstudien. Austauschbare Gesichtsanatomie, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `sugar-4` ergänzt einen hashgebundenen Premium-Lotusfächer. Er sitzt auf beiden registrierten Körperformen am linken Obi, lässt die Hände neutral und bleibt neben den vorhandenen Hüftartikeln erkennbar. Die Befestigung behauptet keine neue Griffpose. Vier Zuckerbalance-Artikel bestehen den 58-Modul-Übergang. 55 Artikel bleiben Vektorstudien. Eine spätere Griffpose, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+Die vollständige Zuckerbalance-Serie besitzt sechs hashgebundene Premiummodule. Die Klargeist-Aura rahmt beide registrierten Körperformen mit offenem Jade-/Wasserwirbel; das getrennte Lotus-Podest bleibt unter den Füßen sichtbar. Alle fünf Zuckerbalance-Artikel bestehen gemeinsam sowie im 60-Modul-Übergang mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf und Ernährung. 54 Artikel bleiben Vektorstudien. `sugar-3` bleibt bis zu vollständigen Gesichtslayern eine separate Mimikstudie; andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

@@ -5648,7 +5648,28 @@
             100,
             100
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-5-aura.png",
+            "bytes": 700043,
+            "sha256": "f7c65085227662ceaac8c8c927d9ac067e46c1bae02dfc959c6e9a4c0215feb8",
+            "width": 768,
+            "height": 702,
+            "fit": {
+              "form-a": [
+                20,
+                125,
+                472,
+                431.5
+              ],
+              "form-b": [
+                20,
+                125,
+                472,
+                431.5
+              ]
+            }
+          }
         },
         {
           "shape": "lotus-pedestal",
@@ -5677,17 +5698,37 @@
             100,
             50
           ],
-          "theme": "lotus"
+          "theme": "lotus",
+          "premium": {
+            "file": "./premium-v12/sugar-5-pedestal.png",
+            "bytes": 239877,
+            "sha256": "834c5b702470e7ccd6cd146f13a8d684c9434e9a48a37e4bccf9e964819d3faa",
+            "width": 768,
+            "height": 384,
+            "fit": {
+              "form-a": [
+                106,
+                620,
+                300,
+                150
+              ],
+              "form-b": [
+                106,
+                620,
+                300,
+                150
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Eigene Hintergrund-/Effektgruppe; transparente Module bleiben gemeinsam wählbar.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-1",

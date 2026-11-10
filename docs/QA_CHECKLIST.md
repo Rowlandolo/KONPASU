@@ -672,6 +672,18 @@ Beleg: `design/avatar/verification-premium-sugar-v31.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sugar-v32.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v32/`.
 
+## Etappe 4 · Paket 4.35 und Zuckerbalance-Familienabnahme
+
+- [x] `sugar-5` gegen die Artbookkarte geprüft: offene jadegrüne Strömung, Goldbögen, Lichtpartikel und helle Lotusblüten.
+- [x] Hintergrundwirbel und flaches Lotus-Podest als zwei transparente, hashgebundene Premiummodule umgesetzt.
+- [x] Große transparente Mitte, freie Figur und Podestregistrierung unter den Füßen auf Form A und B geprüft.
+- [x] Alle fünf Zuckerbalance-Kandidaten gemeinsam als sechs unabhängige Module auf beiden Körperformen geprüft.
+- [x] Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance gemeinsam als 60 Module auf beiden Körperformen geprüft.
+- [x] 71 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Vollständige Gesichtslayer für `sugar-3`, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-sugar-v33.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v33/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

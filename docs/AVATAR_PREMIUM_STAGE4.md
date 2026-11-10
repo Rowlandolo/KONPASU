@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.35 Klargeist-Aura und Zuckerbalance-Familienabnahme
+
+`sugar-5-aura.png` bildet eine offene jade-/türkisfarbene Strömung mit elfenbeinfarbenen Schaumrändern, warmgoldenen Bögen, Lichtpunkten, Blütenblättern und Lotusblüten hinter der Figur. Die große transparente Mitte hält Avatar und Outfit frei. `sugar-5-pedestal.png` ergänzt getrennt ein flaches elfenbein-roséfarbenes Lotus-Podest mit Jade-Unterblättern und Goldkante unter den Füßen. Beide Module besitzen geprüfte Passformen für Form A und B und bleiben unabhängig sortierbar.
+
+Alle fünf Zuckerbalance-Kandidaten bestehen gemeinsam als sechs Module. Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance bestehen im Übergang als 60 Module auf beiden Körperformen. 71 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-sugar-v33.json`; Ansichten: `design/avatar/review-premium-sugar-v33/`. 54 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.34 Lotusfächer (`sugar-4`)
 
 `sugar-4-lotus-fan.png` folgt dem Artbookmotiv mit tiefgrüner Fächerseide, warmgoldener Außenkante und Rippen, drei elfenbein-roséfarbenen Lotusblüten, feinen Stielen, Blättern und Samenkapseln sowie einer kurzen Jade-/Elfenbeinquaste. Das transparente Einzelmodul besitzt eigene Passformen für Form A und B. Es sitzt ehrlich am linken Obi und verändert die neutralen Hände nicht.
