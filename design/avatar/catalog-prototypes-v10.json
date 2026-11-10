@@ -5814,17 +5814,37 @@
             100,
             100
           ],
-          "theme": "sky"
+          "theme": "sky",
+          "premium": {
+            "file": "./premium-v12/alcohol-1-sealed-gourd.png",
+            "bytes": 708796,
+            "sha256": "3b73209bcab5cfba5f4df7b1e37ee67bdab62219e6bb1f357e967b4970064a7e",
+            "width": 768,
+            "height": 816,
+            "fit": {
+              "form-a": [
+                172,
+                270,
+                62,
+                65.875
+              ],
+              "form-b": [
+                160,
+                270,
+                62,
+                65.875
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "alcohol-2",

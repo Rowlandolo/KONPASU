@@ -99,7 +99,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.35 und Zuckerbalance-Familienabnahme umgesetzt:** `sugar-5` (Klargeist-Aura) besitzt einen offenen jade-/türkisfarbenen Strömungsring mit elfenbeinfarbenem Schaum, Goldbögen, Lichtpartikeln und Lotusblüten sowie ein getrenntes flaches Lotus-Podest. Alle fünf Zuckerbalance-Kandidaten bestehen gemeinsam als sechs Module; die sieben vollständigen Premiumfamilien bleiben gemeinsam als 60 Module auf beiden Körperformen aktiv.
 
-**Als Nächstes:** Paket 4.36 mit `alcohol-1`. App-/Kalt-Offlineintegration und physische Gerätefreigabe bleiben spätere Gates.
+**Paket 4.36 umgesetzt:** `alcohol-1` (Versiegelter Sake-Anhänger) besitzt elfenbeinfarbene Keramik mit blaugrauer Botanik, versiegelten Stopfen, Goldschnur, Knoten, Glocke, Quaste und ein textfreies gekreuztes Gefäßsymbol. Nach zwei Passformkorrekturen beginnt die Schlaufe auf beiden Körperformen an der linken Obi-Kante; Hand und Unterarm bleiben frei. Der Kandidat besteht mit den sieben vollständigen Premiumfamilien als 61 Module.
+
+**Als Nächstes:** Paket 4.37 mit `alcohol-2`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

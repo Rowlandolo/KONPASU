@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.36 Versiegelter Sake-Anhänger (`alcohol-1`)
+
+`alcohol-1-sealed-gourd.png` übernimmt das Artbookmotiv als elfenbeinfarbenes Doppelgefäß mit blaugrauen Wolken-, Bambus- und Blütenmotiven, versiegeltem Stopfen, warmgoldenen Halsringen, geflochtener Schnur, Zierknoten, Glocke und Elfenbeinquaste. Ein abstraktes gekreuztes Gefäßsymbol kennzeichnet den versiegelten Zustand ohne erfundene Schrift, Produktmarke oder Gesundheitsbehauptung.
+
+Die ersten beiden Registrierungen lagen optisch am Unterarm. Die korrigierten Passformen beginnen an der linken Obi-Kante und lassen Hand und Unterarm auf Form A und B frei. Der Kandidat besteht mit Cardio, Schritte, Beweglichkeit, Wasser, Schlaf, Ernährung und Zuckerbalance als 61 Module. 73 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-alcohol-v34.json`; Ansichten: `design/avatar/review-premium-alcohol-v34/`. 53 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.35 Klargeist-Aura und Zuckerbalance-Familienabnahme
 
 `sugar-5-aura.png` bildet eine offene jade-/türkisfarbene Strömung mit elfenbeinfarbenen Schaumrändern, warmgoldenen Bögen, Lichtpunkten, Blütenblättern und Lotusblüten hinter der Figur. Die große transparente Mitte hält Avatar und Outfit frei. `sugar-5-pedestal.png` ergänzt getrennt ein flaches elfenbein-roséfarbenes Lotus-Podest mit Jade-Unterblättern und Goldkante unter den Füßen. Beide Module besitzen geprüfte Passformen für Form A und B und bleiben unabhängig sortierbar.

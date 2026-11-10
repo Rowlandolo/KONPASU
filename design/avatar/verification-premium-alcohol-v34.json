@@ -1,0 +1,43 @@
+{
+  "version": 34,
+  "date": "2026-11-10",
+  "scope": "stage-4-alcohol-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["alcohol-1"],
+    "candidateModules": 1,
+    "transitionModules": 61,
+    "remainingVectorStudies": 53
+  },
+  "catalogueBrowser": {
+    "checks": 73,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "alcohol1ChangedPixels": {"form-a": 517, "form-b": 501},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "alcohol-1-premium-form-a.png": "f6335b586d9d1ec207ece6dacb73c02d4cd637ff4daf606887e08104511c4c5e",
+    "alcohol-1-premium-form-b.png": "d065b933af6f0114007e5337963044cde1bc128e9658565d624cab923bb18f42",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-form-a.png": "bb3096bb68700d546512b8165a9ec7682a19657d1ef969f187e068fe74d7eb49",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-form-b.png": "48637aceedd3cb1870df22a97ddaea49d1a76eaa00100737fb225d3aaff371f7",
+    "family-alcohol.png": "cf79e3ce622e580b66499a397738e04c2a1d3e7461ff7dca6a0939991995b933"
+  },
+  "accepted": [
+    "The Sealed Sake Gourd Charm follows the source motif with ivory ceramic, a sealed stopper, gold cord, decorative knot, bell and tassel.",
+    "A text-free crossed vessel emblem communicates the sealed state without invented kanji, branding or health claims.",
+    "After two fit corrections, the loop begins at the left obi and the gourd hangs clear of the neutral hand and forearm on both body forms.",
+    "The candidate preserves seven complete premium families as sixty-one independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The present honest obi mount does not claim a new grip pose.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

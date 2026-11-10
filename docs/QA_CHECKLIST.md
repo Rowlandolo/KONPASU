@@ -684,6 +684,17 @@ Beleg: `design/avatar/verification-premium-sugar-v32.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-sugar-v33.json`; archivierte Ansichten: `design/avatar/review-premium-sugar-v33/`.
 
+## Etappe 4 · Paket 4.36 Versiegelter Sake-Anhänger
+
+- [x] `alcohol-1` gegen die Artbookkarte geprüft: helles Doppelgefäß, versiegelter Hals, Goldschnur und Glocke.
+- [x] Transparentes, hashgebundenes Premiummodul mit botanischer Keramik, Knoten, Quaste und textfreiem Sperrsymbol umgesetzt.
+- [x] Zwei unterarmnahe Registrierungen korrigiert; Schlaufe beginnt am linken Obi, Hand und Unterarm bleiben frei.
+- [x] Einzelrendering und 61-Modul-Übergang mit sieben vollständigen Premiumfamilien auf beiden Körperformen.
+- [x] 73 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Spätere Griffpose, weitere Posen, App-/Kalt-Offlineintegration, physische Geräte und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-alcohol-v34.json`; archivierte Ansichten: `design/avatar/review-premium-alcohol-v34/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 
