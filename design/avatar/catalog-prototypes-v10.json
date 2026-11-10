@@ -4463,17 +4463,37 @@
             100,
             100
           ],
-          "theme": "harvest"
+          "theme": "harvest",
+          "premium": {
+            "file": "./premium-v12/nutrition-2-satchel.png",
+            "bytes": 799721,
+            "sha256": "deb922151249f810e256970bd2f5f9d6667619a277695180f91a41106c1b54b8",
+            "width": 777,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                90,
+                300,
+                100,
+                98.8
+              ],
+              "form-b": [
+                78,
+                300,
+                100,
+                98.8
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "nutrition-3",

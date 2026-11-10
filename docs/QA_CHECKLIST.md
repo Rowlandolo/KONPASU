@@ -573,6 +573,18 @@ Beleg: `design/avatar/verification-premium-sleep-v23.json`; archivierte Ansichte
 
 Beleg: `design/avatar/verification-premium-nutrition-v24.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v24/`.
 
+## Etappe 4 · Paket 4.27 Kräuterbeutel
+
+- [x] `nutrition-2` gegen die Artbookkarte geprüft: waldgrüne Seide, elfenbeinfarbener Zugverschluss, Goldkordel, Quasten, Jadeperle und botanische Stickerei.
+- [x] Transparentes, hashgebundenes Einzelmodul mit eigener Passform für Form A und B umgesetzt.
+- [x] Links außen neben `nutrition-1` registriert; Hand, Obi, Kräuterbeutel und Bento bleiben getrennt lesbar.
+- [x] Beide Ernährungsartikel gemeinsam als zwei unabhängige, sichtbare und sortierbare Module gerendert.
+- [x] Einzelrendering und 46-Modul-Übergang mit vollständigem Cardio, Schritte, Beweglichkeit, Wasser und Schlaf auf beiden Körperformen.
+- [x] 95-Artikel-Stresstest, unabhängige Sichtbarkeit/Reihenfolge, warmer Offlinezustand und null Browser-Speicherwrites.
+- [ ] Weitere Posen, App-/Kalt-Offlineintegration, physisches iPhone/Android, VoiceOver, GPU-/Speicherspitzen und Produktionsfreigabe.
+
+Beleg: `design/avatar/verification-premium-nutrition-v25.json`; archivierte Ansichten: `design/avatar/review-premium-nutrition-v25/`.
+
 
 ## Abschluss Etappe 3.4.2: persönlicher Hauptavatar mit Mehrfachoutfit
 

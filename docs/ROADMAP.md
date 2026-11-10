@@ -81,7 +81,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.26 umgesetzt:** `nutrition-1` (Bento-Anhänger) besitzt ein mitternachtsblaues, gold eingefasstes Bento-Täschchen mit Onigiri, Hasen-Reisbällchen, Blüten, Quaste und Aufhängeschlaufe an der linken Obi-Kante. Der Kandidat besteht mit den fünf vollständigen Premiumfamilien als 45 Module auf beiden Körperformen.
 
-**Als Nächstes:** Paket 4.27 mit `nutrition-2`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
+**Paket 4.27 umgesetzt:** `nutrition-2` (Kräuterbeutel) besitzt waldgrüne Seide, elfenbeinfarbenen Zugverschluss, Goldkordel, Quasten, Jadeperle und botanische Stickerei. Beide Ernährungsartikel bleiben gemeinsam lesbar und bestehen mit den fünf vollständigen Premiumfamilien als 46 Module auf beiden Körperformen.
+
+**Als Nächstes:** Paket 4.28 mit `nutrition-3`. App-/Offlineintegration und physische Gerätefreigabe bleiben spätere eigene Gates.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 
