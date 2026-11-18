@@ -1,0 +1,49 @@
+{
+  "version": 44,
+  "date": "2026-11-18",
+  "scope": "stage-4-languages-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["languages-1"],
+    "candidateModules": 1,
+    "transitionModules": 76,
+    "completePremiumFamilies": 9,
+    "remainingVectorStudies": 43
+  },
+  "catalogueBrowser": {
+    "checks": 93,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "languages1ChangedPixels": {
+      "form-a": 613,
+      "form-b": 599
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "languages-1-premium-form-a.png": "38533c1924fe2aaccd9825264d40b0c1556180cc0ca5790e0bc9c362ec09b2d5",
+    "languages-1-premium-form-b.png": "939777691e21b789ef49b876e35bc35ee573d6f8d77f13981e0fab00e15a2e09",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-form-a.png": "16f2fd8c23d3cc39af14b6d6f5a14605123a5dc410b6f071253dbeaf87055fb6",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-form-b.png": "6a8763a852a025ce46cd83cb3e1a1069a1e632565653b2f71eeceb422c1dc5ce",
+    "family-languages.png": "847863fc58a94511415709280e4396a67979db94780c662e9c239d5a77c4d038"
+  },
+  "accepted": [
+    "The Phrasebook Charm follows the source as a closed midnight-navy miniature book with antique-gold frame, loop and knot, pale cherry blossoms, gold wave arcs and a forest-green tassel.",
+    "The cover contains no letters, words, logos, symbols or readable writing.",
+    "Body-specific registration suspends the charm at the left side below the Reading satchel while preserving both neutral hands.",
+    "The first Languages candidate remains one independently controllable module.",
+    "It preserves nine complete premium families as seventy-six independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The suspended charm does not claim a new grip pose or readable phrasebook content.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

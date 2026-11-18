@@ -119,7 +119,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.45 und Lesen-Familienabnahme umgesetzt:** `reading-5` (Archiv-Schriftrollenset) ergänzt einen offenen Archivbogen mit seitlichen Regalen sowie ein getrenntes geschlossenes Rollenset. Alle fünf Lesen-Kandidaten bestehen als sieben Module; neun vollständige Premiumfamilien bestehen gemeinsam als 75 Module.
 
-**Als Nächstes:** Paket 4.46 mit `languages-1`.
+**Paket 4.46 umgesetzt:** `languages-1` (Sprachbuch-Anhänger) ergänzt ein geschlossenes mitternachtsblaues Miniaturbuch mit Goldfassung, Schlaufe, Blütenknoten, Kirschblüten, Wellenmotiv und grüner Quaste. Der textfreie Anhänger bleibt links auf beiden Körperformen vollständig sichtbar und besteht mit neun vollständigen Premiumfamilien als 76 Module.
+
+**Als Nächstes:** Paket 4.47 mit `languages-2`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

@@ -7227,17 +7227,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/languages-1-phrasebook-charm.png",
+            "bytes": 318447,
+            "sha256": "1c60ea7cf03c03e1f7ddc7d6842e09e8cb19923fd556ec1f9847229953187269",
+            "width": 501,
+            "height": 768,
+            "fit": {
+              "form-a": [
+                95,
+                375,
+                70,
+                107.3
+              ],
+              "form-b": [
+                80,
+                385,
+                70,
+                107.3
+              ]
+            }
+          }
         }
       ],
       "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "languages-2",

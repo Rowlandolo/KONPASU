@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.46 Sprachbuch-Anhänger (`languages-1`)
+
+`languages-1-phrasebook-charm.png` überträgt die Artbookvorlage als geschlossenes mitternachtsblaues Miniaturbuch mit antikgoldener Kanten- und Eckfassung, geflochtener Goldschlaufe, blütenförmigem Knoten, hellen Kirschblüten, goldenen Wellenbögen und waldgrüner Quaste. Der Einband enthält keine Buchstaben, Wörter, Logos, Symbole oder lesbare Schrift.
+
+Die körperformspezifische Registrierung hängt den Anhänger links unterhalb der Lesen-Tasche auf und hält beide neutralen Hände sichtbar. Der erste Sprachen-Kandidat besteht als ein unabhängiges Modul und mit neun vollständigen Premiumfamilien als 76 Module. 93 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-languages-v44.json`; Ansichten: `design/avatar/review-premium-languages-v44/`. 43 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.45 Archiv-Schriftrollenset (`reading-5`)
 
 `reading-5-archive-frame.png` bildet einen offenen dunkelblau-waldgrün-elfenbeinfarbenen Archivbogen mit antikgoldener Fassung, seitlichen Bücherregalen, warmen Laternen und Kirschblüten hinter der Figur ab. Seine große transparente Mitte hält Avatar und Outfit frei. `reading-5-scroll-set.png` ergänzt im Vordergrund einen dunklen Lackkasten und mehrere geschlossene Elfenbeinschriftrollen mit grünen und blauen Seidenwicklungen, Goldbeschlägen, Kordel, Blüte und Quaste. Bücher und Rollen enthalten keine erfundene Schrift.

@@ -877,3 +877,14 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Einzelrendering, unabhängige Sichtbarkeit/Reihenfolge, natürliche Szenenüberlagerung, 95-Artikel-Stressauswahl und Mehrfachoutfitlauf bestanden.
 - [x] 91 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griff-/Öffnungs-/Leseposen, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.46 Sprachbuch-Anhänger
+
+- [x] `languages-1` gegen die Artbookkarte geprüft: dunkler Buchanhänger mit Goldfassung, Schlaufe, Blütenknoten, Kirschblüten, Wellenmotiv und grüner Quaste.
+- [x] Transparentes, hashgebundenes Premiummodul ohne Buchstaben, Wörter, Logos, Symbole oder lesbare Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hängt den Anhänger links unterhalb der Lesen-Tasche; beide neutralen Hände bleiben sichtbar.
+- [x] Einzelmodul auf Form A und B sowie 76-Modul-Übergang mit neun vollständigen Premiumfamilien geprüft.
+- [x] 95-Artikel-Stressauswahl, unabhängige Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
+- [x] 93 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
