@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.47 Kalligrafiepinsel (`languages-2`)
+
+`languages-2-calligraphy-brush.png` bildet den langen mitternachtsblauen Lackpinsel mit antikgoldenen Beschlägen, grün-hellblauer Welleneinlage, heller Borstenspitze und Goldquaste ab. `languages-2-ink-set.png` ergänzt getrennt ein dunkelblaues Tintenfass, einen dunklen Tintenstein mit Goldkante und einen kleinen elfenbeinfarbenen Blüten-Wassertropfer. Beide Module enthalten keine Schrift oder Symbole.
+
+Die erste Tintenregistrierung lief auf Form B links aus der Bühne. Die korrigierte körperformspezifische Passform hält Pinsel und vollständiges Tintenzeug auf beiden Formen sichtbar, ohne eine Griff-, Schreib- oder Tauchpose zu behaupten. Die ersten zwei Sprachen-Kandidaten bestehen als drei unabhängige Module und mit neun vollständigen Premiumfamilien als 78 Module. 95 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-languages-v45.json`; Ansichten: `design/avatar/review-premium-languages-v45/`. 42 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.46 Sprachbuch-Anhänger (`languages-1`)
 
 `languages-1-phrasebook-charm.png` überträgt die Artbookvorlage als geschlossenes mitternachtsblaues Miniaturbuch mit antikgoldener Kanten- und Eckfassung, geflochtener Goldschlaufe, blütenförmigem Knoten, hellen Kirschblüten, goldenen Wellenbögen und waldgrüner Quaste. Der Einband enthält keine Buchstaben, Wörter, Logos, Symbole oder lesbare Schrift.

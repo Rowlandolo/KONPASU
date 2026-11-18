@@ -7342,7 +7342,28 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/languages-2-calligraphy-brush.png",
+            "bytes": 167667,
+            "sha256": "b0d3731e709ee07acf3cbe6dd1cb8f48a2f0c53d9ab4f4f7520ff24fb9fc80f6",
+            "width": 768,
+            "height": 539,
+            "fit": {
+              "form-a": [
+                300,
+                480,
+                170,
+                119.3
+              ],
+              "form-b": [
+                300,
+                480,
+                170,
+                119.3
+              ]
+            }
+          }
         },
         {
           "shape": "inkstone",
@@ -7371,17 +7392,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/languages-2-ink-set.png",
+            "bytes": 422475,
+            "sha256": "fc51402290212a182bcd2ae3f316f9ef83b2d7619e30f1a5094fe2e6aa91a077",
+            "width": 768,
+            "height": 507,
+            "fit": {
+              "form-a": [
+                30,
+                500,
+                120,
+                79.2
+              ],
+              "form-b": [
+                65,
+                500,
+                120,
+                79.2
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Pinsel und Tintenzeug sind getrennt seitlich registriert; keine ungetestete Griff-, Schreib- oder Tauchpose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "languages-3",
@@ -9404,7 +9445,7 @@
           "theme": "ink"
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Pinsel und Tintenzeug sind getrennt seitlich registriert; keine ungetestete Griff-, Schreib- oder Tauchpose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
         "Premiumzeichnung statt Vektorstudie",

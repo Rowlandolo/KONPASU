@@ -121,7 +121,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.46 umgesetzt:** `languages-1` (Sprachbuch-Anhänger) ergänzt ein geschlossenes mitternachtsblaues Miniaturbuch mit Goldfassung, Schlaufe, Blütenknoten, Kirschblüten, Wellenmotiv und grüner Quaste. Der textfreie Anhänger bleibt links auf beiden Körperformen vollständig sichtbar und besteht mit neun vollständigen Premiumfamilien als 76 Module.
 
-**Als Nächstes:** Paket 4.47 mit `languages-2`.
+**Paket 4.47 umgesetzt:** `languages-2` (Kalligrafiepinsel) ergänzt einen mitternachtsblauen Lackpinsel mit Goldbeschlägen, Welleneinlage, heller Spitze und Quaste sowie ein getrenntes Tintenfass-/Tintensteinset. Nach Passformkorrektur bleiben beide Module auf Form A und B vollständig sichtbar; die ersten zwei Sprachen-Kandidaten bestehen mit neun vollständigen Premiumfamilien als 78 Module.
+
+**Als Nächstes:** Paket 4.48 mit `languages-3`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

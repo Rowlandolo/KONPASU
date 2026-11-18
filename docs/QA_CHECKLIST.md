@@ -888,3 +888,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] 95-Artikel-Stressauswahl, unabhängige Sichtbarkeit, Reihenfolge und warmer Offlinezustand bestanden.
 - [x] 93 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griff-/Lesepose, lesbarer Inhalt, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.47 Kalligrafiepinsel
+
+- [x] `languages-2` gegen die Artbookkarte geprüft: langer dunkler Pinsel, Goldbeschläge, helle Borsten, Goldquaste und kleines Tintenzeug.
+- [x] Pinsel und Tintenzeug als zwei getrennte transparente, hashgebundene Premiummodule ohne Schrift oder Symbole umgesetzt.
+- [x] Erste Tintenregistrierung wegen Bühnenausschnitt auf Form B verworfen; korrigierte Passform hält beide Module vollständig sichtbar.
+- [x] Sprachbuch-Anhänger, Pinsel und Tintenzeug gemeinsam als drei unabhängige Module auf beiden Körperformen geprüft.
+- [x] 78-Modul-Übergang mit neun vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 95 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Schreib-/Tauchpose, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

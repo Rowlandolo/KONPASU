@@ -882,7 +882,7 @@ Original: **Calligraphy Brush**, Tafel assets/konpasu_knowledge_productivity_rew
 
 Unveränderte Legacy-Zuordnung: Kalligrafiepinsel; Slot main; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Pinsel und Tintenzeug sind getrennt seitlich registriert; keine ungetestete Griff-, Schreib- oder Tauchpose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
@@ -891,7 +891,7 @@ Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### languages-3 · Mehrsprachiges Rollenetui
 
@@ -1215,7 +1215,7 @@ Original: **Ink Brush Set**, Tafel assets/konpasu_mindfulness_reward_paths.webp,
 
 Unveränderte Legacy-Zuordnung: Fude-Schreibpinsel; Slot main; 4 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Pinsel und Tintenzeug sind getrennt seitlich registriert; keine ungetestete Griff-, Schreib- oder Tauchpose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|

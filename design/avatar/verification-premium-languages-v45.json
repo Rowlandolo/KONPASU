@@ -1,0 +1,49 @@
+{
+  "version": 45,
+  "date": "2026-11-18",
+  "scope": "stage-4-languages-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["languages-1", "languages-2"],
+    "candidateModules": 3,
+    "transitionModules": 78,
+    "completePremiumFamilies": 9,
+    "remainingVectorStudies": 42
+  },
+  "catalogueBrowser": {
+    "checks": 95,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "languages2ChangedPixels": {
+      "form-a": 1875,
+      "form-b": 1855
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "languages-1-2-premium-form-a.png": "fe4972b797db4690afc4800bc8a7030d2b1bef651fae8832da3e726b8fdcfb9f",
+    "languages-1-2-premium-form-b.png": "96321ad55865145ac55df127dd6de5443397ef3597cf97e70900e4cf51784e4a",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-2-form-a.png": "3c67b9db4fc062f71a07723d7e1c2d2a6acb3564508548be54b2f376b2e56cea",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-2-form-b.png": "ffda83fcce76d4d2fb0229a9e5347d8260920f3cbde3b5e4c216bc9a36b5440c",
+    "family-languages.png": "755b900b8e2a249e85af2bde0899161284ef9bfaebcfa9b08463cc4a408b6097"
+  },
+  "accepted": [
+    "The Calligraphy Brush follows the source with a midnight-navy lacquer handle, antique-gold fittings, green and pale-blue wave inlay, ivory bristles and gold tassel.",
+    "A separate compact ink set uses a navy ink pot, dark inkstone, gold edges, botanical ornament and an ivory blossom water dropper without writing or symbols.",
+    "After visual correction the body-specific registrations keep brush and complete ink set inside both stages while preserving the neutral hands.",
+    "The first two Languages candidates coexist as three independently controllable modules.",
+    "They preserve nine complete premium families as seventy-eight independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The separated tools do not claim newly drawn grip, writing, dipping or ink-use poses.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidates remain review artwork until physical-device approval."
+  ]
+}
