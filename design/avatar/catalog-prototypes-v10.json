@@ -7624,17 +7624,37 @@
             100,
             100
           ],
-          "theme": "ink"
+          "theme": "ink",
+          "premium": {
+            "file": "./premium-v12/languages-4-travel-map-fan.png",
+            "bytes": 527469,
+            "sha256": "e84252643aade703549ddbd65f5dc0c6a026633d625bbdfecfedc948426dcb57",
+            "width": 768,
+            "height": 512,
+            "fit": {
+              "form-a": [
+                330,
+                135,
+                180,
+                120
+              ],
+              "form-b": [
+                325,
+                135,
+                180,
+                120
+              ]
+            }
+          }
         }
       ],
-      "fitNotes": "Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.",
+      "fitNotes": "Der geöffnete Reisefächer ist seitlich registriert; keine ungetestete Griff-, Kartenlese- oder Übersetzungspose.",
       "combinationNotes": "Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.",
       "remaining": [
-        "Premiumzeichnung statt Vektorstudie",
-        "Individuelle finale Detailpassform",
         "App-/Offlineintegration",
         "Physische Geräteabnahme"
-      ]
+      ],
+      "premiumStatus": "premium-art-candidate-v1"
     },
     {
       "id": "languages-5",
