@@ -123,7 +123,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.47 umgesetzt:** `languages-2` (Kalligrafiepinsel) ergänzt einen mitternachtsblauen Lackpinsel mit Goldbeschlägen, Welleneinlage, heller Spitze und Quaste sowie ein getrenntes Tintenfass-/Tintensteinset. Nach Passformkorrektur bleiben beide Module auf Form A und B vollständig sichtbar; die ersten zwei Sprachen-Kandidaten bestehen mit neun vollständigen Premiumfamilien als 78 Module.
 
-**Als Nächstes:** Paket 4.48 mit `languages-3`.
+**Paket 4.48 umgesetzt:** `languages-3` (Mehrsprachiges Rollenetui) ergänzt ein geschlossenes waldgrün-türkisfarbenes Zylinderetui mit Goldbeschlägen, Kirschblüten, Goldkordel, Schleife, zeichenfreien Anhängern und grüner Quaste. Das vollständige Etui bleibt auf Form A und B rechts sichtbar; die ersten drei Sprachen-Kandidaten bestehen als vier Module und mit neun vollständigen Premiumfamilien als 79 Module.
+
+**Als Nächstes:** Paket 4.49 mit `languages-4`.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

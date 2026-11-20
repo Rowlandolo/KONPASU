@@ -900,3 +900,15 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
 - [x] 95 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
 - [ ] Echte Griff-/Schreib-/Tauchpose, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.
+
+
+## Etappe 4 · Paket 4.48 Mehrsprachiges Rollenetui
+
+- [x] `languages-3` gegen die Artbookkarte geprüft: geschlossenes grün-türkises Zylinderetui mit Goldbeschlägen, hellen Blüten, Goldkordel, Schleife, Anhängern und Quaste.
+- [x] Transparentes, hashgebundenes Premiummodul ohne Buchstaben, Wörter, Logos oder erfundene Schrift umgesetzt.
+- [x] Körperformspezifische Registrierung hält das vollständige Etui rechts auf beiden Bühnen sichtbar.
+- [x] Sprachbuch-Anhänger, Pinsel, Tintenzeug und Rollenetui gemeinsam als vier unabhängige Module auf beiden Körperformen geprüft.
+- [x] 79-Modul-Übergang mit neun vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
+- [x] 97 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [ ] Echte Griff-/Öffnungs-/Lese-/Übersetzungspose, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

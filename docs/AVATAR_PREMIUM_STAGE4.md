@@ -2,6 +2,12 @@
 
 Stand 09.11.2026. Etappe 4 ersetzt die 89 technischen Vektorstudien in kleinen, prüfbaren Paketen. Artikel-ID, Freischaltung, Besitz, Tragbarkeit, Outfitreihenfolge und gespeicherte Profile bleiben dabei unverändert.
 
+## Aktueller Stand · Paket 4.48 Mehrsprachiges Rollenetui (`languages-3`)
+
+`languages-3-scroll-case.png` überträgt die Artbookvorlage als geschlossenes waldgrün-türkisfarbenes Zylinderetui mit antikgoldenen Endkappen und Rippen, hellen Kirschblüten, geflochtener Goldkordel, großer Schleife, zeichenfreien Materialanhängern und grüner Quaste. Es enthält keine Buchstaben, Wörter, Logos oder erfundene Schrift.
+
+Die körperformspezifische Registrierung hält das vollständige Etui rechts neben beiden Standfiguren und getrennt von Sprachbuch-Anhänger, Kalligrafiepinsel und Tintenzeug. Die ersten drei Sprachen-Kandidaten bestehen als vier unabhängige Module und mit neun vollständigen Premiumfamilien als 79 Module. 97 Katalogprüfungen, 190 Einzelrenderings, 19 Familienblätter, 95-Artikel-Stressauswahl, warmer Offlinezustand und null Speicherwrites bestehen. Beleg: `design/avatar/verification-premium-languages-v46.json`; Ansichten: `design/avatar/review-premium-languages-v46/`. 41 Artikel bleiben Vektorstudien.
+
 ## Aktueller Stand · Paket 4.47 Kalligrafiepinsel (`languages-2`)
 
 `languages-2-calligraphy-brush.png` bildet den langen mitternachtsblauen Lackpinsel mit antikgoldenen Beschlägen, grün-hellblauer Welleneinlage, heller Borstenspitze und Goldquaste ab. `languages-2-ink-set.png` ergänzt getrennt ein dunkelblaues Tintenfass, einen dunklen Tintenstein mit Goldkante und einen kleinen elfenbeinfarbenen Blüten-Wassertropfer. Beide Module enthalten keine Schrift oder Symbole.

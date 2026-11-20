@@ -251,7 +251,7 @@ HISTORY-01 im Kandidaten behoben: Historieneinträge mit gleichem Datum und iden
 
 Technische Etappe 3 abgeschlossen für `0749e4527c6fd1a847f373af0476dc0c42f13cd6`: 445 Regressionen und sieben Browser-Workflows grün. Weiter offen sind Grafik-/Geräte-/Gesamtproduktpunkte, insbesondere 89 finale Premiumzeichnungen, vollständige persönliche Körper-/Gesichts-/Hautbandbreite sowie echtes iPhone, VoiceOver, GPU-Spitzen und Upgrade einer alten installierten PWA. Diese Punkte sind keine verdeckten Defekte des Historienvertrags.
 
-## Etappe 4 · Stand nach Paket 4.47
+## Etappe 4 · Stand nach Paket 4.48
 
 Die vollständige Beweglichkeitsserie besitzt zehn hashgebundene Premiumodule und besteht gemeinsam sowie im 31-Modul-Übergangsrendering mit Cardio und Schritte auf beiden registrierten Körperformen. 74 Katalogartikel bleiben Vektorstudien. Die Abnahme gilt für die feste Standpose im Entwicklungsatelier; App-/Offlineintegration der Premiumdateien, physische Geräte, VoiceOver, GPU-/Speicherspitzen und kaltes Alt-PWA-Upgrade bleiben offen.
 
@@ -323,3 +323,5 @@ Die vollständige Zuckerbalance-Serie besitzt sechs hashgebundene Premiummodule.
 `languages-1` ergänzt einen hashgebundenen, textfreien Sprachbuch-Anhänger mit Goldfassung, Schlaufe, Blüten, Wellenmotiv und grüner Quaste. Der Anhänger hängt links unterhalb der Lesen-Tasche; beide Hände bleiben sichtbar. Der 76-Modul-Übergang mit neun vollständigen Premiumfamilien besteht; 43 Artikel bleiben Vektorstudien. Eine neue Griffpose, lesbarer Inhalt, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
 
 `languages-2` ergänzt einen hashgebundenen Kalligrafiepinsel und ein getrenntes Tintenzeugmodul. Eine erste Registrierung schnitt das Tintenzeug auf Form B ab; die korrigierte Passform hält beide Module vollständig in der Bühne. Die ersten zwei Sprachen-Kandidaten bestehen als drei Module den 78-Modul-Übergang; 42 Artikel bleiben Vektorstudien. Neue Griff-, Schreib-, Tauch- oder Tintennutzungsposen, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.
+
+`languages-3` ergänzt ein hashgebundenes, geschlossenes Rollenetui mit Goldbeschlägen, Blüten, Kordel, Schleife, zeichenfreien Anhängern und Quaste. Es bleibt auf beiden Körperformen rechts vollständig sichtbar; die ersten drei Sprachen-Kandidaten bestehen als vier Module den 79-Modul-Übergang. 41 Artikel bleiben Vektorstudien. Eine neue Griff-, Öffnungs-, Lese- oder Übersetzungspose, beschriftete Anhänger, andere Posen, App-/Kalt-Offlineintegration und physische Geräteabnahme bleiben offen.

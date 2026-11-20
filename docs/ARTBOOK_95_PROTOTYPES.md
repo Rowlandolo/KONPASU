@@ -899,7 +899,7 @@ Original: **Multilingual Scroll Case**, Tafel assets/konpasu_knowledge_productiv
 
 Unveränderte Legacy-Zuordnung: Sprach-Schriftrolle; Slot main; 12 belegte abgeschlossene Woche(n). itemState + activeAt; gearTier recent documented weeks.
 
-Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose; freie Hände bleiben unverändert.
+Prototyp: vector-fit-prototype. Das geschlossene Rollenetui ist seitlich registriert; keine ungetestete Griff-, Öffnungs-, Lese- oder Übersetzungspose.
 
 | Modul | Zeichnung / Tiefe | Form A: x, y, B, H | Form B: x, y, B, H |
 |---|---|---|---|
@@ -907,7 +907,7 @@ Prototyp: vector-fit-prototype. Am Obi befestigter Prototyp für diese Standpose
 
 Gemeinsame Auswahl bleibt erhalten. Deckende gleiche Flächen dürfen sich natürlich verdecken; Einzel-Sichtbarkeit und Reihenfolge sind unabhängig von Besitz. Keine Slotverdrängung.
 
-Offen: Premiumzeichnung statt Vektorstudie; Individuelle finale Detailpassform; App-/Offlineintegration; Physische Geräteabnahme.
+Offen: App-/Offlineintegration; Physische Geräteabnahme.
 
 ### languages-4 · Reisekarten-Fächer
 
