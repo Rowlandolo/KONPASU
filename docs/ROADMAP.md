@@ -125,7 +125,9 @@ Etappe **3.4.3b technisch abgeschlossen** in Entwurfs-PR [#11](https://github.co
 
 **Paket 4.48 umgesetzt:** `languages-3` (Mehrsprachiges Rollenetui) ergänzt ein geschlossenes waldgrün-türkisfarbenes Zylinderetui mit Goldbeschlägen, Kirschblüten, Goldkordel, Schleife, zeichenfreien Anhängern und grüner Quaste. Das vollständige Etui bleibt auf Form A und B rechts sichtbar; die ersten drei Sprachen-Kandidaten bestehen als vier Module und mit neun vollständigen Premiumfamilien als 79 Module.
 
-**Als Nächstes:** Paket 4.49 mit `languages-4`.
+**Paket 4.49 umgesetzt:** `languages-4` (Reisekarten-Fächer) ergänzt einen offenen elfenbeinfarbenen Faltfächer mit Goldgestänge, zeichenfreier blaugrüner Landschaft, Torii, Kordel und dunkelblau-grüner Quaste. Nach Passformkorrektur bleibt er auf Form A und B frei oberhalb der rechten Schulter; die ersten vier Sprachen-Kandidaten bestehen als fünf Module und mit neun vollständigen Premiumfamilien als 80 Module.
+
+**Als Nächstes:** Paket 4.50 mit `languages-5` und anschließend die vollständige Sprachen-Familienabnahme.
 
 Die App bleibt offline nutzbar. Reales iPhone/Alt-PWA-Upgrade und historische Zielkonfigurationen bleiben eigenständige Prüfpunkte. Der spätere Copilot baut auf einer gemeinsamen, getesteten Aktionsengine mit Undo auf; Details in PROFESSIONAL_APP_PLAN.md.
 

@@ -1,0 +1,48 @@
+{
+  "version": 47,
+  "date": "2026-11-20",
+  "scope": "stage-4-languages-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["languages-1", "languages-2", "languages-3", "languages-4"],
+    "candidateModules": 5,
+    "transitionModules": 80,
+    "completePremiumFamilies": 9,
+    "remainingVectorStudies": 40
+  },
+  "catalogueBrowser": {
+    "checks": 99,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "languages4ChangedPixels": {
+      "form-a": 464,
+      "form-b": 458
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "languages-1-2-3-4-premium-form-a.png": "08d54e5436ae120b55b3c53f1f82ea23df0f14d588483330ae4df8da317788ac",
+    "languages-1-2-3-4-premium-form-b.png": "681f476499788c7b61df791ff5a1bbbbdda73614f9f79d3d84e32888bc04bf38",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-2-3-4-form-a.png": "4ceb8aed2df347c33200590f6039b6232b72ef4c8b03829cbaccd5a25c95b3fb",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-reading-and-languages-1-2-3-4-form-b.png": "119169c421a1c0415152c191ae46132b3042a0c86af09c202d0d51cc4a78372f",
+    "family-languages.png": "7a57133bbf34c7b43933bda0d1c524037a4f4f89931b1fc2d711677a4c847829"
+  },
+  "accepted": [
+    "The Travel Map Fan follows the source as a fully opened warm-ivory fan with antique-gold edging and ribs, a character-free blue-green mountain and coastal landscape, a small vermilion torii, an ornate pivot ring, braided green cord and a navy-green tassel.",
+    "The initial wrist-adjacent registration was rejected; corrected body-specific registrations keep the fan clearly separate above the right shoulder and preserve both neutral hands.",
+    "The first four Languages candidates coexist as five independently controllable modules.",
+    "They preserve nine complete premium families as eighty independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The open fan does not claim newly drawn grip, map-reading or translation poses and contains no writing or labels.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidates remain review artwork until physical-device approval."
+  ]
+}
