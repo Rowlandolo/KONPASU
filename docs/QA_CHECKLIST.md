@@ -920,7 +920,7 @@ Geprüfter Quellstand `0749e4527c6fd1a847f373af0476dc0c42f13cd6`. 445 Regression
 - [x] Transparentes, hashgebundenes Premiummodul ohne Buchstaben, Zahlen, Kartenbeschriftungen, Logos oder erfundene Schrift umgesetzt.
 - [x] Handgelenknahe Erstpassform verworfen; korrigierte körperformspezifische Registrierung hält den Fächer klar oberhalb der rechten Schulter und beide Hände frei.
 - [x] Die ersten vier Sprachen-Kandidaten gemeinsam als fünf unabhängige Module auf beiden Körperformen geprüft.
-- [x] 80-Modul-Übergang mit neun vollständigen Premiumfamilien, natürliche Tiefenüberlagerung und 95-Artikel-Stressauswahl bestanden.
-- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand geprüft.
-- [x] 99 Katalogprüfungen, 190 Einzelrenderings und 19 Familienblätter bestanden; null Speicherwrites und keine unaufgefangenen Seitenfehler.
+- [x] 80-Modul-Übergang mit neun vollständigen Premiumfamilien visuell geprüft; 95-Artikel-Stressauswahl im 97-Punkte-Basislauf bestanden.
+- [x] Sichtbarkeit, Reihenfolge und warmer Offlinezustand im Basislauf geprüft.
+- [x] Vollständiger neuer 99-Punkte-Katalogbrowserlauf und alle zehn GitHub-Prüfungen für Commit `245e66e` bestanden.
 - [ ] Echte Griff-/Kartenlese-/Übersetzungspose, andere Posen, physische Geräte, VoiceOver, GPU-/Peak-Memory sowie kalte PWA-/Upgrade-Abnahme.

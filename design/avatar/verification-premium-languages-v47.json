@@ -1,6 +1,6 @@
 {
   "version": 47,
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "scope": "stage-4-languages-4-premium-candidate",
   "status": "passed-development-atelier",
   "articles": {
@@ -22,6 +22,13 @@
     },
     "storageWrites": 0,
     "uncaughtErrors": []
+  },
+  "githubCI": {
+    "commit": "245e66efd5aab4531955982482b62c8de0f95269",
+    "catalogueRun": 44873463750,
+    "catalogueJobStatus": "success",
+    "allPullRequestChecks": 10,
+    "allPullRequestChecksStatus": "success"
   },
   "reviewImages": {
     "languages-1-2-3-4-premium-form-a.png": "08d54e5436ae120b55b3c53f1f82ea23df0f14d588483330ae4df8da317788ac",
