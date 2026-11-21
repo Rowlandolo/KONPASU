@@ -1,0 +1,44 @@
+{
+  "version": 21,
+  "date": "2026-11-10",
+  "scope": "stage-4-sleep-3-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sleep-1", "sleep-2", "sleep-3"],
+    "candidateModules": 5,
+    "transitionModules": 42,
+    "remainingVectorStudies": 66
+  },
+  "catalogueBrowser": {
+    "checks": 47,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sleep3ChangedPixels": {"form-a": 12855, "form-b": 15881},
+    "outerClothingChangedPixels": 1105,
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sleep-1-3-premium-form-a.png": "eddc0a2ddd85989f5a0c4030679448b8068b2158c7180dbea1a5ab0281a919ce",
+    "sleep-1-3-premium-form-b.png": "89a0f5d54b50d9a1dc2bf72ec9e2750f6052ae48ab745a5d11cce32c7e68f80c",
+    "cardio-steps-mobility-water-and-sleep-1-3-form-a.png": "0c8013c859a4547d4b6cbba16df95f78a2d5b040d9913ac3fde9d0346ad3bf97",
+    "cardio-steps-mobility-water-and-sleep-1-3-form-b.png": "564bce1f1d92a5d5aa94c42014fda157a4bfb72af93d3086e4e1d9e9c113595d",
+    "family-sleep.png": "0b28099b7dcebcd79b455c8f5c9c9a4ce9cd71543f7e33179b44a272145f3c0a"
+  },
+  "accepted": [
+    "The Night Haori follows the source motif with midnight navy silk, ivory open lapels, warm-gold piping, night flowers, clouds and restrained star points.",
+    "Rear silhouette and sparse front surfaces remain separate depth modules on both registered body forms.",
+    "The open centre preserves face, kimono, obi, hands and hakama while actual front fabric masks arm equipment.",
+    "Moon Hairpin, Dream Charm Pillow and Night Haori coexist as five independent premium modules.",
+    "The first three Sleep candidates preserve complete Cardio, Steps, Mobility and Water families as forty-two independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass without profile or browser-storage writes."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

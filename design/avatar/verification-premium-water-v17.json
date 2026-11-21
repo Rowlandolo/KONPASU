@@ -1,0 +1,43 @@
+{
+  "version": 17,
+  "date": "2026-11-09",
+  "scope": "stage-4-water-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["water-1", "water-2", "water-3", "water-4"],
+    "candidateModules": 4,
+    "transitionModules": 35,
+    "remainingVectorStudies": 70
+  },
+  "catalogueBrowser": {
+    "checks": 38,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "water4ChangedPixels": {"form-a": 1407, "form-b": 1395},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "water-1-4-premium-form-a.png": "18ea9ab22428ddd059496ba256e7e7ae8817fcb9b5e607a6ae83acb3d47c8c3b",
+    "water-1-4-premium-form-b.png": "6971a92a1424cfffb7bc43be9a9ce233b8b0db2969c61d71b710280c77131a4e",
+    "cardio-steps-mobility-and-water-1-4-form-a.png": "090912e8405132c08e2c571d79e6ff912090c4baf0d77223e661264900099ab0",
+    "cardio-steps-mobility-and-water-1-4-form-b.png": "69eb4bd0db89c20afca1e06766b66d1dafc7b0841828c9d72afc2d44be88236f",
+    "family-water.png": "8296fcd432d2974e8b0857ed3fce84c5fcd9a7a14716442316c002a9b0e8dd2d"
+  },
+  "accepted": [
+    "The Ceremonial Water Gourd follows the source motif with an ivory double body, gold flowers, braided cord, gold tassel and green pendant tassel.",
+    "The first four Water candidates coexist as four independently selectable and sortable modules on both registered body forms.",
+    "All complete silhouettes and tassels remain visible while neutral hands and existing clothing geometry remain unchanged.",
+    "The first four Water candidates, complete Cardio, complete Steps and complete Mobility coexist as thirty-five independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

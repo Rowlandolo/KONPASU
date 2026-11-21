@@ -1,0 +1,43 @@
+{
+  "version": 28,
+  "date": "2026-11-10",
+  "scope": "stage-4-nutrition-family-premium-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["nutrition-1", "nutrition-2", "nutrition-3", "nutrition-4", "nutrition-5"],
+    "candidateModules": 10,
+    "transitionModules": 54,
+    "remainingVectorStudies": 59
+  },
+  "catalogueBrowser": {
+    "checks": 61,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "nutrition5ChangedPixels": {"form-a": 5646, "form-b": 5927},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "nutrition-complete-form-a.png": "e15ae23d314b07a690d94edc839eaf2559ada0816bdad8f3feea775e7155f4a1",
+    "nutrition-complete-form-b.png": "931803a61e23c12842ceee7dc4b43b893e2547228644d313c75f449645e33def",
+    "cardio-steps-mobility-water-sleep-nutrition-complete-form-a.png": "0758d65deb7582e27984abb7a9c32f5f98873383e997bc4fcec9fa45c88674ca",
+    "cardio-steps-mobility-water-sleep-nutrition-complete-form-b.png": "5ab6a3bc5224be5495c20af37269553f090ad4da8855afda926e13b3028aa789",
+    "family-nutrition.png": "925dccef0849225a32269f3c157ea1280513ed5f9939d9b8220d1ebaadafaa44"
+  },
+  "accepted": [
+    "The Harvest Banquet Set follows the source motif with a forest-green and gold rice crest, blossom accents and an orange pumpkin, plus the contracted wearable ceremonial rice bowl.",
+    "Crest, rice bowl and pumpkin remain three separately fitted and ordered modules; the relocated crest stays readable behind the right shoulder on both registered body forms.",
+    "All five Nutrition candidates remain selected and separately readable as ten independent modules.",
+    "Complete Cardio, Steps, Mobility, Water, Sleep and Nutrition families coexist as fifty-four independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidates remain review artwork until physical-device approval."
+  ]
+}

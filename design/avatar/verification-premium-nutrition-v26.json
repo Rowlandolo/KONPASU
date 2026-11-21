@@ -1,0 +1,43 @@
+{
+  "version": 26,
+  "date": "2026-11-10",
+  "scope": "stage-4-nutrition-3-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["nutrition-1", "nutrition-2", "nutrition-3"],
+    "candidateModules": 4,
+    "transitionModules": 48,
+    "remainingVectorStudies": 61
+  },
+  "catalogueBrowser": {
+    "checks": 57,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "nutrition3ChangedPixels": {"form-a": 3098, "form-b": 3770},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "nutrition-1-3-premium-form-a.png": "6fcd66ad09ecfd61fb342cefbcd570633025d874d4494c9d296d359839d4941f",
+    "nutrition-1-3-premium-form-b.png": "fefe818bf4027f9da43839a04bcad83137419dc9248abb5435fee9ba5dfba2fe",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-3-form-a.png": "acc2abb8cf9016aa7c766e7dcead27ea6432479edee32aebec7476d8e48baac6",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-3-form-b.png": "49d6d760521c64aec2a10c0a788d9f51713633d5134c3738f956d8f69d4e1e0d",
+    "family-nutrition.png": "f61f784a5cd39f9f15274acd2a8ced11344843017b9e1aa758732eaa5aa6de5e"
+  },
+  "accepted": [
+    "The Balanced Vitality Sash follows the source motif with forest-green and ivory silk, floral and leaf ornament, antique-gold edging, a layered bow, jade beads and pale tassels.",
+    "Separate waist-band and front-bow modules retain the intended anatomical depth on both registered body forms.",
+    "The sash, Herbal Satchel and Bento Charm remain selected and separately readable as four independent modules.",
+    "The candidates preserve complete Cardio, Steps, Mobility, Water and Sleep families as forty-eight independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

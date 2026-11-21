@@ -1,0 +1,43 @@
+{
+  "version": 25,
+  "date": "2026-11-10",
+  "scope": "stage-4-nutrition-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["nutrition-1", "nutrition-2"],
+    "candidateModules": 2,
+    "transitionModules": 46,
+    "remainingVectorStudies": 62
+  },
+  "catalogueBrowser": {
+    "checks": 55,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "nutrition2ChangedPixels": {"form-a": 1465, "form-b": 1459},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "nutrition-1-2-premium-form-a.png": "f02fc1f027cad2e8f0303d04b546fdbc7e1442650c6d2848eac9d09e21376ec5",
+    "nutrition-1-2-premium-form-b.png": "60435b7371124fccc1adf589e8f1f46881a4c948936942fd3bd7f6870f9a82c8",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-2-form-a.png": "921048ea57c64ba98cefcaf09b8cc8ba3c763b1c02d9f7c7829211f221e66950",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-2-form-b.png": "9edfa079e71d53c28bc03e299a6ae1ebb22c34de6d6a7986d9aed89fed402fa4",
+    "family-nutrition.png": "a055ea99ac2766551997be5d3d69576ae5dee276964e5c1de1e8d26fe1850528"
+  },
+  "accepted": [
+    "The Herbal Satchel follows the source motif with forest-green silk, an ivory gathered neck, gold cord, tassels, jade bead and botanical embroidery.",
+    "Its body-specific registration places it to the outer left of the Bento Charm while keeping hand and obi readable.",
+    "Herbal Satchel and Bento Charm remain separately readable and independently ordered on both registered body forms.",
+    "The candidates preserve complete Cardio, Steps, Mobility, Water and Sleep families as forty-six independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

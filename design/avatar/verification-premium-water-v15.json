@@ -1,0 +1,46 @@
+{
+  "version": 15,
+  "date": "2026-11-09",
+  "scope": "stage-4-water-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["water-1", "water-2"],
+    "candidateModules": 2,
+    "transitionModules": 33,
+    "remainingVectorStudies": 72
+  },
+  "catalogueBrowser": {
+    "checks": 34,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "water2ChangedPixels": {
+      "form-a": 1109,
+      "form-b": 1106
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "water-1-2-premium-form-a.png": "2bf99724d1cfba648274e7d37a0dc3fab2542822fdde76efec54f98de31c9985",
+    "water-1-2-premium-form-b.png": "31c7e0e362cc713f0507971895ba0278de6b99b44718001f7e2e5e31bced5941",
+    "cardio-steps-mobility-and-water-1-2-form-a.png": "29c0e911e546de7b096a71a093954b023d75f76a94f0fe99afd2c1b4085176bc",
+    "cardio-steps-mobility-and-water-1-2-form-b.png": "d6ede49f63cd7a0c94c0136992b70c7e66bac84e43480c21ea3a7a457d977ba6",
+    "family-water.png": "4c730b37327af19052f9ce998272172984387f96f6bd05f12267dc1f0430082f"
+  },
+  "accepted": [
+    "The Lacquer Bottle follows the source motif with a dark rounded body, red neck rim, gold cord, ivory-gold blossoms and tassel.",
+    "Bamboo Flask and Lacquer Bottle coexist as two independently selectable and sortable modules on both registered body forms.",
+    "Both complete silhouettes remain visible while neutral hands and existing clothing geometry remain unchanged.",
+    "Both Water candidates, complete Cardio, complete Steps and complete Mobility coexist as thirty-three independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

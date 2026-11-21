@@ -1,0 +1,43 @@
+{
+  "version": 24,
+  "date": "2026-11-10",
+  "scope": "stage-4-nutrition-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["nutrition-1"],
+    "candidateModules": 1,
+    "transitionModules": 45,
+    "remainingVectorStudies": 63
+  },
+  "catalogueBrowser": {
+    "checks": 53,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "nutrition1ChangedPixels": {"form-a": 888, "form-b": 895},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "nutrition-1-premium-form-a.png": "4d7194763a7e8c0fb0f21a46cc006315d4d94923e5ee16b7ec7399b4cd0ebdae",
+    "nutrition-1-premium-form-b.png": "49f87e29fa9a9e693e6dd5b18c3a3c78e42b415fbfb26a46d44a57880b1f84ad",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-form-a.png": "bb2d9c995da25b8cb14b0027791bbbb1904b3eab4c77a8a15c7c86e166366a97",
+    "cardio-steps-mobility-water-sleep-and-nutrition-1-form-b.png": "3671f342b3650f664ddf456dd34047e0b033f09a04099e417a6427b33c6287a1",
+    "family-nutrition.png": "3c55fd1228d2242f39a71b78951607d2574eb07375f8718c80b1c6386192a0af"
+  },
+  "accepted": [
+    "The Bento Charm follows the source motif with a midnight-navy gold-trimmed pouch, braided suspension loop, blossom decoration, pale tassel, onigiri and rabbit-shaped rice ball.",
+    "Its loop registers at the left obi while both hands remain neutral on both body forms.",
+    "Bento Charm remains separately readable beside existing flasks and hip accessories in the complete transition.",
+    "Bento Charm preserves complete Cardio, Steps, Mobility, Water and Sleep families as forty-five independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

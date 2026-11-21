@@ -1,0 +1,43 @@
+{
+  "version": 35,
+  "date": "2026-11-10",
+  "scope": "stage-4-alcohol-2-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["alcohol-1", "alcohol-2"],
+    "candidateModules": 2,
+    "transitionModules": 62,
+    "remainingVectorStudies": 52
+  },
+  "catalogueBrowser": {
+    "checks": 75,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "alcohol2ChangedPixels": {"form-a": 526, "form-b": 526},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "alcohol-1-2-premium-form-a.png": "3b4fe99ea46e121e4573bbb35cdb405dc542ad50678d5576d9e927bef4621c56",
+    "alcohol-1-2-premium-form-b.png": "9d641ea01f2847c8b6eb22a25b270742698695231879e07ed5d5ae4c00170b68",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-form-a.png": "35872fb0d4d8fa68dcaf69555822c6bcbaf5a453cc4533a48602f699005e16cf",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-and-alcohol-1-2-form-b.png": "44eeb05d2476499d1c7d3498cfb3dc6c3bfa2f766979f063761e027ae7c5802e",
+    "family-alcohol.png": "b6b629ba38c7150a9b9fbe1495a3a06f57f765148d8a34981ff29cef4df85f8b"
+  },
+  "accepted": [
+    "The Sober Lantern follows the source motif with a rectangular midnight-blue and antique-gold frame, warm ivory paper, sage botanical branch, chain and blue tassel.",
+    "Its corrected body-specific registration suspends it from the right obi while retaining a neutral hand and forearm on both body forms.",
+    "The first two Alcohol candidates coexist as two independent modules on opposite obi sides.",
+    "They preserve seven complete premium families as sixty-two independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The present honest obi suspension does not claim a new grip pose.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

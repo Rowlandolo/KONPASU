@@ -1,0 +1,43 @@
+{
+  "version": 22,
+  "date": "2026-11-10",
+  "scope": "stage-4-sleep-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sleep-1", "sleep-2", "sleep-3", "sleep-4"],
+    "candidateModules": 6,
+    "transitionModules": 43,
+    "remainingVectorStudies": 65
+  },
+  "catalogueBrowser": {
+    "checks": 49,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sleep4ChangedPixels": {"form-a": 729, "form-b": 713},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sleep-1-4-premium-form-a.png": "66352416f1978ee97562659d8b8be1216e451652737ce97081f19723fc2ce51f",
+    "sleep-1-4-premium-form-b.png": "859e152fe4a4e13736256c381e42e3a075b2a73136ee946c0df0e92563ef8edf",
+    "cardio-steps-mobility-water-and-sleep-1-4-form-a.png": "2dc9058dbb1be15852b3bc67427b1bcede76b55e6276ea1ac71460a752fc9269",
+    "cardio-steps-mobility-water-and-sleep-1-4-form-b.png": "a9f5c8766b0365b413eb910cc5cbefe058cdbc05f0e5af82ba4a43af790c26db",
+    "family-sleep.png": "d82e361d6b2e609d3e74edd7766522a55619520d91eb3dcf6dc22d0e0f028557"
+  },
+  "accepted": [
+    "The Lunar Lantern follows the source motif with an antique-gold hexagonal frame, ivory light panel, crescent moon, star perforations and restrained blossom and wisteria sprigs.",
+    "The corrected registration suspends the lantern from the right obi edge instead of the sleeve and makes no hand-grip claim.",
+    "Lantern, Dream Charm Pillow and existing hip accessories remain separately readable on both registered body forms.",
+    "The first four Sleep candidates coexist as six independent premium modules.",
+    "They preserve complete Cardio, Steps, Mobility and Water families as forty-three independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass without profile or browser-storage writes."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

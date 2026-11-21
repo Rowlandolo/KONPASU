@@ -1,0 +1,43 @@
+{
+  "version": 33,
+  "date": "2026-11-10",
+  "scope": "stage-4-sugar-5-and-family-acceptance",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sugar-1", "sugar-2", "sugar-3", "sugar-4", "sugar-5"],
+    "candidateModules": 6,
+    "transitionModules": 60,
+    "remainingVectorStudies": 54
+  },
+  "catalogueBrowser": {
+    "checks": 71,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sugar5ChangedPixels": {"form-a": 10713, "form-b": 9518},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sugar-complete-premium-form-a.png": "7b2d7474707c6e4b6fdd310284a72c750717af59b07c73f04072aa8d64934a37",
+    "sugar-complete-premium-form-b.png": "35a1490ff80746d0b02cba9e8291d6fd339ce8ffa8960ab9cf440ff22b6c46d6",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-complete-form-a.png": "d9d8d7b27cc91f341b4bca16b6fcc519f0c9cf36f3947e4b7485f64334408896",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-complete-form-b.png": "806e5a4249b75e7a569251c62036a2800dc2980e7c3ebbfaab3774c3573535a0",
+    "family-sugar.png": "8dac9957dae5d86c88050d74f3fb71194d2c9adb4a00563e2d18b20a87458504"
+  },
+  "accepted": [
+    "The Clear-Spirit Aura follows the source motif with an open jade-teal flow, ivory foam ribbons, gold arcs, light particles and pale lotus blossoms.",
+    "Its large transparent centre preserves the avatar while a separate shallow lotus pedestal registers below the feet on both body forms.",
+    "All five Sugar candidates coexist as six independently ordered premium modules.",
+    "Complete Cardio, Steps, Mobility, Water, Sleep, Nutrition and Sugar families coexist as sixty modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Bright Smile remains an expression study beside the head until complete replacement-face anatomy exists.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidates remain review artwork until physical-device approval."
+  ]
+}

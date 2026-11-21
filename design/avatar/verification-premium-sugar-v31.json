@@ -1,0 +1,43 @@
+{
+  "version": 31,
+  "date": "2026-11-10",
+  "scope": "stage-4-sugar-3-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sugar-1", "sugar-2", "sugar-3"],
+    "candidateModules": 3,
+    "transitionModules": 57,
+    "remainingVectorStudies": 56
+  },
+  "catalogueBrowser": {
+    "checks": 67,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sugar3ChangedPixels": {"form-a": 1499, "form-b": 1499},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sugar-1-2-3-premium-form-a.png": "c9813b682e8ce127fe21047456aad5c718220f22064f6f162174ef3e57e839a2",
+    "sugar-1-2-3-premium-form-b.png": "97b9ac1d6bbc7f852d217df4f188881e5b9df862343e20cff2ee70b4b50f02e6",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-3-form-a.png": "9677295a3596b0ad23eb5f64f77d186cb6c01dc59c0af5badea2bcb9aa904d26",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-2-3-form-b.png": "5e052f66becba1ad0a9e8ca6e27a3fb9612c6a3b9cc7d320ab2c5a802d0a5f02",
+    "family-sugar.png": "1d1f917daca2e0b2b9c76a5c7e028e9faf085fcdcf02fd5f2152f929218f0299"
+  },
+  "accepted": [
+    "Bright Smile follows the source motif as three friendly adult expression portraits with closed smiling eyes, warm blush and varied head angles.",
+    "The compact premium triptych remains a separate expression study beside the head and does not overwrite untested base-face anatomy.",
+    "Corrected body-specific registration keeps all three portraits fully inside the visible stage on both registered body forms.",
+    "The first three Sugar candidates coexist independently and preserve the six complete premium families as fifty-seven modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "This is an expression-study reward beside the head, not a finished replacement face layer.",
+    "New complete facial anatomy for both base figures remains open before face replacement can be considered.",
+    "Physical iPhone/Android, VoiceOver, GPU, peak-memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

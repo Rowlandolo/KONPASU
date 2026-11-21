@@ -1,0 +1,43 @@
+{
+  "version": 29,
+  "date": "2026-11-10",
+  "scope": "stage-4-sugar-1-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["sugar-1"],
+    "candidateModules": 1,
+    "transitionModules": 55,
+    "remainingVectorStudies": 58
+  },
+  "catalogueBrowser": {
+    "checks": 63,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "sugar1ChangedPixels": {"form-a": 994, "form-b": 996},
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "sugar-1-premium-form-a.png": "56fd855a154af45b0608ba3696c1a7213baa865d6742e8b449a1bc52c5d18490",
+    "sugar-1-premium-form-b.png": "d0fcb9892d75c59d8d4b00f289607c7a87e4aca428f3f58d6456a267a0c6c194",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-form-a.png": "6a5e827f4a0630f0a63c8e199cbe60b56b176266c98e157fae141ced92b969e3",
+    "cardio-steps-mobility-water-sleep-nutrition-and-sugar-1-form-b.png": "1ed736e4d6e3bf1b170366e2599203720a23c5289601d7714a0a4a468fb46398",
+    "family-sugar.png": "9014d40ad1739c18ff4a3d67527aa118d3bb9424b24f822ac23a2dbfe15d2c51"
+  },
+  "accepted": [
+    "The Sugar-Seal Omamori follows the source motif with forest-green silk, gold and blossom ornament, vermilion cord and a text-free crossed sugar-crystal seal.",
+    "Its corrected body-specific registration places it close to the right hip while retaining neutral hands on both registered body forms.",
+    "The Omamori remains separately readable beside existing right-side accessories in the complete transition.",
+    "It preserves complete Cardio, Steps, Mobility, Water, Sleep and Nutrition families as fifty-five independent modules.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "Physical iPhone/Android, VoiceOver, GPU and peak-memory measurement remain open.",
+    "Cold PWA start and upgrade behavior remain open before app integration.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 42,
+  "date": "2026-11-10",
+  "scope": "stage-4-reading-4-premium-candidate",
+  "status": "passed-development-atelier",
+  "articles": {
+    "candidates": ["reading-1", "reading-2", "reading-3", "reading-4"],
+    "candidateModules": 5,
+    "transitionModules": 73,
+    "remainingVectorStudies": 45
+  },
+  "catalogueBrowser": {
+    "checks": 89,
+    "articles": 95,
+    "bodyForms": 2,
+    "singleRenderChecks": 190,
+    "familyContactSheets": 19,
+    "reading4ChangedPixels": {
+      "form-a": 1776,
+      "form-b": 1773
+    },
+    "storageWrites": 0,
+    "uncaughtErrors": []
+  },
+  "reviewImages": {
+    "reading-1-2-3-4-premium-form-a.png": "93a457b59d61eeb142aa8912f21e53fb009722a9734b0348dc947149f8a68fae",
+    "reading-1-2-3-4-premium-form-b.png": "69f531b21b3a4b50b1c7db07b910734a51b9f759a30043838bb3dfb7c9839635",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-3-4-form-a.png": "423658949d11256029152306b7b2dc1d60f510c0a5a691f79534eb1731cd5cec",
+    "cardio-steps-mobility-water-sleep-nutrition-sugar-alcohol-and-reading-1-2-3-4-form-b.png": "53157aa952ca262b843912c77468111405ee71a59acb59d3d3f9eb2bf7d7b10a",
+    "family-reading.png": "e6aceee198f1e4ac0b86a59d232e15e8d9b902fda85faf6e5f5e117285ac693b"
+  },
+  "accepted": [
+    "The Library Codex follows the source as a closed midnight-navy book with antique-gold spine and corner fittings, floral filigree, pale blossom, bookmark and tassel.",
+    "The codex contains no letters, words, logos or readable writing.",
+    "Body-specific registration keeps the complete book visible at the right side on both standing forms without changing the neutral hands.",
+    "The first four Reading candidates coexist as five independently controllable modules.",
+    "They preserve eight complete premium families as seventy-three independent modules; natural opaque overlap follows the stored depth order.",
+    "Visibility, ordering, the 95-article stress selection and warm offline interaction pass.",
+    "No profile, ownership, goal, training, reward or browser-storage write occurs."
+  ],
+  "limits": [
+    "Acceptance covers the two registered standing body forms and the development catalogue.",
+    "The side registration does not claim a newly drawn grip pose or readable book content.",
+    "Natural opaque overlap remains part of user-controlled multi-item compositions.",
+    "Physical devices, VoiceOver, GPU, peak memory, cold PWA and upgrade acceptance remain open.",
+    "The premium candidate remains review artwork until physical-device approval."
+  ]
+}
